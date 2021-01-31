@@ -4,6 +4,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import prosayj.thinking.spring.base.BaseEnv;
 import prosayj.thinking.spring.factotybean.ConnectionFactoryBean;
+import prosayj.thinking.spring.scope.Account;
 
 import java.sql.Connection;
 
@@ -53,7 +54,10 @@ public class _02_InverseOfControlTest extends BaseEnv {
     @Test
     @DisplayName("03-测试 Spring 控制创建简单对象次数 接口")
     public void testSpringFactoryBean() {
-        assertEquals(context.getBean("scopeSingleton"), context.getBean("scopeSingleton"));
-        assertNotEquals(context.getBean("scopePrototype"), context.getBean("scopePrototype"));
+        Account scopeSingleton = context.getBean("scopeSingleton", Account.class);
+        Account scopeSingleton1 = context.getBean("scopeSingleton", Account.class);
+        Account scopePrototype = context.getBean("scopePrototype", Account.class);
+        Account scopePrototype1 = context.getBean("scopePrototype", Account.class);
+        assertEquals(scopeSingleton, scopeSingleton1);
     }
 }

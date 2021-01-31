@@ -34,6 +34,7 @@ public class _05_BeanLifeCycleTest extends BaseEnv {
     public void testBeanPostProcessorTest() {
         Category categroy = (Category) context.getBean("categroy");
         assertEquals(categroy.getName(), "安徽");
+        logger.info("通过 id 获取bean:\n{}", categroy);
     }
 }
 

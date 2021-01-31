@@ -10,6 +10,9 @@
                            http://www.springframework.org/schema/mvc/spring-mvc.xsd
                            http://www.springframework.org/schema/context
                            http://www.springframework.org/schema/context/spring-context.xsd">
+    <!--Spring的配置文件与⼩配置文件进行整合-->
+    <!--resources 下的文件在整个程序编译完后会被放到 classpath 目录下，src.main.java中的文件也是-->
+    <context:property-placeholder location="classpath:/db.properties"/>
 
     <!-- ///////////////////////////////////////////////////////////////////////////////// -->
     <!--属性 property 注入-->
@@ -106,10 +109,6 @@
     <!-- ///////////////////////////////////////////////////////////////////////////////// -->
 
 
-    <!--Spring的配置文件与⼩配置文件进行整合-->
-    <!--resources 下的文件在整个程序编译完后会被放到 classpath 目录下，src.main.java中的文件也是-->
-    <context:property-placeholder location="classpath:/db.properties"/>
-
     <!-- ///////BeanFactory////////////////////////////////////////////////////////////////////////// -->
     <!--class 指定了 ConnectionFactoryBean, 获得的是该类创建的复杂对象 Connection -->
     <bean id="conn" class="prosayj.thinking.spring.factotybean.ConnectionFactoryBean">
@@ -135,11 +134,15 @@
     <bean id="myDateConverter" class="prosayj.thinking.spring.converter.MyDateConverter">
         <property name="pattern" value="yyyy-MM-dd"/>
     </bean>
+    <bean id="myDateConverter2" class="prosayj.thinking.spring.converter.MyDateConverter">
+        <property name="pattern" value="yyyyMMdd"/>
+    </bean>
     <!--ConversionSeviceFactoryBean 定义 id属性，值必须是 conversionService-->
     <bean id="conversionService" class="org.springframework.context.support.ConversionServiceFactoryBean">
         <property name="converters">
             <set>
                 <ref bean="myDateConverter"/>
+                <ref bean="myDateConverter2"/>
             </set>
         </property>
     </bean>
@@ -147,12 +150,16 @@
     <bean id="scopeSingleton" class="prosayj.thinking.spring.scope.Account">
         <property name="owner" value="张三"/>
         <property name="createTime" value="2021-01-02"/>
+        <property name="updateTime" value="20210131"/>
     </bean>
-    <bean id="scopePrototype" scope="prototype" class="prosayj.thinking.spring.scope.Account"/>
+    <bean id="scopePrototype" scope="prototype" class="prosayj.thinking.spring.scope.Account">
+        <property name="owner" value="张三"/>
+        <property name="createTime" value="2021-01-02"/>
+        <property name="updateTime" value="20210131"/>
+    </bean>
     <!-- ///////////////////////////////////////////////////////////////////////////////// -->
 
-
-    <!--测试 springBean 的生命周期-->
+    <!-- /////////////springBean 的生命周期//////////////////////// -->
     <!--如果⼀个对象既实现 InitializingBean 同时⼜提供的 普通的初始化方法，先执行 InitializingBean，再执行 普通初始化方法。-->
     <!--注入⼀定发生在初始化操作的前面。-->
     <!--销毁方法的操作只适用于 scope="singleton"，初始化操作都适用。-->
@@ -163,14 +170,12 @@
           destroy-method="myDestory">
         <property name="name" value="张三"/>
     </bean>
-
-
     <bean id="myBeanPostProcessor" class="prosayj.thinking.spring.beanpost.MyBeanPostProcessor"/>
-
     <bean id="categroy" class="prosayj.thinking.spring.beanpost.Category">
         <property name="id" value="10"/>
         <property name="name" value="北京"/>
     </bean>
+    <!-- ///////////////////////////////////////////////////////////////////////////////// -->
 
 
 </beans>
