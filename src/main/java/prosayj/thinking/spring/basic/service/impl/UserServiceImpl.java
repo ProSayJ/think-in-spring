@@ -1,7 +1,9 @@
 package prosayj.thinking.spring.basic.service.impl;
 
 import prosayj.thinking.spring.basic.dao.UserDao;
+import prosayj.thinking.spring.basic.dao.impl.UserDaoImpl;
 import prosayj.thinking.spring.basic.service.UserService;
+import prosayj.thinking.spring.beanfactory.CustomerBeanFactory;
 
 /**
  * UserServiceImpl
@@ -11,13 +13,13 @@ import prosayj.thinking.spring.basic.service.UserService;
  * @since 1.0.0
  */
 public class UserServiceImpl implements UserService {
-    //private static final UserDao userDao = new UserDaoImpl();
+//    private static final UserDao userDao = new UserDaoImpl();
 
     //private static final UserDao userDao = BeanFactory.getUserDao();
 
-    //private static final UserDao userDao = (UserDao) CustomerBeanFactory.getBean("userDao");
+    private UserDao userDao = (UserDao) CustomerBeanFactory.getBean("userDao");
 
-    private UserDao userDao;
+//    private UserDao userDao;
 
     @Override
     public void createUser(String userName, int age) {
