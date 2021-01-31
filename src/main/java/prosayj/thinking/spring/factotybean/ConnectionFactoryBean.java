@@ -9,7 +9,7 @@ import java.sql.DriverManager;
 /**
  * ConnectionFactoryBean
  *
- * @author yangjian201127@credithc.com
+ * @author yangjian
  * @date 2021-01-02 下午 07:43
  * @since 1.0.0
  */

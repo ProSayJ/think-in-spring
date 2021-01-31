@@ -10,7 +10,7 @@ import org.springframework.beans.factory.InitializingBean;
 /**
  * Product
  *
- * @author yangjian201127@credithc.com
+ * @author yangjian
  * @date 2021-01-02 下午 09:28
  * @since 1.0.0
  */

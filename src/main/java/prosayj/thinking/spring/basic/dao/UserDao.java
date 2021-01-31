@@ -3,7 +3,7 @@ package prosayj.thinking.spring.basic.dao;
 /**
  * UserDao
  *
- * @author yangjian201127@credithc.com
+ * @author yangjian
  * @date 2020-12-25 13:34
  * @since 1.0.0
  */

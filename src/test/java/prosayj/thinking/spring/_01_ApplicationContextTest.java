@@ -15,7 +15,7 @@ import static org.junit.jupiter.api.Assertions.*;
 /**
  * UserTest
  *
- * @author yangjian201127@credithc.com
+ * @author yangjian
  * @date 2020-12-25 13:41
  * @since 1.0.0
  */

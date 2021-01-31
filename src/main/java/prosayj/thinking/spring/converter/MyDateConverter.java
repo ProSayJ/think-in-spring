@@ -10,7 +10,7 @@ import java.util.Date;
 /**
  * MyDateConverter
  *
- * @author yangjian201127@credithc.com
+ * @author yangjian
  * @date 2021-01-02 下午 10:24
  * @since 1.0.0
  */

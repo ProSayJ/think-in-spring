@@ -6,7 +6,7 @@ import org.slf4j.LoggerFactory;
 /**
  * Person
  *
- * @author yangjian201127@credithc.com
+ * @author yangjian
  * @date 2020-12-26 下午 12:46
  * @since 1.0.0
  */

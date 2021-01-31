@@ -7,7 +7,7 @@ import java.sql.SQLException;
 /**
  * StaticFactoryBean
  *
- * @author yangjian201127@credithc.com
+ * @author yangjian
  * @date 2021-01-02 下午 08:58
  * @since 1.0.0
  */

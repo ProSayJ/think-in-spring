@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.*;
 /**
  * CustomerConvertorTest
  *
- * @author yangjian201127@credithc.com
+ * @author yangjian
  * @date 2021-01-02 下午 10:27
  * @since 1.0.0
  */

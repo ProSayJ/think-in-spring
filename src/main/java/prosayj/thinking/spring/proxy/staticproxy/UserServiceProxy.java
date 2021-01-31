@@ -8,7 +8,7 @@ import prosayj.thinking.spring.basic.service.impl.UserServiceImpl;
 /**
  * UserServiceProxy
  *
- * @author yangjian201127@credithc.com
+ * @author yangjian
  * @date 2021-01-31 下午 10:26
  * @since 1.0.0
  */

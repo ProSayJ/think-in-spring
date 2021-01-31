@@ -14,7 +14,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 /**
  * SpringInverseOfControlTest
  *
- * @author yangjian201127@credithc.com
+ * @author yangjian
  * @date 2021-01-02 上午 12:26
  * @since 1.0.0
  */

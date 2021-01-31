@@ -9,7 +9,7 @@ import java.util.Properties;
 /**
  * BeanFactory
  *
- * @author yangjian201127@credithc.com
+ * @author yangjian
  * @date 2020-12-26 上午 09:29
  * @since 1.0.0
  */

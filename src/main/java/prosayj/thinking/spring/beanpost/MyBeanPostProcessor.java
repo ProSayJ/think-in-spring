@@ -9,7 +9,7 @@ import org.springframework.beans.factory.config.BeanPostProcessor;
 /**
  * BeanPostProcessor 作用：对 Spring 工厂所创建的对象，进行再加工。（AOP 的底层实现）
  *
- * @author yangjian201127@credithc.com
+ * @author yangjian
  * @date 2021-01-03 下午 01:42
  * @since 1.0.0
  */
