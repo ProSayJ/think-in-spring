@@ -25,43 +25,16 @@ import java.util.List;
 public class BaseEnv {
     public final Logger logger = LoggerFactory.getLogger(this.getClass());
     public ApplicationContext context = null;
-    public List<String> asList = null;
 
     @BeforeAll
     public void initContext() {
         //获取spring的工厂
         context = new ClassPathXmlApplicationContext("/applicationContext.xml");
-        asList = Arrays.asList("person",
-                "person1",
-                "/person",
-                "person2",
-                "person3",
-                "prosayj.thinking.spring.basic.model.Person#0",
-                "prosayj.thinking.spring.basic.model.Person#1",
-                "pname",
-                "pppp",
-                "/pppp",
-                "customer",
-                "userDao",
-                "userService",
-                "org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0",
-                "conn",
-                "connFactory",
-                "conn2",
-                "conn3",
-                "myDateConverter",
-                "conversionService",
-                "scopeSingleton",
-                "scopePrototype",
-                "product",
-                "categroy",
-                "myBeanPostProcessor"
-        );
     }
 
     @AfterAll
     public void distoryContext() {
-        if (context != null) {
+        if (context != null && context instanceof ClassPathXmlApplicationContext) {
             ((ClassPathXmlApplicationContext) context).close();
         }
     }

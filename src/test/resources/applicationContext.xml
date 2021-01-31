@@ -156,16 +156,16 @@
     <!--如果⼀个对象既实现 InitializingBean 同时⼜提供的 普通的初始化方法，先执行 InitializingBean，再执行 普通初始化方法。-->
     <!--注入⼀定发生在初始化操作的前面。-->
     <!--销毁方法的操作只适用于 scope="singleton"，初始化操作都适用。-->
-    <bean id="product"
-          class="prosayj.thinking.spring.lifecycle.Product"
+    <bean id="lifeCycleDomin"
+          scope="prototype"
+          class="prosayj.thinking.spring.lifecycle.LifeCycleDomin"
           init-method="myInit"
           destroy-method="myDestory">
         <property name="name" value="张三"/>
     </bean>
 
 
-    <bean id="myBeanPostProcessor" class="prosayj.thinking.spring.beanpost.MyBeanPostProcessor">
-    </bean>
+    <bean id="myBeanPostProcessor" class="prosayj.thinking.spring.beanpost.MyBeanPostProcessor"/>
 
     <bean id="categroy" class="prosayj.thinking.spring.beanpost.Category">
         <property name="id" value="10"/>

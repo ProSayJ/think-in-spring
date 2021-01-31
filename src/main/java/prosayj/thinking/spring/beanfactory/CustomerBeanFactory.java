@@ -14,11 +14,11 @@ import java.util.Properties;
  * @since 1.0.0
  */
 public class CustomerBeanFactory {
-    private static final Properties env = new Properties();
+    private static final Properties ENV = new Properties();
 
     static {
         try {
-            env.load(CustomerBeanFactory.class.getResourceAsStream("/applicationContext.properties"));
+            ENV.load(CustomerBeanFactory.class.getResourceAsStream("/applicationContext.properties"));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -28,7 +28,7 @@ public class CustomerBeanFactory {
      * 通用工厂的使用方式
      * 1 定义类型（类）
      * 2 通过配置文件告知工厂(applicationContext.properties)
-     *      key value
+     * key value
      * 3 通过工厂获得类对象
      *
      * @param key key
@@ -37,7 +37,7 @@ public class CustomerBeanFactory {
     public static Object getBean(String key) {
         try {
             return Class
-                    .forName(env.getProperty(key))
+                    .forName(ENV.getProperty(key))
                     .newInstance();
         } catch (InstantiationException | IllegalAccessException | ClassNotFoundException e) {
             e.printStackTrace();

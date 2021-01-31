@@ -16,7 +16,7 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
  * @date 2021-01-02 上午 12:16
  * @since 1.0.0
  */
-public class InjectionTest extends BaseEnv {
+public class _03_InjectionTest extends BaseEnv {
 
 
     @Test
@@ -25,7 +25,7 @@ public class InjectionTest extends BaseEnv {
         //通过工厂类获得对象
         Customer bean = (Customer) context.getBean("customer");
         assertNotNull(bean);
-        logger.info("通过 id 获取bean:{}", bean);
+        logger.info("通过 id 获取bean:\n{}", bean);
     }
 
     @Test

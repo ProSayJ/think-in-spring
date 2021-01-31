@@ -17,18 +17,18 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  * @date 2021-01-02 上午 12:26
  * @since 1.0.0
  */
-public class InverseOfControlTest extends BaseEnv {
+public class _02_InverseOfControlTest extends BaseEnv {
 
     @Test
     @DisplayName("00-测试 factoryBean 接口")
     public void testFactoryBean() {
         Connection connection = (Connection) context.getBean("conn");
         assertNotNull(connection);
-        logger.info("通过 id 获取 connection :{}", connection);
+        logger.info("通过 id 获取 connection :\n{}", connection);
 
         ConnectionFactoryBean connectionFactoryBean = (ConnectionFactoryBean) context.getBean("&conn");
         assertNotNull(connectionFactoryBean);
-        logger.info("通过 id 获取 ConnectionFactoryBean :{}", connectionFactoryBean);
+        logger.info("通过 id 获取 ConnectionFactoryBean :\n{}", connectionFactoryBean);
 
         //数据库连接不能公用一个实例
         assertNotEquals(context.getBean("conn"), context.getBean("conn"));
