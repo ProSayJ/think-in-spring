@@ -189,11 +189,11 @@
     <!--切入点:额外功能的加入-->
     <!--⽬的：由程序员根据⾃⼰的需要，决定额外功能加入给哪个原始方法(register、login)-->
     <!-- 简单的测试：所有方法都做为切入点，都加入额外的功能-->
-    <aop:config>
-        <aop:pointcut id="pc" expression="execution(* * (..))"/>
-        <!--表达的含义: 所有的方法 都加入before的额外功能-->
-        <aop:advisor advice-ref="before" pointcut-ref="pc"/>
-    </aop:config>
+<!--    <aop:config>-->
+<!--        <aop:pointcut id="pc" expression="execution(* * (..))"/>-->
+<!--        &lt;!&ndash;表达的含义: 所有的方法 都加入before的额外功能&ndash;&gt;-->
+<!--        <aop:advisor advice-ref="before" pointcut-ref="pc"/>-->
+<!--    </aop:config>-->
     <!-- ///////////////////////////////////////////////////////////////////////////////// -->
 
 
