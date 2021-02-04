@@ -14,16 +14,33 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.geekbang.thinking.in.spring.ioc.overview.enums;
+package prosayj.thinking.spring.ioc.overview.domain;
+
+import prosayj.thinking.spring.ioc.overview.annotation.Super;
 
 /**
- * 城市枚举
+ * 超级用户
  *
- * @since
+ * @author yangjian
+ * @since 1.0.0
  */
-public enum City {
+@Super
+public class SuperUser extends User {
 
-    BEIJING,
-    HANGZHOU,
-    SHANGHAI
+    private String address;
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    @Override
+    public String toString() {
+        return "SuperUser{" +
+                "address='" + address + '\'' +
+                "} " + super.toString();
+    }
 }

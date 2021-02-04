@@ -14,16 +14,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.geekbang.thinking.in.spring.ioc.overview.domain;
+package prosayj.thinking.spring.ioc.overview.domain;
 
-import org.geekbang.thinking.in.spring.ioc.overview.enums.City;
+import prosayj.thinking.spring.ioc.overview.enums.City;
 import org.springframework.beans.factory.BeanNameAware;
 import org.springframework.core.io.Resource;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
-import java.beans.PropertyChangeEvent;
-import java.beans.PropertyChangeListener;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Properties;
@@ -31,7 +29,8 @@ import java.util.Properties;
 /**
  * 用户类
  *
- * @since
+ * @author yangjian
+ * @since 1.0.0
  */
 public class User implements BeanNameAware {
 
@@ -117,7 +116,7 @@ public class User implements BeanNameAware {
     public static User createUser() {
         User user = new User();
         user.setId(1L);
-        user.setName("小马哥");
+        user.setName("ProSayJ");
         return user;
     }
 

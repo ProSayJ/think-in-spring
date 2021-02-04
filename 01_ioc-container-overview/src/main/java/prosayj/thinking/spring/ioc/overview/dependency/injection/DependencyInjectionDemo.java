@@ -14,10 +14,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.geekbang.thinking.in.spring.ioc.overview.dependency.injection;
+package prosayj.thinking.spring.ioc.overview.dependency.injection;
 
-import org.geekbang.thinking.in.spring.ioc.overview.repository.UserRepository;
-import org.springframework.beans.factory.BeanFactory;
+import prosayj.thinking.spring.ioc.overview.repository.UserRepository;
 import org.springframework.beans.factory.ObjectFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -26,7 +25,8 @@ import org.springframework.core.env.Environment;
 /**
  * 依赖注入示例
  *
- * @since
+ * @author yangjian
+ * @since 1.0.0
  */
 public class DependencyInjectionDemo {
 
@@ -34,19 +34,18 @@ public class DependencyInjectionDemo {
         // 配置 XML 配置文件
         // 启动 Spring 应用上下文
 //        BeanFactory beanFactory = new ClassPathXmlApplicationContext("classpath:/META-INF/dependency-injection-context.xml");
-
-        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:/META-INF/dependency-injection-context.xml");
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext(
+                "classpath:/META-INF/dependency-injection-context.xml");
 
         // 依赖来源一：自定义 Bean
         UserRepository userRepository = applicationContext.getBean("userRepository", UserRepository.class);
-
-//        System.out.println(userRepository.getUsers());
+        System.out.println(userRepository.getUsers());
 
         // 依赖来源二：依赖注入（內建依赖）
         System.out.println(userRepository.getBeanFactory());
 
 
-        ObjectFactory userFactory = userRepository.getObjectFactory();
+        ObjectFactory<?> userFactory = userRepository.getObjectFactory();
 
         System.out.println(userFactory.getObject() == applicationContext);
 
@@ -58,7 +57,7 @@ public class DependencyInjectionDemo {
         System.out.println("获取 Environment 类型的 Bean：" + environment);
     }
 
-    private static void whoIsIoCContainer(UserRepository userRepository, ApplicationContext applicationContext) {
+    private static void whoIsIocContainer(UserRepository userRepository, ApplicationContext applicationContext) {
 
 
         // ConfigurableApplicationContext <- ApplicationContext <- BeanFactory

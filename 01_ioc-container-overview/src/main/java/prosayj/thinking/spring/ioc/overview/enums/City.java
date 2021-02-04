@@ -14,29 +14,25 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.geekbang.thinking.in.spring.ioc.overview.domain;
+package prosayj.thinking.spring.ioc.overview.enums;
 
 /**
- * 公司类
+ * 城市枚举
  *
- * @since
+ * @author yangjian
+ * @since 1.0.0
  */
-public class Company {
-
-    String name;
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    @Override
-    public String toString() {
-        return "Company{" +
-                "name='" + name + '\'' +
-                '}';
-    }
+public enum City {
+    /**
+     * BEIJING
+     */
+    BEIJING,
+    /**
+     * HANGZHOU
+     */
+    HANGZHOU,
+    /**
+     * SHANGHAI
+     */
+    SHANGHAI
 }

@@ -14,10 +14,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.geekbang.thinking.in.spring.ioc.overview.dependency.lookup;
+package prosayj.thinking.spring.ioc.overview.dependency.lookup;
 
-import org.geekbang.thinking.in.spring.ioc.overview.annotation.Super;
-import org.geekbang.thinking.in.spring.ioc.overview.domain.User;
+import prosayj.thinking.spring.ioc.overview.annotation.Super;
+import prosayj.thinking.spring.ioc.overview.domain.User;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.ListableBeanFactory;
 import org.springframework.beans.factory.ObjectFactory;
@@ -29,14 +29,16 @@ import java.util.Map;
  * 依赖查找示例
  * 1. 通过名称的方式来查找
  *
- * @since
+ * @author yangjian
+ * @since 1.0.0
  */
 public class DependencyLookupDemo {
 
     public static void main(String[] args) {
         // 配置 XML 配置文件
         // 启动 Spring 应用上下文
-        BeanFactory beanFactory = new ClassPathXmlApplicationContext("classpath:/META-INF/dependency-lookup-context.xml");
+        BeanFactory beanFactory = new ClassPathXmlApplicationContext(
+                "classpath:/META-INF/dependency-lookup-context.xml");
         // 按照类型查找
         lookupByType(beanFactory);
         // 按照类型查找结合对象
@@ -51,7 +53,7 @@ public class DependencyLookupDemo {
     private static void lookupByAnnotationType(BeanFactory beanFactory) {
         if (beanFactory instanceof ListableBeanFactory) {
             ListableBeanFactory listableBeanFactory = (ListableBeanFactory) beanFactory;
-            Map<String, User> users = (Map) listableBeanFactory.getBeansWithAnnotation(Super.class);
+            Map<String, Object> users = listableBeanFactory.getBeansWithAnnotation(Super.class);
             System.out.println("查找标注 @Super 所有的 User 集合对象：" + users);
         }
     }

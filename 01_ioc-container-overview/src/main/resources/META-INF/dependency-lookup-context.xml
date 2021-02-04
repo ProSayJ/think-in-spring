@@ -15,9 +15,9 @@
     <!-- Root BeanDefinition 不需要合并，不存在 parent -->
     <!-- 普通 beanDefinition GenericBeanDefinition -->
     <!-- 经过合并后 GenericBeanDefinition 变成 RootBeanDefinition -->
-    <bean id="user" class="org.geekbang.thinking.in.spring.ioc.overview.domain.User">
+    <bean id="user" class="prosayj.thinking.spring.ioc.overview.domain.User">
         <property name="id" value="1"/>
-        <property name="name" value="小马哥"/>
+        <property name="name" value="ProSayJ"/>
         <property name="city" value="HANGZHOU"/>
         <property name="workCities" value="BEIJING,HANGZHOU"/>
         <property name="lifeCities">
@@ -32,7 +32,7 @@
     <!-- 普通 beanDefinition GenericBeanDefinition -->
     <!-- 合并后 GenericBeanDefinition 变成 RootBeanDefinition，并且覆盖 parent 相关配置-->
     <!-- primary = true , 增加了一个 address 属性 -->
-    <bean id="superUser" class="org.geekbang.thinking.in.spring.ioc.overview.domain.SuperUser" parent="user"
+    <bean id="superUser" class="prosayj.thinking.spring.ioc.overview.domain.SuperUser" parent="user"
           primary="true">
         <property name="address" value="杭州"/>
     </bean>
