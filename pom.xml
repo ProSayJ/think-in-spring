@@ -13,10 +13,10 @@
     <artifactId>think-in-spring</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>spring-base</module>
-        <module>01_ioc-container-overview</module>
-        <module>02_spring-bean</module>
-        <module>03_dependency-lookup</module>
+        <module>base</module>
+        <module>ioc-container-overview</module>
+        <module>spring-bean</module>
+        <module>dependency-lookup</module>
     </modules>
 
 </project>

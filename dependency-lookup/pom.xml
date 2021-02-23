@@ -6,22 +6,19 @@
         <artifactId>think-in-spring</artifactId>
         <groupId>ProSayJ</groupId>
         <version>1.0-SNAPSHOT</version>
-        <relativePath>../pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>01_ioc-container-overview</artifactId>
+    <artifactId>dependency-lookup</artifactId>
+    <name>03_dependency-lookup</name>
+    <description>dependency-lookup</description>
 
-    <properties>
-        <maven.compiler.source>8</maven.compiler.source>
-        <maven.compiler.target>8</maven.compiler.target>
-    </properties>
+
     <dependencies>
-        <!-- Spring IoC 核心依赖 -->
         <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-context</artifactId>
+            <groupId>ProSayJ</groupId>
+            <artifactId>ioc-container-overview</artifactId>
+            <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
-
 </project>
