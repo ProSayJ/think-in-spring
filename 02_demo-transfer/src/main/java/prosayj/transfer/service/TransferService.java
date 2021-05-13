@@ -1,4 +1,4 @@
-package prosayj.spring.transfer.service;
+package prosayj.transfer.service;
 
 /**
  * TransferService

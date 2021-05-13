@@ -1,6 +1,6 @@
-package prosayj.spring.transfer.factory;
+package prosayj.transfer.factory;
 
-import prosayj.spring.transfer.utils.TransactionManager;
+import prosayj.transfer.utils.TransactionManager;
 import net.sf.cglib.proxy.Enhancer;
 import net.sf.cglib.proxy.MethodInterceptor;
 import net.sf.cglib.proxy.MethodProxy;

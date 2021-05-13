@@ -1,4 +1,4 @@
-package prosayj.spring.transfer.factory;
+package prosayj.transfer.factory;
 
 import org.dom4j.Document;
 import org.dom4j.DocumentException;

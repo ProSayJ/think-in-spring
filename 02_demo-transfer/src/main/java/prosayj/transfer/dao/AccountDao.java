@@ -1,6 +1,6 @@
-package prosayj.spring.transfer.dao;
+package prosayj.transfer.dao;
 
-import prosayj.spring.transfer.pojo.Account;
+import prosayj.transfer.pojo.Account;
 
 
 /**

@@ -1,4 +1,4 @@
-package prosayj.spring.transfer.pojo;
+package prosayj.transfer.pojo;
 
 import lombok.Data;
 

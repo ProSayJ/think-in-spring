@@ -1,4 +1,4 @@
-package prosayj.spring.transfer.utils;
+package prosayj.transfer.utils;
 
 import java.util.List;
 

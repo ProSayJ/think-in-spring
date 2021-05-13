@@ -1,9 +1,8 @@
-package prosayj.spring.transfer.dao.impl;
+package prosayj.transfer.dao.impl;
 
-import prosayj.spring.transfer.pojo.Account;
-import prosayj.spring.transfer.dao.AccountDao;
-import prosayj.spring.transfer.utils.ConnectionUtils;
-import prosayj.spring.transfer.utils.DruidUtils;
+import prosayj.transfer.pojo.Account;
+import prosayj.transfer.dao.AccountDao;
+import prosayj.transfer.utils.ConnectionUtils;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

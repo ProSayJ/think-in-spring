@@ -1,10 +1,10 @@
-package prosayj.spring.transfer.servlet;
+package prosayj.transfer.servlet;
 
-import prosayj.spring.transfer.factory.BeanFactory;
-import prosayj.spring.transfer.factory.ProxyFactory;
-import prosayj.spring.transfer.utils.JsonUtils;
-import prosayj.spring.transfer.pojo.Result;
-import prosayj.spring.transfer.service.TransferService;
+import prosayj.transfer.factory.BeanFactory;
+import prosayj.transfer.factory.ProxyFactory;
+import prosayj.transfer.utils.JsonUtils;
+import prosayj.transfer.pojo.Result;
+import prosayj.transfer.service.TransferService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

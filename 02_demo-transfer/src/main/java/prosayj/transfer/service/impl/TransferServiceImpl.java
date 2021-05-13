@@ -1,8 +1,8 @@
-package prosayj.spring.transfer.service.impl;
+package prosayj.transfer.service.impl;
 
-import prosayj.spring.transfer.dao.AccountDao;
-import prosayj.spring.transfer.pojo.Account;
-import prosayj.spring.transfer.service.TransferService;
+import prosayj.transfer.dao.AccountDao;
+import prosayj.transfer.pojo.Account;
+import prosayj.transfer.service.TransferService;
 
 /**
  * TransferServiceImpl
