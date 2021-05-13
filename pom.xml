@@ -13,11 +13,13 @@
     <artifactId>think-in-spring</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>base</module>
-        <module>ioc-container-overview</module>
-        <module>spring-bean</module>
-        <module>dependency-lookup</module>
-        <module>dependency-injection</module>
+        <!--        <module>base</module>-->
+        <!--        <module>ioc-container-overview</module>-->
+        <!--        <module>spring-bean</module>-->
+        <!--        <module>dependency-lookup</module>-->
+        <!--        <module>dependency-injection</module>-->
+        <module>01_demo-ioc-aop</module>
+        <module>02_demo-transfer</module>
     </modules>
 
 </project>
