@@ -21,9 +21,10 @@
         <!--        <module>00_demo-others</module>-->
         <!--        <module>01_demo-ioc-aop</module>-->
         <!--        <module>02_demo-transfer</module>-->
+
         <module>03_transfer-spring-ioc-xml</module>
-        <module>04_transfer-spring-ioc-xml-annotation</module>
-        <module>05_transfer-spring-ioc-annotation</module>
+        <module>04_transfer-spring-ioc-aop-xml</module>
+        <module>05_transfer-spring-ioc-apo-annotation</module>
     </modules>
 
     <properties>
