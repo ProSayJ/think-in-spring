@@ -1,6 +1,7 @@
 package prosayj.springiocxml.transfer.dao.impl;
 
 import lombok.Data;
+import org.springframework.transaction.annotation.Transactional;
 import prosayj.springiocxml.transfer.dao.AccountDao;
 import prosayj.springiocxml.transfer.pojo.Account;
 import prosayj.springiocxml.transfer.utils.ConnectionUtils;

@@ -1,5 +1,8 @@
 package prosayj.springiocxml.transfer.utils;
 
+import lombok.Data;
+
+import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.SQLException;
 
@@ -9,7 +12,10 @@ import java.sql.SQLException;
  * @author yangjian
  * @date 2021-05-13
  */
+@Data
 public class ConnectionUtils {
+
+    private DataSource dataSource;
 
     /*private ConnectionUtils() {
 
@@ -35,7 +41,7 @@ public class ConnectionUtils {
         Connection connection = THREAD_LOCAL.get();
         if (connection == null) {
             // 从连接池拿连接并绑定到线程
-            connection = DruidUtils.getInstance().getConnection();
+            connection = dataSource.getConnection();
             // 绑定到当前线程
             THREAD_LOCAL.set(connection);
         }

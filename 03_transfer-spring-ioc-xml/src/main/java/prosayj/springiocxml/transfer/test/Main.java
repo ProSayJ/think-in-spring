@@ -16,6 +16,7 @@ public class Main {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext(
                 "classpath:/applicationContext.xml");
         JdbcAccountDaoImpl bean = applicationContext.getBean(JdbcAccountDaoImpl.class);
+
         System.out.println(bean);
     }
 }
