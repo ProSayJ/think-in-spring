@@ -10,9 +10,9 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>03_transfer-spring-ioc-xml</artifactId>
-    <name>03_transfer-spring-ioc-xml</name>
-    <description>03_transfer-spring-ioc-xml</description>
+    <artifactId>03_transfer-spring-ioc-aop-xml</artifactId>
+    <name>03_transfer-spring-ioc-aop-xml</name>
+    <description>03_transfer-spring-ioc-aop-xml</description>
     <packaging>war</packaging>
 
 
