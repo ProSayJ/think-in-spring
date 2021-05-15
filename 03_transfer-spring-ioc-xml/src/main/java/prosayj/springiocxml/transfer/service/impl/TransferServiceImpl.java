@@ -6,9 +6,6 @@ import prosayj.springiocxml.transfer.service.TransferService;
 
 /**
  * TransferServiceImpl
- * <p>
- * private AccountDao accountDao = new JdbcAccountDaoImpl();
- * private AccountDao accountDao = (AccountDao) BeanFactory.getBean("accountDao");
  *
  * @author yangjian
  * @date 2021-05-13
