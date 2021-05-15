@@ -1,11 +1,9 @@
-package prosayj.springiocxmlannotation.transfer.dao.impl;
+package prosayj.spring.iocaop.xml.transfer.dao.impl;
 
 import lombok.Data;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
-import prosayj.springiocxmlannotation.transfer.dao.AccountDao;
-import prosayj.springiocxmlannotation.transfer.pojo.Account;
-import prosayj.springiocxmlannotation.transfer.utils.ConnectionUtils;
+import prosayj.spring.iocaop.xml.transfer.dao.AccountDao;
+import prosayj.spring.iocaop.xml.transfer.pojo.Account;
+import prosayj.spring.iocaop.xml.transfer.utils.ConnectionUtils;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

@@ -1,8 +1,7 @@
-package prosayj.springiocxmlannotation.transfer.utils;
+package prosayj.spring.iocaop.xml.transfer.utils;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import prosayj.springiocxmlannotation.transfer.utils.ConnectionUtils;
 
 import java.sql.SQLException;
 

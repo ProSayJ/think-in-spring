@@ -1,8 +1,8 @@
 
 import org.junit.Test;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import prosayj.springiocxmlannotation.transfer.dao.AccountDao;
-import prosayj.springiocxmlannotation.transfer.service.TransferService;
+import prosayj.spring.iocaop.xml.transfer.dao.AccountDao;
+import prosayj.spring.iocaop.xml.transfer.service.TransferService;
 
 /**
  * IoCTest

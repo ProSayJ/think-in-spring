@@ -1,10 +1,10 @@
-package prosayj.springiocxmlannotation.transfer.servlet;
+package prosayj.spring.iocaop.xml.transfer.servlet;
 
 import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.context.support.WebApplicationContextUtils;
-import prosayj.springiocxmlannotation.transfer.pojo.Result;
-import prosayj.springiocxmlannotation.transfer.service.TransferService;
-import prosayj.springiocxmlannotation.transfer.utils.JsonUtils;
+import prosayj.spring.iocaop.xml.transfer.pojo.Result;
+import prosayj.spring.iocaop.xml.transfer.service.TransferService;
+import prosayj.spring.iocaop.xml.transfer.utils.JsonUtils;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

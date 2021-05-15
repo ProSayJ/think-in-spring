@@ -1,4 +1,4 @@
-package prosayj.springiocxmlannotation.transfer.test;
+package prosayj.spring.iocaop.xml.transfer.test;
 
 import org.dom4j.Document;
 import org.dom4j.DocumentException;

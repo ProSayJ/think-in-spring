@@ -1,4 +1,4 @@
-package prosayj.springiocxmlannotation.transfer.utils;
+package prosayj.spring.iocaop.xml.transfer.utils;
 
 import java.util.List;
 

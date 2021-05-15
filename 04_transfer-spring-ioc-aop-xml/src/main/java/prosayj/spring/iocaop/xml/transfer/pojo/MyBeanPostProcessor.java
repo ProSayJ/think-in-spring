@@ -1,8 +1,7 @@
-package prosayj.springiocxmlannotation.transfer.pojo;
+package prosayj.spring.iocaop.xml.transfer.pojo;
 
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;
-import org.springframework.stereotype.Component;
 
 /**
  * 拦截实例化之后的对象(实例化了并且属性注入了)

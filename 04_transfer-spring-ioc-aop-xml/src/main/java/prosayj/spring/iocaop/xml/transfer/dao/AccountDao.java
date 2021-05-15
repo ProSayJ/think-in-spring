@@ -1,7 +1,7 @@
-package prosayj.springiocxmlannotation.transfer.dao;
+package prosayj.spring.iocaop.xml.transfer.dao;
 
 
-import prosayj.springiocxmlannotation.transfer.pojo.Account;
+import prosayj.spring.iocaop.xml.transfer.pojo.Account;
 
 /**
  * AccountDao

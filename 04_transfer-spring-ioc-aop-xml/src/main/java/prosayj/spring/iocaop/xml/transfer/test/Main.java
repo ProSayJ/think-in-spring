@@ -1,8 +1,8 @@
-package prosayj.springiocxmlannotation.transfer.test;
+package prosayj.spring.iocaop.xml.transfer.test;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import prosayj.springiocxmlannotation.transfer.dao.impl.JdbcAccountDaoImpl;
+import prosayj.spring.iocaop.xml.transfer.dao.impl.JdbcAccountDaoImpl;
 
 /**
  * TODO

@@ -1,4 +1,4 @@
-package prosayj.springiocxmlannotation.transfer.service;
+package prosayj.spring.iocaop.xml.transfer.service;
 
 /**
  * TransferService

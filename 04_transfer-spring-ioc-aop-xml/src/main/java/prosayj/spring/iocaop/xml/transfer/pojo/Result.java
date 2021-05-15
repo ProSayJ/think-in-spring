@@ -1,4 +1,4 @@
-package prosayj.springiocxmlannotation.transfer.pojo;
+package prosayj.spring.iocaop.xml.transfer.pojo;
 
 import lombok.Data;
 import org.springframework.beans.BeansException;

@@ -1,12 +1,9 @@
-package prosayj.springiocxmlannotation.transfer.service.impl;
+package prosayj.spring.iocaop.xml.transfer.service.impl;
 
 import lombok.Data;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.stereotype.Service;
-import prosayj.springiocxmlannotation.transfer.dao.AccountDao;
-import prosayj.springiocxmlannotation.transfer.pojo.Account;
-import prosayj.springiocxmlannotation.transfer.service.TransferService;
+import prosayj.spring.iocaop.xml.transfer.dao.AccountDao;
+import prosayj.spring.iocaop.xml.transfer.pojo.Account;
+import prosayj.spring.iocaop.xml.transfer.service.TransferService;
 
 /**
  * TransferServiceImpl

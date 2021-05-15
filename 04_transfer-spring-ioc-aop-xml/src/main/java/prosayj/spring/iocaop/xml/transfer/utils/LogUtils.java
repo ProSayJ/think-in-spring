@@ -1,9 +1,7 @@
-package prosayj.springiocxmlannotation.transfer.utils;
+package prosayj.spring.iocaop.xml.transfer.utils;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
-import org.aspectj.lang.annotation.*;
-import org.springframework.stereotype.Component;
 
 /**
  * 日志工具类
