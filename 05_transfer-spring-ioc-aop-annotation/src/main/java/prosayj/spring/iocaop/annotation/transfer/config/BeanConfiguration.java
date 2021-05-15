@@ -1,4 +1,4 @@
-package prosayj.springiocannotation.transfer.config;
+package prosayj.spring.iocaop.annotation.transfer.config;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import org.springframework.beans.factory.annotation.Value;
@@ -16,7 +16,7 @@ import javax.sql.DataSource;
  * @date 2021-05-14
  */
 @Configuration
-@ComponentScan({"prosayj.springiocannotation.transfer"})
+@ComponentScan({"prosayj.spring.iocaop.annotation.transfer"})
 @PropertySource({"classpath:jdbc.properties"})
 /*@Import()*/
 public class BeanConfiguration {

@@ -1,11 +1,11 @@
-package prosayj.springiocannotation.transfer.servlet;
+package prosayj.spring.iocaop.annotation.transfer.servlet;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.context.support.WebApplicationContextUtils;
-import prosayj.springiocannotation.transfer.utils.JsonUtils;
-import prosayj.springiocannotation.transfer.pojo.Result;
-import prosayj.springiocannotation.transfer.service.TransferService;
+import prosayj.spring.iocaop.annotation.transfer.utils.JsonUtils;
+import prosayj.spring.iocaop.annotation.transfer.pojo.Result;
+import prosayj.spring.iocaop.annotation.transfer.service.TransferService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

@@ -1,12 +1,12 @@
-package prosayj.springiocannotation.transfer.service.impl;
+package prosayj.spring.iocaop.annotation.transfer.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import prosayj.springiocannotation.transfer.dao.AccountDao;
-import prosayj.springiocannotation.transfer.pojo.Account;
-import prosayj.springiocannotation.transfer.service.TransferService;
+import prosayj.spring.iocaop.annotation.transfer.dao.AccountDao;
+import prosayj.spring.iocaop.annotation.transfer.pojo.Account;
+import prosayj.spring.iocaop.annotation.transfer.service.TransferService;
 
 /**
  * TransferServiceImpl

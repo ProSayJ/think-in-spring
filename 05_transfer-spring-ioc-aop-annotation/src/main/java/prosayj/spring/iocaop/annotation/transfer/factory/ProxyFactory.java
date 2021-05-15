@@ -1,8 +1,8 @@
-package prosayj.springiocannotation.transfer.factory;
+package prosayj.spring.iocaop.annotation.transfer.factory;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import prosayj.springiocannotation.transfer.utils.TransactionManager;
+import prosayj.spring.iocaop.annotation.transfer.utils.TransactionManager;
 import net.sf.cglib.proxy.Enhancer;
 import net.sf.cglib.proxy.MethodInterceptor;
 import net.sf.cglib.proxy.MethodProxy;

@@ -1,4 +1,4 @@
-package prosayj.springiocannotation.transfer.utils;
+package prosayj.spring.iocaop.annotation.transfer.utils;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
@@ -16,7 +16,7 @@ import org.springframework.stereotype.Component;
 public class LogUtils {
 
 
-    @Pointcut("execution(* prosayj.springiocannotation.transfer.service.impl.TransferServiceImpl.*(..))")
+    @Pointcut("execution(* prosayj.spring.iocaop.annotation.transfer.service.impl.TransferServiceImpl.*(..))")
     public void pt1() {
 
     }

@@ -1,6 +1,6 @@
-package prosayj.springiocannotation.transfer.dao;
+package prosayj.spring.iocaop.annotation.transfer.dao;
 
-import prosayj.springiocannotation.transfer.pojo.Account;
+import prosayj.spring.iocaop.annotation.transfer.pojo.Account;
 
 
 /**

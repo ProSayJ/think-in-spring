@@ -1,4 +1,4 @@
-package prosayj.springiocannotation.transfer.pojo;
+package prosayj.spring.iocaop.annotation.transfer.pojo;
 
 import lombok.Data;
 
