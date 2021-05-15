@@ -15,11 +15,29 @@
         https://www.springframework.org/schema/tx/spring-tx.xsd
 ">
 
-    <!--开启注解扫描，base-package指定扫描的包路径-->
-    <context:component-scan base-package="prosayj.SpringIocAopXml"/>
-
     <!--引入外部资源文件-->
     <context:property-placeholder location="classpath:jdbc.properties"/>
+
+
+    <!--Spring ioc 实例化Bean的三种方式-->
+    <!--方式一：使用无参构造器（推荐）-->
+    <bean id="connectionUtils" class="prosayj.spring.iocaop.xml.transfer.utils.ConnectionUtils">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+    <!--另外两种方式是为了我们自己new的对象加入到SpringIOC容器管理-->
+    <!--方式二：静态方法-->
+    <!--    <bean id="connectionUtils"-->
+    <!--          class="prosayj.spring.iocaop.xml.transfer.utils.CreateBeanFactory"-->
+    <!--          factory-method="getInstanceStatic"/>-->
+    <!--方式三：实例化方法-->
+    <!--<bean id="createBeanFactory" class="prosayj.spring.iocaop.xml.transfer.utils.CreateBeanFactory"/>
+    <bean id="connectionUtils" factory-bean="createBeanFactory" factory-method="getInstance"/>-->
+
+    <!--lazy-init：延迟加载，true代表延迟，false代表立即加载，默认是false-->
+    <bean id="lazyResult"
+          class="prosayj.spring.iocaop.xml.transfer.pojo.Result"
+          init-method="initMethod"/>
+
 
     <!--第三方jar中的bean定义在xml中-->
     <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
@@ -39,39 +57,12 @@
         <constructor-arg name="dataSource" ref="dataSource"/>
     </bean>
 
-    <!--Spring ioc 实例化Bean的三种方式-->
-    <!--方式一：使用无参构造器（推荐）-->
-    <bean id="connectionUtils" class="prosayj.spring.iocaop.xml.transfer.utils.ConnectionUtils">
-        <property name="dataSource" ref="dataSource"/>
-    </bean>
-    <!--另外两种方式是为了我们自己new的对象加入到SpringIOC容器管理-->
-    <!--方式二：静态方法-->
-    <!--    <bean id="connectionUtils"-->
-    <!--          class="prosayj.springiocxml.transfer.utils.CreateBeanFactory"-->
-    <!--          factory-method="getInstanceStatic"/>-->
-    <!--方式三：实例化方法-->
-    <!-- <bean id="createBeanFactory" class="prosayj.springiocxml.transfer.utils.CreateBeanFactory"/>
-     <bean id="connectionUtils" factory-bean="createBeanFactory" factory-method="getInstance"/>-->
 
-
-    <tx:advice id="txAdvice" transaction-manager="transactionManager">
-        <!--定制事务细节，传播行为、隔离级别等-->
-        <tx:attributes>
-            <!--一般性配置-->
-            <tx:method name="*" read-only="false" propagation="REQUIRED" isolation="DEFAULT" timeout="-1"/>
-            <!--针对查询的覆盖性配置-->
-            <tx:method name="query*" read-only="true" propagation="SUPPORTS"/>
-        </tx:attributes>
-    </tx:advice>
-
-    <bean id="myBeanPostProcessor" class="prosayj.spring.iocaop.xml.transfer.pojo.MyBeanPostProcessor"/>
-    <!--
-          lazy-init：延迟加载，true代表延迟，false代表立即加载，默认是false
-      -->
-    <bean id="lazyResult"
-          class="prosayj.spring.iocaop.xml.transfer.pojo.Result"
-          init-method="initMethod"/>
-
+    <!--id标识对象，class是类的全限定类名-->
+    <!--scope：定义bean的作用范围
+                singleton：单例，IOC容器中只有一个该类对象，默认为singleton
+                prototype：原型(多例)，每次使用该类的对象（getBean），都返回给你一个新的对象，Spring只创建对象，不管理对象
+    -->
     <bean id="accountDao"
           class="prosayj.spring.iocaop.xml.transfer.dao.impl.JdbcAccountDaoImpl"
           scope="singleton"
@@ -135,6 +126,22 @@
     </bean>
 
 
+    <!--lazy-init默认为false立即加载-->
+    <bean id="accountPojo" class="prosayj.spring.iocaop.xml.transfer.pojo.Account" lazy-init="true"/>
+
+
+    <tx:advice id="txAdvice" transaction-manager="transactionManager">
+        <!--定制事务细节，传播行为、隔离级别等-->
+        <tx:attributes>
+            <!--一般性配置-->
+            <tx:method name="*" read-only="false" propagation="REQUIRED" isolation="DEFAULT" timeout="-1"/>
+            <!--针对查询的覆盖性配置-->
+            <tx:method name="query*" read-only="true" propagation="SUPPORTS"/>
+        </tx:attributes>
+    </tx:advice>
+
+    <bean id="myBeanPostProcessor" class="prosayj.spring.iocaop.xml.transfer.pojo.MyBeanPostProcessor"/>
+
 
     <!--进行aop相关的xml配置,配置aop的过程其实就是把aop相关术语落地  横切逻辑bean-->
     <bean id="logUtils" class="prosayj.spring.iocaop.xml.transfer.utils.LogUtils"/>
@@ -159,10 +166,8 @@
     </aop:config>
 
 
-    <!--开启aop注解驱动
-        proxy-target-class:true强制使用cglib.
-    -->
-    <aop:aspectj-autoproxy/>
     <!--声明式事务的注解驱动-->
-    <tx:annotation-driven transaction-manager="transactionManager"/>
+    <!--开启aop注解驱动 proxy-target-class:true强制使用cglib.-->
+    <!--<aop:aspectj-autoproxy/>-->
+    <!--<tx:annotation-driven transaction-manager="transactionManager"/>-->
 </beans>

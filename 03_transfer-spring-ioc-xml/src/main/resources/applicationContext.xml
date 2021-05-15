@@ -10,119 +10,17 @@
         https://www.springframework.org/schema/context/spring-context.xsd
 ">
 
-    <!--id标识对象，class是类的全限定类名-->
-    <!--scope：定义bean的作用范围
-                singleton：单例，IOC容器中只有一个该类对象，默认为singleton
-                prototype：原型(多例)，每次使用该类的对象（getBean），都返回给你一个新的对象，Spring只创建对象，不管理对象
-    -->
-    <!--
-         lazy-init：延迟加载，true代表延迟，false代表立即加载，默认是false
-     -->
-    <bean id="lazyResult"
-          class="prosayj.springiocxml.transfer.pojo.Result"
-          init-method="initMethod"/>
 
 
-    <!--引入外部资源文件-->
-    <context:property-placeholder location="classpath:jdbc.properties"/>
-
-    <!--第三方jar中的bean定义在xml中-->
-    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
-        <property name="driverClassName" value="${jdbc.driver}"/>
-        <property name="url" value="${jdbc.url}"/>
-        <property name="username" value="${jdbc.username}"/>
-        <property name="password" value="${jdbc.password}"/>
-    </bean>
-
-    <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
-        <constructor-arg name="dataSource" ref="dataSource"/>
-    </bean>
-
-    <!--spring声明式事务配置，声明式事务无非就是配置一个aop，只不过有些标签不一样罢了-->
-    <!--横切逻辑-->
-    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
-        <constructor-arg name="dataSource" ref="dataSource"/>
-    </bean>
 
 
-    <bean id="accountDao"
-          class="prosayj.springiocxml.transfer.dao.impl.JdbcAccountDaoImpl"
-          scope="singleton"
-          init-method="init"
-          destroy-method="destory"
-    >
-
-        <!--set注入使用property标签，如果注入的是另外一个bean那么使用ref属性，如果注入的是普通值那么使用的是value属性-->
-        <!--<property name="ConnectionUtils" ref="connectionUtils"/>
-        <property name="name" value="zhangsan"/>
-        <property name="sex" value="1"/>
-        <property name="money" value="100.3"/>-->
 
 
-        <!--<constructor-arg index="0" ref="connectionUtils"/>
-        <constructor-arg index="1" value="zhangsan"/>
-        <constructor-arg index="2" value="1"/>
-        <constructor-arg index="3" value="100.5"/>-->
 
 
-        <!--name：按照参数名称注入，index按照参数索引位置注入-->
-        <constructor-arg name="connectionUtils" ref="connectionUtils"/>
-        <constructor-arg name="name" value="zhangsan"/>
-        <constructor-arg name="sex" value="1"/>
-        <constructor-arg name="money" value="100.6"/>
-
-        <!--set注入注入复杂数据类型-->
-        <property name="myArray">
-            <array>
-                <value>array1</value>
-                <value>array2</value>
-                <value>array3</value>
-            </array>
-        </property>
-
-        <property name="myMap">
-            <map>
-                <entry key="key1" value="value1"/>
-                <entry key="key2" value="value2"/>
-            </map>
-        </property>
-
-        <property name="mySet">
-            <set>
-                <value>set1</value>
-                <value>set2</value>
-            </set>
-        </property>
-
-        <property name="myProperties">
-            <props>
-                <prop key="prop1">value1</prop>
-                <prop key="prop2">value2</prop>
-            </props>
-        </property>
-
-    </bean>
-    <bean id="transferService" class="prosayj.springiocxml.transfer.service.impl.TransferServiceImpl">
-        <!--set+ name 之后锁定到传值的set方法了，通过反射技术可以调用该方法传入对应的值-->
-        <property name="AccountDao" ref="accountDao"/>
-    </bean>
 
 
-    <!--Spring ioc 实例化Bean的三种方式-->
-    <!--方式一：使用无参构造器（推荐）-->
-    <bean id="connectionUtils" class="prosayj.springiocxml.transfer.utils.ConnectionUtils"/>
-    <!--另外两种方式是为了我们自己new的对象加入到SpringIOC容器管理-->
-    <!--方式二：静态方法-->
-<!--    <bean id="connectionUtils"-->
-<!--          class="prosayj.springiocxml.transfer.utils.CreateBeanFactory"-->
-<!--          factory-method="getInstanceStatic"/>-->
-    <!--方式三：实例化方法-->
-   <!-- <bean id="createBeanFactory" class="prosayj.springiocxml.transfer.utils.CreateBeanFactory"/>
-    <bean id="connectionUtils" factory-bean="createBeanFactory" factory-method="getInstance"/>-->
 
-
-    <!--lazy-init默认为false立即加载-->
-    <bean id="accountPojo" class="prosayj.springiocxml.transfer.pojo.Account" lazy-init="true"/>
 
 
 </beans>

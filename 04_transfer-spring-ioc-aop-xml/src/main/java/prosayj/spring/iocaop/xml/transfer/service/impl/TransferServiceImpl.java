@@ -18,6 +18,9 @@ import prosayj.spring.iocaop.xml.transfer.service.TransferService;
 public class TransferServiceImpl implements TransferService {
     private AccountDao accountDao;
 
+    public TransferServiceImpl() {
+        System.out.println("TransferServiceImpl 实例化");
+    }
 
     @Override
     public void transfer(String fromCardNo, String toCardNo, int money) throws Exception {
