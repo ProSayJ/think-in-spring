@@ -10,6 +10,9 @@ import prosayj.springiocxmlannotation.transfer.utils.ConnectionUtils;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.Map;
+import java.util.Properties;
+import java.util.Set;
 
 /**
  * JdbcAccountDaoImpl
@@ -18,15 +21,24 @@ import java.sql.ResultSet;
  * @date 2021-05-13
  */
 @Data
-@Repository("accountDao")
 public class JdbcAccountDaoImpl implements AccountDao {
-    /**
-     * @Autowired 按照类型注入
-     */
-    @Autowired
     private ConnectionUtils connectionUtils;
+    private String name;
+    private int sex;
+    private float money;
+    //---------------------------------
+    private String[] myArray;
+    private Map<String, String> myMap;
+    private Set<String> mySet;
+    private Properties myProperties;
 
 
+    public JdbcAccountDaoImpl(ConnectionUtils connectionUtils, String name, int sex, float money) {
+        this.connectionUtils = connectionUtils;
+        this.name = name;
+        this.sex = sex;
+        this.money = money;
+    }
 
 
     public void init() {

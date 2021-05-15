@@ -1,10 +1,10 @@
-package prosayj.springiocannotation.transfer.servlet;
+package prosayj.springiocxml.transfer.servlet;
 
-import prosayj.springiocannotation.transfer.factory.BeanFactory;
-import prosayj.springiocannotation.transfer.factory.ProxyFactory;
-import prosayj.springiocannotation.transfer.utils.JsonUtils;
-import prosayj.springiocannotation.transfer.pojo.Result;
-import prosayj.springiocannotation.transfer.service.TransferService;
+import prosayj.springiocxml.transfer.factory.BeanFactory;
+import prosayj.springiocxml.transfer.factory.ProxyFactory;
+import prosayj.springiocxml.transfer.pojo.Result;
+import prosayj.springiocxml.transfer.service.TransferService;
+import prosayj.springiocxml.transfer.utils.JsonUtils;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

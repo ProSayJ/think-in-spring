@@ -1,9 +1,9 @@
-package prosayj.springiocannotation.transfer.factory;
+package prosayj.springiocxml.transfer.factory;
 
-import prosayj.springiocannotation.transfer.utils.TransactionManager;
 import net.sf.cglib.proxy.Enhancer;
 import net.sf.cglib.proxy.MethodInterceptor;
 import net.sf.cglib.proxy.MethodProxy;
+import prosayj.springiocxml.transfer.utils.TransactionManager;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;

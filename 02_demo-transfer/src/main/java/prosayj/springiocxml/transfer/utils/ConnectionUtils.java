@@ -1,4 +1,4 @@
-package prosayj.springiocannotation.transfer.utils;
+package prosayj.springiocxml.transfer.utils;
 
 import java.sql.Connection;
 import java.sql.SQLException;

@@ -1,5 +1,6 @@
 package prosayj.springiocxmlannotation.transfer.service.impl;
 
+import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
@@ -16,15 +17,8 @@ import prosayj.springiocxmlannotation.transfer.service.TransferService;
  * @author yangjian
  * @date 2021-05-13
  */
-@Service("transferService")
+@Data
 public class TransferServiceImpl implements TransferService {
-    /**
-     * 最佳状态
-     *
-     * @Autowired 按照类型注入 ,如果按照类型无法唯一锁定对象，可以结合@Qualifier指定具体的id
-     */
-    @Autowired
-    @Qualifier("accountDao")
     private AccountDao accountDao;
 
 

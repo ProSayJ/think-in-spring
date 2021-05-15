@@ -1,8 +1,8 @@
-package prosayj.springiocannotation.transfer.service.impl;
+package prosayj.springiocxml.transfer.service.impl;
 
-import prosayj.springiocannotation.transfer.dao.AccountDao;
-import prosayj.springiocannotation.transfer.pojo.Account;
-import prosayj.springiocannotation.transfer.service.TransferService;
+import prosayj.springiocxml.transfer.dao.AccountDao;
+import prosayj.springiocxml.transfer.pojo.Account;
+import prosayj.springiocxml.transfer.service.TransferService;
 
 /**
  * TransferServiceImpl
