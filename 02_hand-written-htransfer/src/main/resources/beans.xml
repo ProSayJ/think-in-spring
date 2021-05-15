@@ -2,24 +2,24 @@
 <!--根标签beans，里面配置一个又一个的bean子标签，每一个bean子标签都代表一个类的配置-->
 <beans>
     <!--id标识对象，class是类的全限定类名-->
-    <bean id="accountDao" class="prosayj.springiocxml.transfer.dao.impl.JdbcAccountDaoImpl">
+    <bean id="accountDao" class="prosayj.handwritten.transfer.dao.impl.JdbcAccountDaoImpl">
         <property name="ConnectionUtils" ref="connectionUtils"/>
     </bean>
-    <bean id="transferService" class="prosayj.springiocxml.transfer.service.impl.TransferServiceImpl">
+    <bean id="transferService" class="prosayj.handwritten.transfer.service.impl.TransferServiceImpl">
         <!--set+ name 之后锁定到传值的set方法了，通过反射技术可以调用该方法传入对应的值-->
         <property name="AccountDao" ref="accountDao"/>
     </bean>
 
     <!--配置新增的三个Bean-->
-    <bean id="connectionUtils" class="prosayj.springiocxml.transfer.utils.ConnectionUtils"/>
+    <bean id="connectionUtils" class="prosayj.handwritten.transfer.utils.ConnectionUtils"/>
 
     <!--事务管理器-->
-    <bean id="transactionManager" class="prosayj.springiocxml.transfer.utils.TransactionManager">
+    <bean id="transactionManager" class="prosayj.handwritten.transfer.utils.TransactionManager">
         <property name="ConnectionUtils" ref="connectionUtils"/>
     </bean>
 
     <!--代理对象工厂-->
-    <bean id="proxyFactory" class="prosayj.springiocxml.transfer.factory.ProxyFactory">
+    <bean id="proxyFactory" class="prosayj.handwritten.transfer.factory.ProxyFactory">
         <property name="TransactionManager" ref="transactionManager"/>
     </bean>
 </beans>

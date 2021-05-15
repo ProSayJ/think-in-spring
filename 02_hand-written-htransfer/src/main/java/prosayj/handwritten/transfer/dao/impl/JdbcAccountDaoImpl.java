@@ -1,9 +1,9 @@
-package prosayj.springiocxml.transfer.dao.impl;
+package prosayj.handwritten.transfer.dao.impl;
 
 
-import prosayj.springiocxml.transfer.dao.AccountDao;
-import prosayj.springiocxml.transfer.pojo.Account;
-import prosayj.springiocxml.transfer.utils.ConnectionUtils;
+import prosayj.handwritten.transfer.dao.AccountDao;
+import prosayj.handwritten.transfer.pojo.Account;
+import prosayj.handwritten.transfer.utils.ConnectionUtils;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

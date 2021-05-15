@@ -1,7 +1,7 @@
-package prosayj.springiocxml.transfer.dao;
+package prosayj.handwritten.transfer.dao;
 
 
-import prosayj.springiocxml.transfer.pojo.Account;
+import prosayj.handwritten.transfer.pojo.Account;
 
 /**
  * AccountDao

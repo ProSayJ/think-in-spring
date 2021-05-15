@@ -10,9 +10,9 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>02_demo-transfer</artifactId>
-    <name>02_demo-transfer</name>
-    <description>02_demo-transfer</description>
+    <artifactId>02_hand-written-htransfer</artifactId>
+    <name>02_hand-written-htransfer</name>
+    <description>02_hand-written-htransfer</description>
     <packaging>war</packaging>
 
 
