@@ -11,9 +11,9 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>05_transfer-spring-ioc-aop-annotation</artifactId>
-    <name>05_transfer-spring-ioc-aop-annotation</name>
-    <description>05_transfer-spring-ioc-aop-annotation</description>
+    <artifactId>04_transfer-spring-ioc-aop-annotation</artifactId>
+    <name>04_transfer-spring-ioc-aop-annotation</name>
+    <description>04_transfer-spring-ioc-aop-annotation</description>
     <packaging>war</packaging>
 
 
