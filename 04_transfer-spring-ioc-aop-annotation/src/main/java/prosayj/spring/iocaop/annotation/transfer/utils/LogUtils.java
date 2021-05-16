@@ -16,6 +16,7 @@ import org.springframework.stereotype.Component;
 public class LogUtils {
 
 
+
     @Pointcut("execution(* prosayj.spring.iocaop.annotation.transfer.service.impl.TransferServiceImpl.*(..))")
     public void pt1() {
 
@@ -72,7 +73,7 @@ public class LogUtils {
         Object result = null;
         try {
             // 控制原有业务逻辑是否执行
-            // result = proceedingJoinPoint.proceed(proceedingJoinPoint.getArgs());
+            result = proceedingJoinPoint.proceed(proceedingJoinPoint.getArgs());
         } catch (Exception e) {
             System.out.println("环绕通知中的exceptionmethod....");
         } finally {

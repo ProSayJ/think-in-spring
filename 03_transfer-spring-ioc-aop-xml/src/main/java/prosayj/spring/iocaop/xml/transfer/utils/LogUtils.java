@@ -25,7 +25,7 @@ public class LogUtils {
         for (Object arg : args) {
             System.out.println(arg);
         }
-        System.out.println("业务逻辑开始执行之前执行.......");
+        System.out.println("业务逻辑开始执行之前执行.......beforeMethod");
     }
 
 
@@ -33,7 +33,14 @@ public class LogUtils {
      * 业务逻辑结束时执行（无论异常与否）
      */
     public void afterMethod() {
-        System.out.println("业务逻辑结束时执行，无论异常与否都执行.......");
+        System.out.println("业务逻辑结束时执行，无论异常与否都执行.......afterMethod");
+    }
+
+    /**
+     * 业务逻辑正常时执行
+     */
+    public void successMethod(Object retVal) {
+        System.out.println("业务逻辑正常时执行.......successMethod");
     }
 
 
@@ -41,32 +48,25 @@ public class LogUtils {
      * 异常时时执行
      */
     public void exceptionMethod() {
-        System.out.println("异常时执行.......");
+        System.out.println("异常时执行.......exceptionMethod");
     }
 
-
-    /**
-     * 业务逻辑正常时执行
-     */
-    public void successMethod(Object retVal) {
-        System.out.println("业务逻辑正常时执行.......");
-    }
 
 
     /**
      * 环绕通知
      */
     public Object arroundMethod(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
-        System.out.println("环绕通知中的beforemethod....");
+        System.out.println("环绕通知中的....beforemethod");
 
         Object result = null;
         try {
             // 控制原有业务逻辑是否执行
             result = proceedingJoinPoint.proceed(proceedingJoinPoint.getArgs());
         } catch (Exception e) {
-            System.out.println("环绕通知中的exceptionmethod....");
+            System.out.println("环绕通知中的....exceptionmethod");
         } finally {
-            System.out.println("环绕通知中的after method....");
+            System.out.println("环绕通知中的....after method");
         }
 
         return result;

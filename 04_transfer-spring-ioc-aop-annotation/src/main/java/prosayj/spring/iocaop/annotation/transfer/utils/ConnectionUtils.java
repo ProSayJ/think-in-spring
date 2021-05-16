@@ -17,17 +17,6 @@ import java.sql.SQLException;
 public class ConnectionUtils {
     @Autowired
     private DataSource dataSource;
-
-    /*private ConnectionUtils() {
-
-    }
-
-    private static ConnectionUtils connectionUtils = new ConnectionUtils();
-
-    public static ConnectionUtils getInstance() {
-        return connectionUtils;
-    }*/
-
     /**
      * 存储当前线程的连接
      */
