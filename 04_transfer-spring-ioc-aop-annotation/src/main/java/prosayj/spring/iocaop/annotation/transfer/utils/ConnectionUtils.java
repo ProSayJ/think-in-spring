@@ -1,5 +1,6 @@
 package prosayj.spring.iocaop.annotation.transfer.utils;
 
+import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -13,7 +14,8 @@ import java.sql.SQLException;
  * @author yangjian
  * @date 2021-05-13
  */
-@Component("connectionUtils")
+@Data
+@Component
 public class ConnectionUtils {
     @Autowired
     private DataSource dataSource;
@@ -21,7 +23,6 @@ public class ConnectionUtils {
      * 存储当前线程的连接
      */
     private final ThreadLocal<Connection> THREAD_LOCAL = new ThreadLocal<>();
-
 
     /**
      * 从当前线程获取连接

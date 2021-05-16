@@ -1,4 +1,4 @@
-package prosayj.spring.iocaop.annotation.transfer.factory;
+package prosayj.spring.iocaop.annotation.transfer.test;
 
 import org.dom4j.Document;
 import org.dom4j.DocumentException;

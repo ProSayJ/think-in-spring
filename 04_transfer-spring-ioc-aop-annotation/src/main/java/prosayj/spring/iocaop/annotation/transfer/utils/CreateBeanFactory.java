@@ -1,6 +1,5 @@
-package com.lagou.edu.factory;
+package prosayj.spring.iocaop.annotation.transfer.utils;
 
-import com.lagou.edu.utils.ConnectionUtils;
 
 /**
  * @author 应癫
@@ -8,12 +7,18 @@ import com.lagou.edu.utils.ConnectionUtils;
 public class CreateBeanFactory {
 
 
-
+    /**
+     * 静态方法实例化Bean
+     * @return ConnectionUtils
+     */
     public static ConnectionUtils getInstanceStatic() {
         return new ConnectionUtils();
     }
 
-
+    /**
+     * 静态方法实例化Bean
+     * @return ConnectionUtils
+     */
     public ConnectionUtils getInstance() {
         return new ConnectionUtils();
     }

@@ -1,11 +1,10 @@
 package prosayj.spring.iocaop.annotation.transfer.servlet;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.context.support.WebApplicationContextUtils;
-import prosayj.spring.iocaop.annotation.transfer.utils.JsonUtils;
 import prosayj.spring.iocaop.annotation.transfer.pojo.Result;
 import prosayj.spring.iocaop.annotation.transfer.service.TransferService;
+import prosayj.spring.iocaop.annotation.transfer.utils.JsonUtils;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -23,7 +22,6 @@ import java.io.IOException;
 @WebServlet(name = "transferServlet", urlPatterns = "/transferServlet")
 public class TransferServlet extends HttpServlet {
 
-    @Autowired
     private TransferService transferService;
 
 
@@ -45,7 +43,7 @@ public class TransferServlet extends HttpServlet {
     public void init() throws ServletException {
         WebApplicationContext webApplicationContext = WebApplicationContextUtils.getWebApplicationContext(this.getServletContext());
         assert webApplicationContext != null;
-        transferService = (TransferService) webApplicationContext.getBean("transferService");
+        transferService = webApplicationContext.getBean(TransferService.class);
     }
 
     @Override

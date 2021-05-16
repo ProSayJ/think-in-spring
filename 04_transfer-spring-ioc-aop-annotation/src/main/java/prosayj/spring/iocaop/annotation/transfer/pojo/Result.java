@@ -5,6 +5,8 @@ import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.*;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
+import org.springframework.context.annotation.Lazy;
+import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
@@ -16,9 +18,33 @@ import javax.annotation.PreDestroy;
  * @date 2021-05-13
  */
 @Data
+@Component
+@Lazy
 public class Result implements BeanNameAware, BeanFactoryAware, ApplicationContextAware, InitializingBean, DisposableBean {
     private String status;
     private String message;
+
+    public void initMethod() {
+        System.out.println("init-method....");
+    }
+
+
+    @PostConstruct
+    public void postCoustrcut() {
+        System.out.println("postCoustrcut");
+    }
+
+
+    @PreDestroy
+    public void preDestroy() {
+        System.out.println("PreDestroy...");
+    }
+
+    @Override
+    public void destroy() throws Exception {
+        System.out.println("destroy.....");
+    }
+
 
     @Override
     public void setBeanName(String name) {
@@ -38,26 +64,5 @@ public class Result implements BeanNameAware, BeanFactoryAware, ApplicationConte
     @Override
     public void afterPropertiesSet() throws Exception {
         System.out.println("afterPropertiesSet......");
-    }
-
-
-    public void initMethod() {
-        System.out.println("init-method....");
-    }
-
-    @PostConstruct
-    public void postCoustrcut() {
-        System.out.println("postCoustrcut");
-    }
-
-
-    @PreDestroy
-    public void preDestroy() {
-        System.out.println("PreDestroy...");
-    }
-
-    @Override
-    public void destroy() throws Exception {
-        System.out.println("destroy.....");
     }
 }

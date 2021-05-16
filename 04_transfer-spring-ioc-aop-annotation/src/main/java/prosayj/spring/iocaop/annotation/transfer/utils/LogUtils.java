@@ -3,6 +3,7 @@ package prosayj.spring.iocaop.annotation.transfer.utils;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.stereotype.Component;
 
 /**
@@ -13,13 +14,13 @@ import org.springframework.stereotype.Component;
  */
 @Component
 @Aspect
+@EnableAspectJAutoProxy
 public class LogUtils {
+    private static final String TRANSFORE_ASPECT =
+            "execution(* prosayj.spring.iocaop.annotation.transfer.service.impl.TransferServiceImpl.*(..))";
 
-
-
-    @Pointcut("execution(* prosayj.spring.iocaop.annotation.transfer.service.impl.TransferServiceImpl.*(..))")
+    @Pointcut(TRANSFORE_ASPECT)
     public void pt1() {
-
     }
 
 
@@ -32,7 +33,7 @@ public class LogUtils {
         for (Object arg : args) {
             System.out.println(arg);
         }
-        System.out.println("业务逻辑开始执行之前执行.......");
+        System.out.println("业务逻辑开始执行之前执行.......beforeMethod");
     }
 
 
@@ -41,7 +42,15 @@ public class LogUtils {
      */
     @After("pt1()")
     public void afterMethod() {
-        System.out.println("业务逻辑结束时执行，无论异常与否都执行.......");
+        System.out.println("业务逻辑结束时执行，无论异常与否都执行.......afterMethod");
+    }
+
+    /**
+     * 业务逻辑正常时执行
+     */
+    @AfterReturning(value = "pt1()", returning = "retVal")
+    public void successMethod(Object retVal) {
+        System.out.println("业务逻辑正常时执行.......successMethod");
     }
 
 
@@ -50,16 +59,7 @@ public class LogUtils {
      */
     @AfterThrowing("pt1()")
     public void exceptionMethod() {
-        System.out.println("异常时执行.......");
-    }
-
-
-    /**
-     * 业务逻辑正常时执行
-     */
-    @AfterReturning(value = "pt1()", returning = "retVal")
-    public void successMethod(Object retVal) {
-        System.out.println("业务逻辑正常时执行.......");
+        System.out.println("异常时执行.......exceptionMethod");
     }
 
 
@@ -68,16 +68,17 @@ public class LogUtils {
      */
     @Around("pt1()")
     public Object arroundMethod(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
-        System.out.println("环绕通知中的beforemethod....");
-
-        Object result = null;
+        System.out.println("环绕通知中的....beforemethod");
+        Object result;
         try {
             // 控制原有业务逻辑是否执行
             result = proceedingJoinPoint.proceed(proceedingJoinPoint.getArgs());
         } catch (Exception e) {
-            System.out.println("环绕通知中的exceptionmethod....");
+            e.printStackTrace();
+            System.out.println("环绕通知中的....exceptionmethod");
+            throw e;
         } finally {
-            System.out.println("环绕通知中的after method....");
+            System.out.println("环绕通知中的....after method");
         }
 
         return result;
