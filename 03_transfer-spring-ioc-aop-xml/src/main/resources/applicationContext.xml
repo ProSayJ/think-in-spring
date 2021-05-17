@@ -36,7 +36,7 @@
     <!--lazy-init：延迟加载，true代表延迟，false代表立即加载，默认是false-->
     <bean id="lazyResult"
           class="prosayj.spring.iocaop.xml.transfer.pojo.Result"
-          init-method="initMethod"/>
+          init-method="initMethod" />
 
 
     <!--第三方jar中的bean定义在xml中-->

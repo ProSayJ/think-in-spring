@@ -1,5 +1,6 @@
 
 import org.junit.Test;
+import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import prosayj.spring.iocaop.xml.transfer.dao.AccountDao;
 import prosayj.spring.iocaop.xml.transfer.service.TransferService;
@@ -15,22 +16,18 @@ public class IoCTest {
 
     @Test
     public void testIoC() throws Exception {
+        // Applicationcontext 是容器的高级接口， Beanfacotry(顶级容器/根容器，规范了/定义了容器的基础行为)
+        // Spring应用上下文，官方称之为IoC容器（错误的认识：容器就是map而已；准确来说，map是ioc容器的一个成员，叫做单例池， sinaletonobiects,容器是一组组件和过程的集合
+        // 包括BeanFactory、单例池、BeanPostProcesser等以及之间的协作
         // 通过读取classpath下的xml文件来启动容器（xml模式SE应用下推荐）
         ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:applicationContext.xml");
         // 不推荐使用
         //ApplicationContext applicationContext1 = new FileSystemXmlApplicationContext("文件系统的绝对路径");
-        AccountDao accountDao = (AccountDao) applicationContext.getBean("accountDao");
+        AccountDao accountDao =  applicationContext.getBean(AccountDao.class);
 
-        accountDao.queryAccountByCardNo("1111111");
-        System.out.println("accountDao：" + accountDao);
-        AccountDao accountDao1 = (AccountDao) applicationContext.getBean("accountDao");
-        System.out.println("accountDao1：" + accountDao1);
+        ClassPathXmlApplicationContext context = applicationContext;
+        context.close();
 
-
-        Object connectionUtils = applicationContext.getBean("connectionUtils");
-        System.out.println(connectionUtils);
-
-        applicationContext.close();
     }
 
 

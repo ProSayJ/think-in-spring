@@ -20,10 +20,13 @@ public class Result implements BeanNameAware, BeanFactoryAware, ApplicationConte
     private String status;
     private String message;
 
+    public Result() {
+        System.out.println("Result 无参构造器 初始化");
+    }
+
     public void initMethod() {
         System.out.println("init-method....");
     }
-
 
     @PostConstruct
     public void postCoustrcut() {
