@@ -10,9 +10,9 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>08_ssm</artifactId>
-    <name>08_ssm</name>
-    <description>08_ssm</description>
+    <artifactId>09_ssm</artifactId>
+    <name>09_ssm</name>
+    <description>09_ssm</description>
     <packaging>war</packaging>
 
     <!-- FIXME change it to the project's website -->

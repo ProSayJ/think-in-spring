@@ -28,7 +28,7 @@
         <module>06_hand-written-mvc</module>
         <module>07_springmvc-demo</module>
         <module>08_spring-data-jpa</module>
-        <module>08_ssm</module>
+        <module>09_ssm</module>
     </modules>
 
     <properties>
