@@ -27,6 +27,7 @@
         <module>05-spring_source_analysis</module>
         <module>06_hand-written-mvc</module>
         <module>07_springmvc-demo</module>
+        <module>08_ssm</module>
     </modules>
 
     <properties>
