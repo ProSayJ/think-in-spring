@@ -26,6 +26,7 @@
         <module>04_transfer-spring-ioc-aop-annotation</module>
         <module>05-spring_source_analysis</module>
         <module>06_hand-written-mvc</module>
+        <module>07_springmvc-demo</module>
     </modules>
 
     <properties>
