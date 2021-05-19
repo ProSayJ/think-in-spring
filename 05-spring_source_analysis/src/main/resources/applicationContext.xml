@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+	    http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/aop
+        https://www.springframework.org/schema/aop/spring-aop.xsd
+">
+
+    <!--循环依赖问题-->
+    <bean id="lagouBean" class="com.prosayj.analysis.springsource.MyBean">
+        <property name="ItBean" ref="itBean"/>
+    </bean>
+    <bean id="itBean" class="com.prosayj.analysis.springsource.ItBean">
+        <property name="LagouBean" ref="lagouBean"/>
+    </bean>
+
+
+    <!--<bean id="myBeanFactoryPostProcessor" class="com.prosayj.analysis.springsource.MyBeanFactoryPostProcessor"/>
+    <bean id="myBeanPostProcessor" class="com.prosayj.analysis.springsource.MyBeanPostProcessor"/>-->
+
+
+    <!--<bean id="myBean" class="com.prosayj.analysis.springsource.MyBean">
+    </bean>-->
+
+
+    <!--aop配置-->
+    <!--横切逻辑-->
+    <!--<bean id="logUtils" class="com.prosayj.analysis.springsource.LogUtils">
+    </bean>
+
+    <aop:config>
+        <aop:aspect ref="logUtils">
+            <aop:before method="beforeMethod" pointcut="execution(public void com.prosayj.analysis.springsource.LogUtils.print())"/>
+        </aop:aspect>
+    </aop:config>-->
+
+</beans>

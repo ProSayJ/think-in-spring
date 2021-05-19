@@ -24,6 +24,8 @@
         <module>02_hand-written-htransfer</module>
         <module>03_transfer-spring-ioc-aop-xml</module>
         <module>04_transfer-spring-ioc-aop-annotation</module>
+        <module>05-spring_source_analysis</module>
+        <module>06_hand-written-mvc</module>
     </modules>
 
     <properties>
