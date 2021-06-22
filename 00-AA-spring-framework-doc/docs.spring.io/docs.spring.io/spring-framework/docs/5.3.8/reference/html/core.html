@@ -2020,15 +2020,26 @@ context.refresh()</code></pre>
                             </p>
                         </div>
                         <div class="paragraph">
-                            <p>DI exists in two major variants: <a href="#beans-constructor-injection">Constructor-based
-dependency injection</a> and <a href="#beans-setter-injection">Setter-based dependency injection</a>.</p>
+                            <p>
+                                DI exists in two major variants: <a href="#beans-constructor-injection">
+                                Constructor-based dependency injection</a> and <a href="#beans-setter-injection">Setter-based dependency injection</a>.</br>
+                                依赖注入主要有两种变体:基于构造函数的依赖注入和基于setter的依赖注入。
+                            </p>
                         </div>
                         <div class="sect4">
-                            <h5 id="beans-constructor-injection"><a class="anchor" href="#beans-constructor-injection"></a>Constructor-based Dependency Injection</h5>
+                            <h5 id="beans-constructor-injection"><a class="anchor" href="#beans-constructor-injection"></a>
+                                Constructor-based Dependency Injection<br>基于构造方法的依赖注入
+                            </h5>
                             <div class="paragraph">
-                                <p>Constructor-based DI is accomplished by the container invoking a constructor with a number of arguments, each representing a dependency. Calling a <code>static</code> factory method with specific arguments to construct
-                                    the bean is nearly equivalent, and this discussion treats arguments to a constructor and to a <code>static</code> factory method similarly. The following example shows a class that can only be dependency-injected with
-                                    constructor injection:
+                                <p>
+                                    Constructor-based DI is accomplished by the container invoking a constructor with a number of arguments,
+                                    each representing a dependency. Calling a <code>static</code> factory method with specific arguments to construct
+                                    the bean is nearly equivalent, and this discussion treats arguments to a constructor and to a <code>static</code>
+                                    factory method similarly. The following example shows a class that can only be dependency-injected with
+                                    constructor injection:</br>
+                                    基于构造函数的DI是通过容器调用带有许多参数的构造函数来完成的，每个参数表示一个依赖项。
+                                    调用带有特定参数的静态工厂方法来构造bean几乎是等价的，本文以类似的方式处理构造函数的参数和静态工厂方法的参数。
+                                    下面的例子展示了一个只能通过构造函数注入进行依赖注入的类:
                                 </p>
                             </div>
                             <div class="listingblock primary">
@@ -2058,13 +2069,28 @@ class SimpleMovieLister(private val movieFinder: MovieFinder) {
                                 </div>
                             </div>
                             <div class="paragraph">
-                                <p>Notice that there is nothing special about this class. It is a POJO that has no dependencies on container specific interfaces, base classes, or annotations.</p>
+                                <p>
+                                    Notice that there is nothing special about this class.
+                                    It is a POJO that has no dependencies on container specific interfaces, base classes, or annotations.</br>
+                                    注意，这个类没有什么特别之处。它是一个不依赖于容器特定接口、基类或注释的POJO。
+                                </p>
                             </div>
                             <div class="sect5">
-                                <h6 id="beans-factory-ctor-arguments-resolution"><a class="anchor" href="#beans-factory-ctor-arguments-resolution"></a>Constructor Argument Resolution</h6>
+                                <h6 id="beans-factory-ctor-arguments-resolution"><a class="anchor" href="#beans-factory-ctor-arguments-resolution"></a>
+                                    Constructor Argument Resolution<br>
+                                    构造函数参数解析
+                                </h6>
                                 <div class="paragraph">
-                                    <p>Constructor argument resolution matching occurs by using the argument&#8217;s type. If no potential ambiguity exists in the constructor arguments of a bean definition, the order in which the constructor arguments are
-                                        defined in a bean definition is the order in which those arguments are supplied to the appropriate constructor when the bean is being instantiated. Consider the following class:</p>
+                                    <p>
+                                       Constructor argument resolution matching occurs by using the argument&#8217;s type.
+                                       If no potential ambiguity exists in the constructor arguments of a bean definition,
+                                       the order in which the constructor arguments are defined in a bean definition is
+                                       the order in which those arguments are supplied to the appropriate constructor when
+                                       the bean is being instantiated. Consider the following class:</br>
+                                       构造函数参数解析匹配是通过使用参数的类型来实现的。
+                                       如果bean定义的构造函数参数中不存在潜在的歧义，那么在bean定义中定义构造函数参数的顺序就是在实例化bean时将这些参数提供给适当的构造函数的顺序。
+                                       考虑以下类:
+                                   </p>
                                 </div>
                                 <div class="listingblock primary">
                                     <div class="title">Java</div>
@@ -2088,9 +2114,14 @@ class ThingOne(thingTwo: ThingTwo, thingThree: ThingThree)</code></pre>
                                     </div>
                                 </div>
                                 <div class="paragraph">
-                                    <p>Assuming that the <code>ThingTwo</code> and <code>ThingThree</code> classes are not related by inheritance, no potential ambiguity exists. Thus, the following configuration works fine, and you do not need to specify
+                                    <p>
+                                        Assuming that the <code>ThingTwo</code> and <code>ThingThree</code> classes are not related by inheritance,
+                                        no potential ambiguity exists. Thus, the following configuration works fine, and you do not need to specify
                                         the constructor argument indexes or types explicitly in the
-                                        <code>&lt;constructor-arg/&gt;</code> element.</p>
+                                        <code>&lt;constructor-arg/&gt;</code> element.</br>
+                                        假设<code>ThingTwo</code>和<code>ThingThree</code>类没有继承关系，就不存在潜在的歧义。
+                                        因此，以下配置可以正常工作，并且不需要在<code>&lt;constructor-arg/&gt;</code> 元素中显式指定构造函数参数索引或类型。
+                                    </p>
                                 </div>
                                 <div class="listingblock">
                                     <div class="content">
@@ -2107,8 +2138,15 @@ class ThingOne(thingTwo: ThingTwo, thingThree: ThingThree)</code></pre>
                                     </div>
                                 </div>
                                 <div class="paragraph">
-                                    <p>When another bean is referenced, the type is known, and matching can occur (as was the case with the preceding example). When a simple type is used, such as
-                                        <code>&lt;value&gt;true&lt;/value&gt;</code>, Spring cannot determine the type of the value, and so cannot match by type without help. Consider the following class:</p>
+                                    <p>
+                                        When another bean is referenced,
+                                        the type is known, and matching can occur (as was the case with the preceding example).
+                                        When a simple type is used, such as <code>&lt;value&gt;true&lt;/value&gt;</code>,
+                                        Spring cannot determine the type of the value, and so cannot match by type without help.
+                                        Consider the following class:</br>
+                                        当引用另一个bean时，类型是已知的，可以进行匹配(就像前面的示例一样)。当使用简单类型时，例如 <code>&lt;value&gt;true&lt;/value&gt;</code>，
+                                        Spring不能确定值的类型，因此在没有帮助的情况下不能按类型匹配。考虑以下类:
+                                    </p>
                                 </div>
                                 <div class="listingblock primary">
                                     <div class="title">Java</div>
@@ -2142,11 +2180,14 @@ class ExampleBean(
                                     </div>
                                 </div>
                                 <div class="openblock">
-                                    <div class="title"><a id="beans-factory-ctor-arguments-type"></a>Constructor argument type matching</div>
+                                    <div class="title"><a id="beans-factory-ctor-arguments-type"></a>Constructor argument type matching</br>构造函数参数类型匹配</div>
                                     <div class="content">
                                         <div class="paragraph">
-                                            <p>In the preceding scenario, the container can use type matching with simple types if you explicitly specify the type of the constructor argument by using the <code>type</code> attribute, as the following example
-                                                shows:</p>
+                                            <p>
+                                                In the preceding scenario, the container can use type matching with simple types if you explicitly specify the
+                                                type of the constructor argument by using the <code>type</code> attribute, as the following example shows:</br>
+                                                在前面的场景中，如果使用type属性显式指定构造函数参数的类型，容器可以使用简单类型的类型匹配，如下面的示例所示:
+                                            </p>
                                         </div>
                                         <div class="listingblock">
                                             <div class="content">
@@ -2159,10 +2200,14 @@ class ExampleBean(
                                     </div>
                                 </div>
                                 <div class="openblock">
-                                    <div class="title"><a id="beans-factory-ctor-arguments-index"></a>Constructor argument index</div>
+                                    <div class="title"><a id="beans-factory-ctor-arguments-index"></a>Constructor argument index</br>构造函数参数索引</div>
                                     <div class="content">
                                         <div class="paragraph">
-                                            <p>You can use the <code>index</code> attribute to specify explicitly the index of constructor arguments, as the following example shows:</p>
+                                            <p>
+                                                You can use the <code>index</code> attribute to specify explicitly the index of constructor arguments,
+                                                 as the following example shows:</br>
+                                                 你可以使用index属性显式地指定构造函数参数的索引，如下面的例子所示:
+                                            </p>
                                         </div>
                                         <div class="listingblock">
                                             <div class="content">
@@ -2173,7 +2218,11 @@ class ExampleBean(
                                             </div>
                                         </div>
                                         <div class="paragraph">
-                                            <p>In addition to resolving the ambiguity of multiple simple values, specifying an index resolves ambiguity where a constructor has two arguments of the same type.</p>
+                                            <p>
+                                                In addition to resolving the ambiguity of multiple simple values,
+                                                specifying an index resolves ambiguity where a constructor has two arguments of the same type.</br>
+                                                除了解决多个简单值的歧义外，指定索引还解决了构造函数具有两个相同类型参数的歧义。
+                                            </p>
                                         </div>
                                         <div class="admonitionblock note">
                                             <table>
@@ -2182,7 +2231,8 @@ class ExampleBean(
                                                         <i class="fa icon-note" title="Note"></i>
                                                     </td>
                                                     <td class="content">
-                                                        The index is 0-based.
+                                                        The index is 0-based.<br>
+                                                        索引是基于0的。
                                                     </td>
                                                 </tr>
                                             </table>
@@ -2190,10 +2240,13 @@ class ExampleBean(
                                     </div>
                                 </div>
                                 <div class="openblock">
-                                    <div class="title"><a id="beans-factory-ctor-arguments-name"></a>Constructor argument name</div>
+                                    <div class="title"><a id="beans-factory-ctor-arguments-name"></a>Constructor argument name<br>构造函数参数的名字</div>
                                     <div class="content">
                                         <div class="paragraph">
-                                            <p>You can also use the constructor parameter name for value disambiguation, as the following example shows:</p>
+                                            <p>
+                                                You can also use the constructor parameter name for value disambiguation, as the following example shows:<br>
+                                                你也可以使用构造函数的参数名来消除值的歧义，如下面的例子所示:
+                                            </p>
                                         </div>
                                         <div class="listingblock">
                                             <div class="content">
@@ -2204,10 +2257,16 @@ class ExampleBean(
                                             </div>
                                         </div>
                                         <div class="paragraph">
-                                            <p>Keep in mind that, to make this work out of the box, your code must be compiled with the debug flag enabled so that Spring can look up the parameter name from the constructor. If you cannot or do not want to
-                                                compile your code with the debug flag, you can use the
-                                                <a href="https://download.oracle.com/javase/8/docs/api/java/beans/ConstructorProperties.html">@ConstructorProperties</a> JDK annotation to explicitly name your constructor arguments. The sample class would
-                                                then have to look as follows:</p>
+                                            <p>
+                                                Keep in mind that, to make this work out of the box,
+                                                your code must be compiled with the debug flag enabled so that Spring can look up the parameter name from the constructor.
+                                                If you cannot or do not want to compile your code with the debug flag, you can use the
+                                                <a href="https://download.oracle.com/javase/8/docs/api/java/beans/ConstructorProperties.html">@ConstructorProperties</a>
+                                                JDK annotation to explicitly name your constructor arguments.
+                                                The sample class would then have to look as follows:</br>
+                                                请记住，要使其开箱即用，您的代码必须在启用调试标志的情况下编译，以便Spring可以从构造函数中查找参数名。
+                                                如果不能或不想使用调试标志编译代码，可以使用@ConstructorProperties JDK注释显式地命名构造函数参数。样例类应该如下所示:
+                                            </p>
                                         </div>
                                         <div class="listingblock primary">
                                             <div class="title">Java</div>
@@ -2241,13 +2300,25 @@ constructor(val years: Int, val ultimateAnswer: String)</code></pre>
                             </div>
                         </div>
                         <div class="sect4">
-                            <h5 id="beans-setter-injection"><a class="anchor" href="#beans-setter-injection"></a>Setter-based Dependency Injection</h5>
+                            <h5 id="beans-setter-injection"><a class="anchor" href="#beans-setter-injection"></a>
+                                Setter-based Dependency Injection<br>
+                                基于 Setter 的依赖注入
+                            </h5>
                             <div class="paragraph">
-                                <p>Setter-based DI is accomplished by the container calling setter methods on your beans after invoking a no-argument constructor or a no-argument <code>static</code> factory method to instantiate your bean.</p>
+                                <p>
+                                    Setter-based DI is accomplished by the container calling setter methods on your beans after invoking
+                                    a no-argument constructor or a no-argument <code>static</code> factory method to instantiate your bean.</br>
+                                    基于setter的DI是通过容器在调用无参数构造函数或无参数静态工厂方法来实例化bean之后调用bean上的setter方法来完成的。
+                                </p>
                             </div>
                             <div class="paragraph">
-                                <p>The following example shows a class that can only be dependency-injected by using pure setter injection. This class is conventional Java. It is a POJO that has no dependencies on container specific interfaces, base classes,
-                                    or annotations.</p>
+                                <p>
+                                 The following example shows a class that can only be dependency-injected by using pure setter injection.
+                                 This class is conventional Java. It is a POJO that has no dependencies on container specific interfaces,
+                                 base classes, or annotations.</br>
+                                 下面的例子展示了一个只能通过使用纯setter注入来进行依赖注入的类。
+                                 这个类是传统的Java。它是一个不依赖于容器特定接口、基类或注释的POJO。
+                                </p>
                             </div>
                             <div class="listingblock primary">
                                 <div class="title">Java</div>
@@ -2279,105 +2350,193 @@ constructor(val years: Int, val ultimateAnswer: String)</code></pre>
                                 </div>
                             </div>
                             <div class="paragraph">
-                                <p>The <code>ApplicationContext</code> supports constructor-based and setter-based DI for the beans it manages. It also supports setter-based DI after some dependencies have already been injected through the constructor approach.
-                                    You configure the dependencies in the form of a <code>BeanDefinition</code>, which you use in conjunction with <code>PropertyEditor</code> instances to convert properties from one format to another. However, most Spring
-                                    users do not work with these classes directly (that is, programmatically) but rather with XML <code>bean</code> definitions, annotated components (that is, classes annotated with <code>@Component</code>,
-                                    <code>@Controller</code>, and so forth), or <code>@Bean</code> methods in Java-based <code>@Configuration</code> classes. These sources are then converted internally into instances of <code>BeanDefinition</code> and
-                                    used to load an entire Spring IoC container instance.</p>
+                                <p>
+                                    The <code>ApplicationContext</code> supports constructor-based and setter-based DI for the beans it manages.
+                                    It also supports setter-based DI after some dependencies have already been injected through the constructor approach.
+                                    You configure the dependencies in the form of a <code>BeanDefinition</code>,
+                                    which you use in conjunction with <code>PropertyEditor</code> instances to convert properties from one format to another.
+                                    However, most Spring users do not work with these classes directly (that is, programmatically) but
+                                    rather with XML <code>bean</code> definitions, annotated components (that is, classes annotated with <code>@Component</code>,
+                                    <code>@Controller</code>, and so forth), or <code>@Bean</code> methods in Java-based <code>@Configuration</code> classes.
+                                    These sources are then converted internally into instances of <code>BeanDefinition</code> and used to load an entire Spring IoC
+                                     container instance.</br>
+                                     <code>ApplicationContext</code>为它管理的bean支持基于构造函数和基于setter的DI。
+                                     在通过构造函数方法注入了一些依赖项之后，它还支持基于setter的DI。
+                                     您可以以<code>BeanDefinition</code>的形式配置依赖项，可以与<code>PropertyEditor</code>实例一起使用，将属性从一种格式转换为另一种格式。
+                                     但是，大多数Spring用户并不是直接使用这些类(即通过编程方式)，
+                                     而是使用XML  <code>bean</code> definitions、带注释的组件(即使用<code>@Component</code>、<code>@Controller</code>等带注释的类)，
+                                     或者基于java的<code>@Configuration</code>类中的<code>@Bean</code>方法。
+                                     然后，这些源在内部转换为<code>BeanDefinition</code>的实例，并用于加载整个Spring IoC容器实例。
+                                </p>
                             </div>
                             <div id="beans-constructor-vs-setter-injection" class="sidebarblock">
                                 <div class="content">
-                                    <div class="title">Constructor-based or setter-based DI?</div>
+                                    <div class="title">
+                                        Constructor-based or setter-based DI?<br>
+                                        构造注入 还是 Setter 注入？
+                                    </div>
                                     <div class="paragraph">
-                                        <p>Since you can mix constructor-based and setter-based DI, it is a good rule of thumb to use constructors for mandatory dependencies and setter methods or configuration methods for optional dependencies. Note that
+                                        <p>
+                                            Since you can mix constructor-based and setter-based DI, it is a good rule of thumb to use constructors for mandatory dependencies and setter methods or configuration methods for optional dependencies. Note that
                                             use of the <a href="#beans-required-annotation">@Required</a> annotation on a setter method can be used to make the property be a required dependency; however, constructor injection with programmatic validation
-                                            of arguments is preferable.</p>
+                                            of arguments is preferable.</br>
+                                            由于可以混合使用基于构造函数和基于setter的DI，因此对于强制依赖项使用构造函数，对于可选依赖项使用setter方法或配置方法是一条很好的经验法则。
+                                            注意，在setter方法上使用@Required注释可以使属性成为必需的依赖项;然而，使用编程式验证参数的构造函数注入更可取。
+                                        </p>
                                     </div>
                                     <div class="paragraph">
-                                        <p>The Spring team generally advocates constructor injection, as it lets you implement application components as immutable objects and ensures that required dependencies are not <code>null</code>. Furthermore, constructor-injected
+                                        <p>
+                                            The Spring team generally advocates constructor injection, as it lets you implement application components as immutable objects and ensures that required dependencies are not <code>null</code>. Furthermore, constructor-injected
                                             components are always returned to the client (calling) code in a fully initialized state. As a side note, a large number of constructor arguments is a bad code smell, implying that the class likely has too many
-                                            responsibilities and should be refactored to better address proper separation of concerns.</p>
+                                            responsibilities and should be refactored to better address proper separation of concerns.</br>
+                                            Spring团队通常提倡构造函数注入，因为它允许您将应用程序组件实现为不可变对象，并确保所需的依赖项不为空。
+                                            此外，构造函数注入的组件总是在完全初始化状态下返回给客户机(调用)代码。顺便说一下，大量构造函数参数是一种糟糕的代码味道，这意味着类可能有太多的职责，应该进行重构以更好地解决关注事项的适当分离。
+                                        </p>
                                     </div>
                                     <div class="paragraph">
-                                        <p>Setter injection should primarily only be used for optional dependencies that can be assigned reasonable default values within the class. Otherwise, not-null checks must be performed everywhere the code uses the
-                                            dependency. One benefit of setter injection is that setter methods make objects of that class amenable to reconfiguration or re-injection later. Management through <a href="integration.html#jmx">JMX MBeans</a>                                            is therefore a compelling use case for setter injection.</p>
+                                        <p>
+                                            Setter injection should primarily only be used for optional dependencies that can be assigned reasonable default values within the class. Otherwise, not-null checks must be performed everywhere the code uses the
+                                            dependency. One benefit of setter injection is that setter methods make objects of that class amenable to reconfiguration or re-injection later. Management through <a href="integration.html#jmx">JMX MBeans</a>
+                                            is therefore a compelling use case for setter injection.</br>
+                                            Setter注入应该主要用于可选的依赖项，这些依赖项可以在类中分配合理的默认值。否则，必须在代码使用依赖项的任何地方执行非空检查。
+                                            setter注入的一个好处是，setter方法使该类的对象能够在以后重新配置或重新注入。因此，通过JMX mbean进行管理是setter注入的一个引人注目的用例。
+                                        </p>
                                     </div>
                                     <div class="paragraph">
-                                        <p>Use the DI style that makes the most sense for a particular class. Sometimes, when dealing with third-party classes for which you do not have the source, the choice is made for you. For example, if a third-party
-                                            class does not expose any setter methods, then constructor injection may be the only available form of DI.</p>
+                                        <p>
+                                            Use the DI style that makes the most sense for a particular class. Sometimes,
+                                            when dealing with third-party classes for which you do not have the source,
+                                            the choice is made for you. For example, if a third-party class does not expose any setter methods,
+                                            then constructor injection may be the only available form of DI.</br>
+                                            使用对特定类最有意义的DI风格。有时，当您处理没有源代码的第三方类时，您可以自行选择。
+                                            例如，如果第三方类没有公开任何setter方法，那么构造函数注入可能是DI的唯一可用形式。
+                                        </p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="sect4">
-                            <h5 id="beans-dependency-resolution"><a class="anchor" href="#beans-dependency-resolution"></a>Dependency Resolution Process</h5>
+                            <h5 id="beans-dependency-resolution"><a class="anchor" href="#beans-dependency-resolution"></a>
+                                Dependency Resolution Process</br>
+                                依赖性解析过程
+                            </h5>
                             <div class="paragraph">
-                                <p>The container performs bean dependency resolution as follows:</p>
+                                <p>The container performs bean dependency resolution as follows:</br>
+                                    容器执行bean依赖关系解析如下:
+                                </p>
                             </div>
                             <div class="ulist">
                                 <ul>
                                     <li>
-                                        <p>The <code>ApplicationContext</code> is created and initialized with configuration metadata that describes all the beans. Configuration metadata can be specified by XML, Java code, or annotations.
+                                        <p>
+                                            The <code>ApplicationContext</code> is created and initialized with configuration metadata that describes all the beans.
+                                             Configuration metadata can be specified by XML, Java code, or annotations.</br>
+                                             使用描述所有bean的配置元数据创建并初始化ApplicationContext。配置元数据可以通过XML、Java代码或注释指定。
                                         </p>
                                     </li>
                                     <li>
-                                        <p>For each bean, its dependencies are expressed in the form of properties, constructor arguments, or arguments to the static-factory method (if you use that instead of a normal constructor). These dependencies are
-                                            provided to the bean, when the bean is actually created.</p>
+                                        <p>
+                                            For each bean, its dependencies are expressed in the form of properties,
+                                            constructor arguments, or arguments to the static-factory method (if you use that instead of a normal constructor).
+                                            These dependencies are provided to the bean, when the bean is actually created.</br>
+                                            对于每个bean，它的依赖关系以属性、构造函数参数或静态工厂方法的参数的形式表示(如果您使用静态工厂方法而不是普通构造函数)。
+                                            当实际创建bean时，这些依赖项被提供给bean。
+                                        </p>
                                     </li>
                                     <li>
-                                        <p>Each property or constructor argument is an actual definition of the value to set, or a reference to another bean in the container.</p>
+                                        <p>Each property or constructor argument is an actual definition of the value to set, or a reference to another bean in the container.</br>
+                                            每个属性或构造函数参数都是要设置的值的实际定义，或对容器中另一个bean的引用。
+                                        </p>
                                     </li>
                                     <li>
-                                        <p>Each property or constructor argument that is a value is converted from its specified format to the actual type of that property or constructor argument. By default, Spring can convert a value supplied in string
-                                            format to all built-in types, such as <code>int</code>,
-                                            <code>long</code>, <code>String</code>, <code>boolean</code>, and so forth.</p>
+                                        <p>
+                                            Each property or constructor argument that is a value is converted from its specified format to the actual type of that property or constructor argument.
+                                             By default, Spring can convert a value supplied in string format to all built-in types, such as <code>int</code>,
+                                            <code>long</code>, <code>String</code>, <code>boolean</code>, and so forth.</br>
+                                            作为值的每个属性或构造函数参数都将从其指定的格式转换为该属性或构造函数参数的实际类型。
+                                            默认情况下，Spring可以将字符串格式提供的值转换为所有内置类型，比如int、long、string、boolean等等。
+                                        </p>
                                     </li>
                                 </ul>
                             </div>
                             <div class="paragraph">
-                                <p>The Spring container validates the configuration of each bean as the container is created. However, the bean properties themselves are not set until the bean is actually created. Beans that are singleton-scoped and set
+                                <p>
+                                    The Spring container validates the configuration of each bean as the container is created. However, the bean properties themselves are not set until the bean is actually created. Beans that are singleton-scoped and set
                                     to be pre-instantiated (the default) are created when the container is created. Scopes are defined in <a href="#beans-factory-scopes">Bean Scopes</a>. Otherwise, the bean is created only when it is requested. Creation
                                     of a bean potentially causes a graph of beans to be created, as the bean&#8217;s dependencies and its dependencies' dependencies (and so on) are created and assigned. Note that resolution mismatches among those dependencies
-                                    may show up late&#8201;&#8212;&#8201;that is, on first creation of the affected bean.</p>
+                                    may show up late&#8201;&#8212;&#8201;that is, on first creation of the affected bean.</br>
+                                    Spring容器在创建容器时验证每个bean的配置。但是，在实际创建bean之前，不会设置bean属性本身。
+                                    在创建容器时将创建单例作用域且设置为预实例化(默认)的bean。作用域在Bean作用域中定义。否则，仅在请求bean时才创建它。
+                                    创建一个bean可能会导致创建一个bean图，因为创建并分配了bean的依赖项及其依赖项的依赖项(等等)。
+                                    请注意，这些依赖项之间的解析不匹配可能会在后期出现——即在受影响bean的第一次创建时出现。
+                                </p>
                             </div>
                             <div class="sidebarblock">
                                 <div class="content">
-                                    <div class="title">Circular dependencies</div>
+                                    <div class="title">Circular dependencies<br>循环依赖</div>
                                     <div class="paragraph">
-                                        <p>If you use predominantly constructor injection, it is possible to create an unresolvable circular dependency scenario.</p>
+                                        <p>If you use predominantly constructor injection, it is possible to create an unresolvable circular dependency scenario.</br>
+                                            如果主要使用构造函数注入，可能会创建不可解析的循环依赖项场景。
+                                        </p>
                                     </div>
                                     <div class="paragraph">
-                                        <p>For example: Class A requires an instance of class B through constructor injection, and class B requires an instance of class A through constructor injection. If you configure beans for classes A and B to be injected
+                                        <p>
+                                            For example: Class A requires an instance of class B through constructor injection, and class B requires an instance of class A through constructor injection. If you configure beans for classes A and B to be injected
                                             into each other, the Spring IoC container detects this circular reference at runtime, and throws a
-                                            <code>BeanCurrentlyInCreationException</code>.</p>
+                                            <code>BeanCurrentlyInCreationException</code>.</br>
+                                            例如:类A通过构造函数注入需要类B的一个实例，类B通过构造函数注入需要类A的一个实例。
+                                            如果您将类A和类B的bean配置为相互注入，那么Spring IoC容器将在运行时检测这个循环引用，并抛出beancurcurrentlyincreationexception。
+                                        </p>
                                     </div>
                                     <div class="paragraph">
-                                        <p>One possible solution is to edit the source code of some classes to be configured by setters rather than constructors. Alternatively, avoid constructor injection and use setter injection only. In other words, although
-                                            it is not recommended, you can configure circular dependencies with setter injection.</p>
+                                        <p>
+                                            One possible solution is to edit the source code of some classes to be configured by setters rather than constructors.
+                                             Alternatively, avoid constructor injection and use setter injection only. In other words, although
+                                            it is not recommended, you can configure circular dependencies with setter injection.</br>
+                                            一种可能的解决方案是编辑一些由setter而不是构造函数配置的类的源代码。
+                                            或者，避免构造函数注入，只使用setter注入。换句话说，尽管不推荐这样做，但您可以使用setter注入配置循环依赖项。
+                                        </p>
                                     </div>
                                     <div class="paragraph">
-                                        <p>Unlike the typical case (with no circular dependencies), a circular dependency between bean A and bean B forces one of the beans to be injected into the other prior to being fully initialized itself (a classic chicken-and-egg
-                                            scenario).</p>
+                                        <p>Unlike the typical case (with no circular dependencies), a circular dependency between bean A and bean B forces one of the beans
+                                        to be injected into the other prior to being fully initialized itself (a classic chicken-and-egg scenario).</br>
+                                            与典型情况(没有循环依赖项)不同，bean a和bean B之间的循环依赖项迫使一个bean在完全初始化自己之前被注入到另一个bean中(典型的先有鸡还是先有蛋的场景)。
+                                        </p>
                                     </div>
                                 </div>
                             </div>
                             <div class="paragraph">
                                 <p>You can generally trust Spring to do the right thing. It detects configuration problems, such as references to non-existent beans and circular dependencies, at container load-time. Spring sets properties and resolves dependencies
                                     as late as possible, when the bean is actually created. This means that a Spring container that has loaded correctly can later generate an exception when you request an object if there is a problem creating that object
-                                    or one of its dependencies&#8201;&#8212;&#8201;for example, the bean throws an exception as a result of a missing or invalid property. This potentially delayed visibility of some configuration issues is why <code>ApplicationContext</code>                                    implementations by default pre-instantiate singleton beans. At the cost of some upfront time and memory to create these beans before they are actually needed, you discover configuration issues when the <code>ApplicationContext</code>                                    is created, not later. You can still override this default behavior so that singleton beans initialize lazily, rather than being eagerly pre-instantiated.
+                                    or one of its dependencies&#8201;&#8212;&#8201;for example, the bean throws an exception as a result of a missing or invalid property.
+                                    This potentially delayed visibility of some configuration issues is why <code>ApplicationContext</code> implementations by default pre-instantiate singleton beans. At the cost of some upfront time and memory to create these beans before they are actually needed, you discover configuration issues when the <code>ApplicationContext</code>                                    is created, not later. You can still override this default behavior so that singleton beans initialize lazily, rather than being eagerly pre-instantiated.</br>
+                                    您通常可以相信Spring会做正确的事情。它在容器加载时检测配置问题，比如对不存在的bean和循环依赖项的引用。
+                                    当bean实际创建时，Spring会尽可能晚地设置属性并解析依赖项。这意味着，如果在创建对象或其某个依赖项时出现问题，请求对象时，正确加载的Spring容器可以生成异常——例如，bean会由于缺少或无效的属性而抛出异常。
+                                    这可能会延迟一些配置问题的可见性，这就是为什么ApplicationContext实现默认情况下会预先实例化单例bean。
+                                    在实际需要这些bean之前创建这些bean需要花费一些前期时间和内存，因此在创建ApplicationContext时发现配置问题，而不是稍后。
+                                    您仍然可以覆盖这个默认行为，以便单例bean可以延迟初始化，而不是急切地预先实例化。
                                 </p>
                             </div>
                             <div class="paragraph">
-                                <p>If no circular dependencies exist, when one or more collaborating beans are being injected into a dependent bean, each collaborating bean is totally configured prior to being injected into the dependent bean. This means
+                                <p>
+                                    If no circular dependencies exist, when one or more collaborating beans are being injected into a dependent bean, each collaborating bean is totally configured prior to being injected into the dependent bean. This means
                                     that, if bean A has a dependency on bean B, the Spring IoC container completely configures bean B prior to invoking the setter method on bean A. In other words, the bean is instantiated (if it is not a pre-instantiated
                                     singleton), its dependencies are set, and the relevant lifecycle methods (such as a <a href="#beans-factory-lifecycle-initializingbean">configured init method</a> or the <a href="#beans-factory-lifecycle-initializingbean">InitializingBean callback method</a>)
-                                    are invoked.</p>
+                                    are invoked.</br>
+                                    如果不存在循环依赖项，那么当一个或多个协作bean被注入到依赖bean中时，每个协作bean在被注入到依赖bean之前都会被完全配置。
+                                    这意味着，如果bean A依赖于bean B, Spring IoC容器在调用bean A的setter方法之前完全配置bean B。
+                                    换句话说，bean被实例化(如果它不是一个预实例化的单例)，它的依赖项被设置，并且调用相关的生命周期方法(例如配置的init方法或InitializingBean回调方法)。
+                                </p>
                             </div>
                         </div>
                         <div class="sect4">
-                            <h5 id="beans-some-examples"><a class="anchor" href="#beans-some-examples"></a>Examples of Dependency Injection</h5>
+                            <h5 id="beans-some-examples"><a class="anchor" href="#beans-some-examples"></a>Examples of Dependency Injection<br>依赖注入的例子</h5>
                             <div class="paragraph">
-                                <p>The following example uses XML-based configuration metadata for setter-based DI. A small part of a Spring XML configuration file specifies some bean definitions as follows:</p>
+                                <p>
+                                    The following example uses XML-based configuration metadata for setter-based DI.
+                                    A small part of a Spring XML configuration file specifies some bean definitions as follows:<br>
+                                    下面的示例为基于setter的DI使用基于xml的配置元数据。Spring XML配置文件的一小部分指定了一些bean定义，如下所示:
+                                </p>
                             </div>
                             <div class="listingblock">
                                 <div class="content">
@@ -2397,7 +2556,9 @@ constructor(val years: Int, val ultimateAnswer: String)</code></pre>
                                 </div>
                             </div>
                             <div class="paragraph">
-                                <p>The following example shows the corresponding <code>ExampleBean</code> class:</p>
+                                <p>The following example shows the corresponding <code>ExampleBean</code> class:</br>
+                                    下面的例子显示了相应的ExampleBean类:
+                                </p>
                             </div>
                             <div class="listingblock primary">
                                 <div class="title">Java</div>
@@ -2435,7 +2596,11 @@ constructor(val years: Int, val ultimateAnswer: String)</code></pre>
                                 </div>
                             </div>
                             <div class="paragraph">
-                                <p>In the preceding example, setters are declared to match against the properties specified in the XML file. The following example uses constructor-based DI:</p>
+                                <p>
+                                    In the preceding example, setters are declared to match against the properties specified in the XML file.
+                                    The following example uses constructor-based DI:</br>
+                                    在前面的示例中，setter被声明为与XML文件中指定的属性相匹配。下面的例子使用了基于构造函数的DI:
+                                </p>
                             </div>
                             <div class="listingblock">
                                 <div class="content">
@@ -2456,7 +2621,10 @@ constructor(val years: Int, val ultimateAnswer: String)</code></pre>
                                 </div>
                             </div>
                             <div class="paragraph">
-                                <p>The following example shows the corresponding <code>ExampleBean</code> class:</p>
+                                <p>
+                                    The following example shows the corresponding <code>ExampleBean</code> class:</br>
+                                    下面的例子显示了相应的ExampleBean类:
+                                </p>
                             </div>
                             <div class="listingblock primary">
                                 <div class="title">Java</div>
@@ -2488,10 +2656,17 @@ constructor(val years: Int, val ultimateAnswer: String)</code></pre>
                                 </div>
                             </div>
                             <div class="paragraph">
-                                <p>The constructor arguments specified in the bean definition are used as arguments to the constructor of the <code>ExampleBean</code>.</p>
+                                <p>
+                                    The constructor arguments specified in the bean definition are used as arguments to the constructor of the <code>ExampleBean</code>.</br>
+                                    在bean定义中指定的构造函数参数被用作ExampleBean的构造函数的参数。
+                                </p>
                             </div>
                             <div class="paragraph">
-                                <p>Now consider a variant of this example, where, instead of using a constructor, Spring is told to call a <code>static</code> factory method to return an instance of the object:</p>
+                                <p>
+                                    Now consider a variant of this example, where, instead of using a constructor,
+                                    Spring is told to call a <code>static</code> factory method to return an instance of the object:</br>
+                                    现在考虑这个例子的一个变体，这里不使用构造函数，而是告诉Spring调用一个静态工厂方法来返回对象的实例:
+                                </p>
                             </div>
                             <div class="listingblock">
                                 <div class="content">
@@ -2506,7 +2681,10 @@ constructor(val years: Int, val ultimateAnswer: String)</code></pre>
                                 </div>
                             </div>
                             <div class="paragraph">
-                                <p>The following example shows the corresponding <code>ExampleBean</code> class:</p>
+                                <p>
+                                    The following example shows the corresponding <code>ExampleBean</code> class:</br>
+                                    下面的例子显示了相应的ExampleBean类:
+                                </p>
                             </div>
                             <div class="listingblock primary">
                                 <div class="title">Java</div>
@@ -2549,25 +2727,42 @@ constructor(val years: Int, val ultimateAnswer: String)</code></pre>
                                 </div>
                             </div>
                             <div class="paragraph">
-                                <p>Arguments to the <code>static</code> factory method are supplied by <code>&lt;constructor-arg/&gt;</code> elements, exactly the same as if a constructor had actually been used. The type of the class being returned by the
+                                <p>
+                                    Arguments to the <code>static</code> factory method are supplied by <code>&lt;constructor-arg/&gt;</code> elements, exactly the same as if a constructor had actually been used. The type of the class being returned by the
                                     factory method does not have to be of the same type as the class that contains the <code>static</code> factory method (although, in this example, it is). An instance (non-static) factory method can be used in an essentially
-                                    identical fashion (aside from the use of the <code>factory-bean</code> attribute instead of the <code>class</code> attribute), so we do not discuss those details here.</p>
+                                    identical fashion (aside from the use of the <code>factory-bean</code> attribute instead of the <code>class</code> attribute), so we do not discuss those details here.</br>
+                                    静态工厂方法的参数是由<code>&lt;constructor-arg/&gt;</code>元素提供的，就像实际使用了构造函数一样。工厂方法返回的类的类型不必与包含静态工厂方法的类的类型相同(尽管在本例中是相同的)。
+                                    实例(非静态)工厂方法可以以本质上相同的方式使用(除了使用工厂bean属性而不是class属性)，所以我们在这里不讨论这些细节。
+                                </p>
                             </div>
                         </div>
                     </div>
                     <div class="sect3">
-                        <h4 id="beans-factory-properties-detailed"><a class="anchor" href="#beans-factory-properties-detailed"></a>1.4.2. Dependencies and Configuration in Detail</h4>
+                        <h4 id="beans-factory-properties-detailed"><a class="anchor" href="#beans-factory-properties-detailed"></a>
+                            1.4.2. Dependencies and Configuration in Detail
+                            </h4>
                         <div class="paragraph">
-                            <p>As mentioned in the <a href="#beans-factory-collaborators">previous section</a>, you can define bean properties and constructor arguments as references to other managed beans (collaborators) or as values defined inline. Spring&#8217;s
-                                XML-based configuration metadata supports sub-element types within its <code>&lt;property/&gt;</code> and <code>&lt;constructor-arg/&gt;</code> elements for this purpose.
+                            <p>
+                                As mentioned in the <a href="#beans-factory-collaborators">previous section</a>,
+                                you can define bean properties and constructor arguments as references to other managed beans (collaborators) or as values defined inline.
+                                 Spring&#8217;s XML-based configuration metadata supports sub-element types within its <code>&lt;property/&gt;</code>
+                                 and <code>&lt;constructor-arg/&gt;</code> elements for this purpose.</br>
+                                 如前一节所述，可以将bean属性和构造函数参数定义为对其他托管bean(协作者)的引用，或内联定义的值。
+                                 Spring基于xml的配置元数据为此目的支持<code>&lt;constructor-arg/&gt;</code>和<code>&lt;property/&gt;</code>元素中的子元素类型。
                             </p>
                         </div>
                         <div class="sect4">
-                            <h5 id="beans-value-element"><a class="anchor" href="#beans-value-element"></a>Straight Values (Primitives, Strings, and so on)</h5>
+                            <h5 id="beans-value-element"><a class="anchor" href="#beans-value-element"></a>Straight Values (Primitives, Strings, and so on)<br>直值(原语、字符串等)</h5>
                             <div class="paragraph">
-                                <p>The <code>value</code> attribute of the <code>&lt;property/&gt;</code> element specifies a property or constructor argument as a human-readable string representation. Spring&#8217;s
-                                    <a href="#core-convert-ConversionService-API">conversion service</a> is used to convert these values from a <code>String</code> to the actual type of the property or argument. The following example shows various values
-                                    being set:</p>
+                                <p>
+                                    The <code>value</code> attribute of the <code>&lt;property/&gt;</code> element specifies a property or constructor
+                                     as a human-readable string representation. Spring&#8217;s
+                                    <a href="#core-convert-ConversionService-API">conversion service</a>
+                                    is used to convert these values from a <code>String</code> to the actual type of the property or argument. The following example shows various values
+                                    being set:</br>
+                                    <code>&lt;property/&gt;</code>元素的 <code>value</code>  属性将属性或构造函数参数指定为人类可读的字符串表示形式。
+                                    Spring的转换服务用于将这些值从String转换为属性或参数的实际类型。下面的示例显示了正在设置的各种值:
+                                </p>
                             </div>
                             <div class="listingblock">
                                 <div class="content">
@@ -2581,7 +2776,9 @@ constructor(val years: Int, val ultimateAnswer: String)</code></pre>
                                 </div>
                             </div>
                             <div class="paragraph">
-                                <p>The following example uses the <a href="#beans-p-namespace">p-namespace</a> for even more succinct XML configuration:</p>
+                                <p>The following example uses the <a href="#beans-p-namespace">p-namespace</a> for even more succinct XML configuration:</br>
+                                    下面的例子使用p-namespace来进行更简洁的XML配置:
+                                </p>
                             </div>
                             <div class="listingblock">
                                 <div class="content">
@@ -2602,11 +2799,17 @@ constructor(val years: Int, val ultimateAnswer: String)</code></pre>
                                 </div>
                             </div>
                             <div class="paragraph">
-                                <p>The preceding XML is more succinct. However, typos are discovered at runtime rather than design time, unless you use an IDE (such as <a href="https://www.jetbrains.com/idea/">IntelliJ
-IDEA</a> or the <a href="https://spring.io/tools">Spring Tools for Eclipse</a>) that supports automatic property completion when you create bean definitions. Such IDE assistance is highly recommended.</p>
+                                <p>
+                                    The preceding XML is more succinct. However, typos are discovered at runtime rather than design time, unless you use an IDE (such as <a href="https://www.jetbrains.com/idea/">
+                                    IntelliJ IDEA</a> or the <a href="https://spring.io/tools">Spring Tools for Eclipse</a>) that supports automatic property completion when you create bean definitions.
+                                    Such IDE assistance is highly recommended.</br>
+                                    前面的XML更简洁。然而，打字错误是在运行时而不是设计时发现的，除非您使用支持创建bean定义时自动完成属性的IDE(如IntelliJ IDEA或用于Eclipse的Spring Tools)。强烈推荐这样的IDE帮助。
+                                </p>
                             </div>
                             <div class="paragraph">
-                                <p>You can also configure a <code>java.util.Properties</code> instance, as follows:</p>
+                                <p>You can also configure a <code>java.util.Properties</code> instance, as follows:</br>
+                                    您也可以配置一个java.util.Properties实例，如下所示:
+                                </p>
                             </div>
                             <div class="listingblock">
                                 <div class="content">
@@ -2625,12 +2828,21 @@ IDEA</a> or the <a href="https://spring.io/tools">Spring Tools for Eclipse</a>) 
                             </div>
                             <div class="paragraph">
                                 <p>The Spring container converts the text inside the <code>&lt;value/&gt;</code> element into a
-                                    <code>java.util.Properties</code> instance by using the JavaBeans <code>PropertyEditor</code> mechanism. This is a nice shortcut, and is one of a few places where the Spring team do favor the use of the nested <code>&lt;value/&gt;</code>                                    element over the <code>value</code> attribute style.</p>
+                                    <code>java.util.Properties</code> instance by using the JavaBeans <code>PropertyEditor</code> mechanism.
+                                    This is a nice shortcut, and is one of a few places where the Spring team do favor the use of the
+                                    nested <code>&lt;value/&gt;</code> element over the <code>value</code> attribute style.</br>
+                                    通过使用JavaBeans的PropertyEditor机制，Spring容器将<value></value>元素中的文本转换为java.util.Properties实例。
+                                    这是一个很好的快捷方式，也是Spring团队喜欢使用嵌套<value></value>元素而不是value属性样式的少数地方之一。
+                                </p>
                             </div>
                             <div class="sect5">
                                 <h6 id="beans-idref-element"><a class="anchor" href="#beans-idref-element"></a>The <code>idref</code> element</h6>
                                 <div class="paragraph">
-                                    <p>The <code>idref</code> element is simply an error-proof way to pass the <code>id</code> (a string value - not a reference) of another bean in the container to a <code>&lt;constructor-arg/&gt;</code> or <code>&lt;property/&gt;</code>                                        element. The following example shows how to use it:</p>
+                                    <p>
+                                        The <code>idref</code> element is simply an error-proof way to pass the <code>id</code> (a string value - not a reference)
+                                        of another bean in the container to a <code>&lt;constructor-arg/&gt;</code> or <code>&lt;property/&gt;</code> element. The following example shows how to use it:
+                                        idref元素只是将容器中另一个bean的id(字符串值——而不是引用)传递给 <code>&lt;constructor-arg/&gt;</code>或<code>&lt;property/&gt;</code> 元素的一种防止错误的方法。下面的例子展示了如何使用它:
+                                    </p>
                                 </div>
                                 <div class="listingblock">
                                     <div class="content">
@@ -2644,7 +2856,9 @@ IDEA</a> or the <a href="https://spring.io/tools">Spring Tools for Eclipse</a>) 
                                     </div>
                                 </div>
                                 <div class="paragraph">
-                                    <p>The preceding bean definition snippet is exactly equivalent (at runtime) to the following snippet:</p>
+                                    <p>The preceding bean definition snippet is exactly equivalent (at runtime) to the following snippet:</br>
+                                        前面的 bean definition 片段(在运行时)与下面的片段完全相同:
+                                    </p>
                                 </div>
                                 <div class="listingblock">
                                     <div class="content">
@@ -2656,9 +2870,14 @@ IDEA</a> or the <a href="https://spring.io/tools">Spring Tools for Eclipse</a>) 
                                     </div>
                                 </div>
                                 <div class="paragraph">
-                                    <p>The first form is preferable to the second, because using the <code>idref</code> tag lets the container validate at deployment time that the referenced, named bean actually exists. In the second variation, no validation
+                                    <p>
+                                        The first form is preferable to the second, because using the <code>idref</code> tag lets the container validate at deployment time that the referenced, named bean actually exists. In the second variation, no validation
                                         is performed on the value that is passed to the <code>targetName</code> property of the <code>client</code> bean. Typos are only discovered (with most likely fatal results) when the <code>client</code> bean is actually
-                                        instantiated. If the <code>client</code> bean is a <a href="#beans-factory-scopes">prototype</a> bean, this typo and the resulting exception may only be discovered long after the container is deployed.</p>
+                                        instantiated. If the <code>client</code> bean is a <a href="#beans-factory-scopes">prototype</a> bean, this typo and the resulting exception may only be discovered long after the container is deployed.</br>
+                                        第一种形式比第二种形式更可取，因为使用idref标记可以让容器在部署时验证所引用的已命名bean实际存在。
+                                        在第二个变体中，对传递给客户机bean的targetName属性的值不执行任何验证。只有在实际实例化客户端bean时才会发现打字错误(很可能导致致命的结果)。
+                                        如果客户端bean是一个原型bean，那么这个输入错误和由此产生的异常可能要在容器部署很久之后才会被发现。
+                                    </p>
                                 </div>
                                 <div class="admonitionblock note">
                                     <table>
@@ -2668,30 +2887,46 @@ IDEA</a> or the <a href="https://spring.io/tools">Spring Tools for Eclipse</a>) 
                                             </td>
                                             <td class="content">
                                                 The <code>local</code> attribute on the <code>idref</code> element is no longer supported in the 4.0 beans XSD, since it does not provide value over a regular <code>bean</code> reference any more. Change
-                                                your existing <code>idref local</code> references to <code>idref bean</code> when upgrading to the 4.0 schema.
+                                                your existing <code>idref local</code> references to <code>idref bean</code> when upgrading to the 4.0 schema.</br>
+在4.0 bean XSD中不再支持idref元素的本地属性，因为它不再提供常规bean引用之上的值。升级到4.0模式时，将现有的idref本地引用更改为idref bean。
                                             </td>
                                         </tr>
                                     </table>
                                 </div>
                                 <div class="paragraph">
                                     <p>A common place (at least in versions earlier than Spring 2.0) where the <code>&lt;idref/&gt;</code> element brings value is in the configuration of <a href="#aop-pfb-1">AOP interceptors</a> in a
-                                        <code>ProxyFactoryBean</code> bean definition. Using <code>&lt;idref/&gt;</code> elements when you specify the interceptor names prevents you from misspelling an interceptor ID.</p>
+                                        <code>ProxyFactoryBean</code> bean definition. Using <code>&lt;idref/&gt;</code> elements when you specify the interceptor names prevents you from misspelling an interceptor ID.</br>
+                                        <code>&lt;idref/&gt;</code>元素带来值的一个常见地方(至少在Spring 2.0之前的版本中)是在ProxyFactoryBean bean定义中的AOP拦截器配置中。
+                                        在指定拦截器名称时使用<code>&lt;idref/&gt;</code>元素可以防止你拼错拦截器ID。
+                                    </p>
                                 </div>
                             </div>
                         </div>
                         <div class="sect4">
-                            <h5 id="beans-ref-element"><a class="anchor" href="#beans-ref-element"></a>References to Other Beans (Collaborators)</h5>
+                            <h5 id="beans-ref-element"><a class="anchor" href="#beans-ref-element"></a>References to Other Beans (Collaborators)</br>对其他bean(合作者)的引用</h5>
                             <div class="paragraph">
-                                <p>The <code>ref</code> element is the final element inside a <code>&lt;constructor-arg/&gt;</code> or <code>&lt;property/&gt;</code> definition element. Here, you set the value of the specified property of a bean to be a
-                                    reference to another bean (a collaborator) managed by the container. The referenced bean is a dependency of the bean whose property is to be set, and it is initialized on demand as needed before the property is set.
-                                    (If the collaborator is a singleton bean, it may already be initialized by the container.) All references are ultimately a reference to another object. Scoping and validation depend on whether you specify the ID or
-                                    name of the other object through the <code>bean</code> or <code>parent</code> attribute.</p>
+                                <p>
+                                    The <code>ref</code> element is the final element inside a <code>&lt;constructor-arg/&gt;</code> or <code>&lt;property/&gt;</code> definition element.
+                                    Here, you set the value of the specified property of a bean to be a reference to another bean (a collaborator) managed by the container.
+                                    The referenced bean is a dependency of the bean whose property is to be set, and it is initialized on demand as needed before the property is set.
+                                    (If the collaborator is a singleton bean, it may already be initialized by the container.) All references are ultimately a reference to another object.
+                                    Scoping and validation depend on whether you specify the ID or name of the other object through the <code>bean</code> or <code>parent</code> attribute.</br>
+                                    ref元素是<code>&lt;constructor-arg/&gt;</code>或<code>&lt;property/&gt;</code>定义元素中的最后一个元素。在这里，您将一个bean的指定属性的值设置为对容器管理的另一个bean(合作者)的引用。
+                                    被引用的bean是要设置其属性的bean的依赖项，在设置属性之前，根据需要对其进行初始化。(如果合作者是一个单例bean，它可能已经被容器初始化了。)所有引用最终都是对另一个对象的引用。
+                                    范围和验证取决于您是通过bean还是父属性指定其他对象的ID或名称。
+                                </p>
                             </div>
                             <div class="paragraph">
-                                <p>Specifying the target bean through the <code>bean</code> attribute of the <code>&lt;ref/&gt;</code> tag is the most general form and allows creation of a reference to any bean in the same container or parent container,
+                                <p>
+                                    Specifying the target bean through the <code>bean</code> attribute of the <code>&lt;ref/&gt;</code> tag
+                                    is the most general form and allows creation of a reference to any bean in the same container or parent container,
                                     regardless of whether it is in the same XML file. The value of the
-                                    <code>bean</code> attribute may be the same as the <code>id</code> attribute of the target bean or be the same as one of the values in the <code>name</code> attribute of the target bean. The following example shows
-                                    how to use a <code>ref</code> element:</p>
+                                    <code>bean</code> attribute may be the same as the <code>id</code> attribute of the target bean or be the same as one of the values in
+                                    the <code>name</code> attribute of the target bean. The following example shows
+                                    how to use a <code>ref</code> element:</br>
+                                    通过 <code>&lt;ref/&gt;</code>标记的bean属性指定目标bean是最通用的形式，允许在同一容器或父容器中创建对任何bean的引用，而不管它是否在同一XML文件中。
+                                    bean属性的值可以与目标bean的id属性相同，也可以与目标bean的name属性中的某个值相同。下面的例子展示了如何使用ref元素:
+                                </p>
                             </div>
                             <div class="listingblock">
                                 <div class="content">
@@ -2699,10 +2934,15 @@ IDEA</a> or the <a href="https://spring.io/tools">Spring Tools for Eclipse</a>) 
                                 </div>
                             </div>
                             <div class="paragraph">
-                                <p>Specifying the target bean through the <code>parent</code> attribute creates a reference to a bean that is in a parent container of the current container. The value of the <code>parent</code> attribute may be the same as
+                                <p>
+                                    Specifying the target bean through the <code>parent</code> attribute creates a reference to a bean that is in a parent container of the current container. The value of the <code>parent</code> attribute may be the same as
                                     either the <code>id</code> attribute of the target bean or one of the values in the <code>name</code> attribute of the target bean. The target bean must be in a parent container of the current one. You should use this
                                     bean reference variant mainly when you have a hierarchy of containers and you want to wrap an existing bean in a parent container with a proxy that has the same name as the parent bean. The following pair of listings
-                                    shows how to use the <code>parent</code> attribute:</p>
+                                    shows how to use the <code>parent</code> attribute:</br>
+                                    通过父属性指定目标bean将创建对当前容器父容器中的bean的引用。父属性的值可以与目标bean的id属性或目标bean的name属性中的一个值相同。
+                                    目标bean必须位于当前bean的父容器中。当您有一个容器层次结构，并且您想用与父bean同名的代理将现有bean包装在父容器中时，您应该主要使用这个bean引用变体。
+                                    下面的两个清单显示了如何使用父属性:
+                                </p>
                             </div>
                             <div class="listingblock">
                                 <div class="content">
@@ -2732,7 +2972,8 @@ IDEA</a> or the <a href="https://spring.io/tools">Spring Tools for Eclipse</a>) 
                                         </td>
                                         <td class="content">
                                             The <code>local</code> attribute on the <code>ref</code> element is no longer supported in the 4.0 beans XSD, since it does not provide value over a regular <code>bean</code> reference any more. Change your
-                                            existing <code>ref local</code> references to <code>ref bean</code> when upgrading to the 4.0 schema.
+                                            existing <code>ref local</code> references to <code>ref bean</code> when upgrading to the 4.0 schema.</br>
+                                            4.0 bean XSD不再支持ref元素的local属性，因为它不再提供常规bean引用之上的值。升级到4.0模式时，将现有的ref本地引用更改为ref bean。
                                         </td>
                                     </tr>
                                 </table>
@@ -2741,7 +2982,12 @@ IDEA</a> or the <a href="https://spring.io/tools">Spring Tools for Eclipse</a>) 
                         <div class="sect4">
                             <h5 id="beans-inner-beans"><a class="anchor" href="#beans-inner-beans"></a>Inner Beans</h5>
                             <div class="paragraph">
-                                <p>A <code>&lt;bean/&gt;</code> element inside the <code>&lt;property/&gt;</code> or <code>&lt;constructor-arg/&gt;</code> elements defines an inner bean, as the following example shows:</p>
+                                <p>
+                                    A <code>&lt;bean/&gt;</code> element inside the <code>&lt;property/&gt;</code>
+                                    or <code>&lt;constructor-arg/&gt;</code> elements defines an inner bean, as the following example shows:</br>
+                                    一个<code>&lt;bean/&gt;</code>元素内部定义的  <code>&lt;property/&gt;</code> 或者 <code>&lt;constructor-arg/&gt;</code>
+                                    元素定义，如下所示:
+                                </p>
                             </div>
                             <div class="listingblock">
                                 <div class="content">
@@ -2757,19 +3003,38 @@ IDEA</a> or the <a href="https://spring.io/tools">Spring Tools for Eclipse</a>) 
                                 </div>
                             </div>
                             <div class="paragraph">
-                                <p>An inner bean definition does not require a defined ID or name. If specified, the container does not use such a value as an identifier. The container also ignores the <code>scope</code> flag on creation, because inner beans
-                                    are always anonymous and are always created with the outer bean. It is not possible to access inner beans independently or to inject them into collaborating beans other than into the enclosing bean.</p>
+                                <p>
+                                    An inner bean definition does not require a defined ID or name.
+                                    If specified, the container does not use such a value as an identifier.
+                                    The container also ignores the <code>scope</code> flag on creation,
+                                    because inner beans are always anonymous and are always created with the outer bean.
+                                    It is not possible to access inner beans independently or to inject them into collaborating beans other than into the enclosing bean.</br>
+                                    内部bean定义不需要定义ID或名称。如果指定了该值，容器将不使用该值作为标识符。容器在创建时也会忽略范围标志，因为内部bean总是匿名的，并且总是与外部bean一起创建的。
+                                    不可能单独访问内部bean，也不可能将它们注入协作bean中，而不是注入封闭bean中。
+                                </p>
                             </div>
                             <div class="paragraph">
-                                <p>As a corner case, it is possible to receive destruction callbacks from a custom scope&#8201;&#8212;&#8201;for example, for a request-scoped inner bean contained within a singleton bean. The creation of the inner bean instance
-                                    is tied to its containing bean, but destruction callbacks let it participate in the request scope&#8217;s lifecycle. This is not a common scenario. Inner beans typically simply share their containing bean&#8217;s scope.</p>
+                                <p>
+                                    As a corner case, it is possible to receive destruction callbacks from a custom scope&#8201;&#8212;&#8201;
+                                    for example, for a request-scoped inner bean contained within a singleton bean. The creation of the inner bean instance
+                                    is tied to its containing bean, but destruction callbacks let it participate in the request scope&#8217;s lifecycle.
+                                    This is not a common scenario. Inner beans typically simply share their containing bean&#8217;s scope.</br>
+                                    作为一种极端情况，可以从自定义范围接收销毁回调——例如，对于单例bean中包含的请求范围内的内部bean。
+                                    内部bean实例的创建与包含它的bean绑定在一起，但是销毁回调让它参与请求范围的生命周期。这不是常见的情况。
+                                    内部bean通常只是共享包含它们的bean的范围。
+                                 </p>
                             </div>
                         </div>
                         <div class="sect4">
                             <h5 id="beans-collection-elements"><a class="anchor" href="#beans-collection-elements"></a>Collections</h5>
                             <div class="paragraph">
-                                <p>The <code>&lt;list/&gt;</code>, <code>&lt;set/&gt;</code>, <code>&lt;map/&gt;</code>, and <code>&lt;props/&gt;</code> elements set the properties and arguments of the Java <code>Collection</code> types <code>List</code>,
-                                    <code>Set</code>, <code>Map</code>, and <code>Properties</code>, respectively. The following example shows how to use them:</p>
+                                <p>
+                                    The <code>&lt;list/&gt;</code>, <code>&lt;set/&gt;</code>, <code>&lt;map/&gt;</code>,
+                                    and <code>&lt;props/&gt;</code> elements set the properties and arguments of the Java <code>Collection</code> types <code>List</code>,
+                                    <code>Set</code>, <code>Map</code>, and <code>Properties</code>, respectively. The following example shows how to use them:</br>
+                                    <code>&lt;list/&gt;</code>, <code>&lt;set/&gt;</code>, <code>&lt;map/&gt;</code>,
+                                    和 <code>&lt;props/&gt;</code>元素分别设置Java集合类型list、set、map和properties的属性和参数。下面的例子展示了如何使用它们:
+                                </p>
                             </div>
                             <div class="listingblock">
                                 <div class="content">
@@ -2807,7 +3072,10 @@ IDEA</a> or the <a href="https://spring.io/tools">Spring Tools for Eclipse</a>) 
                                 </div>
                             </div>
                             <div class="paragraph">
-                                <p>The value of a map key or value, or a set value, can also be any of the following elements:</p>
+                                <p>
+                                    The value of a map key or value, or a set value, can also be any of the following elements:</br>
+                                    map键或值或set值的值也可以是以下元素中的任何一个:
+                                </p>
                             </div>
                             <div class="listingblock">
                                 <div class="content">
@@ -2815,18 +3083,33 @@ IDEA</a> or the <a href="https://spring.io/tools">Spring Tools for Eclipse</a>) 
                                 </div>
                             </div>
                             <div class="sect5">
-                                <h6 id="beans-collection-elements-merging"><a class="anchor" href="#beans-collection-elements-merging"></a>Collection Merging</h6>
+                                <h6 id="beans-collection-elements-merging"><a class="anchor" href="#beans-collection-elements-merging"></a>Collection Merging<br>集合合并</h6>
                                 <div class="paragraph">
-                                    <p>The Spring container also supports merging collections. An application developer can define a parent <code>&lt;list/&gt;</code>, <code>&lt;map/&gt;</code>, <code>&lt;set/&gt;</code> or <code>&lt;props/&gt;</code> element
-                                        and have child <code>&lt;list/&gt;</code>, <code>&lt;map/&gt;</code>, <code>&lt;set/&gt;</code> or <code>&lt;props/&gt;</code> elements inherit and override values from the parent collection. That is, the child
-                                        collection&#8217;s values are the result of merging the elements of the parent and child collections, with the child&#8217;s collection elements overriding values specified in the parent collection.</p>
+                                    <p>
+                                        The Spring container also supports merging collections.
+                                        An application developer can define a parent
+                                         <code>&lt;list/&gt;</code>, <code>&lt;map/&gt;</code>, <code>&lt;set/&gt;</code> or <code>&lt;props/&gt;</code> element
+                                        and have child <code>&lt;list/&gt;</code>, <code>&lt;map/&gt;</code>, <code>&lt;set/&gt;</code> or <code>&lt;props/&gt;</code> e
+                                        lements inherit and override values from the parent collection. That is, the child
+                                        collection&#8217;s values are the result of merging the elements of the parent and child collections,
+                                        with the child&#8217;s collection elements overriding values specified in the parent collection.</br>
+                                        Spring容器还支持合并集合。应用程序开发人员可以定义父元素
+                                        <code>&lt;list/&gt;</code>, <code>&lt;map/&gt;</code>, <code>&lt;set/&gt;</code> 或 <code>&lt;props/&gt;</code>
+                                        并让子元素 <code>&lt;list/&gt;</code>, <code>&lt;map/&gt;</code>, <code>&lt;set/&gt;</code> 或 <code>&lt;props/&gt;</code>继承和覆盖父元素集合中的值。
+                                        也就是说，子集合的值是父集合和子集合的元素合并的结果，子集合的元素覆盖父集合中指定的值。
+                                    </p>
                                 </div>
                                 <div class="paragraph">
-                                    <p>This section on merging discusses the parent-child bean mechanism. Readers unfamiliar with parent and child bean definitions may wish to read the
-                                        <a href="#beans-child-bean-definitions">relevant section</a> before continuing.</p>
+                                    <p>
+                                        This section on merging discusses the parent-child bean mechanism. Readers unfamiliar with parent and child bean definitions may wish to read the
+                                        <a href="#beans-child-bean-definitions">relevant section</a> before continuing.</br>
+                                        关于合并的这一节讨论父-子bean机制。不熟悉父bean和子bean定义的读者可能希望在继续之前阅读相关部分。
+                                    </p>
                                 </div>
                                 <div class="paragraph">
-                                    <p>The following example demonstrates collection merging:</p>
+                                    <p>The following example demonstrates collection merging:</br>
+                                        下面的例子演示了集合合并:
+                                    </p>
                                 </div>
                                 <div class="listingblock">
                                     <div class="content">
@@ -2852,10 +3135,17 @@ IDEA</a> or the <a href="https://spring.io/tools">Spring Tools for Eclipse</a>) 
                                     </div>
                                 </div>
                                 <div class="paragraph">
-                                    <p>Notice the use of the <code>merge=true</code> attribute on the <code>&lt;props/&gt;</code> element of the
-                                        <code>adminEmails</code> property of the <code>child</code> bean definition. When the <code>child</code> bean is resolved and instantiated by the container, the resulting instance has an <code>adminEmails</code>
+                                    <p>
+                                        Notice the use of the <code>merge=true</code> attribute on the <code>&lt;props/&gt;</code> element of the
+                                        <code>adminEmails</code> property of the <code>child</code> bean definition.
+                                        When the <code>child</code> bean is resolved and instantiated by the container,
+                                        the resulting instance has an <code>adminEmails</code>
                                         <code>Properties</code> collection that contains the result of merging the child&#8217;s
-                                        <code>adminEmails</code> collection with the parent&#8217;s <code>adminEmails</code> collection. The following listing shows the result:</p>
+                                        <code>adminEmails</code> collection with the parent&#8217;s <code>adminEmails</code> collection.
+                                        The following listing shows the result:</br>
+                                        注意在子bean定义的adminEmails属性的<code>&lt;props/&gt;</code> 元素上使用了merge=true属性。当容器解析并实例化子bean时，结果实例有一个adminEmails Properties集合，
+                                        该集合包含将子bean的adminEmails集合与父bean的adminEmails集合合并的结果。下面的清单显示了结果:
+                                    </p>
                                 </div>
                                 <div class="literalblock">
                                     <div class="content">
@@ -2865,28 +3155,58 @@ IDEA</a> or the <a href="https://spring.io/tools">Spring Tools for Eclipse</a>) 
                                     </div>
                                 </div>
                                 <div class="paragraph">
-                                    <p>The child <code>Properties</code> collection&#8217;s value set inherits all property elements from the parent <code>&lt;props/&gt;</code>, and the child&#8217;s value for the <code>support</code> value overrides the
-                                        value in the parent collection.</p>
+                                    <p>
+                                        The child <code>Properties</code> collection&#8217;s value set inherits all property elements from the parent <code>&lt;props/&gt;</code>,
+                                        and the child&#8217;s value for the <code>support</code> value overrides the value in the parent collection.</br>
+                                        子属性集合的值集继承了父属性&lt;props/&gt;的所有属性元素，并且子属性的支持值覆盖了父集合中的值。
+                                    </p>
                                 </div>
                                 <div class="paragraph">
-                                    <p>This merging behavior applies similarly to the <code>&lt;list/&gt;</code>, <code>&lt;map/&gt;</code>, and <code>&lt;set/&gt;</code> collection types. In the specific case of the <code>&lt;list/&gt;</code> element, the
-                                        semantics associated with the <code>List</code> collection type (that is, the notion of an <code>ordered</code> collection of values) is maintained. The parent&#8217;s values precede all of the child list&#8217;s
-                                        values. In the case of the <code>Map</code>, <code>Set</code>, and <code>Properties</code> collection types, no ordering exists. Hence, no ordering semantics are in effect for the collection types that underlie
-                                        the associated <code>Map</code>, <code>Set</code>, and <code>Properties</code> implementation types that the container uses internally.</p>
+                                    <p>
+                                        This merging behavior applies similarly to the <code>&lt;list/&gt;</code>, <code>&lt;map/&gt;</code>,
+                                        and <code>&lt;set/&gt;</code> collection types. In the specific case of the <code>&lt;list/&gt;</code> element, the
+                                        semantics associated with the <code>List</code> collection type (that is, the notion of an <code>ordered</code> collection of values)
+                                        is maintained. The parent&#8217;s values precede all of the child list&#8217;s
+                                        values. In the case of the <code>Map</code>, <code>Set</code>, and <code>Properties</code> collection types,
+                                         no ordering exists. Hence, no ordering semantics are in effect for the collection types that underlie
+                                        the associated <code>Map</code>, <code>Set</code>, and <code>Properties</code> implementation types that
+                                         the container uses internally.</br>
+                                         这种合并行为同样适用于<code>&lt;list/&gt;</code>, <code>&lt;map/&gt;</code>,
+                                        和 <code>&lt;set/&gt;</code>集合类型。在<code>&lt;list/&gt;</code>元素的特定情况下，将维护与list集合类型(即值的有序集合的概念)相关联的语义。
+                                        父列表的值在所有子列表的值之前。对于Map、Set和Properties集合类型，不存在排序。
+                                        因此，对于容器内部使用的关联Map、Set和Properties实现类型的集合类型，没有有效的排序语义。
+                                     </p>
                                 </div>
                             </div>
                             <div class="sect5">
-                                <h6 id="beans-collection-merge-limitations"><a class="anchor" href="#beans-collection-merge-limitations"></a>Limitations of Collection Merging</h6>
+                                <h6 id="beans-collection-merge-limitations"><a class="anchor" href="#beans-collection-merge-limitations"></a>
+                                Limitations of Collection Merging</br>收集合并的限制</h6>
                                 <div class="paragraph">
-                                    <p>You cannot merge different collection types (such as a <code>Map</code> and a <code>List</code>). If you do attempt to do so, an appropriate <code>Exception</code> is thrown. The <code>merge</code> attribute must be
-                                        specified on the lower, inherited, child definition. Specifying the <code>merge</code> attribute on a parent collection definition is redundant and does not result in the desired merging.</p>
+                                    <p>
+                                        You cannot merge different collection types (such as a <code>Map</code> and a <code>List</code>).
+                                         If you do attempt to do so, an appropriate <code>Exception</code> is thrown.
+                                         The <code>merge</code> attribute must be specified on the lower, inherited, child definition.
+                                         Specifying the <code>merge</code> attribute on a parent collection definition is redundant and does not result in the desired merging.</br>
+                                         您不能合并不同的集合类型(例如Map和List)。如果您试图这样做，则抛出一个适当的Exception。
+                                         必须在较低的继承子定义上指定merge属性。在父集合定义上指定merge属性是多余的，并且不会导致所需的合并。
+                                     </p>
                                 </div>
                             </div>
                             <div class="sect5">
-                                <h6 id="beans-collection-elements-strongly-typed"><a class="anchor" href="#beans-collection-elements-strongly-typed"></a>Strongly-typed collection</h6>
+                                <h6 id="beans-collection-elements-strongly-typed"><a class="anchor" href="#beans-collection-elements-strongly-typed"></a>
+                                Strongly-typed collection</br>
+                                强类型集合
+                                </h6>
                                 <div class="paragraph">
-                                    <p>With the introduction of generic types in Java 5, you can use strongly typed collections. That is, it is possible to declare a <code>Collection</code> type such that it can only contain (for example) <code>String</code>                                        elements. If you use Spring to dependency-inject a strongly-typed <code>Collection</code> into a bean, you can take advantage of Spring&#8217;s type-conversion support such that the elements of your strongly-typed
-                                        <code>Collection</code> instances are converted to the appropriate type prior to being added to the <code>Collection</code>. The following Java class and bean definition show how to do so:</p>
+                                    <p>
+                                        With the introduction of generic types in Java 5, you can use strongly typed collections.
+                                        That is, it is possible to declare a <code>Collection</code> type such that it can only contain (for example) <code>String</code>                                        elements. If you use Spring to dependency-inject a strongly-typed <code>Collection</code> into a bean, you can take advantage of Spring&#8217;s type-conversion support such that the elements of your strongly-typed
+                                        <code>Collection</code> instances are converted to the appropriate type prior to being added to the <code>Collection</code>.
+                                        The following Java class and bean definition show how to do so:</br>
+                                        通过在Java 5中引入泛型类型，您可以使用强类型集合。也就是说，可以声明一个Collection类型，使它只能包含(例如)String元素。
+                                        如果使用Spring将强类型Collection依赖注入到bean中，那么可以利用Spring的类型转换支持，在将强类型Collection实例的元素添加到Collection之前，将其转换为适当的类型。
+                                        下面的Java类和bean定义展示了如何做到这一点:
+                                    </p>
                                 </div>
                                 <div class="listingblock primary">
                                     <div class="title">Java</div>
@@ -2925,17 +3245,25 @@ IDEA</a> or the <a href="https://spring.io/tools">Spring Tools for Eclipse</a>) 
                                     </div>
                                 </div>
                                 <div class="paragraph">
-                                    <p>When the <code>accounts</code> property of the <code>something</code> bean is prepared for injection, the generics information about the element type of the strongly-typed <code>Map&lt;String, Float&gt;</code> is available
+                                    <p>
+                                        When the <code>accounts</code> property of the <code>something</code> bean is prepared for injection,
+                                        the generics information about the element type of the strongly-typed <code>Map&lt;String, Float&gt;</code> is available
                                         by reflection. Thus, Spring&#8217;s type conversion infrastructure recognizes the various value elements as being of type <code>Float</code>, and the string values (<code>9.99, 2.75</code>, and
-                                        <code>3.99</code>) are converted into an actual <code>Float</code> type.</p>
+                                        <code>3.99</code>) are converted into an actual <code>Float</code> type.</br>
+                                        当准备注入something bean的accounts属性时，关于强类型 <code>Map&lt;String, Float&gt;</code>的元素类型的泛型信息可以通过反射获得。
+                                        因此，Spring的类型转换基础结构将各种值元素识别为Float类型，并将字符串值(9.99、2.75和3.99)转换为实际的Float类型。
+                                    </p>
                                 </div>
                             </div>
                         </div>
                         <div class="sect4">
-                            <h5 id="beans-null-element"><a class="anchor" href="#beans-null-element"></a>Null and Empty String Values</h5>
+                            <h5 id="beans-null-element"><a class="anchor" href="#beans-null-element"></a>Null and Empty String Values</br>Null和空字符串值</h5>
                             <div class="paragraph">
-                                <p>Spring treats empty arguments for properties and the like as empty <code>Strings</code>. The following XML-based configuration metadata snippet sets the <code>email</code> property to the empty
-                                    <code>String</code> value ("").</p>
+                                <p>
+                                    Spring treats empty arguments for properties and the like as empty <code>Strings</code>. The following XML-based configuration metadata snippet sets the <code>email</code> property to the empty
+                                    <code>String</code> value ("").</br>
+                                    Spring将属性等的空参数视为空字符串。以下基于xml的配置元数据片段将email属性设置为空String值("")。
+                                </p>
                             </div>
                             <div class="listingblock">
                                 <div class="content">
@@ -2945,7 +3273,9 @@ IDEA</a> or the <a href="https://spring.io/tools">Spring Tools for Eclipse</a>) 
                                 </div>
                             </div>
                             <div class="paragraph">
-                                <p>The preceding example is equivalent to the following Java code:</p>
+                                <p>The preceding example is equivalent to the following Java code:</br>
+                                    上述示例相当于以下Java代码:
+                                </p>
                             </div>
                             <div class="listingblock primary">
                                 <div class="title">Java</div>
@@ -2960,7 +3290,9 @@ IDEA</a> or the <a href="https://spring.io/tools">Spring Tools for Eclipse</a>) 
                                 </div>
                             </div>
                             <div class="paragraph">
-                                <p>The <code>&lt;null/&gt;</code> element handles <code>null</code> values. The following listing shows an example:</p>
+                                <p>The <code>&lt;null/&gt;</code> element handles <code>null</code> values. The following listing shows an example:</br>
+                                     <code>&lt;null/&gt;</code>元素处理空值。下面的清单显示了一个示例:
+                                </p>
                             </div>
                             <div class="listingblock">
                                 <div class="content">
@@ -2972,7 +3304,9 @@ IDEA</a> or the <a href="https://spring.io/tools">Spring Tools for Eclipse</a>) 
                                 </div>
                             </div>
                             <div class="paragraph">
-                                <p>The preceding configuration is equivalent to the following Java code:</p>
+                                <p>The preceding configuration is equivalent to the following Java code:</br>
+                                    上述配置相当于以下Java代码:
+                                </p>
                             </div>
                             <div class="listingblock primary">
                                 <div class="title">Java</div>
@@ -2988,17 +3322,27 @@ IDEA</a> or the <a href="https://spring.io/tools">Spring Tools for Eclipse</a>) 
                             </div>
                         </div>
                         <div class="sect4">
-                            <h5 id="beans-p-namespace"><a class="anchor" href="#beans-p-namespace"></a>XML Shortcut with the p-namespace</h5>
+                            <h5 id="beans-p-namespace"><a class="anchor" href="#beans-p-namespace"></a>XML Shortcut with the p-namespace</br>使用p-名称空间的XML快捷方式</h5>
                             <div class="paragraph">
-                                <p>The p-namespace lets you use the <code>bean</code> element&#8217;s attributes (instead of nested
-                                    <code>&lt;property/&gt;</code> elements) to describe your property values collaborating beans, or both.</p>
+                                <p>
+                                    The p-namespace lets you use the <code>bean</code> element&#8217;s attributes (instead of nested
+                                    <code>&lt;property/&gt;</code> elements) to describe your property values collaborating beans, or both.</br>
+                                    p-namespace允许您使用bean元素的属性(而不是嵌套的<code>&lt;property/&gt;</code> 元素)来描述协作bean的属性值，或者两者都使用。
+                                </p>
                             </div>
                             <div class="paragraph">
-                                <p>Spring supports extensible configuration formats <a href="#xsd-schemas">with namespaces</a>, which are based on an XML Schema definition. The <code>beans</code> configuration format discussed in this chapter is defined
-                                    in an XML Schema document. However, the p-namespace is not defined in an XSD file and exists only in the core of Spring.</p>
+                                <p>
+                                    Spring supports extensible configuration formats <a href="#xsd-schemas">with namespaces</a>, which are based on an XML Schema definition. The <code>beans</code> configuration format discussed in this chapter is defined
+                                    in an XML Schema document. However, the p-namespace is not defined in an XSD file and exists only in the core of Spring.</br>
+                                    Spring支持基于XML Schema定义的名称空间的可扩展配置格式。本章讨论的bean配置格式是在XML Schema文档中定义的。
+                                    但是，p-namespace并没有在XSD文件中定义，它只存在于Spring的核心中。
+                                </p>
                             </div>
                             <div class="paragraph">
-                                <p>The following example shows two XML snippets (the first uses standard XML format and the second uses the p-namespace) that resolve to the same result:</p>
+                                <p>
+                                    The following example shows two XML snippets (the first uses standard XML format and the second uses the p-namespace) that resolve to the same result:
+                                    下面的例子显示了两个XML片段(第一个使用标准XML格式，第二个使用p-namespace)，它们解析到相同的结果:
+                                </p>
                             </div>
                             <div class="listingblock">
                                 <div class="content">
@@ -3018,11 +3362,18 @@ IDEA</a> or the <a href="https://spring.io/tools">Spring Tools for Eclipse</a>) 
                                 </div>
                             </div>
                             <div class="paragraph">
-                                <p>The example shows an attribute in the p-namespace called <code>email</code> in the bean definition. This tells Spring to include a property declaration. As previously mentioned, the p-namespace does not have a schema definition,
-                                    so you can set the name of the attribute to the property name.</p>
+                                <p>
+                                    The example shows an attribute in the p-namespace called <code>email</code> in the bean definition. This tells Spring to include a property declaration.
+                                     As previously mentioned, the p-namespace does not have a schema definition,
+                                    so you can set the name of the attribute to the property name.</br>
+                                    该示例显示了p-namespace中的一个属性，该属性在bean定义中称为email。这告诉Spring包含一个属性声明。如前所述，p-namespace没有模式定义，因此可以将属性的名称设置为属性名。
+                                </p>
                             </div>
                             <div class="paragraph">
-                                <p>This next example includes two more bean definitions that both have a reference to another bean:</p>
+                                <p>
+                                    This next example includes two more bean definitions that both have a reference to another bean:</br>
+                                    下一个示例包括另外两个bean定义，它们都有对另一个bean的引用:
+                                </p>
                             </div>
                             <div class="listingblock">
                                 <div class="content">
@@ -3049,9 +3400,16 @@ IDEA</a> or the <a href="https://spring.io/tools">Spring Tools for Eclipse</a>) 
                                 </div>
                             </div>
                             <div class="paragraph">
-                                <p>This example includes not only a property value using the p-namespace but also uses a special format to declare property references. Whereas the first bean definition uses <code>&lt;property name="spouse" ref="jane"/&gt;</code>                                    to create a reference from bean
+                                <p>
+                                    This example includes not only a property value using the p-namespace but also uses a special format to declare property references.
+                                    Whereas the first bean definition uses <code>&lt;property name="spouse" ref="jane"/&gt;</code> to create a reference from bean
                                     <code>john</code> to bean <code>jane</code>, the second bean definition uses <code>p:spouse-ref="jane"</code> as an attribute to do the exact same thing. In this case, <code>spouse</code> is the property name, whereas
-                                    the <code>-ref</code> part indicates that this is not a straight value but rather a reference to another bean.</p>
+                                    the <code>-ref</code> part indicates that this is not a straight value but rather a reference to another bean.</br>
+                                    这个示例不仅包含使用p-namespace的属性值，而且还使用一种特殊的格式来声明属性引用。
+                                    第一个bean定义使用<code>&lt;property name="spouse" ref="jane"/&gt;</code> 来创建从bean john到bean jane的引用，
+                                    第二个bean定义使用<code>p:spouse-ref="jane"</code>作为属性来完成完全相同的工作。
+                                    在本例中，spouse是属性名，而-ref部分表示这不是一个直接值，而是对另一个bean的引用。
+                                </p>
                             </div>
                             <div class="admonitionblock note">
                                 <table>
@@ -3061,7 +3419,9 @@ IDEA</a> or the <a href="https://spring.io/tools">Spring Tools for Eclipse</a>) 
                                         </td>
                                         <td class="content">
                                             The p-namespace is not as flexible as the standard XML format. For example, the format for declaring property references clashes with properties that end in <code>Ref</code>, whereas the standard XML format
-                                            does not. We recommend that you choose your approach carefully and communicate this to your team members to avoid producing XML documents that use all three approaches at the same time.
+                                            does not. We recommend that you choose your approach carefully and communicate this to your team members to avoid producing XML documents that use all three approaches at the same time.<br>
+                                            p-namespace不像标准XML格式那样灵活。例如，声明属性引用的格式与以Ref结尾的属性冲突，而标准XML格式不会。
+                                            我们建议您谨慎地选择您的方法，并与您的团队成员进行沟通，以避免生成同时使用所有三种方法的XML文档。
                                         </td>
                                     </tr>
                                 </table>
