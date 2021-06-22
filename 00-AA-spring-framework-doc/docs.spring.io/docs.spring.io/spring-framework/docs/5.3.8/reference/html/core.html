@@ -799,14 +799,22 @@
         <div id="preamble">
             <div class="sectionbody">
                 <div class="paragraph">
-                    <p>This part of the reference documentation covers all the technologies that are absolutely integral to the Spring Framework.</p>
+                    <p>This part of the reference documentation covers all the technologies that are absolutely integral to the Spring Framework.</br>
+                        参考文档的这一部分涵盖了Spring框架中绝对不可或缺的所有技术。
+                    </p>
                 </div>
                 <div class="paragraph">
                     <p>Foremost amongst these is the Spring Framework&#8217;s Inversion of Control (IoC) container. A thorough treatment of the Spring Framework&#8217;s IoC container is closely followed by comprehensive coverage of Spring&#8217;s Aspect-Oriented
-                        Programming (AOP) technologies. The Spring Framework has its own AOP framework, which is conceptually easy to understand and which successfully addresses the 80% sweet spot of AOP requirements in Java enterprise programming.</p>
+                        Programming (AOP) technologies. The Spring Framework has its own AOP framework, which is conceptually easy to understand and which successfully addresses the 80% sweet spot of AOP requirements in Java enterprise programming.</br>
+                        其中最重要的是Spring框架的控制反转(IoC)容器。
+                        在对Spring框架的IoC容器进行了全面的处理之后，紧接着全面介绍了Spring的面向方面编程(AOP)技术。
+                        Spring框架有自己的AOP框架，它在概念上很容易理解，并且成功地解决了Java企业编程中80%的AOP需求。
+                    </p>
                 </div>
                 <div class="paragraph">
-                    <p>Coverage of Spring&#8217;s integration with AspectJ (currently the richest&#8201;&#8212;&#8201;in terms of features&#8201;&#8212;&#8201;and certainly most mature AOP implementation in the Java enterprise space) is also provided.</p>
+                    <p>Coverage of Spring&#8217;s integration with AspectJ (currently the richest&#8201;&#8212;&#8201;in terms of features&#8201;&#8212;&#8201;and certainly most mature AOP implementation in the Java enterprise space) is also provided.</br>
+                        还介绍了Spring与AspectJ的集成(就特性而言，目前AspectJ是最丰富的，当然也是Java企业空间中最成熟的AOP实现)。
+                    </p>
                 </div>
             </div>
         </div>
@@ -814,7 +822,9 @@
             <h2 id="beans"><a class="anchor" href="#beans"></a>1. The IoC Container</h2>
             <div class="sectionbody">
                 <div class="paragraph">
-                    <p>This chapter covers Spring&#8217;s Inversion of Control (IoC) container.</p>
+                    <p>This chapter covers Spring&#8217;s Inversion of Control (IoC) container.</br>
+                        本章介绍Spring的控制反转(IoC)容器。
+                    </p>
                 </div>
                 <div class="sect2">
                     <h3 id="beans-introduction"><a class="anchor" href="#beans-introduction"></a>1.1. Introduction to the Spring IoC Container and Beans</h3>
@@ -822,38 +832,64 @@
                         <p>This chapter covers the Spring Framework implementation of the Inversion of Control (IoC) principle. IoC is also known as dependency injection (DI). It is a process whereby objects define their dependencies (that is, the other
                             objects they work with) only through constructor arguments, arguments to a factory method, or properties that are set on the object instance after it is constructed or returned from a factory method. The container then injects
                             those dependencies when it creates the bean. This process is fundamentally the inverse (hence the name, Inversion of Control) of the bean itself controlling the instantiation or location of its dependencies by using direct
-                            construction of classes or a mechanism such as the Service Locator pattern.</p>
+                            construction of classes or a mechanism such as the Service Locator pattern.</br>
+                            本章介绍了控制反转(IoC)原理的Spring框架实现。
+                            IoC也称为依赖项注入(DI)。
+                            在这个过程中，对象只能通过构造函数参数、工厂方法的参数或在对象实例被构造或从工厂方法返回后设置的属性来定义它们的依赖关系(即它们使用的其他对象)。
+                            然后，容器在创建bean时注入这些依赖项。
+                            这个过程基本上是bean本身通过直接构造类或诸如Service Locator模式这样的机制来控制其依赖项的实例化或位置的逆过程(因此得名“控制反转”)。
+                        </p>
                     </div>
                     <div class="paragraph">
                         <p>The <code>org.springframework.beans</code> and <code>org.springframework.context</code> packages are the basis for Spring Framework&#8217;s IoC container. The
                             <a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/beans/factory/BeanFactory.html"><code>BeanFactory</code></a> interface provides an advanced configuration mechanism capable of managing
                             any type of object.
-                            <a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/context/ApplicationContext.html"><code>ApplicationContext</code></a> is a sub-interface of <code>BeanFactory</code>. It adds:</p>
+                            <a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/context/ApplicationContext.html"><code>ApplicationContext</code></a> is a sub-interface of <code>BeanFactory</code>. It adds:</br>
+                            beans和org.springframework.context包是Spring框架的IoC容器的基础。
+                            BeanFactory接口提供了能够管理任何类型对象的高级配置机制。
+                            ApplicationContext是BeanFactory的一个子接口。它补充道:
+                            </p>
                     </div>
                     <div class="ulist">
                         <ul>
                             <li>
-                                <p>Easier integration with Spring&#8217;s AOP features</p>
+                                <p>Easier integration with Spring&#8217;s AOP features</br>
+                                    更容易与Spring的AOP特性集成
+                                </p>
                             </li>
                             <li>
-                                <p>Message resource handling (for use in internationalization)</p>
+                                <p>Message resource handling (for use in internationalization)</br>
+                                    消息资源处理(用于国际化)
+                                </p>
                             </li>
                             <li>
-                                <p>Event publication</p>
+                                <p>Event publication</br>
+                                    事件发布
+                                </p>
                             </li>
                             <li>
-                                <p>Application-layer specific contexts such as the <code>WebApplicationContext</code> for use in web applications.</p>
+                                <p>Application-layer specific contexts such as the <code>WebApplicationContext</code> for use in web applications.</br>
+                                    应用层特定的上下文，如web应用中使用的WebApplicationContext。
+                                </p>
                             </li>
                         </ul>
                     </div>
                     <div class="paragraph">
                         <p>In short, the <code>BeanFactory</code> provides the configuration framework and basic functionality, and the <code>ApplicationContext</code> adds more enterprise-specific functionality. The <code>ApplicationContext</code> is a
                             complete superset of the <code>BeanFactory</code> and is used exclusively in this chapter in descriptions of Spring&#8217;s IoC container. For more information on using the <code>BeanFactory</code> instead of the <code>ApplicationContext,</code>                            see
-                            <a href="#beans-beanfactory">The <code>BeanFactory</code></a>.</p>
+                            <a href="#beans-beanfactory">The <code>BeanFactory</code></a>.</br>
+                            简而言之，BeanFactory提供了配置框架和基本功能，而ApplicationContext添加了更多特定于企业的功能。
+                            ApplicationContext是BeanFactory的一个完整超集，在本章描述Spring的IoC容器时专门使用。
+                            有关使用BeanFactory而不是ApplicationContext的更多信息，请参见BeanFactory。
+                        </p>
                     </div>
                     <div class="paragraph">
                         <p>In Spring, the objects that form the backbone of your application and that are managed by the Spring IoC container are called beans. A bean is an object that is instantiated, assembled, and managed by a Spring IoC container. Otherwise,
-                            a bean is simply one of many objects in your application. Beans, and the dependencies among them, are reflected in the configuration metadata used by a container.</p>
+                            a bean is simply one of many objects in your application. Beans, and the dependencies among them, are reflected in the configuration metadata used by a container.</br>
+                            在Spring中，构成应用程序主干并由Spring IoC容器管理的对象称为bean。
+                            bean是由Spring IoC容器实例化、组装和管理的对象。
+                            否则，bean只是应用程序中的众多对象之一。bean及其之间的依赖关系反映在容器使用的配置元数据中。
+                         </p>
                     </div>
                 </div>
                 <div class="sect2">
@@ -861,23 +897,34 @@
                     <div class="paragraph">
                         <p>The <code>org.springframework.context.ApplicationContext</code> interface represents the Spring IoC container and is responsible for instantiating, configuring, and assembling the beans. The container gets its instructions on what
                             objects to instantiate, configure, and assemble by reading configuration metadata. The configuration metadata is represented in XML, Java annotations, or Java code. It lets you express the objects that compose your application
-                            and the rich interdependencies between those objects.</p>
+                            and the rich interdependencies between those objects.</br>
+                            applicationcontext接口表示Spring IoC容器，负责实例化、配置和组装bean。容器通过读取配置元数据获得关于实例化、配置和组装哪些对象的指令。
+                            配置元数据用XML、Java注释或Java代码表示。它允许您表达组成应用程序的对象以及这些对象之间丰富的相互依赖关系。
+                        </p>
                     </div>
                     <div class="paragraph">
                         <p>Several implementations of the <code>ApplicationContext</code> interface are supplied with Spring. In stand-alone applications, it is common to create an instance of
                             <a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/context/support/ClassPathXmlApplicationContext.html"><code>ClassPathXmlApplicationContext</code></a> or <a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/context/support/FileSystemXmlApplicationContext.html"><code>FileSystemXmlApplicationContext</code></a>.
                             While XML has been the traditional format for defining configuration metadata, you can instruct the container to use Java annotations or code as the metadata format by providing a small amount of XML configuration to declaratively
-                            enable support for these additional metadata formats.</p>
+                            enable support for these additional metadata formats.</br>
+                            Spring提供了ApplicationContext接口的几个实现。
+                            在独立应用程序中，通常会创建ClassPathXmlApplicationContext或FileSystemXmlApplicationContext的实例。
+                            虽然XML是定义配置元数据的传统格式，但是您可以通过提供少量XML配置以声明方式支持这些额外的元数据格式，指示容器使用Java注释或代码作为元数据格式。
+                        </p>
                     </div>
                     <div class="paragraph">
                         <p>In most application scenarios, explicit user code is not required to instantiate one or more instances of a Spring IoC container. For example, in a web application scenario, a simple eight (or so) lines of boilerplate web descriptor
                             XML in the <code>web.xml</code> file of the application typically suffices (see <a href="#context-create">Convenient ApplicationContext Instantiation for Web Applications</a>). If you use the
-                            <a href="https://spring.io/tools">Spring Tools for Eclipse</a> (an Eclipse-powered development environment), you can easily create this boilerplate configuration with a few mouse clicks or keystrokes.
+                            <a href="https://spring.io/tools">Spring Tools for Eclipse</a> (an Eclipse-powered development environment), you can easily create this boilerplate configuration with a few mouse clicks or keystrokes.</br>
+                            在大多数应用程序场景中，不需要显式的用户代码来实例化Spring IoC容器的一个或多个实例。
+                            例如，在一个web应用程序场景中，在应用程序的web. XML文件中简单的8行(大约)web描述符XML样本就足够了(参见方便的web应用程序上下文实例化)。
+                            如果您使用用于Eclipse的Spring Tools (Eclipse支持的开发环境)，那么只需点击几下鼠标或击几下键，就可以轻松创建这个样板配置。
                         </p>
                     </div>
                     <div class="paragraph">
                         <p>The following diagram shows a high-level view of how Spring works. Your application classes are combined with configuration metadata so that, after the <code>ApplicationContext</code> is created and initialized, you have a fully
-                            configured and executable system or application.
+                            configured and executable system or application.</br>
+                            下图显示了Spring如何工作的高级视图。应用程序类与配置元数据相结合，这样在ApplicationContext创建并初始化之后，您就拥有了一个配置完整且可执行的系统或应用程序。
                         </p>
                     </div>
                     <div class="imageblock">
@@ -890,10 +937,14 @@
                         <h4 id="beans-factory-metadata"><a class="anchor" href="#beans-factory-metadata"></a>1.2.1. Configuration Metadata</h4>
                         <div class="paragraph">
                             <p>As the preceding diagram shows, the Spring IoC container consumes a form of configuration metadata. This configuration metadata represents how you, as an application developer, tell the Spring container to instantiate, configure,
-                                and assemble the objects in your application.</p>
+                                and assemble the objects in your application.</br>
+                                如上图所示，Spring IoC容器使用一种配置元数据形式。此配置元数据表示作为应用程序开发人员，您如何告诉Spring容器实例化、配置和组装应用程序中的对象。
+                            </p>
                         </div>
                         <div class="paragraph">
-                            <p>Configuration metadata is traditionally supplied in a simple and intuitive XML format, which is what most of this chapter uses to convey key concepts and features of the Spring IoC container.</p>
+                            <p>Configuration metadata is traditionally supplied in a simple and intuitive XML format, which is what most of this chapter uses to convey key concepts and features of the Spring IoC container.</br>
+                                配置元数据传统上以一种简单而直观的XML格式提供，本章的大部分内容都使用这种格式来传达Spring IoC容器的关键概念和特性。
+                            </p>
                         </div>
                         <div class="admonitionblock note">
                             <table>
@@ -903,41 +954,55 @@
                                     </td>
                                     <td class="content">
                                         XML-based metadata is not the only allowed form of configuration metadata. The Spring IoC container itself is totally decoupled from the format in which this configuration metadata is actually written. These days, many developers choose
-                                        <a href="#beans-java">Java-based configuration</a> for their Spring applications.
+                                        <a href="#beans-java">Java-based configuration</a> for their Spring applications.</br>
+                                        基于xml的元数据并不是唯一允许的配置元数据形式。Spring IoC容器本身与配置元数据实际编写的格式完全分离。现在，许多开发人员为他们的Spring应用程序选择基于java的配置。
                                     </td>
                                 </tr>
                             </table>
                         </div>
                         <div class="paragraph">
-                            <p>For information about using other forms of metadata with the Spring container, see:</p>
+                            <p>For information about using other forms of metadata with the Spring container, see:</br>
+                                有关在Spring容器中使用其他形式的元数据的信息，请参见:
+                            </p>
                         </div>
                         <div class="ulist">
                             <ul>
                                 <li>
-                                    <p><a href="#beans-annotation-config">Annotation-based configuration</a>: Spring 2.5 introduced support for annotation-based configuration metadata.</p>
+                                    <p><a href="#beans-annotation-config">Annotation-based configuration</a>: Spring 2.5 introduced support for annotation-based configuration metadata.</br>
+                                        基于注释的配置:Spring 2.5引入了对基于注释的配置元数据的支持。
+                                    </p>
                                 </li>
                                 <li>
                                     <p><a href="#beans-java">Java-based configuration</a>: Starting with Spring 3.0, many features provided by the Spring JavaConfig project became part of the core Spring Framework. Thus, you can define beans external to
                                         your application classes by using Java rather than XML files. To use these new features, see the
                                         <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/annotation/Configuration.html"><code>@Configuration</code></a>,
                                         <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/annotation/Bean.html"><code>@Bean</code></a>,
-                                        <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/annotation/Import.html"><code>@Import</code></a>, and <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/annotation/DependsOn.html"><code>@DependsOn</code></a>                                        annotations.</p>
+                                        <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/annotation/Import.html"><code>@Import</code></a>, and <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/annotation/DependsOn.html"><code>@DependsOn</code></a> annotations.</br>
+                                            基于java的配置:从Spring 3.0开始，Spring JavaConfig项目提供的许多特性成为了核心Spring框架的一部分。因此，您可以通过使用Java而不是XML文件来定义应用程序类外部的bean。要使用这些新特性，请参阅@Configuration、@Bean、@Import和@DependsOn注释。
+                                        </p>
                                 </li>
                             </ul>
                         </div>
                         <div class="paragraph">
                             <p>Spring configuration consists of at least one and typically more than one bean definition that the container must manage. XML-based configuration metadata configures these beans as <code>&lt;bean/&gt;</code> elements inside
-                                a top-level <code>&lt;beans/&gt;</code> element. Java configuration typically uses <code>@Bean</code>-annotated methods within a <code>@Configuration</code> class.</p>
+                                a top-level <code>&lt;beans/&gt;</code> element. Java configuration typically uses <code>@Bean</code>-annotated methods within a <code>@Configuration</code> class.</br>
+                                Spring配置由容器必须管理的至少一个(通常是多个)bean定义组成。基于xml的配置元数据将这些bean配置为顶层<beans></beans>元素中的<bean></bean>元素。Java配置通常在@Configuration类中使用@ bean注释的方法。
+                            </p>
                         </div>
                         <div class="paragraph">
                             <p>These bean definitions correspond to the actual objects that make up your application. Typically, you define service layer objects, data access objects (DAOs), presentation objects such as Struts <code>Action</code> instances,
                                 infrastructure objects such as Hibernate
                                 <code>SessionFactories</code>, JMS <code>Queues</code>, and so forth. Typically, one does not configure fine-grained domain objects in the container, because it is usually the responsibility of DAOs and business logic to
                                 create and load domain objects. However, you can use Spring&#8217;s integration with AspectJ to configure objects that have been created outside the control of an IoC container. See <a href="#aop-atconfigurable">Using AspectJ to
-dependency-inject domain objects with Spring</a>.</p>
+                                dependency-inject domain objects with Spring</a>.</br>
+                                这些bean定义对应于组成应用程序的实际对象。通常，您需要定义服务层对象、数据访问对象(dao)、表示对象(如Struts Action实例)、基础设施对象(如Hibernate SessionFactories、JMS队列)等等。
+                                通常，不需要在容器中配置细粒度的域对象，因为创建和加载域对象通常是dao和业务逻辑的责任。但是，您可以使用Spring与AspectJ的集成来配置在IoC容器控制之外创建的对象。请参阅使用AspectJ使用Spring依赖注入域对象。
+                            </p>
                         </div>
                         <div class="paragraph">
-                            <p>The following example shows the basic structure of XML-based configuration metadata:</p>
+                            <p>The following example shows the basic structure of XML-based configuration metadata:</br>
+                                下面的例子展示了基于xml的配置元数据的基本结构:
+                            </p>
                         </div>
                         <div class="listingblock">
                             <div class="content">
@@ -964,25 +1029,33 @@ dependency-inject domain objects with Spring</a>.</p>
                             <table>
                                 <tr>
                                     <td><i class="conum" data-value="1"></i><b>1</b></td>
-                                    <td>The <code>id</code> attribute is a string that identifies the individual bean definition.</td>
+                                    <td>The <code>id</code> attribute is a string that identifies the individual bean definition.</br>
+id属性是标识单个bean定义的字符串。
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td><i class="conum" data-value="2"></i><b>2</b></td>
-                                    <td>The <code>class</code> attribute defines the type of the bean and uses the fully qualified classname.
+                                    <td>The <code>class</code> attribute defines the type of the bean and uses the fully qualified classname.</br>
+class属性定义bean的类型并使用完全限定的类名。
                                     </td>
                                 </tr>
                             </table>
                         </div>
                         <div class="paragraph">
                             <p>The value of the <code>id</code> attribute refers to collaborating objects. The XML for referring to collaborating objects is not shown in this example. See
-                                <a href="#beans-dependencies">Dependencies</a> for more information.</p>
+                                <a href="#beans-dependencies">Dependencies</a> for more information.</br>
+                                id属性的值引用协作对象。引用协作对象的XML没有显示在这个示例中。有关更多信息，请参见Dependencies。
+                            </p>
                         </div>
                     </div>
                     <div class="sect3">
                         <h4 id="beans-factory-instantiation"><a class="anchor" href="#beans-factory-instantiation"></a>1.2.2. Instantiating a Container</h4>
+                        <span>1.2.2. 实例化一个容器</span>
                         <div class="paragraph">
                             <p>The location path or paths supplied to an <code>ApplicationContext</code> constructor are resource strings that let the container load configuration metadata from a variety of external resources, such as the local file system,
-                                the Java <code>CLASSPATH</code>, and so on.</p>
+                                the Java <code>CLASSPATH</code>, and so on.</br>
+                                位置路径或提供给ApplicationContext构造函数的路径是资源字符串，这些资源字符串允许容器从各种外部资源(如本地文件系统、Java CLASSPATH等)加载配置元数据。
+                            </p>
                         </div>
                         <div class="listingblock primary">
                             <div class="title">Java</div>
@@ -1006,14 +1079,19 @@ dependency-inject domain objects with Spring</a>.</p>
                                         <div class="paragraph">
                                             <p>After you learn about Spring&#8217;s IoC container, you may want to know more about Spring&#8217;s
                                                 <code>Resource</code> abstraction (as described in <a href="#resources">Resources</a>), which provides a convenient mechanism for reading an InputStream from locations defined in a URI syntax. In particular,
-                                                <code>Resource</code> paths are used to construct applications contexts, as described in <a href="#resources-app-ctx">Application Contexts and Resource Paths</a>.</p>
+                                                <code>Resource</code> paths are used to construct applications contexts, as described in <a href="#resources-app-ctx">Application Contexts and Resource Paths</a>.</br>
+                                                在了解了Spring的IoC容器之后，您可能想了解更多关于Spring的资源抽象(如参考资料中所述)的信息，它提供了一种方便的机制，用于从URI语法中定义的位置读取InputStream。
+                                                特别是，资源路径用于构造应用程序上下文，如应用程序上下文和资源路径中所述。
+                                            </p>
                                         </div>
                                     </td>
                                 </tr>
                             </table>
                         </div>
                         <div class="paragraph">
-                            <p>The following example shows the service layer objects <code>(services.xml)</code> configuration file:</p>
+                            <p>The following example shows the service layer objects <code>(services.xml)</code> configuration file:</br>
+                                以下示例显示了服务层对象(services.xml)配置文件:
+                            </p>
                         </div>
                         <div class="listingblock">
                             <div class="content">
@@ -1037,7 +1115,9 @@ dependency-inject domain objects with Spring</a>.</p>
                             </div>
                         </div>
                         <div class="paragraph">
-                            <p>The following example shows the data access objects <code>daos.xml</code> file:</p>
+                            <p>The following example shows the data access objects <code>daos.xml</code> file:</br>
+                                下面的例子显示了数据访问对象dao .xml文件:
+                            </p>
                         </div>
                         <div class="listingblock">
                             <div class="content">
@@ -1064,17 +1144,27 @@ dependency-inject domain objects with Spring</a>.</p>
                         <div class="paragraph">
                             <p>In the preceding example, the service layer consists of the <code>PetStoreServiceImpl</code> class and two data access objects of the types <code>JpaAccountDao</code> and <code>JpaItemDao</code> (based on the JPA Object-Relational
                                 Mapping standard). The <code>property name</code> element refers to the name of the JavaBean property, and the <code>ref</code> element refers to the name of another bean definition. This linkage between <code>id</code>                                and <code>ref</code> elements expresses the dependency between collaborating objects. For details of configuring an object&#8217;s dependencies, see
-                                <a href="#beans-dependencies">Dependencies</a>.</p>
+                                <a href="#beans-dependencies">Dependencies</a>.<br>
+                                在上面的示例中，服务层由PetStoreServiceImpl类和JpaAccountDao和JpaItemDao(基于JPA对象关系映射标准)类型的两个数据访问对象组成。
+                                属性名元素引用JavaBean属性的名称，ref元素引用另一个bean定义的名称。id和ref元素之间的这种链接表示了协作对象之间的依赖关系。有关配置对象依赖关系的详细信息，请参见依赖关系。
+                            </p>
                         </div>
                         <div class="sect4">
                             <h5 id="beans-factory-xml-import"><a class="anchor" href="#beans-factory-xml-import"></a>Composing XML-based Configuration Metadata</h5>
+                            <span>编写基于xml的配置元数据</span>
                             <div class="paragraph">
-                                <p>It can be useful to have bean definitions span multiple XML files. Often, each individual XML configuration file represents a logical layer or module in your architecture.</p>
+                                <p>It can be useful to have bean definitions span multiple XML files. Often, each individual XML configuration file represents a logical layer or module in your architecture.</br>
+                                    让bean定义跨越多个XML文件是很有用的。通常，每个单独的XML配置文件代表体系结构中的一个逻辑层或模块。
+                                </p>
                             </div>
                             <div class="paragraph">
                                 <p>You can use the application context constructor to load bean definitions from all these XML fragments. This constructor takes multiple <code>Resource</code> locations, as was shown in the
                                     <a href="#beans-factory-instantiation">previous section</a>. Alternatively, use one or more occurrences of the <code>&lt;import/&gt;</code> element to load bean definitions from another file or files. The following
-                                    example shows how to do so:</p>
+                                    example shows how to do so:</br>
+                                    可以使用应用程序上下文构造函数从所有这些XML片段加载bean定义。
+                                    此构造函数接受多个Resource位置，如前一节所示。或者，使用一次或多次 <code>&lt;import/&gt;</code>元素从另一个或多个文件加载bean定义。
+                                    下面的例子展示了如何做到这一点:
+                                </p>
                             </div>
                             <div class="listingblock">
                                 <div class="content">
@@ -1094,7 +1184,11 @@ dependency-inject domain objects with Spring</a>.</p>
                                     directory or classpath location as the file doing the importing, while
                                     <code>messageSource.xml</code> and <code>themeSource.xml</code> must be in a <code>resources</code> location below the location of the importing file. As you can see, a leading slash is ignored. However, given that
                                     these paths are relative, it is better form not to use the slash at all. The contents of the files being imported, including the top level <code>&lt;beans/&gt;</code> element, must be valid XML bean definitions, according
-                                    to the Spring Schema.</p>
+                                    to the Spring Schema.</br>
+                                    在前面的示例中，外部bean定义从三个文件加载:services.xml、messageSource.xml和themeSource.xml。
+                                    所有位置路径都相对于执行导入的定义文件，因此services.xml必须与执行导入的文件位于相同的目录或类路径位置，而messageSource.xml和themeSource.xml必须位于导入文件位置下面的资源位置。
+                                    如您所见，前面的斜杠被忽略了。但是，考虑到这些路径是相对的，最好不要使用斜杠。根据Spring Schema，导入的文件的内容(包括顶级<code>&lt;beans/&gt;</code>元素)必须是有效的XML bean定义。
+                                </p>
                             </div>
                             <div class="admonitionblock note">
                                 <table>
@@ -1106,12 +1200,17 @@ dependency-inject domain objects with Spring</a>.</p>
                                             <div class="paragraph">
                                                 <p>It is possible, but not recommended, to reference files in parent directories using a relative "../" path. Doing so creates a dependency on a file that is outside the current application. In particular,
                                                     this reference is not recommended for <code>classpath:</code> URLs (for example, <code>classpath:../services.xml</code>), where the runtime resolution process chooses the &#8220;nearest&#8221; classpath
-                                                    root and then looks into its parent directory. Classpath configuration changes may lead to the choice of a different, incorrect directory.</p>
+                                                    root and then looks into its parent directory. Classpath configuration changes may lead to the choice of a different, incorrect directory.</br>
+                                                    可以使用相对的"../"来引用父目录中的文件，但不建议这样做。这样做将创建对当前应用程序之外的文件的依赖关系。特别是，不建议对 <code>classpath:</code> urls(例如，<code>classpath:../services.xml</code>)使用此引用，运行时解析过程选择“最近的”类路径根，然后查看其父目录。类路径配置更改可能导致选择不同的、不正确的目录。
+                                                </p>
                                             </div>
                                             <div class="paragraph">
                                                 <p>You can always use fully qualified resource locations instead of relative paths: for example, <code>file:C:/config/services.xml</code> or <code>classpath:/config/services.xml</code>. However, be aware that
                                                     you are coupling your application&#8217;s configuration to specific absolute locations. It is generally preferable to keep an indirection for such absolute locations&#8201;&#8212;&#8201;for example,
-                                                    through "${&#8230;&#8203;}" placeholders that are resolved against JVM system properties at runtime.</p>
+                                                    through "${&#8230;&#8203;}" placeholders that are resolved against JVM system properties at runtime.</br>
+                                                    您可以始终使用完全限定的资源位置，而不是相对路径:例如，文件:<code>file:C:/config/services.xml</code>或类路径<code>classpath:/config/services.xml</code>。
+                                                    但是，请注意，您是将应用程序的配置耦合到特定的绝对位置。通常，最好为这些绝对位置保留一个间接位置——例如，通过在运行时根据JVM系统属性解析的"${&#8230;&#8203;}"占位符。
+                                                </p>
                                             </div>
                                         </td>
                                     </tr>
@@ -1119,14 +1218,19 @@ dependency-inject domain objects with Spring</a>.</p>
                             </div>
                             <div class="paragraph">
                                 <p>The namespace itself provides the import directive feature. Further configuration features beyond plain bean definitions are available in a selection of XML namespaces provided by Spring&#8201;&#8212;&#8201;for example,
-                                    the <code>context</code> and <code>util</code> namespaces.</p>
+                                    the <code>context</code> and <code>util</code> namespaces.</br>
+                                    命名空间本身提供了导入指令特性。除了普通bean定义之外，Spring提供的XML名称空间中还提供了更多的配置特性——例如，上下文和util名称空间。
+                                </p>
                             </div>
                         </div>
                         <div class="sect4">
                             <h5 id="groovy-bean-definition-dsl"><a class="anchor" href="#groovy-bean-definition-dsl"></a>The Groovy Bean Definition DSL</h5>
+                            <span>Groovy Bean定义DSL</span>
                             <div class="paragraph">
                                 <p>As a further example for externalized configuration metadata, bean definitions can also be expressed in Spring&#8217;s Groovy Bean Definition DSL, as known from the Grails framework. Typically, such configuration live in
-                                    a ".groovy" file with the structure shown in the following example:</p>
+                                    a ".groovy" file with the structure shown in the following example:</br>
+                                    作为外部化配置元数据的进一步例子，bean定义也可以在Spring的Groovy bean Definition DSL中表示，这从Grails框架中就可以知道。通常，这样的配置存在于。Groovy”文件的结构如下所示:
+                                </p>
                             </div>
                             <div class="listingblock">
                                 <div class="content">
@@ -1150,18 +1254,25 @@ dependency-inject domain objects with Spring</a>.</p>
                                 </div>
                             </div>
                             <div class="paragraph">
-                                <p>This configuration style is largely equivalent to XML bean definitions and even supports Spring&#8217;s XML configuration namespaces. It also allows for importing XML bean definition files through an <code>importBeans</code>                                    directive.</p>
+                                <p>This configuration style is largely equivalent to XML bean definitions and even supports Spring&#8217;s XML configuration namespaces. It also allows for importing XML bean definition files through an <code>importBeans</code> directive.</br>
+                                    这种配置风格很大程度上等同于XML bean定义，甚至支持Spring的XML配置名称空间。它还允许通过importBeans指令导入XML bean定义文件。
+                                </p>
                             </div>
                         </div>
                     </div>
                     <div class="sect3">
                         <h4 id="beans-factory-client"><a class="anchor" href="#beans-factory-client"></a>1.2.3. Using the Container</h4>
+                        <span>1.2.3. 使用容器</span>
                         <div class="paragraph">
                             <p>The <code>ApplicationContext</code> is the interface for an advanced factory capable of maintaining a registry of different beans and their dependencies. By using the method
-                                <code>T getBean(String name, Class&lt;T&gt; requiredType)</code>, you can retrieve instances of your beans.</p>
+                                <code>T getBean(String name, Class&lt;T&gt; requiredType)</code>, you can retrieve instances of your beans.</br>
+                                ApplicationContext是一个高级工厂的接口，该工厂能够维护不同bean及其依赖项的注册表。通过使用<code>T getBean(String name, Class&lt;T&gt; requiredType)</code>方法，您可以检索bean的实例。</t>
+                            </p>
                         </div>
                         <div class="paragraph">
-                            <p>The <code>ApplicationContext</code> lets you read bean definitions and access them, as the following example shows:</p>
+                            <p>The <code>ApplicationContext</code> lets you read bean definitions and access them, as the following example shows:</br>
+                                ApplicationContext允许你读取并访问bean定义，如下面的例子所示:
+                            </p>
                         </div>
                         <div class="listingblock primary">
                             <div class="title">Java</div>
@@ -1192,7 +1303,9 @@ var userList = service.getUsernameList()</code></pre>
                             </div>
                         </div>
                         <div class="paragraph">
-                            <p>With Groovy configuration, bootstrapping looks very similar. It has a different context implementation class which is Groovy-aware (but also understands XML bean definitions). The following example shows Groovy configuration:</p>
+                            <p>With Groovy configuration, bootstrapping looks very similar. It has a different context implementation class which is Groovy-aware (but also understands XML bean definitions). The following example shows Groovy configuration:</br>
+                                使用Groovy配置，引导看起来非常相似。它有一个不同的上下文实现类，它是groovy感知的(但也理解XML bean定义)。下面的例子展示了Groovy的配置:
+                            </p>
                         </div>
                         <div class="listingblock primary">
                             <div class="title">Java</div>
@@ -1207,7 +1320,9 @@ var userList = service.getUsernameList()</code></pre>
                             </div>
                         </div>
                         <div class="paragraph">
-                            <p>The most flexible variant is <code>GenericApplicationContext</code> in combination with reader delegates&#8201;&#8212;&#8201;for example, with <code>XmlBeanDefinitionReader</code> for XML files, as the following example shows:</p>
+                            <p>The most flexible variant is <code>GenericApplicationContext</code> in combination with reader delegates&#8201;&#8212;&#8201;for example, with <code>XmlBeanDefinitionReader</code> for XML files, as the following example shows:</br>
+                                最灵活的变体是GenericApplicationContext与阅读器委托结合使用——例如，XML文件使用XmlBeanDefinitionReader，如下例所示:
+                            </p>
                         </div>
                         <div class="listingblock primary">
                             <div class="title">Java</div>
@@ -1226,7 +1341,9 @@ context.refresh()</code></pre>
                             </div>
                         </div>
                         <div class="paragraph">
-                            <p>You can also use the <code>GroovyBeanDefinitionReader</code> for Groovy files, as the following example shows:</p>
+                            <p>You can also use the <code>GroovyBeanDefinitionReader</code> for Groovy files, as the following example shows:</br>
+                                你也可以对Groovy文件使用GroovyBeanDefinitionReader，如下面的例子所示:
+                            </p>
                         </div>
                         <div class="listingblock primary">
                             <div class="title">Java</div>
@@ -1245,13 +1362,19 @@ context.refresh()</code></pre>
                             </div>
                         </div>
                         <div class="paragraph">
-                            <p>You can mix and match such reader delegates on the same <code>ApplicationContext</code>, reading bean definitions from diverse configuration sources.</p>
+                            <p>You can mix and match such reader delegates on the same <code>ApplicationContext</code>, reading bean definitions from diverse configuration sources.</br>
+                                您可以在相同的ApplicationContext上混合和匹配这样的读取器委托，从不同的配置源读取bean定义。
+                            </p>
                         </div>
                         <div class="paragraph">
                             <p>You can then use <code>getBean</code> to retrieve instances of your beans. The <code>ApplicationContext</code> interface has a few other methods for retrieving beans, but, ideally, your application code should never use them.
                                 Indeed, your application code should have no calls to the
                                 <code>getBean()</code> method at all and thus have no dependency on Spring APIs at all. For example, Spring&#8217;s integration with web frameworks provides dependency injection for various web framework components such
-                                as controllers and JSF-managed beans, letting you declare a dependency on a specific bean through metadata (such as an autowiring annotation).</p>
+                                as controllers and JSF-managed beans, letting you declare a dependency on a specific bean through metadata (such as an autowiring annotation).</br>
+                                然后可以使用<code>getBean</code>来检索bean的实例。<code>ApplicationContext</code>接口有一些其他的方法用于检索bean，但是，理想情况下，应用程序代码不应该使用它们。
+                                实际上，您的应用程序代码根本不应该调用getBean()方法，因此根本不依赖于Spring api。
+                                例如，Spring与web框架的集成为各种web框架组件(如控制器和jsf管理的bean)提供了依赖注入，允许您通过元数据(如自动装配注释)声明对特定bean的依赖。
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -1259,29 +1382,43 @@ context.refresh()</code></pre>
                     <h3 id="beans-definition"><a class="anchor" href="#beans-definition"></a>1.3. Bean Overview</h3>
                     <div class="paragraph">
                         <p>A Spring IoC container manages one or more beans. These beans are created with the configuration metadata that you supply to the container (for example, in the form of XML
-                            <code>&lt;bean/&gt;</code> definitions).</p>
+                            <code>&lt;bean/&gt;</code> definitions).</br>
+                            Spring IoC容器管理一个或多个bean。这些bean是使用您提供给容器的配置元数据创建的(例如，以XML <bean></bean>定义的形式)。
+                        </p>
                     </div>
                     <div class="paragraph">
-                        <p>Within the container itself, these bean definitions are represented as <code>BeanDefinition</code> objects, which contain (among other information) the following metadata:</p>
+                        <p>Within the container itself, these bean definitions are represented as <code>BeanDefinition</code> objects, which contain (among other information) the following metadata:</br>
+                            在容器本身内，这些bean定义表示为BeanDefinition对象，其中包含(在其他信息中)以下元数据:
+                        </p>
                     </div>
                     <div class="ulist">
                         <ul>
                             <li>
-                                <p>A package-qualified class name: typically, the actual implementation class of the bean being defined.</p>
+                                <p>A package-qualified class name: typically, the actual implementation class of the bean being defined.</br>
+                                    包限定的类名:通常是定义的bean的实际实现类。
+                                </p>
                             </li>
                             <li>
-                                <p>Bean behavioral configuration elements, which state how the bean should behave in the container (scope, lifecycle callbacks, and so forth).</p>
+                                <p>Bean behavioral configuration elements, which state how the bean should behave in the container (scope, lifecycle callbacks, and so forth).</br>
+                                    Bean行为配置元素，声明Bean在容器中应该如何行为(范围、生命周期回调，等等)。
+                                </p>
                             </li>
                             <li>
-                                <p>References to other beans that are needed for the bean to do its work. These references are also called collaborators or dependencies.</p>
+                                <p>References to other beans that are needed for the bean to do its work. These references are also called collaborators or dependencies.</br>
+                                    对其他bean的引用是该bean完成其工作所必需的。这些引用也称为合作者或依赖关系。
+                                </p>
                             </li>
                             <li>
-                                <p>Other configuration settings to set in the newly created object&#8201;&#8212;&#8201;for example, the size limit of the pool or the number of connections to use in a bean that manages a connection pool.</p>
+                                <p>Other configuration settings to set in the newly created object&#8201;&#8212;&#8201;for example, the size limit of the pool or the number of connections to use in a bean that manages a connection pool.</br>
+                                    要在新创建的对象中设置的其他配置设置—例如，池的大小限制或管理连接池的bean中要使用的连接数。
+                                </p>
                             </li>
                         </ul>
                     </div>
                     <div class="paragraph">
-                        <p>This metadata translates to a set of properties that make up each bean definition. The following table describes these properties:</p>
+                        <p>This metadata translates to a set of properties that make up each bean definition. The following table describes these properties:</br>
+                            此元数据转换为组成每个bean定义的一组属性。下表描述了这些属性:
+                        </p>
                     </div>
                     <table id="beans-factory-bean-definition-tbl" class="tableblock frame-all grid-all stretch">
                         <caption class="title">Table 1. The bean definition</caption>
@@ -1372,8 +1509,13 @@ context.refresh()</code></pre>
                     </table>
                     <div class="paragraph">
                         <p>In addition to bean definitions that contain information on how to create a specific bean, the <code>ApplicationContext</code> implementations also permit the registration of existing objects that are created outside the container
-                            (by users). This is done by accessing the ApplicationContext&#8217;s BeanFactory through the <code>getBeanFactory()</code> method, which returns the BeanFactory <code>DefaultListableBeanFactory</code> implementation. <code>DefaultListableBeanFactory</code>                            supports this registration through the <code>registerSingleton(..)</code> and
-                            <code>registerBeanDefinition(..)</code> methods. However, typical applications work solely with beans defined through regular bean definition metadata.</p>
+                            (by users). This is done by accessing the ApplicationContext&#8217;s BeanFactory through the <code>getBeanFactory()</code> method, which returns the BeanFactory <code>DefaultListableBeanFactory</code> implementation. <code>DefaultListableBeanFactory</code> supports this registration through the <code>registerSingleton(..)</code> and
+                            <code>registerBeanDefinition(..)</code> methods. However, typical applications work solely with beans defined through regular bean definition metadata.</br>
+                            除了包含关于如何创建特定bean的信息的bean定义外，ApplicationContext实现还允许注册(由用户)在容器外部创建的现有对象。
+                            这是通过getBeanFactory()方法访问ApplicationContext的BeanFactory来完成的，该方法返回BeanFactory DefaultListableBeanFactory实现。
+                            DefaultListableBeanFactory通过registerSingleton(..)和registerBeanDefinition(..)方法支持这种注册。
+                            但是，典型的应用程序只使用通过常规bean定义元数据定义的bean。
+                        </p>
                     </div>
                     <div class="admonitionblock note">
                         <table>
@@ -1385,7 +1527,10 @@ context.refresh()</code></pre>
                                     <div class="paragraph">
                                         <p>Bean metadata and manually supplied singleton instances need to be registered as early as possible, in order for the container to properly reason about them during autowiring and other introspection steps. While
                                             overriding existing metadata and existing singleton instances is supported to some degree, the registration of new beans at runtime (concurrently with live access to the factory) is not officially supported
-                                            and may lead to concurrent access exceptions, inconsistent state in the bean container, or both.</p>
+                                            and may lead to concurrent access exceptions, inconsistent state in the bean container, or both.</br>
+                                            Bean元数据和手动提供的单例实例需要尽早注册，以便容器在自动装配和其他自省步骤中正确地对它们进行推理。
+                                            虽然在某种程度上支持覆盖现有的元数据和现有的单例实例，但是在运行时注册新bean(与对工厂的实时访问同时进行)并没有得到官方支持，并且可能导致并发访问异常、bean容器中的不一致状态，或者两者都有。
+                                        </p>
                                     </div>
                                 </td>
                             </tr>
@@ -1393,31 +1538,45 @@ context.refresh()</code></pre>
                     </div>
                     <div class="sect3">
                         <h4 id="beans-beanname"><a class="anchor" href="#beans-beanname"></a>1.3.1. Naming Beans</h4>
+                        <span>1.3.1. Beans 命名</span>
                         <div class="paragraph">
                             <p>Every bean has one or more identifiers. These identifiers must be unique within the container that hosts the bean. A bean usually has only one identifier. However, if it requires more than one, the extra ones can be considered
-                                aliases.</p>
+                                aliases.</br>
+                                每个bean都有一个或多个标识符。这些标识符在承载bean的容器中必须是唯一的。一个bean通常只有一个标识符。但是，如果需要一个以上的别名，则可以将额外的别名视为别名。
+                            </p>
                         </div>
                         <div class="paragraph">
                             <p>In XML-based configuration metadata, you use the <code>id</code> attribute, the <code>name</code> attribute, or both to specify the bean identifiers. The <code>id</code> attribute lets you specify exactly one id. Conventionally,
                                 these names are alphanumeric ('myBean', 'someService', etc.), but they can contain special characters as well. If you want to introduce other aliases for the bean, you can also specify them in the <code>name</code> attribute,
                                 separated by a comma (<code>,</code>), semicolon (<code>;</code>), or white space. As a historical note, in versions prior to Spring 3.1, the <code>id</code> attribute was defined as an <code>xsd:ID</code> type, which constrained
-                                possible characters. As of 3.1, it is defined as an <code>xsd:string</code> type. Note that bean <code>id</code> uniqueness is still enforced by the container, though no longer by XML parsers.</p>
+                                possible characters. As of 3.1, it is defined as an <code>xsd:string</code> type. Note that bean <code>id</code> uniqueness is still enforced by the container, though no longer by XML parsers.</br>
+                                在基于xml的配置元数据中，可以使用id属性、name属性或两者来指定bean标识符。
+                                id属性允许您指定一个id。通常，这些名称是字母数字('myBean'， 'someService'等)，但它们也可以包含特殊字符。
+                                如果希望为bean引入其他别名，还可以在name属性中指定它们，用逗号(，)、分号(;)或空格分隔。作为历史记录，在Spring 3.1之前的版本中，id属性被定义为xsd: id类型，这限制了可能的字符。
+                                从3.1开始，它被定义为xsd:string类型。注意，bean id惟一性仍然由容器强制执行，但不再由XML解析器强制执行。
+                            </p>
                         </div>
                         <div class="paragraph">
                             <p>You are not required to supply a <code>name</code> or an <code>id</code> for a bean. If you do not supply a
                                 <code>name</code> or <code>id</code> explicitly, the container generates a unique name for that bean. However, if you want to refer to that bean by name, through the use of the <code>ref</code> element or a Service Locator
-                                style lookup, you must provide a name. Motivations for not supplying a name are related to using <a href="#beans-inner-beans">inner
-beans</a> and <a href="#beans-factory-autowire">autowiring collaborators</a>.</p>
+                                style lookup, you must provide a name. Motivations for not supplying a name are related to using <a href="#beans-inner-beans">inner beans</a> and <a href="#beans-factory-autowire">autowiring collaborators</a>.</br>
+                                您不需要为bean提供名称或id。如果您没有显式地提供名称或id，容器将为该bean生成唯一的名称。但是，如果希望通过使用ref元素或Service Locator样式查找按名称引用该bean，则必须提供名称。不提供名称的动机与使用内部bean和自动装配协作者有关。
+                            </p>
                         </div>
                         <div class="sidebarblock">
                             <div class="content">
-                                <div class="title">Bean Naming Conventions</div>
+                                <div class="title">Bean Naming Conventions</br>Bean 命名约定</div>
                                 <div class="paragraph">
                                     <p>The convention is to use the standard Java convention for instance field names when naming beans. That is, bean names start with a lowercase letter and are camel-cased from there. Examples of such names include <code>accountManager</code>,
-                                        <code>accountService</code>, <code>userDao</code>, <code>loginController</code>, and so forth.</p>
+                                        <code>accountService</code>, <code>userDao</code>, <code>loginController</code>, and so forth.</br>
+                                        约定是在命名bean时对实例字段名使用标准Java约定。也就是说，bean名称以小写字母开头，并从那里开始采用驼峰大小写。
+                                        这些名称的示例包括accountManager、accountService、userDao、loginController等。
+                                    </p>
                                 </div>
                                 <div class="paragraph">
-                                    <p>Naming beans consistently makes your configuration easier to read and understand. Also, if you use Spring AOP, it helps a lot when applying advice to a set of beans related by name.</p>
+                                    <p>Naming beans consistently makes your configuration easier to read and understand. Also, if you use Spring AOP, it helps a lot when applying advice to a set of beans related by name.</br>
+                                        一致地命名bean可以使您的配置更易于阅读和理解。另外，如果您使用Spring AOP，那么将通知应用到名称相关的一组bean时，它会有很大帮助。
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -1429,23 +1588,29 @@ beans</a> and <a href="#beans-factory-autowire">autowiring collaborators</a>.</p
                                     </td>
                                     <td class="content">
                                         With component scanning in the classpath, Spring generates bean names for unnamed components, following the rules described earlier: essentially, taking the simple class name and turning its initial character to lower-case. However, in the (unusual) special
-                                        case when there is more than one character and both the first and second characters are upper case, the original casing gets preserved. These are the same rules as defined by <code>java.beans.Introspector.decapitalize</code>                                        (which Spring uses here).
+                                        case when there is more than one character and both the first and second characters are upper case, the original casing gets preserved. These are the same rules as defined by <code>java.beans.Introspector.decapitalize</code> (which Spring uses here).</br>
+                                        通过在类路径中扫描组件，Spring为未命名组件生成bean名，遵循前面描述的规则:本质上，采用简单的类名并将其初始字符转换为小写。但是，在(不常见的)特殊情况下，当有多个字符且第一个和第二个字符都是大写时，保留原来的大小写。这些规则与java.beans.Introspector.decapitalize (Spring在这里使用的)定义的规则相同。
                                     </td>
                                 </tr>
                             </table>
                         </div>
                         <div class="sect4">
                             <h5 id="beans-beanname-alias"><a class="anchor" href="#beans-beanname-alias"></a>Aliasing a Bean outside the Bean Definition</h5>
+                            <span>在 Bean Definition 定义之外对Bean进行别名处理</span>
                             <div class="paragraph">
                                 <p>In a bean definition itself, you can supply more than one name for the bean, by using a combination of up to one name specified by the <code>id</code> attribute and any number of other names in the <code>name</code> attribute.
                                     These names can be equivalent aliases to the same bean and are useful for some situations, such as letting each component in an application refer to a common dependency by using a bean name that is specific to that
-                                    component itself.
+                                    component itself.</br>
+                                    在bean定义本身中，通过使用id属性指定的最多一个名称和name属性中任意数量的其他名称的组合，您可以为bean提供多个名称。这些名称可以是相同bean的等效别名，在某些情况下非常有用，例如通过使用特定于该组件本身的bean名称，让应用程序中的每个组件引用公共依赖项。
                                 </p>
                             </div>
                             <div class="paragraph">
                                 <p>Specifying all aliases where the bean is actually defined is not always adequate, however. It is sometimes desirable to introduce an alias for a bean that is defined elsewhere. This is commonly the case in large systems
                                     where configuration is split amongst each subsystem, with each subsystem having its own set of object definitions. In XML-based configuration metadata, you can use the <code>&lt;alias/&gt;</code> element to accomplish
-                                    this. The following example shows how to do so:</p>
+                                    this. The following example shows how to do so:</br>
+                                    但是，指定bean实际定义的所有别名并不总是足够的。有时需要为在其他地方定义的bean引入别名。在大型系统中，配置在每个子系统之间分割，每个子系统都有自己的对象定义集，这种情况很常见。
+                                    在基于xml的配置元数据中，可以使用<code>&lt;alias/&gt;</code>元素来实现这一点。下面的例子展示了如何做到这一点:
+                                </p>
                             </div>
                             <div class="listingblock">
                                 <div class="content">
@@ -1453,12 +1618,17 @@ beans</a> and <a href="#beans-factory-autowire">autowiring collaborators</a>.</p
                                 </div>
                             </div>
                             <div class="paragraph">
-                                <p>In this case, a bean (in the same container) named <code>fromName</code> may also, after the use of this alias definition, be referred to as <code>toName</code>.</p>
+                                <p>In this case, a bean (in the same container) named <code>fromName</code> may also, after the use of this alias definition, be referred to as <code>toName</code>.</br>
+                                    在这种情况下，在使用这个别名定义之后，命名为fromName的bean(在同一个容器中)也可以称为 <code>toName</code>。
+                                </p>
                             </div>
                             <div class="paragraph">
                                 <p>For example, the configuration metadata for subsystem A may refer to a DataSource by the name of <code>subsystemA-dataSource</code>. The configuration metadata for subsystem B may refer to a DataSource by the name of <code>subsystemB-dataSource</code>.
                                     When composing the main application that uses both these subsystems, the main application refers to the DataSource by the name of <code>myApp-dataSource</code>. To have all three names refer to the same object, you
-                                    can add the following alias definitions to the configuration metadata:</p>
+                                    can add the following alias definitions to the configuration metadata:<br>
+                                    例如，子系统A的配置元数据可以通过subsystemA-dataSource的名称引用一个数据源。子系统B的配置元数据可以通过subsystemB-dataSource的名称来引用一个数据源。
+                                    当组合使用这两个子系统的主应用程序时，主应用程序通过myApp-dataSource的名称引用数据源。要让这三个名称都引用同一个对象，可以在配置元数据中添加以下别名定义:
+                                </p>
                             </div>
                             <div class="listingblock">
                                 <div class="content">
@@ -1468,13 +1638,17 @@ beans</a> and <a href="#beans-factory-autowire">autowiring collaborators</a>.</p
                             </div>
                             <div class="paragraph">
                                 <p>Now each component and the main application can refer to the dataSource through a name that is unique and guaranteed not to clash with any other definition (effectively creating a namespace), yet they refer to the same
-                                    bean.</p>
+                                    bean.</br>
+                                    现在，每个组件和主应用程序都可以通过一个惟一的名称来引用dataSource，这个名称保证不会与任何其他定义冲突(有效地创建了一个名称空间)，但它们引用的是同一个bean。
+                                </p>
                             </div>
                             <div class="sidebarblock">
                                 <div class="content">
                                     <div class="title">Java-configuration</div>
                                     <div class="paragraph">
-                                        <p>If you use Javaconfiguration, the <code>@Bean</code> annotation can be used to provide aliases. See <a href="#beans-java-bean-annotation">Using the <code>@Bean</code> Annotation</a> for details.</p>
+                                        <p>If you use Javaconfiguration, the <code>@Bean</code> annotation can be used to provide aliases. See <a href="#beans-java-bean-annotation">Using the <code>@Bean</code> Annotation</a> for details.</br>
+                                            如果使用javaconconfiguration，可以使用@Bean注释提供别名。详细信息请参见使用<code>@Bean</code>注释。
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -1482,53 +1656,86 @@ beans</a> and <a href="#beans-factory-autowire">autowiring collaborators</a>.</p
                     </div>
                     <div class="sect3">
                         <h4 id="beans-factory-class"><a class="anchor" href="#beans-factory-class"></a>1.3.2. Instantiating Beans</h4>
+                        <span>1.3.2. 实例化 Beans</span>
                         <div class="paragraph">
                             <p>A bean definition is essentially a recipe for creating one or more objects. The container looks at the recipe for a named bean when asked and uses the configuration metadata encapsulated by that bean definition to create (or
-                                acquire) an actual object.</p>
+                                acquire) an actual object.</br>
+                                Bean Definition定义本质上是创建一个或多个对象的方法。容器在被询问时查看命名bean的配置，并使用该Bean Definition封装的配置元数据创建(或获取)实际对象。
+                            </p>
                         </div>
                         <div class="paragraph">
-                            <p>If you use XML-based configuration metadata, you specify the type (or class) of object that is to be instantiated in the <code>class</code> attribute of the <code>&lt;bean/&gt;</code> element. This
-                                <code>class</code> attribute (which, internally, is a <code>Class</code> property on a <code>BeanDefinition</code> instance) is usually mandatory. (For exceptions, see
-                                <a href="#beans-factory-class-instance-factory-method">Instantiation by Using an Instance Factory Method</a> and <a href="#beans-child-bean-definitions">Bean Definition Inheritance</a>.) You can use the <code>Class</code>                                property in one of two ways:</p>
+                            <p>If you use XML-based configuration metadata, you specify the type (or class) of object that is to be instantiated in the
+                             <code>class</code> attribute of the <code>&lt;bean/&gt;</code> element.
+                              This <code>class</code> attribute (which, internally, is a <code>Class</code> property on a <code>BeanDefinition</code> instance) is usually mandatory.
+                              (For exceptions, see <a href="#beans-factory-class-instance-factory-method">Instantiation by Using an Instance Factory Method</a>
+                               and <a href="#beans-child-bean-definitions">Bean Definition Inheritance</a>.) You can use the <code>Class</code>
+                                property in one of two ways:</br>
+                                如果使用基于xml的配置元数据，则需要指定要在<code>&lt;bean/&gt;</code>元素的<code>class</code>属性中实例化的对象的类型(或类)。
+                                这个类属性(在内部是BeanDefinition实例上的class属性)通常是强制性的。(对于异常，请参见使用实例工厂方法和Bean定义继承进行实例化。)你可以用以下两种方式之一来使用Class属性:
+                            </p>
                         </div>
                         <div class="ulist">
                             <ul>
                                 <li>
-                                    <p>Typically, to specify the bean class to be constructed in the case where the container itself directly creates the bean by calling its constructor reflectively, somewhat equivalent to Java code with the <code>new</code>                                        operator.</p>
+                                    <p>Typically, to specify the bean class to be constructed in the case where the container itself directly creates the bean by calling its constructor reflectively, somewhat equivalent to Java code with the <code>new</code> operator.</br>
+                                        通常，在容器本身通过反射调用构造函数直接创建bean的情况下，指定要构造的bean类，这在某种程度上相当于带有 <code>new</code> 操作符的Java代码。
+                                    </p>
                                 </li>
                                 <li>
                                     <p>To specify the actual class containing the <code>static</code> factory method that is invoked to create the object, in the less common case where the container invokes a
-                                        <code>static</code> factory method on a class to create the bean. The object type returned from the invocation of the <code>static</code> factory method may be the same class or another class entirely.</p>
+                                        <code>static</code> factory method on a class to create the bean. The object type returned from the invocation of the <code>static</code> factory method may be the same class or another class entirely.</br>
+                                        要指定包含用于创建对象的静态工厂方法的实际类，容器调用类上的静态工厂方法来创建bean的情况不太常见。
+                                        调用静态工厂方法返回的对象类型可以是同一个类，也可以是另一个完全相同的类。
+                                    </p>
                                 </li>
                             </ul>
                         </div>
                         <div class="sidebarblock">
                             <div class="content">
-                                <div class="title">Nested class names</div>
+                                <div class="title">Nested class names</br>嵌套的类名</div>
                                 <div class="paragraph">
-                                    <p>If you want to configure a bean definition for a nested class, you may use either the binary name or the source name of the nested class.</p>
+                                    <p>If you want to configure a bean definition for a nested class, you may use either the binary name or the source name of the nested class.</br>
+                                        如果您想为嵌套类配置bean定义，您可以使用嵌套类的二进制名称或源名称。
+                                    </p>
                                 </div>
                                 <div class="paragraph">
-                                    <p>For example, if you have a class called <code>SomeThing</code> in the <code>com.example</code> package, and this <code>SomeThing</code> class has a <code>static</code> nested class called <code>OtherThing</code>, they
-                                        can be separated by a dollar sign (<code>$</code>) or a dot (<code>.</code>). So the value of the <code>class</code> attribute in a bean definition would be <code>com.example.SomeThing$OtherThing</code> or
-                                        <code>com.example.SomeThing.OtherThing</code>.</p>
+                                    <p>For example, if you have a class called <code>SomeThing</code> in the <code>com.example</code> package,
+                                     and this <code>SomeThing</code> class has a <code>static</code> nested class called <code>OtherThing</code>,
+                                     they can be separated by a dollar sign (<code>$</code>) or a dot (<code>.</code>).
+                                     So the value of the <code>class</code> attribute in a bean definition would be <code>com.example.SomeThing$OtherThing</code> or
+                                     <code>com.example.SomeThing.OtherThing</code>.</br>
+                                     例如，如果你在com中有一个叫做 <code>SomeThing</code> 的类。这个<code>SomeThing</code>类有一个名为<code>OtherThing</code>的静态嵌套类，
+                                     它们可以用美元符号(<code>$</code>)或点(<code>.</code>)分隔。
+                                     因此，bean定义中的<code>class</code>属性的值应该是<code>com.example.SomeThing$OtherThing</code>或<code>com.example.SomeThing.OtherThing</code>。
+                                 </p>
                                 </div>
                             </div>
                         </div>
                         <div class="sect4">
-                            <h5 id="beans-factory-class-ctor"><a class="anchor" href="#beans-factory-class-ctor"></a>Instantiation with a Constructor</h5>
+                            <h5 id="beans-factory-class-ctor"><a class="anchor" href="#beans-factory-class-ctor"></a>Instantiation with a Constructor<br>使用构造函数进行实例化</h5>
                             <div class="paragraph">
-                                <p>When you create a bean by the constructor approach, all normal classes are usable by and compatible with Spring. That is, the class being developed does not need to implement any specific interfaces or to be coded in a
-                                    specific fashion. Simply specifying the bean class should suffice. However, depending on what type of IoC you use for that specific bean, you may need a default (empty) constructor.</p>
+                                <p>When you create a bean by the constructor approach, all normal classes are usable by and compatible with Spring.
+                                    That is, the class being developed does not need to implement any specific interfaces or to be coded in a specific fashion.
+                                    Simply specifying the bean class should suffice.
+                                    However, depending on what type of IoC you use for that specific bean, you may need a default (empty) constructor.</br>
+                                    当您通过构造函数方法创建一个bean时，所有普通的类都可以被Spring使用，并且与Spring兼容。
+                                    也就是说，正在开发的类不需要实现任何特定的接口，也不需要以特定的方式编码。只需指定bean类就足够了。
+                                    但是，根据您为特定bean使用的IoC类型，您可能需要一个默认(空)构造函数。
+                                </p>
                             </div>
                             <div class="paragraph">
                                 <p>The Spring IoC container can manage virtually any class you want it to manage. It is not limited to managing true JavaBeans. Most Spring users prefer actual JavaBeans with only a default (no-argument) constructor and appropriate
                                     setters and getters modeled after the properties in the container. You can also have more exotic non-bean-style classes in your container. If, for example, you need to use a legacy connection pool that absolutely does
-                                    not adhere to the JavaBean specification, Spring can manage it as well.
+                                    not adhere to the JavaBean specification, Spring can manage it as well.</br>
+                                    Spring IoC容器实际上可以管理您希望它管理的任何类。它并不局限于管理真正的javabean。
+                                    大多数Spring用户更喜欢只有默认(无参数)构造函数和根据容器中的属性建模的适当setter和getter的实际javabean。
+                                    您还可以在容器中添加更多非bean风格的类。例如，如果您需要使用绝对不遵守JavaBean规范的遗留连接池，Spring也可以管理它。
                                 </p>
                             </div>
                             <div class="paragraph">
-                                <p>With XML-based configuration metadata you can specify your bean class as follows:</p>
+                                <p>With XML-based configuration metadata you can specify your bean class as follows:</br>
+                                    使用基于xml的配置元数据，你可以如下指定你的bean类:
+                                </p>
                             </div>
                             <div class="listingblock">
                                 <div class="content">
@@ -1539,18 +1746,26 @@ beans</a> and <a href="#beans-factory-autowire">autowiring collaborators</a>.</p
                             </div>
                             <div class="paragraph">
                                 <p>For details about the mechanism for supplying arguments to the constructor (if required) and setting object instance properties after the object is constructed, see
-                                    <a href="#beans-factory-collaborators">Injecting Dependencies</a>.</p>
+                                    <a href="#beans-factory-collaborators">Injecting Dependencies</a>.</br>
+                                    有关向构造函数提供参数(如果需要)和在对象构造后设置对象实例属性的机制的详细信息，请参见注入依赖项。
+                                </p>
                             </div>
                         </div>
                         <div class="sect4">
-                            <h5 id="beans-factory-class-static-factory-method"><a class="anchor" href="#beans-factory-class-static-factory-method"></a>Instantiation with a Static Factory Method</h5>
+                            <h5 id="beans-factory-class-static-factory-method"><a class="anchor" href="#beans-factory-class-static-factory-method"></a>Instantiation with a Static Factory Method<br>使用静态工厂方法进行实例化</h5>
                             <div class="paragraph">
                                 <p>When defining a bean that you create with a static factory method, use the <code>class</code> attribute to specify the class that contains the <code>static</code> factory method and an attribute named <code>factory-method</code>                                    to specify the name of the factory method itself. You should be able to call this method (with optional arguments, as described later) and return a live object, which subsequently is treated as if it had been created
-                                    through a constructor. One use for such a bean definition is to call <code>static</code> factories in legacy code.</p>
+                                    through a constructor. One use for such a bean definition is to call <code>static</code> factories in legacy code.</br>
+                                    在定义使用静态工厂方法创建的bean时，使用class属性指定包含静态工厂方法的类，并使用名为factory-method的属性指定工厂方法本身的名称。
+                                    您应该能够调用这个方法(带有可选参数，如后面所述)并返回一个活动对象，该对象随后被视为通过构造函数创建的。这种bean定义的一个用途是在遗留代码中调用静态工厂。
+                                </p>
                             </div>
                             <div class="paragraph">
                                 <p>The following bean definition specifies that the bean be created by calling a factory method. The definition does not specify the type (class) of the returned object, only the class containing the factory method. In this
-                                    example, the <code>createInstance()</code> method must be a static method. The following example shows how to specify a factory method:</p>
+                                    example, the <code>createInstance()</code> method must be a static method. The following example shows how to specify a factory method:</br>
+                                    下面的bean定义指定通过调用工厂方法来创建bean。该定义不指定返回对象的类型(类)，只指定包含工厂方法的类。
+                                    在这个例子中， <code>createInstance()</code>方法必须是一个静态方法。下面的例子展示了如何指定工厂方法:
+                                </p>
                             </div>
                             <div class="listingblock">
                                 <div class="content">
@@ -1560,7 +1775,9 @@ beans</a> and <a href="#beans-factory-autowire">autowiring collaborators</a>.</p
                                 </div>
                             </div>
                             <div class="paragraph">
-                                <p>The following example shows a class that would work with the preceding bean definition:</p>
+                                <p>The following example shows a class that would work with the preceding bean definition:</br>
+                                    下面的例子展示了一个可以使用前面的 bean definition 类:
+                                </p>
                             </div>
                             <div class="listingblock primary">
                                 <div class="title">Java</div>
@@ -1587,15 +1804,28 @@ beans</a> and <a href="#beans-factory-autowire">autowiring collaborators</a>.</p
                                 </div>
                             </div>
                             <div class="paragraph">
-                                <p>For details about the mechanism for supplying (optional) arguments to the factory method and setting object instance properties after the object is returned from the factory, see <a href="#beans-factory-properties-detailed">Dependencies and Configuration in Detail</a>.</p>
+                                <p>For details about the mechanism for supplying (optional) arguments to the factory method and setting object instance
+                                properties after the object is returned from the factory, see <a href="#beans-factory-properties-detailed">Dependencies and Configuration in Detail</a>.</br>
+                                    有关为工厂方法提供(可选)参数和在从工厂返回对象后设置对象实例属性的机制的详细信息，请参见 <a href="#beans-factory-properties-detailed">Dependencies and Configuration in Detail</a>。
+                                </p>
                             </div>
                         </div>
                         <div class="sect4">
-                            <h5 id="beans-factory-class-instance-factory-method"><a class="anchor" href="#beans-factory-class-instance-factory-method"></a>Instantiation by Using an Instance Factory Method</h5>
+                            <h5 id="beans-factory-class-instance-factory-method"><a class="anchor" href="#beans-factory-class-instance-factory-method"></a>
+                                Instantiation by Using an Instance Factory Method<br>使用静态工厂方法进行实例化
+                            </h5>
                             <div class="paragraph">
-                                <p>Similar to instantiation through a <a href="#beans-factory-class-static-factory-method">static
-factory method</a>, instantiation with an instance factory method invokes a non-static method of an existing bean from the container to create a new bean. To use this mechanism, leave the <code>class</code> attribute empty and, in the <code>factory-bean</code>                                    attribute, specify the name of a bean in the current (or parent or ancestor) container that contains the instance method that is to be invoked to create the object. Set the name of the factory method itself with the
-                                    <code>factory-method</code> attribute. The following example shows how to configure such a bean:</p>
+                                <p>
+                                    Similar to instantiation through a <a href="#beans-factory-class-static-factory-method">static factory method</a>,
+                                    instantiation with an instance factory method invokes a non-static method of an existing bean from the container to create a new bean.
+                                    To use this mechanism, leave the <code>class</code> attribute empty and, in the <code>factory-bean</code> attribute,
+                                    specify the name of a bean in the current (or parent or ancestor) container that contains the instance method that is to be invoked to create the object.
+                                    Set the name of the factory method itself with the <code>factory-method</code> attribute. The following example shows how to configure such a bean:</br>
+                                    与通过<a href="#beans-factory-class-static-factory-method">static factory method</a>进行实例化类似，
+                                    使用实例工厂方法的实例化从容器调用现有bean的非静态方法来创建新bean。
+                                    要使用这种机制，请将class属性保留为空，并在工厂bean属性中，指定当前(或父或祖先)容器中bean的名称，该容器包含要被调用来创建对象的实例方法。
+                                    使用工厂方法属性设置工厂方法本身的名称。下面的例子展示了如何配置这样一个bean:
+                                </p>
                             </div>
                             <div class="listingblock">
                                 <div class="content">
@@ -1611,7 +1841,9 @@ factory method</a>, instantiation with an instance factory method invokes a non-
                                 </div>
                             </div>
                             <div class="paragraph">
-                                <p>The following example shows the corresponding class:</p>
+                                <p>The following example shows the corresponding class:<br>
+                                    下面的例子显示了相应的类:
+                                </p>
                             </div>
                             <div class="listingblock primary">
                                 <div class="title">Java</div>
@@ -1640,7 +1872,9 @@ factory method</a>, instantiation with an instance factory method invokes a non-
                                 </div>
                             </div>
                             <div class="paragraph">
-                                <p>One factory class can also hold more than one factory method, as the following example shows:</p>
+                                <p>One factory class can also hold more than one factory method, as the following example shows:</br>
+                                    一个工厂类也可以包含多个工厂方法，如下面的例子所示:
+                                </p>
                             </div>
                             <div class="listingblock">
                                 <div class="content">
@@ -1658,7 +1892,9 @@ factory method</a>, instantiation with an instance factory method invokes a non-
                                 </div>
                             </div>
                             <div class="paragraph">
-                                <p>The following example shows the corresponding class:</p>
+                                <p>The following example shows the corresponding class:</br>
+                                    下面的例子显示了相应的类:
+                                </p>
                             </div>
                             <div class="listingblock primary">
                                 <div class="title">Java</div>
@@ -1699,8 +1935,11 @@ factory method</a>, instantiation with an instance factory method invokes a non-
                                 </div>
                             </div>
                             <div class="paragraph">
-                                <p>This approach shows that the factory bean itself can be managed and configured through dependency injection (DI). See <a href="#beans-factory-properties-detailed">Dependencies and
-Configuration in Detail</a>.</p>
+                                <p>
+                                    This approach shows that the factory bean itself can be managed and configured through dependency injection (DI).
+                                    See <a href="#beans-factory-properties-detailed">Dependencies and Configuration in Detail</a>.</br>
+                                    这种方法表明工厂bean本身可以通过依赖项注入(DI)进行管理和配置。请参阅详细的依赖关系和配置。
+                                </p>
                             </div>
                             <div class="admonitionblock note">
                                 <table>
@@ -1720,14 +1959,32 @@ Configuration in Detail</a>.</p>
                             </div>
                         </div>
                         <div class="sect4">
-                            <h5 id="beans-factory-type-determination"><a class="anchor" href="#beans-factory-type-determination"></a>Determining a Bean&#8217;s Runtime Type</h5>
+                            <h5 id="beans-factory-type-determination">
+                                <a class="anchor" href="#beans-factory-type-determination"></a>Determining a Bean&#8217;s Runtime Type</br>
+                                确定Bean的运行时类型
+                             </h5>
                             <div class="paragraph">
-                                <p>The runtime type of a specific bean is non-trivial to determine. A specified class in the bean metadata definition is just an initial class reference, potentially combined with a declared factory method or being a <code>FactoryBean</code>                                    class which may lead to a different runtime type of the bean, or not being set at all in case of an instance-level factory method (which is resolved via the specified <code>factory-bean</code> name instead). Additionally,
-                                    AOP proxying may wrap a bean instance with an interface-based proxy with limited exposure of the target bean&#8217;s actual type (just its implemented interfaces).</p>
+                                <p>
+                                    The runtime type of a specific bean is non-trivial to determine.
+                                    A specified class in the bean metadata definition is just an initial class reference,
+                                    potentially combined with a declared factory method or being a <code>FactoryBean</code>
+                                    class which may lead to a different runtime type of the bean,
+                                    or not being set at all in case of an instance-level factory method (which is resolved via the specified <code>factory-bean</code> name instead).
+                                    Additionally, AOP proxying may wrap a bean instance with an interface-based proxy with limited exposure of the target bean&#8217;s a
+                                    ctual type (just its implemented interfaces).</br>
+                                    确定特定bean的运行时类型是非常重要的。bean元数据定义中的指定类只是一个初始类引用，可能与声明的工厂方法或FactoryBean类相结合，
+                                    这可能导致bean的不同运行时类型，或者在实例级工厂方法(而是通过指定的工厂bean名称解析)的情况下，根本没有设置。
+                                    此外，AOP代理可以用一个基于接口的代理来包装一个bean实例，并有限地暴露目标bean的实际类型(仅仅是实现的接口)。
+                                </p>
                             </div>
                             <div class="paragraph">
-                                <p>The recommended way to find out about the actual runtime type of a particular bean is a <code>BeanFactory.getType</code> call for the specified bean name. This takes all of the above cases into account and returns the type
-                                    of object that a <code>BeanFactory.getBean</code> call is going to return for the same bean name.</p>
+                                <p>
+                                    The recommended way to find out about the actual runtime type of a particular bean is a <code>BeanFactory.getType</code>
+                                    call for the specified bean name. This takes all of the above cases into account and returns the type
+                                    of object that a <code>BeanFactory.getBean</code> call is going to return for the same bean name.</br>
+                                    要了解特定bean的实际运行时类型，推荐使用BeanFactory。
+                                    getType调用指定的bean名。这将考虑上述所有情况，并返回BeanFactory对象的类型。getBean调用将返回相同的bean名。
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -1735,19 +1992,32 @@ Configuration in Detail</a>.</p>
                 <div class="sect2">
                     <h3 id="beans-dependencies"><a class="anchor" href="#beans-dependencies"></a>1.4. Dependencies</h3>
                     <div class="paragraph">
-                        <p>A typical enterprise application does not consist of a single object (or bean in the Spring parlance). Even the simplest application has a few objects that work together to present what the end-user sees as a coherent application.
-                            This next section explains how you go from defining a number of bean definitions that stand alone to a fully realized application where objects collaborate to achieve a goal.</p>
+                        <p>
+                            A typical enterprise application does not consist of a single object (or bean in the Spring parlance). Even the simplest application has a few objects that work together to present what the end-user sees as a coherent application.
+                            This next section explains how you go from defining a number of bean definitions that stand alone to a fully realized application where objects collaborate to achieve a goal.</br>
+                            典型的企业应用程序不是由单个对象(或者用Spring的说法是bean)组成的。即使是最简单的应用程序也有一些共同工作的对象，以呈现终端用户所认为的一致的应用程序。
+                            下一节将解释如何从定义大量独立的bean定义过渡到一个完全实现的应用程序，其中对象通过协作实现目标。
+                        </p>
                     </div>
                     <div class="sect3">
                         <h4 id="beans-factory-collaborators"><a class="anchor" href="#beans-factory-collaborators"></a>1.4.1. Dependency Injection</h4>
                         <div class="paragraph">
                             <p>Dependency injection (DI) is a process whereby objects define their dependencies (that is, the other objects with which they work) only through constructor arguments, arguments to a factory method, or properties that are set
                                 on the object instance after it is constructed or returned from a factory method. The container then injects those dependencies when it creates the bean. This process is fundamentally the inverse (hence the name, Inversion
-                                of Control) of the bean itself controlling the instantiation or location of its dependencies on its own by using direct construction of classes or the Service Locator pattern.</p>
+                                of Control) of the bean itself controlling the instantiation or location of its dependencies on its own by using direct construction of classes or the Service Locator pattern.</br>
+                                依赖注入(DI)是一个过程，对象通过构造函数参数、工厂方法的参数或在对象实例被构造或从工厂方法返回后设置的属性来定义它们的依赖项(即它们工作的其他对象)。
+                                然后，容器在创建bean时注入这些依赖项。这个过程基本上是bean本身通过直接构造类或Service Locator模式控制其依赖项的实例化或位置的逆过程(因此得名“控制反转”)。
+                            </p>
                         </div>
                         <div class="paragraph">
-                            <p>Code is cleaner with the DI principle, and decoupling is more effective when objects are provided with their dependencies. The object does not look up its dependencies and does not know the location or class of the dependencies.
-                                As a result, your classes become easier to test, particularly when the dependencies are on interfaces or abstract base classes, which allow for stub or mock implementations to be used in unit tests.</p>
+                            <p>
+                                Code is cleaner with the DI principle, and decoupling is more effective when objects are provided with their dependencies.
+                                The object does not look up its dependencies and does not know the location or class of the dependencies.
+                                As a result, your classes become easier to test, particularly when the dependencies are on interfaces or abstract base classes,
+                                which allow for stub or mock implementations to be used in unit tests.</br>
+                                使用DI原则，代码会更清晰，当对象与它们的依赖项一起提供时，解耦会更有效。对象不查找它的依赖项，也不知道依赖项的位置或类。
+                                因此，您的类变得更容易测试，特别是当依赖项在接口或抽象基类上时，这允许在单元测试中使用存根或模拟实现。
+                            </p>
                         </div>
                         <div class="paragraph">
                             <p>DI exists in two major variants: <a href="#beans-constructor-injection">Constructor-based
