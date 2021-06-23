@@ -404,26 +404,28 @@
         </div>
         <div class="sect1">
             <h2 id="unit-testing"><a class="anchor" href="#unit-testing"></a>2. Unit Testing</h2>
-            <span>2. 单元测试</span>
+             <span class="translate">2. 单元测试</span>
             <div class="sectionbody">
                 <div class="paragraph">
                     <p>Dependency injection should make your code less dependent on the container than it would be with traditional Java EE development. The POJOs that make up your application should be testable in JUnit or TestNG tests, with objects instantiated
                         by using the <code>new</code> operator, without Spring or any other container. You can use <a href="#mock-objects">mock objects</a> (in conjunction with other valuable testing techniques) to test your code in isolation. If you
                         follow the architecture recommendations for Spring, the resulting clean layering and componentization of your codebase facilitate easier unit testing. For example, you can test service layer objects by stubbing or mocking DAO or
                         repository interfaces, without needing to access persistent data while running unit tests.</br>
+                         <span class="translate">
                         与传统Java EE开发相比，依赖项注入应该使您的代码更少地依赖于容器。组成应用程序的pojo应该在JUnit或TestNG测试中进行测试，使用new操作符实例化对象，而不使用Spring或任何其他容器。
                         您可以使用模拟对象(与其他有价值的测试技术一起)单独测试您的代码。
                         如果您遵循Spring的架构建议，那么代码基的干净分层和组件化将使单元测试变得更容易。
                         例如，您可以通过存根或模拟DAO或存储库接口来测试服务层对象，而不需要在运行单元测试时访问持久数据。
+                        </span>
                     </p>
                 </div>
                 <div class="paragraph">
                     <p>True unit tests typically run extremely quickly, as there is no runtime infrastructure to set up. Emphasizing true unit tests as part of your development methodology can boost your productivity. You may not need this section of the
                         testing chapter to help you write effective unit tests for your IoC-based applications. For certain unit testing scenarios, however, the Spring Framework provides mock objects and testing support classes, which are described in
                         this chapter.</br>
-                        真正的单元测试通常运行得非常快，因为不需要设置运行时基础结构。强调真正的单元测试作为开发方法的一部分可以提高您的生产力。
+                        <span class="translate">真正的单元测试通常运行得非常快，因为不需要设置运行时基础结构。强调真正的单元测试作为开发方法的一部分可以提高您的生产力。
                         您可能不需要测试章节的这一节来帮助您为基于ioc的应用程序编写有效的单元测试。
-                        然而，对于某些单元测试场景，Spring框架提供了模拟对象和测试支持类，这些将在本章中描述。
+                        然而，对于某些单元测试场景，Spring框架提供了模拟对象和测试支持类，这些将在本章中描述。</span>
                     </p>
                 </div>
                 <div class="sect2">
@@ -431,7 +433,7 @@
                     <span>2.1 模拟对象</span>
                     <div class="paragraph">
                         <p>Spring includes a number of packages dedicated to mocking:</br>
-                            Spring包含了许多用于模拟的包:
+                           <span class="translate"> Spring包含了许多用于模拟的包:</span>
                         </p>
                     </div>
                     <div class="ulist">
@@ -458,8 +460,10 @@
                                 <code>Environment</code> and <code>PropertySource</code> abstractions (see
                                 <a href="core.html#beans-definition-profiles">Bean Definition Profiles</a> and <a href="core.html#beans-property-source-abstraction"><code>PropertySource</code> Abstraction</a>).
                                 <code>MockEnvironment</code> and <code>MockPropertySource</code> are useful for developing out-of-container tests for code that depends on environment-specific properties.</br>
+                                <span class="translate">
                                 org.springframework.mock.env包包含了环境和propertsource抽象的模拟实现(参见Bean定义概要文件和propertsource抽象)。
                                 MockEnvironment和mockpropertsource对于为依赖于特定于环境的属性的代码开发容器外测试非常有用。
+                                </span>
                             </p>
                         </div>
                     </div>
@@ -470,8 +474,9 @@
                             <p>
                                 The <code>org.springframework.mock.jndi</code> package contains a partial implementation of the JNDI SPI, which you can use to set up a simple JNDI environment for test suites or stand-alone applications. If, for example, JDBC
                                 <code>DataSource</code> instances get bound to the same JNDI names in test code as they do in a Java EE container, you can reuse both application code and configuration in testing scenarios without modification.</br>
-                                JNDI包包含JNDI SPI的部分实现，您可以使用它为测试套件或独立应用程序设置简单的JNDI环境。
+                                <span class="translate">JNDI包包含JNDI SPI的部分实现，您可以使用它为测试套件或独立应用程序设置简单的JNDI环境。
                                 例如，如果JDBC DataSource实例在测试代码中绑定到与Java EE容器中相同的JNDI名称，则可以在测试场景中重用应用程序代码和配置，而无需修改。
+                                </span>
                             </p>
                         </div>
                         <div class="admonitionblock warning">
@@ -482,7 +487,7 @@
                                     </td>
                                     <td class="content">
                                         The mock JNDI support in the <code>org.springframework.mock.jndi</code> package is officially deprecated as of Spring Framework 5.2 in favor of complete solutions from third parties such as <a href="https://github.com/h-thurow/Simple-JNDI">Simple-JNDI</a>.</br>
-org.springframework.mock.jndi包中的模拟JNDI支持从Spring Framework 5.2开始正式弃用，取而代之的是来自第三方(如Simple-JNDI)的完整解决方案。
+                                        <span class="translate">org.springframework.mock.jndi包中的模拟JNDI支持从Spring Framework 5.2开始正式弃用，取而代之的是来自第三方(如Simple-JNDI)的完整解决方案。</span>
                                     </td>
                                 </tr>
                             </table>
@@ -493,8 +498,10 @@ org.springframework.mock.jndi包中的模拟JNDI支持从Spring Framework 5.2开
                         <div class="paragraph">
                             <p>The <code>org.springframework.mock.web</code> package contains a comprehensive set of Servlet API mock objects that are useful for testing web contexts, controllers, and filters. These mock objects are targeted at usage with
                                 Spring&#8217;s Web MVC framework and are generally more convenient to use than dynamic mock objects (such as <a href="http://easymock.org/">EasyMock</a>) or alternative Servlet API mock objects (such as <a href="http://www.mockobjects.com">MockObjects</a>).</br>
+                                <span class="translate">
                                 web包包含了一组完整的Servlet API模拟对象，这些对象对于测试web上下文、控制器和过滤器非常有用。
                                 这些模拟对象针对Spring的Web MVC框架的使用，通常比动态模拟对象(如EasyMock)或替代Servlet API模拟对象(如MockObjects)更方便使用。
+                                </span>
                             </p>
                         </div>
                         <div class="admonitionblock tip">
@@ -505,7 +512,7 @@ org.springframework.mock.jndi包中的模拟JNDI支持从Spring Framework 5.2开
                                     </td>
                                     <td class="content">
                                         Since Spring Framework 5.0, the mock objects in <code>org.springframework.mock.web</code> are based on the Servlet 4.0 API.</br>
-                                        从Spring Framework 5.0开始，org.springframework.mock.web中的模拟对象都是基于Servlet 4.0 API的。
+                                        <span class="translate">从Spring Framework 5.0开始，org.springframework.mock.web中的模拟对象都是基于Servlet 4.0 API的。</span>
                                     </td>
                                 </tr>
                             </table>
@@ -514,7 +521,7 @@ org.springframework.mock.jndi包中的模拟JNDI支持从Spring Framework 5.2开
                             <p>
                                 The Spring MVC Test framework builds on the mock Servlet API objects to provide an integration testing framework for Spring MVC.
                                 See <a href="#spring-mvc-test-framework">MockMvc</a>.</br>
-                                Spring MVC测试框架构建在模拟Servlet API对象上，为Spring MVC提供集成测试框架。看到MockMvc。
+                                <span class="translate">Spring MVC测试框架构建在模拟Servlet API对象上，为Spring MVC提供集成测试框架。看到MockMvc。</span>
                             </p>
                         </div>
                     </div>
@@ -523,8 +530,8 @@ org.springframework.mock.jndi包中的模拟JNDI支持从Spring Framework 5.2开
                         <div class="paragraph">
                             <p>The <code>org.springframework.mock.http.server.reactive</code> package contains mock implementations of <code>ServerHttpRequest</code> and <code>ServerHttpResponse</code> for use in WebFlux applications. The
                                 <code>org.springframework.mock.web.server</code> package contains a mock <code>ServerWebExchange</code> that depends on those mock request and response objects.</br>
-                                <code>org.springframework.mock.web.server</code>包包含了ServerHttpRequest和ServerHttpResponse的模拟实现，用于WebFlux应用程序。
-                                server包包含一个模拟ServerWebExchange，它依赖于那些模拟请求和响应对象。
+                               <span class="translate"> <code>org.springframework.mock.web.server</code>包包含了ServerHttpRequest和ServerHttpResponse的模拟实现，用于WebFlux应用程序。
+                                server包包含一个模拟ServerWebExchange，它依赖于那些模拟请求和响应对象。</span>
                             </p>
                         </div>
                         <div class="paragraph">
@@ -532,8 +539,10 @@ org.springframework.mock.jndi包中的模拟JNDI支持从Spring Framework 5.2开
                                 Both <code>MockServerHttpRequest</code> and <code>MockServerHttpResponse</code> extend from the same abstract base classes as server-specific
                                 implementations and share behavior with them. For example, a mock request is immutable once created,
                                 but you can use the <code>mutate()</code> method from <code>ServerHttpRequest</code> to create a modified instance.</br>
+                                <span class="translate">
                                 MockServerHttpRequest和MockServerHttpResponse都继承了与特定于服务器的实现相同的抽象基类，并与它们共享行为。
                                 例如，mock请求创建后是不可变的，但是可以使用ServerHttpRequest中的mutate()方法创建修改后的实例。
+                                </span>
                             </p>
                         </div>
                         <div class="paragraph">
@@ -541,14 +550,18 @@ org.springframework.mock.jndi包中的模拟JNDI支持从Spring Framework 5.2开
                                 In order for the mock response to properly implement the write contract and return a write completion handle (that is, <code>Mono&lt;Void&gt;</code>),
                                 it by default uses a <code>Flux</code> with <code>cache().then()</code>, which buffers the data and makes it available for assertions in tests.
                                 Applications can set a custom write function (for example, to test an infinite stream).</br>
+                                <span class="translate">
                                 为了让模拟响应正确地实现写契约并返回一个写完成句柄(即<code>Mono&lt;Void&gt;</code>)，它默认使用带有cache().then()的Flux，它缓冲数据并使其可用于测试中的断言。
                                 应用程序可以设置自定义写函数(例如，测试无限流)。
+                                </span>
                             </p>
                         </div>
                         <div class="paragraph">
                             <p>The <a href="#webtestclient">WebTestClient</a> builds on the mock request and response to provide support for testing WebFlux applications without an HTTP server.
                              The client can also be used for end-to-end tests with a running server.</br>
+                             <span class="translate">
                              WebTestClient构建在模拟请求和响应的基础上，为在没有HTTP服务器的情况下测试WebFlux应用程序提供支持。客户端还可以用于使用正在运行的服务器进行端到端测试。
+                             </span>
                              </p>
                         </div>
                     </div>
@@ -558,7 +571,9 @@ org.springframework.mock.jndi包中的模拟JNDI支持从Spring Framework 5.2开
                     <span>2.2. 单元测试支持类</span>
                     <div class="paragraph">
                         <p>Spring includes a number of classes that can help with unit testing. They fall into two categories:</br>
+                            <span class="translate">
                             Spring包含许多可以帮助进行单元测试的类。它们分为两类:
+                            </span>
                         </p>
                     </div>
                     <div class="ulist">
@@ -573,35 +588,45 @@ org.springframework.mock.jndi包中的模拟JNDI支持从Spring Framework 5.2开
                     </div>
                     <div class="sect3">
                         <h4 id="unit-testing-utilities"><a class="anchor" href="#unit-testing-utilities"></a>2.2.1. General Testing Utilities</h4>
-                        <span>2.2.1 一般的测试工具</span>
+                        <span class="translate">2.2.1 一般的测试工具</span>
                         <div class="paragraph">
                             <p>The <code>org.springframework.test.util</code> package contains several general purpose utilities for use in unit and integration testing.</br>
-                                <code>org.springframework.test.util</code> 包包含几个通用的实用程序，用于单元和集成测试。
+                                <span class="translate">
+                                    <code>org.springframework.test.util</code> 包包含几个通用的实用程序，用于单元和集成测试。
+                                </span>
                             </p>
                         </div>
                         <div class="paragraph">
                             <p><code>ReflectionTestUtils</code> is a collection of reflection-based utility methods. You can use these methods in testing scenarios where you need to change the value of a constant, set a non-<code>public</code> field, invoke
                                 a non-<code>public</code> setter method, or invoke a non-<code>public</code> configuration or lifecycle callback method when testing application code for use cases such as the following:</br>
+                                <span class="translate">
                                 ReflectionTestUtils是一组基于反射的实用工具方法。你可以在测试场景中使用这些方法，当你需要更改一个常量的值，设置一个非公共字段，调用一个非公共setter方法，
                                 或调用一个非公共配置或生命周期回调方法时，测试应用程序代码的用例如下:
+                                </span>
                             </p>
                         </div>
                         <div class="ulist">
                             <ul>
                                 <li>
                                     <p>ORM frameworks (such as JPA and Hibernate) that condone <code>private</code> or <code>protected</code> field access as opposed to <code>public</code> setter methods for properties in a domain entity.</br>
-                                        ORM框架(如JPA和Hibernate)允许私有或受保护的字段访问，而不是对域实体中的属性使用公共setter方法。
+                                        <span class="translate">
+                                            ORM框架(如JPA和Hibernate)允许私有或受保护的字段访问，而不是对域实体中的属性使用公共setter方法。
+                                        </span>
                                     </p>
                                 </li>
                                 <li>
                                     <p>Spring&#8217;s support for annotations (such as <code>@Autowired</code>, <code>@Inject</code>, and <code>@Resource</code>), that provide dependency injection for <code>private</code> or <code>protected</code> fields,
                                         setter methods, and configuration methods.</br>
+                                        <span class="translate">
                                         Spring对注释(如@Autowired、@Inject和@Resource)的支持，这些注释为私有或受保护的字段、setter方法和配置方法提供依赖注入。
+                                        </span>
                                     </p>
                                 </li>
                                 <li>
                                     <p>Use of annotations such as <code>@PostConstruct</code> and <code>@PreDestroy</code> for lifecycle callback methods.</br>
+                                        <span class="translate">
                                         在生命周期回调方法中使用@PostConstruct和@PreDestroy这样的注释。
+                                        </span>
                                     </p>
                                 </li>
                             </ul>
@@ -611,9 +636,11 @@ org.springframework.mock.jndi包中的模拟JNDI支持从Spring Framework 5.2开
                                 to obtain a reference to the underlying target object hidden behind one or more Spring proxies. For example, if you have configured a bean as a dynamic mock by using a library such as EasyMock or Mockito, and the mock is
                                 wrapped in a Spring proxy, you may need direct access to the underlying mock to configure expectations on it and perform verifications. For Spring&#8217;s core AOP utilities, see <a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/aop/support/AopUtils.html"><code>AopUtils</code></a>                                and
                                 <a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/aop/framework/AopProxyUtils.html"><code>AopProxyUtils</code></a>.</br>
+                                <span class="translate">
                                 AopTestUtils是一组与aop相关的实用程序方法。您可以使用这些方法获取隐藏在一个或多个Spring代理之后的底层目标对象的引用。
                                 例如，如果您使用EasyMock或Mockito等库将一个bean配置为动态模拟，并且该模拟被封装在Spring代理中，那么您可能需要直接访问底层模拟，以配置对它的期望并执行验证。
                                 关于Spring的核心AOP实用程序，请参阅AopUtils和AopProxyUtils。
+                                </span>
                             </p>
                         </div>
                     </div>
@@ -12438,8 +12465,7 @@ restTemplate = RestTemplate(MockMvcClientHttpRequestFactory(mockMvc))
         }
     </script>
     <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"rayId":"66267b2c4ea4282e","token":"bffcb8a918ae4755926f76178bfbd26b","version":"2021.5.2","si":10}'></script>
-        <script>
-
+    <script>
     !function () {
         function n(n, e, t) {
             return n.getAttribute(e) || t
