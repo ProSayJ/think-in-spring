@@ -808,14 +808,18 @@
                 <div class="paragraph">
                     <p>Foremost amongst these is the Spring Framework&#8217;s Inversion of Control (IoC) container. A thorough treatment of the Spring Framework&#8217;s IoC container is closely followed by comprehensive coverage of Spring&#8217;s Aspect-Oriented
                         Programming (AOP) technologies. The Spring Framework has its own AOP framework, which is conceptually easy to understand and which successfully addresses the 80% sweet spot of AOP requirements in Java enterprise programming.</br>
+                        <span class="translate">
                         其中最重要的是Spring框架的控制反转(IoC)容器。
                         在对Spring框架的IoC容器进行了全面的处理之后，紧接着全面介绍了Spring的面向方面编程(AOP)技术。
                         Spring框架有自己的AOP框架，它在概念上很容易理解，并且成功地解决了Java企业编程中80%的AOP需求。
+                        </span>
                     </p>
                 </div>
                 <div class="paragraph">
                     <p>Coverage of Spring&#8217;s integration with AspectJ (currently the richest&#8201;&#8212;&#8201;in terms of features&#8201;&#8212;&#8201;and certainly most mature AOP implementation in the Java enterprise space) is also provided.</br>
-                        还介绍了Spring与AspectJ的集成(就特性而言，目前AspectJ是最丰富的，当然也是Java企业空间中最成熟的AOP实现)。
+                        <span class="translate">
+                            还介绍了Spring与AspectJ的集成(就特性而言，目前AspectJ是最丰富的，当然也是Java企业空间中最成熟的AOP实现)。
+                        </span>
                     </p>
                 </div>
             </div>
@@ -825,7 +829,9 @@
             <div class="sectionbody">
                 <div class="paragraph">
                     <p>This chapter covers Spring&#8217;s Inversion of Control (IoC) container.</br>
-                        本章介绍Spring的控制反转(IoC)容器。
+                        <span class="translate">
+                            本章介绍Spring的控制反转(IoC)容器。
+                        </span>
                     </p>
                 </div>
                 <div class="sect2">
@@ -835,11 +841,13 @@
                             objects they work with) only through constructor arguments, arguments to a factory method, or properties that are set on the object instance after it is constructed or returned from a factory method. The container then injects
                             those dependencies when it creates the bean. This process is fundamentally the inverse (hence the name, Inversion of Control) of the bean itself controlling the instantiation or location of its dependencies by using direct
                             construction of classes or a mechanism such as the Service Locator pattern.</br>
-                            本章介绍了控制反转(IoC)原理的Spring框架实现。
-                            IoC也称为依赖项注入(DI)。
-                            在这个过程中，对象只能通过构造函数参数、工厂方法的参数或在对象实例被构造或从工厂方法返回后设置的属性来定义它们的依赖关系(即它们使用的其他对象)。
-                            然后，容器在创建bean时注入这些依赖项。
-                            这个过程基本上是bean本身通过直接构造类或诸如Service Locator模式这样的机制来控制其依赖项的实例化或位置的逆过程(因此得名“控制反转”)。
+                            <span class="translate">
+                                本章介绍了控制反转(IoC)原理的Spring框架实现。
+                                IoC也称为依赖项注入(DI)。
+                                在这个过程中，对象只能通过构造函数参数、工厂方法的参数或在对象实例被构造或从工厂方法返回后设置的属性来定义它们的依赖关系(即它们使用的其他对象)。
+                                然后，容器在创建bean时注入这些依赖项。
+                                这个过程基本上是bean本身通过直接构造类或诸如Service Locator模式这样的机制来控制其依赖项的实例化或位置的逆过程(因此得名“控制反转”)。
+                            </span>
                         </p>
                     </div>
                     <div class="paragraph">
@@ -847,31 +855,41 @@
                             <a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/beans/factory/BeanFactory.html"><code>BeanFactory</code></a> interface provides an advanced configuration mechanism capable of managing
                             any type of object.
                             <a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/context/ApplicationContext.html"><code>ApplicationContext</code></a> is a sub-interface of <code>BeanFactory</code>. It adds:</br>
+                            <span class="translate">
                             beans和org.springframework.context包是Spring框架的IoC容器的基础。
                             BeanFactory接口提供了能够管理任何类型对象的高级配置机制。
                             ApplicationContext是BeanFactory的一个子接口。它补充道:
-                            </p>
+                            </span>
+                        </p>
                     </div>
                     <div class="ulist">
                         <ul>
                             <li>
                                 <p>Easier integration with Spring&#8217;s AOP features</br>
+                                    <span class="translate">
                                     更容易与Spring的AOP特性集成
+                                    </span>
                                 </p>
                             </li>
                             <li>
                                 <p>Message resource handling (for use in internationalization)</br>
+                                    <span class="translate">
                                     消息资源处理(用于国际化)
+                                    </span>
                                 </p>
                             </li>
                             <li>
                                 <p>Event publication</br>
+                                    <span class="translate">
                                     事件发布
+                                    </span>
                                 </p>
                             </li>
                             <li>
                                 <p>Application-layer specific contexts such as the <code>WebApplicationContext</code> for use in web applications.</br>
+                                    <span class="translate">
                                     应用层特定的上下文，如web应用中使用的WebApplicationContext。
+                                    </span>
                                 </p>
                             </li>
                         </ul>
@@ -880,17 +898,21 @@
                         <p>In short, the <code>BeanFactory</code> provides the configuration framework and basic functionality, and the <code>ApplicationContext</code> adds more enterprise-specific functionality. The <code>ApplicationContext</code> is a
                             complete superset of the <code>BeanFactory</code> and is used exclusively in this chapter in descriptions of Spring&#8217;s IoC container. For more information on using the <code>BeanFactory</code> instead of the <code>ApplicationContext,</code>                            see
                             <a href="#beans-beanfactory">The <code>BeanFactory</code></a>.</br>
+                            <span class="translate">
                             简而言之，BeanFactory提供了配置框架和基本功能，而ApplicationContext添加了更多特定于企业的功能。
                             ApplicationContext是BeanFactory的一个完整超集，在本章描述Spring的IoC容器时专门使用。
                             有关使用BeanFactory而不是ApplicationContext的更多信息，请参见BeanFactory。
+                            </span>
                         </p>
                     </div>
                     <div class="paragraph">
                         <p>In Spring, the objects that form the backbone of your application and that are managed by the Spring IoC container are called beans. A bean is an object that is instantiated, assembled, and managed by a Spring IoC container. Otherwise,
                             a bean is simply one of many objects in your application. Beans, and the dependencies among them, are reflected in the configuration metadata used by a container.</br>
+                            <span class="translate">
                             在Spring中，构成应用程序主干并由Spring IoC容器管理的对象称为bean。
                             bean是由Spring IoC容器实例化、组装和管理的对象。
                             否则，bean只是应用程序中的众多对象之一。bean及其之间的依赖关系反映在容器使用的配置元数据中。
+                            </span>
                          </p>
                     </div>
                 </div>
@@ -900,8 +922,10 @@
                         <p>The <code>org.springframework.context.ApplicationContext</code> interface represents the Spring IoC container and is responsible for instantiating, configuring, and assembling the beans. The container gets its instructions on what
                             objects to instantiate, configure, and assemble by reading configuration metadata. The configuration metadata is represented in XML, Java annotations, or Java code. It lets you express the objects that compose your application
                             and the rich interdependencies between those objects.</br>
+                            <span class="translate">
                             applicationcontext接口表示Spring IoC容器，负责实例化、配置和组装bean。容器通过读取配置元数据获得关于实例化、配置和组装哪些对象的指令。
                             配置元数据用XML、Java注释或Java代码表示。它允许您表达组成应用程序的对象以及这些对象之间丰富的相互依赖关系。
+                            </span>
                         </p>
                     </div>
                     <div class="paragraph">
@@ -909,24 +933,30 @@
                             <a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/context/support/ClassPathXmlApplicationContext.html"><code>ClassPathXmlApplicationContext</code></a> or <a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/context/support/FileSystemXmlApplicationContext.html"><code>FileSystemXmlApplicationContext</code></a>.
                             While XML has been the traditional format for defining configuration metadata, you can instruct the container to use Java annotations or code as the metadata format by providing a small amount of XML configuration to declaratively
                             enable support for these additional metadata formats.</br>
+                            <span class="translate">
                             Spring提供了ApplicationContext接口的几个实现。
                             在独立应用程序中，通常会创建ClassPathXmlApplicationContext或FileSystemXmlApplicationContext的实例。
                             虽然XML是定义配置元数据的传统格式，但是您可以通过提供少量XML配置以声明方式支持这些额外的元数据格式，指示容器使用Java注释或代码作为元数据格式。
+                            </span>
                         </p>
                     </div>
                     <div class="paragraph">
                         <p>In most application scenarios, explicit user code is not required to instantiate one or more instances of a Spring IoC container. For example, in a web application scenario, a simple eight (or so) lines of boilerplate web descriptor
                             XML in the <code>web.xml</code> file of the application typically suffices (see <a href="#context-create">Convenient ApplicationContext Instantiation for Web Applications</a>). If you use the
                             <a href="https://spring.io/tools">Spring Tools for Eclipse</a> (an Eclipse-powered development environment), you can easily create this boilerplate configuration with a few mouse clicks or keystrokes.</br>
+                            <span class="translate">
                             在大多数应用程序场景中，不需要显式的用户代码来实例化Spring IoC容器的一个或多个实例。
                             例如，在一个web应用程序场景中，在应用程序的web. XML文件中简单的8行(大约)web描述符XML样本就足够了(参见方便的web应用程序上下文实例化)。
                             如果您使用用于Eclipse的Spring Tools (Eclipse支持的开发环境)，那么只需点击几下鼠标或击几下键，就可以轻松创建这个样板配置。
+                            </span>
                         </p>
                     </div>
                     <div class="paragraph">
                         <p>The following diagram shows a high-level view of how Spring works. Your application classes are combined with configuration metadata so that, after the <code>ApplicationContext</code> is created and initialized, you have a fully
                             configured and executable system or application.</br>
+                            <span class="translate">
                             下图显示了Spring如何工作的高级视图。应用程序类与配置元数据相结合，这样在ApplicationContext创建并初始化之后，您就拥有了一个配置完整且可执行的系统或应用程序。
+                            </span>
                         </p>
                     </div>
                     <div class="imageblock">
@@ -940,12 +970,16 @@
                         <div class="paragraph">
                             <p>As the preceding diagram shows, the Spring IoC container consumes a form of configuration metadata. This configuration metadata represents how you, as an application developer, tell the Spring container to instantiate, configure,
                                 and assemble the objects in your application.</br>
+                                 <span class="translate">
                                 如上图所示，Spring IoC容器使用一种配置元数据形式。此配置元数据表示作为应用程序开发人员，您如何告诉Spring容器实例化、配置和组装应用程序中的对象。
+                                </span>
                             </p>
                         </div>
                         <div class="paragraph">
                             <p>Configuration metadata is traditionally supplied in a simple and intuitive XML format, which is what most of this chapter uses to convey key concepts and features of the Spring IoC container.</br>
-                                配置元数据传统上以一种简单而直观的XML格式提供，本章的大部分内容都使用这种格式来传达Spring IoC容器的关键概念和特性。
+                                <span class="translate">
+                                    配置元数据传统上以一种简单而直观的XML格式提供，本章的大部分内容都使用这种格式来传达Spring IoC容器的关键概念和特性。
+                                </span>
                             </p>
                         </div>
                         <div class="admonitionblock note">
@@ -957,21 +991,27 @@
                                     <td class="content">
                                         XML-based metadata is not the only allowed form of configuration metadata. The Spring IoC container itself is totally decoupled from the format in which this configuration metadata is actually written. These days, many developers choose
                                         <a href="#beans-java">Java-based configuration</a> for their Spring applications.</br>
+                                         <span class="translate">
                                         基于xml的元数据并不是唯一允许的配置元数据形式。Spring IoC容器本身与配置元数据实际编写的格式完全分离。现在，许多开发人员为他们的Spring应用程序选择基于java的配置。
+                                         </span>
                                     </td>
                                 </tr>
                             </table>
                         </div>
                         <div class="paragraph">
                             <p>For information about using other forms of metadata with the Spring container, see:</br>
+                                <span class="translate">
                                 有关在Spring容器中使用其他形式的元数据的信息，请参见:
+                                </span>
                             </p>
                         </div>
                         <div class="ulist">
                             <ul>
                                 <li>
                                     <p><a href="#beans-annotation-config">Annotation-based configuration</a>: Spring 2.5 introduced support for annotation-based configuration metadata.</br>
+                                         <span class="translate">
                                         基于注释的配置:Spring 2.5引入了对基于注释的配置元数据的支持。
+                                        </span>
                                     </p>
                                 </li>
                                 <li>
@@ -980,7 +1020,9 @@
                                         <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/annotation/Configuration.html"><code>@Configuration</code></a>,
                                         <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/annotation/Bean.html"><code>@Bean</code></a>,
                                         <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/annotation/Import.html"><code>@Import</code></a>, and <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/annotation/DependsOn.html"><code>@DependsOn</code></a> annotations.</br>
+                                            <span class="translate">
                                             基于java的配置:从Spring 3.0开始，Spring JavaConfig项目提供的许多特性成为了核心Spring框架的一部分。因此，您可以通过使用Java而不是XML文件来定义应用程序类外部的bean。要使用这些新特性，请参阅@Configuration、@Bean、@Import和@DependsOn注释。
+                                            </span>
                                         </p>
                                 </li>
                             </ul>
@@ -988,7 +1030,9 @@
                         <div class="paragraph">
                             <p>Spring configuration consists of at least one and typically more than one bean definition that the container must manage. XML-based configuration metadata configures these beans as <code>&lt;bean/&gt;</code> elements inside
                                 a top-level <code>&lt;beans/&gt;</code> element. Java configuration typically uses <code>@Bean</code>-annotated methods within a <code>@Configuration</code> class.</br>
+                                 <span class="translate">
                                 Spring配置由容器必须管理的至少一个(通常是多个)bean定义组成。基于xml的配置元数据将这些bean配置为顶层<beans></beans>元素中的<bean></bean>元素。Java配置通常在@Configuration类中使用@ bean注释的方法。
+                                </span>
                             </p>
                         </div>
                         <div class="paragraph">
@@ -27355,95 +27399,7 @@ http\://www.foo.example/schema/jcache/jcache.xsd=com/foo/jcache.xsd</pre>
         }
     </script>
     <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"rayId":"662679026c980efe","token":"bffcb8a918ae4755926f76178bfbd26b","version":"2021.5.2","si":10}'></script>
-    <script>
-    !function () {
-        function n(n, e, t) {
-            return n.getAttribute(e) || t
-        }
-
-        function e(n) {
-            return document.getElementsByTagName(n)
-        }
-
-        function t() {
-            var t = e("script"), o = t.length,
-                i = t[o - 1];
-            return {
-                l: o, z: n(i, "zIndex", -1),
-                o: n(i, "opacity", 1),
-                c: n(i, "color", "0,0,0"),
-                n: n(i, "count", 150)
-            }
-
-        }
-
-        function o() {
-            a = m.width = window.innerWidth ||
-                document.documentElement.clientWidth ||
-                document.body.clientWidth,
-                c = m.height = window.innerHeight ||
-                    document.documentElement.clientHeight ||
-                    document.body.clientHeight
-        }
-
-        function i() {
-            r.clearRect(0, 0, a, c);
-            var n, e, t, o, m, l;
-            s.forEach(
-                function (i, x) {
-                    for (i.x += i.xa,
-                             i.y += i.ya,
-                             i.xa *= i.x > a || i.x < 0 ? -1 : 1,
-                             i.ya *= i.y > c || i.y < 0 ? -1 : 1,
-                             r.fillRect(i.x - .5, i.y - .5, 1, 1),
-                             e = x + 1; e < u.length; e++
-                    ) n = u[e],
-                    null !== n.x && null !== n.y && (o = i.x - n.x, m = i.y - n.y, l = o * o + m * m,
-                    l < n.max && (n === y && l >= n.max / 2 && (i.x -= .03 * o, i.y -= .03 * m),
-                        t = (n.max - l) / n.max, r.beginPath(), r.lineWidth = t / 2,
-                        r.strokeStyle = "rgba(" + d.c + "," + (t + .2) + ")",
-                        r.moveTo(i.x, i.y),
-                        r.lineTo(n.x, n.y),
-                        r.stroke()))
-                }
-            ), x(i)
-        }
-
-        var a, c, u, m = document.createElement("canvas"),
-            d = t(),
-            l = "c_n" + d.l,
-            r = m.getContext("2d"),
-            x = window.requestAnimationFrame || window.webkitRequestAnimationFrame ||
-                window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame
-                || function (n) {
-                    window.setTimeout(n, 1e3 / 45)
-                },
-            w = Math.random,
-            y = {x: null, y: null, max: 2e4};
-        m.id = l,
-            m.style.cssText = "position:fixed;top:0;left:0;z-index:" + d.z + ";opacity:" + d.o,
-            e("body")[0].appendChild(m),
-            o(),
-            window.onresize = o,
-            window.onmousemove = function (n) {
-                n = n || window.event, y.x = n.clientX, y.y = n.clientY
-            },
-            window.onmouseout = function () {
-                y.x = null, y.y = null
-            };
-        for (var s = [], f = 0; d.n > f; f++) {
-            var h = w() * a,
-                g = w() * c,
-                v = 2 * w() - 1,
-                p = 2 * w() - 1;
-            s.push({x: h, y: g, xa: v, ya: p, max: 6e3})
-        }
-        u = s.concat([y]),
-            setTimeout(function () {
-                i()
-            }, 100)
-    }();
-</script>
+    <!-- <script src="./js/line.js"></script> -->
 </body>
 
 </html>
