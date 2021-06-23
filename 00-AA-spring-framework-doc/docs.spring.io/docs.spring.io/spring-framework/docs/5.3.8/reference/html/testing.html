@@ -392,6 +392,7 @@
         </div>
         <div class="sect1">
             <h2 id="testing-introduction"><a class="anchor" href="#testing-introduction"></a>1. Introduction to Spring Testing</h2>
+            <span>1.Spring Test 介绍</span>
             <div class="sectionbody">
                 <div class="paragraph">
                     <p>Testing is an integral part of enterprise software development. This chapter focuses on the value added by the IoC principle to <a href="#unit-testing">unit testing</a> and on the benefits of the Spring Framework&#8217;s support for
@@ -403,6 +404,7 @@
         </div>
         <div class="sect1">
             <h2 id="unit-testing"><a class="anchor" href="#unit-testing"></a>2. Unit Testing</h2>
+            <span>2. 单元测试</span>
             <div class="sectionbody">
                 <div class="paragraph">
                     <p>Dependency injection should make your code less dependent on the container than it would be with traditional Java EE development. The POJOs that make up your application should be testable in JUnit or TestNG tests, with objects instantiated
@@ -426,6 +428,7 @@
                 </div>
                 <div class="sect2">
                     <h3 id="mock-objects"><a class="anchor" href="#mock-objects"></a>2.1. Mock Objects</h3>
+                    <span>2.1 模拟对象</span>
                     <div class="paragraph">
                         <p>Spring includes a number of packages dedicated to mocking:</br>
                             Spring包含了许多用于模拟的包:
@@ -449,6 +452,7 @@
                     </div>
                     <div class="sect3">
                         <h4 id="mock-objects-env"><a class="anchor" href="#mock-objects-env"></a>2.1.1. Environment</h4>
+                        <span>2.1.1 环境</span>
                         <div class="paragraph">
                             <p>The <code>org.springframework.mock.env</code> package contains mock implementations of the
                                 <code>Environment</code> and <code>PropertySource</code> abstractions (see
@@ -461,6 +465,7 @@
                     </div>
                     <div class="sect3">
                         <h4 id="mock-objects-jndi"><a class="anchor" href="#mock-objects-jndi"></a>2.1.2. JNDI</h4>
+                        <span>2.1.2 命名目录服务(Java Naming and Directory Interface)</span>
                         <div class="paragraph">
                             <p>
                                 The <code>org.springframework.mock.jndi</code> package contains a partial implementation of the JNDI SPI, which you can use to set up a simple JNDI environment for test suites or stand-alone applications. If, for example, JDBC
@@ -550,6 +555,7 @@ org.springframework.mock.jndi包中的模拟JNDI支持从Spring Framework 5.2开
                 </div>
                 <div class="sect2">
                     <h3 id="unit-testing-support-classes"><a class="anchor" href="#unit-testing-support-classes"></a>2.2. Unit Testing Support Classes</h3>
+                    <span>2.2. 单元测试支持类</span>
                     <div class="paragraph">
                         <p>Spring includes a number of classes that can help with unit testing. They fall into two categories:</br>
                             Spring包含许多可以帮助进行单元测试的类。它们分为两类:
@@ -567,6 +573,7 @@ org.springframework.mock.jndi包中的模拟JNDI支持从Spring Framework 5.2开
                     </div>
                     <div class="sect3">
                         <h4 id="unit-testing-utilities"><a class="anchor" href="#unit-testing-utilities"></a>2.2.1. General Testing Utilities</h4>
+                        <span>2.2.1 一般的测试工具</span>
                         <div class="paragraph">
                             <p>The <code>org.springframework.test.util</code> package contains several general purpose utilities for use in unit and integration testing.</br>
                                 <code>org.springframework.test.util</code> 包包含几个通用的实用程序，用于单元和集成测试。
@@ -612,6 +619,7 @@ org.springframework.mock.jndi包中的模拟JNDI支持从Spring Framework 5.2开
                     </div>
                     <div class="sect3">
                         <h4 id="unit-testing-spring-mvc"><a class="anchor" href="#unit-testing-spring-mvc"></a>2.2.2. Spring MVC Testing Utilities</h4>
+                        <span>Spring MVC测试工具</span>
                         <div class="paragraph">
                             <p>The <code>org.springframework.test.web</code> package contains
                                 <a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/test/web/ModelAndViewAssert.html"><code>ModelAndViewAssert</code></a>, which you can use in combination with JUnit, TestNG, or
@@ -642,7 +650,8 @@ org.springframework.mock.jndi包中的模拟JNDI支持从Spring Framework 5.2开
             </div>
         </div>
         <div class="sect1">
-            <h2 id="integration-testing"><a class="anchor" href="#integration-testing"></a>3. Integration Testing[集成测试]</h2>
+            <h2 id="integration-testing"><a class="anchor" href="#integration-testing"></a>3. Integration Testing</h2>
+            <span>3.集成测试</span>
             <div class="sectionbody">
                 <div class="paragraph">
                     <p>This section (most of the rest of this chapter) covers integration testing for Spring applications. It includes the following topics:</br>
@@ -9841,33 +9850,54 @@ val result = client.get().uri("/path")
                 <div class="sect2">
                     <h3 id="spring-mvc-test-framework"><a class="anchor" href="#spring-mvc-test-framework"></a>3.7. MockMvc</h3>
                     <div class="paragraph">
-                        <p>The Spring MVC Test framework, also known as MockMvc, provides support for testing Spring MVC applications. It performs full Spring MVC request handling but via mock request and response objects instead of a running server.</p>
+                        <p>
+                            The Spring MVC Test framework, also known as MockMvc, provides support for testing Spring MVC applications. It performs full Spring MVC request handling but via mock request and response objects instead of a running server.</br>
+                            Spring MVC测试框架，也称为MockMvc，提供了对Spring MVC应用程序测试的支持。它执行完整的Spring MVC请求处理，但是是通过模拟请求和响应对象，而不是运行的服务器。
+                        </p>
                     </div>
                     <div class="paragraph">
-                        <p>MockMvc can be used on its own to perform requests and verify responses. It can also be used through the <a href="#webtestclient">WebTestClient</a> where MockMvc is plugged in as the server to handle requests with. The advantage
-                            of <code>WebTestClient</code> is the option to work with higher level objects instead of raw data as well as the ability to switch to full, end-to-end HTTP tests against a live server and use the same test API.</p>
+                        <p>
+                            MockMvc can be used on its own to perform requests and verify responses. It can also be used through the <a href="#webtestclient">WebTestClient</a> where MockMvc is plugged in as the server to handle requests with. The advantage
+                            of <code>WebTestClient</code> is the option to work with higher level objects instead of raw data as well as the ability to switch to full, end-to-end HTTP tests against a live server and use the same test API.</br>
+                            MockMvc可以单独用于执行请求和验证响应。它也可以通过WebTestClient使用，在这里MockMvc作为服务器被插入来处理请求。
+                            WebTestClient的优点是可以选择使用更高级别的对象，而不是原始数据，并且能够针对活动服务器切换到完整的端到端HTTP测试，并使用相同的测试API。
+                        </p>
                     </div>
                     <div class="sect3">
                         <h4 id="spring-mvc-test-server"><a class="anchor" href="#spring-mvc-test-server"></a>3.7.1. Overview</h4>
+                        <span>3.7.1 概述</span>
                         <div class="paragraph">
-                            <p>You can write plain unit tests for Spring MVC by instantiating a controller, injecting it with dependencies, and calling its methods. However such tests do not verify request mappings, data binding, message conversion, type
+                            <p>
+                                You can write plain unit tests for Spring MVC by instantiating a controller, injecting it with dependencies, and calling its methods. However such tests do not verify request mappings, data binding, message conversion, type
                                 conversion, validation, and nor do they involve any of the supporting <code>@InitBinder</code>, <code>@ModelAttribute</code>, or
-                                <code>@ExceptionHandler</code> methods.</p>
+                                <code>@ExceptionHandler</code> methods.</br>
+                                您可以为Spring MVC编写简单的单元测试，方法是实例化一个控制器，向它注入依赖项，并调用它的方法。
+                                但是，这些测试不验证请求映射、数据绑定、消息转换、类型转换、验证，也不涉及任何支持的@InitBinder、@ModelAttribute或@ExceptionHandler方法。
+                            </p>
                         </div>
                         <div class="paragraph">
-                            <p>The Spring MVC Test framework, also known as <code>MockMvc</code>, aims to provide more complete testing for Spring MVC controllers without a running server. It does that by invoking the <code>DispacherServlet</code> and passing
+                            <p>
+                                The Spring MVC Test framework, also known as <code>MockMvc</code>, aims to provide more complete testing for Spring MVC controllers without a running server. It does that by invoking the <code>DispacherServlet</code> and passing
                                 <a href="#mock-objects-servlet">&#8220;mock&#8221; implementations of the Servlet API</a> from the
-                                <code>spring-test</code> module which replicates the full Spring MVC request handling without a running server.</p>
+                                <code>spring-test</code> module which replicates the full Spring MVC request handling without a running server.</br>
+                                Spring MVC测试框架，也称为MockMvc，旨在为Spring MVC控制器提供更完整的测试，而无需运行服务器。
+                                它通过调用DispacherServlet，并从Spring -test模块传递Servlet API的“模拟”实现，该模块复制了完整的Spring MVC请求处理，而没有运行服务器。
+                            </p>
                         </div>
                         <div class="paragraph">
-                            <p>MockMvc is a server side test framework that lets you verify most of the functionality of a Spring MVC application using lightweight and targeted tests. You can use it on its own to perform requests and to verify responses,
-                                or you can also use it through the <a href="#webtestclient">WebTestClient</a> API with MockMvc plugged in as the server to handle requests with.
+                            <p>
+                                MockMvc is a server side test framework that lets you verify most of the functionality of a Spring MVC application using lightweight and targeted tests. You can use it on its own to perform requests and to verify responses,
+                                or you can also use it through the <a href="#webtestclient">WebTestClient</a> API with MockMvc plugged in as the server to handle requests with.</br>
+                                MockMvc是一个服务器端测试框架，它允许您使用轻量级和目标测试来验证Spring MVC应用程序的大部分功能。
+                                您可以单独使用它来执行请求和验证响应，或者您也可以通过插入MockMvc的WebTestClient API使用它作为服务器来处理请求。
                             </p>
                         </div>
                         <div class="sect4">
                             <h5 id="spring-mvc-test-server-static-imports"><a class="anchor" href="#spring-mvc-test-server-static-imports"></a>Static Imports</h5>
                             <div class="paragraph">
-                                <p>When using MockMvc directly to perform requests, you&#8217;ll need static imports for:</p>
+                                <p>When using MockMvc directly to perform requests, you&#8217;ll need static imports for:</br>
+                                    当使用MockMvc直接执行请求时，你将需要以下静态导入:
+                                </p>
                             </div>
                             <div class="ulist">
                                 <ul>
@@ -9886,20 +9916,34 @@ val result = client.get().uri("/path")
                                 </ul>
                             </div>
                             <div class="paragraph">
-                                <p>An easy way to remember that is search for <code>MockMvc*</code>. If using Eclipse be sure to also add the above as &#8220;favorite static members&#8221; in the Eclipse preferences.</p>
+                                <p>
+                                    An easy way to remember that is search for <code>MockMvc*</code>. If using Eclipse be sure to also add the above as &#8220;favorite static members&#8221; in the Eclipse preferences.</br>
+                                    记住这一点的一个简单方法是搜索MockMvc*。如果使用Eclipse，请确保在Eclipse首选项中也将上述内容添加为“喜爱的静态成员”。
+                                </p>
                             </div>
                             <div class="paragraph">
-                                <p>When using MockMvc through the <a href="#webtestclient">WebTestClient</a> you do not need static imports. The <code>WebTestClient</code> provides a fluent API without static imports.</p>
+                                <p>
+                                    When using MockMvc through the <a href="#webtestclient">WebTestClient</a> you do not need static imports. The <code>WebTestClient</code> provides a fluent API without static imports.
+                                    当通过WebTestClient使用MockMvc时，你不需要静态导入。WebTestClient提供了一个流畅的API，无需静态导入。
+                                </p>
                             </div>
                         </div>
                         <div class="sect4">
                             <h5 id="spring-mvc-test-server-setup-options"><a class="anchor" href="#spring-mvc-test-server-setup-options"></a>Setup Choices</h5>
+                            <span>设置选择</span>
                             <div class="paragraph">
-                                <p>MockMvc can be setup in one of two ways. One is to point directly to the controllers you want to test and programmatically configure Spring MVC infrastructure. The second is to point to Spring configuration with Spring
-                                    MVC and controller infrastructure in it.</p>
+                                <p>
+                                    MockMvc can be setup in one of two ways. One is to point directly to the controllers you want to test and programmatically configure Spring MVC infrastructure. The second is to point to Spring configuration with Spring
+                                    MVC and controller infrastructure in it.</br>
+                                    可以通过两种方式之一来设置MockMvc。一种方法是直接指向您想要测试和以编程方式配置Spring MVC基础设施的控制器。
+                                    第二点是指向包含Spring MVC和控制器基础设施的Spring配置。
+                                </p>
                             </div>
                             <div class="paragraph">
-                                <p>To set up MockMvc for testing a specific controller, use the following:</p>
+                                <p>
+                                    To set up MockMvc for testing a specific controller, use the following:</br>
+                                    要设置MockMvc来测试一个特定的控制器，请使用以下方法:
+                                </p>
                             </div>
                             <div class="listingblock primary">
                                 <div class="title">Java</div>
@@ -9936,11 +9980,16 @@ val result = client.get().uri("/path")
                                 </div>
                             </div>
                             <div class="paragraph">
-                                <p>Or you can also use this setup when testing through the
-                                    <a href="#webtestclient-controller-config">WebTestClient</a> which delegates to the same builder as shown above.</p>
+                                <p>
+                                    Or you can also use this setup when testing through the
+                                    <a href="#webtestclient-controller-config">WebTestClient</a> which delegates to the same builder as shown above.</br>
+                                    或者，您也可以在通过WebTestClient进行测试时使用此设置，后者委托给如上所示的相同的构建器。
+                                </p>
                             </div>
                             <div class="paragraph">
-                                <p>To set up MockMvc through Spring configuration, use the following:</p>
+                                <p>To set up MockMvc through Spring configuration, use the following:</br>
+                                    通过Spring配置来设置MockMvc，使用以下方法:
+                                </p>
                             </div>
                             <div class="listingblock primary">
                                 <div class="title">Java</div>
@@ -9979,16 +10028,25 @@ class MyWebTests {
                                 </div>
                             </div>
                             <div class="paragraph">
-                                <p>Or you can also use this setup when testing through the
-                                    <a href="#webtestclient-context-config">WebTestClient</a> which delegates to the same builder as shown above.</p>
+                                <p>
+                                    Or you can also use this setup when testing through the
+                                    <a href="#webtestclient-context-config">WebTestClient</a> which delegates to the same builder as shown above.</br>
+                                    或者，您也可以在通过WebTestClient进行测试时使用此设置，后者委托给如上所示的相同的构建器。
+                                </p>
                             </div>
                             <div class="paragraph">
-                                <p>Which setup option should you use?</p>
+                                <p>Which setup option should you use?</br>
+                                    应该使用哪个设置选项?
+                                </p>
                             </div>
                             <div class="paragraph">
-                                <p>The <code>webAppContextSetup</code> loads your actual Spring MVC configuration, resulting in a more complete integration test. Since the TestContext framework caches the loaded Spring configuration, it helps keep tests
+                                <p>
+                                    The <code>webAppContextSetup</code> loads your actual Spring MVC configuration, resulting in a more complete integration test. Since the TestContext framework caches the loaded Spring configuration, it helps keep tests
                                     running fast, even as you introduce more tests in your test suite. Furthermore, you can inject mock services into controllers through Spring configuration to remain focused on testing the web layer. The following example
-                                    declares a mock service with Mockito:</p>
+                                    declares a mock service with Mockito:</br>
+                                    webAppContextSetup会加载你实际的Spring MVC配置，从而产生一个更完整的集成测试。由于TestContext框架缓存加载的Spring配置，因此它有助于保持测试快速运行，即使您在测试套件中引入更多测试。
+                                    此外，您可以通过Spring配置将模拟服务注入到控制器中，以保持专注于测试web层。下面的例子用Mockito声明了一个模拟服务:
+                                </p>
                             </div>
                             <div class="listingblock">
                                 <div class="content">
@@ -9998,7 +10056,9 @@ class MyWebTests {
                                 </div>
                             </div>
                             <div class="paragraph">
-                                <p>You can then inject the mock service into the test to set up and verify your expectations, as the following example shows:</p>
+                                <p>You can then inject the mock service into the test to set up and verify your expectations, as the following example shows:</br>
+                                    然后，您可以将模拟服务注入到测试中，以设置和验证您的期望，如下面的示例所示:
+                                </p>
                             </div>
                             <div class="listingblock primary">
                                 <div class="title">Java</div>
@@ -10043,20 +10103,34 @@ class AccountTests {
                                 </div>
                             </div>
                             <div class="paragraph">
-                                <p>The <code>standaloneSetup</code>, on the other hand, is a little closer to a unit test. It tests one controller at a time. You can manually inject the controller with mock dependencies, and it does not involve loading Spring
-                                    configuration. Such tests are more focused on style and make it easier to see which controller is being tested, whether any specific Spring MVC configuration is required to work, and so on. The <code>standaloneSetup</code>                                    is also a very convenient way to write ad-hoc tests to verify specific behavior or to debug an issue.</p>
+                                <p>
+                                    The <code>standaloneSetup</code>, on the other hand, is a little closer to a unit test. It tests one controller at a time. You can manually inject the controller with mock dependencies, and it does not involve loading Spring
+                                    configuration. Such tests are more focused on style and make it easier to see which controller is being tested, whether any specific Spring MVC configuration is required to work, and so on. The <code>standaloneSetup</code> is also a very convenient way to write ad-hoc tests to verify specific behavior or to debug an issue.</br>
+                                    另一方面，独立设置更接近单元测试。它一次测试一个控制器。您可以用模拟依赖项手动注入控制器，而且它不涉及加载Spring配置。这类测试更关注于样式，更容易查看正在测试的控制器，是否需要任何特定的Spring MVC配置，等等。
+                                    独立设置也是编写特别测试来验证特定行为或调试问题的一种非常方便的方式。
+                                </p>
+
                             </div>
                             <div class="paragraph">
-                                <p>As with most &#8220;integration versus unit testing&#8221; debates, there is no right or wrong answer. However, using the <code>standaloneSetup</code> does imply the need for additional
+                                <p>
+                                    As with most &#8220;integration versus unit testing&#8221; debates, there is no right or wrong answer. However, using the <code>standaloneSetup</code> does imply the need for additional
                                     <code>webAppContextSetup</code> tests in order to verify your Spring MVC configuration. Alternatively, you can write all your tests with <code>webAppContextSetup</code>, in order to always test against your actual Spring
-                                    MVC configuration.</p>
+                                    MVC configuration.</br>
+                                    就像大多数关于“集成还是单元测试”的争论一样，没有正确或错误的答案。然而，使用独立设置意味着需要额外的webAppContextSetup测试来验证您的Spring MVC配置。
+                                    或者，你也可以用webAppContextSetup编写所有的测试，以便始终针对你实际的Spring MVC配置进行测试。
+                                </p>
                             </div>
                         </div>
                         <div class="sect4">
                             <h5 id="spring-mvc-test-server-setup-steps"><a class="anchor" href="#spring-mvc-test-server-setup-steps"></a>Setup Features</h5>
+                            <span>设置功能</span>
                             <div class="paragraph">
-                                <p>No matter which MockMvc builder you use, all <code>MockMvcBuilder</code> implementations provide some common and very useful features. For example, you can declare an <code>Accept</code> header for all requests and expect
-                                    a status of 200 as well as a <code>Content-Type</code> header in all responses, as follows:</p>
+                                <p>
+                                    No matter which MockMvc builder you use, all <code>MockMvcBuilder</code> implementations provide some common and very useful features. For example, you can declare an <code>Accept</code> header for all requests and expect
+                                    a status of 200 as well as a <code>Content-Type</code> header in all responses, as follows:</br>
+                                    不管你使用哪个MockMvc构建器，所有的MockMvcBuilder实现都提供了一些通用且非常有用的特性。
+                                    例如，您可以为所有请求声明一个Accept头，并期望状态为200，以及在所有响应中声明一个Content-Type头，如下所示:
+                                </p>
                             </div>
                             <div class="listingblock primary">
                                 <div class="title">Java</div>
@@ -10077,8 +10151,11 @@ MockMvc mockMvc = standaloneSetup(new MusicController())
                                 </div>
                             </div>
                             <div class="paragraph">
-                                <p>In addition, third-party frameworks (and applications) can pre-package setup instructions, such as those in a <code>MockMvcConfigurer</code>. The Spring Framework has one such built-in implementation that helps to save
-                                    and re-use the HTTP session across requests. You can use it as follows:</p>
+                                <p>
+                                    In addition, third-party frameworks (and applications) can pre-package setup instructions, such as those in a <code>MockMvcConfigurer</code>. The Spring Framework has one such built-in implementation that helps to save
+                                    and re-use the HTTP session across requests. You can use it as follows:</br>
+                                    此外，第三方框架(和应用程序)可以预先打包设置指令，比如MockMvcConfigurer中的指令。Spring框架有一个这样的内置实现，它有助于跨请求保存和重用HTTP会话。你可以这样使用它:
+                                </p>
                             </div>
                             <div class="listingblock primary">
                                 <div class="title">Java</div>
@@ -10099,19 +10176,28 @@ MockMvc mockMvc = MockMvcBuilders.standaloneSetup(new TestController())
                                 </div>
                             </div>
                             <div class="paragraph">
-                                <p>See the javadoc for
+                                <p>
+                                    See the javadoc for
                                     <a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/test/web/servlet/setup/ConfigurableMockMvcBuilder.html"><code>ConfigurableMockMvcBuilder</code></a> for a list of all MockMvc
-                                    builder features or use the IDE to explore the available options.</p>
+                                    builder features or use the IDE to explore the available options.</br>
+                                    请参阅javadoc中的ConfigurableMockMvcBuilder，以获得所有MockMvc构建器特性的列表，或者使用IDE来探索可用的选项。
+                                </p>
                             </div>
                         </div>
                         <div class="sect4">
                             <h5 id="spring-mvc-test-server-performing-requests"><a class="anchor" href="#spring-mvc-test-server-performing-requests"></a>Performing Requests</h5>
+                            <span>执行请求</span>
                             <div class="paragraph">
-                                <p>This section shows how to use MockMvc on its own to perform requests and verify responses. If using MockMvc through the <code>WebTestClient</code> please see the corresponding section on
-                                    <a href="#webtestclient-tests">Writing Tests</a> instead.</p>
+                                <p>
+                                    This section shows how to use MockMvc on its own to perform requests and verify responses. If using MockMvc through the <code>WebTestClient</code> please see the corresponding section on
+                                    <a href="#webtestclient-tests">Writing Tests</a> instead.</br>
+                                    本节将展示如何单独使用MockMvc来执行请求和验证响应。如果通过WebTestClient使用MockMvc，请参阅相应的编写测试部分。
+                                </p>
                             </div>
                             <div class="paragraph">
-                                <p>To perform requests that use any HTTP method, as the following example shows:</p>
+                                <p>To perform requests that use any HTTP method, as the following example shows:</br>
+                                    执行使用任何HTTP方法的请求，如下所示:
+                                </p>
                             </div>
                             <div class="listingblock primary">
                                 <div class="title">Java</div>
@@ -10132,8 +10218,11 @@ mockMvc.post("/hotels/{id}", 42) {
                                 </div>
                             </div>
                             <div class="paragraph">
-                                <p>You can also perform file upload requests that internally use
-                                    <code>MockMultipartHttpServletRequest</code> so that there is no actual parsing of a multipart request. Rather, you have to set it up to be similar to the following example:</p>
+                                <p>
+                                    You can also perform file upload requests that internally use
+                                    <code>MockMultipartHttpServletRequest</code> so that there is no actual parsing of a multipart request. Rather, you have to set it up to be similar to the following example:<br>
+                                    您还可以执行内部使用MockMultipartHttpServletRequest的文件上传请求，这样就不会对多部分请求进行实际的解析。相反，你必须像下面的例子那样设置它:
+                                </p>
                             </div>
                             <div class="listingblock primary">
                                 <div class="title">Java</div>
@@ -10152,7 +10241,10 @@ mockMvc.multipart("/doc") {
                                 </div>
                             </div>
                             <div class="paragraph">
-                                <p>You can specify query parameters in URI template style, as the following example shows:</p>
+                                <p>
+                                    You can specify query parameters in URI template style, as the following example shows:</br>
+                                    您可以使用URI模板样式指定查询参数，示例如下:
+                                </p>
                             </div>
                             <div class="listingblock primary">
                                 <div class="title">Java</div>
@@ -10167,7 +10259,10 @@ mockMvc.multipart("/doc") {
                                 </div>
                             </div>
                             <div class="paragraph">
-                                <p>You can also add Servlet request parameters that represent either query or form parameters, as the following example shows:</p>
+                                <p>
+                                    You can also add Servlet request parameters that represent either query or form parameters, as the following example shows:</br>
+                                    您还可以添加表示查询或表单参数的Servlet请求参数，如下面的示例所示:
+                                </p>
                             </div>
                             <div class="listingblock primary">
                                 <div class="title">Java</div>
@@ -10186,11 +10281,16 @@ mockMvc.get("/hotels") {
                                 </div>
                             </div>
                             <div class="paragraph">
-                                <p>If application code relies on Servlet request parameters and does not check the query string explicitly (as is most often the case), it does not matter which option you use. Keep in mind, however, that query parameters
-                                    provided with the URI template are decoded while request parameters provided through the <code>param(&#8230;&#8203;)</code> method are expected to already be decoded.</p>
+                                <p>
+                                    If application code relies on Servlet request parameters and does not check the query string explicitly (as is most often the case), it does not matter which option you use. Keep in mind, however, that query parameters
+                                    provided with the URI template are decoded while request parameters provided through the <code>param(&#8230;&#8203;)</code> method are expected to already be decoded.</br>
+                                    如果应用程序代码依赖于Servlet请求参数，并且不显式地检查查询字符串(这是最常见的情况)，那么使用哪个选项并不重要。但是，请记住，通过URI模板提供的查询参数已经被解码，而通过param(…)方法提供的请求参数预计已经被解码。
+                                </p>
                             </div>
                             <div class="paragraph">
-                                <p>In most cases, it is preferable to leave the context path and the Servlet path out of the request URI. If you must test with the full request URI, be sure to set the <code>contextPath</code> and <code>servletPath</code>                                    accordingly so that request mappings work, as the following example shows:
+                                <p>
+                                    In most cases, it is preferable to leave the context path and the Servlet path out of the request URI. If you must test with the full request URI, be sure to set the <code>contextPath</code> and <code>servletPath</code> accordingly so that request mappings work, as the following example shows:</br>
+                                    在大多数情况下，最好在请求URI之外保留上下文路径和Servlet路径。如果你必须使用完整的请求URI进行测试，请确保相应地设置contextPath和servletPath以便请求映射工作，如下面的例子所示:
                                 </p>
                             </div>
                             <div class="listingblock primary">
@@ -10211,8 +10311,11 @@ mockMvc.get("/app/main/hotels/{id}") {
                                 </div>
                             </div>
                             <div class="paragraph">
-                                <p>In the preceding example, it would be cumbersome to set the <code>contextPath</code> and
-                                    <code>servletPath</code> with every performed request. Instead, you can set up default request properties, as the following example shows:</p>
+                                <p>
+                                    In the preceding example, it would be cumbersome to set the <code>contextPath</code> and
+                                    <code>servletPath</code> with every performed request. Instead, you can set up default request properties, as the following example shows:</br>
+                                    在前面的示例中，为每个执行的请求设置contextPath和servletPath会很麻烦。相反，你可以设置默认的请求属性，如下面的例子所示:
+                                </p>
                             </div>
                             <div class="listingblock primary">
                                 <div class="title">Java</div>
@@ -10238,14 +10341,23 @@ mockMvc.get("/app/main/hotels/{id}") {
                                 </div>
                             </div>
                             <div class="paragraph">
-                                <p>The preceding properties affect every request performed through the <code>MockMvc</code> instance. If the same property is also specified on a given request, it overrides the default value. That is why the HTTP method and
-                                    URI in the default request do not matter, since they must be specified on every request.</p>
+                                <p>
+                                    The preceding properties affect every request performed through the <code>MockMvc</code> instance.
+                                    If the same property is also specified on a given request, it overrides the default value. That is why the HTTP method and
+                                    URI in the default request do not matter, since they must be specified on every request.</br>
+                                    上述属性影响通过MockMvc实例执行的每个请求。如果在给定的请求上也指定了相同的属性，它将覆盖默认值。这就是为什么默认请求中的HTTP方法和URI不重要的原因，因为它们必须在每个请求上指定。
+                                </p>
+
                             </div>
                         </div>
                         <div class="sect4">
                             <h5 id="spring-mvc-test-server-defining-expectations"><a class="anchor" href="#spring-mvc-test-server-defining-expectations"></a>Defining Expectations</h5>
+                            <span>定义预期的结果</span>
                             <div class="paragraph">
-                                <p>You can define expectations by appending one or more <code>.andExpect(..)</code> calls after performing a request, as the following example shows:</p>
+                                <p>
+                                    You can define expectations by appending one or more <code>.andExpect(..)</code> calls after performing a request, as the following example shows:</br>
+                                    您可以通过在执行请求后附加一个或多个.andExpect(..)调用来定义期望，如下面的示例所示:
+                                </p>
                             </div>
                             <div class="listingblock primary">
                                 <div class="title">Java</div>
@@ -10266,17 +10378,30 @@ mockMvc.get("/accounts/1").andExpect {
                                 </div>
                             </div>
                             <div class="paragraph">
-                                <p><code>MockMvcResultMatchers.*</code> provides a number of expectations, some of which are further nested with more detailed expectations.</p>
+                                <p>
+                                    <code>MockMvcResultMatchers.*</code> provides a number of expectations, some of which are further nested with more detailed expectations.</br>
+                                    MockMvcResultMatchers。*提供了许多期望，其中一些与更详细的期望进一步嵌套。
+                                </p>
                             </div>
                             <div class="paragraph">
-                                <p>Expectations fall in two general categories. The first category of assertions verifies properties of the response (for example, the response status, headers, and content). These are the most important results to assert.</p>
+                                <p>
+                                    Expectations fall in two general categories. The first category of assertions verifies properties of the response (for example, the response status, headers, and content). These are the most important results to assert.</br>
+                                    期望值一般分为两类。第一类断言验证响应的属性(例如，响应状态、头和内容)。这些是要断言的最重要的结果。
+                                </p>
                             </div>
                             <div class="paragraph">
-                                <p>The second category of assertions goes beyond the response. These assertions let you inspect Spring MVC specific aspects, such as which controller method processed the request, whether an exception was raised and handled,
-                                    what the content of the model is, what view was selected, what flash attributes were added, and so on. They also let you inspect Servlet specific aspects, such as request and session attributes.</p>
+                                <p>
+                                    The second category of assertions goes beyond the response. These assertions let you inspect Spring MVC specific aspects, such as which controller method processed the request, whether an exception was raised and handled,
+                                    what the content of the model is, what view was selected, what flash attributes were added, and so on. They also let you inspect Servlet specific aspects, such as request and session attributes.</br>
+                                    第二类断言超出了响应。这些断言让您可以检查Spring MVC特定的方面，比如哪个控制器方法处理了请求，是否引发并处理了异常，模型的内容是什么，选择了什么视图，添加了什么flash属性，等等。
+                                    它们还允许您检查Servlet特定的方面，如请求和会话属性。
+                                </p>
                             </div>
                             <div class="paragraph">
-                                <p>The following test asserts that binding or validation failed:</p>
+                                <p>
+                                    The following test asserts that binding or validation failed:</br>
+                                    以下测试断言绑定或验证失败:
+                                </p>
                             </div>
                             <div class="listingblock primary">
                                 <div class="title">Java</div>
@@ -10300,8 +10425,11 @@ mockMvc.post("/persons").andExpect {
                                 </div>
                             </div>
                             <div class="paragraph">
-                                <p>Many times, when writing tests, it is useful to dump the results of the performed request. You can do so as follows, where <code>print()</code> is a static import from
-                                    <code>MockMvcResultHandlers</code>:</p>
+                                <p>
+                                    Many times, when writing tests, it is useful to dump the results of the performed request. You can do so as follows, where <code>print()</code> is a static import from
+                                    <code>MockMvcResultHandlers</code>:</br>
+                                    很多时候，在编写测试时，转储执行请求的结果是有用的。你可以这样做，其中print()是从MockMvcResultHandlers静态导入的:
+                                </p>
                             </div>
                             <div class="listingblock primary">
                                 <div class="title">Java</div>
@@ -10328,15 +10456,23 @@ mockMvc.post("/persons").andDo {
                                 </div>
                             </div>
                             <div class="paragraph">
-                                <p>As long as request processing does not cause an unhandled exception, the <code>print()</code> method prints all the available result data to <code>System.out</code>. There is also a <code>log()</code> method and two additional
+                                <p>
+                                    As long as request processing does not cause an unhandled exception, the <code>print()</code> method prints all the available result data to <code>System.out</code>. There is also a <code>log()</code> method and two additional
                                     variants of the <code>print()</code> method, one that accepts an <code>OutputStream</code> and one that accepts a <code>Writer</code>. For example, invoking <code>print(System.err)</code> prints the result data to <code>System.err</code>,
                                     while invoking <code>print(myWriter)</code> prints the result data to a custom writer. If you want to have the result data logged instead of printed, you can invoke the
                                     <code>log()</code> method, which logs the result data as a single <code>DEBUG</code> message under the
-                                    <code>org.springframework.test.web.servlet.result</code> logging category.</p>
+                                    <code>org.springframework.test.web.servlet.result</code> logging category.</br>
+                                    只要请求处理不会导致未处理的异常，print()方法将所有可用的结果数据打印到System.out。还有一个log()方法和print()方法的另外两个变体，一个接受OutputStream，另一个接受Writer。
+                                    例如，调用print(System.err)将结果数据打印到System。err时调用print(myWriter)将结果数据打印到自定义写入器。
+                                    如果希望记录结果数据而不是打印出来，可以调用log()方法，该方法将结果数据作为单个DEBUG消息记录在org.springframework.test.web.servlet.result logging类别下。
+                                </p>
                             </div>
                             <div class="paragraph">
-                                <p>In some cases, you may want to get direct access to the result and verify something that cannot be verified otherwise. This can be achieved by appending <code>.andReturn()</code> after all other expectations, as the following
-                                    example shows:</p>
+                                <p>
+                                    In some cases, you may want to get direct access to the result and verify something that cannot be verified otherwise. This can be achieved by appending <code>.andReturn()</code> after all other expectations, as the following
+                                    example shows:</br>
+                                    在某些情况下，您可能希望直接访问结果，并验证无法通过其他方式验证的内容。这可以通过在所有其他期望之后添加.andReturn()来实现，如下面的例子所示:
+                                </p>
                             </div>
                             <div class="listingblock primary">
                                 <div class="title">Java</div>
@@ -10353,7 +10489,11 @@ mockMvc.post("/persons").andDo {
                                 </div>
                             </div>
                             <div class="paragraph">
-                                <p>If all tests repeat the same expectations, you can set up common expectations once when building the <code>MockMvc</code> instance, as the following example shows:</p>
+                                <p>
+                                    If all tests repeat the same expectations, you can set up common expectations once when building the <code>MockMvc</code> instance,
+                                    as the following example shows:</br>
+                                    如果所有的测试重复相同的期望，您可以在构建MockMvc实例时设置一次公共期望，如下面的例子所示:
+                                </p>
                             </div>
                             <div class="listingblock primary">
                                 <div class="title">Java</div>
@@ -10371,11 +10511,18 @@ mockMvc.post("/persons").andDo {
                                 </div>
                             </div>
                             <div class="paragraph">
-                                <p>Note that common expectations are always applied and cannot be overridden without creating a separate <code>MockMvc</code> instance.</p>
+                                <p>
+                                    Note that common expectations are always applied and cannot be overridden without creating a separate <code>MockMvc</code> instance.</br>
+                                    请注意，公共期望总是被应用，并且不能在没有创建单独的MockMvc实例的情况下被重写。
+                                </p>
                             </div>
                             <div class="paragraph">
-                                <p>When a JSON response content contains hypermedia links created with
-                                    <a href="https://github.com/spring-projects/spring-hateoas">Spring HATEOAS</a>, you can verify the resulting links by using JsonPath expressions, as the following example shows:</p>
+                                <p>
+                                    When a JSON response content contains hypermedia links created with
+                                    <a href="https://github.com/spring-projects/spring-hateoas">Spring HATEOAS</a>, you can verify the resulting links by using JsonPath expressions,
+                                    as the following example shows:</br>
+                                    当JSON响应内容包含使用Spring HATEOAS创建的超媒体链接时，您可以使用JsonPath表达式验证生成的链接，如下面的示例所示:
+                                </p>
                             </div>
                             <div class="listingblock primary">
                                 <div class="title">Java</div>
@@ -10397,8 +10544,11 @@ mockMvc.post("/persons").andDo {
                                 </div>
                             </div>
                             <div class="paragraph">
-                                <p>When XML response content contains hypermedia links created with
-                                    <a href="https://github.com/spring-projects/spring-hateoas">Spring HATEOAS</a>, you can verify the resulting links by using XPath expressions:</p>
+                                <p>
+                                    When XML response content contains hypermedia links created with
+                                    <a href="https://github.com/spring-projects/spring-hateoas">Spring HATEOAS</a>, you can verify the resulting links by using XPath expressions:</br>
+                                    当XML响应内容包含使用Spring HATEOAS创建的超媒体链接时，可以使用XPath表达式验证产生的链接:
+                                </p>
                             </div>
                             <div class="listingblock primary">
                                 <div class="title">Java</div>
@@ -10424,18 +10574,28 @@ mockMvc.get("/handle") {
                         </div>
                         <div class="sect4">
                             <h5 id="spring-mvc-test-async-requests"><a class="anchor" href="#spring-mvc-test-async-requests"></a>Async Requests</h5>
+                            <span>异步请求</span>
                             <div class="paragraph">
-                                <p>This section shows how to use MockMvc on its own to test asynchronous request handling. If using MockMvc through the <a href="#webtestclient">WebTestClient</a>, there is nothing special to do to make asynchronous requests
-                                    work as the <code>WebTestClient</code> automatically does what is described in this section.</p>
+                                <p>
+                                    This section shows how to use MockMvc on its own to test asynchronous request handling. If using MockMvc through the <a href="#webtestclient">WebTestClient</a>, there is nothing special to do to make asynchronous requests
+                                    work as the <code>WebTestClient</code> automatically does what is described in this section.</br>
+                                    本节将展示如何单独使用MockMvc来测试异步请求处理。如果通过WebTestClient使用MockMvc，就没有什么特别的事情可以让异步请求工作，因为WebTestClient会自动执行本节中描述的操作。
+                                </p>
                             </div>
                             <div class="paragraph">
-                                <p>Servlet 3.0 asynchronous requests,
+                                <p>
+                                    Servlet 3.0 asynchronous requests,
                                     <a href="web.html#mvc-ann-async">supported in Spring MVC</a>, work by exiting the Servlet container thread and allowing the application to compute the response asynchronously, after which an async dispatch is made to
-                                    complete processing on a Servlet container thread.</p>
+                                    complete processing on a Servlet container thread.</br>
+                                    Spring MVC支持的Servlet 3.0异步请求通过退出Servlet容器线程并允许应用程序异步计算响应来工作，然后进行异步调度以完成对Servlet容器线程的处理。
+                                </p>
                             </div>
                             <div class="paragraph">
-                                <p>In Spring MVC Test, async requests can be tested by asserting the produced async value first, then manually performing the async dispatch, and finally verifying the response. Below is an example test for controller methods
-                                    that return <code>DeferredResult</code>, <code>Callable</code>, or reactive type such as Reactor <code>Mono</code>:</p>
+                                <p>
+                                    In Spring MVC Test, async requests can be tested by asserting the produced async value first, then manually performing the async dispatch, and finally verifying the response. Below is an example test for controller methods
+                                    that return <code>DeferredResult</code>, <code>Callable</code>, or reactive type such as Reactor <code>Mono</code>:</br>
+                                    在Spring MVC测试中，可以通过先断言生成的异步值，然后手动执行异步分派，最后验证响应来测试异步请求。下面是一个返回DeferredResult、Callable或reactive类型(如Reactor Mono)的控制器方法的测试示例:
+                                </p>
                             </div>
                             <div class="listingblock primary">
                                 <div class="title">Java</div>
@@ -10460,23 +10620,23 @@ void test() throws Exception {
                                 <table>
                                     <tr>
                                         <td><i class="conum" data-value="1"></i><b>1</b></td>
-                                        <td>Check response status is still unchanged</td>
+                                        <td>Check response status is still unchanged[检查响应状态仍未改变]</td>
                                     </tr>
                                     <tr>
                                         <td><i class="conum" data-value="2"></i><b>2</b></td>
-                                        <td>Async processing must have started</td>
+                                        <td>Async processing must have started[异步处理必须已启动]</td>
                                     </tr>
                                     <tr>
                                         <td><i class="conum" data-value="3"></i><b>3</b></td>
-                                        <td>Wait and assert the async result</td>
+                                        <td>Wait and assert the async result[等待并断言异步结果]</td>
                                     </tr>
                                     <tr>
                                         <td><i class="conum" data-value="4"></i><b>4</b></td>
-                                        <td>Manually perform an ASYNC dispatch (as there is no running container)</td>
+                                        <td>Manually perform an ASYNC dispatch (as there is no running container)[手动执行ASYNC dispatch(因为没有正在运行的容器)]</td>
                                     </tr>
                                     <tr>
                                         <td><i class="conum" data-value="5"></i><b>5</b></td>
-                                        <td>Verify the final response</td>
+                                        <td>Verify the final response[验证最终响应]</td>
                                     </tr>
                                 </table>
                             </div>
@@ -10528,9 +10688,14 @@ fun test() {
                         </div>
                         <div class="sect4">
                             <h5 id="spring-mvc-test-vs-streaming-response"><a class="anchor" href="#spring-mvc-test-vs-streaming-response"></a>Streaming Responses</h5>
+                            <span>流媒体的响应</span>
                             <div class="paragraph">
-                                <p>The best way to test streaming responses such as Server-Sent Events is through the
-                                    <a href="#webtestclient">WebTestClient</a> which can be used as a test client to connect to a <code>MockMvc</code> instance to perform tests on Spring MVC controllers without a running server. For example:</p>
+                                <p>
+                                    The best way to test streaming responses such as Server-Sent Events is through the
+                                    <a href="#webtestclient">WebTestClient</a> which can be used as a test client to connect to a <code>MockMvc</code> instance to
+                                    perform tests on Spring MVC controllers without a running server. For example:</br>
+                                    测试流响应(如server - sent Events)的最佳方法是通过WebTestClient，它可以作为测试客户端连接到MockMvc实例，在没有运行服务器的情况下在Spring MVC控制器上执行测试。例如:
+                                </p>
                             </div>
                             <div class="listingblock primary">
                                 <div class="title">Java</div>
@@ -10555,14 +10720,21 @@ StepVerifier.create(exchangeResult.getResponseBody())
                                 </div>
                             </div>
                             <div class="paragraph">
-                                <p><code>WebTestClient</code> can also connect to a live server and perform full end-to-end integration tests. This is also supported in Spring Boot where you can
-                                    <a href="https://docs.spring.io/spring-boot/docs/current/reference/html/spring-boot-features.html#boot-features-testing-spring-boot-applications-testing-with-running-server">test a running server</a>.</p>
+                                <p>
+                                    <code>WebTestClient</code> can also connect to a live server and perform full end-to-end integration tests. This is also supported in Spring Boot where you can
+                                    <a href="https://docs.spring.io/spring-boot/docs/current/reference/html/spring-boot-features.html#boot-features-testing-spring-boot-applications-testing-with-running-server">test a running server</a>.</br>
+                                    WebTestClient也可以连接到一个活动服务器并执行完整的端到端集成测试。Spring Boot也支持这一点，您可以在那里测试正在运行的服务器。
+                                </p>
                             </div>
                         </div>
                         <div class="sect4">
                             <h5 id="spring-mvc-test-server-filters"><a class="anchor" href="#spring-mvc-test-server-filters"></a>Filter Registrations</h5>
+                            <span>过滤器注册</span>
                             <div class="paragraph">
-                                <p>When setting up a <code>MockMvc</code> instance, you can register one or more Servlet <code>Filter</code> instances, as the following example shows:</p>
+                                <p>
+                                    When setting up a <code>MockMvc</code> instance, you can register one or more Servlet <code>Filter</code> instances, as the following example shows:</br>
+                                    当设置MockMvc实例时，你可以注册一个或多个Servlet Filter实例，如下面的例子所示:
+                                </p>
                             </div>
                             <div class="listingblock primary">
                                 <div class="title">Java</div>
@@ -10577,74 +10749,126 @@ StepVerifier.create(exchangeResult.getResponseBody())
                                 </div>
                             </div>
                             <div class="paragraph">
-                                <p>Registered filters are invoked through the <code>MockFilterChain</code> from <code>spring-test</code>, and the last filter delegates to the <code>DispatcherServlet</code>.</p>
+                                <p>
+                                    Registered filters are invoked through the <code>MockFilterChain</code> from <code>spring-test</code>,
+                                    and the last filter delegates to the <code>DispatcherServlet</code>.</br>
+                                    已注册的过滤器通过spring-test中的MockFilterChain调用，最后一个过滤器委托给DispatcherServlet。
+                                </p>
                             </div>
                         </div>
                         <div class="sect4">
                             <h5 id="spring-mvc-test-vs-end-to-end-integration-tests"><a class="anchor" href="#spring-mvc-test-vs-end-to-end-integration-tests"></a>MockMvc vs End-to-End Tests</h5>
+                            <span>MockMvc与端到端的测试</span>
                             <div class="paragraph">
-                                <p>MockMVc is built on Servlet API mock implementations from the
-                                    <code>spring-test</code> module and does not rely on a running container. Therefore, there are some differences when compared to full end-to-end integration tests with an actual client and a live server running.</p>
+                                <p>
+                                    MockMVc is built on Servlet API mock implementations from the
+                                    <code>spring-test</code> module and does not rely on a running container. Therefore, there are some differences when
+                                    compared to full end-to-end integration tests with an actual client and a live server running.</br>
+                                    MockMVc构建在spring-test模块的Servlet API模拟实现上，不依赖于运行的容器。因此，与使用实际客户机和活动服务器运行的完整的端到端集成测试相比，存在一些差异。
+                                </p>
                             </div>
                             <div class="paragraph">
-                                <p>The easiest way to think about this is by starting with a blank <code>MockHttpServletRequest</code>. Whatever you add to it is what the request becomes. Things that may catch you by surprise are that there is no context
-                                    path by default; no <code>jsessionid</code> cookie; no forwarding, error, or async dispatches; and, therefore, no actual JSP rendering. Instead, &#8220;forwarded&#8221; and &#8220;redirected&#8221; URLs are saved in
-                                    the <code>MockHttpServletResponse</code> and can be asserted with expectations.</p>
+                                <p>
+                                    The easiest way to think about this is by starting with a blank <code>MockHttpServletRequest</code>.
+                                    Whatever you add to it is what the request becomes. Things that may catch you by surprise are that there is no context
+                                    path by default; no <code>jsessionid</code> cookie; no forwarding, error, or async dispatches; and, therefore,
+                                    no actual JSP rendering. Instead, &#8220;forwarded&#8221; and &#8220;redirected&#8221; URLs are saved in
+                                    the <code>MockHttpServletResponse</code> and can be asserted with expectations.</br>
+                                    考虑这个问题的最简单方法是从一个空白的MockHttpServletRequest开始。无论您向它添加什么，请求都会变成什么。
+                                    可能会让你惊讶的是，默认情况下没有上下文路径;没有jsessionid饼干;没有转发，错误，或异步分派;
+                                    因此，没有实际的JSP呈现。相反， &#8220;forwarded&#8221; 和&#8220;redirected&#8221;的url保存在MockHttpServletResponse中，并可以预期地断言。
+                                </p>
                             </div>
                             <div class="paragraph">
-                                <p>This means that, if you use JSPs, you can verify the JSP page to which the request was forwarded, but no HTML is rendered. In other words, the JSP is not invoked. Note, however, that all other rendering technologies that
-                                    do not rely on forwarding, such as Thymeleaf and Freemarker, render HTML to the response body as expected. The same is true for rendering JSON, XML, and other formats through <code>@ResponseBody</code> methods.</p>
+                                <p>
+                                    This means that, if you use JSPs, you can verify the JSP page to which the request was forwarded, but no HTML is rendered.
+                                    In other words, the JSP is not invoked. Note, however, that all other rendering technologies that
+                                    do not rely on forwarding, such as Thymeleaf and Freemarker, render HTML to the response body as expected.
+                                    The same is true for rendering JSON, XML, and other formats through <code>@ResponseBody</code> methods.</br>
+                                    这意味着，如果您使用JSP，您可以验证请求被转发到的JSP页面，但是不会呈现HTML。换句话说，JSP不会被调用。
+                                    但是，请注意，所有其他不依赖于转发的呈现技术，如Thymeleaf和Freemarker，都按照预期将HTML呈现到响应体。通过@ResponseBody方法呈现JSON、XML和其他格式也是如此。
+                                </p>
                             </div>
                             <div class="paragraph">
-                                <p>Alternatively, you may consider the full end-to-end integration testing support from Spring Boot with <code>@SpringBootTest</code>. See the
-                                    <a href="https://docs.spring.io/spring-boot/docs/current/reference/html/spring-boot-features.html#boot-features-testing">Spring Boot Reference Guide</a>.</p>
+                                <p>
+                                    Alternatively, you may consider the full end-to-end integration testing support from Spring Boot with <code>@SpringBootTest</code>. See the
+                                    <a href="https://docs.spring.io/spring-boot/docs/current/reference/html/spring-boot-features.html#boot-features-testing">Spring Boot Reference Guide</a>.</br>
+                                    或者，您可以考虑使用@SpringBootTest提供SpringBoot的完整的端到端集成测试支持。参见Spring Boot参考指南。
+                                </p>
                             </div>
                             <div class="paragraph">
-                                <p>There are pros and cons for each approach. The options provided in Spring MVC Test are different stops on the scale from classic unit testing to full integration testing. To be certain, none of the options in Spring MVC
+                                <p>
+                                    There are pros and cons for each approach. The options provided in Spring MVC Test are different stops on the scale from classic unit testing to full integration testing. To be certain, none of the options in Spring MVC
                                     Test fall under the category of classic unit testing, but they are a little closer to it. For example, you can isolate the web layer by injecting mocked services into controllers, in which case you are testing the web
                                     layer only through the <code>DispatcherServlet</code> but with actual Spring configuration, as you might test the data access layer in isolation from the layers above it. Also, you can use the stand-alone setup, focusing
-                                    on one controller at a time and manually providing the configuration required to make it work.</p>
+                                    on one controller at a time and manually providing the configuration required to make it work.</br>
+                                    每种方法都有优缺点。Spring MVC测试提供的选项是不同的站点，从经典的单元测试到完全集成测试。可以肯定的是，Spring MVC Test中的任何选项都不属于经典单元测试的范畴，但是它们更接近经典单元测试。
+                                    例如，您可以通过将mock服务注入到控制器中来隔离web层，在这种情况下，您只能通过DispatcherServlet来测试web层，但需要使用实际的Spring配置，正如您可能会测试数据访问层与它上面的层隔离一样。
+                                    此外，您还可以使用独立的设置，每次只关注一个控制器，并手动提供使其工作所需的配置。
+                                </p>
                             </div>
                             <div class="paragraph">
-                                <p>Another important distinction when using Spring MVC Test is that, conceptually, such tests are the server-side, so you can check what handler was used, if an exception was handled with a HandlerExceptionResolver, what the
+                                <p>
+                                    Another important distinction when using Spring MVC Test is that, conceptually, such tests are the server-side, so you can check what handler was used, if an exception was handled with a HandlerExceptionResolver, what the
                                     content of the model is, what binding errors there were, and other details. That means that it is easier to write expectations, since the server is not an opaque box, as it is when testing it through an actual HTTP
                                     client. This is generally an advantage of classic unit testing: It is easier to write, reason about, and debug but does not replace the need for full integration tests. At the same time, it is important not to lose
-                                    sight of the fact that the response is the most important thing to check. In short, there is room here for multiple styles and strategies of testing even within the same project.</p>
+                                    sight of the fact that the response is the most important thing to check. In short, there is room here for multiple styles and strategies of testing even within the same project.</br>
+                                    使用Spring MVC测试时的另一个重要区别是，从概念上讲，这样的测试是服务器端测试，因此您可以检查使用了什么处理程序，是否用HandlerExceptionResolver处理了异常，模型的内容是什么，有什么绑定错误，以及其他细节。
+                                    这意味着更容易编写期望，因为服务器不是一个不透明的盒子(通过实际的HTTP客户机测试时是这样的)。这通常是经典单元测试的一个优势:它更容易编写、推理和调试，但不能取代完全集成测试的需要。
+                                    与此同时，重要的是不要忽视这样一个事实，即响应是最重要的检查。简而言之，即使在同一个项目中，这里也有多种测试风格和策略的空间。
+                                </p>
                             </div>
                         </div>
                         <div class="sect4">
                             <h5 id="spring-mvc-test-server-resources"><a class="anchor" href="#spring-mvc-test-server-resources"></a>Further Examples</h5>
+                            <span>进一步的例子</span>
                             <div class="paragraph">
-                                <p>The framework&#8217;s own tests include
+                                <p>
+                                    The framework&#8217;s own tests include
                                     <a href="https://github.com/spring-projects/spring-framework/tree/main/spring-test/src/test/java/org/springframework/test/web/servlet/samples">
-many sample tests</a> intended to show how to use MockMvc on its own or through the
+                                    many sample tests</a> intended to show how to use MockMvc on its own or through the
                                     <a href="https://github.com/spring-projects/spring-framework/tree/main/spring-test/src/test/java/org/springframework/test/web/servlet/samples/client">
-WebTestClient</a>. Browse these examples for further ideas.</p>
+                                    WebTestClient</a>. Browse these examples for further ideas.</br>
+                                    该框架自己的测试包括许多示例测试，旨在展示如何单独或通过WebTestClient使用MockMvc。浏览这些示例以获得更多的想法。
+                                </p>
                             </div>
                         </div>
                     </div>
                     <div class="sect3">
                         <h4 id="spring-mvc-test-server-htmlunit"><a class="anchor" href="#spring-mvc-test-server-htmlunit"></a>3.7.2. HtmlUnit Integration</h4>
+                        <span>3.7.2 Html单元集成</span>
                         <div class="paragraph">
-                            <p>Spring provides integration between <a href="#spring-mvc-test-server">MockMvc</a> and
-                                <a href="http://htmlunit.sourceforge.net/">HtmlUnit</a>. This simplifies performing end-to-end testing when using HTML-based views. This integration lets you:</p>
+                            <p>
+                                Spring provides integration between <a href="#spring-mvc-test-server">MockMvc</a> and
+                                <a href="http://htmlunit.sourceforge.net/">HtmlUnit</a>. This simplifies performing end-to-end testing when using HTML-based views. This integration lets you:</br>
+                                Spring提供了MockMvc和Html单元之间的集成。这简化了在使用基于html的视图时执行端到端测试。这个集成可以让你:
+                            </p>
                         </div>
                         <div class="ulist">
                             <ul>
                                 <li>
-                                    <p>Easily test HTML pages by using tools such as
+                                    <p>
+                                        Easily test HTML pages by using tools such as
                                         <a href="http://htmlunit.sourceforge.net/">HtmlUnit</a>,
                                         <a href="https://www.seleniumhq.org">WebDriver</a>, and
-                                        <a href="http://www.gebish.org/manual/current/#spock-junit-testng">Geb</a> without the need to deploy to a Servlet container.</p>
+                                        <a href="http://www.gebish.org/manual/current/#spock-junit-testng">Geb</a> without the need to deploy to a Servlet container.</br>
+                                        通过使用HtmlUnit、WebDriver和Geb等工具轻松测试HTML页面，而不需要部署到Servlet容器。
+                                    </p>
                                 </li>
                                 <li>
-                                    <p>Test JavaScript within pages.</p>
+                                    <p>Test JavaScript within pages.</br>
+                                        在页面中测试JavaScript。
+                                    </p>
                                 </li>
                                 <li>
-                                    <p>Optionally, test using mock services to speed up testing.</p>
+                                    <p>Optionally, test using mock services to speed up testing.</br>
+                                        可以选择使用模拟服务进行测试，以加速测试。
+                                    </p>
                                 </li>
                                 <li>
-                                    <p>Share logic between in-container end-to-end tests and out-of-container integration tests.</p>
+                                    <p>Share logic between in-container end-to-end tests and out-of-container integration tests.</br>
+                                        在容器内端到端测试和容器外集成测试之间共享逻辑。
+                                    </p>
                                 </li>
                             </ul>
                         </div>
@@ -10655,19 +10879,29 @@ WebTestClient</a>. Browse these examples for further ideas.</p>
                                         <i class="fa icon-note" title="Note"></i>
                                     </td>
                                     <td class="content">
-                                        MockMvc works with templating technologies that do not rely on a Servlet Container (for example, Thymeleaf, FreeMarker, and others), but it does not work with JSPs, since they rely on the Servlet container.
+                                        MockMvc works with templating technologies that do not rely on a Servlet Container (for example, Thymeleaf, FreeMarker, and others), but it does not work with JSPs, since they rely on the Servlet container.</br>
+                                        MockMvc使用不依赖于Servlet容器的模板技术(例如Thymeleaf、FreeMarker等)，但是它不使用jsp，因为它们依赖于Servlet容器。
                                     </td>
                                 </tr>
                             </table>
                         </div>
                         <div class="sect4">
                             <h5 id="spring-mvc-test-server-htmlunit-why"><a class="anchor" href="#spring-mvc-test-server-htmlunit-why"></a>Why HtmlUnit Integration?</h5>
+                            <span>为什么HtmlUnit集成?</span>
                             <div class="paragraph">
-                                <p>The most obvious question that comes to mind is &#8220;Why do I need this?&#8221; The answer is best found by exploring a very basic sample application. Assume you have a Spring MVC web application that supports CRUD operations
-                                    on a <code>Message</code> object. The application also supports paging through all messages. How would you go about testing it?</p>
+                                <p>
+                                    The most obvious question that comes to mind is &#8220;Why do I need this?&#8221; The answer is best found by exploring a very basic sample application.
+                                    Assume you have a Spring MVC web application that supports CRUD operations
+                                    on a <code>Message</code> object. The application also supports paging through all messages. How would you go about testing it?</br>
+                                    脑海中出现的最明显的问题是&#8220;我为什么需要这个&#8221;最好通过研究一个非常基本的示例应用程序来找到答案。假设您有一个Spring MVC web应用程序，它支持Message对象上的CRUD操作。
+                                    该应用程序还支持对所有消息进行分页。你会如何测试它?
+                                </p>
                             </div>
                             <div class="paragraph">
-                                <p>With Spring MVC Test, we can easily test if we are able to create a <code>Message</code>, as follows:</p>
+                                <p>
+                                    With Spring MVC Test, we can easily test if we are able to create a <code>Message</code>, as follows:</br>
+                                    使用Spring MVC测试，我们可以很容易地测试我们是否能够创建一个消息，如下所示:
+                                </p>
                             </div>
                             <div class="listingblock primary">
                                 <div class="title">Java</div>
@@ -10697,7 +10931,10 @@ fun test() {
                                 </div>
                             </div>
                             <div class="paragraph">
-                                <p>What if we want to test the form view that lets us create the message? For example, assume our form looks like the following snippet:</p>
+                                <p>
+                                    What if we want to test the form view that lets us create the message? For example, assume our form looks like the following snippet:</br>
+                                    如果我们想测试允许我们创建消息的表单视图呢?例如，假设我们的表单看起来像下面的代码片段:
+                                </p>
                             </div>
                             <div class="listingblock">
                                 <div class="content">
@@ -10717,7 +10954,10 @@ fun test() {
                                 </div>
                             </div>
                             <div class="paragraph">
-                                <p>How do we ensure that our form produce the correct request to create a new message? A naive attempt might resemble the following:</p>
+                                <p>
+                                    How do we ensure that our form produce the correct request to create a new message? A naive attempt might resemble the following:</br>
+                                    如何确保表单生成创建新消息的正确请求?一个幼稚的尝试可能类似如下:
+                                </p>
                             </div>
                             <div class="listingblock primary">
                                 <div class="title">Java</div>
@@ -10737,8 +10977,10 @@ fun test() {
                                 </div>
                             </div>
                             <div class="paragraph">
-                                <p>This test has some obvious drawbacks. If we update our controller to use the parameter
-                                    <code>message</code> instead of <code>text</code>, our form test continues to pass, even though the HTML form is out of synch with the controller. To resolve this we can combine our two tests, as follows:
+                                <p>
+                                    This test has some obvious drawbacks. If we update our controller to use the parameter
+                                    <code>message</code> instead of <code>text</code>, our form test continues to pass, even though the HTML form is out of synch with the controller. To resolve this we can combine our two tests, as follows:</br>
+                                    这个测试有一些明显的缺陷。如果我们更新控制器以使用参数消息而不是文本，那么表单测试将继续通过，即使HTML表单与控制器不同步。为了解决这个问题，我们可以结合我们的两个测试，如下所示:
                                 </p>
                             </div>
                             <div id="spring-mvc-test-server-htmlunit-mock-mvc-test" class="listingblock primary">
@@ -10778,87 +11020,138 @@ mockMvc.post("/messages/") {
                                 </div>
                             </div>
                             <div class="paragraph">
-                                <p>This would reduce the risk of our test incorrectly passing, but there are still some problems:
+                                <p>
+                                    This would reduce the risk of our test incorrectly passing, but there are still some problems:</br>
+                                    这将降低我们的测试不正确通过的风险，但仍然存在一些问题:
                                 </p>
                             </div>
                             <div class="ulist">
                                 <ul>
                                     <li>
-                                        <p>What if we have multiple forms on our page? Admittedly, we could update our XPath expressions, but they get more complicated as we take more factors into account: Are the fields the correct type? Are the fields
-                                            enabled? And so on.</p>
+                                        <p>
+                                            What if we have multiple forms on our page? Admittedly, we could update our XPath expressions, but they get more complicated as we take more factors into account: Are the fields the correct type? Are the fields
+                                            enabled? And so on.</br>
+                                            如果页面上有多个表单怎么办?无可否认，我们可以更新XPath表达式，但随着我们考虑更多因素，它们会变得更加复杂:字段的类型是正确的吗?字段是否已启用?等等。
+                                        </p>
                                     </li>
                                     <li>
-                                        <p>Another issue is that we are doing double the work we would expect. We must first verify the view, and then we submit the view with the same parameters we just verified. Ideally, this could be done all at once.</p>
+                                        <p>
+                                            Another issue is that we are doing double the work we would expect. We must first verify the view, and then we submit the view with the same parameters we just verified. Ideally, this could be done all at once.</br>
+                                            另一个问题是，我们所做的工作是预期的两倍。我们必须首先验证视图，然后提交带有刚才验证过的相同参数的视图。理想情况下，这可以一次完成。
+                                        </p>
                                     </li>
                                     <li>
-                                        <p>Finally, we still cannot account for some things. For example, what if the form has JavaScript validation that we wish to test as well?</p>
+                                        <p>
+                                            Finally, we still cannot account for some things. For example, what if the form has JavaScript validation that we wish to test as well?</br>
+                                            最后，我们仍然不能解释一些事情。例如，如果表单也有我们想要测试的JavaScript验证，该怎么办?
+                                        </p>
                                     </li>
                                 </ul>
                             </div>
                             <div class="paragraph">
-                                <p>The overall problem is that testing a web page does not involve a single interaction. Instead, it is a combination of how the user interacts with a web page and how that web page interacts with other resources. For example,
-                                    the result of a form view is used as the input to a user for creating a message. In addition, our form view can potentially use additional resources that impact the behavior of the page, such as JavaScript validation.
+                                <p>
+                                    The overall problem is that testing a web page does not involve a single interaction. Instead, it is a combination of how the user interacts with a web page and how that web page interacts with other resources. For example,
+                                    the result of a form view is used as the input to a user for creating a message. In addition, our form view can potentially use additional resources that impact the behavior of the page, such as JavaScript validation.</br>
+                                    总体的问题是，测试一个网页并不涉及单一的交互。相反，它是用户如何与网页交互以及该网页如何与其他资源交互的组合。例如，表单视图的结果被用作用户创建消息的输入。此外，我们的表单视图可能会使用其他影响页面行为的资源，比如JavaScript验证。
                                 </p>
                             </div>
                             <div class="sect5">
                                 <h6 id="spring-mvc-test-server-htmlunit-why-integration"><a class="anchor" href="#spring-mvc-test-server-htmlunit-why-integration"></a>Integration Testing to the Rescue?</h6>
+                                <span>集成测试来拯救?</span>
                                 <div class="paragraph">
-                                    <p>To resolve the issues mentioned earlier, we could perform end-to-end integration testing, but this has some drawbacks. Consider testing the view that lets us page through the messages. We might need the following tests:</p>
+                                    <p>
+                                        To resolve the issues mentioned earlier, we could perform end-to-end integration testing, but this has some drawbacks. Consider testing the view that lets us page through the messages. We might need the following tests:</br>
+                                        为了解决前面提到的问题，我们可以执行端到端集成测试，但这有一些缺点。考虑测试允许我们对消息进行分页的视图。我们可能需要以下测试:
+                                    </p>
                                 </div>
                                 <div class="ulist">
                                     <ul>
                                         <li>
-                                            <p>Does our page display a notification to the user to indicate that no results are available when the messages are empty?</p>
-                                        </li>
-                                        <li>
-                                            <p>Does our page properly display a single message?</p>
-                                        </li>
-                                        <li>
-                                            <p>Does our page properly support paging?</p>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="paragraph">
-                                    <p>To set up these tests, we need to ensure our database contains the proper messages. This leads to a number of additional challenges:</p>
-                                </div>
-                                <div class="ulist">
-                                    <ul>
-                                        <li>
-                                            <p>Ensuring the proper messages are in the database can be tedious. (Consider foreign key constraints.)
+                                            <p>Does our page display a notification to the user to indicate that no results are available when the messages are empty?</br>
+                                                当消息为空时，我们的页面是否会向用户显示通知，表明没有可用的结果?
                                             </p>
                                         </li>
                                         <li>
-                                            <p>Testing can become slow, since each test would need to ensure that the database is in the correct state.</p>
+                                            <p>Does our page properly display a single message?</br>
+                                                我们的页面是否正确地显示单个消息?
+                                            </p>
                                         </li>
                                         <li>
-                                            <p>Since our database needs to be in a specific state, we cannot run tests in parallel.</p>
-                                        </li>
-                                        <li>
-                                            <p>Performing assertions on such items as auto-generated ids, timestamps, and others can be difficult.</p>
+                                            <p>Does our page properly support paging?</br>
+                                                我们的页面是否正确地支持分页?
+                                            </p>
                                         </li>
                                     </ul>
                                 </div>
                                 <div class="paragraph">
-                                    <p>These challenges do not mean that we should abandon end-to-end integration testing altogether. Instead, we can reduce the number of end-to-end integration tests by refactoring our detailed tests to use mock services
-                                        that run much faster, more reliably, and without side effects. We can then implement a small number of true end-to-end integration tests that validate simple workflows to ensure that everything works together properly.
+                                    <p>To set up these tests, we need to ensure our database contains the proper messages. This leads to a number of additional challenges:</br>
+                                        要设置这些测试，我们需要确保数据库包含正确的消息。这就带来了一些额外的挑战:
+                                    </p>
+                                </div>
+                                <div class="ulist">
+                                    <ul>
+                                        <li>
+                                            <p>
+                                                Ensuring the proper messages are in the database can be tedious. (Consider foreign key constraints.)</br>
+                                                确保数据库中有适当的消息是很繁琐的。(考虑外键约束。)
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p>
+                                                Testing can become slow, since each test would need to ensure that the database is in the correct state.</br>
+                                                测试可能会变慢，因为每个测试都需要确保数据库处于正确的状态。
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p>
+                                                Since our database needs to be in a specific state, we cannot run tests in parallel.</br>
+                                                因为我们的数据库需要处于特定的状态，所以我们不能并行运行测试。
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p>
+                                                Performing assertions on such items as auto-generated ids, timestamps, and others can be difficult.</br>
+                                                对自动生成的id、时间戳等项执行断言可能很困难。
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="paragraph">
+                                    <p>
+                                        These challenges do not mean that we should abandon end-to-end integration testing altogether. Instead, we can reduce the number of end-to-end integration tests by refactoring our detailed tests to use mock services
+                                        that run much faster, more reliably, and without side effects. We can then implement a small number of true end-to-end integration tests that validate simple workflows to ensure that everything works together properly.</br>
+                                        这些挑战并不意味着我们应该完全放弃端到端集成测试。相反，我们可以通过重构详细的测试来使用运行得更快、更可靠、没有副作用的模拟服务，从而减少端到端集成测试的数量。
+                                        然后，我们可以实现少量真正的端到端集成测试，这些测试验证简单的工作流，以确保一切都能正常工作。
                                     </p>
                                 </div>
                             </div>
                             <div class="sect5">
                                 <h6 id="spring-mvc-test-server-htmlunit-why-mockmvc"><a class="anchor" href="#spring-mvc-test-server-htmlunit-why-mockmvc"></a>Enter HtmlUnit Integration</h6>
+                                <span>进入HtmlUnit集成</sapn>
                                 <div class="paragraph">
-                                    <p>So how can we achieve a balance between testing the interactions of our pages and still retain good performance within our test suite? The answer is: &#8220;By integrating MockMvc with HtmlUnit.&#8221;</p>
+                                    <p>
+                                        So how can we achieve a balance between testing the interactions of our pages and still retain good performance within our test suite?
+                                        The answer is: &#8220;By integrating MockMvc with HtmlUnit.&#8221;</br>
+                                        那么，我们如何在测试页面的交互和仍然在测试套件中保持良好的性能之间取得平衡呢?答案是：&#8220;通过将MockMvc与HtmlUnit集成。&#8221;
+                                    </p>
                                 </div>
                             </div>
                             <div class="sect5">
                                 <h6 id="spring-mvc-test-server-htmlunit-options"><a class="anchor" href="#spring-mvc-test-server-htmlunit-options"></a>HtmlUnit Integration Options</h6>
+                                <span>HtmlUnit集成选项</span>
                                 <div class="paragraph">
-                                    <p>You have a number of options when you want to integrate MockMvc with HtmlUnit:</p>
+                                    <p>
+                                        You have a number of options when you want to integrate MockMvc with HtmlUnit:</br>
+                                        当你想要将MockMvc与HtmlUnit集成时，你有许多选项:
+                                    </p>
                                 </div>
                                 <div class="ulist">
                                     <ul>
                                         <li>
-                                            <p><a href="#spring-mvc-test-server-htmlunit-mah">MockMvc and HtmlUnit</a>: Use this option if you want to use the raw HtmlUnit libraries.</p>
+                                            <p>
+                                                <a href="#spring-mvc-test-server-htmlunit-mah">MockMvc and HtmlUnit</a>: Use this option if you want to use the raw HtmlUnit libraries.</br>
+                                                MockMvc和HtmlUnit:如果你想使用原始的HtmlUnit库，请使用此选项。
+                                            </p>
                                         </li>
                                         <li>
                                             <p><a href="#spring-mvc-test-server-htmlunit-webdriver">MockMvc and WebDriver</a>: Use this option to ease development and reuse code between integration and end-to-end testing.</p>
@@ -11838,9 +12131,14 @@ message == expectedMessage</code></pre>
                 </div>
                 <div class="sect2">
                     <h3 id="spring-mvc-test-client"><a class="anchor" href="#spring-mvc-test-client"></a>3.8. Testing Client Applications</h3>
+                    <span>3.8. 测试客户端应用程序</span>
                     <div class="paragraph">
-                        <p>You can use client-side tests to test code that internally uses the <code>RestTemplate</code>. The idea is to declare expected requests and to provide &#8220;stub&#8221; responses so that you can focus on testing the code in isolation
-                            (that is, without running a server). The following example shows how to do so:</p>
+                        <p>
+                            You can use client-side tests to test code that internally uses the <code>RestTemplate</code>. The idea is to declare expected requests and to provide &#8220;stub&#8221; responses so that you can focus on testing the code in isolation
+                            (that is, without running a server). The following example shows how to do so:</br>
+                            您可以使用客户端测试来测试内部使用RestTemplate的代码。其思想是声明预期的请求并提供“存根”响应，这样您就可以专注于独立测试代码(也就是说，无需运行服务器)。
+                            下面的例子展示了如何做到这一点:
+                        </p>
                     </div>
                     <div class="listingblock primary">
                         <div class="title">Java</div>
@@ -11869,14 +12167,26 @@ mockServer.verify()</code></pre>
                         </div>
                     </div>
                     <div class="paragraph">
-                        <p>In the preceding example, <code>MockRestServiceServer</code> (the central class for client-side REST tests) configures the <code>RestTemplate</code> with a custom <code>ClientHttpRequestFactory</code> that asserts actual requests
+                        <p>
+                            In the preceding example, <code>MockRestServiceServer</code> (the central class for client-side REST tests) configures
+                            the <code>RestTemplate</code> with a custom <code>ClientHttpRequestFactory</code> that asserts actual requests
                             against expectations and returns &#8220;stub&#8221; responses. In this case, we expect a request to <code>/greeting</code> and want to return a 200 response with
-                            <code>text/plain</code> content. We can define additional expected requests and stub responses as needed. When we define expected requests and stub responses, the <code>RestTemplate</code> can be used in client-side code as
-                            usual. At the end of testing, <code>mockServer.verify()</code> can be used to verify that all expectations have been satisfied.</p>
+                            <code>text/plain</code> content. We can define additional expected requests and stub responses as needed. When we define expected requests and stub responses,
+                             the <code>RestTemplate</code> can be used in client-side code as
+                            usual. At the end of testing, <code>mockServer.verify()</code> can be used to verify that all expectations have been satisfied.</br>
+                            在前面的示例中，MockRestServiceServer(客户端REST测试的中心类)使用自定义的ClientHttpRequestFactory配置RestTemplate，该factory根据预期断言实际请求并返回&#8220;stub&#8221;响应。
+                            在本例中，我们期望收到一个to /greeting请求，并希望返回一个带有文本/纯内容的200响应。
+                            我们可以根据需要定义额外的预期请求和存根响应。当我们定义期望的请求和存根响应时，可以像往常一样在客户端代码中使用RestTemplate。在测试结束时，可以使用mockServer.verify()来验证是否满足了所有的期望。
+                        </p>
                     </div>
                     <div class="paragraph">
-                        <p>By default, requests are expected in the order in which expectations were declared. You can set the <code>ignoreExpectOrder</code> option when building the server, in which case all expectations are checked (in order) to find a
-                            match for a given request. That means requests are allowed to come in any order. The following example uses <code>ignoreExpectOrder</code>:</p>
+                        <p>
+                            By default, requests are expected in the order in which expectations were declared. You can set the <code>ignoreExpectOrder</code> option when building the server,
+                            in which case all expectations are checked (in order) to find a
+                            match for a given request. That means requests are allowed to come in any order. The following example uses <code>ignoreExpectOrder</code>:</br>
+                            默认情况下，请求的预期顺序与预期声明的顺序一致。您可以在构建服务器时设置ignoreExpectOrder选项，在这种情况下，所有期望都将被检查(以便)找到给定请求的匹配。
+                            这意味着请求可以以任何顺序来。下面的例子使用了ignoreExpectOrder:
+                        </p>
                     </div>
                     <div class="listingblock primary">
                         <div class="title">Java</div>
@@ -11891,9 +12201,14 @@ mockServer.verify()</code></pre>
                         </div>
                     </div>
                     <div class="paragraph">
-                        <p>Even with unordered requests by default, each request is allowed to run once only. The <code>expect</code> method provides an overloaded variant that accepts an <code>ExpectedCount</code> argument that specifies a count range (for
+                        <p>
+                            Even with unordered requests by default, each request is allowed to run once only.
+                            The <code>expect</code> method provides an overloaded variant that accepts an <code>ExpectedCount</code> argument that specifies a count range (for
                             example, <code>once</code>, <code>manyTimes</code>, <code>max</code>, <code>min</code>,
-                            <code>between</code>, and so on). The following example uses <code>times</code>:</p>
+                            <code>between</code>, and so on). The following example uses <code>times</code>:</br>
+                            默认情况下，即使是无序请求，每个请求也只允许运行一次。expect方法提供了一个重载变量，该变量接受一个ExpectedCount参数，该参数指定一个计数范围(例如，once、manyTimes、max、min、between等)。
+                            下面的例子使用了时间:
+                        </p>
                     </div>
                     <div class="listingblock primary">
                         <div class="title">Java</div>
@@ -11924,14 +12239,26 @@ mockServer.verify()</code></pre>
                         </div>
                     </div>
                     <div class="paragraph">
-                        <p>Note that, when <code>ignoreExpectOrder</code> is not set (the default), and, therefore, requests are expected in order of declaration, then that order applies only to the first of any expected request. For example if "/something"
-                            is expected two times followed by "/somewhere" three times, then there should be a request to "/something" before there is a request to "/somewhere", but, aside from that subsequent "/something" and "/somewhere", requests can
-                            come at any time.</p>
+                        <p>
+                            Note that, when <code>ignoreExpectOrder</code> is not set (the default), and, therefore, requests are expected in order of declaration,
+                            then that order applies only to the first of any expected request. For example if "/something"
+                            is expected two times followed by "/somewhere" three times, then there should be a request to "/something" before there is a request
+                            to "/somewhere", but, aside from that subsequent "/something" and "/somewhere", requests can
+                            come at any time.</br>
+                            注意，如果没有设置ignoreExpectOrder(默认值)，那么请求是按照声明的顺序进行的，那么这个顺序只适用于任何预期请求的第一个。
+                            例如，如果“/something”被期望两次，然后是“/somewhere”三次，那么在“/somewhere”之前应该有一个对“/something”的请求，
+                            但是，除了后面的“/something”和“/somewhere”，请求可以在任何时间来。
+                        </p>
                     </div>
                     <div class="paragraph">
-                        <p>As an alternative to all of the above, the client-side test support also provides a
-                            <code>ClientHttpRequestFactory</code> implementation that you can configure into a <code>RestTemplate</code> to bind it to a <code>MockMvc</code> instance. That allows processing requests using actual server-side logic but
-                            without running a server. The following example shows how to do so:</p>
+                        <p>
+                            As an alternative to all of the above, the client-side test support also provides a
+                            <code>ClientHttpRequestFactory</code> implementation that you can configure into a
+                            <code>RestTemplate</code> to bind it to a <code>MockMvc</code> instance. That allows processing requests using actual server-side logic but
+                            without running a server. The following example shows how to do so:</br>
+                            作为上述所有的替代方案，客户端测试支持还提供了一个ClientHttpRequestFactory实现，您可以将其配置到RestTemplate中，以将其绑定到MockMvc实例。
+                            这允许使用实际的服务器端逻辑处理请求，而无需运行服务器。下面的例子展示了如何做到这一点:
+                        </p>
                     </div>
                     <div class="listingblock primary">
                         <div class="title">Java</div>
@@ -11954,17 +12281,29 @@ restTemplate = RestTemplate(MockMvcClientHttpRequestFactory(mockMvc))
                     <div class="sect3">
                         <h4 id="spring-mvc-test-client-static-imports"><a class="anchor" href="#spring-mvc-test-client-static-imports"></a>3.8.1. Static Imports</h4>
                         <div class="paragraph">
-                            <p>As with server-side tests, the fluent API for client-side tests requires a few static imports. Those are easy to find by searching for <code>MockRest*</code>. Eclipse users should add
-                                <code>MockRestRequestMatchers.*</code> and <code>MockRestResponseCreators.*</code> as &#8220;favorite static members&#8221; in the Eclipse preferences under Java &#8594; Editor &#8594; Content Assist &#8594; Favorites.
-                                That allows using content assist after typing the first character of the static method name. Other IDEs (such IntelliJ) may not require any additional configuration. Check for the support for code completion on static members.</p>
+                            <p>
+                                As with server-side tests, the fluent API for client-side tests requires a few static imports.
+                                Those are easy to find by searching for <code>MockRest*</code>. Eclipse users should add
+                                <code>MockRestRequestMatchers.*</code> and <code>MockRestResponseCreators.*</code> as &#8220;favorite static members&#8221;
+                                in the Eclipse preferences under Java &#8594; Editor &#8594; Content Assist &#8594; Favorites.
+                                That allows using content assist after typing the first character of the static method name.
+                                Other IDEs (such IntelliJ) may not require any additional configuration. Check for the support for code completion on static members.</br>
+                                与服务器端测试一样，用于客户端测试的流畅API需要一些静态导入。这些很容易通过搜索MockRest*找到。Eclipse用户应该添加mockrerequestmatchers。
+                                *和MockRestResponseCreators。*在Java→编辑器→内容辅助→收藏夹的Eclipse首选项中作为“收藏静态成员”。这允许在输入静态方法名的第一个字符后使用内容辅助。
+                                其他ide(如IntelliJ)可能不需要任何额外的配置。检查对静态成员代码完成的支持。
+                            </p>
                         </div>
                     </div>
                     <div class="sect3">
                         <h4 id="spring-mvc-test-client-resources"><a class="anchor" href="#spring-mvc-test-client-resources"></a>3.8.2. Further Examples of Client-side REST Tests</h4>
+                        <span>3.8.2. 客户端REST测试的进一步示例</span>
                         <div class="paragraph">
-                            <p>Spring MVC Test&#8217;s own tests include
+                            <p>
+                                Spring MVC Test&#8217;s own tests include
                                 <a href="https://github.com/spring-projects/spring-framework/tree/main/spring-test/src/test/java/org/springframework/test/web/client/samples">example
-tests</a> of client-side REST tests.</p>
+                                tests</a> of client-side REST tests.</br>
+                                Spring MVC Test自己的测试包括客户端REST测试的示例测试。
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -11972,50 +12311,96 @@ tests</a> of client-side REST tests.</p>
         </div>
         <div class="sect1">
             <h2 id="testing-resources"><a class="anchor" href="#testing-resources"></a>4. Further Resources</h2>
+            <span>4. 进一步的资源</span>
             <div class="sectionbody">
                 <div class="paragraph">
-                    <p>See the following resources for more information about testing:</p>
+                    <p>See the following resources for more information about testing:</br>
+                        有关测试的更多信息，请参阅以下参考资料:
+                    </p>
                 </div>
                 <div class="ulist">
                     <ul>
                         <li>
-                            <p><a href="https://www.junit.org/">JUnit</a>: &#8220;A programmer-friendly testing framework for Java&#8221;. Used by the Spring Framework in its test suite and supported in the
-                                <a href="#testcontext-framework">Spring TestContext Framework</a>.</p>
+                            <p>
+                                <a href="https://www.junit.org/">JUnit</a>: &#8220;A programmer-friendly testing framework for Java&#8221;. Used by the Spring Framework in its test suite and supported in the
+                                <a href="#testcontext-framework">Spring TestContext Framework</a>.</br>
+                                JUnit:&#8220;程序员友好的Java测试框架&#8221;。Spring框架在其测试套件中使用，并在Spring TestContext框架中得到支持。
+                            </p>
                         </li>
                         <li>
-                            <p><a href="https://testng.org/">TestNG</a>: A testing framework inspired by JUnit with added support for test groups, data-driven testing, distributed testing, and other features. Supported in the <a href="#testcontext-framework">Spring TestContext Framework</a></p>
+                            <p>
+                                <a href="https://testng.org/">TestNG</a>: A testing framework inspired by JUnit with added support for test groups,
+                                data-driven testing, distributed testing, and other features. Supported in the <a href="#testcontext-framework">Spring TestContext Framework</a></br>
+                                TestNG:一个受JUnit启发的测试框架，增加了对测试组、数据驱动测试、分布式测试和其他特性的支持。Spring TestContext框架支持
+                            </p>
                         </li>
                         <li>
-                            <p><a href="https://assertj.github.io/doc/">AssertJ</a>: &#8220;Fluent assertions for Java&#8221;, including support for Java 8 lambdas, streams, and other features.</p>
+                            <p>
+                                <a href="https://assertj.github.io/doc/">AssertJ</a>: &#8220;Fluent assertions for Java&#8221;,
+                                including support for Java 8 lambdas, streams, and other features.</br>
+                                AssertJ:&#8220;Java的流利断言&#8221;，包括对Java 8 lambdas、流和其他特性的支持。
+                            </p>
                         </li>
                         <li>
-                            <p><a href="https://en.wikipedia.org/wiki/Mock_Object">Mock Objects</a>: Article in Wikipedia.</p>
+                            <p>
+                                <a href="https://en.wikipedia.org/wiki/Mock_Object">Mock Objects</a>: Article in Wikipedia.</br>
+                                    模拟对象:维基百科中的文章。
+                                </p>
                         </li>
                         <li>
-                            <p><a href="http://www.mockobjects.com/">MockObjects.com</a>: Web site dedicated to mock objects, a technique for improving the design of code within test-driven development.</p>
+                            <p>
+                                <a href="http://www.mockobjects.com/">MockObjects.com</a>: Web site dedicated to mock objects,
+                                 a technique for improving the design of code within test-driven development.</br>
+                                 MockObjects.com:专门用于模拟对象的网站，这是一种在测试驱动开发中改进代码设计的技术。
+                             </p>
                         </li>
                         <li>
-                            <p><a href="https://mockito.github.io">Mockito</a>: Java mock library based on the
-                                <a href="http://xunitpatterns.com/Test%20Spy.html">Test Spy</a> pattern. Used by the Spring Framework in its test suite.</p>
+                            <p>
+                                <a href="https://mockito.github.io">Mockito</a>: Java mock library based on the
+                                <a href="http://xunitpatterns.com/Test%20Spy.html">Test Spy</a> pattern. Used by the Spring Framework in its test suite.</br>
+                                Mockito:基于Test Spy模式的Java模拟库。Spring框架在其测试套件中使用。
+                            </p>
                         </li>
                         <li>
-                            <p><a href="https://easymock.org/">EasyMock</a>: Java library &#8220;that provides Mock Objects for interfaces (and objects through the class extension) by generating them on the fly using Java&#8217;s proxy mechanism.&#8221;</p>
+                            <p>
+                                <a href="https://easymock.org/">EasyMock</a>: Java library &#8220;that provides Mock Objects for interfaces
+                                (and objects through the class extension) by generating them on the fly using Java&#8217;s proxy mechanism.&#8221;</br>
+                                EasyMock: Java库&#8220;通过使用Java的代理机制动态生成接口(以及通过类扩展生成的对象)，从而为接口提供模拟对象。&#8221;
+                            </p>
                         </li>
                         <li>
-                            <p><a href="https://jmock.org/">JMock</a>: Library that supports test-driven development of Java code with mock objects.</p>
+                            <p>
+                                <a href="https://jmock.org/">JMock</a>: Library that supports test-driven development of Java code with mock objects.</br>
+                                JMock:支持使用模拟对象对Java代码进行测试驱动开发的库。
+                            </p>
                         </li>
                         <li>
-                            <p><a href="https://www.dbunit.org/">DbUnit</a>: JUnit extension (also usable with Ant and Maven) that is targeted at database-driven projects and, among other things, puts your database into a known state between test runs.</p>
+                            <p>
+                                <a href="https://www.dbunit.org/">DbUnit</a>: JUnit extension (also usable with Ant and Maven)
+                                that is targeted at database-driven projects and, among other things, puts your database into a known state between test runs.</br>
+                                DbUnit: JUnit扩展(也可用于Ant和Maven)，它针对数据库驱动的项目，并且在测试运行之间将数据库置于已知状态。
+                            </p>
                         </li>
                         <li>
-                            <p><a href="https://www.testcontainers.org/">Testcontainers</a>: Java library that supports JUnit tests, providing lightweight, throwaway instances of common databases, Selenium web browsers, or anything else that can run in a
-                                Docker container.</p>
+                            <p>
+                                <a href="https://www.testcontainers.org/">Testcontainers</a>: Java library that supports JUnit tests,
+                                providing lightweight, throwaway instances of common databases, Selenium web browsers, or anything else that can run in a
+                                Docker container.</br>
+                                测试容器:支持JUnit测试的Java库，提供了通用数据库、Selenium web浏览器或其他可以在Docker容器中运行的任何东西的轻量级一次性实例。
+                            </p>
                         </li>
                         <li>
-                            <p><a href="https://sourceforge.net/projects/grinder/">The Grinder</a>: Java load testing framework.</p>
+                            <p>
+                                <a href="https://sourceforge.net/projects/grinder/">The Grinder</a>: Java load testing framework.</br>
+                                Grinder: Java负载测试框架。
+                            </p>
                         </li>
                         <li>
-                            <p><a href="https://github.com/Ninja-Squad/springmockk">SpringMockK</a>: Support for Spring Boot integration tests written in Kotlin using <a href="https://mockk.io/">MockK</a> instead of Mockito.</p>
+                            <p>
+                                <a href="https://github.com/Ninja-Squad/springmockk">SpringMockK</a>: Support for Spring Boot
+                                integration tests written in Kotlin using <a href="https://mockk.io/">MockK</a> instead of Mockito.</br>
+                                SpringMockK:支持在Kotlin中使用MockK而不是mockto编写的Spring Boot集成测试。
+                            </p>
                         </li>
                     </ul>
                 </div>
