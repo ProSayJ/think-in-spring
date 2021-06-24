@@ -15639,8 +15639,10 @@ val ctx = FileSystemXmlApplicationContext("file:///conf/context.xml")</code></pr
                         There are pros and cons for considering validation as business logic, and Spring offers a design for validation (and data binding) that does not exclude either one of them. Specifically, validation should not be tied to the web tier
                         and should be easy to localize, and it should be possible to plug in any available validator. Considering these concerns, Spring provides a <code>Validator</code> contract that is both basic and eminently usable in every layer
                         of an application.</br>
+                        <span class="translate">
                         将验证视为业务逻辑有其优缺点，Spring提供了一种验证(和数据绑定)的设计，这种设计不排除两者中的任何一个。
                         具体来说，验证不应该绑定到web层，应该易于本地化，应该可以插入任何可用的验证器。考虑到这些问题，Spring提供了一个Validator契约，它在应用程序的每一层都是基本的，而且非常有用。
+                        </span>
                     </p>
                 </div>
                 <div class="paragraph">
@@ -15649,8 +15651,10 @@ val ctx = FileSystemXmlApplicationContext("file:///conf/context.xml")</code></pr
                         (or whatever objects you use to process user input). Spring provides the aptly named <code>DataBinder</code> to do exactly that.
                         The <code>Validator</code> and the
                         <code>DataBinder</code> make up the <code>validation</code> package, which is primarily used in but not limited to the web layer.</br>
+                        <span class="translate">
                         数据绑定对于将用户输入动态绑定到应用程序的域模型(或用于处理用户输入的任何对象)非常有用。
                         Spring提供了恰当的名称DataBinder来实现这一点。Validator和DataBinder组成了验证包，它主要用于但不限于web层。
+                        </span>
                     </p>
                 </div>
                 <div class="paragraph">
@@ -15658,9 +15662,11 @@ val ctx = FileSystemXmlApplicationContext("file:///conf/context.xml")</code></pr
                         The <code>BeanWrapper</code> is a fundamental concept in the Spring Framework and is used in a lot of places. However, you probably do not need to use the <code>BeanWrapper</code> directly. Because this is reference documentation,
                         however, we felt that some explanation might be in order. We explain the <code>BeanWrapper</code> in this chapter, since,
                         if you are going to use it at all, you are most likely do so when trying to bind data to objects.</br>
+                        <span class="translate">
                          BeanWrapper是Spring框架中的一个基本概念，在很多地方都使用它。
                          但是，您可能不需要直接使用BeanWrapper。然而，由于这是参考文档，我们认为可能需要一些解释。
                          我们将在本章中解释BeanWrapper，因为如果您要使用它，那么在尝试将数据绑定到对象时很可能会这样做。
+                         </span>
                      </p>
                 </div>
                 <div class="paragraph">
@@ -15671,10 +15677,12 @@ val ctx = FileSystemXmlApplicationContext("file:///conf/context.xml")</code></pr
                         introduced a <code>core.convert</code> package that provides a general type conversion facility,
                         as well as a higher-level &#8220;format&#8221; package for formatting UI field values. You can use these packages as simpler alternatives to
                         <code>PropertyEditorSupport</code> implementations. They are also discussed in this chapter.</br>
+                        <span class="translate">
                         Spring的DataBinder和底层BeanWrapper都使用PropertyEditorSupport实现来解析和格式化属性值。
                         PropertyEditor和PropertyEditorSupport类型是JavaBeans规范的一部分，也将在本章中进行解释。
                         Spring 3引入了一个核心。convert包，它提供了一个通用类型转换工具，以及一个高级的“format”包，用于格式化UI字段值。
                         您可以使用这些包作为PropertyEditorSupport实现的更简单的替代方案。本章也讨论了这些问题。
+                        </span>
                     </p>
                 </div>
                 <div class="paragraph">
@@ -15684,9 +15692,11 @@ val ctx = FileSystemXmlApplicationContext("file:///conf/context.xml")</code></pr
                         and use it exclusively for all validation needs. In the web layer, applications can further register controller-local Spring
                         <code>Validator</code> instances per <code>DataBinder</code>, as described in <a href="#validation-binder">Configuring a
                         <code>DataBinder</code></a>, which can be useful for plugging in custom validation logic.</br>
+                        <span class="translate">
                         Spring通过设置基础设施和Spring自己的Validator契约适配器来支持Java Bean验证。
                         应用程序可以全局启用一次Bean验证，如Java Bean验证中所述，并将其专门用于所有验证需求。在web层，应用程序可以进一步注册每个DataBinder的控制器本地Spring Validator实例，
                         如配置一个DataBinder中所述，这对于插入自定义验证逻辑很有用。
+                        </span>
                     </p>
                 </div>
                 <div class="sect2">
@@ -15697,12 +15707,16 @@ val ctx = FileSystemXmlApplicationContext("file:///conf/context.xml")</code></pr
                             Spring features a <code>Validator</code> interface that you can use to validate objects. The
                             <code>Validator</code> interface works by using an <code>Errors</code> object so that,
                             while validating, validators can report validation failures to the <code>Errors</code> object.</br>
+                            <span class="translate">
                             Spring提供了一个Validator接口，您可以使用它来验证对象。Validator接口通过使用Errors对象工作，以便在验证时，验证器可以向Errors对象报告验证失败。
+                            </span>
                         </p>
                     </div>
                     <div class="paragraph">
                         <p>Consider the following example of a small data object:</br>
+                            <span class="translate">
                             考虑以下小数据对象的例子:
+                            </span>
                         </p>
                     </div>
                     <div class="listingblock primary">
@@ -15727,7 +15741,9 @@ val ctx = FileSystemXmlApplicationContext("file:///conf/context.xml")</code></pr
                         <p>
                             The next example provides validation behavior for the <code>Person</code> class by implementing the
                             following two methods of the <code>org.springframework.validation.Validator</code> interface:</br>
+                            <span class="translate">
                             下一个例子通过实现org.springframework.validate.validator接口的以下两个方法，为Person类提供了验证行为:
+                            </span>
                         </p>
                     </div>
                     <div class="ulist">
@@ -15735,7 +15751,9 @@ val ctx = FileSystemXmlApplicationContext("file:///conf/context.xml")</code></pr
                             <li>
                                 <p>
                                     <code>supports(Class)</code>: Can this <code>Validator</code> validate instances of the supplied <code>Class</code>?</br>
+                                    <span class="translate">
                                     支持(类):这个验证器是否可以验证所提供的类的实例?
+                                    </span>
                                 </p>
                             </li>
                             <li>
@@ -15752,7 +15770,9 @@ val ctx = FileSystemXmlApplicationContext("file:///conf/context.xml")</code></pr
                             Implementing a <code>Validator</code> is fairly straightforward, especially when you know of the
                             <code>ValidationUtils</code> helper class that the Spring Framework also provides. The following
                             example implements <code>Validator</code> for <code>Person</code> instances:</br>
+                            <span class="translate">
                             实现Validator相当简单，特别是当您知道Spring框架也提供的ValidationUtils助手类时。下面的例子实现了Person实例的Validator:
+                            </span>
                         </p>
                     </div>
                     <div class="listingblock primary">
@@ -15808,8 +15828,10 @@ val ctx = FileSystemXmlApplicationContext("file:///conf/context.xml")</code></pr
                             The <code>static</code> <code>rejectIfEmpty(..)</code> method on the <code>ValidationUtils</code> class is used to reject the <code>name</code> property if it is <code>null</code> or the empty string. Have a look at the
                             <a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/validation/ValidationUtils.html"><code>ValidationUtils</code></a> javadoc to see what functionality it provides besides the example
                             shown previously.</br>
+                            <span class="translate">
                             ValidationUtils类上的静态rejectIfEmpty(..)方法用于拒绝name属性，如果它是null或空字符串。
                             看一看ValidationUtils javadoc，看看除了前面展示的示例之外，它还提供了哪些功能。
+                            </span>
                         </p>
                     </div>
                     <div class="paragraph">
@@ -15823,10 +15845,12 @@ val ctx = FileSystemXmlApplicationContext("file:///conf/context.xml")</code></pr
                             to reuse the logic contained within the <code>AddressValidator</code> class without resorting to copy-and-paste,
                             you can dependency-inject or instantiate an <code>AddressValidator</code> within your <code>CustomerValidator</code>,
                             as the following example shows:</br>
+                            <span class="translate">
                             虽然可以实现单个Validator类来验证富对象中的每个嵌套对象，但更好的做法是将每个嵌套对象类的验证逻辑封装在其自己的Validator实现中。
                             一个“富”对象的简单例子是Customer，它由两个String属性(一个名字和一个名字)和一个复杂的Address对象组成。Address对象可以独立于Customer对象使用，
                             因此实现了一个不同的AddressValidator。如果你想让CustomerValidator重用AddressValidator类中包含的逻辑，而不需要复制粘贴，
                             你可以在CustomerValidator中依赖注入或实例化AddressValidator，如下面的例子所示:
+                            </span>
                         </p>
                     </div>
                     <div class="listingblock primary">
@@ -15910,14 +15934,16 @@ val ctx = FileSystemXmlApplicationContext("file:///conf/context.xml")</code></pr
                             you can use the <code>&lt;spring:bind/&gt;</code> tag to inspect the error messages, but you can also inspect
                             the <code>Errors</code> object yourself. More information about the methods it offers can be found in
                             the <a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframeworkvalidation/Errors.html">javadoc</a>.</br>
+                            <span class="translate">
                             验证错误被报告给传递给验证器的errors对象。在Spring Web MVC的情况下，您可以使用< Spring:bind/>标记来检查错误消息，但是您也可以自己检查Errors对象。
                             关于它提供的方法的更多信息可以在javadoc中找到。
+                            </span>
                         </p>
                     </div>
                 </div>
                 <div class="sect2">
                     <h3 id="validation-conversion"><a class="anchor" href="#validation-conversion"></a>3.2. Resolving Codes to Error Messages</h3>
-                    <span>3.2. 将代码解析为错误消息</span>
+                    <span class="translate">3.2. 将代码解析为错误消息</span>
                     <div class="paragraph">
                         <p>
                             We covered databinding and validation. This section covers outputting messages that correspond to validation errors.
@@ -15934,12 +15960,14 @@ val ctx = FileSystemXmlApplicationContext("file:///conf/context.xml")</code></pr
                             registers <code>too.darn.old.age</code> and
                             <code>too.darn.old.age.int</code> (the first includes the field name and the second includes the type of the field).
                             This is done as a convenience to aid developers when targeting error messages.</br>
+                            <span class="translate">
                             我们讨论了数据绑定和验证。本节介绍与验证错误对应的输出消息。在上一节所示的示例中，我们拒绝了name和age字段。
                             如果我们想通过使用MessageSource输出错误消息，我们可以使用拒绝字段时提供的错误代码(在本例中是'name'和'age')来实现这一点。
                             当您从Errors接口调用(例如，直接或间接地使用ValidationUtils类)rejectValue或其他拒绝方法时，底层实现不仅注册您传入的代码，而且还注册许多附加的错误代码。
                             MessageCodesResolver确定Errors接口注册的错误代码。默认情况下，使用DefaultMessageCodesResolver，它(例如)不仅用您提供的代码注册消息，而且还注册包含传递给reject方法的字段名的消息。
                             因此，如果你通过使用rejectValue("age"， "too.darn.old")拒绝一个字段，除了too.darn.old代码，Spring还注册too.darn.old.age和too.darn.old.age.int(第一个包括字段名，第二个包括字段类型)。
                             这样做是为了方便开发人员定位错误消息。
+                            </span>
                         </p>
                     </div>
                     <div class="paragraph">
@@ -15948,7 +15976,9 @@ val ctx = FileSystemXmlApplicationContext("file:///conf/context.xml")</code></pr
                             <a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/validation/MessageCodesResolver.html"><code>MessageCodesResolver</code></a> and
                             <a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/validation/DefaultMessageCodesResolver.html"><code>DefaultMessageCodesResolver</code></a>,
                             respectively.</br>
+                            <span class="translate">
                             关于MessageCodesResolver和默认策略的更多信息可以分别在MessageCodesResolver和DefaultMessageCodesResolver的javadoc中找到。
+                            </span>
                         </p>
                     </div>
                 </div>
@@ -15960,8 +15990,10 @@ val ctx = FileSystemXmlApplicationContext("file:///conf/context.xml")</code></pr
                             The <code>org.springframework.beans</code> package adheres to the JavaBeans standard.
                             A JavaBean is a class with a default no-argument constructor and that follows a naming convention where (for example) a property named <code>bingoMadness</code>                            would have a setter method <code>setBingoMadness(..)</code> and a getter method <code>getBingoMadness()</code>. For more information about JavaBeans and the specification, see
                             <a href="https://docs.oracle.com/javase/8/docs/api/java/beans/package-summary.html">javabeans</a>.</br>
+                            <span class="translate">
                             beans包遵循JavaBeans标准。JavaBean是一个具有默认无参数构造函数的类，它遵循命名约定(例如)一个名为bingoMadness的属性将有一个setter方法setBingoMadness(..)和一个getter方法getBingoMadness()。
                             有关JavaBeans和规范的更多信息，请参见JavaBeans。
+                            </span>
                         </p>
                     </div>
                     <div class="paragraph">
@@ -15976,30 +16008,36 @@ val ctx = FileSystemXmlApplicationContext("file:///conf/context.xml")</code></pr
                             Last but not least, the <code>BeanWrapper</code> provides support for setting indexed properties.
                             The <code>BeanWrapper</code> usually is not used by application code directly but is used by the
                             <code>DataBinder</code> and the <code>BeanFactory</code>.</br>
+                            <span class="translate">
                             bean包中的一个相当重要的类是BeanWrapper接口及其相应的实现(BeanWrapperImpl)。
                             正如javadoc引用的，BeanWrapper提供了设置和获取属性值(单独或批量)、获取属性描述符和查询属性以确定它们是可读还是可写的功能。
                             此外，BeanWrapper还提供了对嵌套属性的支持，允许对子属性进行无限深度的属性设置。
                             BeanWrapper还支持添加标准javabean PropertyChangeListeners和VetoableChangeListeners的能力，而不需要在目标类中支持代码。
                             最后，BeanWrapper提供了对设置索引属性的支持。BeanWrapper通常不被应用程序代码直接使用，而是被DataBinder和BeanFactory使用。
+                            </span>
                         </p>
                     </div>
                     <div class="paragraph">
                         <p>
                             The way the <code>BeanWrapper</code> works is partly indicated by its name: it wraps a bean to perform actions on that bean,
                             such as setting and retrieving properties.</br>
+                            <span class="translate">
                             BeanWrapper的工作方式部分由它的名称表示:它包装一个bean以在该bean上执行操作，比如设置和检索属性。
+                            </span>
                         </p>
                     </div>
                     <div class="sect3">
                         <h4 id="beans-beans-conventions"><a class="anchor" href="#beans-beans-conventions"></a>3.3.1. Setting and Getting Basic and Nested Properties</h4>
-                        <span>3.3.1. 设置和获取基本和嵌套属性</span>
+                        <span class="translate">3.3.1. 设置和获取基本和嵌套属性</span>
                         <div class="paragraph">
                             <p>
                                 Setting and getting properties is done through the <code>setPropertyValue</code> and
                                 <code>getPropertyValue</code> overloaded method variants of <code>BeanWrapper</code>.
                                 See their Javadoc for details. The below table shows some examples of these conventions:</br>
+                                <span class="translate">
                                 设置和获取属性是通过BeanWrapper的setPropertyValue和getPropertyValue重载方法变体来完成的。
                                 有关详细信息，请参阅它们的Javadoc。下表显示了这些约定的一些例子:
+                                </span>
                             </p>
                         </div>
                         <table id="beans-beans-conventions-properties-tbl" class="tableblock frame-all grid-all stretch">
@@ -16023,7 +16061,9 @@ val ctx = FileSystemXmlApplicationContext("file:///conf/context.xml")</code></pr
                                         <p class="tableblock">
                                             Indicates the property <code>name</code> that corresponds to the <code>getName()</code> or <code>isName()</code> and
                                              <code>setName(..)</code> methods.</br>
+                                             <span class="translate">
                                              指示对应于getName()或isName()和setName(..)方法的属性名。
+                                             </span>
                                          </p>
                                     </td>
                                 </tr>
@@ -16035,7 +16075,9 @@ val ctx = FileSystemXmlApplicationContext("file:///conf/context.xml")</code></pr
                                         <p class="tableblock">
                                             Indicates the nested property <code>name</code> of the property <code>account</code> that corresponds
                                             to (for example) the <code>getAccount().setName()</code> or <code>getAccount().getName()</code> methods.</br>
+                                            <span class="translate">
                                             指示对应于(例如)getAccount(). setname()或getAccount(). getname()方法的属性帐户的嵌套属性名。
+                                            </span>
                                         </p>
                                     </td>
                                 </tr>
@@ -16048,7 +16090,9 @@ val ctx = FileSystemXmlApplicationContext("file:///conf/context.xml")</code></pr
                                             Indicates the <em>third</em> element of the indexed property <code>account</code>.
                                             Indexed properties can be of type <code>array</code>, <code>list</code>,
                                             or other naturally ordered collection.</br>
+                                            <span class="translate">
                                             指示索引属性帐户的第三个元素。索引属性可以是数组、列表或其他自然排序的集合类型。
+                                            </span>
                                         </p>
                                     </td>
                                 </tr>
@@ -16060,7 +16104,9 @@ val ctx = FileSystemXmlApplicationContext("file:///conf/context.xml")</code></pr
                                         <p class="tableblock">
                                             Indicates the value of the map entry indexed by the <code>COMPANYNAME</code> key
                                             of the <code>account</code> <code>Map</code> property.</br>
+                                            <span class="translate">
                                             指示由帐户map属性的COMPANYNAME键索引的映射条目的值。
+                                            </span>
                                         </p>
                                     </td>
                                 </tr>
@@ -16072,13 +16118,17 @@ val ctx = FileSystemXmlApplicationContext("file:///conf/context.xml")</code></pr
                                 If you use only the <code>DataBinder</code> and the <code>BeanFactory</code> and their default implementations,
                                 you should skip ahead to the
                                 <a href="#beans-beans-conversion">section on <code>PropertyEditors</code></a>.)</br>
+                                <span class="translate">
                                 (如果您不打算直接使用BeanWrapper，那么下一节对您来说并不十分重要。如果你只使用DataBinder和BeanFactory以及它们的默认实现，你应该跳到PropertyEditors一节。)
+                                </span>
                             </p>
                         </div>
                         <div class="paragraph">
                             <p>
                                 The following two example classes use the <code>BeanWrapper</code> to get and set properties:</br>
+                                <span class="translate">
                                 下面两个示例类使用BeanWrapper来获取和设置属性:
+                                </span>
                             </p>
                         </div>
                         <div class="listingblock primary">
@@ -16156,7 +16206,9 @@ val ctx = FileSystemXmlApplicationContext("file:///conf/context.xml")</code></pr
                             <p>
                                 The following code snippets show some examples of how to retrieve and manipulate some of the properties of
                                 instantiated <code>Companies</code> and <code>Employees</code>:</br>
+                                <span class="translate">
                                 下面的代码片段展示了一些如何检索和操作实例化的Companies和Employees的一些属性的示例:
+                                </span>
                             </p>
                         </div>
                         <div class="listingblock primary">
@@ -16214,15 +16266,19 @@ val salary = company.getPropertyValue("managingDirector.salary") as Float?</code
                                 properties to the desired type. For more about
                                 <code>PropertyEditor</code>, see <a href="https://docs.oracle.com/javase/8/docs/api/java/beans/package-summary.html">
                                 the javadoc of the <code>java.beans</code> package from Oracle</a>.</br>
+                                <span class="translate">
                                 Spring使用PropertyEditor的概念来实现对象和字符串之间的转换。用一种不同于对象本身的方式来表示属性是很方便的。
                                 例如，Date可以以人类可读的方式表示(如String: '2007-14-09')，而我们仍然可以将人类可读的形式转换回原始日期(或者，更好的是，将任何以人类可读的形式输入的日期转换回Date对象)。
                                 这种行为可以通过注册java.beans.PropertyEditor类型的自定义编辑器来实现。在BeanWrapper上注册自定义编辑器，或者在特定的IoC容器中注册(如前一章所述)，
                                 可以让它了解如何将属性转换为所需的类型。有关PropertyEditor的更多信息，请参阅来自Oracle的bean包,java的javadoc。。
+                                </span>
                             </p>
                         </div>
                         <div class="paragraph">
                             <p>A couple of examples where property editing is used in Spring:</br>
+                                <span class="translate">
                                 下面是Spring中使用属性编辑的几个例子:
+                                </span>
                             </p>
                         </div>
                         <div class="ulist">
@@ -16231,8 +16287,10 @@ val salary = company.getPropertyValue("managingDirector.salary") as Float?</code
                                     <p>
                                         Setting properties on beans is done by using <code>PropertyEditor</code> implementations. When you use <code>String</code> as the value of a property of some bean that you declare in an XML file, Spring (if the setter
                                         of the corresponding property has a <code>Class</code> parameter) uses <code>ClassEditor</code> to try to resolve the parameter to a <code>Class</code> object.</br>
+                                        <span class="translate">
                                         在bean上设置属性是通过使用PropertyEditor实现来完成的。当您使用String作为在XML文件中声明的某个bean的属性值时，
                                         Spring(如果相应属性的setter具有Class参数)使用ClassEditor尝试将参数解析为Class对象。
+                                        </span>
                                     </p>
                                 </li>
                                 <li>
@@ -16240,7 +16298,9 @@ val salary = company.getPropertyValue("managingDirector.salary") as Float?</code
                                         Parsing HTTP request parameters in Spring&#8217;s MVC framework is done by using all kinds of <code>PropertyEditor</code>
                                         implementations that you can manually bind in all subclasses of the
                                         <code>CommandController</code>.</br>
+                                        <span class="translate">
                                         解析Spring的MVC框架中的HTTP请求参数是通过使用所有类型的PropertyEditor实现来完成的，你可以手动绑定到CommandController的所有子类中。
+                                        </span>
                                     </p>
                                 </li>
                             </ul>
@@ -16253,9 +16313,11 @@ val salary = company.getPropertyValue("managingDirector.salary") as Float?</code
                                 <code>BeanWrapperImpl</code>. Where the property editor is configurable in some fashion,
                                 you can still register your own variant to override the default one. The following table describes the various <code>PropertyEditor</code>
                                 implementations that Spring provides:</br>
+                                <span class="translate">
                                 Spring有许多内置的PropertyEditor实现来简化工作。它们都位于org.springframework.beans.propertyeditors包中。
                                 大多数(但不是全部，如下表所示)默认情况下由BeanWrapperImpl注册。
                                 在属性编辑器可以以某种方式进行配置的地方，您仍然可以注册自己的变体来覆盖默认的变体。下表描述了Spring提供的各种PropertyEditor实现:
+                                </span>
                             </p>
                         </div>
                         <table id="beans-beans-property-editors-tbl" class="tableblock frame-all grid-all stretch">
@@ -16279,7 +16341,9 @@ val salary = company.getPropertyValue("managingDirector.salary") as Float?</code
                                         <p class="tableblock">
                                             Editor for byte arrays. Converts strings to their corresponding byte representations.
                                             Registered by default by <code>BeanWrapperImpl</code>.</br>
+                                            <span class="translate">
                                             字节数组的编辑器。将字符串转换为其对应的字节表示形式。默认由BeanWrapperImpl注册。
+                                            </span>
                                         </p>
                                     </td>
                                 </tr>
@@ -16292,8 +16356,10 @@ val salary = company.getPropertyValue("managingDirector.salary") as Float?</code
                                             Parses Strings that represent classes to actual classes and vice-versa.
                                             When a class is not found, an <code>IllegalArgumentException</code> is thrown.
                                             By default, registered by <code>BeanWrapperImpl</code>.</br>
+                                            <span class="translate">
                                             将表示类的字符串解析为实际的类，反之亦然。当没有找到一个类时，抛出一个IllegalArgumentException。
                                             默认情况下，由BeanWrapperImpl注册。
+                                            </span>
                                         </p>
                                     </td>
                                 </tr>
@@ -16305,7 +16371,9 @@ val salary = company.getPropertyValue("managingDirector.salary") as Float?</code
                                         <p class="tableblock">
                                             Customizable property editor for <code>Boolean</code> properties. By default, registered by
                                             <code>BeanWrapperImpl</code> but can be overridden by registering a custom instance of it as a custom editor.</br>
+                                            <span class="translate">
                                             布尔属性的可自定义属性编辑器。默认情况下，由BeanWrapperImpl注册，但可以通过将其自定义实例注册为自定义编辑器来重写。
+                                            </span>
                                         </p>
                                     </td>
                                 </tr>
@@ -16317,7 +16385,9 @@ val salary = company.getPropertyValue("managingDirector.salary") as Float?</code
                                         <p class="tableblock">
                                             Property editor for collections, converting any source <code>Collection</code> to a given target
                                             <code>Collection</code> type.</br>
+                                            <span class="translate">
                                             属性编辑器，将任何源Collection转换为给定的目标Collection类型。
+                                            </span>
                                         </p>
                                     </td>
                                 </tr>
@@ -16329,7 +16399,9 @@ val salary = company.getPropertyValue("managingDirector.salary") as Float?</code
                                         <p class="tableblock">
                                             Customizable property editor for <code>java.util.Date</code>, supporting a custom <code>DateFormat</code>.
                                             NOT registered by default. Must be user-registered with the appropriate format as needed.</br>
-                                            java.util的可自定义属性编辑器。日期，支持自定义日期格式。默认未注册。必须在用户注册时使用适当的格式。
+                                            <span class="translate">
+                                            <code>java.util.Date</code>的可自定义属性编辑器。日期，支持自定义日期格式。默认未注册。必须在用户注册时使用适当的格式。
+                                            </span>
                                         </p>
                                     </td>
                                 </tr>
@@ -16343,8 +16415,10 @@ val salary = company.getPropertyValue("managingDirector.salary") as Float?</code
                                             <code>Long</code>, <code>Float</code>, or
                                             <code>Double</code>. By default, registered by <code>BeanWrapperImpl</code> but can be
                                             overridden by registering a custom instance of it as a custom editor.</br>
+                                            <span class="translate">
                                             任何Number子类的可自定义属性编辑器，如Integer、Long、Float或Double。
                                             默认情况下，由BeanWrapperImpl注册，但可以通过将其自定义实例注册为自定义编辑器来重写。
+                                            </span>
                                         </p>
                                     </td>
                                 </tr>
@@ -16355,7 +16429,9 @@ val salary = company.getPropertyValue("managingDirector.salary") as Float?</code
                                     <td class="tableblock halign-left valign-top">
                                         <p class="tableblock">Resolves strings to <code>java.io.File</code> objects. By default, registered by
                                             <code>BeanWrapperImpl</code>.</br>
+                                            <span class="translate">
                                             将字符串解析为java.io.File对象。默认情况下，由BeanWrapperImpl注册。
+                                            </span>
                                         </p>
                                     </td>
                                 </tr>
@@ -16369,8 +16445,10 @@ val salary = company.getPropertyValue("managingDirector.salary") as Float?</code
                                             and <code>Resource</code>) an <code>InputStream</code> so that <code>InputStream</code> properties
                                             may be directly set as strings. Note that the default usage does not close the <code>InputStream</code>
                                             for you. By default, registered by <code>BeanWrapperImpl</code>.</br>
+                                            <span class="translate">
                                             单向属性编辑器，它可以接受一个字符串并(通过中间的ResourceEditor和Resource)产生一个InputStream，这样InputStream属性就可以直接设置为字符串。
                                             注意，默认用法不会为您关闭InputStream。默认情况下，由BeanWrapperImpl注册。
+                                            </span>
                                         </p>
                                     </td>
                                 </tr>
@@ -16384,8 +16462,10 @@ val salary = company.getPropertyValue("managingDirector.salary") as Float?</code
                                             <code>[language]_[country]_[variant]</code>, same as the <code>toString()</code> method of
                                             <code>Locale</code>). Also accepts spaces as separators, as an alternative to underscores.
                                             By default, registered by <code>BeanWrapperImpl</code>.</br>
+                                            <span class="translate">
                                             可以将字符串解析为Locale对象，反之亦然(字符串格式为[language]_[country]_[variant]，与Locale的toString()方法相同)。
                                             也接受空格作为分隔符，作为下划线的替代。默认情况下，由BeanWrapperImpl注册。
+                                            </span>
                                         </p>
                                     </td>
                                 </tr>
@@ -16396,7 +16476,9 @@ val salary = company.getPropertyValue("managingDirector.salary") as Float?</code
                                     <td class="tableblock halign-left valign-top">
                                         <p class="tableblock">
                                             Can resolve strings to <code>java.util.regex.Pattern</code> objects and vice-versa.</br>
-                                            可以将字符串解析为java.util.regex.Pattern对象，反之亦然。
+                                            <span class="translate">
+                                            可以将字符串解析为 <code>java.util.regex.Pattern</code>对象，反之亦然。
+                                            </span>
                                         </p>
                                     </td>
                                 </tr>
@@ -16408,7 +16490,9 @@ val salary = company.getPropertyValue("managingDirector.salary") as Float?</code
                                         <p class="tableblock">
                                             Can convert strings (formatted with the format defined in the javadoc of the
                                             <code>java.util.Properties</code> class) to <code>Properties</code> objects. By default, registered by <code>BeanWrapperImpl</code>.</br>
+                                             <span class="translate">
                                             可以将字符串(使用java.util.Properties类的javadoc中定义的格式格式化)转换为Properties对象。默认情况下，由BeanWrapperImpl注册。
+                                            </span>
                                         </p>
                                     </td>
                                 </tr>
@@ -16420,7 +16504,9 @@ val salary = company.getPropertyValue("managingDirector.salary") as Float?</code
                                         <p class="tableblock">
                                             Property editor that trims strings. Optionally allows transforming an empty string into a <code>null</code> value.
                                             NOT registered by default&#8201;&#8212;&#8201;must be user-registered.</br>
+                                            <span class="translate">
                                             用于删除字符串的属性编辑器。可选地允许将空字符串转换为空值。默认情况下未注册-必须用户注册。
+                                            </span>
                                         </p>
                                     </td>
                                 </tr>
@@ -16431,7 +16517,9 @@ val salary = company.getPropertyValue("managingDirector.salary") as Float?</code
                                     <td class="tableblock halign-left valign-top">
                                         <p class="tableblock">
                                             Can resolve a string representation of a URL to an actual <code>URL</code> object. By default, registered by <code>BeanWrapperImpl</code>.</br>
+                                            <span class="translate">
                                             可以将URL的字符串表示形式解析为实际的URL对象。默认情况下，由BeanWrapperImpl注册。
+                                            </span>
                                         </p>
                                     </td>
                                 </tr>
@@ -16446,10 +16534,12 @@ val salary = company.getPropertyValue("managingDirector.salary") as Float?</code
                                 they handle and have the same name as that class, with <code>Editor</code> appended. For example, one could have the following
                                 class and package structure, which would be sufficient for the <code>SomethingEditor</code> class to be recognized and used as
                                 the <code>PropertyEditor</code> for <code>Something</code>-typed properties.</br>
+                                <span class="translate">
                                 Spring使用java.beans.PropertyEditorManager来设置可能需要的属性编辑器的搜索路径。
                                 搜索路径还包括sun.bean。编辑器，它包括用于类型的PropertyEditor实现，如字体、颜色和大多数原始类型。
                                 还请注意，如果PropertyEditor类与它们处理的类在同一个包中，并且与该类同名，并附加了Editor，标准JavaBeans基础结构会自动发现PropertyEditor类(无需显式注册它们)。
                                 例如，可以有以下类和包结构，这将足以让SomethingEditor类被识别并用作Something-typed属性的PropertyEditor。
+                                </span>
                             </p>
                         </div>
                         <div class="literalblock">
@@ -16467,8 +16557,10 @@ val salary = company.getPropertyValue("managingDirector.salary") as Float?</code
                                 <a href="https://docs.oracle.com/javase/tutorial/javabeans/advanced/customization.html">here</a>).
                                 The following example uses the <code>BeanInfo</code> mechanism to explicitly register one or more
                                 <code>PropertyEditor</code> instances with the properties of an associated class:</br>
+                                <span class="translate">
                                 注意，您也可以在这里使用标准的BeanInfo JavaBeans机制(在这里进行了一定程度的描述)。
                                 下面的例子使用BeanInfo机制显式地向关联类的属性注册一个或多个PropertyEditor实例:
+                                </span>
                             </p>
                         </div>
                         <div class="literalblock">
@@ -16484,7 +16576,9 @@ val salary = company.getPropertyValue("managingDirector.salary") as Float?</code
                             <p>
                                 The following Java source code for the referenced <code>SomethingBeanInfo</code> class associates
                                 a <code>CustomNumberEditor</code> with the <code>age</code> property of the <code>Something</code> class:</br>
+                                <span class="translate">
                                 以下是引用的SomethingBeanInfo类的Java源代码，它将CustomNumberEditor与Something类的年龄属性关联起来:
+                                </span>
                             </p>
                         </div>
                         <div class="listingblock primary">
@@ -16541,9 +16635,11 @@ val salary = company.getPropertyValue("managingDirector.salary") as Float?</code
                                 <p>
                                     When setting bean properties as string values, a Spring IoC container ultimately uses standard JavaBeans <code>PropertyEditor</code> implementations to convert these strings to the complex type of the property. Spring pre-registers
                                     a number of custom <code>PropertyEditor</code> implementations (for example, to convert a class name expressed as a string into a <code>Class</code> object). Additionally, Java&#8217;s standard JavaBeans <code>PropertyEditor</code>                                    lookup mechanism lets a <code>PropertyEditor</code> for a class be named appropriately and placed in the same package as the class for which it provides support, so that it can be found automatically.</br>
+                                    <span class="translate">
                                     当将bean属性设置为字符串值时，Spring IoC容器最终使用标准JavaBeans PropertyEditor实现将这些字符串转换为属性的复杂类型。
                                     Spring预先注册了许多自定义PropertyEditor实现(例如，将表示为字符串的类名转换为class对象)。
                                     此外，Java的标准JavaBeans PropertyEditor查找机制允许对类的PropertyEditor进行适当的命名，并将其放置在与其提供支持的类相同的包中，这样就可以自动找到该类。
+                                    </span>
                                 </p>
                             </div>
                             <div class="paragraph">
@@ -16555,10 +16651,12 @@ val salary = company.getPropertyValue("managingDirector.salary") as Float?</code
                                     Although you can use bean factory post-processors with <code>BeanFactory</code> implementations, the <code>CustomEditorConfigurer</code>
                                     has a nested property setup, so we strongly recommend that you use it with the
                                     <code>ApplicationContext</code>, where you can deploy it in similar fashion to any other bean and where it can be automatically detected and applied.</br>
+                                    <span class="translate">
                                     如果需要注册其他自定义propertyeditor，可以使用几种机制。最手动的方法(通常不方便也不推荐)是使用ConfigurableBeanFactory接口的registerCustomEditor()方法，假设您有一个BeanFactory引用。
                                     另一种(稍微方便一点)机制是使用名为CustomEditorConfigurer的特殊bean工厂后处理器。
                                     虽然可以使用bean工厂后处理器BeanFactory实现,CustomEditorConfigurer有一个嵌套的属性设置,
                                     所以我们强烈建议您使用它与ApplicationContext,以类似的方式,您可以将其部署到任何其他bean,它可以自动检测和应用。
+                                    </span>
                                 </p>
                             </div>
                             <div class="paragraph">
@@ -16566,8 +16664,10 @@ val salary = company.getPropertyValue("managingDirector.salary") as Float?</code
                                     Note that all bean factories and application contexts automatically use a number of built-in property editors, through their use of a <code>BeanWrapper</code> to handle property conversions. The standard property editors
                                     that the <code>BeanWrapper</code> registers are listed in the <a href="#beans-beans-conversion">previous section</a>. Additionally, <code>ApplicationContexts</code> also override or add additional editors to handle
                                     resource lookups in a manner appropriate to the specific application context type.</br>
+                                    <span class="translate">
                                     请注意，通过使用BeanWrapper来处理属性转换，所有bean工厂和应用程序上下文都会自动使用许多内置的属性编辑器。
                                     前一节列出了BeanWrapper注册的标准属性编辑器。此外，ApplicationContexts还覆盖或添加了额外的编辑器，以适合于特定应用程序上下文类型的方式来处理资源查找。
+                                    </span>
                                 </p>
                             </div>
                             <div class="paragraph">
@@ -16576,15 +16676,19 @@ val salary = company.getPropertyValue("managingDirector.salary") as Float?</code
                                     complex type of the property. You can use
                                     <code>CustomEditorConfigurer</code>, a bean factory post-processor, to conveniently add support for additional <code>PropertyEditor</code>
                                     instances to an <code>ApplicationContext</code>.</br>
+                                    <span class="translate">
                                     标准JavaBeans PropertyEditor实例用于将表示为字符串的属性值转换为属性的实际复杂类型。
                                     您可以使用CustomEditorConfigurer(一个bean工厂后处理器)方便地将对附加PropertyEditor实例的支持添加到ApplicationContext中。
+                                    </span>
                                 </p>
                             </div>
                             <div class="paragraph">
                                 <p>
                                     Consider the following example, which defines a user class called <code>ExoticType</code> and another class
                                     called <code>DependsOnExoticType</code>, which needs <code>ExoticType</code> set as a property:</br>
+                                    <span class="translate">
                                     考虑下面的例子，它定义了一个名为ExoticType的用户类和另一个名为DependsOnExoticType的类，需要将ExoticType设置为一个属性:
+                                    </span>
                                 </p>
                             </div>
                             <div class="listingblock primary">
@@ -16628,7 +16732,9 @@ class DependsOnExoticType {
                                 <p>
                                     When things are properly set up, we want to be able to assign the type property as a string, which a <code>PropertyEditor</code> converts into an actual
                                     <code>ExoticType</code> instance. The following bean definition shows how to set up this relationship:</br>
+                                    <span class="translate">
                                     当设置正确后，我们希望能够将type属性分配为字符串，PropertyEditor将其转换为实际的ExoticType实例。下面的bean定义展示了如何设置这个关系:
+                                    </span>
                                 </p>
                             </div>
                             <div class="listingblock">
@@ -16641,7 +16747,9 @@ class DependsOnExoticType {
                             <div class="paragraph">
                                 <p>
                                     The <code>PropertyEditor</code> implementation could look similar to the following:</br>
+                                    <span class="translate">
                                     PropertyEditor的实现看起来类似如下:
+                                    </span>
                                 </p>
                             </div>
                             <div class="listingblock primary">
@@ -16678,7 +16786,9 @@ class ExoticTypeEditor : PropertyEditorSupport() {
                                 <p>
                                     Finally, the following example shows how to use <code>CustomEditorConfigurer</code> to register the new <code>PropertyEditor</code> with the
                                     <code>ApplicationContext</code>, which will then be able to use it as needed:</br>
+                                    <span class="translate">
                                     最后，下面的例子展示了如何使用CustomEditorConfigurer向ApplicationContext注册新的PropertyEditor，然后它将能够在需要时使用它:
+                                    </span>
                                 </p>
                             </div>
                             <div class="listingblock">
@@ -16713,18 +16823,22 @@ class ExoticTypeEditor : PropertyEditorSupport() {
                                         in this fashion can easily be shared with <code>DataBinder</code> and Spring MVC controllers.
                                         Furthermore, it avoids the need for synchronization on custom editors: A <code>PropertyEditorRegistrar</code> is expected
                                         to create fresh <code>PropertyEditor</code> instances for each bean creation attempt.</br>
+                                        <span class="translate">
                                         用Spring容器注册属性编辑器的另一种机制是创建并使用PropertyEditorRegistrar。
                                         当您需要在几个不同的情况下使用同一组属性编辑器时，该接口特别有用。您可以编写相应的注册商，并在每种情况下重用它。
                                         PropertyEditorRegistrar实例与名为PropertyEditorRegistry的接口一起工作，该接口是由Spring BeanWrapper(和DataBinder)实现的。
                                         当与CustomEditorConfigurer(这里描述的)一起使用时，PropertyEditorRegistrar实例特别方便，它公开了一个名为setPropertyEditorRegistrars(..)的属性。
                                         以这种方式添加到CustomEditorConfigurer的PropertyEditorRegistrar实例可以很容易地与DataBinder和Spring MVC控制器共享。
                                         此外，它避免了在自定义编辑器上进行同步:预计PropertyEditorRegistrar将为每个bean创建尝试创建新的PropertyEditor实例。
+                                        </span>
                                     </p>
                                 </div>
                                 <div class="paragraph">
                                     <p>
                                         The following example shows how to create your own <code>PropertyEditorRegistrar</code> implementation:</br>
+                                        <span class="translate">
                                         下面的例子展示了如何创建你自己的PropertyEditorRegistrar实现:
+                                        </span>
                                     </p>
                                 </div>
                                 <div class="listingblock primary">
@@ -16769,15 +16883,19 @@ class CustomPropertyEditorRegistrar : PropertyEditorRegistrar {
                                         See also the <code>org.springframework.beans.support.ResourceEditorRegistrar</code> for an example
                                         <code>PropertyEditorRegistrar</code> implementation. Notice how in its implementation of the
                                         <code>registerCustomEditors(..)</code> method ,it creates new instances of each property editor.</br>
+                                        <span class="translate">
                                         参见org.springframework.beans.support.ResourceEditorRegistrar以获得PropertyEditorRegistrar实现的示例。
-                                        注意在registerCustomEditors(..)方法的实现中，它如何创建每个属性编辑器的新实例。
+                                        注意在<code>registerCustomEditors(..)</code> 方法的实现中，它如何创建每个属性编辑器的新实例。
+                                        </span>
                                     </p>
                                 </div>
                                 <div class="paragraph">
                                     <p>
                                         The next example shows how to configure a <code>CustomEditorConfigurer</code> and inject an instance of our
                                         <code>CustomPropertyEditorRegistrar</code> into it:</br>
+                                        <span class="translate">
                                         下一个例子展示了如何配置CustomEditorConfigurer和注入我们的CustomPropertyEditorRegistrar的一个实例:
+                                        </span>
                                     </p>
                                 </div>
                                 <div class="listingblock">
@@ -16798,7 +16916,9 @@ class CustomPropertyEditorRegistrar : PropertyEditorRegistrar {
                                     <p>
                                         Finally (and in a bit of a departure from the focus of this chapter for those of you using <a href="web.html#mvc">Spring&#8217;s MVC web framework</a>), using <code>PropertyEditorRegistrars</code> in conjunction with
                                         data-binding <code>Controllers</code> (such as <code>SimpleFormController</code>) can be very convenient. The following example uses a <code>PropertyEditorRegistrar</code> in the implementation of an <code>initBinder(..)</code> method:</br>
+                                        <span class="translate">
                                         最后，将PropertyEditorRegistrars与数据绑定控制器(如SimpleFormController)结合使用是非常方便的。下面的例子在initBinder(..)方法的实现中使用了PropertyEditorRegistrar:
+                                        </span>
                                     </p>
                                 </div>
                                 <div class="listingblock primary">
@@ -16842,7 +16962,9 @@ class CustomPropertyEditorRegistrar : PropertyEditorRegistrar {
                                         of <code>initBinder(..)</code> is only one line long) and lets common <code>PropertyEditor</code> registration code
                                         be encapsulated in a class and then shared amongst as many
                                         <code>Controllers</code> as needed.</br>
+                                        <span class="translate">
                                         这种风格的PropertyEditor注册可以产生简洁的代码(initBinder(..)的实现只有一行)，并让通用的PropertyEditor注册代码封装在一个类中，然后根据需要在许多控制器中共享。
+                                        </span>
                                     </p>
                                 </div>
                             </div>
@@ -16859,9 +16981,11 @@ class CustomPropertyEditorRegistrar : PropertyEditorRegistrar {
                             container, you can use this system as an alternative to <code>PropertyEditor</code> implementations to convert
                             externalized bean property value strings to the required property types. You can also use the public API anywhere
                             in your application where type conversion is needed.</br>
+                            <span class="translate">
                             Spring 3引入了一个核心。提供通用类型转换系统的转换包。系统定义了一个实现类型转换逻辑的SPI和一个在运行时执行类型转换的API。
                             在Spring容器中，您可以使用这个系统作为PropertyEditor实现的替代方案，将外化的bean属性值字符串转换为所需的属性类型。
                             您还可以在应用程序中任何需要类型转换的地方使用公共API。
+                            </span>
                         </p>
                     </div>
                     <div class="sect3">
@@ -16869,7 +16993,9 @@ class CustomPropertyEditorRegistrar : PropertyEditorRegistrar {
                         <div class="paragraph">
                             <p>
                                 The SPI to implement type conversion logic is simple and strongly typed, as the following interface definition shows:</br>
+                                <span class="translate">
                                 实现类型转换逻辑的SPI简单且强类型，如下面的接口定义所示:
+                                </span>
                             </p>
                         </div>
                         <div class="listingblock">
@@ -16889,9 +17015,11 @@ public interface Converter&lt;S, T&gt; {
                                 apply such a converter if a collection or array of <code>S</code> needs to be converted to an array or collection
                                 of <code>T</code>, provided that a delegating array or collection converter has been registered as well (which
                                 <code>DefaultConversionService</code> does by default).</br>
+                                <span class="translate">
                                 要创建自己的转换器，请实现converter接口并将S参数化为要转换的类型，将T参数化为要转换的类型。
                                 如果需要将S的集合或数组转换为T的数组或集合，您也可以透明地应用这样的转换器，
                                 前提是已经注册了委托数组或集合转换器(默认情况下DefaultConversionService这样做)。
+                                </span>
                             </p>
                         </div>
                         <div class="paragraph">
@@ -16899,14 +17027,19 @@ public interface Converter&lt;S, T&gt; {
                                 For each call to <code>convert(S)</code>, the source argument is guaranteed to not be null. Your
                                 <code>Converter</code> may throw any unchecked exception if conversion fails. Specifically, it should throw an
                                 <code>IllegalArgumentException</code> to report an invalid source value. Take care to ensure that your <code>Converter</code> implementation is thread-safe.</br>
+                                <span class="translate">
                                 对于每次调用convert(S)， source参数保证不为空。如果转换失败，您的转换器可能抛出任何未检查的异常。具体来说，它应该抛出一个IllegalArgumentException来报告一个无效的源值。请注意确保您的转换器实现是线程安全的。
+                                </span>
                             </p>
                         </div>
                         <div class="paragraph">
                             <p>
                                 Several converter implementations are provided in the <code>core.convert.support</code> package as a convenience. These include converters from strings to numbers and other common types. The following listing shows the <code>StringToInteger</code>
                                 class, which is a typical <code>Converter</code> implementation:</br>
-                                为了方便起见，core.convert.support包提供了几个转换器实现。其中包括从字符串到数字和其他常见类型的转换。下面的清单显示了StringToInteger类，它是一个典型的Converter实现:
+                                <span class="translate">
+                                为了方便起见，<code>core.convert.support</code>包提供了几个转换器实现。其中包括从字符串到数字和其他常见类型的转换。
+                                下面的清单显示了StringToInteger类，它是一个典型的Converter实现:
+                                </span>
                             </p>
                         </div>
                         <div class="listingblock">
@@ -16929,7 +17062,9 @@ final class StringToInteger implements Converter&lt;String, Integer&gt; {
                                 When you need to centralize the conversion logic for an entire class
                                 hierarchy (for example, when converting from <code>String</code> to <code>Enum</code> objects), you can implement
                                 <code>ConverterFactory</code>, as the following example shows:</br>
+                                <span class="translate">
                                 当你需要集中整个类层次结构的转换逻辑时(例如，从String对象转换为Enum对象时)，你可以实现ConverterFactory，如下面的例子所示:
+                                </span>
                             </p>
                         </div>
                         <div class="listingblock">
@@ -16946,13 +17081,17 @@ public interface ConverterFactory&lt;S, R&gt; {
                             <p>
                                 Parameterize S to be the type you are converting from and R to be the base type defining the <em>range</em> of classes you can convert to.
                                 Then implement <code>getConverter(Class&lt;T&gt;)</code>, where T is a subclass of R.</br>
+                                <span class="translate">
                                 将S参数化为要转换的类型，将R参数化为定义可以转换到的类范围的基类型。然后实现getConverter(Class&lt;T&gt;)，其中T是R的一个子类。
+                                </span>
                             </p>
                         </div>
                         <div class="paragraph">
                             <p>
                                 Consider the <code>StringToEnumConverterFactory</code> as an example:</br>
+                                <span class="translate">
                                 以StringToEnumConverterFactory为例:
+                                </span>
                             </p>
                         </div>
                         <div class="listingblock">
@@ -16989,9 +17128,11 @@ final class StringToEnumConverterFactory implements ConverterFactory&lt;String, 
                                 <code>GenericConverter</code> interface. With a more flexible but less strongly typed signature than <code>Converter</code>, a <code>GenericConverter</code> supports converting between multiple source and target types.
                                 In addition, a <code>GenericConverter</code> makes available source and target field context that you can use when you implement your conversion logic. Such context lets a type conversion be driven by a field annotation
                                 or by generic information declared on a field signature. The following listing shows the interface definition of <code>GenericConverter</code>:</br>
+                                <span class="translate">
                                 当您需要复杂的Converter实现时，请考虑使用GenericConverter接口。GenericConverter具有比Converter更灵活但类型更弱的签名，它支持在多个源类型和目标类型之间进行转换。
                                 此外，GenericConverter提供了可以在实现转换逻辑时使用的源和目标字段上下文。这样的上下文允许由字段注释或字段签名上声明的泛型信息驱动类型转换。
                                 下面的清单显示了GenericConverter的接口定义:
+                                </span>
                             </p>
                         </div>
                         <div class="listingblock">
@@ -17013,16 +17154,20 @@ public interface GenericConverter {
                                 The source <code>TypeDescriptor</code> provides access to the source field that holds the value being converted.
                                 The target <code>TypeDescriptor</code> provides access to the target field where
                                 the converted value is to be set.</br>
+                                <span class="translate">
                                 要实现一个GenericConverter，让getConvertibleTypes()返回支持的源→目标类型对。然后实现convert(Object, TypeDescriptor, TypeDescriptor)来包含转换逻辑。
                                 源TypeDescriptor提供了对保存被转换值的源字段的访问。目标TypeDescriptor提供对要设置转换值的目标字段的访问。
+                                </span>
                             </p>
                         </div>
                         <div class="paragraph">
                             <p>
                                 A good example of a <code>GenericConverter</code> is a converter that converts between a Java array and a collection. Such an <code>ArrayToCollectionConverter</code> introspects the field that declares the target collection
                                 type to resolve the collection&#8217;s element type. This lets each element in the source array be converted to the collection element type before the collection is set on the target field.</br>
+                                <span class="translate">
                                 GenericConverter的一个很好的例子是在Java数组和集合之间进行转换的转换器。
                                 这样的ArrayToCollectionConverter会自省声明目标集合类型的字段，以解析集合的元素类型。这允许在对目标字段设置集合之前，将源数组中的每个元素转换为集合元素类型。
+                                </span>
                             </p>
                         </div>
                         <div class="admonitionblock note">
@@ -17033,7 +17178,9 @@ public interface GenericConverter {
                                     </td>
                                     <td class="content">
                                         Because <code>GenericConverter</code> is a more complex SPI interface, you should use it only when you need it. Favor <code>Converter</code> or <code>ConverterFactory</code> for basic type conversion needs.</br>
+                                        <span class="translate">
                                         因为GenericConverter是一个更复杂的SPI接口，您应该只在需要时使用它。支持转换器或ConverterFactory基本类型转换需求。
+                                        </span>
                                     </td>
                                 </tr>
                             </table>
@@ -17046,8 +17193,10 @@ public interface GenericConverter {
                                     might want to run a <code>Converter</code> only if a specific method (such as a <code>static valueOf</code> method) is defined on the target class.
                                     <code>ConditionalGenericConverter</code> is the union of the <code>GenericConverter</code> and
                                     <code>ConditionalConverter</code> interfaces that lets you define such custom matching criteria:</br>
+                                    <span class="translate">
                                     有时，您希望Converter只在特定条件为真时运行。例如，您可能只希望在目标字段上存在特定注释时运行Converter，或者只希望在目标类上定义了特定方法(例如静态valueOf方法)时运行Converter。
                                     ConditionalGenericConverter是GenericConverter和ConditionalConverter接口的联合，它允许你定义这样的自定义匹配条件:
+                                    </span>
                                 </p>
                             </div>
                             <div class="listingblock">
@@ -17066,9 +17215,11 @@ public interface ConditionalGenericConverter extends GenericConverter, Condition
                                     A good example of a <code>ConditionalGenericConverter</code> is an <code>IdToEntityConverter</code> that converts between a persistent entity identifier and an entity reference. Such an <code>IdToEntityConverter</code>                                    might match only if the target entity type declares a static finder method (for example,
                                     <code>findAccount(Long)</code>). You might perform such a finder method check in the implementation of
                                     <code>matches(TypeDescriptor, TypeDescriptor)</code>.</br>
+                                    <span class="translate">
                                     ConditionalGenericConverter的一个很好的例子是IdToEntityConverter，它在持久实体标识符和实体引用之间进行转换。
                                     只有当目标实体类型声明了静态查找器方法(例如，findAccount(Long))时，这样的IdToEntityConverter才可能匹配。
                                     您可以在匹配(TypeDescriptor, TypeDescriptor)的实现中执行这样的查找器方法检查。
+                                    </span>
                                 </p>
                             </div>
                         </div>
@@ -17078,7 +17229,9 @@ public interface ConditionalGenericConverter extends GenericConverter, Condition
                         <div class="paragraph">
                             <p>
                                 <code>ConversionService</code> defines a unified API for executing type conversion logic at runtime. Converters are often run behind the following facade interface:</br>
+                                 <span class="translate">
                                 ConversionService定义了一个统一的API，用于在运行时执行类型转换逻辑。转换器通常在以下facade接口后面运行:
+                                </span>
                             </p>
                         </div>
                         <div class="listingblock">
@@ -17101,7 +17254,9 @@ public interface ConversionService {
                             <p>
                                 Most <code>ConversionService</code> implementations also implement <code>ConverterRegistry</code>, which provides an SPI for registering converters. Internally, a <code>ConversionService</code> implementation delegates to its
                                 registered converters to carry out type conversion logic.</br>
+                                 <span class="translate">
                                 大多数ConversionService实现还实现了ConverterRegistry，它提供了一个用于注册转换器的SPI。在内部，ConversionService实现委托给它注册的转换器来执行类型转换逻辑。
+                                </span>
                             </p>
                         </div>
                         <div class="paragraph">
@@ -17109,23 +17264,27 @@ public interface ConversionService {
                                 A robust <code>ConversionService</code> implementation is provided in the <code>core.convert.
                                 support</code> package. <code>GenericConversionService</code> is the general-purpose implementation suitable for use in most environments.
                                 <code>ConversionServiceFactory</code> provides a convenient factory for creating common <code>ConversionService</code> configurations.</br>
+                                 <span class="translate">
                                 <code>core.convert. support</code>包中提供了一个健壮的ConversionService实现。
                                 GenericConversionService是适合在大多数环境中使用的通用实现。ConversionServiceFactory为创建公共ConversionService配置提供了一个方便的工厂。
+                                </span>
                             </p>
                         </div>
                     </div>
                     <div class="sect3">
                         <h4 id="core-convert-Spring-config"><a class="anchor" href="#core-convert-Spring-config"></a>3.4.5. Configuring a <code>ConversionService</code></h4>
-                        <span>3.4.5. 配置一个ConversionService</span>
+                         <span class="translate">3.4.5. 配置一个ConversionService</span>
                         <div class="paragraph">
                             <p>
                                 A <code>ConversionService</code> is a stateless object designed to be instantiated at application startup
                                 and then shared between multiple threads. In a Spring application, you typically configure a <code>ConversionService</code>                                instance for each Spring container (or <code>ApplicationContext</code>). Spring picks up that <code>ConversionService</code> and uses it whenever a type conversion needs to be performed by the framework. You can also inject
                                 this
                                 <code>ConversionService</code> into any of your beans and invoke it directly.</br>
+                                 <span class="translate">
                                 ConversionService是一个无状态对象，设计为在应用程序启动时实例化，然后在多个线程之间共享。在Spring应用程序中，
                                 您通常为每个Spring容器(或ApplicationContext)配置一个ConversionService实例。每当框架需要执行类型转换时，Spring就会选择该ConversionService并使用它。
                                 您还可以将此ConversionService注入到任何bean中并直接调用它。
+                                </span>
                             </p>
                         </div>
                         <div class="admonitionblock note">
@@ -17136,7 +17295,9 @@ public interface ConversionService {
                                     </td>
                                     <td class="content">
                                         If no <code>ConversionService</code> is registered with Spring, the original <code>PropertyEditor</code>-based system is used.</br>
+                                         <span class="translate">
                                         如果没有向Spring注册ConversionService，将使用原始的基于propertyeeditor的系统。
+                                        </span>
                                     </td>
                                 </tr>
                             </table>
@@ -17144,7 +17305,9 @@ public interface ConversionService {
                         <div class="paragraph">
                             <p>
                                 To register a default <code>ConversionService</code> with Spring, add the following bean definition with an <code>id</code> of <code>conversionService</code>:</br>
+                                 <span class="translate">
                                 要向Spring注册一个默认的ConversionService，请添加下面的bean定义，它的id是ConversionService:
+                                </span>
                             </p>
                         </div>
                         <div class="listingblock">
@@ -17158,8 +17321,10 @@ public interface ConversionService {
                                 A default <code>ConversionService</code> can convert between strings, numbers, enums, collections, maps, and other common types.
                                 To supplement or override the default converters with your own custom converters, set the <code>converters</code>
                                 property. Property values can implement any of the <code>Converter</code>, <code>ConverterFactory</code>, or <code>GenericConverter</code> interfaces.</br>
+                                 <span class="translate">
                                 默认的ConversionService可以在字符串、数字、枚举、集合、映射和其他常见类型之间进行转换。若要使用您自己的自定义转换器补充或覆盖默认转换器，请设置转换器属性。
                                 属性值可以实现任何Converter、ConverterFactory或GenericConverter接口。
+                                </span>
                             </p>
                         </div>
                         <div class="listingblock">
@@ -17178,7 +17343,9 @@ public interface ConversionService {
                             <p>
                                 It is also common to use a <code>ConversionService</code> within a Spring MVC application. See
                                 <a href="web.html#mvc-config-conversion">Conversion and Formatting</a> in the Spring MVC chapter.</br>
+                                 <span class="translate">
                                 在Spring MVC应用程序中使用ConversionService也是很常见的。请参阅Spring MVC章节中的转换和格式。
+                                </span>
                             </p>
                         </div>
                         <div class="paragraph">
@@ -17186,7 +17353,9 @@ public interface ConversionService {
                                 In certain situations, you may wish to apply formatting during conversion. See
                                 <a href="#format-FormatterRegistry-SPI">The <code>FormatterRegistry</code> SPI</a> for details on
                                 using <code>FormattingConversionServiceFactoryBean</code>.</br>
+                                 <span class="translate">
                                 在某些情况下，您可能希望在转换期间应用格式。关于使用FormatterRegistry SPI的详细信息，请参阅FormatterRegistry SPI。
+                                </span>
                             </p>
                         </div>
                     </div>
@@ -17197,7 +17366,9 @@ public interface ConversionService {
                             <p>
                                 To work with a <code>ConversionService</code> instance programmatically, you can inject a reference to it
                                 like you would for any other bean. The following example shows how to do so:</br>
+                                 <span class="translate">
                                 要以编程方式使用ConversionService实例，可以像对任何其他bean那样注入对它的引用。下面的例子展示了如何做到这一点:
+                                </span>
                             </p>
                         </div>
                         <div class="listingblock primary">
@@ -17234,14 +17405,18 @@ class MyService(private val conversionService: ConversionService) {
                                 but it does not work with more complex types, such as a collection of a parameterized element. For example, if you
                                 want to convert a <code>List</code> of <code>Integer</code> to a <code>List</code> of <code>String</code> programmatically,
                                 you need to provide a formal definition of the source and target types.</br>
+                                 <span class="translate">
                                 对于大多数用例，您可以使用指定targetType的convert方法，但它不适用于更复杂的类型，例如参数化元素的集合。
                                 例如，如果希望以编程方式将List of Integer转换为List of String，则需要提供源类型和目标类型的正式定义。
+                                </span>
                             </p>
                         </div>
                         <div class="paragraph">
                             <p>
                                 Fortunately, <code>TypeDescriptor</code> provides various options to make doing so straightforward, as the following example shows:</br>
+                                 <span class="translate">
                                 幸运的是，TypeDescriptor提供了各种选项，使操作更加简单，如下面的例子所示:
+                                </span>
                             </p>
                         </div>
                         <div class="listingblock primary">
@@ -17269,8 +17444,10 @@ cs.convert(input,
                         <div class="paragraph">
                             <p>
                                 Note that <code>DefaultConversionService</code> automatically registers converters that are appropriate for most environments. This includes collection converters, scalar converters, and basic <code>Object</code>-to-<code>String</code>                                converters. You can register the same converters with any <code>ConverterRegistry</code> by using the static <code>addDefaultConverters</code> method on the <code>DefaultConversionService</code> class.</br>
+                                 <span class="translate">
                                 请注意，DefaultConversionService自动注册适合于大多数环境的转换器。
                                 这包括集合转换器、标量转换器和基本的对象到字符串转换器。通过使用DefaultConversionService类上的静态addDefaultConverters方法，可以将相同的转换器注册到任何ConverterRegistry中。
+                                </span>
                             </p>
                         </div>
                         <div class="paragraph">
@@ -17278,7 +17455,9 @@ cs.convert(input,
                                 Converters for value types are reused for arrays and collections, so there is no need to create a specific converter
                                 to convert from a <code>Collection</code> of <code>S</code> to a
                                 <code>Collection</code> of <code>T</code>, assuming that standard collection handling is appropriate.</br>
+                                 <span class="translate">
                                 值类型的转换器可用于数组和集合，因此无需创建特定的转换器来将S的Collection转换为T的Collection，前提是标准的集合处理是合适的。
+                                </span>
                             </p>
                         </div>
                     </div>
@@ -17289,10 +17468,12 @@ cs.convert(input,
                         <p>
                             As discussed in the previous section, <a href="#core-convert"><code>core.convert</code></a> is a general-purpose type conversion system. It provides a unified <code>ConversionService</code> API as well as a strongly typed <code>Converter</code>                            SPI for implementing conversion logic from one type to another. A Spring container uses this system to bind bean property values. In addition, both the Spring Expression Language (SpEL) and <code>DataBinder</code> use this
                             system to bind field values. For example, when SpEL needs to coerce a <code>Short</code> to a <code>Long</code> to complete an <code>expression.setValue(Object bean, Object value)</code> attempt, the <code>core.convert</code>                            system performs the coercion.</br>
+                             <span class="translate">
                             如前一节所讨论的，<a href="#core-convert"><code>core.convert</code></a>是一个通用类型转换系统。
                             它提供了统一的ConversionService API和强类型转换器SPI，用于实现从一种类型到另一种类型的转换逻辑。
                             Spring容器使用这个系统来绑定bean属性值。此外，Spring Expression Language (SpEL)和DataBinder都使用这个系统来绑定字段值。
                             例如，当SpEL需要将Short强制转换为Long以完成一个表达式时。setValue(对象bean，对象值)尝试，核心。转换系统执行强制。
+                            </span>
                         </p>
                     </div>
                     <div class="paragraph">
@@ -17301,9 +17482,11 @@ cs.convert(input,
                             well as back to <code>String</code> to support the view rendering process. In addition, you often need to localize <code>String</code> values. The more general <code>core.convert</code> <code>Converter</code> SPI does not address
                             such formatting requirements directly. To directly address them, Spring 3 introduced a convenient <code>Formatter</code> SPI that provides a simple and robust alternative to <code>PropertyEditor</code> implementations for client
                             environments.</br>
+                             <span class="translate">
                             现在考虑典型客户端环境(如web或桌面应用程序)的类型转换需求。在这样的环境中，通常从String转换为支持客户端回发过程，再转换为String以支持视图呈现过程。
                             此外，您经常需要本地化String值。更一般的核心。转换器SPI不直接解决此类格式化要求。
                             为了直接解决这些问题，Spring 3 引入了一个方便的Formatter SPI，它为客户端环境提供了PropertyEditor实现的一个简单而健壮的替代方案。
+                            </span>
                         </p>
                     </div>
                     <div class="paragraph">
@@ -17311,9 +17494,11 @@ cs.convert(input,
                             In general, you can use the <code>Converter</code> SPI when you need to implement general-purpose type conversion logic&#8201;&#8212;&#8201;for example, for converting between a <code>java.util.Date</code> and a <code>Long</code>.
                             You can use the <code>Formatter</code> SPI when you work in a client environment (such as a web application) and need to parse and print localized field values. The <code>ConversionService</code> provides a unified type conversion
                             API for both SPIs.</br>
+                            <span class="translate">
                             通常，当您需要实现通用类型转换逻辑时，您可以使用Converter SPI—例如，在java.util.Date和Long之间进行转换。
                             当您在客户端环境(例如web应用程序)中工作并需要解析和打印本地化字段值时，您可以使用Formatter SPI。
                             ConversionService为这两个spi提供了统一的类型转换API。
+                            </span>
                         </p>
                     </div>
                     <div class="sect3">
@@ -17321,7 +17506,9 @@ cs.convert(input,
                         <div class="paragraph">
                             <p>
                                 The <code>Formatter</code> SPI to implement field formatting logic is simple and strongly typed. The following listing shows the <code>Formatter</code> interface definition:</br>
+                                 <span class="translate">
                                 用于实现字段格式化逻辑的Formatter SPI是简单且强类型的。下面的清单显示了Formatter接口定义:
+                                </span>
                             </p>
                         </div>
                         <div class="listingblock">
@@ -17335,7 +17522,9 @@ public interface Formatter&lt;T&gt; extends Printer&lt;T&gt;, Parser&lt;T&gt; {
                         <div class="paragraph">
                             <p>
                                 <code>Formatter</code> extends from the <code>Printer</code> and <code>Parser</code> building-block interfaces. The following listing shows the definitions of those two interfaces:</br>
-                                Formatter从Printer和Parser构建块接口扩展而来。下面的清单显示了这两个接口的定义:
+                                <span class="translate">
+                                    Formatter从Printer和Parser构建块接口扩展而来。下面的清单显示了这两个接口的定义:
+                                </span>
                             </p>
                         </div>
                         <div class="listingblock">
@@ -17362,9 +17551,11 @@ public interface Parser&lt;T&gt; {
                                 <code>java.util.Date</code>. Implement the <code>print()</code> operation to print an instance of <code>T</code> for display in the client locale. Implement the <code>parse()</code> operation to parse an instance of
                                 <code>T</code> from the formatted representation returned from the client locale. Your <code>Formatter</code> should throw a <code>ParseException</code> or an <code>IllegalArgumentException</code> if a parse attempt fails.
                                 Take care to ensure that your <code>Formatter</code> implementation is thread-safe.</br>
+                                <span class="translate">
                                 要创建自己的Formatter，请实现前面所示的Formatter接口。将T参数化为您希望格式化的对象类型—例如，java.util.Date。
                                 实现print()操作以打印T的实例以在客户端语言环境中显示。实现parse()操作，从客户端语言环境返回的格式化表示中解析T的实例。
                                 如果解析尝试失败，你的Formatter应该抛出一个ParseException或一个IllegalArgumentException。请注意确保您的Formatter实现是线程安全的。
+                                </span>
                             </p>
                         </div>
                         <div class="paragraph">
@@ -17374,13 +17565,17 @@ public interface Parser&lt;T&gt; {
                                 <code>PercentStyleFormatter</code> to format <code>Number</code> objects that use a <code>java.text.NumberFormat</code>.
                                 The <code>datetime</code> package provides a <code>DateFormatter</code> to format <code>java.util.Date</code>
                                 objects with a <code>java.text.DateFormat</code>.</br>
+                                <span class="translate">
                                 为了方便起见，格式子包提供了几个Formatter实现。number包提供了NumberStyleFormatter、CurrencyStyleFormatter和PercentStyleFormatter来格式化使用
                                 java.text.NumberFormat的number对象。datetime包提供了一个DateFormatter来用java.text.DateFormat格式化java.util.Date对象。
+                                </span>
                             </p>
                         </div>
                         <div class="paragraph">
                             <p>The following <code>DateFormatter</code> is an example <code>Formatter</code> implementation:</br>
+                                <span class="translate">
                                 下面的DateFormatter是Formatter实现的一个例子:
+                                </span>
                             </p>
                         </div>
                         <div class="listingblock primary">
@@ -17441,7 +17636,9 @@ public final class DateFormatter implements Formatter&lt;Date&gt; {
                         <div class="paragraph">
                             <p>The Spring team welcomes community-driven <code>Formatter</code> contributions. See
                                 <a href="https://github.com/spring-projects/spring-framework/issues">GitHub Issues</a> to contribute.</br>
+                                <span class="translate">
                                 Spring团队欢迎社区驱动的Formatter贡献。请参阅GitHub问题进行贡献。
+                                </span>
                             </p>
                         </div>
                     </div>
@@ -17450,7 +17647,9 @@ public final class DateFormatter implements Formatter&lt;Date&gt; {
                         <div class="paragraph">
                             <p>
                                 Field formatting can be configured by field type or annotation. To bind an annotation to a <code>Formatter</code>, implement <code>AnnotationFormatterFactory</code>. The following listing shows the definition of the <code>AnnotationFormatterFactory</code> interface:</br>
+                                <span class="translate">
                                 字段格式可以通过字段类型或注释进行配置。要将注释绑定到Formatter，实现AnnotationFormatterFactory。下面的清单显示了AnnotationFormatterFactory接口的定义:
+                                </span>
                             </p>
                         </div>
                         <div class="listingblock">
@@ -17471,16 +17670,20 @@ public interface AnnotationFormatterFactory&lt;A extends Annotation&gt; {
                             <p>
                                 To create an implementation: . Parameterize A to be the field <code>annotationType</code> with which you wish to associate formatting logic&#8201;&#8212;&#8201;for example <code>org.springframework.format.annotation.DateTimeFormat</code>.
                                 . Have <code>getFieldTypes()</code> return the types of fields on which the annotation can be used. . Have <code>getPrinter()</code> return a <code>Printer</code> to print the value of an annotated field. . Have <code>getParser()</code>  return a <code>Parser</code> to parse a <code>clientValue</code> for an annotated field.</br>
-                                创建一个实现: 将A参数化为您希望与之关联格式化逻辑的annotationType字段。例如org.springframework.format.annotation.DateTimeFormat。
+                                <span class="translate">
+                                创建一个实现: 将A参数化为您希望与之关联格式化逻辑的annotationType字段。例如 <code>org.springframework.format.annotation.DateTimeFormat</code>。
                                 让getFieldTypes()返回可以使用注释的字段类型。让getPrinter()返回一个Printer来打印带注释的字段的值。
                                 让getParser()返回一个Parser来解析一个带注释字段的clientValue。
+                                </span>
                             </p>
                         </div>
                         <div class="paragraph">
                             <p>
                                 The following example <code>AnnotationFormatterFactory</code> implementation binds
                                 the <code>@NumberFormat</code> annotation to a formatter to let a number style or pattern be specified:</br>
+                                <span class="translate">
                                 下面的示例AnnotationFormatterFactory实现将@NumberFormat注释绑定到formatter，以指定数字样式或模式:
+                                </span>
                             </p>
                         </div>
                         <div class="listingblock primary">
@@ -17555,7 +17758,9 @@ public interface AnnotationFormatterFactory&lt;A extends Annotation&gt; {
                         <div class="paragraph">
                             <p>
                                 To trigger formatting, you can annotate fields with @NumberFormat, as the following example shows:</br>
+                                <span class="translate">
                                 要触发格式化，你可以用@NumberFormat注释字段，如下面的例子所示:
+                                </span>
                             </p>
                         </div>
                         <div class="listingblock primary">
@@ -17583,14 +17788,18 @@ public interface AnnotationFormatterFactory&lt;A extends Annotation&gt; {
                                     A portable format annotation API exists in the <code>org.springframework.format.annotation</code> package. You can use <code>@NumberFormat</code> to format <code>Number</code> fields such as <code>Double</code> and
                                     <code>Long</code>, and <code>@DateTimeFormat</code> to
                                     format <code>java.util.Date</code>, <code>java.util.Calendar</code>, <code>Long</code> (for millisecond timestamps) as well as JSR-310 <code>java.time</code>.</br>
+                                    <span class="translate">
                                     一个可移植的格式注释API存在于org.springframework.format.annotation包中。您可以使用@NumberFormat来格式化数字字段，如Double和Long，
                                     并使用@DateTimeFormat来格式化<code>java.util.Date</code>、<code>java.util.Calendar</code>,<code>Long</code>(毫秒时间戳)以及JSR-310 <code>java.time</code>。
+                                    </span>
                                 </p>
                             </div>
                             <div class="paragraph">
                                 <p>
                                     The following example uses <code>@DateTimeFormat</code> to format a <code>java.util.Date</code> as an ISO Date (yyyy-MM-dd):</br>
+                                    <span class="translate">
                                     以下示例使用<code>@DateTimeFormat</code>将java.util.Date格式化为ISO日期(yyyy-MM-dd):
+                                    </span>
                                 </p>
                             </div>
                             <div class="listingblock primary">
@@ -17623,16 +17832,20 @@ public interface AnnotationFormatterFactory&lt;A extends Annotation&gt; {
                                 using <code>FormattingConversionServiceFactoryBean</code>. Because this implementation also
                                 implements <code>ConversionService</code>, you can directly configure it for use with Spring&#8217;s <code>DataBinder</code> and
                                 the Spring Expression Language (SpEL).</br>
-                                FormatterRegistry是一个用于注册格式化程序和转换器的SPI。
+                                <span class="translate">
+                                <code>FormatterRegistry</code>是一个用于注册格式化程序和转换器的SPI。
                                 formatingconversionservice是适用于大多数环境的FormatterRegistry的实现。您可以通过编程或声明的方式将此变体配置为一个Spring bean，
                                 例如使用formatingconversionservicefactorybean。因为这个实现也实现了ConversionService，
                                 所以您可以直接配置它，以便与Spring的DataBinder和Spring表达式语言(SpEL)一起使用。
+                                </span>
                             </p>
                         </div>
                         <div class="paragraph">
                             <p>
                                 The following listing shows the <code>FormatterRegistry</code> SPI:</br>
+                                <span class="translate">
                                 下面的清单显示了FormatterRegistry SPI:
+                                </span>
                             </p>
                         </div>
                         <div class="listingblock">
@@ -17658,7 +17871,9 @@ public interface FormatterRegistry extends ConverterRegistry {
                         <div class="paragraph">
                             <p>
                                 As shown in the preceding listing, you can register formatters by field type or by annotation.</br>
+                                <span class="translate">
                                 如前面的清单所示，您可以通过字段类型或注释注册格式化程序。
+                                </span>
                             </p>
                         </div>
                         <div class="paragraph">
@@ -17667,9 +17882,11 @@ public interface FormatterRegistry extends ConverterRegistry {
                                 For example, you might want to enforce that all date fields are formatted
                                 a certain way or that fields with a specific annotation are formatted in a certain way. With a shared <code>FormatterRegistry</code>,
                                 you define these rules once, and they are applied whenever formatting is needed.</br>
+                                <span class="translate">
                                 FormatterRegistry SPI允许您集中配置格式化规则，而不是跨控制器复制此类配置。
                                 例如，您可能希望强制所有日期字段以某种方式进行格式化，或者强制具有特定注释的字段以某种方式进行格式化。
                                 使用共享的FormatterRegistry，只需定义这些规则一次，就可以在需要格式化时应用它们。
+                                </span>
                             </p>
                         </div>
                     </div>
@@ -17678,7 +17895,9 @@ public interface FormatterRegistry extends ConverterRegistry {
                         <div class="paragraph">
                             <p>
                                 <code>FormatterRegistrar</code> is an SPI for registering formatters and converters through the FormatterRegistry. The following listing shows its interface definition:</br>
+                                <span class="translate">
                                 FormatterRegistrar是一个通过FormatterRegistry注册格式化程序和转换器的SPI。下面的清单显示了它的接口定义:
+                                </span>
                             </p>
                         </div>
                         <div class="listingblock">
@@ -17698,9 +17917,11 @@ public interface FormatterRegistrar {
                                 example, when a formatter needs to be indexed under a specific field type different from its own <code>&lt;T&gt;</code> or when registering
                                 a <code>Printer</code>/<code>Parser</code> pair. The next section provides more
                                 information on converter and formatter registration.</br>
+                                <span class="translate">
                                 当为给定格式化类别(如日期格式化)注册多个相关转换器和格式化器时，<code>FormatterRegistrar</code> 非常有用。
                                 在声明式注册不足的情况下，它也很有用——例如，当格式化程序需要在不同于它自己的<code>&lt;T&gt;</code>的特定字段类型下建立索引时，或者当注<code>Printer</code>/<code>Parser</code> 对时。
                                 下一节将提供有关转换器和格式化程序注册的更多信息。
+                                </span>
                             </p>
                         </div>
                     </div>
@@ -17708,7 +17929,9 @@ public interface FormatterRegistrar {
                         <h4 id="format-configuring-formatting-mvc"><a class="anchor" href="#format-configuring-formatting-mvc"></a>3.5.5. Configuring Formatting in Spring MVC</h4>
                         <div class="paragraph">
                             <p>See <a href="web.html#mvc-config-conversion">Conversion and Formatting</a> in the Spring MVC chapter.</br>
+                                <span class="translate">
                                 请参阅Spring MVC章节中的转换和格式。
+                                </span>
                             </p>
                         </div>
                     </div>
@@ -17717,18 +17940,22 @@ public interface FormatterRegistrar {
                     <h3 id="format-configuring-formatting-globaldatetimeformat"><a class="anchor" href="#format-configuring-formatting-globaldatetimeformat"></a>
                         3.6. Configuring a Global Date and Time Format
                     </h3>
-                    <span>3.6. 配置全局日期和时间格式</span>
+                    <span class="translate">3.6. 配置全局日期和时间格式</span>
                     <div class="paragraph">
                         <p>
                             By default, date and time fields not annotated with <code>@DateTimeFormat</code> are converted from strings by using
                             the <code>DateFormat.SHORT</code> style. If you prefer, you can change this by defining your own global format.</br>
+                            <span class="translate">
                             默认情况下，没有使用@DateTimeFormat注释的日期和时间字段通过使用DateFormat从字符串转换。短的风格。如果愿意，可以通过定义自己的全局格式来改变这一点。
+                            </span>
                         </p>
                     </div>
                     <div class="paragraph">
                         <p>
                             To do that, ensure that Spring does not register default formatters. Instead, register formatters manually with the help of:</br>
+                            <span class="translate">
                             为此，请确保Spring没有注册默认格式化程序。相反，在以下帮助下手动注册格式化程序:
+                            </span>
                         </p>
                     </div>
                     <div class="ulist">
@@ -17744,7 +17971,9 @@ public interface FormatterRegistrar {
                     <div class="paragraph">
                         <p>
                             For example, the following Java configuration registers a global <code>yyyyMMdd</code> format:</br>
+                            <span class="translate">
                             例如，下面的Java配置注册了全局yyyyMMdd格式:
+                            </span>
                         </p>
                     </div>
                     <div class="listingblock primary">
@@ -17809,7 +18038,9 @@ class AppConfig {
                         <p>
                             If you prefer XML-based configuration, you can use a
                             <code>FormattingConversionServiceFactoryBean</code>. The following example shows how to do so:</br>
+                            <span class="translate">
                             如果您喜欢基于xml的配置，您可以使用formatingconversionservicefactorybean。下面的例子展示了如何做到这一点:
+                            </span>
                         </p>
                     </div>
                     <div class="listingblock">
@@ -17848,7 +18079,9 @@ class AppConfig {
                             Note there are extra considerations when configuring date and time formats in web applications. Please see
                             <a href="web.html#mvc-config-conversion">WebMVC Conversion and Formatting</a> or
                             <a href="web-reactive.html#webflux-config-conversion">WebFlux Conversion and Formatting</a>.</br>
+                            <span class="translate">
                             注意，在web应用程序中配置日期和时间格式时有一些额外的考虑。请参阅WebMVC转换和格式或WebFlux转换和格式。
+                            </span>
                         </p>
                     </div>
                 </div>
@@ -17857,7 +18090,9 @@ class AppConfig {
                     <div class="paragraph">
                         <p>The Spring Framework provides support for the
                             <a href="https://beanvalidation.org/">Java Bean Validation</a> API.</br>
+                            <span class="translate">
                             Spring框架提供了对Java Bean验证API的支持。
+                            </span>
                         </p>
                     </div>
                     <div class="sect3">
@@ -17866,13 +18101,17 @@ class AppConfig {
                             <p>
                                 Bean Validation provides a common way of validation through constraint declaration and metadata for Java applications. To use it, you annotate domain model properties with declarative validation constraints which are then enforced
                                 by the runtime. There are built-in constraints, and you can also define your own custom constraints.</br>
+                                <span class="translate">
                                 Bean验证为Java应用程序提供了一种通过约束声明和元数据进行验证的通用方法。
                                 要使用它，您可以用声明性验证约束来注释域模型属性，然后运行时强制执行这些约束。有内置的约束，您还可以定义自己的自定义约束。
+                                </span>
                             </p>
                         </div>
                         <div class="paragraph">
                             <p>Consider the following example, which shows a simple <code>PersonForm</code> model with two properties:</br>
+                                <span class="translate">
                                 考虑下面的例子，它显示了一个简单的带有两个属性的PersonForm模型:
+                                </span>
                             </p>
                         </div>
                         <div class="listingblock primary">
@@ -17895,7 +18134,9 @@ class AppConfig {
                         </div>
                         <div class="paragraph">
                             <p>Bean Validation lets you declare constraints as the following example shows:</br>
+                                <span class="translate">
                                 Bean验证允许你声明约束，如下面的例子所示:
+                                </span>
                             </p>
                         </div>
                         <div class="listingblock primary">
@@ -17926,7 +18167,9 @@ class AppConfig {
                         <div class="paragraph">
                             <p>
                                 A Bean Validation validator then validates instances of this class based on the declared constraints. See <a href="https://beanvalidation.org/">Bean Validation</a> for general information about the API. See the <a href="https://hibernate.org/validator/">Hibernate Validator</a>                                documentation for specific constraints. To learn how to set up a bean validation provider as a Spring bean, keep reading.</br>
+                                <span class="translate">
                                 Bean Validation验证器然后根据声明的约束验证该类的实例。有关API的一般信息，请参见Bean验证。有关特定约束，请参阅Hibernate Validator文档。要了解如何将bean验证提供程序设置为Spring bean，请继续阅读。
+                                </span>
                             </p>
                         </div>
                     </div>
@@ -17936,13 +18179,17 @@ class AppConfig {
                             <p>
                                 Spring provides full support for the Bean Validation API including the bootstrapping of a Bean Validation provider as a Spring bean. This lets you inject a
                                 <code>javax.validation.ValidatorFactory</code> or <code>javax.validation.Validator</code> wherever validation is needed in your application.</br>
+                                <span class="translate">
                                 Spring提供了对Bean验证API的全面支持，包括将Bean验证提供程序引导为Spring Bean。这允许您在应用程序中任何需要验证的地方注入javax. validate . validatorfactory或javax. validate . validator。
+                                </span>
                             </p>
                         </div>
                         <div class="paragraph">
                             <p>
                                 You can use the <code>LocalValidatorFactoryBean</code> to configure a default Validator as a Spring bean, as the following example shows:</br>
+                                <span class="translate">
                                 您可以使用LocalValidatorFactoryBean将默认Validator配置为Spring bean，如下面的示例所示:
+                                </span>
                             </p>
                         </div>
                         <div class="listingblock primary">
@@ -17971,7 +18218,9 @@ public class AppConfig {
                             <p>
                                 The basic configuration in the preceding example triggers bean validation to initialize by using its default bootstrap mechanism. A Bean Validation provider, such as the Hibernate Validator, is expected to be present in the
                                 classpath and is automatically detected.</br>
+                                <span class="translate">
                                 前面示例中的基本配置通过使用缺省引导机制触发bean验证来进行初始化。Bean验证提供程序(如Hibernate Validator)将出现在类路径中，并被自动检测到。
+                                </span>
                             </p>
                         </div>
                         <div class="sect4">
@@ -17981,15 +18230,19 @@ public class AppConfig {
                                     <code>LocalValidatorFactoryBean</code> implements both <code>javax.validation.ValidatorFactory</code> and
                                     <code>javax.validation.Validator</code>, as well as Spring&#8217;s <code>org.springframework.validation.Validator</code>. You can inject a reference to either of these interfaces into beans that need to invoke validation
                                     logic.</br>
+                                    <span class="translate">
                                     LocalValidatorFactoryBean实现了<code>javax.validation.ValidatorFactory</code> 和
                                     <code>javax.validation.Validator</code>，以及
                                     <code>org.springframework.validation.Validator</code>您可以将对这些接口的引用注入到需要调用验证逻辑的bean中。
+                                    </span>
                                 </p>
                             </div>
                             <div class="paragraph">
                                 <p>
                                     You can inject a reference to <code>javax.validation.Validator</code> if you prefer to work with the Bean Validation API directly, as the following example shows:</br>
+                                    <span class="translate">
                                     如果你喜欢直接使用Bean验证API，你可以注入一个对 <code>javax.validation.Validator</code>的引用，如下面的例子所示:
+                                    </span>
                                 </p>
                             </div>
                             <div class="listingblock primary">
@@ -18017,7 +18270,9 @@ class MyService(@Autowired private val validator: Validator)</code></pre>
                             <div class="paragraph">
                                 <p>
                                     You can inject a reference to <code>org.springframework.validation.Validator</code> if your bean requires the Spring Validation API, as the following example shows:</br>
+                                    <span class="translate">
                                     如果你的bean需要Spring Validation API，你可以向<code>org.springframework.validation.Validator</code>注入一个引用，如下面的例子所示:
+                                    </span>
                                 </p>
                             </div>
                             <div class="listingblock primary">
@@ -18045,22 +18300,28 @@ class MyService(@Autowired private val validator: Validator)</code></pre>
                         </div>
                         <div class="sect4">
                             <h5 id="validation-beanvalidation-spring-constraints"><a class="anchor" href="#validation-beanvalidation-spring-constraints"></a>Configuring Custom Constraints</h5>
-                            <span>配置自定义约束</span>
+                            <span class="translate">配置自定义约束</span>
                             <div class="paragraph">
                                 <p>Each bean validation constraint consists of two parts:</br>
+                                    <span class="translate">
                                     每个bean验证约束由两部分组成:
+                                    </span>
                                 </p>
                             </div>
                             <div class="ulist">
                                 <ul>
                                     <li>
                                         <p>A <code>@Constraint</code> annotation that declares the constraint and its configurable properties.</br>
+                                            <span class="translate">
                                             声明约束及其可配置属性的@Constraint注释。
+                                            </span>
                                         </p>
                                     </li>
                                     <li>
                                         <p>An implementation of the <code>javax.validation.ConstraintValidator</code> interface that implements the constraint&#8217;s behavior.</br>
+                                            <span class="translate">
                                             实现约束行为的<code>javax.validation.ConstraintValidator</code> 接口的实现。
+                                            </span>
                                         </p>
                                     </li>
                                 </ul>
@@ -18069,7 +18330,9 @@ class MyService(@Autowired private val validator: Validator)</code></pre>
                                 <p>
                                     To associate a declaration with an implementation, each <code>@Constraint</code> annotation references a corresponding <code>ConstraintValidator</code> implementation class. At runtime, a
                                     <code>ConstraintValidatorFactory</code> instantiates the referenced implementation when the constraint annotation is encountered in your domain model.</br>
+                                    <span class="translate">
                                     为了将声明与实现关联起来，每个@Constraint注释引用一个相应的ConstraintValidator实现类。在运行时，当在域模型中遇到约束注释时，ConstraintValidatorFactory实例化所引用的实现。
+                                    </span>
                                 </p>
                             </div>
                             <div class="paragraph">
@@ -18077,15 +18340,19 @@ class MyService(@Autowired private val validator: Validator)</code></pre>
                                     By default, the <code>LocalValidatorFactoryBean</code> configures a <code>SpringConstraintValidatorFactory</code> that uses Spring
                                     to create <code>ConstraintValidator</code> instances. This lets your custom
                                     <code>ConstraintValidators</code> benefit from dependency injection like any other Spring bean.</br>
+                                    <span class="translate">
                                     默认情况下，LocalValidatorFactoryBean配置一个使用Spring创建constraintvalidatorfactory实例的SpringConstraintValidatorFactory。
                                     这让您的自定义constraintvalidator可以像其他任何Spring bean一样从依赖项注入中获益。
+                                    </span>
                                 </p>
                             </div>
                             <div class="paragraph">
                                 <p>
                                     The following example shows a custom <code>@Constraint</code> declaration followed by an associated
                                     <code>ConstraintValidator</code> implementation that uses Spring for dependency injection:</br>
+                                    <span class="translate">
                                     下面的例子展示了一个自定义的@Constraint声明，后面是一个关联的ConstraintValidator实现，它使用Spring进行依赖注入:
+                                    </span>
                                 </p>
                             </div>
                             <div class="listingblock primary">
@@ -18135,7 +18402,9 @@ class MyConstraintValidator(private val aDependency: Foo) : ConstraintValidator 
                             <div class="paragraph">
                                 <p>As the preceding example shows, a <code>ConstraintValidator</code> implementation can have its dependencies
                                     <code>@Autowired</code> as any other Spring bean.</br>
+                                    <span class="translate">
                                     正如前面的示例所示，ConstraintValidator实现可以将其依赖项@Autowired与任何其他Spring bean一样。
+                                    </span>
                                 </p>
                             </div>
                         </div>
@@ -18144,7 +18413,9 @@ class MyConstraintValidator(private val aDependency: Foo) : ConstraintValidator 
                             <div class="paragraph">
                                 <p>You can integrate the method validation feature supported by Bean Validation 1.1 (and, as a custom extension, also by Hibernate Validator 4.3) into a Spring context through a
                                     <code>MethodValidationPostProcessor</code> bean definition:</br>
+                                    <span class="translate">
                                     你可以通过MethodValidationPostProcessor Bean定义将Bean validation 1.1支持的方法验证特性(以及Hibernate Validator 4.3支持的自定义扩展)集成到Spring上下文中:
+                                    </span>
                                 </p>
                             </div>
                             <div class="listingblock primary">
@@ -18173,8 +18444,10 @@ public class AppConfig {
                                     To be eligible for Spring-driven method validation, all target classes need to be annotated with Spring&#8217;s <code>@Validated</code> annotation, which can optionally also declare the validation groups to use. See
                                     <a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/validation/beanvalidation/MethodValidationPostProcessor.html"><code>MethodValidationPostProcessor</code></a> for setup details
                                     with the Hibernate Validator and Bean Validation 1.1 providers.</br>
+                                    <span class="translate">
                                     为了符合Spring驱动的方法验证的条件，所有目标类都需要使用Spring的@Validated注释，该注释还可以选择性地声明要使用的验证组。
                                     请参阅MethodValidationPostProcessor来了解Hibernate Validator和Bean Validation 1.1提供程序的设置细节。
+                                    </span>
                                 </p>
                             </div>
                             <div class="admonitionblock tip">
@@ -18189,7 +18462,9 @@ public class AppConfig {
                                                     Method validation relies on <a href="#aop-introduction-proxies">AOP Proxies</a> around the target classes, either JDK dynamic proxies for methods on interfaces or CGLIB proxies. There are certain limitations
                                                     with the use of proxies, some of which are described in
                                                     <a href="#aop-understanding-aop-proxies">Understanding AOP Proxies</a>. In addition remember to always use methods and accessors on proxied classes; direct field access will not work.</br>
+                                                    <span class="translate">
                                                     方法验证依赖于目标类周围的AOP代理，或者接口上方法的JDK动态代理，或者CGLIB代理。代理的使用有一些限制，其中一些在理解AOP代理中有描述。此外，请记住始终在代理类上使用方法和访问器;直接字段访问将不能工作。
+                                                    </span>
                                                 </p>
                                             </div>
                                         </td>
@@ -18206,8 +18481,10 @@ public class AppConfig {
                                     See the
                                     <a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/validation/beanvalidation/LocalValidatorFactoryBean.html"><code>LocalValidatorFactoryBean</code></a> javadoc for more information
                                     on these options.</br>
+                                    <span class="translate">
                                     默认的LocalValidatorFactoryBean配置对于大多数情况都足够了。
                                     从消息插值到遍历解析，各种Bean验证构造有许多配置选项。有关这些选项的更多信息，请参见LocalValidatorFactoryBean javadoc
+                                    </span>
                                 </p>
                             </div>
                         </div>
@@ -18218,13 +18495,17 @@ public class AppConfig {
                             <p>
                                 Since Spring 3, you can configure a <code>DataBinder</code> instance with a <code>Validator</code>. Once configured, you can invoke the <code>Validator</code> by calling <code>binder.validate()</code>. Any validation
                                 <code>Errors</code> are automatically added to the binder&#8217;s <code>BindingResult</code>.</br>
+                                <span class="translate">
                                 从Spring 3开始，您可以使用Validator配置DataBinder实例。配置完成后，可以通过调用binder.validate()来调用Validator。任何验证错误都会自动添加到绑定器的BindingResult中。
+                                </span>
                             </p>
                         </div>
                         <div class="paragraph">
                             <p>
                                 The following example shows how to use a <code>DataBinder</code> programmatically to invoke validation logic after binding to a target object:</br>
+                                <span class="translate">
                                 下面的例子展示了如何在绑定到目标对象后使用DataBinder程序调用验证逻辑:
+                                </span>
                             </p>
                         </div>
                         <div class="listingblock primary">
@@ -18267,8 +18548,10 @@ val results = binder.bindingResult</code></pre>
                                 <code>dataBinder.addValidators</code> and <code>dataBinder.replaceValidators</code>. This is useful when combining globally configured bean validation with a Spring <code>Validator</code> configured locally on a DataBinder
                                 instance. See
                                 <a href="web.html#mvc-config-validation">Spring MVC Validation Configuration</a>.</br>
+                                <span class="translate">
                                 您还可以通过DataBinder配置一个带有多个Validator实例的DataBinder。addValidators dataBinder.replaceValidators。
                                 当将全局配置的bean验证与本地配置在DataBinder实例上的Spring Validator相结合时，这很有用。请参阅Spring MVC验证配置。
+                                </span>
                             </p>
                         </div>
                     </div>
@@ -18276,7 +18559,9 @@ val results = binder.bindingResult</code></pre>
                         <h4 id="validation-mvc"><a class="anchor" href="#validation-mvc"></a>3.7.4. Spring MVC 3 Validation</h4>
                         <div class="paragraph">
                             <p>See <a href="web.html#mvc-config-validation">Validation</a> in the Spring MVC chapter.</br>
+                                <span class="translate">
                                 请参阅Spring MVC章节中的验证。
+                                </span>
                             </p>
                         </div>
                     </div>
@@ -20648,6 +20933,7 @@ class Society {
         </div>
         <div class="sect1">
             <h2 id="aop"><a class="anchor" href="#aop"></a>5. Aspect Oriented Programming with Spring</h2>
+            <span class="translate">5. Spring面向切面编程</span>
             <div class="sectionbody">
                 <div class="paragraph">
                     <p>Aspect-oriented Programming (AOP) complements Object-oriented Programming (OOP) by providing another way of thinking about program structure. The key unit of modularity in OOP is the class, whereas in AOP the unit of modularity is
