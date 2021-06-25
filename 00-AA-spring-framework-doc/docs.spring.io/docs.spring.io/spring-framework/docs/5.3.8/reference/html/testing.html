@@ -384,9 +384,11 @@
                     <p>This chapter covers Spring&#8217;s support for integration testing and best practices for unit testing. The Spring team advocates test-driven development (TDD). The Spring team has found that the correct use of inversion of control
                         (IoC) certainly does make both unit and integration testing easier (in that the presence of setter methods and appropriate constructors on classes makes them easier to wire together in a test without having to set up service locator
                         registries and similar structures).</br>
+                        <span class="translate">
                         本章将介绍Spring对集成测试的支持以及单元测试的最佳实践。Spring团队提倡测试驱动开发(TDD)。
                         Spring的团队发现,正确使用控制反转(IoC)的确是简化单元测试和集成测试(setter方法和适当的构造函数类的存在使他们更容易连接在一起测试,
                         而无需建立服务定位器注册中心和类似的结构)。
+                        </span>
                 </div>
             </div>
         </div>
@@ -474,8 +476,9 @@
                             <p>
                                 The <code>org.springframework.mock.jndi</code> package contains a partial implementation of the JNDI SPI, which you can use to set up a simple JNDI environment for test suites or stand-alone applications. If, for example, JDBC
                                 <code>DataSource</code> instances get bound to the same JNDI names in test code as they do in a Java EE container, you can reuse both application code and configuration in testing scenarios without modification.</br>
-                                <span class="translate">JNDI包包含JNDI SPI的部分实现，您可以使用它为测试套件或独立应用程序设置简单的JNDI环境。
-                                例如，如果JDBC DataSource实例在测试代码中绑定到与Java EE容器中相同的JNDI名称，则可以在测试场景中重用应用程序代码和配置，而无需修改。
+                                <span class="translate">
+                                org.springframework.mock.jndi 包包含 JNDI SPI 的部分实现，您可以使用它为测试套件或独立应用程序设置简单的 JNDI 环境。
+                                例如，如果 JDBC DataSource 实例在测试代码中绑定到与它们在 Java EE 容器中相同的 JNDI 名称，则您可以在测试场景中重用应用程序代码和配置而无需修改。
                                 </span>
                             </p>
                         </div>
@@ -651,7 +654,9 @@
                             <p>The <code>org.springframework.test.web</code> package contains
                                 <a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/test/web/ModelAndViewAssert.html"><code>ModelAndViewAssert</code></a>, which you can use in combination with JUnit, TestNG, or
                                 any other testing framework for unit tests that deal with Spring MVC <code>ModelAndView</code> objects.</br>
+                                <span class="translate">
                                 org.springframework.test.web包包含ModelAndViewAssert，您可以将其与JUnit、TestNG或任何其他测试框架结合使用，用于处理Spring MVC ModelAndView对象的单元测试。
+                                </span>
                             </p>
                         </div>
                         <div class="admonitionblock tip">
@@ -666,8 +671,10 @@
                                         <a href="#mock-objects-servlet">Servlet API mocks</a>. For thorough integration testing of your Spring MVC and REST <code>Controller</code> classes in conjunction with your <code>WebApplicationContext</code> configuration
                                         for Spring MVC, use the
                                         <a href="#spring-mvc-test-framework">Spring MVC Test Framework</a> instead.</br>
+                                        <span class="translate">
                                         要以pojo的形式对Spring MVC控制器类进行单元测试，可以使用ModelAndViewAssert结合MockHttpServletRequest、MockHttpSession等Spring的Servlet API模拟。
                                         为了将Spring MVC和REST Controller类与Spring MVC的WebApplicationContext配置进行彻底的集成测试，可以使用Spring MVC测试框架。
+                                        </span>
                                     </td>
                                 </tr>
                             </table>
@@ -682,22 +689,24 @@
             <div class="sectionbody">
                 <div class="paragraph">
                     <p>This section (most of the rest of this chapter) covers integration testing for Spring applications. It includes the following topics:</br>
+                        <span class="translate">
                         本节(本章剩余部分的大部分)介绍了Spring应用程序的集成测试。它包括以下主题:
+                        </span>
                     </p>
                 </div>
                 <div class="ulist">
                     <ul>
                         <li>
-                            <p><a href="#integration-testing-overview">Overview[概述]</a></p>
+                            <p><a href="#integration-testing-overview">Overview<span class="translate">[概述]</sapn></a></p>
                         </li>
                         <li>
-                            <p><a href="#integration-testing-goals">Goals of Integration Testing[集成测试的目标]</a></p>
+                            <p><a href="#integration-testing-goals">Goals of Integration Testing<span class="translate">[集成测试的目标]</span></a></p>
                         </li>
                         <li>
                             <p><a href="#integration-testing-support-jdbc">JDBC Testing Support[]</a></p>
                         </li>
                         <li>
-                            <p><a href="#integration-testing-annotations">Annotations[注解]</a></p>
+                            <p><a href="#integration-testing-annotations">Annotations<span class="translate">[注解]</span></a></p>
                         </li>
                         <li>
                             <p><a href="#testcontext-framework">Spring TestContext Framework[]</a></p>
@@ -711,7 +720,9 @@
                     <h3 id="integration-testing-overview"><a class="anchor" href="#integration-testing-overview"></a>3.1. Overview</h3>
                     <div class="paragraph">
                         <p>It is important to be able to perform some integration testing without requiring deployment to your application server or connecting to other enterprise infrastructure. Doing so lets you test things such as:</br>
+                            <span class="translate">
                             能够在不需要部署到应用服务器或连接到其他企业基础设施的情况下执行一些集成测试是很重要的。这样做可以让你测试以下内容:
+                            </span>
                         </p>
                     </div>
                     <div class="ulist">
@@ -723,7 +734,9 @@
                             </li>
                             <li>
                                 <p>Data access using JDBC or an ORM tool. This can include such things as the correctness of SQL statements, Hibernate queries, JPA entity mappings, and so forth.</br>
+                                    <span class="translate">
                                     使用JDBC或ORM工具进行数据访问。这可以包括SQL语句的正确性、Hibernate查询、JPA实体映射等等。
+                                    </span>
                                 </p>
                             </li>
                         </ul>
@@ -733,17 +746,21 @@
                             The Spring Framework provides first-class support for integration testing in the
                             <code>spring-test</code> module. The name of the actual JAR file might include the release version and might also be in the long <code>org.springframework.test</code> form, depending on where you get it from (see the <a href="core.html#dependency-management">section on Dependency Management</a>                            for an explanation). This library includes the <code>org.springframework.test</code> package, which contains valuable classes for integration testing with a Spring container. This testing does not rely on an application server
                             or other deployment environment. Such tests are slower to run than unit tests but much faster than the equivalent Selenium tests or remote tests that rely on deployment to an application server.</br>
+                            <span class="translate">
                             Spring框架为Spring测试模块中的集成测试提供了一流的支持。
                             实际JAR文件的名称可能包括发布版本，也可能是长的org.springframework.test表单，这取决于您从哪里获得它(有关解释，请参阅依赖管理一节)。
                             这个库包括org.springframework.test包，其中包含用于与Spring容器集成测试的有价值的类。此测试不依赖于应用服务器或其他部署环境。这类测试运行起来比单元测试慢，
                             但比等价的Selenium测试或依赖于部署到应用服务器的远程测试快得多。
+                            </span>
                         </p>
                     </div>
                     <div class="paragraph">
                         <p>Unit and integration testing support is provided in the form of the annotation-driven
                             <a href="#testcontext-framework">Spring TestContext Framework</a>. The TestContext framework is agnostic of the actual testing framework in use, which allows instrumentation of tests in various environments, including JUnit,
                             TestNG, and others.</br>
+                            <span class="translate">
                             单元和集成测试支持以注解驱动的Spring TestContext框架的形式提供。TestContext框架与正在使用的实际测试框架无关，它允许在各种环境中检测测试，包括JUnit、TestNG和其他环境。
+                            </span>
                         </p>
                     </div>
                 </div>
@@ -751,36 +768,48 @@
                     <h3 id="integration-testing-goals"><a class="anchor" href="#integration-testing-goals"></a>3.2. Goals of Integration Testing</h3>
                     <div class="paragraph">
                         <p>Spring&#8217;s integration testing support has the following primary goals:</br>
+                            <span class="translate">
                             Spring的集成测试支持有以下主要目标:
+                            </span>
                         </p>
                     </div>
                     <div class="ulist">
                         <ul>
                             <li>
                                 <p>To manage <a href="#testing-ctx-management">Spring IoC container caching</a> between tests.</br>
+                                    <span class="translate">
                                     管理测试之间的Spring IoC容器缓存。
+                                    </span>
                                 </p>
                             </li>
                             <li>
                                 <p>To provide <a href="#testing-fixture-di">Dependency Injection of test fixture instances</a>.</br>
+                                    <span class="translate">
                                     提供测试fixture实例的依赖项注入。
+                                    </span>
                                 </p>
                             </li>
                             <li>
                                 <p>To provide <a href="#testing-tx">transaction management</a> appropriate to integration testing.</br>
+                                    <span class="translate">
                                     提供适合于集成测试的事务管理。
+                                    </span>
                                 </p>
                             </li>
                             <li>
                                 <p>To supply <a href="#testing-support-classes">Spring-specific base classes</a> that assist developers in writing integration tests.</br>
+                                    <span class="translate">
                                     提供特定于spring的基类，以帮助开发人员编写集成测试。
+                                    </span>
                                 </p>
                             </li>
                         </ul>
                     </div>
                     <div class="paragraph">
                         <p>The next few sections describe each goal and provide links to implementation and configuration details.</br>
+                            <span class="translate">
                             接下来的几个小节将描述每个目标，并提供指向实现和配置细节的链接。
+                            </span>
                         </p>
                     </div>
                     <div class="sect3">
@@ -792,16 +821,20 @@
                                 <code>ApplicationContext</code> instances and <code>WebApplicationContext</code> instances as well as caching of those contexts. Support for the caching of loaded contexts is important, because startup time can become an
                                 issue&#8201;&#8212;&#8201;not because of the overhead of Spring itself, but because the objects instantiated by the Spring container take time to instantiate. For example, a project with 50 to 100 Hibernate mapping files
                                 might take 10 to 20 seconds to load the mapping files, and incurring that cost before running every test in every test fixture leads to slower overall test runs that reduce developer productivity.</br>
+                                <span class="translate">
                                 Spring TestContext框架提供了Spring ApplicationContext实例和WebApplicationContext实例的一致加载，以及这些上下文的缓存。
                                 对已加载上下文的缓存的支持很重要，因为启动时间可能会成为一个问题——不是因为Spring本身的开销，而是因为Spring容器实例化的对象需要时间来实例化。
                                 例如，一个有50到100个Hibernate映射文件的项目可能需要10到20秒来加载映射文件，并且在每个测试fixture中运行每个测试之前产生这个成本，这会导致整体测试运行变慢，从而降低开发人员的生产力。
+                                </span>
                             </p>
                         </div>
                         <div class="paragraph">
                             <p>
                                 Test classes typically declare either an array of resource locations for XML or Groovy configuration metadata&#8201;&#8212;&#8201;often in the classpath&#8201;&#8212;&#8201;or an array of component classes that is used to configure
                                 the application. These locations or classes are the same as or similar to those specified in <code>web.xml</code> or other configuration files for production deployments.</br>
+                                <span class="translate">
                                 测试类通常为XML或Groovy配置元数据(通常在类路径中)声明一组资源位置，或者为用于配置应用程序的组件类声明一组。这些位置或类与web.xml或其他用于生产部署的配置文件中指定的位置或类相同或类似。
+                                </span>
                             </p>
                         </div>
                         <div class="paragraph">
@@ -810,36 +843,44 @@
                                 term &#8220;test suite&#8221; means all tests run in the same JVM&#8201;&#8212;&#8201;for example, all tests run from an Ant, Maven, or Gradle build for a given project or module. In the unlikely case that a test corrupts
                                 the application context and requires reloading (for example, by modifying a bean definition or the state of an application object) the TestContext framework can be configured to reload the configuration and rebuild the
                                 application context before executing the next test.</br>
+                                <span class="translate">
                                 默认情况下，一旦加载，配置的ApplicationContext将被每个测试重用。因此，每个测试套件只产生一次设置成本，并且后续的测试执行要快得多。
                                 在这种情况下，术语“测试套件”意味着所有的测试运行在相同的JVM中——例如，所有的测试运行在一个给定项目或模块的Ant、Maven或Gradle构建中。
                                 在测试破坏应用程序上下文并需要重新加载(例如，通过修改bean定义或应用程序对象的状态)的不太可能的情况下，
                                 可以配置TestContext框架来重新加载配置并在执行下一个测试之前重新构建应用程序上下文。
+                                </span>
                             </p>
                         </div>
                         <div class="paragraph">
                             <p>
                                 See <a href="#testcontext-ctx-management">Context Management</a> and <a href="#testcontext-ctx-management-caching">Context Caching</a> with the TestContext framework.</br>
+                                <span class="translate">
                                 请参阅TestContext框架的上下文管理和上下文缓存。
+                                </span>
                             </p>
                         </div>
                     </div>
                     <div class="sect3">
                         <h4 id="testing-fixture-di"><a class="anchor" href="#testing-fixture-di"></a>3.2.2. Dependency Injection of Test Fixtures</h4>
-                        <span>3.2.2. 测试既定的依赖注入</span>
+                        <span class="translate">3.2.2. 测试既定的依赖注入</span>
                         <div class="paragraph">
                             <p>
                                 When the TestContext framework loads your application context, it can optionally configure instances of your test classes by using Dependency Injection. This provides a convenient mechanism for setting up test fixtures by using
                                 preconfigured beans from your application context. A strong benefit here is that you can reuse application contexts across various testing scenarios (for example, for configuring Spring-managed object graphs, transactional
                                 proxies, <code>DataSource</code> instances, and others), thus avoiding the need to duplicate complex test fixture setup for individual test cases.</br>
+                                <span class="translate">
                                 当TestContext框架加载你的应用程序上下文时，它可以选择使用依赖注入配置你的测试类的实例。这提供了一种方便的机制，通过使用应用程序上下文中的预配置bean来设置测试fixture。
                                 这里的一个强大好处是，您可以跨各种测试场景重用应用程序上下文(例如，用于配置spring管理的对象图、事务代理、数据源实例等)，从而避免为单个测试用例复制复杂的测试fixture设置。
+                                </span>
                             </p>
                         </div>
                         <div class="paragraph">
                             <p>
                                 As an example, consider a scenario where we have a class (<code>HibernateTitleRepository</code>) that implements data access logic for a <code>Title</code> domain entity. We want to write integration tests that test the following
                                 areas:</br>
+                                <span class="translate">
                                 例如，考虑这样一个场景:我们有一个类(HibernateTitleRepository)，它为Title域实体实现数据访问逻辑。我们想要编写测试以下领域的集成测试:
+                                </span>
                             </p>
                         </div>
                         <div class="ulist">
@@ -848,7 +889,9 @@
                                     <p>
                                         The Spring configuration: Basically, is everything related to the configuration of the
                                         <code>HibernateTitleRepository</code> bean correct and present?</br>
+                                        <span class="translate">
                                         Spring配置:基本上，所有与HibernateTitleRepository bean配置相关的内容都正确且存在吗?
+                                        </span>
                                     </p>
                                 </li>
                                 <li>
@@ -860,7 +903,9 @@
                                 <li>
                                     <p>
                                         The logic of the <code>HibernateTitleRepository</code>: Does the configured instance of this class perform as anticipated?</br>
+                                        <span class="translate">
                                         HibernateTitleRepository的逻辑:这个类的配置实例是否按照预期执行?
+                                        </span>
                                     </p>
                                 </li>
                             </ul>
@@ -868,7 +913,9 @@
                         <div class="paragraph">
                             <p>See dependency injection of test fixtures with the
                                 <a href="#testcontext-fixture-di">TestContext framework</a>.</br>
+                                <span class="translate">
                                 请参阅TestContext框架中的测试fixture依赖注入。
+                                </span>
                             </p>
                         </div>
                     </div>
@@ -879,8 +926,10 @@
                             <p>
                                 One common issue in tests that access a real database is their effect on the state of the persistence store. Even when you use a development database, changes to the state may affect future tests. Also, many operations&#8201;&#8212;&#8201;such
                                 as inserting or modifying persistent data&#8201;&#8212;&#8201;cannot be performed (or verified) outside of a transaction.</br>
+                                <span class="translate">
                                 访问真实数据库的测试中的一个常见问题是它们对持久化存储状态的影响。
                                 即使使用开发数据库，对状态的更改也可能影响未来的测试。此外，许多操作(如插入或修改持久数据)不能在事务之外执行(或验证)。
+                                </span>
                             </p>
                         </div>
                         <div class="paragraph">
@@ -889,9 +938,11 @@
                                 objects in your tests, they behave correctly, according to their configured transactional semantics. In addition, if a test method deletes the contents of selected tables while running within the transaction managed for
                                 the test, the transaction rolls back by default, and the database returns to its state prior to execution of the test. Transactional support is provided to a test by using a <code>PlatformTransactionManager</code> bean
                                 defined in the test&#8217;s application context.</br>
+                                <span class="translate">
                                 TestContext框架解决了这个问题。默认情况下，框架为每个测试创建并回滚一个事务。您可以编写假定存在事务的代码。
                                 如果在测试中调用事务代理对象，则根据其配置的事务语义，它们的行为是正确的。此外，如果测试方法在为测试管理的事务中运行时删除所选表的内容，则事务默认回滚，数据库返回到执行测试之前的状态。
                                 事务性支持是通过使用在测试的应用程序上下文中定义的PlatformTransactionManager bean提供给测试的。
+                                </span>
                             </p>
                         </div>
                         <div class="paragraph">
@@ -899,22 +950,27 @@
                                 If you want a transaction to commit (unusual, but occasionally useful when you want a particular test to populate or modify the database), you can tell the TestContext framework to cause the transaction to commit instead of
                                 roll back by using the
                                 <a href="#integration-testing-annotations"><code>@Commit</code></a> annotation.</br>
+                                <span class="translate">
                                 如果您想要提交一个事务(不常见，但是当您想要一个特定的测试来填充或修改数据库时，偶尔有用)，您可以通过使用@Commit注释告诉TestContext框架来提交事务，而不是回滚事务。
+                                </span>
                             </p>
                         </div>
                         <div class="paragraph">
                             <p>
                                 See transaction management with the <a href="#testcontext-tx">TestContext framework</a>.</br>
+                                <span class="translate">
                                 请参阅TestContext框架的事务管理。
+                                </span>
                             </p>
                         </div>
                     </div>
                     <div class="sect3">
                         <h4 id="testing-support-classes"><a class="anchor" href="#testing-support-classes"></a>3.2.4. Support Classes for Integration Testing</h4>
-                        <sapn>3.2.4. 支持集成测试类</span>
+                        <span class="translate">3.2.4. 支持集成测试类</span>
                         <div class="paragraph">
                             <p>The Spring TestContext Framework provides several <code>abstract</code> support classes that simplify the writing of integration tests. These base test classes provide well-defined hooks into the testing framework as well as
                                 convenient instance variables and methods, which let you access:</br>
+                                <span class="translate">
                                 Spring TestContext框架提供了几个抽象支持类，它们简化了集成测试的编写。这些基本测试类提供了定义良好的挂钩到测试框架，以及方便的实例变量和方法，让你访问:
                             </p>
                         </div>
@@ -922,12 +978,14 @@
                             <ul>
                                 <li>
                                     <p>The <code>ApplicationContext</code>, for performing explicit bean lookups or testing the state of the context as a whole.</br>
+                                        <span class="translate">
                                         ApplicationContext，用于执行显式的bean查找或测试整个上下文的状态。
                                     </p>
                                 </li>
                                 <li>
                                     <p>A <code>JdbcTemplate</code>, for executing SQL statements to query the database. You can use such queries to confirm database state both before and after execution of database-related application code, and Spring ensures
                                         that such queries run in the scope of the same transaction as the application code. When used in conjunction with an ORM tool, be sure to avoid <a href="#testcontext-tx-false-positives">false positives</a>.</br>
+                                        <span class="translate">
                                         一个JdbcTemplate，用于执行查询数据库的SQL语句。您可以使用这些查询在执行与数据库相关的应用程序代码之前和之后确认数据库状态，Spring确保这些查询在与应用程序代码相同的事务范围内运行。当与ORM工具一起使用时，一定要避免误报。
                                     </p>
                                 </li>
@@ -935,11 +993,13 @@
                         </div>
                         <div class="paragraph">
                             <p>In addition, you may want to create your own custom, application-wide superclass with instance variables and methods specific to your project.</br>
+                                <span class="translate">
                                 此外，您可能希望使用特定于项目的实例变量和方法创建自己的自定义应用程序级超类。
                             </p>
                         </div>
                         <div class="paragraph">
                             <p>See support classes for the <a href="#testcontext-support-classes">TestContext framework</a>.</br>
+                                <span class="translate">
                                 参见TestContext框架的支持类。
                             </p>
                         </div>
@@ -949,34 +1009,40 @@
                     <h3 id="integration-testing-support-jdbc"><a class="anchor" href="#integration-testing-support-jdbc"></a>3.3. JDBC Testing Support</h3>
                     <div class="paragraph">
                         <p>The <code>org.springframework.test.jdbc</code> package contains <code>JdbcTestUtils</code>, which is a collection of JDBC-related utility functions intended to simplify standard database testing scenarios. Specifically, <code>JdbcTestUtils</code> provides the following static utility methods.</br>
-                          <code>org.springframework.test.jdbc</code> 包包含JdbcTestUtils，它是jdbc相关的实用程序函数的集合，旨在简化标准数据库测试场景。具体来说，JdbcTestUtils提供了以下静态实用方法。
+                            <span class="translate">
+                            <code>org.springframework.test.jdbc</code> 包包含JdbcTestUtils，它是jdbc相关的实用程序函数的集合，旨在简化标准数据库测试场景。具体来说，JdbcTestUtils提供了以下静态实用方法。
                         </p>
                     </div>
                     <div class="ulist">
                         <ul>
                             <li>
                                 <p><code>countRowsInTable(..)</code>: Counts the number of rows in the given table.</br>
+                                    <span class="translate">
                                     countRowsInTable(..):统计给定表中的行数。
                                 </p>
                             </li>
                             <li>
                                 <p><code>countRowsInTableWhere(..)</code>: Counts the number of rows in the given table by using the provided <code>WHERE</code> clause.</br>
+                                    <span class="translate">
                                     countRowsInTableWhere(..):使用提供的WHERE子句计算给定表中的行数。
                                 </p>
                             </li>
                             <li>
                                 <p><code>deleteFromTables(..)</code>: Deletes all rows from the specified tables.</br>
+                                    <span class="translate">
                                     deleteFromTables(..):删除指定表中的所有行。
                                 </p>
                             </li>
                             <li>
                                 <p><code>deleteFromTableWhere(..)</code>: Deletes rows from the given table by using the provided
                                     <code>WHERE</code> clause.</br>
+                                    <span class="translate">
                                     deleteFromTableWhere(..):使用提供的WHERE子句删除给定表中的行。
                                 </p>
                             </li>
                             <li>
                                 <p><code>dropTables(..)</code>: Drops the specified tables.</br>
+                                    <span class="translate">
                                     dropTables(..):删除指定的表。
                                 </p>
                             </li>
@@ -999,6 +1065,7 @@
                                         <p>
                                             The <code>spring-jdbc</code> module provides support for configuring and launching an embedded database, which you can use in integration tests that interact with a database. For details, see <a href="data-access.html#jdbc-embedded-database-support">Embedded Database
                                             Support</a> and <a href="data-access.html#jdbc-embedded-database-dao-testing">Testing Data Access Logic with an Embedded Database</a>.</br>
+                                            <span class="translate">
                                             spring-jdbc模块提供了对配置和启动嵌入式数据库的支持，您可以在与数据库交互的集成测试中使用它。有关详细信息，请参见嵌入式数据库支持和用嵌入式数据库测试数据访问逻辑。
                                         </p>
                                     </div>
@@ -1011,6 +1078,7 @@
                     <h3 id="integration-testing-annotations"><a class="anchor" href="#integration-testing-annotations"></a>3.4. Annotations</h3>
                     <div class="paragraph">
                         <p>This section covers annotations that you can use when you test Spring applications. It includes the following topics:</br>
+                            <span class="translate">
                             本节介绍在测试Spring应用程序时可以使用的注释。它包括以下主题:
                         </p>
                     </div>
@@ -1020,7 +1088,7 @@
                                 <p><a href="#integration-testing-annotations-spring">Spring Testing Annotations</a></p>
                             </li>
                             <li>
-                                <p><a href="#integration-testing-annotations-standard">Standard Annotation Support[标准注释支持]</a></p>
+                                <p><a href="#integration-testing-annotations-standard">Standard Annotation Support<span class="translate">[标准注释支持]</span></a></p>
                             </li>
                             <li>
                                 <p><a href="#integration-testing-annotations-junit4">Spring JUnit 4 Testing Annotations</a></p>
@@ -1029,7 +1097,7 @@
                                 <p><a href="#integration-testing-annotations-junit-jupiter">Spring JUnit Jupiter Testing Annotations</a></p>
                             </li>
                             <li>
-                                <p><a href="#integration-testing-annotations-meta">Meta-Annotation Support for Testing[对测试的元注释支持]</a></p>
+                                <p><a href="#integration-testing-annotations-meta">Meta-Annotation Support for Testing<span class="translate">[对测试的元注释支持]</span></a></p>
                             </li>
                         </ul>
                     </div>
@@ -1040,13 +1108,15 @@
                                 The Spring Framework provides the following set of Spring-specific annotations that you can use
                                 in your unit and integration tests in conjunction with the TestContext framework. See the corresponding javadoc for further information,
                                 including default attribute values, attribute aliases, and other details.</br>
+                                <span class="translate">
                                 Spring框架提供了以下一组特定于Spring的注释，您可以在单元测试和集成测试中与TestContext框架一起使用这些注释。
                                 有关更多信息，请参阅相应的javadoc，包括默认属性值、属性别名和其他详细信息。
+                                </span>
                             </p>
                         </div>
                         <div class="paragraph">
                             <p>Spring&#8217;s testing annotations include the following:</br>
-                                Spring的测试注释包括以下内容:
+                                <span class="translate">Spring的测试注释包括以下内容:</psan>
                             </p>
                         </div>
                         <div class="ulist">
@@ -1113,6 +1183,7 @@
                                 <p><code>@BootstrapWith</code> is a class-level annotation that you can use to configure how the Spring TestContext Framework is bootstrapped. Specifically, you can use <code>@BootstrapWith</code> to specify a custom <code>TestContextBootstrapper</code>.
                                     See the section on
                                     <a href="#testcontext-bootstrapping">bootstrapping the TestContext framework</a> for further details.</br>
+                                    <span class="translate">
                                     @BootstrapWith是一个类级注释，你可以用它来配置Spring TestContext框架是如何引导的。具体来说，你可以使用@BootstrapWith来指定一个自定义的TestContextBootstrapper。有关更多细节，请参见关于引导TestContext框架的一节。
                                 </p>
                             </div>
@@ -1122,6 +1193,7 @@
                             <div class="paragraph">
                                 <p><code>@ContextConfiguration</code> defines class-level metadata that is used to determine how to load and configure an <code>ApplicationContext</code> for integration tests. Specifically,
                                     <code>@ContextConfiguration</code> declares the application context resource <code>locations</code> or the component <code>classes</code> used to load the context.</br>
+                                    <span class="translate">
                                     @ContextConfiguration定义了类级元数据，用于确定如何为集成测试加载和配置ApplicationContext。具体来说，@ContextConfiguration声明应用程序上下文资源位置或用于加载上下文的组件类。
                                 </p>
                             </div>
@@ -1130,11 +1202,13 @@
                                     Resource locations are typically XML configuration files or Groovy scripts located in the classpath, while component classes are typically <code>@Configuration</code> classes. However, resource locations can also refer
                                     to files and scripts in the file system, and component classes can be <code>@Component</code> classes, <code>@Service</code> classes, and so on. See
                                     <a href="#testcontext-ctx-management-javaconfig-component-classes">Component Classes</a> for further details.</br>
+                                    <span class="translate">
                                     资源位置通常是位于类路径中的XML配置文件或Groovy脚本，而组件类通常是@Configuration类。但是，资源位置也可以引用文件系统中的文件和脚本，组件类可以是@Component类、@Service类等等。更多细节请参见组件类。
                                 </p>
                             </div>
                             <div class="paragraph">
                                 <p>The following example shows a <code>@ContextConfiguration</code> annotation that refers to an XML file:</br>
+                                    <span class="translate">
                                     下面的例子显示了一个引用XML文件的@ContextConfiguration注释:
                                 </p>
                             </div>
@@ -1174,6 +1248,7 @@ class XmlApplicationContextTests {
                             </div>
                             <div class="paragraph">
                                 <p>The following example shows a <code>@ContextConfiguration</code> annotation that refers to a class:</br>
+                                    <span class="translate">
                                     下面的例子显示了一个引用类的@ContextConfiguration注释:
                                 </p>
                             </div>
@@ -1214,6 +1289,7 @@ class ConfigClassApplicationContextTests {
                             <div class="paragraph">
                                 <p>As an alternative or in addition to declaring resource locations or component classes, you can use <code>@ContextConfiguration</code> to declare <code>ApplicationContextInitializer</code> classes. The following example
                                     shows such a case:</br>
+                                    <span class="translate">
                                     除了声明资源位置或组件类之外，还可以使用@ContextConfiguration声明ApplicationContextInitializer类。下面的例子展示了这种情况:
                                 </p>
                             </div>
@@ -1247,11 +1323,13 @@ class ContextInitializerTests {
                                 <p>
                                     You can optionally use <code>@ContextConfiguration</code> to declare the <code>ContextLoader</code> strategy as well. Note, however, that you typically do not need to explicitly configure the loader, since the default loader
                                     supports <code>initializers</code> and either resource <code>locations</code> or component <code>classes</code>.</br>
+                                    <span class="translate">
                                     你也可以选择使用@ContextConfiguration来声明ContextLoader策略。但是，请注意，您通常不需要显式地配置加载器，因为默认加载器支持初始化器、资源位置或组件类。
                                 </p>
                             </div>
                             <div class="paragraph">
                                 <p>The following example uses both a location and a loader:</br>
+                                    <span class="translate">
                                     下面的例子同时使用了location和loader:
                                 </p>
                             </div>
@@ -1297,7 +1375,7 @@ class CustomLoaderXmlApplicationContextTests {
                                         </td>
                                         <td class="content">
                                             <code>@ContextConfiguration</code> provides support for inheriting resource locations or configuration classes as well as context initializers that are declared by superclasses or enclosing classes.</br>
-@ContextConfiguration支持继承资源位置或配置类，以及父类或封闭类声明的上下文初始化器。
+<span class="translate">@ContextConfiguration支持继承资源位置或配置类，以及父类或封闭类声明的上下文初始化器。</span>
                                         </td>
                                     </tr>
                                 </table>
@@ -1318,6 +1396,7 @@ class CustomLoaderXmlApplicationContextTests {
                                     <code>"file:src/main/webapp"</code> for the path to the root of the web application (that is, the resource base path). The resource base path is used behind the scenes to create a
                                     <code>MockServletContext</code>, which serves as the <code>ServletContext</code> for the test&#8217;s
                                     <code>WebApplicationContext</code>.</br>
+                                    <span class="translate">
                                     @WebAppConfiguration是一个类级注释，你可以用它来声明为集成测试加载的ApplicationContext应该是WebApplicationContext。
                                     在测试类中仅使用@WebAppConfiguration就可以确保为测试加载WebApplicationContext，
                                     使用“file:src/main/webapp”的默认值作为web应用程序的根路径(即资源基路径)。资源基路径在后台用于创建MockServletContext，它作为测试的WebApplicationContext的ServletContext。
@@ -1358,6 +1437,7 @@ class WebAppTests {
                                 <p>
                                     To override the default, you can specify a different base resource path by using the implicit <code>value</code> attribute. Both <code>classpath:</code> and <code>file:</code> resource prefixes are supported. If no resource
                                     prefix is supplied, the path is assumed to be a file system resource. The following example shows how to specify a classpath resource:</br>
+                                    <span class="translate">
                                     要覆盖默认值，可以使用隐式value属性指定不同的基本资源路径。支持类路径:和文件:资源前缀。如果没有提供资源前缀，则假定该路径是文件系统资源。下面的例子展示了如何指定一个类路径资源:
                                 </p>
                             </div>
@@ -1402,6 +1482,7 @@ class WebAppTests {
                                     Note that <code>@WebAppConfiguration</code> must be used in conjunction with
                                     <code>@ContextConfiguration</code>, either within a single test class or within a test class hierarchy. See the
                                     <a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/test/context/web/WebAppConfiguration.html"><code>@WebAppConfiguration</code></a> javadoc for further details.
+                                    <span class="translate">
                                     注意，@WebAppConfiguration必须与@ContextConfiguration一起使用，无论是在单个测试类中还是在测试类层次结构中。更多细节请参见@WebAppConfiguration javadoc。
                                 </p>
                             </div>
@@ -1416,6 +1497,7 @@ class WebAppTests {
                                     <code>ApplicationContext</code> instances for integration tests. <code>@ContextHierarchy</code> should be declared with a list of one or more <code>@ContextConfiguration</code> instances, each of which defines a level
                                     in the context hierarchy. The following examples demonstrate the use of
                                     <code>@ContextHierarchy</code> within a single test class (<code>@ContextHierarchy</code> can also be used within a test class hierarchy):</br>
+                                    <span class="translate">
                                     @ContextHierarchy是一个类级注释，用于定义集成测试的ApplicationContext实例的层次结构。
                                     @ContextHierarchy应该用一个或多个@ContextConfiguration实例的列表来声明，每个实例都定义了上下文层次结构中的一个级别。
                                     下面的例子演示了在单个测试类中使用@ContextHierarchy (@ContextHierarchy也可以在测试类层次结构中使用):
@@ -1477,6 +1559,7 @@ class WebIntegrationTests {
                                     See <a href="#testcontext-ctx-management-ctx-hierarchies">Context Hierarchies</a> and the
                                     <a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/test/context/ContextHierarchy.html">
                                     <code>@ContextHierarchy</code></a> javadoc for further examples.</br>
+                                    <span class="translate">
                                     如果您需要在测试类层次结构中合并或覆盖上下文层次结构的给定级别的配置，您必须通过在类层次结构中每个相应级别上为@ContextConfiguration中的name属性提供相同的值来显式地命名该级别。
                                     更多示例请参见上下文层次结构和@ContextHierarchy javadoc。
                                 </p>
@@ -1487,6 +1570,7 @@ class WebIntegrationTests {
                             <div class="paragraph">
                                 <p>
                                     <code>@ActiveProfiles</code> is a class-level annotation that is used to declare which bean definition profiles should be active when loading an <code>ApplicationContext</code> for an integration test.</br>
+                                    <span class="translate">
                                     @ActiveProfiles是一个类级注释，用于声明在为集成测试加载ApplicationContext时应该激活哪个bean定义概要文件。
                                 </p>
                             </div>
@@ -1578,7 +1662,7 @@ class DeveloperIntegrationTests {
                                             <code>@ActiveProfiles</code> provides support for inheriting active bean definition profiles declared by superclasses and enclosing classes by default. You can also resolve active bean definition profiles programmatically
                                             by implementing a custom
                                             <a href="#testcontext-ctx-management-env-profiles-ActiveProfilesResolver"><code>ActiveProfilesResolver</code></a> and registering it by using the <code>resolver</code> attribute of <code>@ActiveProfiles</code>.<br>
-@ActiveProfiles默认情况下支持继承父类和封闭类声明的活动bean定义配置文件。您还可以通过实现自定义ActiveProfilesResolver并使用@ActiveProfiles的resolver属性注册它来程序化解析活动bean定义概要文件。
+<span class="translate">@ActiveProfiles默认情况下支持继承父类和封闭类声明的活动bean定义配置文件。您还可以通过实现自定义ActiveProfilesResolver并使用@ActiveProfiles的resolver属性注册它来程序化解析活动bean定义概要文件。</span>
                                         </td>
                                     </tr>
                                 </table>
@@ -1597,12 +1681,15 @@ class DeveloperIntegrationTests {
                                 <p>
                                     <code>@TestPropertySource</code> is a class-level annotation that you can use to configure the locations of properties files and inlined properties to be added to the set of
                                     <code>PropertySources</code> in the <code>Environment</code> for an <code>ApplicationContext</code> loaded for an integration test.</br>
+                                    <span class="translate">
                                     @TestPropertySource是一个类级注释，您可以使用它来配置属性文件和内联属性的位置，这些属性将被添加到为集成测试加载的ApplicationContext的propertysource集中。
                                 </p>
                             </div>
                             <div class="paragraph">
                                 <p>The following example demonstrates how to declare a properties file from the classpath:</br>
+                                    <span class="translate">
                                     下面的例子演示了如何声明内联属性:
+                                    </span>
                                 </p>
                             </div>
                             <div class="listingblock primary">
@@ -1692,12 +1779,14 @@ class MyIntegrationTests {
                                     <em>dynamic</em> properties to be added to the set of <code>PropertySources</code> in the <code>Environment</code> for an <code>ApplicationContext</code> loaded for an integration test. Dynamic properties are useful
                                     when you do not know the value of the properties upfront – for example, if the properties are managed by an external resource such as for a container managed by the
                                     <a href="https://www.testcontainers.org/">Testcontainers</a> project.</br>
+                                    <span class="translate">
                                     @DynamicPropertySource是一个方法级注释，您可以使用它来注册动态属性，将其添加到为集成测试加载的ApplicationContext的propertysource集中。
                                     当您事先不知道属性的值时，动态属性非常有用——例如，如果属性是由外部资源管理的，例如由Testcontainers项目管理的容器。
                                 </p>
                             </div>
                             <div class="paragraph">
                                 <p>The following example demonstrates how to register a dynamic property:</br>
+                                    <span class="translate">
                                     下面的例子演示了如何注册一个动态属性:
                                 </p>
                             </div>
@@ -1783,6 +1872,7 @@ class MyIntegrationTests {
                                     <code>@DirtiesContext</code> indicates that the underlying Spring <code>ApplicationContext</code> has been dirtied during the execution of a test (that is, the test modified or corrupted it in some manner&#8201;&#8212;&#8201;for
                                     example, by changing the state of a singleton bean) and should be closed. When an application context is marked as dirty, it is removed from the testing framework&#8217;s cache and closed. As a consequence, the underlying
                                     Spring container is rebuilt for any subsequent test that requires a context with the same configuration metadata.</br>
+                                    <span class="translate">
                                     @DirtiesContext表示底层的Spring ApplicationContext在测试执行期间被污染了(也就是说，测试以某种方式修改或破坏了它——例如，通过改变单例bean的状态)，应该被关闭。
                                     当应用程序上下文被标记为dirty时，它将从测试框架的缓存中删除并关闭。因此，底层Spring容器将为需要具有相同配置元数据的上下文的任何后续测试重新构建。
                                 </p>
@@ -1791,6 +1881,7 @@ class MyIntegrationTests {
                                 <p>
                                     You can use <code>@DirtiesContext</code> as both a class-level and a method-level annotation within the same class or class hierarchy. In such scenarios, the <code>ApplicationContext</code> is marked as dirty before or
                                     after any such annotated method as well as before or after the current test class, depending on the configured <code>methodMode</code> and <code>classMode</code>.</br>
+                                    <span class="translate">
                                     您可以使用@DirtiesContext作为同一类或类层次结构中的类级和方法级注释。
                                     在这种情况下，ApplicationContext被标记为dirty，在任何这样的注释方法之前或之后，以及在当前测试类之前或之后，这取决于配置的methodMode和classMode。
                                 </p>
@@ -1798,6 +1889,7 @@ class MyIntegrationTests {
                             <div class="paragraph">
                                 <p>
                                     The following examples explain when the context would be dirtied for various configuration scenarios:</br>
+                                    <span class="translate">
                                     下面的例子解释了在不同的配置场景下什么时候会被污染:
                                 </p>
                             </div>
@@ -1806,6 +1898,7 @@ class MyIntegrationTests {
                                     <li>
                                         <p>Before the current test class, when declared on a class with class mode set to
                                             <code>BEFORE_CLASS</code>.</br>
+                                            <span class="translate">
                                             在类模式设置为BEFORE_CLASS的类上声明时，在当前测试类之前。
                                         </p>
                                         <div class="listingblock primary">
@@ -1847,6 +1940,7 @@ class FreshContextTests {
                                         <p>
                                             After the current test class, when declared on a class with class mode set
                                             to <code>AFTER_CLASS</code> (i.e., the default class mode).</br>
+                                            <span class="translate">
                                             在当前测试类之后，在类模式设置为AFTER_CLASS(即默认的类模式)的类上声明。
                                         </p>
                                         <div class="listingblock primary">
@@ -1887,6 +1981,7 @@ class ContextDirtyingTests {
                                     <li>
                                         <p>
                                             Before each test method in the current test class, when declared on a class with class mode set to <code>BEFORE_EACH_TEST_METHOD.</code></br>
+                                            <span class="translate">
                                             在类模式设置为的类上声明时，在当前测试类中的每个测试方法之前
                                         </p>
                                         <div class="listingblock primary">
@@ -1927,6 +2022,7 @@ class FreshContextTests {
                                     <li>
                                         <p>
                                             After each test method in the current test class, when declared on a class with class mode set to <code>AFTER_EACH_TEST_METHOD.</code></br>
+                                            <span class="translate">
                                             当在类模式设置为AFTER_EACH_TEST_METHOD的类上声明当前测试类中的每个测试方法后。
                                         </p>
                                         <div class="listingblock primary">
@@ -1967,6 +2063,7 @@ class ContextDirtyingTests {
                                     <li>
                                         <p>Before the current test, when declared on a method with the method mode set to
                                             <code>BEFORE_METHOD</code>.</br>
+                                            <span class="translate">
                                             在当前测试之前，在方法模式设置为BEFORE_METHOD的方法上声明。
                                         </p>
                                         <div class="listingblock primary">
@@ -2010,6 +2107,7 @@ fun testProcessWhichRequiresFreshAppCtx() {
                                         <p>
                                             After the current test, when declared on a method with the method mode set to
                                             <code>AFTER_METHOD</code> (i.e., the default method mode).</br>
+                                            <span class="translate">
                                             在当前测试之后，当方法模式设置为AFTER_METHOD(即默认的方法模式)时，在方法上声明。
                                         </p>
                                         <div class="listingblock primary">
@@ -2057,6 +2155,7 @@ fun testProcessWhichDirtiesAppCtx() {
                                     cache is cleared. By default, an exhaustive algorithm is used to clear the context cache, including not only the current level but also all other context hierarchies that share an ancestor context common to the current
                                     test. All <code>ApplicationContext</code> instances that reside in a sub-hierarchy of the common ancestor context are removed from the context cache and closed. If the exhaustive algorithm is overkill for a particular use case,
                                     you can specify the simpler current level algorithm, as the following example shows.</br>
+                                    <span class="translate">
                                     如果你在一个测试中使用@DirtiesContext，它的上下文被配置为@ContextHierarchy的上下文层次结构的一部分，你可以使用hierarchyMode标志来控制上下文缓存是如何被清除的。
                                     默认情况下，将使用穷举算法来清除上下文缓存，不仅包括当前级别，还包括共享与当前测试共用的祖先上下文的所有其他上下文层次结构。
                                     所有驻留在公共祖先上下文的子层次结构中的ApplicationContext实例将从上下文缓存中删除并关闭。如果穷举算法对于特定用例来说过于复杂，那么可以指定更简单的当前级别算法，如下面的示例所示。
@@ -2123,7 +2222,7 @@ class ExtendedTests : BaseTests() {
                                 <p>
                                     For further details regarding the <code>EXHAUSTIVE</code> and <code>CURRENT_LEVEL</code> algorithms, see the
                                     <a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/test/annotation/DirtiesContext.HierarchyMode.html"><code>DirtiesContext.HierarchyMode</code></a> javadoc.</br>
-                                    关于穷举和CURRENT_LEVEL算法的更多细节，请参阅DirtiesContext。HierarchyMode javadoc。
+                                    <span class="translate">关于穷举和CURRENT_LEVEL算法的更多细节，请参阅DirtiesContext。HierarchyMode javadoc。</span>
                                 </p>
                             </div>
                         </div>
@@ -2135,12 +2234,14 @@ class ExtendedTests : BaseTests() {
                                     <code>TestExecutionListener</code> implementations that should be registered with the
                                     <code>TestContextManager</code>. Typically, <code>@TestExecutionListeners</code> is used in conjunction with
                                     <code>@ContextConfiguration</code>.</br>
+                                    <span class="translate">
                                     @TestExecutionListener定义了类级元数据，用于配置TestExecutionListener实现，这些实现应该注册到TestContextManager中。
                                     通常，@ testexecutionlistener与@ContextConfiguration一起使用。
                                 </p>
                             </div>
                             <div class="paragraph">
                                 <p>The following example shows how to register two <code>TestExecutionListener</code> implementations:</br>
+                                    <span class="translate">
                                     下面的例子展示了如何注册两个TestExecutionListener实现:
                                 </p>
                             </div>
@@ -2185,6 +2286,7 @@ class CustomTestExecutionListenerTests {
                                     By default, <code>@TestExecutionListeners</code> provides support for inheriting listeners from superclasses or enclosing classes. See
                                     <a href="#testcontext-junit-jupiter-nested-test-configuration"><code>@Nested</code> test class configuration</a> and the
                                     <a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/test/context/TestExecutionListeners.html"><code>@TestExecutionListeners</code> javadoc</a> for an example and further details.</br>
+                                    <span class="translate">
                                     默认情况下，@TestExecutionListeners提供了从超类或封闭类继承侦听器的支持。参见@嵌套测试类配置和@ testexecutionlistener javadoc获得示例和更多细节。
                                 </p>
                             </div>
@@ -2196,11 +2298,13 @@ class CustomTestExecutionListenerTests {
                                     <code>@RecordApplicationEvents</code> is a class-level annotation that is used to instruct the
                                     <em>Spring TestContext Framework</em> to record all application events that are published in the
                                     <code>ApplicationContext</code> during the execution of a single test.</br>
+                                    <span class="translate">
                                     @RecordApplicationEvents是一个类级注释，用于指示Spring TestContext框架记录在单个测试执行期间发布在ApplicationContext中的所有应用程序事件。
                                 </p>
                             </div>
                             <div class="paragraph">
                                 <p>The recorded events can be accessed via the <code>ApplicationEvents</code> API within tests.</br>
+                                    <span class="translate">
                                     记录的事件可以通过测试中的ApplicationEvents API访问。
                                 </p>
                             </div>
@@ -2208,6 +2312,7 @@ class CustomTestExecutionListenerTests {
                                 <p>See <a href="#testcontext-application-events">Application Events</a> and the
                                     <a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/test/context/event/RecordApplicationEvents.html">
                                     <code>@RecordApplicationEvents</code> javadoc</a> for an example and further details.</br>
+                                    <span class="translate">
                                     请参阅应用程序事件和@RecordApplicationEvents javadoc以获得示例和进一步的详细信息。
                                 </p>
                             </div>
@@ -2217,11 +2322,13 @@ class CustomTestExecutionListenerTests {
                             <div class="paragraph">
                                 <p>
                                     <code>@Commit</code> indicates that the transaction for a transactional test method should be committed after the test method has completed. You can use <code>@Commit</code> as a direct replacement for <code>@Rollback(false)</code>                                    to more explicitly convey the intent of the code. Analogous to <code>@Rollback</code>, <code>@Commit</code> can also be declared as a class-level or method-level annotation.</br>
+                                    <span class="translate">
                                     @Commit表示事务测试方法的事务应该在测试方法完成后提交。您可以使用@Commit作为@Rollback(false)的直接替代，以更明确地传达代码的意图。与@Rollback类似，@Commit也可以声明为类级或方法级注释。
                                 </p>
                             </div>
                             <div class="paragraph">
                                 <p>The following example shows how to use the <code>@Commit</code> annotation:</br>
+                                    <span class="translate">
                                     下面的例子展示了如何使用@Commit注释:
                                 </p>
 
@@ -2271,6 +2378,7 @@ fun testProcessWithoutRollback() {
                                     is committed (see also
                                     <a href="#spring-testing-annotation-commit"><code>@Commit</code></a>). Rollback for integration tests in the Spring TestContext Framework defaults to <code>true</code> even if <code>@Rollback</code> is not explicitly
                                     declared.</br>
+                                    <span class="translate">
                                     @Rollback指示在测试方法完成后，是否应该回滚事务测试方法的事务。如果为true，则回滚事务。
                                     否则，事务将被提交(参见@Commit)。即使没有显式地声明@Rollback, Spring TestContext框架中集成测试的回滚也默认为true。
                                 </p>
@@ -2280,13 +2388,16 @@ fun testProcessWithoutRollback() {
                                     When declared as a class-level annotation, <code>@Rollback</code> defines the default rollback semantics for
                                     all test methods within the test class hierarchy. When declared as a method-level annotation, <code>@Rollback</code>
                                     defines rollback semantics for the specific test method, potentially overriding class-level <code>@Rollback</code> or <code>@Commit</code> semantics.</br>
+                                    <span class="translate">
                                     当声明为类级注释时，@Rollback为测试类层次结构中的所有测试方法定义了默认的回滚语义。当声明为方法级注释时，
                                     @Rollback定义了特定测试方法的回滚语义，可能覆盖类级的@Rollback或@Commit语义。
+                                    </span>
                                 </p>
                             </div>
                             <div class="paragraph">
                                 <p>
                                     The following example causes a test method&#8217;s result to not be rolled back (that is, the result is committed to the database):</br>
+                                    <span class="translate">
                                     下面的例子导致测试方法的结果不被回滚(也就是说，结果被提交到数据库):
                                 </p>
                             </div>
@@ -2333,11 +2444,13 @@ fun testProcessWithoutRollback() {
                                 <p>
                                     <code>@BeforeTransaction</code> indicates that the annotated <code>void</code> method should be run before a transaction is started, for test methods that have been configured to run within a transaction by using Spring&#8217;s
                                     <code>@Transactional</code> annotation. <code>@BeforeTransaction</code> methods are not required to be <code>public</code> and may be declared on Java 8-based interface default methods.</br>
+                                    <span class="translate">
                                     @BeforeTransaction表示在事务启动之前应该运行带注释的void方法，因为测试方法通过使用Spring的@Transactional注释被配置为在事务中运行。@BeforeTransaction方法不需要是公共的，可以在基于Java 8接口的默认方法上声明。
                                 </p>
                             </div>
                             <div class="paragraph">
                                 <p>The following example shows how to use the <code>@BeforeTransaction</code> annotation:</br>
+                                    <span class="translate">
                                     下面的例子展示了如何使用@BeforeTransaction注释:
                                 </p>
                             </div>
@@ -2382,6 +2495,7 @@ fun beforeTransaction() {
                                 <p>
                                     <code>@AfterTransaction</code> indicates that the annotated <code>void</code> method should be run after a transaction is ended, for test methods that have been configured to run within a transaction by using Spring&#8217;s
                                     <code>@Transactional</code> annotation. <code>@AfterTransaction</code> methods are not required to be <code>public</code> and may be declared on Java 8-based interface default methods.</br>
+                                    <span class="translate">
                                     @AfterTransaction表示在事务结束后应该运行带注释的void方法，用于使用Spring的@Transactional注释在事务中运行的测试方法。@AfterTransaction方法不需要是公共的，可以在基于Java 8接口的默认方法上声明。
                                 </p>
                             </div>
@@ -2425,6 +2539,7 @@ fun afterTransaction() {
                             <div class="paragraph">
                                 <p>
                                     <code>@Sql</code> is used to annotate a test class or test method to configure SQL scripts to be run against a given database during integration tests. The following example shows how to use it:</br>
+                                     <span class="translate">
                                      @Sql用于注释测试类或测试方法，以配置在集成测试期间针对给定数据库运行的SQL脚本。下面的例子展示了如何使用它:
                                 </p>
                             </div>
@@ -2467,6 +2582,7 @@ fun userTest() {
                             <div class="paragraph">
                                 <p>
                                     See <a href="#testcontext-executing-sql-declaratively">Executing SQL scripts declaratively with @Sql</a> for further details.</br>
+                                    <span class="translate">
                                     有关详细信息，请参见使用@Sql声明式执行SQL脚本。
                                 </p>
                             </div>
@@ -2476,6 +2592,7 @@ fun userTest() {
                             <div class="paragraph">
                                 <p>
                                     <code>@SqlConfig</code> defines metadata that is used to determine how to parse and run SQL scripts configured with the <code>@Sql</code> annotation. The following example shows how to use it:</br>
+                                    <span class="translate">
                                     @SqlConfig定义元数据，用于确定如何解析和运行使用@Sql注释配置的SQL脚本。下面的例子展示了如何使用它:
                                 </p>
                             </div>
@@ -2496,7 +2613,7 @@ void userTest() {
                                 <table>
                                     <tr>
                                         <td><i class="conum" data-value="1"></i><b>1</b></td>
-                                        <td>Set the comment prefix and the separator in SQL scripts.</br>在SQL脚本中设置注释前缀和分隔符。</td>
+                                        <td>Set the comment prefix and the separator in SQL scripts.</br><span class="translate">在SQL脚本中设置注释前缀和分隔符。</br></td>
                                     </tr>
                                 </table>
                             </div>
@@ -2526,18 +2643,21 @@ fun userTest() {
                                     <code>@SqlMergeMode</code> is used to annotate a test class or test method to configure whether method-level <code>@Sql</code> declarations are merged with class-level <code>@Sql</code> declarations. If
                                     <code>@SqlMergeMode</code> is not declared on a test class or test method, the <code>OVERRIDE</code> merge mode will be used by default. With the <code>OVERRIDE</code> mode, method-level <code>@Sql</code> declarations
                                     will effectively override class-level <code>@Sql</code> declarations.</br>
+                                    <span class="translate">
                                     @SqlMergeMode用于注释测试类或测试方法，以配置方法级@Sql声明是否与类级@Sql声明合并。如果没有在测试类或测试方法上声明@SqlMergeMode，则默认情况下将使用OVERRIDE合并模式。
                                     使用OVERRIDE模式，方法级的@Sql声明将有效地覆盖类级的@Sql声明。
                                 </p>
                             </div>
                             <div class="paragraph">
                                 <p>Note that a method-level <code>@SqlMergeMode</code> declaration overrides a class-level declaration.</br>
+                                    <span class="translate">
                                     注意，方法级的@SqlMergeMode声明覆盖了类级声明。
                                 </p>
                             </div>
                             <div class="paragraph">
                                 <p>
                                     The following example shows how to use <code>@SqlMergeMode</code> at the class level.</br>
+                                    <span class="translate">
                                     下面的示例展示了如何在类级别上使用@SqlMergeMode。
                                 </p>
 
@@ -2593,6 +2713,7 @@ class UserTests {
                             <div class="paragraph">
                                 <p>
                                     The following example shows how to use <code>@SqlMergeMode</code> at the method level.</br>
+                                    <span class="translate">
                                     下面的示例展示了如何在方法级别使用@SqlMergeMode。
                                 </p>
                             </div>
@@ -2652,6 +2773,7 @@ class UserTests {
                                     <code>@SqlGroup</code> is a container annotation that aggregates several <code>@Sql</code> annotations. You can use <code>@SqlGroup</code> natively to declare several nested <code>@Sql</code> annotations, or you can use
                                     it in conjunction with Java 8&#8217;s support for repeatable annotations, where <code>@Sql</code> can be declared several times on the same class or method, implicitly generating this container annotation. The following
                                     example shows how to declare an SQL group:</br>
+                                    <span class="translate">
                                     @SqlGroup是一个容器注释，它聚集了多个@Sql注释。
                                     您可以原生地使用@SqlGroup来声明几个嵌套的@Sql注释，或者您可以将它与Java 8对可重复注释的支持结合使用，在Java 8中，可以在同一类或方法上多次声明@Sql，从而隐式地生成这个容器注释。
                                     下面的例子展示了如何声明一个SQL组:
@@ -2708,6 +2830,7 @@ fun userTest() {
                         <div class="paragraph">
                             <p>
                                 The following annotations are supported with standard semantics for all configurations of the Spring TestContext Framework. Note that these annotations are not specific to tests and can be used anywhere in the Spring Framework.</br>
+                                <span class="translate">
                                 Spring TestContext框架的所有配置都支持以下注释的标准语义。请注意，这些注释不是特定于测试的，可以在Spring框架的任何地方使用。
                             </p>
                         </div>
@@ -2761,6 +2884,7 @@ fun userTest() {
                                             <p>
                                                 In the Spring TestContext Framework, you can use <code>@PostConstruct</code> and <code>@PreDestroy</code> with standard semantics on any application components configured in the <code>ApplicationContext</code>.
                                                 However, these lifecycle annotations have limited usage within an actual test class.</br>
+                                                <span class="translate">
                                                 在Spring TestContext框架中，你可以在ApplicationContext中配置的任何应用组件上使用带有标准语义的@PostConstruct和@PreDestroy。然而，这些生命周期注释在实际的测试类中使用有限。
                                             </p>
                                         </div>
@@ -2770,6 +2894,7 @@ fun userTest() {
                                                 <code>@BeforeEach</code>), and that applies for every test method in the test class. On the other hand, if a method within a test class is annotated with
                                                 <code>@PreDestroy</code>, that method never runs. Therefore, within a test class, we recommend that you use test lifecycle callbacks from the underlying test framework instead of
                                                 <code>@PostConstruct</code> and <code>@PreDestroy</code>.</br>
+                                                <span class="translate">
                                                 如果测试类中的一个方法注释了@PostConstruct，那么该方法运行在底层测试框架的任何before方法之前(例如，用JUnit Jupiter的@BeforeEach注释的方法)，并且该方法适用于测试类中的每个测试方法。
                                                 另一方面，如果测试类中的一个方法被注释为@PreDestroy，那么这个方法永远不会运行。
                                                 因此，在一个测试类中，我们建议您使用来自底层测试框架的测试生命周期回调，而不是@PostConstruct和@PreDestroy。
@@ -2787,11 +2912,13 @@ fun userTest() {
                                 <a href="#testcontext-junit4-runner">SpringRunner</a>,
                                 <a href="#testcontext-junit4-rules">Spring&#8217;s JUnit 4 rules</a>,
                                 or <a href="#testcontext-support-classes-junit4">Spring&#8217;s JUnit 4 support classes</a>:<br>
+                                <span class="translate">
                                 只有在与
                                  <a href="#testcontext-junit4-runner">SpringRunner</a>,
                                  <a href="#testcontext-junit4-rules">Spring&#8217;s JUnit 4 rules</a>,或
                                  <a href="#testcontext-support-classes-junit4">Spring&#8217;s JUnit 4 support classes</a>
                                  一起使用时，才支持以下注释:
+                                 </span>
                             </p>
                         </div>
                         <div class="ulist">
@@ -2817,6 +2944,7 @@ fun userTest() {
                                     <code>@IfProfileValue</code> indicates that the annotated test is enabled for a specific testing environment.
                                     If the configured <code>ProfileValueSource</code> returns a matching <code>value</code> for the provided <code>name</code>,
                                     the test is enabled. Otherwise, the test is disabled and, effectively, ignored.</br>
+                                    <span class="translate">
                                     @IfProfileValue表示为特定的测试环境启用了注释测试。如果配置的ProfileValueSource为提供的名称返回匹配的值，则启用测试。否则，测试将被禁用，并且被忽略。
                                 </p>
                             </div>
@@ -2826,6 +2954,7 @@ fun userTest() {
                                     subclasses. Specifically, a test is enabled if it is enabled both at the class level and at the method level. The absence of <code>@IfProfileValue</code> means the test is implicitly enabled. This is analogous to the
                                     semantics of JUnit 4&#8217;s
                                     <code>@Ignore</code> annotation, except that the presence of <code>@Ignore</code> always disables a test.</br>
+                                    <span class="translate">
                                     您可以在类级别、方法级别或两者都应用@IfProfileValue。对于该类或其子类中的任何方法，类级别@IfProfileValue的使用优先于方法级别的使用。
                                     具体来说，如果一个测试在类级别和方法级别都被启用，那么它就被启用。没有@IfProfileValue意味着测试是隐式启用的。
                                     这类似于JUnit 4的@Ignore注释的语义，只是@Ignore的存在总是禁用测试。
@@ -2834,6 +2963,7 @@ fun userTest() {
                             <div class="paragraph">
                                 <p>
                                     The following example shows a test that has an <code>@IfProfileValue</code> annotation:</br>
+                                    <span class="translate">
                                     下面的例子展示了一个带有@IfProfileValue注释的测试:
                                 </p>
                             </div>
@@ -2877,6 +3007,7 @@ fun testProcessWhichRunsOnlyOnOracleJvm() {
                                 <p>
                                     Alternatively, you can configure <code>@IfProfileValue</code> with a list of <code>values</code> (with <code>OR</code> semantics)
                                     to achieve TestNG-like support for test groups in a JUnit 4 environment. Consider the following example:</br>
+                                    <span class="translate">
                                     或者，您可以使用一组值(带有OR语义)配置@IfProfileValue，以在JUnit 4环境中实现对测试组的类似testng的支持。考虑以下例子:
                                 </p>
                             </div>
@@ -2924,6 +3055,7 @@ fun testProcessWhichRunsForUnitOrIntegrationTestGroups() {
                                     <code>@ProfileValueSourceConfiguration</code> is a class-level annotation that specifies what type of <code>ProfileValueSource</code> to use when retrieving profile values configured through the
                                     <code>@IfProfileValue</code> annotation. If <code>@ProfileValueSourceConfiguration</code> is not declared for a test, <code>SystemProfileValueSource</code> is used by default. The following example shows how to use
                                     <code>@ProfileValueSourceConfiguration</code>:</br>
+                                    <span class="translate">
                                     @ProfileValueSourceConfiguration是一个类级注释，它指定在检索通过@IfProfileValue注释配置的概要值时使用何种类型的ProfileValueSource。
                                     如果没有为测试声明@ profilevaluesourceconconfiguration，则默认使用SystemProfileValueSource。
                                     下面的例子展示了如何使用@ profilevaluesourcecconfigurconfiguration:
@@ -2969,6 +3101,7 @@ class CustomProfileValueSourceTests {
                             <div class="paragraph">
                                 <p>
                                     <code>@Timed</code> indicates that the annotated test method must finish execution in a specified time period (in milliseconds). If the text execution time exceeds the specified time period, the test fails.</br>
+                                    <span class="translate">
                                     @Timed表示带注释的测试方法必须在指定的时间段内(以毫秒为单位)完成执行。如果文本执行时间超过指定的时间范围，则测试失败。
                                 </p>
                             </div>
@@ -2976,6 +3109,7 @@ class CustomProfileValueSourceTests {
                                 <p>
                                     The time period includes running the test method itself, any repetitions of the test (see
                                     <code>@Repeat</code>), as well as any setting up or tearing down of the test fixture. The following example shows how to use it:</br>
+                                    <span class="translate">
                                     时间周期包括运行测试方法本身，测试的任何重复(参见@Repeat)，以及测试夹具的任何设置或拆卸。下面的例子展示了如何使用它:
                                 </p>
                             </div>
@@ -3018,6 +3152,7 @@ fun testProcessWithOneSecondTimeout() {
                                     Spring&#8217;s <code>@Timed</code> annotation has different semantics than JUnit 4&#8217;s <code>@Test(timeout=&#8230;&#8203;)</code> support. Specifically, due to the manner in which JUnit 4 handles test execution timeouts
                                     (that is, by executing the test method in a separate <code>Thread</code>), <code>@Test(timeout=&#8230;&#8203;)</code> preemptively fails the test if the test takes too long. Spring&#8217;s <code>@Timed</code>, on the
                                     other hand, does not preemptively fail the test but rather waits for the test to complete before failing.</br>
+                                    <span class="translate">
                                     Spring的@Timed注释与JUnit 4的@Test(timeout=…)支持有不同的语义。
                                     具体来说，由于JUnit 4处理测试执行超时的方式(即，通过在一个单独的线程中执行测试方法)，如果测试花费的时间太长，@Test(timeout=…)会先发制人地使测试失败。
                                     另一方面，Spring的@Timed并没有先发制人地使测试失败，而是在失败之前等待测试完成。
@@ -3029,6 +3164,7 @@ fun testProcessWithOneSecondTimeout() {
                             <div class="paragraph">
                                 <p>
                                     <code>@Repeat</code> indicates that the annotated test method must be run repeatedly. The number of times that the test method is to be run is specified in the annotation.</br>
+                                    <span class="translate">
                                     @Repeat表示必须重复运行带注释的测试方法。测试方法要运行的次数在注释中指定。
                                 </p>
                             </div>
@@ -3036,6 +3172,7 @@ fun testProcessWithOneSecondTimeout() {
                                 <p>
                                     The scope of execution to be repeated includes execution of the test method itself as well as any setting up or tearing down of the test fixture.
                                     The following example shows how to use the <code>@Repeat</code> annotation:</br>
+                                    <span class="translate">
                                     要重复的执行范围包括测试方法本身的执行以及测试夹具的任何设置或拆卸。下面的例子展示了如何使用@Repeat注释:
                                 </p>
                             </div>
@@ -3083,6 +3220,7 @@ fun testProcessRepeatedly() {
                             <p>
                                 The following annotations are supported when used in conjunction with the
                                 <a href="#testcontext-junit-jupiter-extension"><code>SpringExtension</code></a> and JUnit Jupiter (that is, the programming model in JUnit 5):</br>
+                                <span class="translate">
                                 当与SpringExtension和JUnit Jupiter(即JUnit 5中的编程模型)一起使用时，支持以下注释:
                             </p>
                         </div>
@@ -3116,12 +3254,14 @@ fun testProcessRepeatedly() {
                                     <code>@ExtendWith(SpringExtension.class)</code> from JUnit Jupiter with <code>@ContextConfiguration</code> from the Spring TestContext Framework. It can be used at the class level as a drop-in replacement for <code>@ContextConfiguration</code>.
                                     With regard to configuration options, the only difference between <code>@ContextConfiguration</code> and <code>@SpringJUnitConfig</code> is that component classes may be declared with the <code>value</code> attribute
                                     in <code>@SpringJUnitConfig</code>.</br>
+                                    <span class="translate">
                                     @SpringJUnitConfig是一个组合注释，它结合了JUnit Jupiter中的@ExtendWith(SpringExtension.class)和Spring TestContext Framework中的@ContextConfiguration。
                                     它可以在类级别上用作@ContextConfiguration的替代。关于配置选项，@ContextConfiguration和@SpringJUnitConfig之间的唯一区别是组件类可以用@SpringJUnitConfig中的value属性来声明。
                                 </p>
                             </div>
                             <div class="paragraph">
                                 <p>The following example shows how to use the <code>@SpringJUnitConfig</code> annotation to specify a configuration class:</br>
+                                    <span class="translate">
                                     下面的例子展示了如何使用@SpringJUnitConfig注释来指定一个配置类:
                                 </p>
                             </div>
@@ -3161,6 +3301,7 @@ class ConfigurationClassJUnitJupiterSpringTests {
                             </div>
                             <div class="paragraph">
                                 <p>The following example shows how to use the <code>@SpringJUnitConfig</code> annotation to specify the location of a configuration file:</br>
+                                    <span class="translate">
                                     下面的例子展示了如何使用@SpringJUnitConfig注释来指定配置文件的位置:
                                 </p>
                             </div>
@@ -3203,6 +3344,7 @@ class XmlJUnitJupiterSpringTests {
                                     See <a href="#testcontext-ctx-management">Context Management</a> as well as the javadoc for
                                     <a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/test/context/junit/jupiter/SpringJUnitConfig.html">
                                     <code>@SpringJUnitConfig</code></a> and <code>@ContextConfiguration</code> for further details.</br>
+                                    <span class="translate">
                                     请参阅上下文管理以及@SpringJUnitConfig和@ContextConfiguration的javadoc以了解更多细节。
                                 </p>
                             </div>
@@ -3217,6 +3359,7 @@ class XmlJUnitJupiterSpringTests {
                                     regard to configuration options, the only difference between <code>@ContextConfiguration</code> and <code>@SpringJUnitWebConfig</code> is that you can declare component classes by using the
                                     <code>value</code> attribute in <code>@SpringJUnitWebConfig</code>. In addition, you can override the <code>value</code> attribute from <code>@WebAppConfiguration</code> only by using the <code>resourcePath</code> attribute
                                     in <code>@SpringJUnitWebConfig</code>.</br>
+                                    <span class="translate">
                                     @SpringJUnitWebConfig是一个组合注解，它结合了JUnit Jupiter中的@ExtendWith(SpringExtension.class)和
                                     Spring TestContext Framework中的@ContextConfiguration和@WebAppConfiguration。
                                     您可以在类级别使用它作为@ContextConfiguration和@WebAppConfiguration的替代。
@@ -3227,6 +3370,7 @@ class XmlJUnitJupiterSpringTests {
                             <div class="paragraph">
                                 <p>
                                     The following example shows how to use the <code>@SpringJUnitWebConfig</code> annotation to specify a configuration class:</br>
+                                    <span class="translate">
                                     下面的例子展示了如何使用@SpringJUnitWebConfig注释来指定一个配置类:
                                 </p>
                             </div>
@@ -3267,6 +3411,7 @@ class ConfigurationClassJUnitJupiterSpringWebTests {
                             <div class="paragraph">
                                 <p>
                                     The following example shows how to use the <code>@SpringJUnitWebConfig</code> annotation to specify the location of a configuration file:</br>
+                                    <span class="translate">
                                     下面的例子展示了如何使用@SpringJUnitWebConfig注释来指定配置文件的位置:
                                 </p>
                             </div>
@@ -3310,6 +3455,7 @@ class XmlJUnitJupiterSpringWebTests {
                                     <a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/test/context/junit/jupiter/web/SpringJUnitWebConfig.html"><code>@SpringJUnitWebConfig</code></a>,
                                     <a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/test/context/ContextConfiguration.html"><code>@ContextConfiguration</code></a>, and
                                     <a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/test/context/web/WebAppConfiguration.html"><code>@WebAppConfiguration</code></a> for further details.</br>
+                                    <span class="translate">
                                     请参阅上下文管理以及@SpringJUnitWebConfig、@ContextConfiguration和@WebAppConfiguration的javadoc以了解更多细节。
                                 </p>
                             </div>
@@ -3320,6 +3466,7 @@ class XmlJUnitJupiterSpringWebTests {
                                 <p>
                                     <code>@TestConstructor</code> is a type-level annotation that is used to configure how the parameters of a test class constructor are autowired from components in the test&#8217;s
                                     <code>ApplicationContext</code>.</br>
+                                    <span class="translate">
                                     @TestConstructor是一个类型级的注释，用于配置如何从测试的ApplicationContext中的组件自动连接测试类构造函数的参数。
                                 </p>
                             </div>
@@ -3328,6 +3475,7 @@ class XmlJUnitJupiterSpringWebTests {
                                     If <code>@TestConstructor</code> is not present or meta-present on a test class, the default <em>test constructor autowire mode</em>
                                     will be used. See the tip below for details on how to change the default mode. Note, however, that a local declaration
                                     of <code>@Autowired</code> on a constructor takes precedence over both <code>@TestConstructor</code> and the default mode.</br>
+                                    <span class="translate">
                                     如果@TestConstructor在测试类中不存在或元存在，将使用默认的测试构造函数自动装配模式。有关如何更改默认模式的详细信息，请参阅下面的提示。
                                     但是请注意，构造函数上的@Autowired的局部声明优先于@TestConstructor和默认模式。
                                 </p>
@@ -3339,12 +3487,13 @@ class XmlJUnitJupiterSpringWebTests {
                                             <i class="fa icon-tip" title="Tip"></i>
                                         </td>
                                         <td class="content">
-                                            <div class="title">Changing the default test constructor autowire mode<br>更改默认测试构造函数自动装配模式</div>
+                                            <div class="title">Changing the default test constructor autowire mode<br><span class="translate">更改默认测试构造函数自动装配模式</span></div>
                                             <div class="paragraph">
                                                 <p>
                                                     The default <em>test constructor autowire mode</em> can be changed by setting the
                                                     <code>spring.test.constructor.autowire.mode</code> JVM system property to <code>all</code>. Alternatively, the default mode may be set via the
                                                     <a href="appendix.html#appendix-spring-properties"><code>SpringProperties</code></a> mechanism.</br>
+                                                    <span class="translate">
                                                     通过将spring.test.constructor.autowire.mode JVM系统属性设置为all，可以更改默认的测试构造函数自动装配模式。或者，默认模式可以通过SpringProperties机制来设置。
                                                 </p>
                                             </div>
@@ -3352,12 +3501,14 @@ class XmlJUnitJupiterSpringWebTests {
                                                 <p>
                                                     As of Spring Framework 5.3, the default mode may also be configured as a
                                                     <a href="https://junit.org/junit5/docs/current/user-guide/#running-tests-config-params">JUnit Platform configuration parameter</a>.</br>
+                                                    <span class="translate">
                                                     从Spring Framework 5.3开始，默认模式也可以配置为JUnit平台的配置参数。
                                                 </p>
                                             </div>
                                             <div class="paragraph">
                                                 <p>
                                                     If the <code>spring.test.constructor.autowire.mode</code> property is not set, test class constructors will not be automatically autowired.</br>
+                                                    <span class="translate">
                                                     如果没有设置spring.test.constructor.autowire.mode属性，测试类构造函数将不会自动自动连接。
                                                 </p>
                                             </div>
@@ -3375,6 +3526,7 @@ class XmlJUnitJupiterSpringWebTests {
                                             As of Spring Framework 5.2, <code>@TestConstructor</code> is only supported in conjunction with the <code>SpringExtension</code> for use with JUnit Jupiter. Note that the <code>SpringExtension</code> is often
                                             automatically registered for you – for example, when using annotations such as
                                             <code>@SpringJUnitConfig</code> and <code>@SpringJUnitWebConfig</code> or various test-related annotations from Spring Boot Test.</br>
+                                            <span class="translate">
                                             从Spring Framework 5.2开始，@TestConstructor只支持与SpringExtension一起使用。
                                             请注意，SpringExtension通常会自动为你注册——例如，当使用@SpringJUnitConfig和@SpringJUnitWebConfig这样的注解或Spring Boot Test中各种与测试相关的注解时。
                                         </td>
@@ -3387,6 +3539,7 @@ class XmlJUnitJupiterSpringWebTests {
                             <div class="paragraph">
                                 <p>
                                     <code>@NestedTestConfiguration</code> is a type-level annotation that is used to configure how Spring test configuration annotations are processed within enclosing class hierarchies for inner test classes.</br>
+                                    <span class="translate">
                                     @NestedTestConfiguration是一个类型级注释，用于配置如何在内部测试类的封闭类层次结构中处理Spring测试配置注释。
                                 </p>
                             </div>
@@ -3395,6 +3548,7 @@ class XmlJUnitJupiterSpringWebTests {
                                     If <code>@NestedTestConfiguration</code> is not present or meta-present on a test class, in its super type hierarchy,
                                     or in its enclosing class hierarchy, the default <em>enclosing configuration inheritance mode</em> will be used.
                                     See the tip below for details on how to change the default mode.</br>
+                                    <span class="translate">
                                     如果@NestedTestConfiguration没有出现在测试类中，也没有出现在它的超类型层次结构中，或者在它的外围类层次结构中，将使用默认的外围配置继承模式。
                                     有关如何更改默认模式的详细信息，请参阅下面的提示。
                                 </p>
@@ -3412,6 +3566,7 @@ class XmlJUnitJupiterSpringWebTests {
                                                     The default <em>enclosing configuration inheritance mode</em> is <code>INHERIT</code>, but it can be changed by setting the <code>spring.test.enclosing.configuration</code> JVM system property to
                                                     <code>OVERRIDE</code>. Alternatively, the default mode may be set via the
                                                     <a href="appendix.html#appendix-spring-properties"><code>SpringProperties</code></a> mechanism.</br>
+                                                    <span class="translate">
                                                     默认的封装配置继承模式是INHERIT，但是可以通过将spring.test. enclosure .configuration JVM系统属性设置为OVERRIDE来更改它。
                                                     或者，默认模式可以通过SpringProperties机制来设置。
                                                 </p>
@@ -3423,6 +3578,7 @@ class XmlJUnitJupiterSpringWebTests {
                             <div class="paragraph">
                                 <p>
                                     The <a href="#testcontext-framework">Spring TestContext Framework</a> honors <code>@NestedTestConfiguration</code> semantics for the following annotations.</br>
+                                    <span class="translate">
                                     Spring TestContext Framework 对以下注释采用@NestedTestConfiguration语义。
                                 </p>
                             </div>
@@ -3490,6 +3646,7 @@ class XmlJUnitJupiterSpringWebTests {
                                         <td class="content">
                                             The use of <code>@NestedTestConfiguration</code> typically only makes sense in conjunction with <code>@Nested</code> test classes in JUnit Jupiter; however, there may be other testing frameworks with support
                                             for Spring and nested test classes that make use of this annotation.</br>
+                                            <span class="translate">
                                             @NestedTestConfiguration的使用通常只在JUnit Jupiter中与@嵌套测试类结合时才有意义;但是，可能有其他支持Spring的测试框架和使用此注释的嵌套测试类。
                                         </td>
                                     </tr>
@@ -3498,6 +3655,7 @@ class XmlJUnitJupiterSpringWebTests {
                             <div class="paragraph">
                                 <p>
                                     See <a href="#testcontext-junit-jupiter-nested-test-configuration"><code>@Nested</code> test class configuration</a> for an example and further details.</br>
+                                    <span class="translate">
                                     请参阅@Nested测试类配置以获得示例和进一步的详细信息。
                                 </p>
                             </div>
@@ -3509,6 +3667,7 @@ class XmlJUnitJupiterSpringWebTests {
                                     <code>@EnabledIf</code> is used to signal that the annotated JUnit Jupiter test class or test method is enabled and should be run if the supplied <code>expression</code> evaluates to <code>true</code>. Specifically, if
                                     the expression evaluates to <code>Boolean.TRUE</code> or a <code>String</code> equal to <code>true</code> (ignoring case), the test is enabled. When applied at the class level, all test methods within that class are
                                     automatically enabled by default as well.</br>
+                                    <span class="translate">
                                     @EnabledIf用于表示已启用带注释的JUnit Jupiter测试类或测试方法，如果提供的表达式计算结果为true，则应运行该测试类或测试方法。
                                     具体来说，如果表达式的计算结果是布尔值。TRUE或String等于TRUE(忽略大小写)，测试被启用。
                                     当应用于类级别时，该类中的所有测试方法默认情况下也会自动启用。
@@ -3522,18 +3681,21 @@ class XmlJUnitJupiterSpringWebTests {
                                     <li>
                                         <p>
                                             <a href="core.html#expressions">Spring Expression Language</a> (SpEL) expression. For example: <code>@EnabledIf("#{systemProperties['os.name'].toLowerCase().contains('mac')}")</code></br>
+                                            <span class="translate">
                                             Spring Expression (SpEL)语言表达式, For example: <code>@EnabledIf("#{systemProperties['os.name'].toLowerCase().contains('mac')}")</code></br>
                                         </p>
                                     </li>
                                     <li>
                                         <p>
                                             Placeholder for a property available in the Spring <a href="core.html#beans-environment"><code>Environment</code></a>. For example: <code>@EnabledIf("${smoke.tests.enabled}")</code></br>
+                                            <span class="translate">
                                             Spring环境中可用属性的占位符. 例如： <code>@EnabledIf("${smoke.tests.enabled}")</code>
                                         </p>
                                     </li>
                                     <li>
                                         <p>
                                             Text literal. For example: <code>@EnabledIf("true")</code></br>
+                                            <span class="translate">
                                             文本文字。例如: <code>@EnabledIf("true")</code>
                                         </p>
                                     </li>
@@ -3542,12 +3704,14 @@ class XmlJUnitJupiterSpringWebTests {
                             <div class="paragraph">
                                 <p>
                                     Note, however, that a text literal that is not the result of dynamic resolution of a property placeholder is of zero practical value, since <code>@EnabledIf("false")</code> is equivalent to <code>@Disabled</code> and <code>@EnabledIf("true")</code> is logically meaningless.</br>
+                                    <span class="translate">
                                     然而，请注意，不是动态解析属性占位符的结果的文本文本是没有实际价值的，因为@EnabledIf(“false”)等同于@Disabled，而@EnabledIf(“true”)在逻辑上是没有意义的。
                                 </p>
                             </div>
                             <div class="paragraph">
                                 <p>
                                     You can use <code>@EnabledIf</code> as a meta-annotation to create custom composed annotations. For example, you can create a custom <code>@EnabledOnMac</code> annotation as follows:</br>
+                                    <span class="translate">
                                     您可以使用@EnabledIf作为元注释来创建自定义组合注释。例如，您可以创建自定义@EnabledOnMac注释，如下所示:
                                 </p>
                             </div>
@@ -3583,6 +3747,7 @@ annotation class EnabledOnMac {}</code></pre>
                                     <code>@DisabledIf</code> is used to signal that the annotated JUnit Jupiter test class or test method is disabled and should not be run if the supplied <code>expression</code> evaluates to
                                     <code>true</code>. Specifically, if the expression evaluates to <code>Boolean.TRUE</code> or a <code>String</code> equal to <code>true</code> (ignoring case), the test is disabled. When applied at the class level, all
                                     test methods within that class are automatically disabled as well.</br>
+                                    <span class="translate">
                                     @DisabledIf用于表示已禁用带注释的JUnit Jupiter测试类或测试方法，如果提供的表达式计算结果为true，则不应运行。
                                     具体来说，如果表达式的计算结果是布尔值。TRUE或String等于TRUE(忽略大小写)，测试将被禁用。当应用于类级别时，该类中的所有测试方法也会自动禁用。
                                 </p>
@@ -3596,19 +3761,24 @@ annotation class EnabledOnMac {}</code></pre>
                                         <p>
                                             <a href="core.html#expressions">Spring Expression Language</a> (SpEL) expression. For example:
                                             <code>@DisabledIf("#{systemProperties['os.name'].toLowerCase().contains('mac')}")</code></br>
+                                            <span class="translate">
                                               Spring Expression (SpEL)语言表达式. 例如:
                                             <code>@DisabledIf("#{systemProperties['os.name'].toLowerCase().contains('mac')}")</code>
+                                            </span>
                                         </p>
                                     </li>
                                     <li>
                                         <p>
                                             Placeholder for a property available in the Spring <a href="core.html#beans-environment"><code>Environment</code></a>. For example: <code>@DisabledIf("${smoke.tests.disabled}")</code></br>
+                                            <span class="translate">
                                             Spring环境中可用属性的占位符. 例如： <code>@DisabledIf("${smoke.tests.disabled}")</code>
+                                            </span>
                                         </p>
                                     </li>
                                     <li>
                                         <p>
                                             Text literal. For example: <code>@DisabledIf("true")</code></br>
+                                            <span class="translate">
                                             文本文字。例如:  <code>@DisabledIf("true")</code>
                                         </p>
                                     </li>
@@ -3617,12 +3787,14 @@ annotation class EnabledOnMac {}</code></pre>
                             <div class="paragraph">
                                 <p>
                                     Note, however, that a text literal that is not the result of dynamic resolution of a property placeholder is of zero practical value, since <code>@DisabledIf("true")</code> is equivalent to <code>@Disabled</code> and <code>@DisabledIf("false")</code>  is logically meaningless.</br>
+                                    <span class="translate">
                                     但是，请注意，不是动态解析属性占位符的结果的文本文本是没有实际价值的，因为@DisabledIf(“true”)等同于@Disabled，而@DisabledIf(“false”)在逻辑上是没有意义的。
                                 </p>
                             </div>
                             <div class="paragraph">
                                 <p>
                                     You can use <code>@DisabledIf</code> as a meta-annotation to create custom composed annotations. For example, you can create a custom <code>@DisabledOnMac</code> annotation as follows:</br>
+                                    <span class="translate">
                                     您可以使用@DisabledIf作为元注释来创建自定义组合注释。例如，可以创建自定义@DisabledOnMac注释，如下所示:
                                 </p>
                             </div>
@@ -3659,6 +3831,7 @@ annotation class DisabledOnMac {}</code></pre>
                             <p>
                                 You can use most test-related annotations as
                                 <a href="core.html#beans-meta-annotations">meta-annotations</a> to create custom composed annotations and reduce configuration duplication across a test suite.</br>
+                                <span class="translate">
                                 您可以将大多数与测试相关的注释作为元注释来创建自定义组合的注释，并减少测试套件中的配置重复。
                             </p>
                         </div>
@@ -3666,6 +3839,7 @@ annotation class DisabledOnMac {}</code></pre>
                             <p>
                                 You can use each of the following as a meta-annotation in conjunction with the
                                 <a href="#testcontext-framework">TestContext framework</a>.</br>
+                                <span class="translate">
                                 您可以使用下面的每一个作为与TestContext框架相结合的元注释。
                             </p>
                         </div>
@@ -3755,7 +3929,7 @@ annotation class DisabledOnMac {}</code></pre>
                             </ul>
                         </div>
                         <div class="paragraph">
-                            <p>Consider the following example:</br>考虑以下例子:</p>
+                            <p>Consider the following example:</br><span class="translate">考虑以下例子:</span></p>
                         </div>
                         <div class="listingblock primary">
                             <div class="title">Java</div>
@@ -3793,6 +3967,7 @@ class UserRepositoryTests { }</code></pre>
                             <p>
                                 If we discover that we are repeating the preceding configuration across our JUnit 4-based test suite, we can reduce the duplication by introducing a custom composed annotation that centralizes the common test configuration
                                 for Spring, as follows:</br>
+                                <span class="translate">
                                 如果我们发现我们在基于JUnit 4的测试套件中重复了前面的配置，我们可以通过引入一个自定义的组合注释来减少重复，该注释集中了Spring的通用测试配置，如下所示:
                             </p>
                         </div>
@@ -3821,6 +3996,7 @@ annotation class TransactionalDevTestConfig { }</code></pre>
                         <div class="paragraph">
                             <p>
                                 Then we can use our custom <code>@TransactionalDevTestConfig</code> annotation to simplify the configuration of individual JUnit 4 based test classes, as follows:</br>
+                                <span class="translate">
                                 然后，我们可以使用自定义的@TransactionalDevTestConfig注释来简化基于JUnit 4的测试类的配置，如下所示:
                             </p>
                         </div>
@@ -3851,6 +4027,7 @@ class UserRepositoryTests</code></pre>
                         <div class="paragraph">
                             <p>
                                 If we write tests that use JUnit Jupiter, we can reduce code duplication even further, since annotations in JUnit 5 can also be used as meta-annotations. Consider the following example:</br>
+                                <span class="translate">
                                 如果我们编写使用JUnit Jupiter的测试，就可以进一步减少代码重复，因为JUnit 5中的注释也可以用作元注释。考虑以下例子:
                             </p>
                         </div>
@@ -3890,6 +4067,7 @@ class UserRepositoryTests { }</code></pre>
                             <p>
                                 If we discover that we are repeating the preceding configuration across our JUnit Jupiter-based test suite, we can reduce the duplication by introducing a custom composed annotation that centralizes the common test configuration
                                 for Spring and JUnit Jupiter, as follows:</br>
+                                <span class="translate">
                                 如果我们发现我们在基于JUnit Jupiter的测试套件中重复了前面的配置，我们可以通过引入一个自定义的组合注释来减少重复，该注释集中了Spring和JUnit Jupiter的通用测试配置，如下所示:
                             </p>
                         </div>
@@ -3920,6 +4098,7 @@ annotation class TransactionalDevTestConfig { }</code></pre>
                         <div class="paragraph">
                             <p>
                                 Then we can use our custom <code>@TransactionalDevTestConfig</code> annotation to simplify the configuration of individual JUnit Jupiter based test classes, as follows:</br>
+                                <span class="translate">
                                 然后，我们可以使用自定义的@TransactionalDevTestConfig注释来简化单个JUnit Jupiter测试类的配置，如下所示:
                             </p>
                         </div>
@@ -3948,6 +4127,7 @@ class UserRepositoryTests { }</code></pre>
                                 Since JUnit Jupiter supports the use of <code>@Test</code>, <code>@RepeatedTest</code>, <code>ParameterizedTest</code>, and others as meta-annotations, you can also create custom composed annotations at the test method level.
                                 For example, if we wish to create a composed annotation that combines the <code>@Test</code> and <code>@Tag</code> annotations from JUnit Jupiter with the <code>@Transactional</code> annotation from Spring, we could create
                                 an <code>@TransactionalIntegrationTest</code> annotation, as follows:</br>
+                                <span class="translate">
                                 因为JUnit Jupiter支持使用@Test、@RepeatedTest、ParameterizedTest和其他作为元注释，所以您也可以在测试方法级别创建自定义组合注释。
                                 例如，如果我们希望创建一个组合注释，将来自JUnit Jupiter的@Test和@Tag注释与来自Spring的@Transactional注释结合起来，我们可以创建一个@TransactionalIntegrationTest注释，如下所示:
                             </p>
@@ -3977,6 +4157,7 @@ annotation class TransactionalIntegrationTest { }</code></pre>
                         <div class="paragraph">
                             <p>
                                 Then we can use our custom <code>@TransactionalIntegrationTest</code> annotation to simplify the configuration of individual JUnit Jupiter based test methods, as follows:</br>
+                                <span class="translate">
                                 然后我们可以使用自定义的@TransactionalIntegrationTest注释来简化单个基于JUnit Jupiter的测试方法的配置，如下所示:
                             </p>
                         </div>
@@ -4003,6 +4184,7 @@ fun deleteOrder() { }</code></pre>
                         <div class="paragraph">
                             <p>
                                 For further details, see the <a href="https://github.com/spring-projects/spring-framework/wiki/Spring-Annotation-Programming-Model">Spring Annotation Programming Model</a> wiki page.</br>
+                                <span class="translate">
                                 有关详细信息，请参见Spring注释编程模型wiki页面。
 
                             </p>
@@ -4017,6 +4199,7 @@ fun deleteOrder() { }</code></pre>
                             annotation-driven unit and integration testing support that is agnostic of the testing framework in use.
                             The TestContext framework also places a great deal of importance on convention over configuration,
                             with reasonable defaults that you can override through annotation-based configuration.</br>
+                            <span class="translate">
                             Spring TestContext Framework(位于org.springframework.test.context包中)提供了通用的、注释驱动的单元和集成测试支持，与正在使用的测试框架无关。
                             TestContext框架还非常重视约定而不是配置，通过基于注释的配置可以覆盖合理的缺省值。
                         </p>
@@ -4026,6 +4209,7 @@ fun deleteOrder() { }</code></pre>
                             In addition to generic testing infrastructure, the TestContext framework provides explicit support for JUnit 4, JUnit Jupiter (AKA JUnit 5), and TestNG. For JUnit 4 and TestNG, Spring provides <code>abstract</code> support classes.
                             Furthermore, Spring provides a custom JUnit <code>Runner</code> and custom JUnit <code>Rules</code> for JUnit 4 and a custom <code>Extension</code> for JUnit Jupiter that let you write so-called POJO test classes. POJO test
                             classes are not required to extend a particular class hierarchy, such as the <code>abstract</code> support classes.</br>
+                            <span class="translate">
                             除了通用的测试基础设施之外，TestContext框架还提供了对JUnit 4、JUnit Jupiter (AKA JUnit 5)和TestNG的显式支持。
                             对于JUnit 4和TestNG, Spring提供了抽象支持类。此外，Spring还提供了一个自定义JUnit Runner和JUnit 4的自定义JUnit规则，以及一个JUnit Jupiter的自定义扩展，可以让您编写所谓的POJO测试类。
                             POJO测试类不需要扩展特定的类层次结构，比如抽象支持类。
@@ -4039,13 +4223,14 @@ fun deleteOrder() { }</code></pre>
                             <a href="#testcontext-fixture-di">dependency injection</a>, <a href="#testcontext-tx">transaction management</a>),
                             <a href="#testcontext-support-classes">support classes</a>, and
                             <a href="#integration-testing-annotations">annotation support</a> sections.</br>
+                            <span class="translate">
                             下面的部分提供了TestContext framework 内部的概述。
                             如果您只对使用框架感兴趣，而对使用您自己的自定义侦听器或自定义加载器扩展它不感兴趣，可以直接进入配置(上下文管理、依赖注入、事务管理)、支持类和注释支持部分。
                         </p>
                     </div>
                     <div class="sect3">
                         <h4 id="testcontext-key-abstractions"><a class="anchor" href="#testcontext-key-abstractions"></a>3.5.1. Key Abstractions</h4>
-                        <span>3.5.1. 关键抽象</span>
+                        <span class="translate">3.5.1. 关键抽象</span>
                         <div class="paragraph">
                             <p>
                                 The core of the framework consists of the <code>TestContextManager</code> class and the
@@ -4057,11 +4242,13 @@ fun deleteOrder() { }</code></pre>
                                 by providing dependency injection, managing transactions, and so on. A
                                 <code>SmartContextLoader</code> is responsible for loading an <code>ApplicationContext</code> for a given test class.
                                  See the <a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/test/context/package-summary.html">javadoc</a>                                and the Spring test suite for further information and examples of various implementations.</br>
+                                 <span class="translate">
                                 该框架的核心包括TestContextManager类和TestContext、TestExecutionListener和SmartContextLoader接口。
                                 为每个测试类创建一个TestContextManager(例如，为在JUnit Jupiter中的单个测试类中执行所有测试方法)。
                                 反过来，TestContextManager管理一个保存当前测试上下文的TestContext。
                                 TestContextManager还在测试进行时更新TestContext的状态，并委托给TestExecutionListener实现，这些实现通过提供依赖注入、管理事务等等来检测实际的测试执行。
                                 SmartContextLoader负责为给定的测试类加载ApplicationContext。有关各种实现的更多信息和示例，请参阅javadoc和Spring测试套件。
+                                </span>
                                 </p>
                         </div>
                         <div class="sect4">
@@ -4071,6 +4258,7 @@ fun deleteOrder() { }</code></pre>
                                     <code>TestContext</code> encapsulates the context in which a test is run (agnostic of the actual testing framework in use) and provides context management and caching support for the test instance for which it is responsible.
                                     The <code>TestContext</code> also delegates to a
                                     <code>SmartContextLoader</code> to load an <code>ApplicationContext</code> if requested.</br>
+                                    <span class="translate">
                                     TestContext封装了运行测试的上下文(与实际使用的测试框架无关)，并为它所负责的测试实例提供了上下文管理和缓存支持。
                                     TestContext也委托给SmartContextLoader来加载ApplicationContext。
                                 </p>
@@ -4082,6 +4270,7 @@ fun deleteOrder() { }</code></pre>
                                 <p>
                                     <code>TestContextManager</code> is the main entry point into the Spring TestContext Framework and is responsible for managing a single <code>TestContext</code> and signaling events to each registered
                                     <code>TestExecutionListener</code> at well-defined test execution points:</br>
+                                    <span class="translate">
                                     TestContextManager是Spring TestContext框架的主要入口点，负责管理单个TestContext，并在定义良好的测试执行点向每个注册的TestExecutionListener发送事件信号:
                                 </p>
                             </div>
@@ -4090,42 +4279,49 @@ fun deleteOrder() { }</code></pre>
                                     <li>
                                         <p>
                                             Prior to any &#8220;before class&#8221; or &#8220;before all&#8221; methods of a particular testing framework.</br>
+                                            <span class="translate">
                                             在特定测试框架的任何“在类之前”或“在所有方法之前”。
                                         </p>
                                     </li>
                                     <li>
                                         <p>
                                             Test instance post-processing.</br>
+                                            <span class="translate">
                                             后处理测试实例。
                                         </p>
                                     </li>
                                     <li>
                                         <p>
                                             Prior to any &#8220;before&#8221; or &#8220;before each&#8221; methods of a particular testing framework.</br>
+                                            <span class="translate">
                                             在特定测试框架的任何“之前”或“在每个”方法之前。
                                         </p>
                                     </li>
                                     <li>
                                         <p>
                                             Immediately before execution of the test method but after test setup.</br>
+                                            <span class="translate">
                                             在测试方法执行之前，但在测试设置之后。
                                         </p>
                                     </li>
                                     <li>
                                         <p>
                                             Immediately after execution of the test method but before test tear down.</br>
+                                            <span class="translate">
                                             在测试方法执行之后，但在测试结束之前。
                                         </p>
                                     </li>
                                     <li>
                                         <p>
                                             After any &#8220;after&#8221; or &#8220;after each&#8221; methods of a particular testing framework.</br>
+                                            <span class="translate">
                                             在特定测试框架的任何“之后”或“每个”方法之后。
                                         </p>
                                     </li>
                                     <li>
                                         <p>
                                             After any &#8220;after class&#8221; or &#8220;after all&#8221; methods of a particular testing framework.</br>
+                                            <span class="translate">
                                             在特定测试框架的任何“课后”或“终究”方法之后。
                                         </p>
                                     </li>
@@ -4137,6 +4333,7 @@ fun deleteOrder() { }</code></pre>
                             <div class="paragraph">
                                 <p>
                                     <code>TestExecutionListener</code> defines the API for reacting to test-execution events published by the <code>TestContextManager</code> with which the listener is registered. See <a href="#testcontext-tel-config"><code>TestExecutionListener</code> Configuration</a>.</br>
+                                    <span class="translate">
                                     TestExecutionListener定义了一个API，用于响应TestContextManager发布的测试执行事件，侦听器是与TestContextManager一起注册的。看到TestExecutionListener配置。
                                 </p>
                             </div>
@@ -4149,6 +4346,7 @@ fun deleteOrder() { }</code></pre>
                                     <code>ContextLoader</code> is a strategy interface for loading an <code>ApplicationContext</code> for an integration test managed by the Spring TestContext Framework. You should implement
                                     <code>SmartContextLoader</code> instead of this interface to provide support for component classes, active bean definition profiles, test property sources, context hierarchies, and
                                     <code>WebApplicationContext</code> support.</br>
+                                    <span class="translate">
                                     ContextLoader是一个策略接口，用于为Spring TestContext框架管理的集成测试加载ApplicationContext。
                                     你应该实现SmartContextLoader而不是这个接口来提供对组件类、活动bean定义配置文件、测试属性源、上下文层次结构和WebApplicationContext支持的支持。
                                 </p>
@@ -4158,13 +4356,14 @@ fun deleteOrder() { }</code></pre>
                                     <code>SmartContextLoader</code> is an extension of the <code>ContextLoader</code> interface that supersedes the original minimal <code>ContextLoader</code> SPI. Specifically, a <code>SmartContextLoader</code> can choose
                                     to process resource locations, component classes, or context initializers. Furthermore, a
                                     <code>SmartContextLoader</code> can set active bean definition profiles and test property sources in the context that it loads.</br>
+                                    <span class="translate">
                                     SmartContextLoader是ContextLoader接口的扩展，它取代了原来最小的ContextLoader SPI。
                                     具体来说，SmartContextLoader可以选择处理资源位置、组件类或上下文初始化器。
                                     此外，SmartContextLoader可以在它加载的上下文中设置活动bean定义概要文件和测试属性源。
                                 </p>
                             </div>
                             <div class="paragraph">
-                                <p>Spring provides the following implementations:</br>Spring提供了以下实现:</p>
+                                <p>Spring provides the following implementations:</br><span class="translate">Spring提供了以下实现:</span></p>
                             </div>
                             <div class="ulist">
                                 <ul>
@@ -4173,6 +4372,7 @@ fun deleteOrder() { }</code></pre>
                                             <code>DelegatingSmartContextLoader</code>: One of two default loaders, it delegates internally to an <code>AnnotationConfigContextLoader</code>, a <code>GenericXmlContextLoader</code>, or a
                                             <code>GenericGroovyXmlContextLoader</code>, depending either on the configuration declared for the test class or on the presence of default locations or default configuration classes. Groovy support is enabled
                                             only if Groovy is on the classpath.</br>
+                                            <span class="translate">
                                             DelegatingSmartContextLoader:两个默认加载器之一,它代表内部AnnotationConfigContextLoader, GenericXmlContextLoader,或GenericGroovyXmlContextLoader,
                                             根据测试类声明的配置或在默认位置的存在或默认配置类。只有当Groovy在类路径上时，才会启用Groovy支持。
                                         </p>
@@ -4183,44 +4383,52 @@ fun deleteOrder() { }</code></pre>
                                             a <code>GenericXmlWebContextLoader</code>, or a <code>GenericGroovyXmlWebContextLoader</code>,
                                             depending either on the configuration declared for the test class or on the presence of default locations or default configuration classes.
                                             A web <code>ContextLoader</code> is used only if <code>@WebAppConfiguration</code> is present on the test class. Groovy support is enabled only if Groovy is on the classpath.</br>
-                                           WebDelegatingSmartContextLoader:两个默认加载器之一,它代表内部AnnotationConfigWebContextLoader,
+                                            <span class="translate">
+                                            WebDelegatingSmartContextLoader:两个默认加载器之一,它代表内部AnnotationConfigWebContextLoader,
                                             GenericXmlWebContextLoader,或GenericGroovyXmlWebContextLoader,根据测试类声明的配置或在默认位置的存在或默认配置类。
                                             只有当@WebAppConfiguration在测试类中存在时，才会使用web ContextLoader。只有当Groovy在类路径上时，才会启用Groovy支持。
+                                            </span>
                                         </p>
                                     </li>
                                     <li>
                                         <p>
                                             <code>AnnotationConfigContextLoader</code>: Loads a standard <code>ApplicationContext</code> from component classes.</br>
+                                            <span class="translate">
                                             AnnotationConfigContextLoader:从组件类加载一个标准的ApplicationContext。
                                         </p>
                                     </li>
                                     <li>
                                         <p>
                                             <code>AnnotationConfigWebContextLoader</code>: Loads a <code>WebApplicationContext</code> from component classes.</br>
+                                            <span class="translate">
                                             AnnotationConfigWebContextLoader:从组件类中加载WebApplicationContext。
                                         </p>
                                     </li>
                                     <li>
                                         <p>
                                             <code>GenericGroovyXmlContextLoader</code>: Loads a standard <code>ApplicationContext</code> from resource locations that are either Groovy scripts or XML configuration files.</br>
+                                            <span class="translate">
                                             GenericGroovyXmlContextLoader:从Groovy脚本或XML配置文件的资源位置加载一个标准的ApplicationContext。
                                         </p>
                                     </li>
                                     <li>
                                         <p>
                                             <code>GenericGroovyXmlWebContextLoader</code>: Loads a <code>WebApplicationContext</code> from resource locations that are either Groovy scripts or XML configuration files.</br>
+                                            <span class="translate">
                                             GenericGroovyXmlWebContextLoader:从资源位置(Groovy脚本或XML配置文件)加载WebApplicationContext。
                                         </p>
                                     </li>
                                     <li>
                                         <p>
                                             <code>GenericXmlContextLoader</code>: Loads a standard <code>ApplicationContext</code> from XML resource locations.</br>
+                                            <span class="translate">
                                             GenericXmlContextLoader:从XML资源位置加载标准的ApplicationContext。
                                         </p>
                                     </li>
                                     <li>
                                         <p>
                                             <code>GenericXmlWebContextLoader</code>: Loads a <code>WebApplicationContext</code> from XML resource locations.</br>
+                                            <span class="translate">
                                             GenericXmlWebContextLoader:从XML资源位置加载WebApplicationContext。
                                         </p>
                                     </li>
@@ -4230,12 +4438,13 @@ fun deleteOrder() { }</code></pre>
                     </div>
                     <div class="sect3">
                         <h4 id="testcontext-bootstrapping"><a class="anchor" href="#testcontext-bootstrapping"></a>3.5.2. Bootstrapping the TestContext Framework</h4>
-                        <span>3.5.2. Bootstrapping the TestContext Framework</span>
+                        <span class="translate">3.5.2. Bootstrapping the TestContext Framework</span>
                         <div class="paragraph">
                             <p>
                                 The default configuration for the internals of the Spring TestContext Framework is sufficient for all common use cases. However, there are times when a development team or third party framework would like to change the default
                                 <code>ContextLoader</code>, implement a custom <code>TestContext</code> or <code>ContextCache</code>, augment the default sets of
                                 <code>ContextCustomizerFactory</code> and <code>TestExecutionListener</code> implementations, and so on. For such low-level control over how the TestContext framework operates, Spring provides a bootstrapping strategy.</br>
+                                <span class="translate">
                                 Spring TestContext框架内部的默认配置对所有常见用例都足够了。然而，有时开发团队或第三方框架想要改变默认的ContextLoader，实现一个自定义的TestContext或ContextCache，
                                 增加ContextCustomizerFactory和TestExecutionListener实现的默认集合，等等。对于这种对TestContext框架如何操作的低级控制，Spring提供了一个引导策略。
                             </p>
@@ -4249,6 +4458,7 @@ fun deleteOrder() { }</code></pre>
                                 bootstrapper is not explicitly configured by using
                                 <code>@BootstrapWith</code>, either the <code>DefaultTestContextBootstrapper</code> or the
                                 <code>WebTestContextBootstrapper</code> is used, depending on the presence of <code>@WebAppConfiguration</code>.</br>
+                                <span class="translate">
                                 TestContextBootstrapper定义了用于引导TestContext框架的SPI。
                                 TestContextBootstrapper被TestContextManager用来加载当前测试的TestExecutionListener实现，并构建它所管理的TestContext。
                                 您可以使用@BootstrapWith为测试类(或测试类层次结构)配置自定义引导策略，可以直接使用，也可以作为元注释使用。
@@ -4258,6 +4468,7 @@ fun deleteOrder() { }</code></pre>
                         <div class="paragraph">
                             <p>
                                 Since the <code>TestContextBootstrapper</code> SPI is likely to change in the future (to accommodate new requirements), we strongly encourage implementers not to implement this interface directly but rather to extend <code>AbstractTestContextBootstrapper</code>  or one of its concrete subclasses instead.
+                                <span class="translate">
                                 因为TestContextBootstrapper SPI将来可能会发生变化(以适应新的需求)，我们强烈鼓励实现者不要直接实现这个接口，而是扩展AbstractTestContextBootstrapper或它的具体子类之一。
                             </p>
                         </div>
@@ -9879,6 +10090,7 @@ val result = client.get().uri("/path")
                     <div class="paragraph">
                         <p>
                             The Spring MVC Test framework, also known as MockMvc, provides support for testing Spring MVC applications. It performs full Spring MVC request handling but via mock request and response objects instead of a running server.</br>
+                            <span class="translate">
                             Spring MVC测试框架，也称为MockMvc，提供了对Spring MVC应用程序测试的支持。它执行完整的Spring MVC请求处理，但是是通过模拟请求和响应对象，而不是运行的服务器。
                         </p>
                     </div>
@@ -9886,6 +10098,7 @@ val result = client.get().uri("/path")
                         <p>
                             MockMvc can be used on its own to perform requests and verify responses. It can also be used through the <a href="#webtestclient">WebTestClient</a> where MockMvc is plugged in as the server to handle requests with. The advantage
                             of <code>WebTestClient</code> is the option to work with higher level objects instead of raw data as well as the ability to switch to full, end-to-end HTTP tests against a live server and use the same test API.</br>
+                            <span class="translate">
                             MockMvc可以单独用于执行请求和验证响应。它也可以通过WebTestClient使用，在这里MockMvc作为服务器被插入来处理请求。
                             WebTestClient的优点是可以选择使用更高级别的对象，而不是原始数据，并且能够针对活动服务器切换到完整的端到端HTTP测试，并使用相同的测试API。
                         </p>
@@ -9898,6 +10111,7 @@ val result = client.get().uri("/path")
                                 You can write plain unit tests for Spring MVC by instantiating a controller, injecting it with dependencies, and calling its methods. However such tests do not verify request mappings, data binding, message conversion, type
                                 conversion, validation, and nor do they involve any of the supporting <code>@InitBinder</code>, <code>@ModelAttribute</code>, or
                                 <code>@ExceptionHandler</code> methods.</br>
+                                <span class="translate">
                                 您可以为Spring MVC编写简单的单元测试，方法是实例化一个控制器，向它注入依赖项，并调用它的方法。
                                 但是，这些测试不验证请求映射、数据绑定、消息转换、类型转换、验证，也不涉及任何支持的@InitBinder、@ModelAttribute或@ExceptionHandler方法。
                             </p>
@@ -9915,6 +10129,7 @@ val result = client.get().uri("/path")
                             <p>
                                 MockMvc is a server side test framework that lets you verify most of the functionality of a Spring MVC application using lightweight and targeted tests. You can use it on its own to perform requests and to verify responses,
                                 or you can also use it through the <a href="#webtestclient">WebTestClient</a> API with MockMvc plugged in as the server to handle requests with.</br>
+                                <span class="translate">
                                 MockMvc是一个服务器端测试框架，它允许您使用轻量级和目标测试来验证Spring MVC应用程序的大部分功能。
                                 您可以单独使用它来执行请求和验证响应，或者您也可以通过插入MockMvc的WebTestClient API使用它作为服务器来处理请求。
                             </p>
@@ -9923,6 +10138,7 @@ val result = client.get().uri("/path")
                             <h5 id="spring-mvc-test-server-static-imports"><a class="anchor" href="#spring-mvc-test-server-static-imports"></a>Static Imports</h5>
                             <div class="paragraph">
                                 <p>When using MockMvc directly to perform requests, you&#8217;ll need static imports for:</br>
+                                    <span class="translate">
                                     当使用MockMvc直接执行请求时，你将需要以下静态导入:
                                 </p>
                             </div>
@@ -9945,23 +10161,26 @@ val result = client.get().uri("/path")
                             <div class="paragraph">
                                 <p>
                                     An easy way to remember that is search for <code>MockMvc*</code>. If using Eclipse be sure to also add the above as &#8220;favorite static members&#8221; in the Eclipse preferences.</br>
+                                    <span class="translate">
                                     记住这一点的一个简单方法是搜索MockMvc*。如果使用Eclipse，请确保在Eclipse首选项中也将上述内容添加为“喜爱的静态成员”。
                                 </p>
                             </div>
                             <div class="paragraph">
                                 <p>
                                     When using MockMvc through the <a href="#webtestclient">WebTestClient</a> you do not need static imports. The <code>WebTestClient</code> provides a fluent API without static imports.
+                                    <span class="translate">
                                     当通过WebTestClient使用MockMvc时，你不需要静态导入。WebTestClient提供了一个流畅的API，无需静态导入。
                                 </p>
                             </div>
                         </div>
                         <div class="sect4">
                             <h5 id="spring-mvc-test-server-setup-options"><a class="anchor" href="#spring-mvc-test-server-setup-options"></a>Setup Choices</h5>
-                            <span>设置选择</span>
+                            <span class="translate">设置选择</span>
                             <div class="paragraph">
                                 <p>
                                     MockMvc can be setup in one of two ways. One is to point directly to the controllers you want to test and programmatically configure Spring MVC infrastructure. The second is to point to Spring configuration with Spring
                                     MVC and controller infrastructure in it.</br>
+                                    <span class="translate">
                                     可以通过两种方式之一来设置MockMvc。一种方法是直接指向您想要测试和以编程方式配置Spring MVC基础设施的控制器。
                                     第二点是指向包含Spring MVC和控制器基础设施的Spring配置。
                                 </p>
@@ -9969,6 +10188,7 @@ val result = client.get().uri("/path")
                             <div class="paragraph">
                                 <p>
                                     To set up MockMvc for testing a specific controller, use the following:</br>
+                                    <span class="translate">
                                     要设置MockMvc来测试一个特定的控制器，请使用以下方法:
                                 </p>
                             </div>
@@ -10010,11 +10230,13 @@ val result = client.get().uri("/path")
                                 <p>
                                     Or you can also use this setup when testing through the
                                     <a href="#webtestclient-controller-config">WebTestClient</a> which delegates to the same builder as shown above.</br>
+                                    <span class="translate">
                                     或者，您也可以在通过WebTestClient进行测试时使用此设置，后者委托给如上所示的相同的构建器。
                                 </p>
                             </div>
                             <div class="paragraph">
                                 <p>To set up MockMvc through Spring configuration, use the following:</br>
+                                    <span class="translate">
                                     通过Spring配置来设置MockMvc，使用以下方法:
                                 </p>
                             </div>
@@ -10058,11 +10280,13 @@ class MyWebTests {
                                 <p>
                                     Or you can also use this setup when testing through the
                                     <a href="#webtestclient-context-config">WebTestClient</a> which delegates to the same builder as shown above.</br>
+                                    <span class="translate">
                                     或者，您也可以在通过WebTestClient进行测试时使用此设置，后者委托给如上所示的相同的构建器。
                                 </p>
                             </div>
                             <div class="paragraph">
                                 <p>Which setup option should you use?</br>
+                                    <span class="translate">
                                     应该使用哪个设置选项?
                                 </p>
                             </div>
@@ -10071,6 +10295,7 @@ class MyWebTests {
                                     The <code>webAppContextSetup</code> loads your actual Spring MVC configuration, resulting in a more complete integration test. Since the TestContext framework caches the loaded Spring configuration, it helps keep tests
                                     running fast, even as you introduce more tests in your test suite. Furthermore, you can inject mock services into controllers through Spring configuration to remain focused on testing the web layer. The following example
                                     declares a mock service with Mockito:</br>
+                                    <span class="translate">
                                     webAppContextSetup会加载你实际的Spring MVC配置，从而产生一个更完整的集成测试。由于TestContext框架缓存加载的Spring配置，因此它有助于保持测试快速运行，即使您在测试套件中引入更多测试。
                                     此外，您可以通过Spring配置将模拟服务注入到控制器中，以保持专注于测试web层。下面的例子用Mockito声明了一个模拟服务:
                                 </p>
@@ -10084,6 +10309,7 @@ class MyWebTests {
                             </div>
                             <div class="paragraph">
                                 <p>You can then inject the mock service into the test to set up and verify your expectations, as the following example shows:</br>
+                                    <span class="translate">
                                     然后，您可以将模拟服务注入到测试中，以设置和验证您的期望，如下面的示例所示:
                                 </p>
                             </div>
@@ -10133,6 +10359,7 @@ class AccountTests {
                                 <p>
                                     The <code>standaloneSetup</code>, on the other hand, is a little closer to a unit test. It tests one controller at a time. You can manually inject the controller with mock dependencies, and it does not involve loading Spring
                                     configuration. Such tests are more focused on style and make it easier to see which controller is being tested, whether any specific Spring MVC configuration is required to work, and so on. The <code>standaloneSetup</code> is also a very convenient way to write ad-hoc tests to verify specific behavior or to debug an issue.</br>
+                                    <span class="translate">
                                     另一方面，独立设置更接近单元测试。它一次测试一个控制器。您可以用模拟依赖项手动注入控制器，而且它不涉及加载Spring配置。这类测试更关注于样式，更容易查看正在测试的控制器，是否需要任何特定的Spring MVC配置，等等。
                                     独立设置也是编写特别测试来验证特定行为或调试问题的一种非常方便的方式。
                                 </p>
@@ -10143,6 +10370,7 @@ class AccountTests {
                                     As with most &#8220;integration versus unit testing&#8221; debates, there is no right or wrong answer. However, using the <code>standaloneSetup</code> does imply the need for additional
                                     <code>webAppContextSetup</code> tests in order to verify your Spring MVC configuration. Alternatively, you can write all your tests with <code>webAppContextSetup</code>, in order to always test against your actual Spring
                                     MVC configuration.</br>
+                                    <span class="translate">
                                     就像大多数关于“集成还是单元测试”的争论一样，没有正确或错误的答案。然而，使用独立设置意味着需要额外的webAppContextSetup测试来验证您的Spring MVC配置。
                                     或者，你也可以用webAppContextSetup编写所有的测试，以便始终针对你实际的Spring MVC配置进行测试。
                                 </p>
@@ -10155,6 +10383,7 @@ class AccountTests {
                                 <p>
                                     No matter which MockMvc builder you use, all <code>MockMvcBuilder</code> implementations provide some common and very useful features. For example, you can declare an <code>Accept</code> header for all requests and expect
                                     a status of 200 as well as a <code>Content-Type</code> header in all responses, as follows:</br>
+                                    <span class="translate">
                                     不管你使用哪个MockMvc构建器，所有的MockMvcBuilder实现都提供了一些通用且非常有用的特性。
                                     例如，您可以为所有请求声明一个Accept头，并期望状态为200，以及在所有响应中声明一个Content-Type头，如下所示:
                                 </p>
@@ -10181,6 +10410,7 @@ MockMvc mockMvc = standaloneSetup(new MusicController())
                                 <p>
                                     In addition, third-party frameworks (and applications) can pre-package setup instructions, such as those in a <code>MockMvcConfigurer</code>. The Spring Framework has one such built-in implementation that helps to save
                                     and re-use the HTTP session across requests. You can use it as follows:</br>
+                                    <span class="translate">
                                     此外，第三方框架(和应用程序)可以预先打包设置指令，比如MockMvcConfigurer中的指令。Spring框架有一个这样的内置实现，它有助于跨请求保存和重用HTTP会话。你可以这样使用它:
                                 </p>
                             </div>
@@ -10207,6 +10437,7 @@ MockMvc mockMvc = MockMvcBuilders.standaloneSetup(new TestController())
                                     See the javadoc for
                                     <a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/test/web/servlet/setup/ConfigurableMockMvcBuilder.html"><code>ConfigurableMockMvcBuilder</code></a> for a list of all MockMvc
                                     builder features or use the IDE to explore the available options.</br>
+                                    <span class="translate">
                                     请参阅javadoc中的ConfigurableMockMvcBuilder，以获得所有MockMvc构建器特性的列表，或者使用IDE来探索可用的选项。
                                 </p>
                             </div>
@@ -10218,11 +10449,13 @@ MockMvc mockMvc = MockMvcBuilders.standaloneSetup(new TestController())
                                 <p>
                                     This section shows how to use MockMvc on its own to perform requests and verify responses. If using MockMvc through the <code>WebTestClient</code> please see the corresponding section on
                                     <a href="#webtestclient-tests">Writing Tests</a> instead.</br>
+                                    <span class="translate">
                                     本节将展示如何单独使用MockMvc来执行请求和验证响应。如果通过WebTestClient使用MockMvc，请参阅相应的编写测试部分。
                                 </p>
                             </div>
                             <div class="paragraph">
                                 <p>To perform requests that use any HTTP method, as the following example shows:</br>
+                                    <span class="translate">
                                     执行使用任何HTTP方法的请求，如下所示:
                                 </p>
                             </div>
@@ -10248,6 +10481,7 @@ mockMvc.post("/hotels/{id}", 42) {
                                 <p>
                                     You can also perform file upload requests that internally use
                                     <code>MockMultipartHttpServletRequest</code> so that there is no actual parsing of a multipart request. Rather, you have to set it up to be similar to the following example:<br>
+                                    <span class="translate">
                                     您还可以执行内部使用MockMultipartHttpServletRequest的文件上传请求，这样就不会对多部分请求进行实际的解析。相反，你必须像下面的例子那样设置它:
                                 </p>
                             </div>
@@ -10270,6 +10504,7 @@ mockMvc.multipart("/doc") {
                             <div class="paragraph">
                                 <p>
                                     You can specify query parameters in URI template style, as the following example shows:</br>
+                                    <span class="translate">
                                     您可以使用URI模板样式指定查询参数，示例如下:
                                 </p>
                             </div>
@@ -10288,6 +10523,7 @@ mockMvc.multipart("/doc") {
                             <div class="paragraph">
                                 <p>
                                     You can also add Servlet request parameters that represent either query or form parameters, as the following example shows:</br>
+                                    <span class="translate">
                                     您还可以添加表示查询或表单参数的Servlet请求参数，如下面的示例所示:
                                 </p>
                             </div>
@@ -10311,12 +10547,14 @@ mockMvc.get("/hotels") {
                                 <p>
                                     If application code relies on Servlet request parameters and does not check the query string explicitly (as is most often the case), it does not matter which option you use. Keep in mind, however, that query parameters
                                     provided with the URI template are decoded while request parameters provided through the <code>param(&#8230;&#8203;)</code> method are expected to already be decoded.</br>
+                                    <span class="translate">
                                     如果应用程序代码依赖于Servlet请求参数，并且不显式地检查查询字符串(这是最常见的情况)，那么使用哪个选项并不重要。但是，请记住，通过URI模板提供的查询参数已经被解码，而通过param(…)方法提供的请求参数预计已经被解码。
                                 </p>
                             </div>
                             <div class="paragraph">
                                 <p>
                                     In most cases, it is preferable to leave the context path and the Servlet path out of the request URI. If you must test with the full request URI, be sure to set the <code>contextPath</code> and <code>servletPath</code> accordingly so that request mappings work, as the following example shows:</br>
+                                    <span class="translate">
                                     在大多数情况下，最好在请求URI之外保留上下文路径和Servlet路径。如果你必须使用完整的请求URI进行测试，请确保相应地设置contextPath和servletPath以便请求映射工作，如下面的例子所示:
                                 </p>
                             </div>
@@ -10341,6 +10579,7 @@ mockMvc.get("/app/main/hotels/{id}") {
                                 <p>
                                     In the preceding example, it would be cumbersome to set the <code>contextPath</code> and
                                     <code>servletPath</code> with every performed request. Instead, you can set up default request properties, as the following example shows:</br>
+                                    <span class="translate">
                                     在前面的示例中，为每个执行的请求设置contextPath和servletPath会很麻烦。相反，你可以设置默认的请求属性，如下面的例子所示:
                                 </p>
                             </div>
@@ -10372,6 +10611,7 @@ mockMvc.get("/app/main/hotels/{id}") {
                                     The preceding properties affect every request performed through the <code>MockMvc</code> instance.
                                     If the same property is also specified on a given request, it overrides the default value. That is why the HTTP method and
                                     URI in the default request do not matter, since they must be specified on every request.</br>
+                                    <span class="translate">
                                     上述属性影响通过MockMvc实例执行的每个请求。如果在给定的请求上也指定了相同的属性，它将覆盖默认值。这就是为什么默认请求中的HTTP方法和URI不重要的原因，因为它们必须在每个请求上指定。
                                 </p>
 
@@ -10379,10 +10619,11 @@ mockMvc.get("/app/main/hotels/{id}") {
                         </div>
                         <div class="sect4">
                             <h5 id="spring-mvc-test-server-defining-expectations"><a class="anchor" href="#spring-mvc-test-server-defining-expectations"></a>Defining Expectations</h5>
-                            <span>定义预期的结果</span>
+                            <span class="translate">定义预期的结果</span>
                             <div class="paragraph">
                                 <p>
                                     You can define expectations by appending one or more <code>.andExpect(..)</code> calls after performing a request, as the following example shows:</br>
+                                    <span class="translate">
                                     您可以通过在执行请求后附加一个或多个.andExpect(..)调用来定义期望，如下面的示例所示:
                                 </p>
                             </div>
@@ -10407,12 +10648,14 @@ mockMvc.get("/accounts/1").andExpect {
                             <div class="paragraph">
                                 <p>
                                     <code>MockMvcResultMatchers.*</code> provides a number of expectations, some of which are further nested with more detailed expectations.</br>
+                                    <span class="translate">
                                     MockMvcResultMatchers。*提供了许多期望，其中一些与更详细的期望进一步嵌套。
                                 </p>
                             </div>
                             <div class="paragraph">
                                 <p>
                                     Expectations fall in two general categories. The first category of assertions verifies properties of the response (for example, the response status, headers, and content). These are the most important results to assert.</br>
+                                    <span class="translate">
                                     期望值一般分为两类。第一类断言验证响应的属性(例如，响应状态、头和内容)。这些是要断言的最重要的结果。
                                 </p>
                             </div>
@@ -10420,6 +10663,7 @@ mockMvc.get("/accounts/1").andExpect {
                                 <p>
                                     The second category of assertions goes beyond the response. These assertions let you inspect Spring MVC specific aspects, such as which controller method processed the request, whether an exception was raised and handled,
                                     what the content of the model is, what view was selected, what flash attributes were added, and so on. They also let you inspect Servlet specific aspects, such as request and session attributes.</br>
+                                    <span class="translate">
                                     第二类断言超出了响应。这些断言让您可以检查Spring MVC特定的方面，比如哪个控制器方法处理了请求，是否引发并处理了异常，模型的内容是什么，选择了什么视图，添加了什么flash属性，等等。
                                     它们还允许您检查Servlet特定的方面，如请求和会话属性。
                                 </p>
@@ -10427,6 +10671,7 @@ mockMvc.get("/accounts/1").andExpect {
                             <div class="paragraph">
                                 <p>
                                     The following test asserts that binding or validation failed:</br>
+                                    <span class="translate">
                                     以下测试断言绑定或验证失败:
                                 </p>
                             </div>
@@ -10455,6 +10700,7 @@ mockMvc.post("/persons").andExpect {
                                 <p>
                                     Many times, when writing tests, it is useful to dump the results of the performed request. You can do so as follows, where <code>print()</code> is a static import from
                                     <code>MockMvcResultHandlers</code>:</br>
+                                    <span class="translate">
                                     很多时候，在编写测试时，转储执行请求的结果是有用的。你可以这样做，其中print()是从MockMvcResultHandlers静态导入的:
                                 </p>
                             </div>
@@ -10489,6 +10735,7 @@ mockMvc.post("/persons").andDo {
                                     while invoking <code>print(myWriter)</code> prints the result data to a custom writer. If you want to have the result data logged instead of printed, you can invoke the
                                     <code>log()</code> method, which logs the result data as a single <code>DEBUG</code> message under the
                                     <code>org.springframework.test.web.servlet.result</code> logging category.</br>
+                                    <span class="translate">
                                     只要请求处理不会导致未处理的异常，print()方法将所有可用的结果数据打印到System.out。还有一个log()方法和print()方法的另外两个变体，一个接受OutputStream，另一个接受Writer。
                                     例如，调用print(System.err)将结果数据打印到System。err时调用print(myWriter)将结果数据打印到自定义写入器。
                                     如果希望记录结果数据而不是打印出来，可以调用log()方法，该方法将结果数据作为单个DEBUG消息记录在org.springframework.test.web.servlet.result logging类别下。
@@ -10498,6 +10745,7 @@ mockMvc.post("/persons").andDo {
                                 <p>
                                     In some cases, you may want to get direct access to the result and verify something that cannot be verified otherwise. This can be achieved by appending <code>.andReturn()</code> after all other expectations, as the following
                                     example shows:</br>
+                                    <span class="translate">
                                     在某些情况下，您可能希望直接访问结果，并验证无法通过其他方式验证的内容。这可以通过在所有其他期望之后添加.andReturn()来实现，如下面的例子所示:
                                 </p>
                             </div>
@@ -10519,6 +10767,7 @@ mockMvc.post("/persons").andDo {
                                 <p>
                                     If all tests repeat the same expectations, you can set up common expectations once when building the <code>MockMvc</code> instance,
                                     as the following example shows:</br>
+                                    <span class="translate">
                                     如果所有的测试重复相同的期望，您可以在构建MockMvc实例时设置一次公共期望，如下面的例子所示:
                                 </p>
                             </div>
@@ -10540,6 +10789,7 @@ mockMvc.post("/persons").andDo {
                             <div class="paragraph">
                                 <p>
                                     Note that common expectations are always applied and cannot be overridden without creating a separate <code>MockMvc</code> instance.</br>
+                                    <span class="translate">
                                     请注意，公共期望总是被应用，并且不能在没有创建单独的MockMvc实例的情况下被重写。
                                 </p>
                             </div>
@@ -10548,6 +10798,7 @@ mockMvc.post("/persons").andDo {
                                     When a JSON response content contains hypermedia links created with
                                     <a href="https://github.com/spring-projects/spring-hateoas">Spring HATEOAS</a>, you can verify the resulting links by using JsonPath expressions,
                                     as the following example shows:</br>
+                                    <span class="translate">
                                     当JSON响应内容包含使用Spring HATEOAS创建的超媒体链接时，您可以使用JsonPath表达式验证生成的链接，如下面的示例所示:
                                 </p>
                             </div>
@@ -10574,6 +10825,7 @@ mockMvc.post("/persons").andDo {
                                 <p>
                                     When XML response content contains hypermedia links created with
                                     <a href="https://github.com/spring-projects/spring-hateoas">Spring HATEOAS</a>, you can verify the resulting links by using XPath expressions:</br>
+                                    <span class="translate">
                                     当XML响应内容包含使用Spring HATEOAS创建的超媒体链接时，可以使用XPath表达式验证产生的链接:
                                 </p>
                             </div>
@@ -10606,6 +10858,7 @@ mockMvc.get("/handle") {
                                 <p>
                                     This section shows how to use MockMvc on its own to test asynchronous request handling. If using MockMvc through the <a href="#webtestclient">WebTestClient</a>, there is nothing special to do to make asynchronous requests
                                     work as the <code>WebTestClient</code> automatically does what is described in this section.</br>
+                                    <span class="translate">
                                     本节将展示如何单独使用MockMvc来测试异步请求处理。如果通过WebTestClient使用MockMvc，就没有什么特别的事情可以让异步请求工作，因为WebTestClient会自动执行本节中描述的操作。
                                 </p>
                             </div>
@@ -10614,6 +10867,7 @@ mockMvc.get("/handle") {
                                     Servlet 3.0 asynchronous requests,
                                     <a href="web.html#mvc-ann-async">supported in Spring MVC</a>, work by exiting the Servlet container thread and allowing the application to compute the response asynchronously, after which an async dispatch is made to
                                     complete processing on a Servlet container thread.</br>
+                                    <span class="translate">
                                     Spring MVC支持的Servlet 3.0异步请求通过退出Servlet容器线程并允许应用程序异步计算响应来工作，然后进行异步调度以完成对Servlet容器线程的处理。
                                 </p>
                             </div>
@@ -10621,6 +10875,7 @@ mockMvc.get("/handle") {
                                 <p>
                                     In Spring MVC Test, async requests can be tested by asserting the produced async value first, then manually performing the async dispatch, and finally verifying the response. Below is an example test for controller methods
                                     that return <code>DeferredResult</code>, <code>Callable</code>, or reactive type such as Reactor <code>Mono</code>:</br>
+                                    <span class="translate">
                                     在Spring MVC测试中，可以通过先断言生成的异步值，然后手动执行异步分派，最后验证响应来测试异步请求。下面是一个返回DeferredResult、Callable或reactive类型(如Reactor Mono)的控制器方法的测试示例:
                                 </p>
                             </div>
@@ -10647,11 +10902,11 @@ void test() throws Exception {
                                 <table>
                                     <tr>
                                         <td><i class="conum" data-value="1"></i><b>1</b></td>
-                                        <td>Check response status is still unchanged[检查响应状态仍未改变]</td>
+                                        <td>Check response status is still unchanged<span class="translate">[检查响应状态仍未改变]</span></td>
                                     </tr>
                                     <tr>
                                         <td><i class="conum" data-value="2"></i><b>2</b></td>
-                                        <td>Async processing must have started[异步处理必须已启动]</td>
+                                        <td>Async processing must have started<span class="translate">[异步处理必须已启动]</span></td>
                                     </tr>
                                     <tr>
                                         <td><i class="conum" data-value="3"></i><b>3</b></td>
@@ -10659,11 +10914,11 @@ void test() throws Exception {
                                     </tr>
                                     <tr>
                                         <td><i class="conum" data-value="4"></i><b>4</b></td>
-                                        <td>Manually perform an ASYNC dispatch (as there is no running container)[手动执行ASYNC dispatch(因为没有正在运行的容器)]</td>
+                                        <td>Manually perform an ASYNC dispatch (as there is no running container)<span class="translate">[手动执行ASYNC dispatch(因为没有正在运行的容器)]</span></td>
                                     </tr>
                                     <tr>
                                         <td><i class="conum" data-value="5"></i><b>5</b></td>
-                                        <td>Verify the final response[验证最终响应]</td>
+                                        <td>Verify the final response<span class="translate">[验证最终响应]</span></td>
                                     </tr>
                                 </table>
                             </div>
@@ -10721,6 +10976,7 @@ fun test() {
                                     The best way to test streaming responses such as Server-Sent Events is through the
                                     <a href="#webtestclient">WebTestClient</a> which can be used as a test client to connect to a <code>MockMvc</code> instance to
                                     perform tests on Spring MVC controllers without a running server. For example:</br>
+                                    <span class="translate">
                                     测试流响应(如server - sent Events)的最佳方法是通过WebTestClient，它可以作为测试客户端连接到MockMvc实例，在没有运行服务器的情况下在Spring MVC控制器上执行测试。例如:
                                 </p>
                             </div>
@@ -10750,6 +11006,7 @@ StepVerifier.create(exchangeResult.getResponseBody())
                                 <p>
                                     <code>WebTestClient</code> can also connect to a live server and perform full end-to-end integration tests. This is also supported in Spring Boot where you can
                                     <a href="https://docs.spring.io/spring-boot/docs/current/reference/html/spring-boot-features.html#boot-features-testing-spring-boot-applications-testing-with-running-server">test a running server</a>.</br>
+                                    <span class="translate">
                                     WebTestClient也可以连接到一个活动服务器并执行完整的端到端集成测试。Spring Boot也支持这一点，您可以在那里测试正在运行的服务器。
                                 </p>
                             </div>
@@ -10760,6 +11017,7 @@ StepVerifier.create(exchangeResult.getResponseBody())
                             <div class="paragraph">
                                 <p>
                                     When setting up a <code>MockMvc</code> instance, you can register one or more Servlet <code>Filter</code> instances, as the following example shows:</br>
+                                    <span class="translate">
                                     当设置MockMvc实例时，你可以注册一个或多个Servlet Filter实例，如下面的例子所示:
                                 </p>
                             </div>
@@ -10779,6 +11037,7 @@ StepVerifier.create(exchangeResult.getResponseBody())
                                 <p>
                                     Registered filters are invoked through the <code>MockFilterChain</code> from <code>spring-test</code>,
                                     and the last filter delegates to the <code>DispatcherServlet</code>.</br>
+                                    <span class="translate">
                                     已注册的过滤器通过spring-test中的MockFilterChain调用，最后一个过滤器委托给DispatcherServlet。
                                 </p>
                             </div>
@@ -10791,6 +11050,7 @@ StepVerifier.create(exchangeResult.getResponseBody())
                                     MockMVc is built on Servlet API mock implementations from the
                                     <code>spring-test</code> module and does not rely on a running container. Therefore, there are some differences when
                                     compared to full end-to-end integration tests with an actual client and a live server running.</br>
+                                    <span class="translate">
                                     MockMVc构建在spring-test模块的Servlet API模拟实现上，不依赖于运行的容器。因此，与使用实际客户机和活动服务器运行的完整的端到端集成测试相比，存在一些差异。
                                 </p>
                             </div>
@@ -10801,6 +11061,7 @@ StepVerifier.create(exchangeResult.getResponseBody())
                                     path by default; no <code>jsessionid</code> cookie; no forwarding, error, or async dispatches; and, therefore,
                                     no actual JSP rendering. Instead, &#8220;forwarded&#8221; and &#8220;redirected&#8221; URLs are saved in
                                     the <code>MockHttpServletResponse</code> and can be asserted with expectations.</br>
+                                    <span class="translate">
                                     考虑这个问题的最简单方法是从一个空白的MockHttpServletRequest开始。无论您向它添加什么，请求都会变成什么。
                                     可能会让你惊讶的是，默认情况下没有上下文路径;没有jsessionid饼干;没有转发，错误，或异步分派;
                                     因此，没有实际的JSP呈现。相反， &#8220;forwarded&#8221; 和&#8220;redirected&#8221;的url保存在MockHttpServletResponse中，并可以预期地断言。
@@ -10812,6 +11073,7 @@ StepVerifier.create(exchangeResult.getResponseBody())
                                     In other words, the JSP is not invoked. Note, however, that all other rendering technologies that
                                     do not rely on forwarding, such as Thymeleaf and Freemarker, render HTML to the response body as expected.
                                     The same is true for rendering JSON, XML, and other formats through <code>@ResponseBody</code> methods.</br>
+                                    <span class="translate">
                                     这意味着，如果您使用JSP，您可以验证请求被转发到的JSP页面，但是不会呈现HTML。换句话说，JSP不会被调用。
                                     但是，请注意，所有其他不依赖于转发的呈现技术，如Thymeleaf和Freemarker，都按照预期将HTML呈现到响应体。通过@ResponseBody方法呈现JSON、XML和其他格式也是如此。
                                 </p>
@@ -10820,6 +11082,7 @@ StepVerifier.create(exchangeResult.getResponseBody())
                                 <p>
                                     Alternatively, you may consider the full end-to-end integration testing support from Spring Boot with <code>@SpringBootTest</code>. See the
                                     <a href="https://docs.spring.io/spring-boot/docs/current/reference/html/spring-boot-features.html#boot-features-testing">Spring Boot Reference Guide</a>.</br>
+                                    <span class="translate">
                                     或者，您可以考虑使用@SpringBootTest提供SpringBoot的完整的端到端集成测试支持。参见Spring Boot参考指南。
                                 </p>
                             </div>
@@ -10829,6 +11092,7 @@ StepVerifier.create(exchangeResult.getResponseBody())
                                     Test fall under the category of classic unit testing, but they are a little closer to it. For example, you can isolate the web layer by injecting mocked services into controllers, in which case you are testing the web
                                     layer only through the <code>DispatcherServlet</code> but with actual Spring configuration, as you might test the data access layer in isolation from the layers above it. Also, you can use the stand-alone setup, focusing
                                     on one controller at a time and manually providing the configuration required to make it work.</br>
+                                    <span class="translate">
                                     每种方法都有优缺点。Spring MVC测试提供的选项是不同的站点，从经典的单元测试到完全集成测试。可以肯定的是，Spring MVC Test中的任何选项都不属于经典单元测试的范畴，但是它们更接近经典单元测试。
                                     例如，您可以通过将mock服务注入到控制器中来隔离web层，在这种情况下，您只能通过DispatcherServlet来测试web层，但需要使用实际的Spring配置，正如您可能会测试数据访问层与它上面的层隔离一样。
                                     此外，您还可以使用独立的设置，每次只关注一个控制器，并手动提供使其工作所需的配置。
@@ -10840,6 +11104,7 @@ StepVerifier.create(exchangeResult.getResponseBody())
                                     content of the model is, what binding errors there were, and other details. That means that it is easier to write expectations, since the server is not an opaque box, as it is when testing it through an actual HTTP
                                     client. This is generally an advantage of classic unit testing: It is easier to write, reason about, and debug but does not replace the need for full integration tests. At the same time, it is important not to lose
                                     sight of the fact that the response is the most important thing to check. In short, there is room here for multiple styles and strategies of testing even within the same project.</br>
+                                    <span class="translate">
                                     使用Spring MVC测试时的另一个重要区别是，从概念上讲，这样的测试是服务器端测试，因此您可以检查使用了什么处理程序，是否用HandlerExceptionResolver处理了异常，模型的内容是什么，有什么绑定错误，以及其他细节。
                                     这意味着更容易编写期望，因为服务器不是一个不透明的盒子(通过实际的HTTP客户机测试时是这样的)。这通常是经典单元测试的一个优势:它更容易编写、推理和调试，但不能取代完全集成测试的需要。
                                     与此同时，重要的是不要忽视这样一个事实，即响应是最重要的检查。简而言之，即使在同一个项目中，这里也有多种测试风格和策略的空间。
@@ -10856,6 +11121,7 @@ StepVerifier.create(exchangeResult.getResponseBody())
                                     many sample tests</a> intended to show how to use MockMvc on its own or through the
                                     <a href="https://github.com/spring-projects/spring-framework/tree/main/spring-test/src/test/java/org/springframework/test/web/servlet/samples/client">
                                     WebTestClient</a>. Browse these examples for further ideas.</br>
+                                    <span class="translate">
                                     该框架自己的测试包括许多示例测试，旨在展示如何单独或通过WebTestClient使用MockMvc。浏览这些示例以获得更多的想法。
                                 </p>
                             </div>
@@ -10863,11 +11129,12 @@ StepVerifier.create(exchangeResult.getResponseBody())
                     </div>
                     <div class="sect3">
                         <h4 id="spring-mvc-test-server-htmlunit"><a class="anchor" href="#spring-mvc-test-server-htmlunit"></a>3.7.2. HtmlUnit Integration</h4>
-                        <span>3.7.2 Html单元集成</span>
+                        <span class="translate">3.7.2 Html单元集成</span>
                         <div class="paragraph">
                             <p>
                                 Spring provides integration between <a href="#spring-mvc-test-server">MockMvc</a> and
                                 <a href="http://htmlunit.sourceforge.net/">HtmlUnit</a>. This simplifies performing end-to-end testing when using HTML-based views. This integration lets you:</br>
+                                <span class="translate">
                                 Spring提供了MockMvc和Html单元之间的集成。这简化了在使用基于html的视图时执行端到端测试。这个集成可以让你:
                             </p>
                         </div>
@@ -10879,21 +11146,25 @@ StepVerifier.create(exchangeResult.getResponseBody())
                                         <a href="http://htmlunit.sourceforge.net/">HtmlUnit</a>,
                                         <a href="https://www.seleniumhq.org">WebDriver</a>, and
                                         <a href="http://www.gebish.org/manual/current/#spock-junit-testng">Geb</a> without the need to deploy to a Servlet container.</br>
+                                        <span class="translate">
                                         通过使用HtmlUnit、WebDriver和Geb等工具轻松测试HTML页面，而不需要部署到Servlet容器。
                                     </p>
                                 </li>
                                 <li>
                                     <p>Test JavaScript within pages.</br>
+                                    <span class="translate">
                                         在页面中测试JavaScript。
                                     </p>
                                 </li>
                                 <li>
                                     <p>Optionally, test using mock services to speed up testing.</br>
+                                    <span class="translate">
                                         可以选择使用模拟服务进行测试，以加速测试。
                                     </p>
                                 </li>
                                 <li>
                                     <p>Share logic between in-container end-to-end tests and out-of-container integration tests.</br>
+                                    <span class="translate">
                                         在容器内端到端测试和容器外集成测试之间共享逻辑。
                                     </p>
                                 </li>
@@ -10907,6 +11178,7 @@ StepVerifier.create(exchangeResult.getResponseBody())
                                     </td>
                                     <td class="content">
                                         MockMvc works with templating technologies that do not rely on a Servlet Container (for example, Thymeleaf, FreeMarker, and others), but it does not work with JSPs, since they rely on the Servlet container.</br>
+                                        <span class="translate">
                                         MockMvc使用不依赖于Servlet容器的模板技术(例如Thymeleaf、FreeMarker等)，但是它不使用jsp，因为它们依赖于Servlet容器。
                                     </td>
                                 </tr>
@@ -10914,12 +11186,13 @@ StepVerifier.create(exchangeResult.getResponseBody())
                         </div>
                         <div class="sect4">
                             <h5 id="spring-mvc-test-server-htmlunit-why"><a class="anchor" href="#spring-mvc-test-server-htmlunit-why"></a>Why HtmlUnit Integration?</h5>
-                            <span>为什么HtmlUnit集成?</span>
+                            <span class="translate">为什么HtmlUnit集成?</span>
                             <div class="paragraph">
                                 <p>
                                     The most obvious question that comes to mind is &#8220;Why do I need this?&#8221; The answer is best found by exploring a very basic sample application.
                                     Assume you have a Spring MVC web application that supports CRUD operations
                                     on a <code>Message</code> object. The application also supports paging through all messages. How would you go about testing it?</br>
+                                    <span class="translate">
                                     脑海中出现的最明显的问题是&#8220;我为什么需要这个&#8221;最好通过研究一个非常基本的示例应用程序来找到答案。假设您有一个Spring MVC web应用程序，它支持Message对象上的CRUD操作。
                                     该应用程序还支持对所有消息进行分页。你会如何测试它?
                                 </p>
@@ -10927,6 +11200,7 @@ StepVerifier.create(exchangeResult.getResponseBody())
                             <div class="paragraph">
                                 <p>
                                     With Spring MVC Test, we can easily test if we are able to create a <code>Message</code>, as follows:</br>
+                                    <span class="translate">
                                     使用Spring MVC测试，我们可以很容易地测试我们是否能够创建一个消息，如下所示:
                                 </p>
                             </div>
@@ -10960,6 +11234,7 @@ fun test() {
                             <div class="paragraph">
                                 <p>
                                     What if we want to test the form view that lets us create the message? For example, assume our form looks like the following snippet:</br>
+                                    <span class="translate">
                                     如果我们想测试允许我们创建消息的表单视图呢?例如，假设我们的表单看起来像下面的代码片段:
                                 </p>
                             </div>
@@ -10983,6 +11258,7 @@ fun test() {
                             <div class="paragraph">
                                 <p>
                                     How do we ensure that our form produce the correct request to create a new message? A naive attempt might resemble the following:</br>
+                                    <span class="translate">
                                     如何确保表单生成创建新消息的正确请求?一个幼稚的尝试可能类似如下:
                                 </p>
                             </div>
@@ -11007,6 +11283,7 @@ fun test() {
                                 <p>
                                     This test has some obvious drawbacks. If we update our controller to use the parameter
                                     <code>message</code> instead of <code>text</code>, our form test continues to pass, even though the HTML form is out of synch with the controller. To resolve this we can combine our two tests, as follows:</br>
+                                    <span class="translate">
                                     这个测试有一些明显的缺陷。如果我们更新控制器以使用参数消息而不是文本，那么表单测试将继续通过，即使HTML表单与控制器不同步。为了解决这个问题，我们可以结合我们的两个测试，如下所示:
                                 </p>
                             </div>
@@ -11049,6 +11326,7 @@ mockMvc.post("/messages/") {
                             <div class="paragraph">
                                 <p>
                                     This would reduce the risk of our test incorrectly passing, but there are still some problems:</br>
+                                    <span class="translate">
                                     这将降低我们的测试不正确通过的风险，但仍然存在一些问题:
                                 </p>
                             </div>
@@ -11058,18 +11336,21 @@ mockMvc.post("/messages/") {
                                         <p>
                                             What if we have multiple forms on our page? Admittedly, we could update our XPath expressions, but they get more complicated as we take more factors into account: Are the fields the correct type? Are the fields
                                             enabled? And so on.</br>
+                                            <span class="translate">
                                             如果页面上有多个表单怎么办?无可否认，我们可以更新XPath表达式，但随着我们考虑更多因素，它们会变得更加复杂:字段的类型是正确的吗?字段是否已启用?等等。
                                         </p>
                                     </li>
                                     <li>
                                         <p>
                                             Another issue is that we are doing double the work we would expect. We must first verify the view, and then we submit the view with the same parameters we just verified. Ideally, this could be done all at once.</br>
+                                            <span class="translate">
                                             另一个问题是，我们所做的工作是预期的两倍。我们必须首先验证视图，然后提交带有刚才验证过的相同参数的视图。理想情况下，这可以一次完成。
                                         </p>
                                     </li>
                                     <li>
                                         <p>
                                             Finally, we still cannot account for some things. For example, what if the form has JavaScript validation that we wish to test as well?</br>
+                                            <span class="translate">
                                             最后，我们仍然不能解释一些事情。例如，如果表单也有我们想要测试的JavaScript验证，该怎么办?
                                         </p>
                                     </li>
@@ -11079,15 +11360,17 @@ mockMvc.post("/messages/") {
                                 <p>
                                     The overall problem is that testing a web page does not involve a single interaction. Instead, it is a combination of how the user interacts with a web page and how that web page interacts with other resources. For example,
                                     the result of a form view is used as the input to a user for creating a message. In addition, our form view can potentially use additional resources that impact the behavior of the page, such as JavaScript validation.</br>
+                                    <span class="translate">
                                     总体的问题是，测试一个网页并不涉及单一的交互。相反，它是用户如何与网页交互以及该网页如何与其他资源交互的组合。例如，表单视图的结果被用作用户创建消息的输入。此外，我们的表单视图可能会使用其他影响页面行为的资源，比如JavaScript验证。
                                 </p>
                             </div>
                             <div class="sect5">
                                 <h6 id="spring-mvc-test-server-htmlunit-why-integration"><a class="anchor" href="#spring-mvc-test-server-htmlunit-why-integration"></a>Integration Testing to the Rescue?</h6>
-                                <span>集成测试来拯救?</span>
+                                <span class="translate">集成测试来拯救?</span>
                                 <div class="paragraph">
                                     <p>
                                         To resolve the issues mentioned earlier, we could perform end-to-end integration testing, but this has some drawbacks. Consider testing the view that lets us page through the messages. We might need the following tests:</br>
+                                        <span class="translate">
                                         为了解决前面提到的问题，我们可以执行端到端集成测试，但这有一些缺点。考虑测试允许我们对消息进行分页的视图。我们可能需要以下测试:
                                     </p>
                                 </div>
@@ -11095,16 +11378,19 @@ mockMvc.post("/messages/") {
                                     <ul>
                                         <li>
                                             <p>Does our page display a notification to the user to indicate that no results are available when the messages are empty?</br>
+                                            <span class="translate">
                                                 当消息为空时，我们的页面是否会向用户显示通知，表明没有可用的结果?
                                             </p>
                                         </li>
                                         <li>
                                             <p>Does our page properly display a single message?</br>
+                                            <span class="translate">
                                                 我们的页面是否正确地显示单个消息?
                                             </p>
                                         </li>
                                         <li>
                                             <p>Does our page properly support paging?</br>
+                                            <span class="translate">
                                                 我们的页面是否正确地支持分页?
                                             </p>
                                         </li>
@@ -11112,6 +11398,7 @@ mockMvc.post("/messages/") {
                                 </div>
                                 <div class="paragraph">
                                     <p>To set up these tests, we need to ensure our database contains the proper messages. This leads to a number of additional challenges:</br>
+                                    <span class="translate">
                                         要设置这些测试，我们需要确保数据库包含正确的消息。这就带来了一些额外的挑战:
                                     </p>
                                 </div>
@@ -11120,25 +11407,25 @@ mockMvc.post("/messages/") {
                                         <li>
                                             <p>
                                                 Ensuring the proper messages are in the database can be tedious. (Consider foreign key constraints.)</br>
-                                                确保数据库中有适当的消息是很繁琐的。(考虑外键约束。)
+                                                <span class="translate">确保数据库中有适当的消息是很繁琐的。(考虑外键约束。)
                                             </p>
                                         </li>
                                         <li>
                                             <p>
                                                 Testing can become slow, since each test would need to ensure that the database is in the correct state.</br>
-                                                测试可能会变慢，因为每个测试都需要确保数据库处于正确的状态。
+                                                <span class="translate">测试可能会变慢，因为每个测试都需要确保数据库处于正确的状态。
                                             </p>
                                         </li>
                                         <li>
                                             <p>
                                                 Since our database needs to be in a specific state, we cannot run tests in parallel.</br>
-                                                因为我们的数据库需要处于特定的状态，所以我们不能并行运行测试。
+                                                <span class="translate">因为我们的数据库需要处于特定的状态，所以我们不能并行运行测试。
                                             </p>
                                         </li>
                                         <li>
                                             <p>
                                                 Performing assertions on such items as auto-generated ids, timestamps, and others can be difficult.</br>
-                                                对自动生成的id、时间戳等项执行断言可能很困难。
+                                                <span class="translate">对自动生成的id、时间戳等项执行断言可能很困难。
                                             </p>
                                         </li>
                                     </ul>
@@ -11147,6 +11434,7 @@ mockMvc.post("/messages/") {
                                     <p>
                                         These challenges do not mean that we should abandon end-to-end integration testing altogether. Instead, we can reduce the number of end-to-end integration tests by refactoring our detailed tests to use mock services
                                         that run much faster, more reliably, and without side effects. We can then implement a small number of true end-to-end integration tests that validate simple workflows to ensure that everything works together properly.</br>
+                                        <span class="translate">
                                         这些挑战并不意味着我们应该完全放弃端到端集成测试。相反，我们可以通过重构详细的测试来使用运行得更快、更可靠、没有副作用的模拟服务，从而减少端到端集成测试的数量。
                                         然后，我们可以实现少量真正的端到端集成测试，这些测试验证简单的工作流，以确保一切都能正常工作。
                                     </p>
@@ -11159,16 +11447,18 @@ mockMvc.post("/messages/") {
                                     <p>
                                         So how can we achieve a balance between testing the interactions of our pages and still retain good performance within our test suite?
                                         The answer is: &#8220;By integrating MockMvc with HtmlUnit.&#8221;</br>
+                                        <span class="translate">
                                         那么，我们如何在测试页面的交互和仍然在测试套件中保持良好的性能之间取得平衡呢?答案是：&#8220;通过将MockMvc与HtmlUnit集成。&#8221;
                                     </p>
                                 </div>
                             </div>
                             <div class="sect5">
                                 <h6 id="spring-mvc-test-server-htmlunit-options"><a class="anchor" href="#spring-mvc-test-server-htmlunit-options"></a>HtmlUnit Integration Options</h6>
-                                <span>HtmlUnit集成选项</span>
+                                <span class="translate">HtmlUnit集成选项</span>
                                 <div class="paragraph">
                                     <p>
                                         You have a number of options when you want to integrate MockMvc with HtmlUnit:</br>
+                                        <span class="translate">
                                         当你想要将MockMvc与HtmlUnit集成时，你有许多选项:
                                     </p>
                                 </div>
@@ -11177,6 +11467,7 @@ mockMvc.post("/messages/") {
                                         <li>
                                             <p>
                                                 <a href="#spring-mvc-test-server-htmlunit-mah">MockMvc and HtmlUnit</a>: Use this option if you want to use the raw HtmlUnit libraries.</br>
+                                                <span class="translate">
                                                 MockMvc和HtmlUnit:如果你想使用原始的HtmlUnit库，请使用此选项。
                                             </p>
                                         </li>
@@ -12419,14 +12710,18 @@ restTemplate = RestTemplate(MockMvcClientHttpRequestFactory(mockMvc))
                         <li>
                             <p>
                                 <a href="https://sourceforge.net/projects/grinder/">The Grinder</a>: Java load testing framework.</br>
+                                <span class="translate">
                                 Grinder: Java负载测试框架。
+                                </span>
                             </p>
                         </li>
                         <li>
                             <p>
                                 <a href="https://github.com/Ninja-Squad/springmockk">SpringMockK</a>: Support for Spring Boot
                                 integration tests written in Kotlin using <a href="https://mockk.io/">MockK</a> instead of Mockito.</br>
+                                <span class="translate">
                                 SpringMockK:支持在Kotlin中使用MockK而不是mockto编写的Spring Boot集成测试。
+                                </span>
                             </p>
                         </li>
                     </ul>
