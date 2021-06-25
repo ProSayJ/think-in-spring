@@ -485,10 +485,16 @@
         <div id="preamble">
             <div class="sectionbody">
                 <div class="paragraph">
-                    <p>This part of the reference documentation is concerned with data access and the interaction between the data access layer and the business or service layer.</p>
+                    <p>
+                        This part of the reference documentation is concerned with data access and the interaction between the data access layer and the business or service layer.</br>
+                        参考文档的这一部分涉及数据访问以及数据访问层与业务或服务层之间的交互。
+                    </p>
                 </div>
                 <div class="paragraph">
-                    <p>Spring&#8217;s comprehensive transaction management support is covered in some detail, followed by thorough coverage of the various data access frameworks and technologies with which the Spring Framework integrates.</p>
+                    <p>
+                        Spring&#8217;s comprehensive transaction management support is covered in some detail, followed by thorough coverage of the various data access frameworks and technologies with which the Spring Framework integrates.</br>
+                        详细介绍了 Spring 的全面事务管理支持，然后全面介绍了 Spring 框架与之集成的各种数据访问框架和技术。
+                    </p>
                 </div>
             </div>
         </div>
@@ -496,74 +502,131 @@
             <h2 id="transaction"><a class="anchor" href="#transaction"></a>1. Transaction Management</h2>
             <div class="sectionbody">
                 <div class="paragraph">
-                    <p>Comprehensive transaction support is among the most compelling reasons to use the Spring Framework. The Spring Framework provides a consistent abstraction for transaction management that delivers the following benefits:</p>
-                </div>
-                <div class="ulist">
-                    <ul>
-                        <li>
-                            <p>A consistent programming model across different transaction APIs, such as Java Transaction API (JTA), JDBC, Hibernate, and the Java Persistence API (JPA).</p>
-                        </li>
-                        <li>
-                            <p>Support for <a href="#transaction-declarative">declarative transaction management</a>.</p>
-                        </li>
-                        <li>
-                            <p>A simpler API for <a href="#transaction-programmatic">programmatic</a> transaction management than complex transaction APIs, such as JTA.</p>
-                        </li>
-                        <li>
-                            <p>Excellent integration with Spring&#8217;s data access abstractions.</p>
-                        </li>
-                    </ul>
-                </div>
-                <div class="paragraph">
-                    <p>The following sections describe the Spring Framework&#8217;s transaction features and technologies:
+                    <p>
+                        Comprehensive transaction support is among the most compelling reasons to use the Spring Framework. The Spring Framework provides a consistent abstraction for transaction management that delivers the following benefits:</br>
+                        全面的事务支持是使用 Spring Framework 的最令人信服的理由之一。 Spring Framework 为事务管理提供了一致的抽象，具有以下优点：
                     </p>
                 </div>
                 <div class="ulist">
                     <ul>
                         <li>
-                            <p><a href="#transaction-motivation">Advantages of the Spring Framework&#8217;s transaction support
-model</a> describes why you would use the Spring Framework&#8217;s transaction abstraction instead of EJB Container-Managed Transactions (CMT) or choosing to drive local transactions through a proprietary API, such as Hibernate.</p>
-                        </li>
-                        <li>
-                            <p><a href="#transaction-strategies">Understanding the Spring Framework transaction abstraction</a> outlines the core classes and describes how to configure and obtain <code>DataSource</code> instances from a variety of sources.</p>
-                        </li>
-                        <li>
-                            <p><a href="#tx-resource-synchronization">Synchronizing resources with transactions</a> describes how the application code ensures that resources are created, reused, and cleaned up properly.
+                            <p>
+                                A consistent programming model across different transaction APIs, such as Java Transaction API (JTA), JDBC, Hibernate, and the Java Persistence API (JPA).</br>
+                                跨不同事务 API 的一致编程模型，例如 Java 事务 API (JTA)、JDBC、Hibernate 和 Java Persistence API (JPA)。
                             </p>
                         </li>
                         <li>
-                            <p><a href="#transaction-declarative">Declarative transaction management</a> describes support for declarative transaction management.</p>
+                            <p>
+                                Support for <a href="#transaction-declarative">declarative transaction management</a>.</br>
+                                支持声明式事务管理。
+                            </p>
                         </li>
                         <li>
-                            <p><a href="#transaction-programmatic">Programmatic transaction management</a> covers support for programmatic (that is, explicitly coded) transaction management.</p>
+                            <p>
+                                A simpler API for <a href="#transaction-programmatic">programmatic</a> transaction management than complex transaction APIs, such as JTA.</br>
+                                比复杂的事务 API（例如 JTA）更简单的用于程序化事务管理的 API。
+                            </p>
                         </li>
                         <li>
-                            <p><a href="#transaction-event">Transaction bound event</a> describes how you could use application events within a transaction.</p>
+                            <p>
+                                Excellent integration with Spring&#8217;s data access abstractions.</br>
+                                与 Spring 的数据访问抽象的完美集成。
+                            </p>
                         </li>
                     </ul>
                 </div>
                 <div class="paragraph">
-                    <p>The chapter also includes discussions of best practices,
-                        <a href="#transaction-application-server-integration">application server integration</a>, and <a href="#transaction-solutions-to-common-problems">solutions to common problems</a>.</p>
+                    <p>
+                        The following sections describe the Spring Framework&#8217;s transaction features and technologies:</br>
+                        以下部分描述了 Spring Framework 的事务特性和技术：
+                    </p>
+                </div>
+                <div class="ulist">
+                    <ul>
+                        <li>
+                            <p>
+                                <a href="#transaction-motivation">Advantages of the Spring Framework&#8217;s transaction support model</a>
+                                describes why you would use the Spring Framework&#8217;s transaction abstraction instead of EJB Container-Managed Transactions (CMT) or
+                                choosing to drive local transactions through a proprietary API, such as Hibernate.</br>
+                                Spring Framework 事务支持模型的优势描述了为什么要使用 Spring Framework 的事务抽象而不是 EJB 容器管理事务 (CMT)
+                                或选择通过专有 API（例如 Hibernate）驱动本地事务。
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <a href="#transaction-strategies">Understanding the Spring Framework transaction abstraction</a> outlines the core classes and describes how to configure and obtain <code>DataSource</code> instances from a variety of sources.</br>
+                                理解 Spring Framework 事务抽象概述了核心类并描述了如何从各种来源配置和获取 DataSource 实例。
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <a href="#tx-resource-synchronization">Synchronizing resources with transactions</a> describes how the application code ensures that resources are created, reused, and cleaned up properly.</br>
+                                将资源与事务同步描述了应用程序代码如何确保正确创建、重用和清理资源。
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <a href="#transaction-declarative">Declarative transaction management</a> describes support for declarative transaction management.</br>
+                                声明式事务管理描述了对声明式事务管理的支持。
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <a href="#transaction-programmatic">Programmatic transaction management</a> covers support for programmatic (that is, explicitly coded) transaction management.</br>
+                                编程式事务管理包括对编程式(即显式编码的)事务管理的支持。
+                            </p>
+                        </li>
+                        <li>
+                            <p><a href="#transaction-event">
+                                Transaction bound event</a> describes how you could use application events within a transaction.</br>
+                                事务绑定事件描述了如何在事务中使用应用程序事件。
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="paragraph">
+                    <p>
+                        The chapter also includes discussions of best practices,
+                        <a href="#transaction-application-server-integration">application server integration</a>, and <a href="#transaction-solutions-to-common-problems">solutions to common problems</a>.</br>
+                        本章还讨论了最佳实践、应用服务器集成和常见问题的解决方案。
+                    </p>
                 </div>
                 <div class="sect2">
                     <h3 id="transaction-motivation"><a class="anchor" href="#transaction-motivation"></a>1.1. Advantages of the Spring Framework&#8217;s Transaction Support Model</h3>
+                    <span>1.1. Spring Framework 的事务支持模型的优点</span>
                     <div class="paragraph">
-                        <p>Traditionally, Java EE developers have had two choices for transaction management: global or local transactions, both of which have profound limitations. Global and local transaction management is reviewed in the next two sections,
-                            followed by a discussion of how the Spring Framework&#8217;s transaction management support addresses the limitations of the global and local transaction models.</p>
+                        <p>
+                            Traditionally, Java EE developers have had two choices for transaction management: global or local transactions, both of which have profound limitations. Global and local transaction management is reviewed in the next two sections,
+                            followed by a discussion of how the Spring Framework&#8217;s transaction management support addresses the limitations of the global and local transaction models.</br>
+                            传统上，Java EE 开发人员对事务管理有两种选择：全局事务或本地事务，两者都有很大的局限性。
+                            全局和本地事务管理将在接下来的两节中进行回顾，然后讨论 Spring Framework 的事务管理支持如何解决全局和本地事务模型的局限性。
+                        </p>
                     </div>
                     <div class="sect3">
                         <h4 id="transaction-global"><a class="anchor" href="#transaction-global"></a>1.1.1. Global Transactions</h4>
                         <div class="paragraph">
-                            <p>Global transactions let you work with multiple transactional resources, typically relational databases and message queues. The application server manages global transactions through the JTA, which is a cumbersome API (partly
+                            <p>
+                                Global transactions let you work with multiple transactional resources, typically relational databases and message queues. The application server manages global transactions through the JTA, which is a cumbersome API (partly
                                 due to its exception model). Furthermore, a JTA <code>UserTransaction</code> normally needs to be sourced from JNDI, meaning that you also need to use JNDI in order to use JTA. The use of global transactions limits any
-                                potential reuse of application code, as JTA is normally only available in an application server environment.</p>
+                                potential reuse of application code, as JTA is normally only available in an application server environment.</br>
+                                全局事务让您可以使用多个事务资源，通常是关系数据库和消息队列。
+                                应用服务器通过 JTA 管理全局事务，这是一个繁琐的 API（部分原因在于其异常模型）。
+                                此外，JTA UserTransaction 通常需要来自 JNDI，这意味着为了使用JTA，您也需要使用JNDI。
+                                全局事务的使用限制了应用程序代码的任何潜在重用，因为 JTA 通常仅在应用程序服务器环境中可用。
+                            </p>
                         </div>
                         <div class="paragraph">
-                            <p>Previously, the preferred way to use global transactions was through EJB CMT (Container Managed Transaction). CMT is a form of declarative transaction management (as distinguished from programmatic transaction management).
+                            <p>
+                                Previously, the preferred way to use global transactions was through EJB CMT (Container Managed Transaction). CMT is a form of declarative transaction management (as distinguished from programmatic transaction management).
                                 EJB CMT removes the need for transaction-related JNDI lookups, although the use of EJB itself necessitates the use of JNDI. It removes most but not all of the need to write Java code to control transactions. The significant
                                 downside is that CMT is tied to JTA and an application server environment. Also, it is only available if one chooses to implement business logic in EJBs (or at least behind a transactional EJB facade). The negatives of
-                                EJB in general are so great that this is not an attractive proposition, especially in the face of compelling alternatives for declarative transaction management.</p>
+                                EJB in general are so great that this is not an attractive proposition, especially in the face of compelling alternatives for declarative transaction management.</br>
+                                以前，使用全局事务的首选方法是通过 EJB CMT（容器管理事务）。 CMT 是声明式事务管理的一种形式（区别于程序化事务管理）。
+                                EJB CMT 消除了对与事务相关的 JNDI 查找的需要，尽管 EJB 本身的使用需要使用 JNDI。
+                                它消除了大部分但不是全部需要编写 Java 代码来控制事务。显着的缺点是 CMT 与 JTA 和应用服务器环境相关联。
+                                此外，只有在选择在 EJB 中（或至少在事务性 EJB 外观之后）实现业务逻辑时，它才可用。
+                                一般而言，EJB 的负面影响如此之大，以至于这不是一个有吸引力的提议，尤其是在面对声明式事务管理的引人注目的替代方案时。
+                            </p>
                         </div>
                     </div>
                     <div class="sect3">
