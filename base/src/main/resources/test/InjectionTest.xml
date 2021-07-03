@@ -18,7 +18,7 @@
 
     <!--属性 property 注入-->
     <!-- String+8种基本类型 注入-->
-    <bean id="customer" class="prosayj.thinking.spring.injection.CustomerDomain">
+    <bean id="customer" class="prosayj.thinking.spring._02_injection.CustomerDomain">
         <property name="age" value="24"/>
         <property name="name" value="李四"/>
         <!--数组-->
@@ -65,28 +65,28 @@
 
 
     <!--基于p名称空间的简化写法 注入-->
-    <bean id="customer2" class="prosayj.thinking.spring.injection.CustomerDomain"
+    <bean id="customer2" class="prosayj.thinking.spring._02_injection.CustomerDomain"
           p:name="基于p名称空间的简化写法"
           p:age="25"/>
 
     <!--构造注入 的重载1 -->
-    <bean id="customer3" class="prosayj.thinking.spring.injection.CustomerDomain">
+    <bean id="customer3" class="prosayj.thinking.spring._02_injection.CustomerDomain">
         <constructor-arg value="构造注入用户名称"/>
         <constructor-arg value="26"/>
     </bean>
     <!--构造注入 的重载2 -->
-    <bean id="customer4" class="prosayj.thinking.spring.injection.CustomerDomain">
+    <bean id="customer4" class="prosayj.thinking.spring._02_injection.CustomerDomain">
         <constructor-arg value="重载构造注入用户名称" type="java.lang.String"/>
     </bean>
     <!--构造注入 的重载3 -->
-    <bean id="customer5" class="prosayj.thinking.spring.injection.CustomerDomain">
+    <bean id="customer5" class="prosayj.thinking.spring._02_injection.CustomerDomain">
         <constructor-arg value="27" type="int"/>
     </bean>
 
 
     <!--对象属性注入-->
-    <bean id="userDao" class="prosayj.thinking.spring.iochelloworld.UserDaoImpl"/>
-    <bean id="userService" class="prosayj.thinking.spring.iochelloworld.UserServiceImpl">
+    <bean id="userDao" class="prosayj.thinking.spring._01_iochelloworld.UserDaoImpl"/>
+    <bean id="userService" class="prosayj.thinking.spring._01_iochelloworld.UserServiceImpl">
         <property name="userDao" ref="userDao"/>
     </bean>
 

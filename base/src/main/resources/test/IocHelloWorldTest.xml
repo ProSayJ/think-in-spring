@@ -17,14 +17,14 @@
                            http://www.springframework.org/schema/aop/spring-aop.xsd">
 
     <!--默认id为 全限定类名+#0、#1...-->
-    <bean class="prosayj.thinking.spring.iochelloworld.PersonDomain"/>
-    <bean class="prosayj.thinking.spring.iochelloworld.PersonDomain"/>
+    <bean class="prosayj.thinking.spring._01_iochelloworld.PersonDomain"/>
+    <bean class="prosayj.thinking.spring._01_iochelloworld.PersonDomain"/>
 
     <bean id="person" name="personName1,personName2,/personName3"
-          class="prosayj.thinking.spring.iochelloworld.PersonDomain">
+          class="prosayj.thinking.spring._01_iochelloworld.PersonDomain">
     </bean>
     <bean id="/person2"
-          class="prosayj.thinking.spring.iochelloworld.PersonDomain">
+          class="prosayj.thinking.spring._01_iochelloworld.PersonDomain">
     </bean>
 
 

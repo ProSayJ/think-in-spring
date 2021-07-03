@@ -1,13 +1,14 @@
-package prosayj.thinking.spring.iochelloworld;
+package prosayj.thinking.spring._01_iochelloworld;
 
 /**
- * UserDao
+ * UserService
  *
  * @author yangjian
- * @date 2020-12-25 13:34
+ * @date 2020-12-25 13:33
  * @since 1.0.0
  */
-public interface UserDao {
+public interface UserService {
+
     void createUser(String userName, int age);
 
     void login(String userName, String pwd);

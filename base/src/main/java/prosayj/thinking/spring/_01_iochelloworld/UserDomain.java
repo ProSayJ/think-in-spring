@@ -1,4 +1,4 @@
-package prosayj.thinking.spring.iochelloworld;
+package prosayj.thinking.spring._01_iochelloworld;
 
 import lombok.Data;
 

@@ -20,7 +20,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
-import prosayj.thinking.spring.iochelloworld.overview.domain.User;
+import prosayj.thinking.spring._01_iochelloworld.overview.domain.User;
 
 import javax.annotation.Resource;
 

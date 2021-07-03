@@ -1,9 +1,9 @@
-package prosayj.thinking.spring.injection;
+package prosayj.thinking.spring._02_injection;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import prosayj.thinking.spring.common.env.ClasspathContextSetEnv;
-import prosayj.thinking.spring.iochelloworld.UserService;
+import prosayj.thinking.spring._01_iochelloworld.UserService;
 import prosayj.thinking.spring.common.util.JsonUtils;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
@@ -16,9 +16,9 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
  * @date 2020-12-25 13:41
  * @since 1.0.0
  */
-public class _02_InjectionTest extends ClasspathContextSetEnv {
+public class InjectionTest extends ClasspathContextSetEnv {
 
-    public _02_InjectionTest() {
+    public InjectionTest() {
         super("test/InjectionTest.xml");
     }
 

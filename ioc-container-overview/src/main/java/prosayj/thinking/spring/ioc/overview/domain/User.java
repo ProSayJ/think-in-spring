@@ -14,9 +14,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package prosayj.thinking.spring.iochelloworld.overview.domain;
+package prosayj.thinking.spring._01_iochelloworld.overview.domain;
 
-import prosayj.thinking.spring.iochelloworld.overview.enums.City;
+import prosayj.thinking.spring._01_iochelloworld.overview.enums.City;
 import org.springframework.beans.factory.BeanNameAware;
 import org.springframework.core.io.Resource;
 

@@ -20,7 +20,7 @@ import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Primary;
-import prosayj.thinking.spring.iochelloworld.overview.domain.User;
+import prosayj.thinking.spring._01_iochelloworld.overview.domain.User;
 
 /**
  * 通过 {@link ObjectProvider} 进行依赖查找

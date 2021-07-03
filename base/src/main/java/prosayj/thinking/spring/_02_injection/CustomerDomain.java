@@ -1,4 +1,4 @@
-package prosayj.thinking.spring.injection;
+package prosayj.thinking.spring._02_injection;
 
 import lombok.Data;
 

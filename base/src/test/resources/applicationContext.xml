@@ -21,39 +21,39 @@
 
     <!-- ///////////////////////////////////////////////////////////////////////////////// -->
     <!--属性 property 注入-->
-    <bean id="person" class="prosayj.thinking.spring.iochelloworld.domain.Person">
+    <bean id="person" class="prosayj.thinking.spring._01_iochelloworld.domain.Person">
         <property name="pAge" value="24"/>
         <property name="pName" value="property设值注入用户名称"/>
     </bean>
     <!--基于p名称空间的简化写法 注入-->
-    <bean id="person1" class="prosayj.thinking.spring.iochelloworld.domain.Person"
+    <bean id="person1" class="prosayj.thinking.spring._01_iochelloworld.domain.Person"
           p:pName="基于p名称空间的简化写法"
           p:pAge="25"/>
 
     <!--构造注入 的重载1 -->
-    <bean id="/person" class="prosayj.thinking.spring.iochelloworld.domain.Person">
+    <bean id="/person" class="prosayj.thinking.spring._01_iochelloworld.domain.Person">
         <constructor-arg value="构造注入用户名称"/>
         <constructor-arg value="26"/>
     </bean>
     <!--构造注入 的重载2 -->
-    <bean id="person2" class="prosayj.thinking.spring.iochelloworld.domain.Person">
+    <bean id="person2" class="prosayj.thinking.spring._01_iochelloworld.domain.Person">
         <constructor-arg value="重载构造注入用户名称" type="java.lang.String"/>
     </bean>
     <!--构造注入 的重载3 -->
-    <bean id="person3" class="prosayj.thinking.spring.iochelloworld.domain.Person">
+    <bean id="person3" class="prosayj.thinking.spring._01_iochelloworld.domain.Person">
         <constructor-arg value="27" type="int"/>
     </bean>
 
-    <bean class="prosayj.thinking.spring.iochelloworld.domain.Person"/>
-    <bean class="prosayj.thinking.spring.iochelloworld.domain.Person"/>
-    <bean name="pname" class="prosayj.thinking.spring.iochelloworld.domain.Person"/>
-    <bean name="pppp,/pppp" class="prosayj.thinking.spring.iochelloworld.domain.Person"/>
+    <bean class="prosayj.thinking.spring._01_iochelloworld.domain.Person"/>
+    <bean class="prosayj.thinking.spring._01_iochelloworld.domain.Person"/>
+    <bean name="pname" class="prosayj.thinking.spring._01_iochelloworld.domain.Person"/>
+    <bean name="pppp,/pppp" class="prosayj.thinking.spring._01_iochelloworld.domain.Person"/>
     <!-- ///////////////////////////////////////////////////////////////////////////////// -->
 
 
     <!-- ///////////////////////////////////////////////////////////////////////////////// -->
     <!-- String+8种基本类型 注入-->
-    <bean id="customer" class="prosayj.thinking.spring.injection.CustomerDomain">
+    <bean id="customer" class="prosayj.thinking.spring._02_injection.CustomerDomain">
         <property name="age" value="24"/>
         <property name="name" value="李四"/>
         <!--数组-->
@@ -101,8 +101,8 @@
 
 
     <!-- ///////////////////////////////////////////////////////////////////////////////// -->
-    <bean id="userDao" class="prosayj.thinking.spring.iochelloworld.UserDaoImpl"/>
-    <bean id="userService" class="prosayj.thinking.spring.iochelloworld.UserServiceImpl"
+    <bean id="userDao" class="prosayj.thinking.spring._01_iochelloworld.UserDaoImpl"/>
+    <bean id="userService" class="prosayj.thinking.spring._01_iochelloworld.UserServiceImpl"
           p:userDao-ref="userDao">
         <!--
         <property name="userDao">

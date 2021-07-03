@@ -1,4 +1,4 @@
-package prosayj.thinking.spring.iochelloworld;
+package prosayj.thinking.spring._01_iochelloworld;
 
 import java.io.IOException;
 import java.util.Properties;
@@ -53,7 +53,7 @@ class CustomerBeanFactory {
         //return new UserServiceImpl();
         try {
             return (UserService) Class
-                    .forName("prosayj.thinking.spring.iochelloworld.UserServiceImpl")
+                    .forName("prosayj.thinking.spring._01_iochelloworld.UserServiceImpl")
                     .newInstance();
         } catch (InstantiationException | IllegalAccessException | ClassNotFoundException e) {
             e.printStackTrace();
@@ -65,7 +65,7 @@ class CustomerBeanFactory {
 //        return new UserDaoImpl();
         try {
             return (UserDao) Class
-                    .forName("prosayj.thinking.spring.iochelloworld.UserDaoImpl")
+                    .forName("prosayj.thinking.spring._01_iochelloworld.UserDaoImpl")
                     .newInstance();
         } catch (InstantiationException | IllegalAccessException | ClassNotFoundException e) {
             e.printStackTrace();
