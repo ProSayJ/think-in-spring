@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package prosayj.thinking.spring.ioc.overview.domain;
+package prosayj.thinking.spring.iochelloworld.overview.domain;
 
 /**
  * 公司类

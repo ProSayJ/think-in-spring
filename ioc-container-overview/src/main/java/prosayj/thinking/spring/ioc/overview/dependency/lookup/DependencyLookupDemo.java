@@ -14,10 +14,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package prosayj.thinking.spring.ioc.overview.dependency.lookup;
+package prosayj.thinking.spring.iochelloworld.overview.dependency.lookup;
 
-import prosayj.thinking.spring.ioc.overview.annotation.Super;
-import prosayj.thinking.spring.ioc.overview.domain.User;
+import prosayj.thinking.spring.iochelloworld.overview.annotation.Super;
+import prosayj.thinking.spring.iochelloworld.overview.domain.User;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.ListableBeanFactory;
 import org.springframework.beans.factory.ObjectFactory;

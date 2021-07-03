@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package prosayj.thinking.spring.ioc.overview.annotation;
+package prosayj.thinking.spring.iochelloworld.overview.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

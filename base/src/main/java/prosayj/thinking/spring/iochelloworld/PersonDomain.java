@@ -1,4 +1,4 @@
-package prosayj.thinking.spring.common.support.model;
+package prosayj.thinking.spring.iochelloworld;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.slf4j.Logger;
@@ -11,29 +11,29 @@ import org.slf4j.LoggerFactory;
  * @date 2020-12-26 下午 12:46
  * @since 1.0.0
  */
-public class Person {
+class PersonDomain {
     @JsonIgnore
     public final Logger logger = LoggerFactory.getLogger(this.getClass());
 
     private String pName;
     private int pAge;
 
-    public Person() {
+    public PersonDomain() {
         logger.info(" Person 无参构造方法 被调用");
     }
 
-    public Person(String pName, int pAge) {
+    public PersonDomain(String pName, int pAge) {
         this.pName = pName;
         this.pAge = pAge;
         logger.info(" Person 有参构造方法[pName,pAge] 被调用");
     }
 
-    public Person(String pName) {
+    public PersonDomain(String pName) {
         this.pName = pName;
         logger.info(" Person 有参构造方法[pName] 被调用");
     }
 
-    public Person(int pAge) {
+    public PersonDomain(int pAge) {
         this.pAge = pAge;
         logger.info(" Person 有参构造方法[pAge] 被调用");
     }

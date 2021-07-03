@@ -1,4 +1,4 @@
-package prosayj.thinking.spring.common.support.model;
+package prosayj.thinking.spring.iochelloworld;
 
 import lombok.Data;
 
@@ -10,11 +10,11 @@ import lombok.Data;
  * @since 1.0.0
  */
 @Data
-public class User {
+class UserDomain {
     private String name;
     private int age;
 
-    public User(String name, int age) {
+    public UserDomain(String name, int age) {
         this.name = name;
         this.age = age;
     }

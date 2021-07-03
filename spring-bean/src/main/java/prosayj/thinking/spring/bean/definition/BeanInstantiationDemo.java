@@ -18,7 +18,7 @@ package prosayj.thinking.spring.bean.definition;
 
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import prosayj.thinking.spring.ioc.overview.domain.User;
+import prosayj.thinking.spring.iochelloworld.overview.domain.User;
 
 /**
  * Bean 实例化示例

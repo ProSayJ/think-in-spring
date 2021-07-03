@@ -1,4 +1,4 @@
-package prosayj.thinking.spring.beanpost;
+package prosayj.thinking.spring.common.model;
 
 import lombok.Data;
 

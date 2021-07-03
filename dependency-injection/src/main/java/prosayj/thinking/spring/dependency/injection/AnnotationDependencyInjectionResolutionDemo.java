@@ -25,7 +25,7 @@ import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
 import org.springframework.context.annotation.*;
 import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
-import prosayj.thinking.spring.ioc.overview.domain.User;
+import prosayj.thinking.spring.iochelloworld.overview.domain.User;
 
 import javax.inject.Inject;
 import java.util.*;

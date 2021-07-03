@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd
+                           http://www.springframework.org/schema/tx
+                           http://www.springframework.org/schema/tx/spring-tx.xsd
+                           http://www.springframework.org/schema/mvc
+                           http://www.springframework.org/schema/mvc/spring-mvc.xsd
+                           http://www.springframework.org/schema/aop
+                           http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <!--属性 property 注入-->
+    <!-- String+8种基本类型 注入-->
+    <bean id="customer" class="prosayj.thinking.spring.injection.CustomerDomain">
+        <property name="age" value="24"/>
+        <property name="name" value="李四"/>
+        <!--数组-->
+        <property name="emails">
+            <list>
+                <value>aaaa@qq.com</value>
+                <value>bbbb@qq.com</value>
+                <value>cccc@qq.com</value>
+            </list>
+        </property>
+        <!--set集合-->
+        <property name="phones">
+            <set>
+                <value>138xxxxxxxxxx</value>
+                <value>139xxxxxxxxxx</value>
+                <!--set会自动去重-->
+                <value>138xxxxxxxxxx</value>
+            </set>
+        </property>
+        <!--list集合-->
+        <property name="address">
+            <list>
+                <value>China</value>
+                <value>Earth</value>
+                <value>hell</value>
+            </list>
+        </property>
+        <!--map集合-->
+        <property name="maps">
+            <map>
+                <entry key="hello" value="12312312312"/>
+                <entry key="world" value="21314214214"/>
+            </map>
+        </property>
+        <!--properties配置-->
+        <property name="properties">
+            <props>
+                <prop key="key1">value1</prop>
+                <prop key="key2">value2</prop>
+                <prop key="key3">value3</prop>
+            </props>
+        </property>
+    </bean>
+
+
+    <!--基于p名称空间的简化写法 注入-->
+    <bean id="customer2" class="prosayj.thinking.spring.injection.CustomerDomain"
+          p:name="基于p名称空间的简化写法"
+          p:age="25"/>
+
+    <!--构造注入 的重载1 -->
+    <bean id="customer3" class="prosayj.thinking.spring.injection.CustomerDomain">
+        <constructor-arg value="构造注入用户名称"/>
+        <constructor-arg value="26"/>
+    </bean>
+    <!--构造注入 的重载2 -->
+    <bean id="customer4" class="prosayj.thinking.spring.injection.CustomerDomain">
+        <constructor-arg value="重载构造注入用户名称" type="java.lang.String"/>
+    </bean>
+    <!--构造注入 的重载3 -->
+    <bean id="customer5" class="prosayj.thinking.spring.injection.CustomerDomain">
+        <constructor-arg value="27" type="int"/>
+    </bean>
+
+
+    <!--对象属性注入-->
+    <bean id="userDao" class="prosayj.thinking.spring.iochelloworld.UserDaoImpl"/>
+    <bean id="userService" class="prosayj.thinking.spring.iochelloworld.UserServiceImpl">
+        <property name="userDao" ref="userDao"/>
+    </bean>
+
+</beans>

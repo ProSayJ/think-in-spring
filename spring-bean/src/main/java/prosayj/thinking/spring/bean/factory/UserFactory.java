@@ -17,7 +17,7 @@
 package prosayj.thinking.spring.bean.factory;
 
 
-import prosayj.thinking.spring.ioc.overview.domain.User;
+import prosayj.thinking.spring.iochelloworld.overview.domain.User;
 
 /**
  * {@link User} 工厂类

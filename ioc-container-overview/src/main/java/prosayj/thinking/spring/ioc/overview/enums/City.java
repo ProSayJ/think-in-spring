@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package prosayj.thinking.spring.ioc.overview.enums;
+package prosayj.thinking.spring.iochelloworld.overview.enums;
 
 /**
  * 城市枚举

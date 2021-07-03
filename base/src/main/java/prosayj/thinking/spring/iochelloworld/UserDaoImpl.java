@@ -1,8 +1,7 @@
-package prosayj.thinking.spring.common.support.dao.impl;
+package prosayj.thinking.spring.iochelloworld;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import prosayj.thinking.spring.common.support.dao.UserDao;
 
 /**
  * UserDaoImpl
@@ -16,11 +15,11 @@ public class UserDaoImpl implements UserDao {
 
     @Override
     public void createUser(String userName, int age) {
-        logger.info("user：【{}】，【{}】 created", userName, age);
+        logger.info("createUser,userInfo===>：【{}】，【{}】 created", userName, age);
     }
 
     @Override
     public void login(String userName, String pwd) {
-        logger.info("{}  login success password is {}", userName, pwd);
+        logger.info("login====> {}  login success password is {}", userName, pwd);
     }
 }

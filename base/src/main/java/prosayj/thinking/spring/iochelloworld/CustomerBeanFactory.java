@@ -1,7 +1,4 @@
-package prosayj.thinking.spring.beanfactory;
-
-import prosayj.thinking.spring.common.support.dao.UserDao;
-import prosayj.thinking.spring.common.support.service.UserService;
+package prosayj.thinking.spring.iochelloworld;
 
 import java.io.IOException;
 import java.util.Properties;
@@ -13,7 +10,7 @@ import java.util.Properties;
  * @date 2020-12-26 上午 09:29
  * @since 1.0.0
  */
-public class CustomerBeanFactory {
+class CustomerBeanFactory {
     private static final Properties ENV = new Properties();
 
     static {
@@ -56,7 +53,7 @@ public class CustomerBeanFactory {
         //return new UserServiceImpl();
         try {
             return (UserService) Class
-                    .forName("prosayj.thinking.spring.common.support.service.impl.UserServiceImpl")
+                    .forName("prosayj.thinking.spring.iochelloworld.UserServiceImpl")
                     .newInstance();
         } catch (InstantiationException | IllegalAccessException | ClassNotFoundException e) {
             e.printStackTrace();
@@ -68,7 +65,7 @@ public class CustomerBeanFactory {
 //        return new UserDaoImpl();
         try {
             return (UserDao) Class
-                    .forName("prosayj.thinking.spring.common.support.dao.impl.UserDaoImpl")
+                    .forName("prosayj.thinking.spring.iochelloworld.UserDaoImpl")
                     .newInstance();
         } catch (InstantiationException | IllegalAccessException | ClassNotFoundException e) {
             e.printStackTrace();

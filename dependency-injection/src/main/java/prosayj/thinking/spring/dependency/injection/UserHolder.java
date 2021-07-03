@@ -17,7 +17,7 @@
 package prosayj.thinking.spring.dependency.injection;
 
 
-import prosayj.thinking.spring.ioc.overview.domain.User;
+import prosayj.thinking.spring.iochelloworld.overview.domain.User;
 
 /**
  * {@link User} 的 Holder 类

@@ -2,6 +2,8 @@ package prosayj.thinking.spring.scope;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.Date;
 
@@ -12,7 +14,8 @@ import java.util.Date;
  * @date 2021-01-02 下午 09:07
  * @since 1.0.0
  */
-@Data
+@Getter
+@Setter
 public class Account {
     private String owner;
     private Date createTime;

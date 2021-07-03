@@ -19,7 +19,7 @@ package prosayj.thinking.spring.dependency.injection;
 import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
-import prosayj.thinking.spring.ioc.overview.domain.User;
+import prosayj.thinking.spring.iochelloworld.overview.domain.User;
 
 /**
  * 基于 Java 注解的依赖 Setter 方法注入示例
