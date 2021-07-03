@@ -1,4 +1,4 @@
-package prosayj.thinking.spring.base;
+package prosayj.thinking.spring.common.env;
 
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
@@ -7,10 +7,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.springframework.test.context.ContextConfiguration;
 
-import java.util.Arrays;
-import java.util.List;
 
 /**
  * BaseEnv
@@ -20,16 +17,23 @@ import java.util.List;
  * @since 1.0.0
  */
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
-@ContextConfiguration(locations = {
-        "classpath:applicationContext.xml"})
-public class BaseEnv {
-    public final Logger logger = LoggerFactory.getLogger(this.getClass());
+public class ClasspathContextSetEnv {
+    public final Logger logger = LoggerFactory.getLogger(getClass());
     public ApplicationContext context = null;
+    public String contextPath;
+
+    public ClasspathContextSetEnv() {
+    }
+
+    public ClasspathContextSetEnv(String contextPath) {
+        this.contextPath = contextPath;
+    }
 
     @BeforeAll
     public void initContext() {
         //获取spring的工厂
-        context = new ClassPathXmlApplicationContext("/applicationContext.xml");
+        //context = new ClassPathXmlApplicationContext("/applicationContext.xml");
+        context = new ClassPathXmlApplicationContext(contextPath);
     }
 
     @AfterAll

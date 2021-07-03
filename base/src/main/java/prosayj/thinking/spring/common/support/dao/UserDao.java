@@ -1,14 +1,13 @@
-package prosayj.thinking.spring.basic.service;
+package prosayj.thinking.spring.common.support.dao;
 
 /**
- * UserService
+ * UserDao
  *
  * @author yangjian
- * @date 2020-12-25 13:33
+ * @date 2020-12-25 13:34
  * @since 1.0.0
  */
-public interface UserService {
-
+public interface UserDao {
     void createUser(String userName, int age);
 
     void login(String userName, String pwd);

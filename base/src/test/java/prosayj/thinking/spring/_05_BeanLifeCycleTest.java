@@ -3,7 +3,7 @@ package prosayj.thinking.spring;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import prosayj.thinking.spring.base.BaseEnv;
+import prosayj.thinking.spring.common.env.ClasspathContextSetEnv;
 import prosayj.thinking.spring.beanpost.Category;
 import prosayj.thinking.spring.lifecycle.LifeCycleDomin;
 
@@ -16,7 +16,11 @@ import static org.junit.jupiter.api.Assertions.*;
  * @date 2021-01-02 下午 09:34
  * @since 1.0.0
  */
-public class _05_BeanLifeCycleTest extends BaseEnv {
+public class _05_BeanLifeCycleTest extends ClasspathContextSetEnv {
+    public _05_BeanLifeCycleTest() {
+        super("/applicationContext.xml");
+    }
+
     @Test
     @DisplayName("00- Spring bean生命周期：bean初始化时机")
     public void testBeanLifeCycleTest() {

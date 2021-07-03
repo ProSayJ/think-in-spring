@@ -1,4 +1,4 @@
-package prosayj.thinking.spring.basic.model;
+package prosayj.thinking.spring.common.support.model;
 
 import lombok.Data;
 

@@ -2,10 +2,10 @@ package prosayj.thinking.spring;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import prosayj.thinking.spring.base.BaseEnv;
-import prosayj.thinking.spring.basic.model.Customer;
-import prosayj.thinking.spring.basic.model.Person;
-import prosayj.thinking.spring.basic.service.UserService;
+import prosayj.thinking.spring.common.env.ClasspathContextSetEnv;
+import prosayj.thinking.spring.common.support.model.Customer;
+import prosayj.thinking.spring.common.support.model.Person;
+import prosayj.thinking.spring.common.support.service.UserService;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
@@ -16,8 +16,10 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
  * @date 2021-01-02 上午 12:16
  * @since 1.0.0
  */
-public class _03_InjectionTest extends BaseEnv {
-
+public class _03_InjectionTest extends ClasspathContextSetEnv {
+    public _03_InjectionTest() {
+        super("/applicationContext.xml");
+    }
 
     @Test
     @DisplayName("00-自动注入-String+8种基本类型 测试")

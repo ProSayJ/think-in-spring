@@ -21,39 +21,39 @@
 
     <!-- ///////////////////////////////////////////////////////////////////////////////// -->
     <!--属性 property 注入-->
-    <bean id="person" class="prosayj.thinking.spring.basic.model.Person">
+    <bean id="person" class="prosayj.thinking.spring.common.support.model.Person">
         <property name="pAge" value="24"/>
         <property name="pName" value="property设值注入用户名称"/>
     </bean>
     <!--基于p名称空间的简化写法 注入-->
-    <bean id="person1" class="prosayj.thinking.spring.basic.model.Person"
+    <bean id="person1" class="prosayj.thinking.spring.common.support.model.Person"
           p:pName="基于p名称空间的简化写法"
           p:pAge="25"/>
 
     <!--构造注入 的重载1 -->
-    <bean id="/person" class="prosayj.thinking.spring.basic.model.Person">
+    <bean id="/person" class="prosayj.thinking.spring.common.support.model.Person">
         <constructor-arg value="构造注入用户名称"/>
         <constructor-arg value="26"/>
     </bean>
     <!--构造注入 的重载2 -->
-    <bean id="person2" class="prosayj.thinking.spring.basic.model.Person">
+    <bean id="person2" class="prosayj.thinking.spring.common.support.model.Person">
         <constructor-arg value="重载构造注入用户名称" type="java.lang.String"/>
     </bean>
     <!--构造注入 的重载3 -->
-    <bean id="person3" class="prosayj.thinking.spring.basic.model.Person">
+    <bean id="person3" class="prosayj.thinking.spring.common.support.model.Person">
         <constructor-arg value="27" type="int"/>
     </bean>
 
-    <bean class="prosayj.thinking.spring.basic.model.Person"/>
-    <bean class="prosayj.thinking.spring.basic.model.Person"/>
-    <bean name="pname" class="prosayj.thinking.spring.basic.model.Person"/>
-    <bean name="pppp,/pppp" class="prosayj.thinking.spring.basic.model.Person"/>
+    <bean class="prosayj.thinking.spring.common.support.model.Person"/>
+    <bean class="prosayj.thinking.spring.common.support.model.Person"/>
+    <bean name="pname" class="prosayj.thinking.spring.common.support.model.Person"/>
+    <bean name="pppp,/pppp" class="prosayj.thinking.spring.common.support.model.Person"/>
     <!-- ///////////////////////////////////////////////////////////////////////////////// -->
 
 
     <!-- ///////////////////////////////////////////////////////////////////////////////// -->
     <!-- String+8种基本类型 注入-->
-    <bean id="customer" class="prosayj.thinking.spring.basic.model.Customer">
+    <bean id="customer" class="prosayj.thinking.spring.common.support.model.Customer">
         <property name="age" value="24"/>
         <property name="name" value="李四"/>
         <!--数组-->
@@ -101,8 +101,8 @@
 
 
     <!-- ///////////////////////////////////////////////////////////////////////////////// -->
-    <bean id="userDao" class="prosayj.thinking.spring.basic.dao.impl.UserDaoImpl"/>
-    <bean id="userService" class="prosayj.thinking.spring.basic.service.impl.UserServiceImpl"
+    <bean id="userDao" class="prosayj.thinking.spring.common.support.dao.impl.UserDaoImpl"/>
+    <bean id="userService" class="prosayj.thinking.spring.common.support.service.impl.UserServiceImpl"
           p:userDao-ref="userDao">
         <!--
         <property name="userDao">

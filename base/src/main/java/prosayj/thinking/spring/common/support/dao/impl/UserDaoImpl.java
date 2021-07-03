@@ -1,8 +1,8 @@
-package prosayj.thinking.spring.basic.dao.impl;
+package prosayj.thinking.spring.common.support.dao.impl;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import prosayj.thinking.spring.basic.dao.UserDao;
+import prosayj.thinking.spring.common.support.dao.UserDao;
 
 /**
  * UserDaoImpl
