@@ -1,5 +1,8 @@
 package prosayj.thinking.spring._01_iochelloworld;
 
+import prosayj.thinking.spring._02_injection.UserDao;
+import prosayj.thinking.spring._02_injection.UserService;
+
 import java.io.IOException;
 import java.util.Properties;
 
@@ -53,7 +56,7 @@ class CustomerBeanFactory {
         //return new UserServiceImpl();
         try {
             return (UserService) Class
-                    .forName("prosayj.thinking.spring._01_iochelloworld.UserServiceImpl")
+                    .forName("prosayj.thinking.spring._02_injection.UserServiceImpl")
                     .newInstance();
         } catch (InstantiationException | IllegalAccessException | ClassNotFoundException e) {
             e.printStackTrace();
@@ -65,7 +68,7 @@ class CustomerBeanFactory {
 //        return new UserDaoImpl();
         try {
             return (UserDao) Class
-                    .forName("prosayj.thinking.spring._01_iochelloworld.UserDaoImpl")
+                    .forName("prosayj.thinking.spring._02_injection.UserDaoImpl")
                     .newInstance();
         } catch (InstantiationException | IllegalAccessException | ClassNotFoundException e) {
             e.printStackTrace();

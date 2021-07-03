@@ -1,4 +1,4 @@
-package prosayj.thinking.spring._01_iochelloworld;
+package prosayj.thinking.spring._02_injection;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

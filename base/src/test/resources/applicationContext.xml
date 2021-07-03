@@ -101,8 +101,8 @@
 
 
     <!-- ///////////////////////////////////////////////////////////////////////////////// -->
-    <bean id="userDao" class="prosayj.thinking.spring._01_iochelloworld.UserDaoImpl"/>
-    <bean id="userService" class="prosayj.thinking.spring._01_iochelloworld.UserServiceImpl"
+    <bean id="userDao" class="prosayj.thinking.spring._02_injection.UserDaoImpl"/>
+    <bean id="userService" class="prosayj.thinking.spring._02_injection.UserServiceImpl"
           p:userDao-ref="userDao">
         <!--
         <property name="userDao">
