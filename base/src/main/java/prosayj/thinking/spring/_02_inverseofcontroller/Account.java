@@ -1,4 +1,4 @@
-package prosayj.thinking.spring.scope;
+package prosayj.thinking.spring._02_inverseofcontroller;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -16,9 +16,8 @@ import java.util.Date;
  */
 @Getter
 @Setter
-public class Account {
+class Account {
     private String owner;
     private Date createTime;
     private Date updateTime;
-
 }

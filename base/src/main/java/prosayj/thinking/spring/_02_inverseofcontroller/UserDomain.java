@@ -1,6 +1,8 @@
-package prosayj.thinking.spring._02_injection;
+package prosayj.thinking.spring._02_inverseofcontroller;
 
 import lombok.Data;
+
+import java.util.Date;
 
 /**
  * User
@@ -13,10 +15,8 @@ import lombok.Data;
 class UserDomain {
     private String name;
     private int age;
+    private Date createTime;
+    private Date updateTime;
 
-    public UserDomain(String name, int age) {
-        this.name = name;
-        this.age = age;
-    }
 
 }

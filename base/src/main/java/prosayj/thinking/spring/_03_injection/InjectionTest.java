@@ -1,4 +1,4 @@
-package prosayj.thinking.spring._02_injection;
+package prosayj.thinking.spring._03_injection;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -6,7 +6,7 @@ import prosayj.thinking.spring.common.env.ClasspathContextSetEnv;
 import prosayj.thinking.spring.common.service.UserService;
 import prosayj.thinking.spring.common.util.JsonUtils;
 
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.*;
 
 
 /**
@@ -22,10 +22,11 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 public class InjectionTest extends ClasspathContextSetEnv {
 
     public InjectionTest() {
-        super("test/InjectionTest.xml");
+        super("test/03InjectionTest.xml");
     }
 
     //------------------------------------------设值注入------start
+
     /**
      * Spring容器 property 属性注入：
      * <br> 1、8种基本类型+String
@@ -37,7 +38,7 @@ public class InjectionTest extends ClasspathContextSetEnv {
      */
     @Test
     @DisplayName("Spring容器 property 属性注入")
-    public void testInjection() {
+    public void injectionTest() {
         //通过工厂类获得对象
         CustomerDomain bean = (CustomerDomain) context.getBean("customer");
         assertNotNull(bean);
@@ -50,7 +51,7 @@ public class InjectionTest extends ClasspathContextSetEnv {
      */
     @Test
     @DisplayName("Spring容器 property 属性注入 基于p名称空间的简化写法")
-    public void testInjection222() {
+    public void injectionTest2() {
         //通过工厂类获得对象
         CustomerDomain person = (CustomerDomain) context.getBean("customer2");
         assertNotNull(person);
@@ -63,18 +64,17 @@ public class InjectionTest extends ClasspathContextSetEnv {
      */
     @Test
     @DisplayName("Spring容器 对象属性property注入")
-    public void testInjection333() {
+    public void injectionTest3() {
         //通过工厂类获得对象
         UserService userService = (UserService) context.getBean("userService");
         assertNotNull(userService);
         userService.createUser("李四,", 23);
         userService.login("王五", "xas");
     }
-    //------------------------------------------设值注入------end
-
 
 
     //------------------------------------------构造注入------start
+
     /**
      * Spring容器 构造 注入：
      * <br>多构造参数的情况：
@@ -85,7 +85,7 @@ public class InjectionTest extends ClasspathContextSetEnv {
      */
     @Test
     @DisplayName("Spring容器 构造 注入")
-    public void testInjection4() {
+    public void injectionTest4() {
         CustomerDomain injectionByContract01 = (CustomerDomain) context.getBean("customer2");
         assertNotNull(injectionByContract01);
         logger.info("通过 id 获取bean:{}", injectionByContract01);
@@ -98,7 +98,5 @@ public class InjectionTest extends ClasspathContextSetEnv {
         assertNotNull(injectionByContract03);
         logger.info("通过 id 获取bean:{}", injectionByContract03);
     }
-    //------------------------------------------构造注入------end
-
 
 }

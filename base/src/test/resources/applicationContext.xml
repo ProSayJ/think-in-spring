@@ -53,7 +53,7 @@
 
     <!-- ///////////////////////////////////////////////////////////////////////////////// -->
     <!-- String+8种基本类型 注入-->
-    <bean id="customer" class="prosayj.thinking.spring._02_injection.CustomerDomain">
+    <bean id="customer" class="prosayj.thinking.spring._03_injection.CustomerDomain">
         <property name="age" value="24"/>
         <property name="name" value="李四"/>
         <!--数组-->
@@ -116,7 +116,7 @@
 
     <!-- ///////BeanFactory////////////////////////////////////////////////////////////////////////// -->
     <!--class 指定了 ConnectionFactoryBean, 获得的是该类创建的复杂对象 Connection -->
-    <bean id="conn" class="prosayj.thinking.spring.factotybean.ConnectionFactoryBean">
+    <bean id="conn" class="prosayj.thinking.spring._05_configurationparameterization.ConnectionFactoryBean">
         <property name="driverClassName" value="${jdbc.driverClassName}"/>
         <property name="url" value="${jdbc.url}"/>
         <property name="username" value="${jdbc.username}"/>
@@ -152,12 +152,12 @@
         </property>
     </bean>
     <!--控制简单对象创建次数-->
-    <bean id="scopeSingleton" class="prosayj.thinking.spring.scope.Account">
+    <bean id="scopeSingleton" class="prosayj.thinking.spring._03_injection.Account">
         <property name="owner" value="张三"/>
         <property name="createTime" value="2021-01-02"/>
         <property name="updateTime" value="20210131"/>
     </bean>
-    <bean id="scopePrototype" scope="prototype" class="prosayj.thinking.spring.scope.Account">
+    <bean id="scopePrototype" scope="prototype" class="prosayj.thinking.spring._03_injection.Account">
         <property name="owner" value="张三"/>
         <property name="createTime" value="2021-01-02"/>
         <property name="updateTime" value="20210131"/>
@@ -170,13 +170,13 @@
     <!--销毁方法的操作只适用于 scope="singleton"，初始化操作都适用。-->
     <bean id="lifeCycleDomin"
           scope="prototype"
-          class="prosayj.thinking.spring.lifecycle.LifeCycleDomin"
-          init-method="myInit"
-          destroy-method="myDestory">
+          class="prosayj.thinking.spring._04_beanlifecycle.LifeCycleDomin"
+          init-method="myAfterPropertiesSet"
+          destroy-method="myDestroy">
         <property name="name" value="张三"/>
     </bean>
-    <bean id="myBeanPostProcessor" class="prosayj.thinking.spring.beanpostprocessor.MyBeanPostProcessor"/>
-    <bean id="categroy" class="prosayj.thinking.spring.common.model.Category">
+    <bean id="myBeanPostProcessor" class="prosayj.thinking.spring._04_beanlifecycle.MyBeanPostProcessor"/>
+    <bean id="categroy" class="prosayj.thinking.spring._04_beanlifecycle.CategoryDomain">
         <property name="id" value="10"/>
         <property name="name" value="北京"/>
     </bean>

@@ -1,10 +1,7 @@
-package prosayj.thinking.spring.factotybean;
+package prosayj.thinking.spring._02_inverseofcontroller;
 
 import lombok.Data;
 import org.springframework.beans.factory.FactoryBean;
-
-import java.sql.Connection;
-import java.sql.DriverManager;
 
 /**
  * ConnectionFactoryBean
@@ -14,14 +11,13 @@ import java.sql.DriverManager;
  * @since 1.0.0
  */
 @Data
-public class ConnectionFactoryBean implements FactoryBean<Connection> {
+class UserDomainFactoryBean implements FactoryBean<UserDomain> {
     /**
      * 将依赖的字符串信息变为成员变量, 利用配置文件进行注入
      */
-    private String driverClassName;
-    private String url;
-    private String username;
-    private String password;
+    private String name;
+    private int age;
+
 
     /**
      * 用于书写创建复杂对象时的代码，并把复杂对象作为返回值对象返回
@@ -30,9 +26,11 @@ public class ConnectionFactoryBean implements FactoryBean<Connection> {
      * @throws Exception Exception
      */
     @Override
-    public Connection getObject() throws Exception {
-        Class.forName(driverClassName);
-        return DriverManager.getConnection(url, username, password);
+    public UserDomain getObject() throws Exception {
+        UserDomain userDomain = new UserDomain();
+        userDomain.setName(name);
+        userDomain.setAge(age);
+        return userDomain;
     }
 
     /**
@@ -41,8 +39,8 @@ public class ConnectionFactoryBean implements FactoryBean<Connection> {
      * @return Class<Connection>
      */
     @Override
-    public Class<Connection> getObjectType() {
-        return Connection.class;
+    public Class<UserDomain> getObjectType() {
+        return UserDomain.class;
     }
 
     /**
@@ -55,7 +53,6 @@ public class ConnectionFactoryBean implements FactoryBean<Connection> {
         return false;
         // return true;
     }
-
 
 
 }

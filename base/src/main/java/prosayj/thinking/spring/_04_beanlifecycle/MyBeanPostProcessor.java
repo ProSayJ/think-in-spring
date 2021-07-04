@@ -1,10 +1,9 @@
-package prosayj.thinking.spring.beanpostprocessor;
+package prosayj.thinking.spring._04_beanlifecycle;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;
-import prosayj.thinking.spring.common.model.Category;
 
 
 /**
@@ -14,23 +13,23 @@ import prosayj.thinking.spring.common.model.Category;
  * @date 2021-01-03 下午 01:42
  * @since 1.0.0
  */
-public class MyBeanPostProcessor implements BeanPostProcessor {
+class MyBeanPostProcessor implements BeanPostProcessor {
     public final Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @Override
     public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
-        if (bean instanceof Category) {
-            logger.info("MyBeanPostProcessor.postProcessBeforeInitialization 执行~");
+        if (bean instanceof LifeCycleDomin) {
+            logger.info("MyBeanPostProcessor.postProcessBeforeInitialization 执行~~~");
         }
         return bean;
     }
 
     @Override
     public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
-        if (bean instanceof Category) {
-            logger.info("MyBeanPostProcessor.postProcessAfterInitialization 执行~");
-            Category category = (Category) bean;
-            category.setName("安徽");
+        if (bean instanceof LifeCycleDomin) {
+            logger.info("MyBeanPostProcessor.postProcessAfterInitialization 执行~~~");
+            LifeCycleDomin category = (LifeCycleDomin) bean;
+            category.setName("安徽~~~");
             return category;
         } else {
             return bean;

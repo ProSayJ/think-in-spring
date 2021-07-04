@@ -23,7 +23,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class IocHelloWorldTest extends ClasspathContextSetEnv {
 
     public IocHelloWorldTest() {
-        super("test/IocHelloWorldTest.xml");
+        super("test/01IocHelloWorldTest.xml");
     }
 
     /**

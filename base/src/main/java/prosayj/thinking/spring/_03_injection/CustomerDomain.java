@@ -1,4 +1,4 @@
-package prosayj.thinking.spring._02_injection;
+package prosayj.thinking.spring._03_injection;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;

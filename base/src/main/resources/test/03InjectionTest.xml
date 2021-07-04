@@ -17,7 +17,7 @@
                            http://www.springframework.org/schema/aop/spring-aop.xsd">
 
     <!-- property 属性注入 -->
-    <bean id="customer" class="prosayj.thinking.spring._02_injection.CustomerDomain">
+    <bean id="customer" class="prosayj.thinking.spring._03_injection.CustomerDomain">
         <property name="age" value="24"/>
         <property name="name" value="李四"/>
         <!--数组-->
@@ -63,7 +63,7 @@
     </bean>
 
     <!-- property 属性注入 基于p名称空间的简化写法 -->
-    <bean id="customer2" class="prosayj.thinking.spring._02_injection.CustomerDomain"
+    <bean id="customer2" class="prosayj.thinking.spring._03_injection.CustomerDomain"
           p:name="基于p名称空间的简化写法"
           p:age="25"/>
 
@@ -75,22 +75,17 @@
 
 
     <!--构造注入 的重载 -->
-    <bean id="customer3" class="prosayj.thinking.spring._02_injection.CustomerDomain">
+    <bean id="customer3" class="prosayj.thinking.spring._03_injection.CustomerDomain">
         <constructor-arg value="构造注入用户名称"/>
         <constructor-arg value="26"/>
     </bean>
     <!--构造注入 的重载 -->
-    <bean id="customer4" class="prosayj.thinking.spring._02_injection.CustomerDomain">
+    <bean id="customer4" class="prosayj.thinking.spring._03_injection.CustomerDomain">
         <constructor-arg value="重载构造注入用户名称" type="java.lang.String"/>
     </bean>
     <!--构造注入 的重载 -->
-    <bean id="customer5" class="prosayj.thinking.spring._02_injection.CustomerDomain">
+    <bean id="customer5" class="prosayj.thinking.spring._03_injection.CustomerDomain">
         <constructor-arg value="27" type="int"/>
     </bean>
-
-
-
-
-
 
 </beans>
