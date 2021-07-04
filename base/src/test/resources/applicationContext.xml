@@ -136,10 +136,10 @@
     <!--自定义类型转换器-->
     <!-- 配置文件完成对日期格式的赋值 -->
     <!--Spring 框架其实内置了日期类型的转换器：日期格式必须是 2021/01/02-->
-    <bean id="myDateConverter" class="prosayj.thinking.spring.converter.MyDateConverter">
+    <bean id="myDateConverter" class="prosayj.thinking.spring._06_customerconvertor.MyDateConverter">
         <property name="pattern" value="yyyy-MM-dd"/>
     </bean>
-    <bean id="myDateConverter2" class="prosayj.thinking.spring.converter.MyDateConverter">
+    <bean id="myDateConverter2" class="prosayj.thinking.spring._06_customerconvertor.MyDateConverter">
         <property name="pattern" value="yyyyMMdd"/>
     </bean>
     <!--ConversionSeviceFactoryBean 定义 id属性，值必须是 conversionService-->

@@ -1,4 +1,4 @@
-package prosayj.thinking.spring.converter;
+package prosayj.thinking.spring._06_customerconvertor;
 
 import lombok.Data;
 import org.springframework.core.convert.converter.Converter;
@@ -15,7 +15,7 @@ import java.util.Date;
  * @since 1.0.0
  */
 @Data
-public class MyDateConverter implements Converter<String, Date> {
+class MyDateConverter implements Converter<String, Date> {
     private String pattern;
 
     @Override
