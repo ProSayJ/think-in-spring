@@ -101,8 +101,8 @@
 
 
     <!-- ///////////////////////////////////////////////////////////////////////////////// -->
-    <bean id="userDao" class="prosayj.thinking.spring._02_injection.UserDaoImpl"/>
-    <bean id="userService" class="prosayj.thinking.spring._02_injection.UserServiceImpl"
+    <bean id="userDao" class="prosayj.thinking.spring.common.dao.UserDaoImpl"/>
+    <bean id="userService" class="prosayj.thinking.spring.common.service.UserServiceImpl"
           p:userDao-ref="userDao">
         <!--
         <property name="userDao">
@@ -128,7 +128,7 @@
     <!-- 通过工厂实例里的方法创建复杂对象 -->
     <bean id="conn2" factory-bean="connFactory" factory-method="getConnection"/>
     <!--静态工厂-->
-    <bean id="conn3" class="prosayj.thinking.spring.factotybean.StaticFactoryBean" factory-method="getConnection"/>
+    <bean id="conn3" class="prosayj.thinking.spring.factotybean.StaticConnectionFactoryBean" factory-method="getConnection"/>
     <!-- ///////BeanFactory////////////////////////////////////////////////////////////////////////// -->
 
 

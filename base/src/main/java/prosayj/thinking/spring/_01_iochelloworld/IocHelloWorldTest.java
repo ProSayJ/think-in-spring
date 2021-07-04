@@ -4,8 +4,8 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.NoUniqueBeanDefinitionException;
-import prosayj.thinking.spring._02_injection.UserService;
-import prosayj.thinking.spring._02_injection.UserServiceImpl;
+import prosayj.thinking.spring.common.service.UserService;
+import prosayj.thinking.spring.common.service.UserServiceImpl;
 import prosayj.thinking.spring.common.env.ClasspathContextSetEnv;
 import prosayj.thinking.spring.common.util.JsonUtils;
 
@@ -13,7 +13,8 @@ import prosayj.thinking.spring.common.util.JsonUtils;
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
- * SpringIocHelloWorldTest
+ * Spring容器 helloWorld测试用例：
+ * <p>
  *
  * @author yangjian
  * @date 2020-12-25 13:41
@@ -86,7 +87,7 @@ public class IocHelloWorldTest extends ClasspathContextSetEnv {
         try {
             PersonDomain bean = context.getBean(PersonDomain.class);
             assertNotNull(bean);
-            logger.info("Spring容器 beanClass[Person.class] 获取bean:\n{}", bean);
+            logger.info("Spring容器 beanClass[Person.class] 获取bean:{}", bean);
         } catch (Exception e) {
             logger.error("Spring容器 beanClass[Person.class] 获取bean异常:", e);
             assertTrue(e instanceof NoUniqueBeanDefinitionException);
@@ -114,7 +115,8 @@ public class IocHelloWorldTest extends ClasspathContextSetEnv {
     @Test
     @DisplayName("Spring容器 通过类型 获取 所有 id")
     public void getBeanNamesForType() {
-        for (String beanNamesForType : context.getBeanNamesForType(PersonDomain.class)) {
+        String[] namesForType = context.getBeanNamesForType(PersonDomain.class);
+        for (String beanNamesForType : namesForType) {
             logger.info("getBeanNamesForType===>{}", beanNamesForType);
         }
     }

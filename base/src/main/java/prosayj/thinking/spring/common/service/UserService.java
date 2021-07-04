@@ -1,4 +1,4 @@
-package prosayj.thinking.spring._02_injection;
+package prosayj.thinking.spring.common.service;
 
 /**
  * UserService

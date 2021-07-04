@@ -11,7 +11,7 @@ import java.sql.SQLException;
  * @date 2021-01-02 下午 08:58
  * @since 1.0.0
  */
-public class StaticFactoryBean {
+public class StaticConnectionFactoryBean {
 
     public static Connection getConnection() {
         Connection conn = null;

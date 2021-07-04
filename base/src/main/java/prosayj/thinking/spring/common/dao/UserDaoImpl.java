@@ -1,4 +1,4 @@
-package prosayj.thinking.spring._02_injection;
+package prosayj.thinking.spring.common.dao;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

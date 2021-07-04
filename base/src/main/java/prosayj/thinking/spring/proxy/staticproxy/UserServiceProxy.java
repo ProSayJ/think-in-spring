@@ -2,8 +2,8 @@ package prosayj.thinking.spring.proxy.staticproxy;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import prosayj.thinking.spring._02_injection.UserService;
-import prosayj.thinking.spring._02_injection.UserServiceImpl;
+import prosayj.thinking.spring.common.service.UserService;
+import prosayj.thinking.spring.common.service.UserServiceImpl;
 
 /**
  * UserServiceProxy

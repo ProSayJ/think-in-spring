@@ -35,7 +35,7 @@
 
 
     <!--静态工厂-->
-    <bean id="conn3" class="prosayj.thinking.spring.factotybean.StaticFactoryBean" factory-method="getConnection"/>
+    <bean id="conn3" class="prosayj.thinking.spring.factotybean.StaticConnectionFactoryBean" factory-method="getConnection"/>
 
 
 

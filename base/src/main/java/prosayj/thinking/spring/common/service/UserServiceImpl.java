@@ -1,4 +1,6 @@
-package prosayj.thinking.spring._02_injection;
+package prosayj.thinking.spring.common.service;
+
+import prosayj.thinking.spring.common.dao.UserDao;
 
 /**
  * UserServiceImpl
