@@ -32,7 +32,7 @@ public class ClasspathContextSetEnv {
     @BeforeAll
     public void initContext() {
         //获取spring的工厂
-        //context = new ClassPathXmlApplicationContext("/05ConfigurationParameterizationTest.xml");
+        //context = new ClassPathXmlApplicationContext("/05_ConfigurationParameterizationTest.xml");
         context = new ClassPathXmlApplicationContext(contextPath);
     }
 

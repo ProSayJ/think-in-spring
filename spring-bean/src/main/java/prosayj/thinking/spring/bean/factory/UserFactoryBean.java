@@ -17,7 +17,7 @@
 package prosayj.thinking.spring.bean.factory;
 
 import org.springframework.beans.factory.FactoryBean;
-import prosayj.thinking.spring._01_iochelloworld.overview.domain.User;
+import prosayj.thinking.spring._01_ioc_hello_world.overview.domain.User;
 
 /**
  * {@link User} Bean 的 {@link FactoryBean} 实现

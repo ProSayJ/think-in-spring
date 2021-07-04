@@ -14,9 +14,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package prosayj.thinking.spring._01_iochelloworld.overview.repository;
+package prosayj.thinking.spring._01_ioc_hello_world.overview.repository;
 
-import prosayj.thinking.spring._01_iochelloworld.overview.domain.User;
+import prosayj.thinking.spring._01_ioc_hello_world.overview.domain.User;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.ObjectFactory;
 import org.springframework.context.ApplicationContext;

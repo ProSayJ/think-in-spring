@@ -22,7 +22,7 @@ import org.springframework.beans.factory.ListableBeanFactory;
 import org.springframework.beans.factory.ObjectFactory;
 import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import prosayj.thinking.spring._01_iochelloworld.overview.domain.User;
+import prosayj.thinking.spring._01_ioc_hello_world.overview.domain.User;
 
 /**
  * 类型安全 依赖查找示例

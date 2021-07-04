@@ -21,33 +21,33 @@
 
     <!-- ///////////////////////////////////////////////////////////////////////////////// -->
     <!--属性 property 注入-->
-    <bean id="person" class="prosayj.thinking.spring._01_iochelloworld.domain.Person">
+    <bean id="person" class="prosayj.thinking.spring._01_ioc_hello_world.domain.Person">
         <property name="pAge" value="24"/>
         <property name="pName" value="property设值注入用户名称"/>
     </bean>
     <!--基于p名称空间的简化写法 注入-->
-    <bean id="person1" class="prosayj.thinking.spring._01_iochelloworld.domain.Person"
+    <bean id="person1" class="prosayj.thinking.spring._01_ioc_hello_world.domain.Person"
           p:pName="基于p名称空间的简化写法"
           p:pAge="25"/>
 
     <!--构造注入 的重载1 -->
-    <bean id="/person" class="prosayj.thinking.spring._01_iochelloworld.domain.Person">
+    <bean id="/person" class="prosayj.thinking.spring._01_ioc_hello_world.domain.Person">
         <constructor-arg value="构造注入用户名称"/>
         <constructor-arg value="26"/>
     </bean>
     <!--构造注入 的重载2 -->
-    <bean id="person2" class="prosayj.thinking.spring._01_iochelloworld.domain.Person">
+    <bean id="person2" class="prosayj.thinking.spring._01_ioc_hello_world.domain.Person">
         <constructor-arg value="重载构造注入用户名称" type="java.lang.String"/>
     </bean>
     <!--构造注入 的重载3 -->
-    <bean id="person3" class="prosayj.thinking.spring._01_iochelloworld.domain.Person">
+    <bean id="person3" class="prosayj.thinking.spring._01_ioc_hello_world.domain.Person">
         <constructor-arg value="27" type="int"/>
     </bean>
 
-    <bean class="prosayj.thinking.spring._01_iochelloworld.domain.Person"/>
-    <bean class="prosayj.thinking.spring._01_iochelloworld.domain.Person"/>
-    <bean name="pname" class="prosayj.thinking.spring._01_iochelloworld.domain.Person"/>
-    <bean name="pppp,/pppp" class="prosayj.thinking.spring._01_iochelloworld.domain.Person"/>
+    <bean class="prosayj.thinking.spring._01_ioc_hello_world.domain.Person"/>
+    <bean class="prosayj.thinking.spring._01_ioc_hello_world.domain.Person"/>
+    <bean name="pname" class="prosayj.thinking.spring._01_ioc_hello_world.domain.Person"/>
+    <bean name="pppp,/pppp" class="prosayj.thinking.spring._01_ioc_hello_world.domain.Person"/>
     <!-- ///////////////////////////////////////////////////////////////////////////////// -->
 
 
@@ -116,7 +116,7 @@
 
     <!-- ///////BeanFactory////////////////////////////////////////////////////////////////////////// -->
     <!--class 指定了 ConnectionFactoryBean, 获得的是该类创建的复杂对象 Connection -->
-    <bean id="conn" class="prosayj.thinking.spring._05_configurationparameterization.ConnectionFactoryBean">
+    <bean id="conn" class="prosayj.thinking.spring._05_configuration_parameterization.ConnectionFactoryBean">
         <property name="driverClassName" value="${jdbc.driverClassName}"/>
         <property name="url" value="${jdbc.url}"/>
         <property name="username" value="${jdbc.username}"/>
@@ -136,10 +136,10 @@
     <!--自定义类型转换器-->
     <!-- 配置文件完成对日期格式的赋值 -->
     <!--Spring 框架其实内置了日期类型的转换器：日期格式必须是 2021/01/02-->
-    <bean id="myDateConverter" class="prosayj.thinking.spring._06_customerconvertor.MyDateConverter">
+    <bean id="myDateConverter" class="prosayj.thinking.spring._06_customer_convertor.MyDateConverter">
         <property name="pattern" value="yyyy-MM-dd"/>
     </bean>
-    <bean id="myDateConverter2" class="prosayj.thinking.spring._06_customerconvertor.MyDateConverter">
+    <bean id="myDateConverter2" class="prosayj.thinking.spring._06_customer_convertor.MyDateConverter">
         <property name="pattern" value="yyyyMMdd"/>
     </bean>
     <!--ConversionSeviceFactoryBean 定义 id属性，值必须是 conversionService-->
@@ -170,13 +170,13 @@
     <!--销毁方法的操作只适用于 scope="singleton"，初始化操作都适用。-->
     <bean id="lifeCycleDomin"
           scope="prototype"
-          class="prosayj.thinking.spring._04_beanlifecycle.LifeCycleDomin"
+          class="prosayj.thinking.spring._04_bean_lifecycle.LifeCycleDomin"
           init-method="myAfterPropertiesSet"
           destroy-method="myDestroy">
         <property name="name" value="张三"/>
     </bean>
-    <bean id="myBeanPostProcessor" class="prosayj.thinking.spring._04_beanlifecycle.MyBeanPostProcessor"/>
-    <bean id="categroy" class="prosayj.thinking.spring._04_beanlifecycle.CategoryDomain">
+    <bean id="myBeanPostProcessor" class="prosayj.thinking.spring._04_bean_lifecycle.MyBeanPostProcessor"/>
+    <bean id="categroy" class="prosayj.thinking.spring._04_bean_lifecycle.CategoryDomain">
         <property name="id" value="10"/>
         <property name="name" value="北京"/>
     </bean>
@@ -185,7 +185,7 @@
 
     <!-- /////////////spring-动态代理//////////////////////// -->
     <!-- 额外功能 -->
-    <bean id="before" class="prosayj.thinking.spring.proxy.dynamicproxy.Before"/>
+    <bean id="before" class="prosayj.thinking.spring._10_aop_spring_dynamic_proxy.Before"/>
     <!--切入点:额外功能的加入-->
     <!--⽬的：由程序员根据⾃⼰的需要，决定额外功能加入给哪个原始方法(register、login)-->
     <!-- 简单的测试：所有方法都做为切入点，都加入额外的功能-->

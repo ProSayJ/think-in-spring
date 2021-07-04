@@ -14,9 +14,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package prosayj.thinking.spring._01_iochelloworld.overview.dependency.injection;
+package prosayj.thinking.spring._01_ioc_hello_world.overview.dependency.injection;
 
-import prosayj.thinking.spring._01_iochelloworld.overview.repository.UserRepository;
+import prosayj.thinking.spring._01_ioc_hello_world.overview.repository.UserRepository;
 import org.springframework.beans.factory.ObjectFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
