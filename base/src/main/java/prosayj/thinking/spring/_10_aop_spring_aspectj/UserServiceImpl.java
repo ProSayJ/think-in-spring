@@ -1,4 +1,4 @@
-package prosayj.thinking.spring._10_aop_spring_dynamic_proxy;
+package prosayj.thinking.spring._10_aop_spring_aspectj;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

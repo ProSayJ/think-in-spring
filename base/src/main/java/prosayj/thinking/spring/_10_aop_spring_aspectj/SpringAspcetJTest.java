@@ -1,4 +1,4 @@
-package prosayj.thinking.spring._10_aop_spring_dynamic_proxy;
+package prosayj.thinking.spring._10_aop_spring_aspectj;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -14,9 +14,9 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
  * @date 2020-12-25 13:41
  * @since 1.0.0
  */
-public class AopSpringDynamicProxyTest extends ClasspathContextSetEnv {
-    public AopSpringDynamicProxyTest() {
-        super("test/08_AopSpringDynamicProxyTest.xml");
+public class SpringAspcetJTest extends ClasspathContextSetEnv {
+    public SpringAspcetJTest() {
+        super("test/10_SpringAspcetJTest.xml");
     }
 
 
