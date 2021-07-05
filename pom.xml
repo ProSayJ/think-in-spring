@@ -11,6 +11,9 @@
     <packaging>pom</packaging>
     <modules>
         <module>base</module>
+        <module>02_hand-written-htransfer</module>
+        <module>05-spring_source_analysis</module>
+
         <!--        <module>ioc-container-overview</module>-->
         <!--        <module>spring-bean</module>-->
         <!--        <module>dependency-lookup</module>-->
@@ -18,10 +21,9 @@
 
         <!--        <module>00_demo-others</module>-->
         <!--        <module>01_demo-ioc-aop</module>-->
-        <!--        <module>02_hand-written-htransfer</module>-->
+
         <!--        <module>03_transfer-spring-ioc-aop-xml</module>-->
         <!--        <module>04_transfer-spring-ioc-aop-annotation</module>-->
-        <!--        <module>05-spring_source_analysis</module>-->
         <!--        <module>06_hand-written-mvc</module>-->
         <!--        <module>07_springmvc-demo</module>-->
         <!--        <module>08_spring-data-jpa</module>-->
@@ -31,20 +33,12 @@
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
-
         <spring.version>5.2.2.RELEASE</spring.version>
-
-
         <slf4j-version>1.7.30</slf4j-version>
         <logback.version>1.2.3</logback.version>
-
         <junit-jupiter-version>5.7.2</junit-jupiter-version>
-
-
         <lombok-version>1.18.20</lombok-version>
         <jackson-version>2.12.3</jackson-version>
-
-
         <mysql-connector-version>8.0.25</mysql-connector-version>
         <druid-version>1.1.21</druid-version>
         <javax.servlet-version>3.1.0</javax.servlet-version>
@@ -52,8 +46,8 @@
         <jaxen-version>1.1.6</jaxen-version>
         <cglib-version>2.1_2</cglib-version>
         <aspectjweaver-version>1.8.13</aspectjweaver-version>
-
     </properties>
+
     <dependencyManagement>
         <dependencies>
             <!-- logback start -->
@@ -131,6 +125,11 @@
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-context</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-beans</artifactId>
                 <version>${spring.version}</version>
             </dependency>
             <dependency>

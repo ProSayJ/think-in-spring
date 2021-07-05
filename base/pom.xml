@@ -16,6 +16,20 @@
 
 
     <dependencies>
+        <!--dom4j解析-->
+        <dependency>
+            <groupId>dom4j</groupId>
+            <artifactId>dom4j</artifactId>
+            <version>1.6.1</version>
+        </dependency>
+        <!--xpath表达式-->
+        <dependency>
+            <groupId>jaxen</groupId>
+            <artifactId>jaxen</artifactId>
+            <version>1.1.6</version>
+        </dependency>
+
+        <!--Spring-IOC-->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
@@ -24,6 +38,8 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-aop</artifactId>
         </dependency>
+
+        <!--Spring AOP-->
         <dependency>
             <groupId>org.aspectj</groupId>
             <artifactId>aspectjrt</artifactId>
@@ -33,7 +49,18 @@
             <artifactId>aspectjweaver</artifactId>
         </dependency>
 
+        <!--jackson-->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+        </dependency>
 
+
+        <!--logs-->
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-core</artifactId>
@@ -48,6 +75,7 @@
         </dependency>
 
 
+        <!--others-->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
@@ -57,7 +85,7 @@
             <artifactId>lombok</artifactId>
         </dependency>
 
-
+        <!--test-->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
@@ -65,18 +93,6 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-test</artifactId>
-        </dependency>
-
-
-        <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-core</artifactId>
-            <version>2.12.3</version>
-        </dependency>
-        <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-databind</artifactId>
-            <version>2.12.3</version>
         </dependency>
     </dependencies>
 </project>

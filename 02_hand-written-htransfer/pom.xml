@@ -27,10 +27,9 @@
 
 
     <dependencies>
-        <!-- 单元测试Junit -->
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
         </dependency>
 
         <!-- mysql数据库驱动包 -->
@@ -42,7 +41,7 @@
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>druid</artifactId>
-            <version>1.1.21</version>
+            <version>1.2.4</version>
         </dependency>
 
         <!-- servlet -->
