@@ -1,4 +1,4 @@
-package prosayj.thinking.spring.common.dao;
+package prosayj.thinking.spring._03_injection;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -10,7 +10,7 @@ import org.slf4j.LoggerFactory;
  * @date 2020-12-25 13:34
  * @since 1.0.0
  */
-public class UserDaoImpl implements UserDao {
+class UserDaoImpl implements UserDao {
     public final Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @Override

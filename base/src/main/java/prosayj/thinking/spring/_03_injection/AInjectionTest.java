@@ -3,7 +3,6 @@ package prosayj.thinking.spring._03_injection;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import prosayj.thinking.spring.common.env.ClasspathContextSetEnv;
-import prosayj.thinking.spring.common.service.UserService;
 import prosayj.thinking.spring.common.util.JsonUtils;
 
 import static org.junit.jupiter.api.Assertions.*;

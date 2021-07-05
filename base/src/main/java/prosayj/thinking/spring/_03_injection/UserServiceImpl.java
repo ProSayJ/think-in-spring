@@ -1,6 +1,5 @@
-package prosayj.thinking.spring.common.service;
+package prosayj.thinking.spring._03_injection;
 
-import prosayj.thinking.spring.common.dao.UserDao;
 
 /**
  * UserServiceImpl
@@ -9,7 +8,7 @@ import prosayj.thinking.spring.common.dao.UserDao;
  * @date 2020-12-25 13:33
  * @since 1.0.0
  */
-public class UserServiceImpl implements UserService {
+class UserServiceImpl implements UserService {
     //private static final UserDao userDao = new UserDaoImpl();
     //private static final UserDao userDao = BeanFactory.getUserDao();
     //private UserDao userDao = (UserDao) CustomerBeanFactory.getBean("userDao");

@@ -11,6 +11,8 @@ import java.lang.reflect.Proxy;
 
 /**
  * JDK实现动态代理
+ * <p>1. JDK动态代理   Proxy.newProxyInstance()  通过接口创建代理的实现类
+ * <br>2. Cglib动态代理 Enhancer                  通过继承父类创建的代理类
  *
  * @author yangjian
  * @date 2021-07-04 下午 03:46

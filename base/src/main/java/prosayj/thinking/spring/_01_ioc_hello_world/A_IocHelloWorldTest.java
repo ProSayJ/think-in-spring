@@ -4,8 +4,6 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.NoUniqueBeanDefinitionException;
-import prosayj.thinking.spring.common.service.UserService;
-import prosayj.thinking.spring.common.service.UserServiceImpl;
 import prosayj.thinking.spring.common.env.ClasspathContextSetEnv;
 import prosayj.thinking.spring.common.util.JsonUtils;
 

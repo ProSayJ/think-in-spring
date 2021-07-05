@@ -68,8 +68,8 @@
           p:age="25"/>
 
     <!--属性 property 注入 自定义对象属性注入-->
-    <bean id="userDao" class="prosayj.thinking.spring.common.dao.UserDaoImpl"/>
-    <bean id="userService" class="prosayj.thinking.spring.common.service.UserServiceImpl">
+    <bean id="userDao" class="prosayj.thinking.spring._03_injection.UserDaoImpl"/>
+    <bean id="userService" class="prosayj.thinking.spring._03_injection.UserServiceImpl">
         <property name="userDao" ref="userDao"/>
     </bean>
 
