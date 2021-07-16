@@ -6,7 +6,6 @@ import com.alibaba.druid.pool.DruidDataSource;
  * alibaba 数据库连接池
  *
  * @author yangjian
- * @date 2021-05-13
  */
 public class DruidUtils {
 

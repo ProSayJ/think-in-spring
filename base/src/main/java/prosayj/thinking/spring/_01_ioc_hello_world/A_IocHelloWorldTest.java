@@ -12,7 +12,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Spring容器 helloWorld测试用例：
- * <p>
+ * <p>1：配置源信息
+ * <p>2：实例化容器
  *
  * @author yangjian
  * @date 2020-12-25 13:41

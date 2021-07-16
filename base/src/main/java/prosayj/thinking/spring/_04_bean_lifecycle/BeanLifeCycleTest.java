@@ -2,6 +2,11 @@ package prosayj.thinking.spring._04_bean_lifecycle;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.AbstractXmlApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 import prosayj.thinking.spring.common.env.ClasspathContextSetEnv;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -14,6 +19,7 @@ import static org.junit.jupiter.api.Assertions.*;
  * @since 1.0.0
  */
 public class BeanLifeCycleTest extends ClasspathContextSetEnv {
+
     public BeanLifeCycleTest() {
         super("test/04_BeanLifeCycleTest.xml");
     }
@@ -28,11 +34,27 @@ public class BeanLifeCycleTest extends ClasspathContextSetEnv {
     @Test
     @DisplayName("Spring Bean 的生命周期：初始化、构建完成以后、销毁以后")
     public void testBeanLifeCycleTest() {
+        AbstractApplicationContext context2 = new ClassPathXmlApplicationContext("test/04_BeanLifeCycleTest.xml");
+        context2.registerShutdownHook();
         //通过工厂类获得对象
-        LifeCycleDomin bean = (LifeCycleDomin) context.getBean("lifeCycleDomin");
+        LifeCycleDomin bean = (LifeCycleDomin) context2.getBean("lifeCycleDomin");
         assertNotNull(bean);
-        logger.info("通过 id 获取bean:=====>{}", bean);
+        logger.info("容器准备关闭");
+        context2.close();
+        logger.info("容器关闭完成");
+    }
+
+    @Test
+    @DisplayName("Spring Bean 的生命周期：初始化、构建完成以后、销毁以后")
+    public void testBeanLifeCycleTest2() {
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("test/04_BeanLifeCycleTest.xml");
+        LifeCycleDomin2 bean = context.getBean(LifeCycleDomin2.class);
+        bean.setUserName("张三");
+        context.close();
     }
 
 }
+
+
+
 

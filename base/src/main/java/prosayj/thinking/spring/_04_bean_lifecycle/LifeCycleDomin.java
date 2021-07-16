@@ -16,8 +16,15 @@ import org.springframework.beans.factory.InitializingBean;
 @ToString
 class LifeCycleDomin implements InitializingBean, DisposableBean {
     public final Logger logger = LoggerFactory.getLogger(this.getClass());
-
     private String name;
+
+    /**
+     * 无参构造方法
+     */
+    public LifeCycleDomin() {
+        logger.info("LifeCycleDomin 无参构造方法 方法执行~~~~");
+    }
+
 
     //--------------------------- InitializingBean 接口----
 
@@ -28,7 +35,7 @@ class LifeCycleDomin implements InitializingBean, DisposableBean {
      */
     @Override
     public void afterPropertiesSet() throws Exception {
-        logger.info("================>LifeCycleDomin afterPropertiesSet 方法执行");
+        logger.info("================>生命周期函数【afterPropertiesSet】执行");
     }
 
 
@@ -41,7 +48,7 @@ class LifeCycleDomin implements InitializingBean, DisposableBean {
      */
     @Override
     public void destroy() throws Exception {
-        logger.info("================>LifeCycleDomin destroy 方法执行");
+        logger.info("================>生命周期函数【destroy】执行");
     }
 
 
@@ -49,22 +56,14 @@ class LifeCycleDomin implements InitializingBean, DisposableBean {
      * 自定义 myAfterPropertiesSet 方法
      */
     public void myAfterPropertiesSet() {
-        logger.info("================>LifeCycleDomin 自定义 myAfterPropertiesSet 方法执行");
+        logger.info("================>自定义生命周期函数【myAfterPropertiesSet】执行");
     }
 
     /**
      * 自定义 myDestoryMethod 方法
      */
     public void myDestroy() {
-        logger.info("================>LifeCycleDomin 自定义 myDestoryMethod 方法执行");
-    }
-
-
-    /**
-     * 无参构造方法
-     */
-    public LifeCycleDomin() {
-        logger.info("LifeCycleDomin 无参构造方法 方法执行~~~~");
+        logger.info("================>自定义生命周期函数【myDestroy】执行");
     }
 
 
@@ -74,7 +73,7 @@ class LifeCycleDomin implements InitializingBean, DisposableBean {
 
     public void setName(String name) {
         this.name = name;
-        logger.info("LifeCycleDomin set[name] 方法执行~~~");
+        logger.info("【name】设值注入~~~");
     }
 
 }

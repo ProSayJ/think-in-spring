@@ -7,8 +7,8 @@ import prosayj.handwritten.transfer.service.TransferService;
 /**
  * TransferServiceImpl
  * <p>
- * private AccountDao accountDao = new JdbcAccountDaoImpl();
- * private AccountDao accountDao = (AccountDao) BeanFactory.getBean("accountDao");
+ * private AccountDao accountDao = new JdbcAccountDaoImpl();<br>
+ * private AccountDao accountDao = (AccountDao) BeanFactory.getBean("accountDao");<br>
  *
  * @author yangjian
  * @date 2021-05-13
@@ -21,7 +21,7 @@ public class TransferServiceImpl implements TransferService {
     private AccountDao accountDao;
 
     /**
-     * 构造注入
+     * set注入
      */
     public void setAccountDao(AccountDao accountDao) {
         this.accountDao = accountDao;

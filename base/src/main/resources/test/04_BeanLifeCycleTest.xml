@@ -15,7 +15,7 @@
                            http://www.springframework.org/schema/mvc/spring-mvc.xsd
                            http://www.springframework.org/schema/aop
                            http://www.springframework.org/schema/aop/spring-aop.xsd">
-
+    <context:component-scan base-package="prosayj.thinking.spring._04_bean_lifecycle"/>
 
     <bean id="lifeCycleDomin"
           scope="prototype"
@@ -24,7 +24,13 @@
           destroy-method="myDestroy">
         <property name="name" value="张三"/>
     </bean>
-
-
     <bean id="myBeanPostProcessor" class="prosayj.thinking.spring._04_bean_lifecycle.MyBeanPostProcessor"/>
+
+
+    <bean id="lifeCycleDomin2"
+          class="prosayj.thinking.spring._04_bean_lifecycle.LifeCycleDomin2"
+          init-method="init"
+          destroy-method="destory">
+    </bean>
+    <bean id="springBeanPostProcessor" class="prosayj.thinking.spring._04_bean_lifecycle.SpringBeanPostProcessor"/>
 </beans>

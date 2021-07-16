@@ -825,7 +825,7 @@
             </div>
         </div>
         <div class="sect1">
-            <h2 id="beans"><a class="anchor" href="#beans"></a>1. The IoC Container</h2>
+            <h2 id="beans"><a class="anchor" href="#beans"></a>1. The IoC Container <span class="translate">【IOC容器】</h2>
             <div class="sectionbody">
                 <div class="paragraph">
                     <p>This chapter covers Spring&#8217;s Inversion of Control (IoC) container.</br>
@@ -842,11 +842,9 @@
                             those dependencies when it creates the bean. This process is fundamentally the inverse (hence the name, Inversion of Control) of the bean itself controlling the instantiation or location of its dependencies by using direct
                             construction of classes or a mechanism such as the Service Locator pattern.</br>
                             <span class="translate">
-                                本章介绍了控制反转(IoC)原理的Spring框架实现。
-                                IoC也称为依赖项注入(DI)。
-                                在这个过程中，对象只能通过构造函数参数、工厂方法的参数或在对象实例被构造或从工厂方法返回后设置的属性来定义它们的依赖关系(即它们使用的其他对象)。
-                                然后，容器在创建bean时注入这些依赖项。
-                                这个过程基本上是bean本身通过直接构造类或诸如Service Locator模式这样的机制来控制其依赖项的实例化或位置的逆过程(因此得名“控制反转”)。
+                                本章涵盖了控制反转 (IoC) 原则的 Spring Framework 实现。
+                                IoC 也称为依赖注入 (DI)。这是一个过程，其中的对象仅通过构造函数参数、工厂方法的参数、在对象实例被构造或从工厂方法返回后在对象实例上设置的属性来定义它们的依赖项（即，它们使用的其他对象） .
+                                然后容器在创建 bean 时注入这些依赖项。这个过程基本上是 bean 本身的逆过程（因此得名，控制反转），通过使用类的直接构造或诸如服务定位器模式之类的机制来控制其依赖项的实例化或位置。
                             </span>
                         </p>
                     </div>
@@ -856,9 +854,8 @@
                             any type of object.
                             <a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/context/ApplicationContext.html"><code>ApplicationContext</code></a> is a sub-interface of <code>BeanFactory</code>. It adds:</br>
                             <span class="translate">
-                            beans和org.springframework.context包是Spring框架的IoC容器的基础。
-                            BeanFactory接口提供了能够管理任何类型对象的高级配置机制。
-                            ApplicationContext是BeanFactory的一个子接口。它补充道:
+                                org.springframework.beans 和 org.springframework.context 包是 Spring Framework 的 IoC 容器的基础。
+                                BeanFactory 接口提供了一种能够管理任何类型对象的高级配置机制。 ApplicationContext 是 BeanFactory 的一个子接口：
                             </span>
                         </p>
                     </div>
@@ -917,14 +914,14 @@
                     </div>
                 </div>
                 <div class="sect2">
-                    <h3 id="beans-basics"><a class="anchor" href="#beans-basics"></a>1.2. Container Overview</h3>
+                    <h3 id="beans-basics"><a class="anchor" href="#beans-basics"></a>1.2. Container Overview<span class="translate">【容器概述】</h3>
                     <div class="paragraph">
                         <p>The <code>org.springframework.context.ApplicationContext</code> interface represents the Spring IoC container and is responsible for instantiating, configuring, and assembling the beans. The container gets its instructions on what
                             objects to instantiate, configure, and assemble by reading configuration metadata. The configuration metadata is represented in XML, Java annotations, or Java code. It lets you express the objects that compose your application
                             and the rich interdependencies between those objects.</br>
                             <span class="translate">
-                            applicationcontext接口表示Spring IoC容器，负责实例化、配置和组装bean。容器通过读取配置元数据获得关于实例化、配置和组装哪些对象的指令。
-                            配置元数据用XML、Java注释或Java代码表示。它允许您表达组成应用程序的对象以及这些对象之间丰富的相互依赖关系。
+                            org.springframework.context.ApplicationContext 接口代表 Spring IoC 容器，负责实例化、配置和组装 bean。
+                            容器通过读取配置元数据来获取有关要实例化、配置和组装哪些对象的指令。配置元数据以 XML、Java 注释或 Java 代码表示。它可以让您表达组成应用程序的对象以及这些对象之间丰富的相互依赖关系。
                             </span>
                         </p>
                     </div>
@@ -936,7 +933,7 @@
                             <span class="translate">
                             Spring提供了ApplicationContext接口的几个实现。
                             在独立应用程序中，通常会创建ClassPathXmlApplicationContext或FileSystemXmlApplicationContext的实例。
-                            虽然XML是定义配置元数据的传统格式，但是您可以通过提供少量XML配置以声明方式支持这些额外的元数据格式，指示容器使用Java注释或代码作为元数据格式。
+                            虽然XML是定义配置元数据的传统格式，但是您可以通过提供少量XML配置以声明方式支持这些额外的元数据格式，指示容器使用Java注解或代码作为元数据格式。
                             </span>
                         </p>
                     </div>
@@ -945,9 +942,9 @@
                             XML in the <code>web.xml</code> file of the application typically suffices (see <a href="#context-create">Convenient ApplicationContext Instantiation for Web Applications</a>). If you use the
                             <a href="https://spring.io/tools">Spring Tools for Eclipse</a> (an Eclipse-powered development environment), you can easily create this boilerplate configuration with a few mouse clicks or keystrokes.</br>
                             <span class="translate">
-                            在大多数应用程序场景中，不需要显式的用户代码来实例化Spring IoC容器的一个或多个实例。
-                            例如，在一个web应用程序场景中，在应用程序的web. XML文件中简单的8行(大约)web描述符XML样本就足够了(参见方便的web应用程序上下文实例化)。
-                            如果您使用用于Eclipse的Spring Tools (Eclipse支持的开发环境)，那么只需点击几下鼠标或击几下键，就可以轻松创建这个样板配置。
+                            在大多数应用场景中，不需要显式的用户代码来实例化一个或多个 Spring IoC 容器实例。
+                            例如，在 Web 应用程序场景中，应用程序的 web.xml 文件中简单的八行（左右）样板 Web 描述符 XML 通常就足够了（请参阅 Web 应用程序的便捷 ApplicationContext 实例化）。
+                            如果您使用 Spring Tools for Eclipse（一个 Eclipse 驱动的开发环境），您可以通过点击几下鼠标或按键轻松创建这个样板配置。
                             </span>
                         </p>
                     </div>
@@ -955,7 +952,7 @@
                         <p>The following diagram shows a high-level view of how Spring works. Your application classes are combined with configuration metadata so that, after the <code>ApplicationContext</code> is created and initialized, you have a fully
                             configured and executable system or application.</br>
                             <span class="translate">
-                            下图显示了Spring如何工作的高级视图。应用程序类与配置元数据相结合，这样在ApplicationContext创建并初始化之后，您就拥有了一个配置完整且可执行的系统或应用程序。
+                            下图显示了 Spring 如何工作的高级视图。您的应用程序类与配置元数据相结合，因此在 ApplicationContext 被创建和初始化之后，您就有了一个完全配置且可执行的系统或应用程序。
                             </span>
                         </p>
                     </div>
@@ -966,19 +963,19 @@
                         <div class="title">Figure 1. The Spring IoC container</div>
                     </div>
                     <div class="sect3">
-                        <h4 id="beans-factory-metadata"><a class="anchor" href="#beans-factory-metadata"></a>1.2.1. Configuration Metadata</h4>
+                        <h4 id="beans-factory-metadata"><a class="anchor" href="#beans-factory-metadata"></a>1.2.1. Configuration Metadata<span class="translate">【配置元信息】</h4>
                         <div class="paragraph">
                             <p>As the preceding diagram shows, the Spring IoC container consumes a form of configuration metadata. This configuration metadata represents how you, as an application developer, tell the Spring container to instantiate, configure,
                                 and assemble the objects in your application.</br>
                                  <span class="translate">
-                                如上图所示，Spring IoC容器使用一种配置元数据形式。此配置元数据表示作为应用程序开发人员，您如何告诉Spring容器实例化、配置和组装应用程序中的对象。
+                                如上图所示，Spring IoC 容器使用一种形式的配置元数据。此配置元数据表示您作为应用程序开发人员如何告诉 Spring 容器实例化、配置和组装应用程序中的对象。
                                 </span>
                             </p>
                         </div>
                         <div class="paragraph">
                             <p>Configuration metadata is traditionally supplied in a simple and intuitive XML format, which is what most of this chapter uses to convey key concepts and features of the Spring IoC container.</br>
                                 <span class="translate">
-                                    配置元数据传统上以一种简单而直观的XML格式提供，本章的大部分内容都使用这种格式来传达Spring IoC容器的关键概念和特性。
+                                    配置元数据通常一般都以简单直观的 XML 格式提供，本章的大部分内容使用这种格式来传达 Spring IoC 容器的关键概念和特性。
                                 </span>
                             </p>
                         </div>
@@ -992,7 +989,7 @@
                                         XML-based metadata is not the only allowed form of configuration metadata. The Spring IoC container itself is totally decoupled from the format in which this configuration metadata is actually written. These days, many developers choose
                                         <a href="#beans-java">Java-based configuration</a> for their Spring applications.</br>
                                          <span class="translate">
-                                            基于xml的元数据并不是唯一允许的配置元数据形式。Spring IoC容器本身与配置元数据实际编写的格式完全分离。现在，许多开发人员为他们的Spring应用程序选择基于java的配置。
+                                            基于 XML 的元数据并不是唯一允许的配置元数据形式。 Spring IoC 容器本身与实际写入此配置元数据的格式完全分离。现在，许多开发人员为他们的 Spring 应用程序选择基于 Java 的配置。
                                          </span>
                                     </td>
                                 </tr>
@@ -1021,7 +1018,7 @@
                                         <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/annotation/Bean.html"><code>@Bean</code></a>,
                                         <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/annotation/Import.html"><code>@Import</code></a>, and <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/annotation/DependsOn.html"><code>@DependsOn</code></a> annotations.</br>
                                             <span class="translate">
-                                            基于java的配置:从Spring 3.0开始，Spring JavaConfig项目提供的许多特性成为了核心Spring框架的一部分。因此，您可以通过使用Java而不是XML文件来定义应用程序类外部的bean。要使用这些新特性，请参阅@Configuration、@Bean、@Import和@DependsOn注释。
+                                            基于 Java 的配置：从 Spring 3.0 开始，Spring JavaConfig 项目提供的许多特性成为核心 Spring Framework 的一部分。因此，您可以使用 Java 而不是 XML 文件来定义应用程序类外部的 bean。要使用这些新功能，请参阅 @Configuration、@Bean、@Import 和 @DependsOn 注释。
                                             </span>
                                         </p>
                                 </li>
@@ -1031,7 +1028,7 @@
                             <p>Spring configuration consists of at least one and typically more than one bean definition that the container must manage. XML-based configuration metadata configures these beans as <code>&lt;bean/&gt;</code> elements inside
                                 a top-level <code>&lt;beans/&gt;</code> element. Java configuration typically uses <code>@Bean</code>-annotated methods within a <code>@Configuration</code> class.</br>
                                  <span class="translate">
-                                Spring配置由容器必须管理的至少一个(通常是多个)bean定义组成。基于xml的配置元数据将这些bean配置为顶层<beans></beans>元素中的<bean></bean>元素。Java配置通常在@Configuration类中使用@ bean注释的方法。
+                                Spring 配置包含至少一个并且通常不止一个容器必须管理的 bean 定义。基于 XML 的配置元数据将这些 bean 配置为顶级 <beans/> 元素内的 <bean/> 元素。 Java 配置通常在@Configuration 类中使用@Bean 注释的方法。
                                 </span>
                             </p>
                         </div>
@@ -1042,8 +1039,8 @@
                                 create and load domain objects. However, you can use Spring&#8217;s integration with AspectJ to configure objects that have been created outside the control of an IoC container. See <a href="#aop-atconfigurable">Using AspectJ to
                                 dependency-inject domain objects with Spring</a>.</br>
                                 <span class="translate">
-                                这些bean定义对应于组成应用程序的实际对象。通常，您需要定义服务层对象、数据访问对象(dao)、表示对象(如Struts Action实例)、基础设施对象(如Hibernate SessionFactories、JMS队列)等等。
-                                通常，不需要在容器中配置细粒度的域对象，因为创建和加载域对象通常是dao和业务逻辑的责任。但是，您可以使用Spring与AspectJ的集成来配置在IoC容器控制之外创建的对象。请参阅使用AspectJ使用Spring依赖注入域对象。
+                                这些 bean 定义对应于构成应用程序的实际对象。通常，您定义服务层对象、数据访问对象 (DAO)、表示对象（例如 Struts Action 实例）、基础结构对象（例如 Hibernate SessionFactories、JMS 队列等）。
+                                通常，不会在容器中配置细粒度的域对象，因为创建和加载域对象通常是 DAO 和业务逻辑的责任。但是，您可以使用 Spring 与 AspectJ 的集成来配置在 IoC 容器控制之外创建的对象。请参阅使用 AspectJ 通过 Spring 依赖注入域对象。
                                 </span>
                             </p>
                         </div>
@@ -1101,13 +1098,13 @@
                         </div>
                     </div>
                     <div class="sect3">
-                        <h4 id="beans-factory-instantiation"><a class="anchor" href="#beans-factory-instantiation"></a>1.2.2. Instantiating a Container</h4>
-                        <span>1.2.2. 实例化一个容器</span>
+                        <h4 id="beans-factory-instantiation"><a class="anchor" href="#beans-factory-instantiation"></a>1.2.2. Instantiating a Container<span class="translate">【实例化】</h4>
                         <div class="paragraph">
                             <p>The location path or paths supplied to an <code>ApplicationContext</code> constructor are resource strings that let the container load configuration metadata from a variety of external resources, such as the local file system,
                                 the Java <code>CLASSPATH</code>, and so on.</br>
                                 <span class="translate">
-                                位置路径或提供给ApplicationContext构造函数的路径是资源字符串，这些资源字符串允许容器从各种外部资源(如本地文件系统、Java CLASSPATH等)加载配置元数据。
+                                提供给 ApplicationContext 构造函数的一个或多个位置路径 其实就是资源路径字符串，
+                                ApplicationContext 允许容器从各种外部资源（例如本地文件系统、Java CLASSPATH 等）加载配置元数据。
                                 </span>
                             </p>
                         </div>
@@ -1471,7 +1468,7 @@ context.refresh()</code></pre>
                     </div>
                 </div>
                 <div class="sect2">
-                    <h3 id="beans-definition"><a class="anchor" href="#beans-definition"></a>1.3. Bean Overview</h3>
+                    <h3 id="beans-definition"><a class="anchor" href="#beans-definition"></a>1.3. Bean Overview<span class="translate">【Bean概述】</h3>
                     <div class="paragraph">
                         <p>A Spring IoC container manages one or more beans. These beans are created with the configuration metadata that you supply to the container (for example, in the form of XML
                             <code>&lt;bean/&gt;</code> definitions).</br>
@@ -1647,13 +1644,12 @@ context.refresh()</code></pre>
                         </table>
                     </div>
                     <div class="sect3">
-                        <h4 id="beans-beanname"><a class="anchor" href="#beans-beanname"></a>1.3.1. Naming Beans</h4>
-                        <span>1.3.1. Beans 命名</span>
+                        <h4 id="beans-beanname"><a class="anchor" href="#beans-beanname"></a>1.3.1. Naming Beans<span class="translate">【Beans 命名】</h4>
                         <div class="paragraph">
                             <p>Every bean has one or more identifiers. These identifiers must be unique within the container that hosts the bean. A bean usually has only one identifier. However, if it requires more than one, the extra ones can be considered
                                 aliases.</br>
                                 <span class="translate">
-                                每个bean都有一个或多个标识符。这些标识符在承载bean的容器中必须是唯一的。一个bean通常只有一个标识符。但是，如果需要一个以上的别名，则可以将额外的别名视为别名。
+                                每个 bean 都有一个或多个标识符。这些标识符在承载 bean 的容器中必须是唯一的。一个 bean 通常只有一个标识符。但是，如果它需要多个，则可以将多余的视为别名。
                                 </span>
                             </p>
                         </div>
@@ -1694,7 +1690,7 @@ context.refresh()</code></pre>
                                 <div class="paragraph">
                                     <p>Naming beans consistently makes your configuration easier to read and understand. Also, if you use Spring AOP, it helps a lot when applying advice to a set of beans related by name.</br>
                                         <span class="translate">
-                                        一致地命名bean可以使您的配置更易于阅读和理解。另外，如果您使用Spring AOP，那么将通知应用到名称相关的一组bean时，它会有很大帮助。
+                                        始终如一地命名 bean 使您的配置更易于阅读和理解。此外，如果您使用 Spring AOP，则在将建议应用于一组按名称相关的 bean 时会很有帮助。
                                         </span>
                                     </p>
                                 </div>
@@ -1789,8 +1785,7 @@ context.refresh()</code></pre>
                         </div>
                     </div>
                     <div class="sect3">
-                        <h4 id="beans-factory-class"><a class="anchor" href="#beans-factory-class"></a>1.3.2. Instantiating Beans</h4>
-                        <span>1.3.2. 实例化 Beans</span>
+                        <h4 id="beans-factory-class"><a class="anchor" href="#beans-factory-class"></a>1.3.2. Instantiating Beans<span class="translate">【实例化 Beans】</h4>
                         <div class="paragraph">
                             <p>A bean definition is essentially a recipe for creating one or more objects. The container looks at the recipe for a named bean when asked and uses the configuration metadata encapsulated by that bean definition to create (or
                                 acquire) an actual object.</br>
@@ -1978,7 +1973,7 @@ context.refresh()</code></pre>
                             <h5 id="beans-factory-class-instance-factory-method"><a class="anchor" href="#beans-factory-class-instance-factory-method"></a>
                                 Instantiation by Using an Instance Factory Method
                             </h5>
-                            <span class="translate">使用静态工厂方法进行实例化</span>
+                            <span class="translate">使用实例工厂方法进行实例化</span>
                             <div class="paragraph">
                                 <p>
                                     Similar to instantiation through a <a href="#beans-factory-class-static-factory-method">static factory method</a>,
@@ -3773,7 +3768,10 @@ constructor(val years: Int, val ultimateAnswer: String)</code></pre>
                         <div class="sect4">
                             <h5 id="beans-c-namespace"><a class="anchor" href="#beans-c-namespace"></a>XML Shortcut with the c-namespace</h5>
                             <div class="paragraph">
-                                <p>Similar to the <a href="#beans-p-namespace">XML Shortcut with the p-namespace</a>, the c-namespace, introduced in Spring 3.1, allows inlined attributes for configuring the constructor arguments rather then nested <code>constructor-arg</code>                                    elements.</p>
+                                <p>
+                                    Similar to the <a href="#beans-p-namespace">XML Shortcut with the p-namespace</a>, the c-namespace, introduced in Spring 3.1, allows inlined attributes for configuring the constructor arguments rather then nested <code>constructor-arg</code>                                    elements.
+                                <br><span class="translate">与带有 p-namespace 的 XML Shortcut 类似，Spring 3.1 中引入的 c-namespace 允许内联属性来配置构造函数参数，而不是嵌套的 constructor-arg 元素。
+                                </p>
                             </div>
                             <div class="paragraph">
                                 <p>The following example uses the <code>c:</code> namespace to do the same thing as the from
@@ -5236,10 +5234,14 @@ beanFactory.registerScope("thread", threadScope)</code></pre>
                         </ul>
                     </div>
                     <div class="sect3">
-                        <h4 id="beans-factory-lifecycle"><a class="anchor" href="#beans-factory-lifecycle"></a>1.6.1. Lifecycle Callbacks</h4>
+                        <h4 id="beans-factory-lifecycle"><a class="anchor" href="#beans-factory-lifecycle"></a>1.6.1. Lifecycle Callbacks<span class="translate">【生命周期回调】</h4>
                         <div class="paragraph">
-                            <p>To interact with the container&#8217;s management of the bean lifecycle, you can implement the Spring <code>InitializingBean</code> and <code>DisposableBean</code> interfaces. The container calls
-                                <code>afterPropertiesSet()</code> for the former and <code>destroy()</code> for the latter to let the bean perform certain actions upon initialization and destruction of your beans.</p>
+                            <p>
+                                To interact with the container&#8217;s management of the bean lifecycle, you can implement the Spring <code>InitializingBean</code> and <code>DisposableBean</code> interfaces. The container calls
+                                <code>afterPropertiesSet()</code> for the former and <code>destroy()</code> for the latter to let the bean perform certain actions upon initialization and destruction of your beans.<br>
+                                <span class="translate"> 要与容器对 bean 生命周期的管理进行交互，您可以实现 Spring InitializingBean 和 DisposableBean 接口。
+                                容器为前者调用 afterPropertiesSet() 并为后者调用 destroy() 以让 bean 在初始化和销毁 bean 时执行某些操作。
+                            </p>
                         </div>
                         <div class="admonitionblock tip">
                             <table>
@@ -5249,20 +5251,31 @@ beanFactory.registerScope("thread", threadScope)</code></pre>
                                     </td>
                                     <td class="content">
                                         <div class="paragraph">
-                                            <p>The JSR-250 <code>@PostConstruct</code> and <code>@PreDestroy</code> annotations are generally considered best practice for receiving lifecycle callbacks in a modern Spring application. Using these annotations
-                                                means that your beans are not coupled to Spring-specific interfaces. For details, see <a href="#beans-postconstruct-and-predestroy-annotations">Using <code>@PostConstruct</code> and <code>@PreDestroy</code></a>.</p>
+                                            <p>
+                                                The JSR-250 <code>@PostConstruct</code> and <code>@PreDestroy</code> annotations are generally considered best practice for receiving lifecycle callbacks in a modern Spring application. Using these annotations
+                                                means that your beans are not coupled to Spring-specific interfaces. For details, see <a href="#beans-postconstruct-and-predestroy-annotations">Using <code>@PostConstruct</code> and <code>@PreDestroy</code></a>.<br>
+                                                <span class="translate"> JSR-250 @PostConstruct 和 @PreDestroy 注解通常被认为是在现代 Spring 应用程序中接收生命周期回调的最佳实践。
+                                                使用这些注解意味着您的 bean 不会耦合到 Spring 特定的接口。有关详细信息，请参阅使用 @PostConstruct 和 @PreDestroy。
+                                            </p>
                                         </div>
                                         <div class="paragraph">
-                                            <p>If you do not want to use the JSR-250 annotations but you still want to remove coupling, consider <code>init-method</code> and <code>destroy-method</code> bean definition metadata.</p>
+                                            <p>
+                                                If you do not want to use the JSR-250 annotations but you still want to remove coupling, consider <code>init-method</code> and <code>destroy-method</code> bean definition metadata.<br>
+                                               <span class="translate"> 如果您不想使用 JSR-250 注解，但仍想移除耦合，请考虑使用 init-method 和 destroy-method bean 定义元数据。
+                                            </p>
                                         </div>
                                     </td>
                                 </tr>
                             </table>
                         </div>
                         <div class="paragraph">
-                            <p>Internally, the Spring Framework uses <code>BeanPostProcessor</code> implementations to process any callback interfaces it can find and call the appropriate methods. If you need custom features or other lifecycle behavior Spring
+                            <p>
+                                Internally, the Spring Framework uses <code>BeanPostProcessor</code> implementations to process any callback interfaces it can find and call the appropriate methods. If you need custom features or other lifecycle behavior Spring
                                 does not by default offer, you can implement a <code>BeanPostProcessor</code> yourself. For more information, see
-                                <a href="#beans-factory-extension">Container Extension Points</a>.</p>
+                                <a href="#beans-factory-extension">Container Extension Points</a>.<br>
+                                <span class="translate">在内部，Spring 框架使用 BeanPostProcessor 实现来处理它可以找到的任何回调接口并调用适当的方法。
+                                如果您需要自定义功能或 Spring 默认不提供的其他生命周期行为，您可以自己实现 BeanPostProcessor。有关详细信息，请参阅容器扩展点。
+                            </p>
                         </div>
                         <div class="paragraph">
                             <p>In addition to the initialization and destruction callbacks, Spring-managed objects may also implement the <code>Lifecycle</code> interface so that those objects can participate in the startup and shutdown process, as driven
@@ -5272,7 +5285,7 @@ beanFactory.registerScope("thread", threadScope)</code></pre>
                             <p>The lifecycle callback interfaces are described in this section.</p>
                         </div>
                         <div class="sect4">
-                            <h5 id="beans-factory-lifecycle-initializingbean"><a class="anchor" href="#beans-factory-lifecycle-initializingbean"></a>Initialization Callbacks</h5>
+                            <h5 id="beans-factory-lifecycle-initializingbean"><a class="anchor" href="#beans-factory-lifecycle-initializingbean"></a>Initialization Callbacks<span class="translate">【初始化回调】</h5>
                             <div class="paragraph">
                                 <p>The <code>org.springframework.beans.factory.InitializingBean</code> interface lets a bean perform initialization work after the container has set all necessary properties on the bean. The <code>InitializingBean</code> interface
                                     specifies a single method:</p>
@@ -5350,7 +5363,7 @@ beanFactory.registerScope("thread", threadScope)</code></pre>
                             </div>
                         </div>
                         <div class="sect4">
-                            <h5 id="beans-factory-lifecycle-disposablebean"><a class="anchor" href="#beans-factory-lifecycle-disposablebean"></a>Destruction Callbacks</h5>
+                            <h5 id="beans-factory-lifecycle-disposablebean"><a class="anchor" href="#beans-factory-lifecycle-disposablebean"></a>Destruction Callbacks<span class="translate">【销毁之前回调】</h5>
                             <div class="paragraph">
                                 <p>Implementing the <code>org.springframework.beans.factory.DisposableBean</code> interface lets a bean get a callback when the container that contains it is destroyed. The
                                     <code>DisposableBean</code> interface specifies a single method:</p>
