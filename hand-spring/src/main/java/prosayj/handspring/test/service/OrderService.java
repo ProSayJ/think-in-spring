@@ -1,16 +1,10 @@
 package prosayj.handspring.test.service;
 
-import prosayj.handspring.spring.Component;
-import prosayj.handspring.spring.Scope;
-
 /**
  * TODO
  *
- * @author yangjian
- * @date 2021-07-16 上午 08:58
- * @since 1.0.0
+ * @author yangjian201127@credithc.com
+ * @since 1.0.0 <br>  2021-07-16 下午 02:58
  */
-//@Scope("prototype")
-@Component("orderService")
-public class OrderService {
+public interface OrderService {
 }

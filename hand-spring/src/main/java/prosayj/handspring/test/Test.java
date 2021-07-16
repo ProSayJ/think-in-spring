@@ -2,6 +2,7 @@ package prosayj.handspring.test;
 
 import prosayj.handspring.spring.AnnotationConfigApplicationContext;
 import prosayj.handspring.test.config.AppConfig;
+import prosayj.handspring.test.service.OrderService;
 import prosayj.handspring.test.service.UserService;
 
 /**
@@ -13,7 +14,12 @@ import prosayj.handspring.test.service.UserService;
 public class Test {
     public static void main(String[] args) {
         AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfig.class);
+
+        OrderService orderService = (OrderService) applicationContext.getBean("orderService");
+        System.out.println(orderService);
+
         UserService userService = (UserService) applicationContext.getBean("userService");
+        System.out.println(userService);
         userService.test();
 
     }
