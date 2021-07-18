@@ -12,7 +12,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
  * @author yangjian
  * @since 1.0.0 <br>2021-07-16 上午 08:36
  */
-public class Test {
+public class IocAopTest {
     public static void main(String[] args) {
         AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfig.class);
 
