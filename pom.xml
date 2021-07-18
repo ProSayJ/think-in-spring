@@ -10,9 +10,9 @@
 
     <packaging>pom</packaging>
     <modules>
-        <module>base</module>
-        <module>02_hand-written-htransfer</module>
-        <module>05-spring_source_analysis</module>
+<!--        <module>base</module>-->
+<!--        <module>02_hand-written-htransfer</module>-->
+<!--        <module>05-spring_source_analysis</module>-->
 
         <!--        <module>ioc-container-overview</module>-->
         <!--        <module>spring-bean</module>-->
@@ -28,6 +28,7 @@
         <!--        <module>07_springmvc-demo</module>-->
         <!--        <module>08_spring-data-jpa</module>-->
         <!--        <module>09_ssm</module>-->
+        <module>spring-jcl</module>
     </modules>
 
     <properties>
