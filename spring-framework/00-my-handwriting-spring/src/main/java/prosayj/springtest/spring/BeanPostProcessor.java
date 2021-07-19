@@ -1,6 +1,5 @@
 package prosayj.springtest.spring;
 
-import com.sun.istack.internal.Nullable;
 
 /**
  * BeanPostProcessor
@@ -16,7 +15,6 @@ public interface BeanPostProcessor {
      * @param beanName beanName
      * @return Object
      */
-    @Nullable
     default Object postProcessBeforeInitialization(Object bean, String beanName) /*throws BeansException */ {
         return bean;
     }
@@ -28,7 +26,6 @@ public interface BeanPostProcessor {
      * @param beanName beanName
      * @return Object
      */
-    @Nullable
     default Object postProcessAfterInitialization(Object bean, String beanName) /*throws BeansException */ {
         return bean;
     }

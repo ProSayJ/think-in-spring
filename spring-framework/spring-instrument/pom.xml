@@ -12,6 +12,7 @@
 
     <artifactId>spring-instrument</artifactId>
     <version>${revision}</version>
+    <name>spring-instrument-${revision}</name>
 
 
 </project>

@@ -12,6 +12,7 @@
 
     <artifactId>spring-aop</artifactId>
     <version>${revision}</version>
+    <name>spring-aop-${revision}</name>
 
     <dependencies>
         <dependency>

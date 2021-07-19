@@ -13,6 +13,7 @@
 
     <artifactId>spring-context</artifactId>
     <version>${revision}</version>
+    <name>spring-context-${revision}</name>
 
     <dependencies>
         <dependency>

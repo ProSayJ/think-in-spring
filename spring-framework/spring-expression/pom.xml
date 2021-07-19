@@ -12,6 +12,7 @@
 
     <artifactId>spring-expression</artifactId>
     <version>${revision}</version>
+    <name>spring-expression-${revision}</name>
 
     <dependencies>
         <dependency>
