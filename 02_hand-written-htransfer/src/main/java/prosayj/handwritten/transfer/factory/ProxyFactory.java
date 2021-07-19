@@ -43,13 +43,10 @@ public class ProxyFactory {
                     @Override
                     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
                         Object result = null;
-
                         try {
                             // 开启事务(关闭事务的自动提交)
                             transactionManager.beginTransaction();
-
                             result = method.invoke(obj, args);
-
                             // 提交事务
                             transactionManager.commit();
                         } catch (Exception e) {
@@ -79,9 +76,7 @@ public class ProxyFactory {
                 try {
                     // 开启事务(关闭事务的自动提交)
                     transactionManager.beginTransaction();
-
                     result = method.invoke(obj, objects);
-
                     // 提交事务
                     transactionManager.commit();
                 } catch (Exception e) {

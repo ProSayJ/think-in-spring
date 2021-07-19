@@ -10,9 +10,11 @@
 
     <packaging>pom</packaging>
     <modules>
-<!--        <module>base</module>-->
-<!--        <module>02_hand-written-htransfer</module>-->
-<!--        <module>05-spring_source_analysis</module>-->
+        <module>02_hand-written-htransfer</module>
+
+
+        <!--        <module>base</module>-->
+        <!--        <module>05-spring_source_analysis</module>-->
 
         <!--        <module>ioc-container-overview</module>-->
         <!--        <module>spring-bean</module>-->
@@ -40,7 +42,7 @@
         <lombok-version>1.18.20</lombok-version>
         <jackson-version>2.12.3</jackson-version>
         <mysql-connector-version>8.0.25</mysql-connector-version>
-        <druid-version>1.1.21</druid-version>
+        <druid-version>1.2.4</druid-version>
         <javax.servlet-version>3.1.0</javax.servlet-version>
         <dom4j-version>1.6.1</dom4j-version>
         <jaxen-version>1.1.6</jaxen-version>

@@ -1,6 +1,5 @@
 package prosayj.handwritten.transfer.pojo;
 
-import lombok.Data;
 
 /**
  * 通用返回体
@@ -8,8 +7,33 @@ import lombok.Data;
  * @author yangjian
  * @date 2021-05-13
  */
-@Data
 public class Result {
     private String status;
     private String message;
+
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+
+    @Override
+    public String toString() {
+        return "Result{" +
+                "status='" + status + '\'' +
+                ", message='" + message + '\'' +
+                '}';
+    }
 }
