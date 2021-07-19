@@ -1,4 +1,6 @@
-package prosayj.handwritten.transfer.utils;
+package prosayj.handwritten.transfer.tx;
+
+import prosayj.handwritten.transfer.utils.ConnectionUtils;
 
 import java.sql.SQLException;
 
@@ -11,10 +13,13 @@ import java.sql.SQLException;
 public class TransactionManager {
     private ConnectionUtils connectionUtils;
 
+    public ConnectionUtils getConnectionUtils() {
+        return connectionUtils;
+    }
+
     public void setConnectionUtils(ConnectionUtils connectionUtils) {
         this.connectionUtils = connectionUtils;
     }
-
 
     /**
      * 开启手动事务控制
@@ -23,6 +28,7 @@ public class TransactionManager {
      */
     public void beginTransaction() throws SQLException {
         connectionUtils.getCurrentThreadConn().setAutoCommit(false);
+        System.out.println("业务事务开始，关闭自动提交事务");
     }
 
 
@@ -33,6 +39,7 @@ public class TransactionManager {
      */
     public void commit() throws SQLException {
         connectionUtils.getCurrentThreadConn().commit();
+        System.out.println("业务事务结束，手动提交事务，成功");
     }
 
 
@@ -43,5 +50,7 @@ public class TransactionManager {
      */
     public void rollback() throws SQLException {
         connectionUtils.getCurrentThreadConn().rollback();
+        connectionUtils.removeConnection();
+        System.out.println("业务事务异常，手动回滚事务，成功");
     }
 }

@@ -10,7 +10,7 @@
 
     <packaging>pom</packaging>
     <modules>
-        <module>02_hand-written-htransfer</module>
+<!--        <module>02_hand-written-htransfer</module>-->
 
 
         <!--        <module>base</module>-->

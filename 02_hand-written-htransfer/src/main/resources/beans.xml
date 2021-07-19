@@ -14,12 +14,12 @@
     <bean id="connectionUtils" class="prosayj.handwritten.transfer.utils.ConnectionUtils"/>
 
     <!--事务管理器-->
-    <bean id="transactionManager" class="prosayj.handwritten.transfer.utils.TransactionManager">
+    <bean id="transactionManager" class="prosayj.handwritten.transfer.tx.TransactionManager">
         <property name="ConnectionUtils" ref="connectionUtils"/>
     </bean>
 
     <!--代理对象工厂-->
-    <bean id="proxyFactory" class="prosayj.handwritten.transfer.factory.ProxyFactory">
+    <bean id="proxyFactory" class="prosayj.handwritten.transfer.tx.ProxyFactory">
         <property name="TransactionManager" ref="transactionManager"/>
     </bean>
 </beans>

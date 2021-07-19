@@ -1,9 +1,9 @@
-package prosayj.handwritten.transfer.factory;
+package prosayj.handwritten.transfer.tx;
 
 import net.sf.cglib.proxy.Enhancer;
 import net.sf.cglib.proxy.MethodInterceptor;
 import net.sf.cglib.proxy.MethodProxy;
-import prosayj.handwritten.transfer.utils.TransactionManager;
+import prosayj.handwritten.transfer.tx.TransactionManager;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
@@ -22,13 +22,6 @@ public class ProxyFactory {
         this.transactionManager = transactionManager;
     }
 
-//    private ProxyFactory(){
-//    }
-//    private static ProxyFactory proxyFactory = new ProxyFactory();
-//    public static ProxyFactory getInstance() {
-//        return proxyFactory;
-//    }
-
 
     /**
      * Jdk动态代理
@@ -42,18 +35,13 @@ public class ProxyFactory {
                 new InvocationHandler() {
                     @Override
                     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-                        Object result = null;
+                        Object result;
                         try {
-                            // 开启事务(关闭事务的自动提交)
                             transactionManager.beginTransaction();
                             result = method.invoke(obj, args);
-                            // 提交事务
                             transactionManager.commit();
                         } catch (Exception e) {
-                            e.printStackTrace();
-                            // 回滚事务
                             transactionManager.rollback();
-                            // 抛出异常便于上层servlet捕获
                             throw e;
                         }
                         return result;

@@ -14,7 +14,8 @@ public interface TransferService {
      * @param fromCardNo fromCardNo
      * @param toCardNo   toCardNo
      * @param money      money
+     * @param hasExpection
      * @throws Exception Exception
      */
-    void transfer(String fromCardNo, String toCardNo, int money) throws Exception;
+    void transfer(String fromCardNo, String toCardNo, int money, boolean hasExpection) throws Exception;
 }

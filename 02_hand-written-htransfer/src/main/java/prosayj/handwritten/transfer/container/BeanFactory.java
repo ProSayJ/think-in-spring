@@ -1,4 +1,4 @@
-package prosayj.handwritten.transfer.factory;
+package prosayj.handwritten.transfer.container;
 
 import org.dom4j.Document;
 import org.dom4j.DocumentException;
@@ -26,7 +26,6 @@ public class BeanFactory {
      * 存储对象
      */
     private static final Map<String, Object> MAP = new HashMap<>();
-
 
     static {
         // 任务一：读取解析xml，通过反射技术实例化对象并且存储待用（map集合）

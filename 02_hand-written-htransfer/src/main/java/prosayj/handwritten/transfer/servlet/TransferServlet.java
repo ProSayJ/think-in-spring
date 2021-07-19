@@ -1,7 +1,7 @@
 package prosayj.handwritten.transfer.servlet;
 
-import prosayj.handwritten.transfer.factory.BeanFactory;
-import prosayj.handwritten.transfer.factory.ProxyFactory;
+import prosayj.handwritten.transfer.container.BeanFactory;
+import prosayj.handwritten.transfer.tx.ProxyFactory;
 import prosayj.handwritten.transfer.pojo.Result;
 import prosayj.handwritten.transfer.service.TransferService;
 import prosayj.handwritten.transfer.utils.JsonUtils;
@@ -22,7 +22,6 @@ import java.io.IOException;
 @WebServlet(name = "transferServlet", urlPatterns = "/transferServlet")
 public class TransferServlet extends HttpServlet {
 
-
     /**
      * 1. 实例化service层对象
      * private TransferService transferService = new TransferServiceImpl();
@@ -31,10 +30,8 @@ public class TransferServlet extends HttpServlet {
      * 从工厂获取委托对象（委托对象是增强了事务控制的功能）
      * 首先从BeanFactory获取到proxyFactory代理工厂的实例化对象
      */
-    private final ProxyFactory proxyFactory =
-            (ProxyFactory) BeanFactory.getBean("proxyFactory");
-    private final TransferService transferService =
-            (TransferService) proxyFactory.getJdkProxy(BeanFactory.getBean("transferService"));
+    private final ProxyFactory proxyFactory = (ProxyFactory) BeanFactory.getBean("proxyFactory");
+    private final TransferService transferService = (TransferService) proxyFactory.getJdkProxy(BeanFactory.getBean("transferService"));
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -45,16 +42,17 @@ public class TransferServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         // 设置请求体的字符编码
         req.setCharacterEncoding("UTF-8");
-
         String fromCardNo = req.getParameter("fromCardNo");
         String toCardNo = req.getParameter("toCardNo");
         String moneyStr = req.getParameter("money");
+        String expection = req.getParameter("hasExpection");
         int money = Integer.parseInt(moneyStr);
+        boolean hasExpection = Boolean.parseBoolean(expection);
 
         Result result = new Result();
         try {
             // 2. 调用service层方法
-            transferService.transfer(fromCardNo, toCardNo, money);
+            transferService.transfer(fromCardNo, toCardNo, money, hasExpection);
             result.setStatus("200");
         } catch (Exception e) {
             e.printStackTrace();

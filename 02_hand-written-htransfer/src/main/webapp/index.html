@@ -9,18 +9,18 @@
 
     <style type="text/css">
         body {
-            background-color:#00b38a;
-            text-align:center;
+            background-color: #00b38a;
+            text-align: center;
         }
 
         .lp-login {
-            position:absolute;
-            width:500px;
-            height:300px;
-            top:50%;
-            left:50%;
-            margin-top:-250px;
-            margin-left:-250px;
+            position: absolute;
+            width: 500px;
+            height: 300px;
+            top: 50%;
+            left: 50%;
+            margin-top: -250px;
+            margin-left: -250px;
             background: #fff;
             border-radius: 4px;
             box-shadow: 0 0 10px #12a591;
@@ -30,8 +30,8 @@
 
 
         .lp-login .submitBtn {
-            display:block;
-            text-decoration:none;
+            display: block;
+            text-decoration: none;
             height: 48px;
             width: 150px;
             line-height: 48px;
@@ -45,8 +45,8 @@
 
 
         input[type='text'] {
-            height:30px;
-            width:250px;
+            height: 30px;
+            width: 250px;
         }
 
         span {
@@ -64,32 +64,34 @@
 
     </style>
     <script type="text/javascript">
-        $(function(){
-            $(".submitBtn").bind("click",function(){
+        $(function () {
+            $(".submitBtn").bind("click", function () {
                 var fromAccount = $("#fromAccount").val();
                 var toAccount = $("#toAccount").val();
                 var money = $("#money").val();
+                var hasExpection = $("#hasExpection").val();
 
-                if(money == null || $.trim(money).length == 0){
+                if (money == null || $.trim(money).length === 0) {
                     alert("sorry,必须输入转账金额~");
                     return;
                 }
 
                 $.ajax({
-                    url:'/transferServlet',
-                    type:'POST',    //GET
-                    async:false,    //或false,是否异步
-                    data:{
-                        fromCardNo:fromAccount.split(' ')[1],
-                        toCardNo:toAccount.split(' ')[1],
-                        money:money
+                    url: '/transferServlet',
+                    type: 'POST',    //GET
+                    async: false,    //或false,是否异步
+                    data: {
+                        fromCardNo: fromAccount.split(' ')[1],
+                        toCardNo: toAccount.split(' ')[1],
+                        money: money,
+                        hasExpection: hasExpection
                     },
-                    timeout:5000,    //超时时间
-                    dataType:'json', //返回的数据格式：json/xml/html/script/jsonp/text
-                    success:function(data){
-                        if("200" == data.status){
+                    timeout: 5000,    //超时时间
+                    dataType: 'json', //返回的数据格式：json/xml/html/script/jsonp/text
+                    success: function (data) {
+                        if ("200" === data.status) {
                             alert("转账成功~~~");
-                        }else{
+                        } else {
                             alert("转账失败~~~,message:" + data.message);
                         }
                     }
@@ -98,13 +100,13 @@
         })
 
         //检查输入值是否为整数
-        function checkFormat(obj){
+        function checkFormat(obj) {
             var reg = /^[0-9]+[0-9]*]*$/;
-            if($.trim($(obj).val()).length>0){
-                if(!reg.test($(obj).val())){
+            if ($.trim($(obj).val()).length > 0) {
+                if (!reg.test($(obj).val())) {
                     alert("输入格式错误！请输整数！");
                     $(obj).val("");
-                }else{
+                } else {
                     $(obj).val(parseInt($(obj).val()));
                 }
             }
@@ -119,19 +121,25 @@
         <tr>
             <td align="right"><span>收款账户</span></td>
             <td align="center">
-                <input type="text" id="toAccount" value="韩梅梅 6029621011001" disabled></input>
+                <input type="text" id="toAccount" value="韩梅梅 6029621011001" disabled/>
             </td>
         </tr>
         <tr>
             <td align="right"><span>付款账户</span></td>
             <td align="center">
-                <input type="text" id="fromAccount" value="李大雷 6029621011000" disabled></input>
+                <input type="text" id="fromAccount" value="李大雷 6029621011000" disabled/>
             </td>
         </tr>
         <tr>
             <td align="right"><span>转账金额</span></td>
             <td align="center">
-                <input type="text" id="money" onblur="checkFormat(this)"></input>
+                <input type="text" id="money" onblur="checkFormat(this)"/>
+            </td>
+        </tr>
+        <tr>
+            <td align="right"><span>是否触发转帐异常</span></td>
+            <td align="center">
+                <input type="text" id="hasExpection" value="false"/>
             </td>
         </tr>
         <tr align="center">
