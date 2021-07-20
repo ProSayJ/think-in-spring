@@ -12,7 +12,7 @@
     <modules>
 <!--        <module>02_hand-written-htransfer</module>-->
 
-        <!--        <module>base</module>-->
+                <module>base</module>
         <!--        <module>05-spring_source_analysis</module>-->
 
         <!--        <module>ioc-container-overview</module>-->

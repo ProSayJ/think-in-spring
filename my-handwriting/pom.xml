@@ -17,8 +17,10 @@
 
     <modules>
         <module>handwriting-spring</module>
+        <module>handwriting-spring-simulate</module>
         <module>transfer-demo</module>
     </modules>
+
 
 
     <!--统一定义参数-->

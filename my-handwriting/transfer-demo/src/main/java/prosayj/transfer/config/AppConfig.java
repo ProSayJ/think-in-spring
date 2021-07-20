@@ -1,7 +1,7 @@
 package prosayj.transfer.config;
 
 
-import prosayj.handwriting.spring.ComponentScan;
+import prosayj.handwritingspring.spring.ComponentScan;
 
 /**
  * TODO

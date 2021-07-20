@@ -4,8 +4,8 @@ package prosayj.transfer.tx;
 import net.sf.cglib.proxy.Enhancer;
 import net.sf.cglib.proxy.MethodInterceptor;
 import net.sf.cglib.proxy.MethodProxy;
-import prosayj.handwriting.spring.Autowired;
-import prosayj.handwriting.spring.Component;
+import prosayj.handwritingspring.spring.Autowired;
+import prosayj.handwritingspring.spring.Component;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;

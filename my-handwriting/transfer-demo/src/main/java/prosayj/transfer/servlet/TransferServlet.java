@@ -1,7 +1,7 @@
 package prosayj.transfer.servlet;
 
 
-import prosayj.handwriting.spring.AnnotationConfigApplicationContext;
+import prosayj.handwritingspring.spring.AnnotationConfigApplicationContext;
 import prosayj.transfer.config.AppConfig;
 import prosayj.transfer.pojo.Result;
 import prosayj.transfer.service.TransferService;
@@ -9,7 +9,6 @@ import prosayj.transfer.tx.ProxyFactory;
 import prosayj.transfer.utils.JsonUtils;
 
 import javax.annotation.PostConstruct;
-import javax.annotation.PreDestroy;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;

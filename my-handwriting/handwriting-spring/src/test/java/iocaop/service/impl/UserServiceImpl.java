@@ -3,10 +3,10 @@ package iocaop.service.impl;
 
 import iocaop.service.OrderService;
 import iocaop.service.UserService;
-import prosayj.handwriting.spring.Autowired;
-import prosayj.handwriting.spring.BeanNameAware;
-import prosayj.handwriting.spring.Component;
-import prosayj.handwriting.spring.InitializingBean;
+import prosayj.handwritingspring.spring.Autowired;
+import prosayj.handwritingspring.spring.BeanNameAware;
+import prosayj.handwritingspring.spring.Component;
+import prosayj.handwritingspring.spring.InitializingBean;
 
 /**
  * TODO

@@ -3,8 +3,8 @@ package iocaop.service.assist;
 
 import iocaop.service.UserService;
 import iocaop.service.impl.UserServiceImpl;
-import prosayj.handwriting.spring.BeanPostProcessor;
-import prosayj.handwriting.spring.Component;
+import prosayj.handwritingspring.spring.BeanPostProcessor;
+import prosayj.handwritingspring.spring.Component;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;

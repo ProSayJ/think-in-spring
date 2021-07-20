@@ -3,7 +3,7 @@ package iocaop;
 import iocaop.config.AppConfig;
 import iocaop.service.OrderService;
 import iocaop.service.UserService;
-import prosayj.handwriting.spring.AnnotationConfigApplicationContext;
+import prosayj.handwritingspring.spring.AnnotationConfigApplicationContext;
 
 /**
  * TODO

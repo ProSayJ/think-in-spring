@@ -1,6 +1,6 @@
 package prosayj.transfer.utils;
 
-import prosayj.handwriting.spring.Component;
+import prosayj.handwritingspring.spring.Component;
 
 import java.sql.Connection;
 import java.sql.SQLException;

@@ -2,8 +2,7 @@ package iocaop.service.impl;
 
 
 import iocaop.service.OrderService;
-import prosayj.handwriting.spring.Component;
-import prosayj.handwriting.spring.Scope;
+import prosayj.handwritingspring.spring.Component;
 
 /**
  * TODO

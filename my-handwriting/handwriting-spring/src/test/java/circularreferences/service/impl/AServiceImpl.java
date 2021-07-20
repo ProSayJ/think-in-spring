@@ -3,8 +3,8 @@ package circularreferences.service.impl;
 
 import circularreferences.service.AService;
 import circularreferences.service.BService;
-import prosayj.handwriting.spring.Autowired;
-import prosayj.handwriting.spring.Component;
+import prosayj.handwritingspring.spring.Autowired;
+import prosayj.handwritingspring.spring.Component;
 
 /**
  * 循环依赖测试

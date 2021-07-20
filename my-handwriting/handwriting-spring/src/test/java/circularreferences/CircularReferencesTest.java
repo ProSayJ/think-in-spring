@@ -4,7 +4,7 @@ package circularreferences;
 import circularreferences.config.AppConfig;
 import circularreferences.service.AService;
 import circularreferences.service.BService;
-import prosayj.handwriting.spring.AnnotationConfigApplicationContext;
+import prosayj.handwritingspring.spring.AnnotationConfigApplicationContext;
 
 /**
  * 1：构造注入的循环依赖Spring无法解决。<br>

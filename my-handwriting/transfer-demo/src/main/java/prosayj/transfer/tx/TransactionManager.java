@@ -1,8 +1,8 @@
 package prosayj.transfer.tx;
 
 
-import prosayj.handwriting.spring.Autowired;
-import prosayj.handwriting.spring.Component;
+import prosayj.handwritingspring.spring.Autowired;
+import prosayj.handwritingspring.spring.Component;
 import prosayj.transfer.utils.ConnectionUtils;
 
 import java.sql.SQLException;

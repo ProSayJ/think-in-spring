@@ -1,8 +1,8 @@
 package prosayj.transfer.dao.impl;
 
 
-import prosayj.handwriting.spring.Autowired;
-import prosayj.handwriting.spring.Component;
+import prosayj.handwritingspring.spring.Autowired;
+import prosayj.handwritingspring.spring.Component;
 import prosayj.transfer.dao.AccountDao;
 import prosayj.transfer.pojo.Account;
 import prosayj.transfer.utils.ConnectionUtils;

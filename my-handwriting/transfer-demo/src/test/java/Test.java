@@ -1,4 +1,4 @@
-import prosayj.handwriting.spring.AnnotationConfigApplicationContext;
+import prosayj.handwritingspring.spring.AnnotationConfigApplicationContext;
 import prosayj.transfer.config.AppConfig;
 
 /**
