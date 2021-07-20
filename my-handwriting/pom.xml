@@ -17,7 +17,7 @@
 
     <modules>
         <module>handwriting-spring</module>
-        <module>handwriting-spring-simulate</module>
+        <!--<module>handwriting-spring-simulate</module>-->
         <module>transfer-demo</module>
     </modules>
 
