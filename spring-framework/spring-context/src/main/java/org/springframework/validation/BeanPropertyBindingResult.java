@@ -18,9 +18,9 @@ package org.springframework.validation;
 
 import java.io.Serializable;
 
-import org.springframework.beans.BeanWrapper;
-import org.springframework.beans.ConfigurablePropertyAccessor;
-import org.springframework.beans.PropertyAccessorFactory;
+import org.springframework.beans.util_.bean_.wrapper_.BeanWrapper;
+import org.springframework.beans.util_.property_.access_.ConfigurablePropertyAccessor;
+import org.springframework.beans.util_.property_.access_.PropertyAccessorFactory;
 import org.springframework.lang.Nullable;
 
 /**

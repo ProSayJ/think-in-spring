@@ -33,11 +33,11 @@ import org.apache.commons.logging.LogFactory;
 
 import org.springframework.aop.framework.AopProxyUtils;
 import org.springframework.aop.support.AopUtils;
-import org.springframework.beans.factory.BeanFactory;
+import org.springframework.beans.factory.core_.BeanFactory;
 import org.springframework.beans.factory.BeanFactoryAware;
 import org.springframework.beans.factory.InitializingBean;
-import org.springframework.beans.factory.NoSuchBeanDefinitionException;
-import org.springframework.beans.factory.NoUniqueBeanDefinitionException;
+import org.springframework.beans.factory.expection_.NoSuchBeanDefinitionException;
+import org.springframework.beans.factory.expection_.NoUniqueBeanDefinitionException;
 import org.springframework.beans.factory.SmartInitializingSingleton;
 import org.springframework.beans.factory.annotation.BeanFactoryAnnotationUtils;
 import org.springframework.cache.Cache;
@@ -313,7 +313,7 @@ public abstract class CacheAspectSupport extends AbstractCacheInvoker
 	 * @param beanName the name of the bean, as defined by the operation
 	 * @param expectedType type for the bean
 	 * @return the bean matching that name
-	 * @throws org.springframework.beans.factory.NoSuchBeanDefinitionException if such bean does not exist
+	 * @throws NoSuchBeanDefinitionException if such bean does not exist
 	 * @see CacheOperation#getKeyGenerator()
 	 * @see CacheOperation#getCacheManager()
 	 * @see CacheOperation#getCacheResolver()

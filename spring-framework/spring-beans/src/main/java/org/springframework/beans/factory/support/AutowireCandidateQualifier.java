@@ -16,7 +16,7 @@
 
 package org.springframework.beans.factory.support;
 
-import org.springframework.beans.BeanMetadataAttributeAccessor;
+import org.springframework.beans.util_.bean_.matadata_.BeanMetadataAttributeAccessor;
 import org.springframework.util.Assert;
 
 /**

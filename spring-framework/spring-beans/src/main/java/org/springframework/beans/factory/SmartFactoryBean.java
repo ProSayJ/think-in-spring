@@ -16,6 +16,9 @@
 
 package org.springframework.beans.factory;
 
+import org.springframework.beans.factory.core_.BeanFactory;
+import org.springframework.beans.factory.core_.FactoryBean;
+
 /**
  * Extension of the {@link FactoryBean} interface. Implementations may
  * indicate whether they always return independent instances, for the

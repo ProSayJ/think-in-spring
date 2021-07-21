@@ -25,8 +25,8 @@ import java.util.concurrent.ConcurrentHashMap;
 import org.aspectj.lang.reflect.PerClauseKind;
 
 import org.springframework.aop.Advisor;
-import org.springframework.beans.factory.BeanFactoryUtils;
-import org.springframework.beans.factory.ListableBeanFactory;
+import org.springframework.beans.factory.util_.BeanFactoryUtils;
+import org.springframework.beans.factory.core_.ListableBeanFactory;
 import org.springframework.lang.Nullable;
 import org.springframework.util.Assert;
 

@@ -21,9 +21,10 @@ import java.util.List;
 import java.util.ServiceLoader;
 
 import org.springframework.beans.factory.BeanClassLoaderAware;
+import org.springframework.beans.factory.core_.FactoryBean;
 
 /**
- * {@link org.springframework.beans.factory.FactoryBean} that exposes <i>all</i>
+ * {@link FactoryBean} that exposes <i>all</i>
  * services for the configured service class, represented as a List of service objects,
  * obtained through the JDK 1.6 {@link java.util.ServiceLoader} facility.
  *

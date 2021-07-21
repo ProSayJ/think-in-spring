@@ -21,7 +21,7 @@ import java.io.StringReader;
 import org.w3c.dom.Document;
 import org.xml.sax.InputSource;
 
-import org.springframework.beans.factory.BeanDefinitionStoreException;
+import org.springframework.beans.factory.expection_.BeanDefinitionStoreException;
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.beans.factory.parsing.ProblemReporter;
 import org.springframework.beans.factory.parsing.ReaderContext;

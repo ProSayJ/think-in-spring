@@ -18,8 +18,8 @@ package org.springframework.context.support;
 
 import java.util.Locale;
 
-import org.springframework.beans.BeansException;
-import org.springframework.beans.MutablePropertyValues;
+import org.springframework.beans.expection_.BeansException;
+import org.springframework.beans.util_.property_.value_.MutablePropertyValues;
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.beans.factory.support.GenericBeanDefinition;
 import org.springframework.context.ApplicationContext;

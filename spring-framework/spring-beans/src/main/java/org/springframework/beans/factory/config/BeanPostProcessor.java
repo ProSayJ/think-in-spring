@@ -16,7 +16,8 @@
 
 package org.springframework.beans.factory.config;
 
-import org.springframework.beans.BeansException;
+import org.springframework.beans.expection_.BeansException;
+import org.springframework.beans.factory.core_.FactoryBean;
 import org.springframework.lang.Nullable;
 
 /**
@@ -67,7 +68,7 @@ public interface BeanPostProcessor {
 	 * @param beanName the name of the bean
 	 * @return the bean instance to use, either the original or a wrapped one;
 	 * if {@code null}, no subsequent BeanPostProcessors will be invoked
-	 * @throws org.springframework.beans.BeansException in case of errors
+	 * @throws BeansException in case of errors
 	 * @see org.springframework.beans.factory.InitializingBean#afterPropertiesSet
 	 */
 	@Nullable
@@ -92,9 +93,9 @@ public interface BeanPostProcessor {
 	 * @param beanName the name of the bean
 	 * @return the bean instance to use, either the original or a wrapped one;
 	 * if {@code null}, no subsequent BeanPostProcessors will be invoked
-	 * @throws org.springframework.beans.BeansException in case of errors
+	 * @throws BeansException in case of errors
 	 * @see org.springframework.beans.factory.InitializingBean#afterPropertiesSet
-	 * @see org.springframework.beans.factory.FactoryBean
+	 * @see FactoryBean
 	 */
 	@Nullable
 	default Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {

@@ -19,6 +19,7 @@ package org.springframework.aop.framework.autoproxy;
 import org.springframework.beans.factory.config.AutowireCapableBeanFactory;
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
+import org.springframework.beans.factory.core_.BeanFactory;
 import org.springframework.core.Conventions;
 import org.springframework.lang.Nullable;
 import org.springframework.util.StringUtils;
@@ -82,7 +83,7 @@ public abstract class AutoProxyUtils {
 	 * @param beanName the name of the bean
 	 * @return the original target class as stored in the bean definition, if any
 	 * @since 4.2.3
-	 * @see org.springframework.beans.factory.BeanFactory#getType(String)
+	 * @see BeanFactory#getType(String)
 	 */
 	@Nullable
 	public static Class<?> determineTargetClass(

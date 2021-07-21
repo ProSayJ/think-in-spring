@@ -19,7 +19,7 @@ package org.springframework.beans.factory.config;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-import org.springframework.beans.factory.FactoryBean;
+import org.springframework.beans.factory.core_.FactoryBean;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.lang.Nullable;
 

@@ -16,7 +16,9 @@
 
 package org.springframework.beans.factory;
 
-import org.springframework.beans.BeansException;
+import org.springframework.beans.expection_.BeansException;
+import org.springframework.beans.factory.core_.BeanFactory;
+import org.springframework.beans.factory.core_.FactoryBean;
 
 /**
  * Defines a factory which can return an Object instance

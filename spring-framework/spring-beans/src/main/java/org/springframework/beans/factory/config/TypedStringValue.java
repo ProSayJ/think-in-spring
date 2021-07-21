@@ -16,7 +16,8 @@
 
 package org.springframework.beans.factory.config;
 
-import org.springframework.beans.BeanMetadataElement;
+import org.springframework.beans.util_.bean_.matadata_.BeanMetadataElement;
+import org.springframework.beans.util_.property_.value_.MutablePropertyValues;
 import org.springframework.lang.Nullable;
 import org.springframework.util.Assert;
 import org.springframework.util.ClassUtils;
@@ -33,7 +34,7 @@ import org.springframework.util.ObjectUtils;
  * @author Juergen Hoeller
  * @since 1.2
  * @see BeanDefinition#getPropertyValues
- * @see org.springframework.beans.MutablePropertyValues#addPropertyValue
+ * @see MutablePropertyValues#addPropertyValue
  */
 public class TypedStringValue implements BeanMetadataElement {
 

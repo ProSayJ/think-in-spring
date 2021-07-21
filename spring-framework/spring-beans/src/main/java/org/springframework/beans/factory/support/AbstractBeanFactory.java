@@ -35,26 +35,28 @@ import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CopyOnWriteArrayList;
 
-import org.springframework.beans.BeanUtils;
-import org.springframework.beans.BeanWrapper;
-import org.springframework.beans.BeansException;
-import org.springframework.beans.PropertyEditorRegistrar;
-import org.springframework.beans.PropertyEditorRegistry;
-import org.springframework.beans.PropertyEditorRegistrySupport;
+import org.springframework.beans.util_.bean_.BeanUtils;
+import org.springframework.beans.util_.bean_.wrapper_.BeanWrapper;
+import org.springframework.beans.expection_.BeansException;
+import org.springframework.beans.util_.property_.editor_.PropertyEditorRegistrar;
+import org.springframework.beans.util_.property_.editor_.PropertyEditorRegistry;
+import org.springframework.beans.util_.property_.editor_.PropertyEditorRegistrySupport;
 import org.springframework.beans.SimpleTypeConverter;
-import org.springframework.beans.TypeConverter;
-import org.springframework.beans.TypeMismatchException;
-import org.springframework.beans.factory.BeanCreationException;
-import org.springframework.beans.factory.BeanCurrentlyInCreationException;
-import org.springframework.beans.factory.BeanDefinitionStoreException;
-import org.springframework.beans.factory.BeanFactory;
-import org.springframework.beans.factory.BeanFactoryUtils;
-import org.springframework.beans.factory.BeanIsAbstractException;
-import org.springframework.beans.factory.BeanIsNotAFactoryException;
-import org.springframework.beans.factory.BeanNotOfRequiredTypeException;
-import org.springframework.beans.factory.CannotLoadBeanClassException;
-import org.springframework.beans.factory.FactoryBean;
-import org.springframework.beans.factory.NoSuchBeanDefinitionException;
+import org.springframework.beans.util_.typeconverter_.TypeConverter;
+import org.springframework.beans.expection_.TypeMismatchException;
+import org.springframework.beans.factory.core_.HierarchicalBeanFactory;
+import org.springframework.beans.factory.core_.ListableBeanFactory;
+import org.springframework.beans.factory.expection_.BeanCreationException;
+import org.springframework.beans.factory.expection_.BeanCurrentlyInCreationException;
+import org.springframework.beans.factory.expection_.BeanDefinitionStoreException;
+import org.springframework.beans.factory.core_.BeanFactory;
+import org.springframework.beans.factory.util_.BeanFactoryUtils;
+import org.springframework.beans.factory.expection_.BeanIsAbstractException;
+import org.springframework.beans.factory.expection_.BeanIsNotAFactoryException;
+import org.springframework.beans.factory.expection_.BeanNotOfRequiredTypeException;
+import org.springframework.beans.factory.expection_.CannotLoadBeanClassException;
+import org.springframework.beans.factory.core_.FactoryBean;
+import org.springframework.beans.factory.expection_.NoSuchBeanDefinitionException;
 import org.springframework.beans.factory.SmartFactoryBean;
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.beans.factory.config.BeanDefinitionHolder;
@@ -79,7 +81,7 @@ import org.springframework.util.StringUtils;
 import org.springframework.util.StringValueResolver;
 
 /**
- * Abstract base class for {@link org.springframework.beans.factory.BeanFactory}
+ * Abstract base class for {@link BeanFactory}
  * implementations, providing the full capabilities of the
  * {@link org.springframework.beans.factory.config.ConfigurableBeanFactory} SPI.
  * Does <i>not</i> assume a listable bean factory: can therefore also be used
@@ -88,12 +90,12 @@ import org.springframework.util.StringValueResolver;
  *
  * <p>This class provides a singleton cache (through its base class
  * {@link org.springframework.beans.factory.support.DefaultSingletonBeanRegistry},
- * singleton/prototype determination, {@link org.springframework.beans.factory.FactoryBean}
+ * singleton/prototype determination, {@link FactoryBean}
  * handling, aliases, bean definition merging for child bean definitions,
  * and bean destruction ({@link org.springframework.beans.factory.DisposableBean}
  * interface, custom destroy methods). Furthermore, it can manage a bean factory
  * hierarchy (delegating to the parent in case of an unknown bean), through implementing
- * the {@link org.springframework.beans.factory.HierarchicalBeanFactory} interface.
+ * the {@link HierarchicalBeanFactory} interface.
  *
  * <p>The main template methods to be implemented by subclasses are
  * {@link #getBeanDefinition} and {@link #createBean}, retrieving a bean definition
@@ -1652,7 +1654,7 @@ public abstract class AbstractBeanFactory extends FactoryBeanRegistrySupport imp
 	 * cannot be determined another way
 	 * @return the type for the bean if determinable, otherwise {@code ResolvableType.NONE}
 	 * @since 5.2
-	 * @see org.springframework.beans.factory.FactoryBean#getObjectType()
+	 * @see FactoryBean#getObjectType()
 	 * @see #getBean(String)
 	 */
 	protected ResolvableType getTypeForFactoryBean(String beanName, RootBeanDefinition mbd, boolean allowInit) {
@@ -1714,7 +1716,7 @@ public abstract class AbstractBeanFactory extends FactoryBeanRegistrySupport imp
 	 * @param beanName the name of the bean
 	 * @param mbd the merged bean definition for the bean
 	 * @return the type for the bean if determinable, or {@code null} otherwise
-	 * @see org.springframework.beans.factory.FactoryBean#getObjectType()
+	 * @see FactoryBean#getObjectType()
 	 * @see #getBean(String)
 	 * @deprecated since 5.2 in favor of {@link #getTypeForFactoryBean(String, RootBeanDefinition, boolean)}
 	 */
@@ -1921,7 +1923,7 @@ public abstract class AbstractBeanFactory extends FactoryBeanRegistrySupport imp
 	 * @param beanName the name of the bean to look for
 	 * @return if this bean factory contains a bean definition with the given name
 	 * @see #containsBean
-	 * @see org.springframework.beans.factory.ListableBeanFactory#containsBeanDefinition
+	 * @see ListableBeanFactory#containsBeanDefinition
 	 */
 	protected abstract boolean containsBeanDefinition(String beanName);
 
@@ -1937,7 +1939,7 @@ public abstract class AbstractBeanFactory extends FactoryBeanRegistrySupport imp
 	 * template method and the public interface method in that case.
 	 * @param beanName the name of the bean to find a definition for
 	 * @return the BeanDefinition for this prototype name (never {@code null})
-	 * @throws org.springframework.beans.factory.NoSuchBeanDefinitionException
+	 * @throws NoSuchBeanDefinitionException
 	 * if the bean definition cannot be resolved
 	 * @throws BeansException in case of errors
 	 * @see RootBeanDefinition

@@ -19,9 +19,9 @@ package org.springframework.beans.factory.support;
 import java.lang.reflect.Method;
 import java.util.Properties;
 
-import org.springframework.beans.factory.BeanFactory;
+import org.springframework.beans.factory.core_.BeanFactory;
 import org.springframework.beans.factory.BeanFactoryAware;
-import org.springframework.beans.factory.FactoryBean;
+import org.springframework.beans.factory.core_.FactoryBean;
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.beans.factory.config.BeanDefinitionHolder;
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;

@@ -18,6 +18,7 @@ package org.springframework.context.annotation;
 
 import java.util.function.Predicate;
 
+import org.springframework.beans.factory.core_.BeanFactory;
 import org.springframework.context.annotation.anno_.Configuration;
 import org.springframework.context.annotation.anno_.Import;
 import org.springframework.context.annotation.registry_.ImportBeanDefinitionRegistrar;
@@ -43,7 +44,7 @@ import org.springframework.lang.Nullable;
  * the following supported parameter types:
  * <ul>
  * <li>{@link org.springframework.core.env.Environment Environment}</li>
- * <li>{@link org.springframework.beans.factory.BeanFactory BeanFactory}</li>
+ * <li>{@link BeanFactory BeanFactory}</li>
  * <li>{@link java.lang.ClassLoader ClassLoader}</li>
  * <li>{@link org.springframework.core.io.ResourceLoader ResourceLoader}</li>
  * </ul>

@@ -19,7 +19,7 @@ package org.springframework.jca.context;
 import javax.resource.spi.BootstrapContext;
 import javax.resource.spi.work.WorkManager;
 
-import org.springframework.beans.BeansException;
+import org.springframework.beans.expection_.BeansException;
 import org.springframework.beans.factory.ObjectFactory;
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
 import org.springframework.context.support.GenericApplicationContext;

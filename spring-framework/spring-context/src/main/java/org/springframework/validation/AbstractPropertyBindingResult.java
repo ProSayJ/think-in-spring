@@ -18,10 +18,11 @@ package org.springframework.validation;
 
 import java.beans.PropertyEditor;
 
-import org.springframework.beans.BeanUtils;
-import org.springframework.beans.ConfigurablePropertyAccessor;
-import org.springframework.beans.PropertyAccessorUtils;
-import org.springframework.beans.PropertyEditorRegistry;
+import org.springframework.beans.util_.bean_.BeanUtils;
+import org.springframework.beans.util_.property_.access_.ConfigurablePropertyAccessor;
+import org.springframework.beans.util_.property_.access_.PropertyAccessor;
+import org.springframework.beans.util_.property_.access_.PropertyAccessorUtils;
+import org.springframework.beans.util_.property_.editor_.PropertyEditorRegistry;
 import org.springframework.core.convert.ConversionService;
 import org.springframework.core.convert.TypeDescriptor;
 import org.springframework.core.convert.support.ConvertingPropertyEditorAdapter;
@@ -30,15 +31,15 @@ import org.springframework.util.Assert;
 
 /**
  * Abstract base class for {@link BindingResult} implementations that work with
- * Spring's {@link org.springframework.beans.PropertyAccessor} mechanism.
+ * Spring's {@link PropertyAccessor} mechanism.
  * Pre-implements field access through delegation to the corresponding
  * PropertyAccessor methods.
  *
  * @author Juergen Hoeller
  * @since 2.0
  * @see #getPropertyAccessor()
- * @see org.springframework.beans.PropertyAccessor
- * @see org.springframework.beans.ConfigurablePropertyAccessor
+ * @see PropertyAccessor
+ * @see ConfigurablePropertyAccessor
  */
 @SuppressWarnings("serial")
 public abstract class AbstractPropertyBindingResult extends AbstractBindingResult {
@@ -76,7 +77,7 @@ public abstract class AbstractPropertyBindingResult extends AbstractBindingResul
 
 	/**
 	 * Returns the canonical property name.
-	 * @see org.springframework.beans.PropertyAccessorUtils#canonicalPropertyName
+	 * @see PropertyAccessorUtils#canonicalPropertyName
 	 */
 	@Override
 	protected String canonicalFieldName(String field) {

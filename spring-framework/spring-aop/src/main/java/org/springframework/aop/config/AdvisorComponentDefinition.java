@@ -16,7 +16,7 @@
 
 package org.springframework.aop.config;
 
-import org.springframework.beans.MutablePropertyValues;
+import org.springframework.beans.util_.property_.value_.MutablePropertyValues;
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.beans.factory.config.BeanReference;
 import org.springframework.beans.factory.parsing.AbstractComponentDefinition;

@@ -16,7 +16,7 @@
 
 package org.springframework.beans.factory.parsing;
 
-import org.springframework.beans.BeanMetadataElement;
+import org.springframework.beans.util_.bean_.matadata_.BeanMetadataElement;
 
 /**
  * Marker interface for a defaults definition,

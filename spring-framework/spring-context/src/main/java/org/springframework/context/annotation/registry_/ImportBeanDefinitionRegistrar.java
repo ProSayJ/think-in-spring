@@ -16,6 +16,7 @@
 
 package org.springframework.context.annotation.registry_;
 
+import org.springframework.beans.factory.core_.BeanFactory;
 import org.springframework.beans.factory.support.BeanDefinitionRegistry;
 import org.springframework.beans.factory.support.BeanDefinitionRegistryPostProcessor;
 import org.springframework.beans.factory.support.BeanNameGenerator;
@@ -49,7 +50,7 @@ import org.springframework.core.type.AnnotationMetadata;
  * the following supported parameter types:
  * <ul>
  * <li>{@link org.springframework.core.env.Environment Environment}</li>
- * <li>{@link org.springframework.beans.factory.BeanFactory BeanFactory}</li>
+ * <li>{@link BeanFactory BeanFactory}</li>
  * <li>{@link java.lang.ClassLoader ClassLoader}</li>
  * <li>{@link org.springframework.core.io.ResourceLoader ResourceLoader}</li>
  * </ul>

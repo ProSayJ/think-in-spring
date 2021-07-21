@@ -16,6 +16,11 @@
 
 package org.springframework.beans;
 
+import org.springframework.beans.util_.bean_.wrapper_.BeanWrapperImpl;
+import org.springframework.beans.util_.typeconverter_.TypeConverter;
+import org.springframework.beans.util_.typeconverter_.TypeConverterDelegate;
+import org.springframework.beans.util_.typeconverter_.TypeConverterSupport;
+
 /**
  * Simple implementation of the {@link TypeConverter} interface that does not operate on
  * a specific target object. This is an alternative to using a full-blown BeanWrapperImpl

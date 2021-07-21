@@ -16,8 +16,8 @@
 
 package org.springframework.beans.factory.config;
 
-import org.springframework.beans.BeanMetadataElement;
-import org.springframework.beans.MutablePropertyValues;
+import org.springframework.beans.util_.bean_.matadata_.BeanMetadataElement;
+import org.springframework.beans.util_.property_.value_.MutablePropertyValues;
 import org.springframework.core.AttributeAccessor;
 import org.springframework.core.ResolvableType;
 import org.springframework.lang.Nullable;

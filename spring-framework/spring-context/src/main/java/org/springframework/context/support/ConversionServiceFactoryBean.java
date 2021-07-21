@@ -18,7 +18,7 @@ package org.springframework.context.support;
 
 import java.util.Set;
 
-import org.springframework.beans.factory.FactoryBean;
+import org.springframework.beans.factory.core_.FactoryBean;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.context.annotation.anno_.Bean;
 import org.springframework.context.annotation.anno_.Configuration;

@@ -22,14 +22,15 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 import java.util.Properties;
 
-import org.springframework.beans.BeanUtils;
-import org.springframework.beans.BeansException;
-import org.springframework.beans.FatalBeanException;
-import org.springframework.beans.factory.BeanFactory;
+import org.springframework.beans.util_.bean_.BeanUtils;
+import org.springframework.beans.expection_.BeansException;
+import org.springframework.beans.expection_.FatalBeanException;
+import org.springframework.beans.factory.expection_.NoSuchBeanDefinitionException;
+import org.springframework.beans.factory.core_.BeanFactory;
 import org.springframework.beans.factory.BeanFactoryAware;
-import org.springframework.beans.factory.FactoryBean;
+import org.springframework.beans.factory.core_.FactoryBean;
 import org.springframework.beans.factory.InitializingBean;
-import org.springframework.beans.factory.ListableBeanFactory;
+import org.springframework.beans.factory.core_.ListableBeanFactory;
 import org.springframework.lang.Nullable;
 import org.springframework.util.Assert;
 import org.springframework.util.ReflectionUtils;
@@ -40,10 +41,10 @@ import org.springframework.util.StringUtils;
  * methods with the signatures {@code MyType xxx()} or {@code MyType xxx(MyIdType id)}
  * (typically, {@code MyService getService()} or {@code MyService getService(String id)})
  * and creates a dynamic proxy which implements that interface, delegating to an
- * underlying {@link org.springframework.beans.factory.BeanFactory}.
+ * underlying {@link BeanFactory}.
  *
  * <p>Such service locators permit the decoupling of calling code from
- * the {@link org.springframework.beans.factory.BeanFactory} API, by using an
+ * the {@link BeanFactory} API, by using an
  * appropriate custom locator interface. They will typically be used for
  * <b>prototype beans</b>, i.e. for factory methods that are supposed to
  * return a new instance for each call. The client receives a reference to the
@@ -55,12 +56,12 @@ import org.springframework.util.StringUtils;
  * method with a String id of {@code null} or empty String, if exactly
  * <b>one</b> bean in the factory matches the return type of the factory
  * method, that bean is returned, otherwise a
- * {@link org.springframework.beans.factory.NoSuchBeanDefinitionException}
+ * {@link NoSuchBeanDefinitionException}
  * is thrown.
  *
  * <p>On invocation of the single-arg factory method with a non-null (and
  * non-empty) argument, the proxy returns the result of a
- * {@link org.springframework.beans.factory.BeanFactory#getBean(String)} call,
+ * {@link BeanFactory#getBean(String)} call,
  * using a stringified version of the passed-in id as bean name.
  *
  * <p>A factory method argument will usually be a String, but can also be an
@@ -81,7 +82,7 @@ import org.springframework.util.StringUtils;
  *}</pre>
  *
  * <p>A sample config in an XML-based
- * {@link org.springframework.beans.factory.BeanFactory} might look as follows:
+ * {@link BeanFactory} might look as follows:
  *
  * <pre class="code">&lt;beans>
  *
@@ -133,7 +134,7 @@ import org.springframework.util.StringUtils;
  *}</pre>
  *
  * <p>A sample config in an XML-based
- * {@link org.springframework.beans.factory.BeanFactory} might look as follows:
+ * {@link BeanFactory} might look as follows:
  *
  * <pre class="code">&lt;beans>
  *

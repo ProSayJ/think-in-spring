@@ -22,8 +22,8 @@ import java.util.List;
 
 import groovy.lang.GroovyObjectSupport;
 
-import org.springframework.beans.BeanWrapper;
-import org.springframework.beans.BeanWrapperImpl;
+import org.springframework.beans.util_.bean_.wrapper_.BeanWrapper;
+import org.springframework.beans.util_.bean_.wrapper_.BeanWrapperImpl;
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.beans.factory.config.BeanDefinitionHolder;
 import org.springframework.beans.factory.config.ConstructorArgumentValues;

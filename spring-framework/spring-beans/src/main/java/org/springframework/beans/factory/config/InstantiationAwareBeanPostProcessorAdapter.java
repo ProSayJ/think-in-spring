@@ -19,8 +19,8 @@ package org.springframework.beans.factory.config;
 import java.beans.PropertyDescriptor;
 import java.lang.reflect.Constructor;
 
-import org.springframework.beans.BeansException;
-import org.springframework.beans.PropertyValues;
+import org.springframework.beans.expection_.BeansException;
+import org.springframework.beans.util_.property_.value_.PropertyValues;
 import org.springframework.lang.Nullable;
 
 /**

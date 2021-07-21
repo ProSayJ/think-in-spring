@@ -19,13 +19,14 @@ package org.springframework.beans.factory.config;
 import java.beans.PropertyEditor;
 import java.security.AccessControlContext;
 
-import org.springframework.beans.PropertyEditorRegistrar;
-import org.springframework.beans.PropertyEditorRegistry;
-import org.springframework.beans.TypeConverter;
-import org.springframework.beans.factory.BeanDefinitionStoreException;
-import org.springframework.beans.factory.BeanFactory;
-import org.springframework.beans.factory.HierarchicalBeanFactory;
-import org.springframework.beans.factory.NoSuchBeanDefinitionException;
+import org.springframework.beans.util_.property_.editor_.PropertyEditorRegistrar;
+import org.springframework.beans.util_.property_.editor_.PropertyEditorRegistry;
+import org.springframework.beans.util_.typeconverter_.TypeConverter;
+import org.springframework.beans.factory.core_.ListableBeanFactory;
+import org.springframework.beans.factory.expection_.BeanDefinitionStoreException;
+import org.springframework.beans.factory.core_.BeanFactory;
+import org.springframework.beans.factory.core_.HierarchicalBeanFactory;
+import org.springframework.beans.factory.expection_.NoSuchBeanDefinitionException;
 import org.springframework.core.convert.ConversionService;
 import org.springframework.lang.Nullable;
 import org.springframework.util.StringValueResolver;
@@ -33,19 +34,19 @@ import org.springframework.util.StringValueResolver;
 /**
  * Configuration interface to be implemented by most bean factories. Provides
  * facilities to configure a bean factory, in addition to the bean factory
- * client methods in the {@link org.springframework.beans.factory.BeanFactory}
+ * client methods in the {@link BeanFactory}
  * interface.
  *
  * <p>This bean factory interface is not meant to be used in normal application
- * code: Stick to {@link org.springframework.beans.factory.BeanFactory} or
- * {@link org.springframework.beans.factory.ListableBeanFactory} for typical
+ * code: Stick to {@link BeanFactory} or
+ * {@link ListableBeanFactory} for typical
  * needs. This extended interface is just meant to allow for framework-internal
  * plug'n'play and for special access to bean factory configuration methods.
  *
  * @author Juergen Hoeller
  * @since 03.11.2003
- * @see org.springframework.beans.factory.BeanFactory
- * @see org.springframework.beans.factory.ListableBeanFactory
+ * @see BeanFactory
+ * @see ListableBeanFactory
  * @see ConfigurableListableBeanFactory
  */
 public interface ConfigurableBeanFactory extends HierarchicalBeanFactory, SingletonBeanRegistry {

@@ -29,10 +29,10 @@ import java.util.Optional;
 import kotlin.reflect.KProperty;
 import kotlin.reflect.jvm.ReflectJvmMapping;
 
-import org.springframework.beans.BeansException;
-import org.springframework.beans.factory.BeanFactory;
+import org.springframework.beans.expection_.BeansException;
+import org.springframework.beans.factory.core_.BeanFactory;
 import org.springframework.beans.factory.InjectionPoint;
-import org.springframework.beans.factory.NoUniqueBeanDefinitionException;
+import org.springframework.beans.factory.expection_.NoUniqueBeanDefinitionException;
 import org.springframework.core.KotlinDetector;
 import org.springframework.core.MethodParameter;
 import org.springframework.core.ParameterNameDiscoverer;

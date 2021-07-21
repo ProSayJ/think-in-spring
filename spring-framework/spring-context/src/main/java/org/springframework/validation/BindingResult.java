@@ -19,7 +19,7 @@ package org.springframework.validation;
 import java.beans.PropertyEditor;
 import java.util.Map;
 
-import org.springframework.beans.PropertyEditorRegistry;
+import org.springframework.beans.util_.property_.editor_.PropertyEditorRegistry;
 import org.springframework.lang.Nullable;
 
 /**

@@ -29,10 +29,10 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
 import org.springframework.aop.framework.autoproxy.AutoProxyUtils;
-import org.springframework.beans.PropertyValues;
+import org.springframework.beans.util_.property_.value_.PropertyValues;
 import org.springframework.beans.factory.BeanClassLoaderAware;
-import org.springframework.beans.factory.BeanDefinitionStoreException;
-import org.springframework.beans.factory.BeanFactory;
+import org.springframework.beans.factory.expection_.BeanDefinitionStoreException;
+import org.springframework.beans.factory.core_.BeanFactory;
 import org.springframework.beans.factory.annotation.AnnotatedBeanDefinition;
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.beans.factory.config.BeanDefinitionHolder;

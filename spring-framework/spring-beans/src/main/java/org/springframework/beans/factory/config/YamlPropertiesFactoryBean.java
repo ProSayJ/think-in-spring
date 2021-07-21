@@ -18,7 +18,7 @@ package org.springframework.beans.factory.config;
 
 import java.util.Properties;
 
-import org.springframework.beans.factory.FactoryBean;
+import org.springframework.beans.factory.core_.FactoryBean;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.core.CollectionFactory;
 import org.springframework.lang.Nullable;

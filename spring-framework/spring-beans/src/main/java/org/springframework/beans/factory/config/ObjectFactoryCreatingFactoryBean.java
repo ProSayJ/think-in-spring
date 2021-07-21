@@ -18,21 +18,22 @@ package org.springframework.beans.factory.config;
 
 import java.io.Serializable;
 
-import org.springframework.beans.BeansException;
-import org.springframework.beans.factory.BeanFactory;
+import org.springframework.beans.expection_.BeansException;
+import org.springframework.beans.factory.core_.BeanFactory;
 import org.springframework.beans.factory.ObjectFactory;
+import org.springframework.beans.factory.core_.FactoryBean;
 import org.springframework.lang.Nullable;
 import org.springframework.util.Assert;
 
 /**
- * A {@link org.springframework.beans.factory.FactoryBean} implementation that
+ * A {@link FactoryBean} implementation that
  * returns a value which is an {@link org.springframework.beans.factory.ObjectFactory}
- * that in turn returns a bean sourced from a {@link org.springframework.beans.factory.BeanFactory}.
+ * that in turn returns a bean sourced from a {@link BeanFactory}.
  *
  * <p>As such, this may be used to avoid having a client object directly calling
- * {@link org.springframework.beans.factory.BeanFactory#getBean(String)} to get
+ * {@link BeanFactory#getBean(String)} to get
  * a (typically prototype) bean from a
- * {@link org.springframework.beans.factory.BeanFactory}, which would be a
+ * {@link BeanFactory}, which would be a
  * violation of the inversion of control principle. Instead, with the use
  * of this class, the client object can be fed an
  * {@link org.springframework.beans.factory.ObjectFactory} instance as a
@@ -40,7 +41,7 @@ import org.springframework.util.Assert;
  * typically a prototype bean).
  *
  * <p>A sample config in an XML-based
- * {@link org.springframework.beans.factory.BeanFactory} might look as follows:
+ * {@link BeanFactory} might look as follows:
  *
  * <pre class="code">&lt;beans&gt;
  *

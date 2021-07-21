@@ -24,11 +24,12 @@ import java.net.URI;
 import java.net.URL;
 import java.nio.file.Path;
 
+import org.springframework.beans.util_.bean_.wrapper_.BeanWrapper;
 import org.xml.sax.InputSource;
 
-import org.springframework.beans.PropertyEditorRegistrar;
-import org.springframework.beans.PropertyEditorRegistry;
-import org.springframework.beans.PropertyEditorRegistrySupport;
+import org.springframework.beans.util_.property_.editor_.PropertyEditorRegistrar;
+import org.springframework.beans.util_.property_.editor_.PropertyEditorRegistry;
+import org.springframework.beans.util_.property_.editor_.PropertyEditorRegistrySupport;
 import org.springframework.beans.propertyeditors.ClassArrayEditor;
 import org.springframework.beans.propertyeditors.ClassEditor;
 import org.springframework.beans.propertyeditors.FileEditor;
@@ -48,8 +49,8 @@ import org.springframework.core.io.support.ResourcePatternResolver;
 
 /**
  * PropertyEditorRegistrar implementation that populates a given
- * {@link org.springframework.beans.PropertyEditorRegistry}
- * (typically a {@link org.springframework.beans.BeanWrapper} used for bean
+ * {@link PropertyEditorRegistry}
+ * (typically a {@link BeanWrapper} used for bean
  * creation within an {@link org.springframework.context.ApplicationContext})
  * with resource editors. Used by
  * {@link org.springframework.context.support.AbstractApplicationContext}.

@@ -16,7 +16,7 @@
 
 package org.springframework.beans.factory.config;
 
-import org.springframework.beans.BeanMetadataElement;
+import org.springframework.beans.util_.bean_.matadata_.BeanMetadataElement;
 
 /**
  * Interface that exposes a reference to a bean name in an abstract fashion.

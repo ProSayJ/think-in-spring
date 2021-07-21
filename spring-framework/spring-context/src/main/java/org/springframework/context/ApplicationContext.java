@@ -16,9 +16,10 @@
 
 package org.springframework.context;
 
-import org.springframework.beans.factory.HierarchicalBeanFactory;
-import org.springframework.beans.factory.ListableBeanFactory;
+import org.springframework.beans.factory.core_.HierarchicalBeanFactory;
+import org.springframework.beans.factory.core_.ListableBeanFactory;
 import org.springframework.beans.factory.config.AutowireCapableBeanFactory;
+import org.springframework.beans.factory.core_.BeanFactory;
 import org.springframework.core.env.EnvironmentCapable;
 import org.springframework.core.io.support.ResourcePatternResolver;
 import org.springframework.lang.Nullable;
@@ -31,7 +32,7 @@ import org.springframework.lang.Nullable;
  * <p>An ApplicationContext provides:
  * <ul>
  * <li>Bean factory methods for accessing application components.
- * Inherited from {@link org.springframework.beans.factory.ListableBeanFactory}.
+ * Inherited from {@link ListableBeanFactory}.
  * <li>The ability to load file resources in a generic fashion.
  * Inherited from the {@link org.springframework.core.io.ResourceLoader} interface.
  * <li>The ability to publish events to registered listeners.
@@ -44,7 +45,7 @@ import org.springframework.lang.Nullable;
  * its own child context that is independent of that of any other servlet.
  * </ul>
  *
- * <p>In addition to standard {@link org.springframework.beans.factory.BeanFactory}
+ * <p>In addition to standard {@link BeanFactory}
  * lifecycle capabilities, ApplicationContext implementations detect and invoke
  * {@link ApplicationContextAware} beans as well as {@link ResourceLoaderAware},
  * {@link ApplicationEventPublisherAware} and {@link MessageSourceAware} beans.
@@ -52,7 +53,7 @@ import org.springframework.lang.Nullable;
  * @author Rod Johnson
  * @author Juergen Hoeller
  * @see ConfigurableApplicationContext
- * @see org.springframework.beans.factory.BeanFactory
+ * @see BeanFactory
  * @see org.springframework.core.io.ResourceLoader
  */
 public interface ApplicationContext extends EnvironmentCapable, ListableBeanFactory, HierarchicalBeanFactory,

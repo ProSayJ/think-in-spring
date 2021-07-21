@@ -16,7 +16,7 @@
 
 package org.springframework.context.expression;
 
-import org.springframework.beans.factory.BeanFactory;
+import org.springframework.beans.factory.core_.BeanFactory;
 import org.springframework.expression.AccessException;
 import org.springframework.expression.EvaluationContext;
 import org.springframework.expression.PropertyAccessor;
@@ -26,7 +26,7 @@ import org.springframework.util.Assert;
 
 /**
  * EL property accessor that knows how to traverse the beans of a
- * Spring {@link org.springframework.beans.factory.BeanFactory}.
+ * Spring {@link BeanFactory}.
  *
  * @author Juergen Hoeller
  * @author Andy Clement

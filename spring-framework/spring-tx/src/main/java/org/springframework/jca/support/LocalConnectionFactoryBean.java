@@ -20,12 +20,12 @@ import javax.resource.ResourceException;
 import javax.resource.spi.ConnectionManager;
 import javax.resource.spi.ManagedConnectionFactory;
 
-import org.springframework.beans.factory.FactoryBean;
+import org.springframework.beans.factory.core_.FactoryBean;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.lang.Nullable;
 
 /**
- * {@link org.springframework.beans.factory.FactoryBean} that creates
+ * {@link FactoryBean} that creates
  * a local JCA connection factory in "non-managed" mode (as defined by the
  * Java Connector Architecture specification). This is a direct alternative
  * to a {@link org.springframework.jndi.JndiObjectFactoryBean} definition that

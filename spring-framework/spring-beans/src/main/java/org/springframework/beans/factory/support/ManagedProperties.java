@@ -18,7 +18,7 @@ package org.springframework.beans.factory.support;
 
 import java.util.Properties;
 
-import org.springframework.beans.BeanMetadataElement;
+import org.springframework.beans.util_.bean_.matadata_.BeanMetadataElement;
 import org.springframework.beans.Mergeable;
 import org.springframework.lang.Nullable;
 

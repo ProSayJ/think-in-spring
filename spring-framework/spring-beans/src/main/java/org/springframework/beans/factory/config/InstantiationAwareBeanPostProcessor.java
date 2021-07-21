@@ -18,8 +18,9 @@ package org.springframework.beans.factory.config;
 
 import java.beans.PropertyDescriptor;
 
-import org.springframework.beans.BeansException;
-import org.springframework.beans.PropertyValues;
+import org.springframework.beans.expection_.BeansException;
+import org.springframework.beans.util_.property_.value_.MutablePropertyValues;
+import org.springframework.beans.util_.property_.value_.PropertyValues;
 import org.springframework.lang.Nullable;
 
 /**
@@ -65,7 +66,7 @@ public interface InstantiationAwareBeanPostProcessor extends BeanPostProcessor {
 	 * @param beanName the name of the bean
 	 * @return the bean object to expose instead of a default instance of the target bean,
 	 * or {@code null} to proceed with default instantiation
-	 * @throws org.springframework.beans.BeansException in case of errors
+	 * @throws BeansException in case of errors
 	 * @see #postProcessAfterInstantiation
 	 * @see org.springframework.beans.factory.support.AbstractBeanDefinition#getBeanClass()
 	 * @see org.springframework.beans.factory.support.AbstractBeanDefinition#getFactoryMethodName()
@@ -87,7 +88,7 @@ public interface InstantiationAwareBeanPostProcessor extends BeanPostProcessor {
 	 * if property population should be skipped. Normal implementations should return {@code true}.
 	 * Returning {@code false} will also prevent any subsequent InstantiationAwareBeanPostProcessor
 	 * instances being invoked on this bean instance.
-	 * @throws org.springframework.beans.BeansException in case of errors
+	 * @throws BeansException in case of errors
 	 * @see #postProcessBeforeInstantiation
 	 */
 	default boolean postProcessAfterInstantiation(Object bean, String beanName) throws BeansException {
@@ -108,7 +109,7 @@ public interface InstantiationAwareBeanPostProcessor extends BeanPostProcessor {
 	 * PropertyValues instance), or {@code null} which proceeds with the existing properties
 	 * but specifically continues with a call to {@link #postProcessPropertyValues}
 	 * (requiring initialized {@code PropertyDescriptor}s for the current bean class)
-	 * @throws org.springframework.beans.BeansException in case of errors
+	 * @throws BeansException in case of errors
 	 * @since 5.1
 	 * @see #postProcessPropertyValues
 	 */
@@ -134,9 +135,9 @@ public interface InstantiationAwareBeanPostProcessor extends BeanPostProcessor {
 	 * @param beanName the name of the bean
 	 * @return the actual property values to apply to the given bean (can be the passed-in
 	 * PropertyValues instance), or {@code null} to skip property population
-	 * @throws org.springframework.beans.BeansException in case of errors
+	 * @throws BeansException in case of errors
 	 * @see #postProcessProperties
-	 * @see org.springframework.beans.MutablePropertyValues
+	 * @see MutablePropertyValues
 	 * @deprecated as of 5.1, in favor of {@link #postProcessProperties(PropertyValues, Object, String)}
 	 */
 	@Deprecated

@@ -19,8 +19,8 @@ package org.springframework.context.support;
 import java.io.IOException;
 import java.util.Properties;
 
-import org.springframework.beans.BeansException;
-import org.springframework.beans.factory.BeanInitializationException;
+import org.springframework.beans.expection_.BeansException;
+import org.springframework.beans.factory.expection_.BeanInitializationException;
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
 import org.springframework.beans.factory.config.PlaceholderConfigurerSupport;
 import org.springframework.context.EnvironmentAware;

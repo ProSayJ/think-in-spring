@@ -16,7 +16,9 @@
 
 package org.springframework.beans.factory;
 
-import org.springframework.beans.BeansException;
+import org.springframework.beans.expection_.BeansException;
+import org.springframework.beans.factory.expection_.BeanInitializationException;
+import org.springframework.beans.factory.core_.BeanFactory;
 
 /**
  * Interface to be implemented by beans that wish to be aware of their

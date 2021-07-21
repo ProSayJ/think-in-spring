@@ -25,13 +25,13 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
 import org.springframework.beans.SimpleTypeConverter;
-import org.springframework.beans.TypeConverter;
+import org.springframework.beans.util_.typeconverter_.TypeConverter;
 import org.springframework.beans.factory.BeanClassLoaderAware;
-import org.springframework.beans.factory.BeanFactory;
+import org.springframework.beans.factory.core_.BeanFactory;
 import org.springframework.beans.factory.BeanFactoryAware;
 import org.springframework.beans.factory.DisposableBean;
-import org.springframework.beans.factory.FactoryBean;
-import org.springframework.beans.factory.FactoryBeanNotInitializedException;
+import org.springframework.beans.factory.core_.FactoryBean;
+import org.springframework.beans.factory.expection_.FactoryBeanNotInitializedException;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.lang.Nullable;
 import org.springframework.util.Assert;
@@ -204,7 +204,7 @@ public abstract class AbstractFactoryBean<T>
 	/**
 	 * This abstract method declaration mirrors the method in the FactoryBean
 	 * interface, for a consistent offering of abstract template methods.
-	 * @see org.springframework.beans.factory.FactoryBean#getObjectType()
+	 * @see FactoryBean#getObjectType()
 	 */
 	@Override
 	@Nullable
@@ -231,7 +231,7 @@ public abstract class AbstractFactoryBean<T>
 	 * This will lead to a FactoryBeanNotInitializedException getting thrown.
 	 * @return the interfaces to use for 'early singletons',
 	 * or {@code null} to indicate a FactoryBeanNotInitializedException
-	 * @see org.springframework.beans.factory.FactoryBeanNotInitializedException
+	 * @see FactoryBeanNotInitializedException
 	 */
 	@Nullable
 	protected Class<?>[] getEarlySingletonInterfaces() {

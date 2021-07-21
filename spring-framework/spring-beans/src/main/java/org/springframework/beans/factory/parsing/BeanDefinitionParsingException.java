@@ -16,7 +16,7 @@
 
 package org.springframework.beans.factory.parsing;
 
-import org.springframework.beans.factory.BeanDefinitionStoreException;
+import org.springframework.beans.factory.expection_.BeanDefinitionStoreException;
 
 /**
  * Exception thrown when a bean definition reader encounters an error

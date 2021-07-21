@@ -16,7 +16,7 @@
 
 package org.springframework.aop.framework.adapter;
 
-import org.springframework.beans.BeansException;
+import org.springframework.beans.expection_.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;
 
 /**

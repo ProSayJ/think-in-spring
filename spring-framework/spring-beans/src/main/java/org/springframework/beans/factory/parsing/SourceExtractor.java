@@ -16,6 +16,7 @@
 
 package org.springframework.beans.factory.parsing;
 
+import org.springframework.beans.util_.bean_.matadata_.BeanMetadataElement;
 import org.springframework.core.io.Resource;
 import org.springframework.lang.Nullable;
 
@@ -31,7 +32,7 @@ import org.springframework.lang.Nullable;
  * @author Rob Harrop
  * @author Juergen Hoeller
  * @since 2.0
- * @see org.springframework.beans.BeanMetadataElement#getSource()
+ * @see BeanMetadataElement#getSource()
  * @see org.springframework.beans.factory.config.BeanDefinition
  */
 @FunctionalInterface

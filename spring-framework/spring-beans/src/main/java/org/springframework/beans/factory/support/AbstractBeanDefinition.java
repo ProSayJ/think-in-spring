@@ -24,11 +24,14 @@ import java.util.Map;
 import java.util.Set;
 import java.util.function.Supplier;
 
-import org.springframework.beans.BeanMetadataAttributeAccessor;
-import org.springframework.beans.MutablePropertyValues;
+import org.springframework.beans.util_.bean_.matadata_.BeanMetadataAttributeAccessor;
+import org.springframework.beans.util_.property_.value_.MutablePropertyValues;
 import org.springframework.beans.factory.config.AutowireCapableBeanFactory;
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.beans.factory.config.ConstructorArgumentValues;
+import org.springframework.beans.factory.core_.BeanFactory;
+import org.springframework.beans.factory.core_.FactoryBean;
+import org.springframework.beans.util_.bean_.BeanUtils;
 import org.springframework.core.ResolvableType;
 import org.springframework.core.io.DescriptiveResource;
 import org.springframework.core.io.Resource;
@@ -114,7 +117,7 @@ public abstract class AbstractBeanDefinition extends BeanMetadataAttributeAccess
 	/**
 	 * Constant that indicates dependency checking for "simple" properties.
 	 * @see #setDependencyCheck
-	 * @see org.springframework.beans.BeanUtils#isSimpleProperty
+	 * @see BeanUtils#isSimpleProperty
 	 */
 	public static final int DEPENDENCY_CHECK_SIMPLE = 2;
 
@@ -413,14 +416,14 @@ public abstract class AbstractBeanDefinition extends BeanMetadataAttributeAccess
 	 * Return the specified class of the bean definition (assuming it is resolved already).
 	 * <p><b>NOTE:</b> This is an initial class reference as declared in the bean metadata
 	 * definition, potentially combined with a declared factory method or a
-	 * {@link org.springframework.beans.factory.FactoryBean} which may lead to a different
+	 * {@link FactoryBean} which may lead to a different
 	 * runtime type of the bean, or not being set at all in case of an instance-level
 	 * factory method (which is resolved via {@link #getFactoryBeanName()} instead).
 	 * <b>Do not use this for runtime type introspection of arbitrary bean definitions.</b>
 	 * The recommended way to find out about the actual runtime type of a particular bean
-	 * is a {@link org.springframework.beans.factory.BeanFactory#getType} call for the
+	 * is a {@link BeanFactory#getType} call for the
 	 * specified bean name; this takes all of the above cases into account and returns the
-	 * type of object that a {@link org.springframework.beans.factory.BeanFactory#getBean}
+	 * type of object that a {@link BeanFactory#getBean}
 	 * call is going to return for the same bean name.
 	 * @return the resolved bean class (never {@code null})
 	 * @throws IllegalStateException if the bean definition does not define a bean class,

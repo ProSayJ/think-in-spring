@@ -29,8 +29,8 @@ import java.util.Set;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
-import org.springframework.beans.MutablePropertyValues;
-import org.springframework.beans.PropertyValues;
+import org.springframework.beans.util_.property_.value_.MutablePropertyValues;
+import org.springframework.beans.util_.property_.value_.PropertyValues;
 import org.springframework.beans.factory.support.RootBeanDefinition;
 import org.springframework.lang.Nullable;
 import org.springframework.util.ReflectionUtils;

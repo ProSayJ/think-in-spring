@@ -46,20 +46,21 @@ import java.util.stream.Stream;
 
 import javax.inject.Provider;
 
-import org.springframework.beans.BeansException;
-import org.springframework.beans.TypeConverter;
-import org.springframework.beans.factory.BeanCreationException;
-import org.springframework.beans.factory.BeanCurrentlyInCreationException;
-import org.springframework.beans.factory.BeanDefinitionStoreException;
-import org.springframework.beans.factory.BeanFactory;
+import org.springframework.beans.expection_.BeansException;
+import org.springframework.beans.util_.typeconverter_.TypeConverter;
+import org.springframework.beans.factory.core_.ListableBeanFactory;
+import org.springframework.beans.factory.expection_.BeanCreationException;
+import org.springframework.beans.factory.expection_.BeanCurrentlyInCreationException;
+import org.springframework.beans.factory.expection_.BeanDefinitionStoreException;
+import org.springframework.beans.factory.core_.BeanFactory;
 import org.springframework.beans.factory.BeanFactoryAware;
-import org.springframework.beans.factory.BeanFactoryUtils;
-import org.springframework.beans.factory.BeanNotOfRequiredTypeException;
-import org.springframework.beans.factory.CannotLoadBeanClassException;
-import org.springframework.beans.factory.FactoryBean;
+import org.springframework.beans.factory.util_.BeanFactoryUtils;
+import org.springframework.beans.factory.expection_.BeanNotOfRequiredTypeException;
+import org.springframework.beans.factory.expection_.CannotLoadBeanClassException;
+import org.springframework.beans.factory.core_.FactoryBean;
 import org.springframework.beans.factory.InjectionPoint;
-import org.springframework.beans.factory.NoSuchBeanDefinitionException;
-import org.springframework.beans.factory.NoUniqueBeanDefinitionException;
+import org.springframework.beans.factory.expection_.NoSuchBeanDefinitionException;
+import org.springframework.beans.factory.expection_.NoUniqueBeanDefinitionException;
 import org.springframework.beans.factory.ObjectFactory;
 import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.beans.factory.SmartFactoryBean;
@@ -100,7 +101,7 @@ import org.springframework.util.StringUtils;
  * {@link org.springframework.beans.factory.xml.XmlBeanDefinitionReader}.
  *
  * <p>For an alternative implementation of the
- * {@link org.springframework.beans.factory.ListableBeanFactory} interface,
+ * {@link ListableBeanFactory} interface,
  * have a look at {@link StaticListableBeanFactory}, which manages existing
  * bean instances rather than creating new ones based on bean definitions.
  *

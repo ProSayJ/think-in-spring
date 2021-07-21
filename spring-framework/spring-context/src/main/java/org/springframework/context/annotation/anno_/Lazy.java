@@ -16,6 +16,8 @@
 
 package org.springframework.context.annotation.anno_;
 
+import org.springframework.beans.factory.core_.BeanFactory;
+
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -32,7 +34,7 @@ import java.lang.annotation.Target;
  * <p>If this annotation is not present on a {@code @Component} or {@code @Bean} definition,
  * eager initialization will occur. If present and set to {@code true}, the {@code @Bean} or
  * {@code @Component} will not be initialized until referenced by another bean or explicitly
- * retrieved from the enclosing {@link org.springframework.beans.factory.BeanFactory
+ * retrieved from the enclosing {@link BeanFactory
  * BeanFactory}. If present and set to {@code false}, the bean will be instantiated on
  * startup by bean factories that perform eager initialization of singletons.
  *

@@ -16,6 +16,7 @@
 
 package org.springframework.aop.config;
 
+import org.springframework.beans.factory.core_.BeanFactory;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
@@ -30,7 +31,7 @@ import org.springframework.lang.Nullable;
 /**
  * {@link BeanDefinitionParser} for the {@code aspectj-autoproxy} tag,
  * enabling the automatic application of @AspectJ-style aspects found in
- * the {@link org.springframework.beans.factory.BeanFactory}.
+ * the {@link BeanFactory}.
  *
  * @author Rob Harrop
  * @author Juergen Hoeller

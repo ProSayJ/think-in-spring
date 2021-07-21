@@ -19,9 +19,10 @@ package org.springframework.beans.factory.serviceloader;
 import java.util.ServiceLoader;
 
 import org.springframework.beans.factory.BeanClassLoaderAware;
+import org.springframework.beans.factory.core_.FactoryBean;
 
 /**
- * {@link org.springframework.beans.factory.FactoryBean} that exposes the
+ * {@link FactoryBean} that exposes the
  * JDK 1.6 {@link java.util.ServiceLoader} for the configured service class.
  *
  * @author Juergen Hoeller

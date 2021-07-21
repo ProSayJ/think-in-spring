@@ -16,6 +16,7 @@
 
 package org.springframework.beans.factory.config;
 
+import org.springframework.beans.factory.core_.BeanFactory;
 import org.springframework.lang.Nullable;
 import org.springframework.util.Assert;
 
@@ -27,7 +28,7 @@ import org.springframework.util.Assert;
  * @since 2.0
  * @see RuntimeBeanReference
  * @see BeanDefinition#getPropertyValues()
- * @see org.springframework.beans.factory.BeanFactory#getBean
+ * @see BeanFactory#getBean
  */
 public class RuntimeBeanNameReference implements BeanReference {
 

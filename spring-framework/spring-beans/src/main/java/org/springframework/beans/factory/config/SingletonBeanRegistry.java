@@ -16,11 +16,13 @@
 
 package org.springframework.beans.factory.config;
 
+import org.springframework.beans.factory.core_.BeanFactory;
+import org.springframework.beans.factory.core_.ListableBeanFactory;
 import org.springframework.lang.Nullable;
 
 /**
  * Interface that defines a registry for shared bean instances.
- * Can be implemented by {@link org.springframework.beans.factory.BeanFactory}
+ * Can be implemented by {@link BeanFactory}
  * implementations in order to expose their singleton management facility
  * in a uniform manner.
  *
@@ -92,8 +94,8 @@ public interface SingletonBeanRegistry {
 	 * @param beanName the name of the bean to look for
 	 * @return if this bean factory contains a singleton instance with the given name
 	 * @see #registerSingleton
-	 * @see org.springframework.beans.factory.ListableBeanFactory#containsBeanDefinition
-	 * @see org.springframework.beans.factory.BeanFactory#containsBean
+	 * @see ListableBeanFactory#containsBeanDefinition
+	 * @see BeanFactory#containsBean
 	 */
 	boolean containsSingleton(String beanName);
 
@@ -107,7 +109,7 @@ public interface SingletonBeanRegistry {
 	 * @return the list of names as a String array (never {@code null})
 	 * @see #registerSingleton
 	 * @see org.springframework.beans.factory.support.BeanDefinitionRegistry#getBeanDefinitionNames
-	 * @see org.springframework.beans.factory.ListableBeanFactory#getBeanDefinitionNames
+	 * @see ListableBeanFactory#getBeanDefinitionNames
 	 */
 	String[] getSingletonNames();
 
@@ -121,7 +123,7 @@ public interface SingletonBeanRegistry {
 	 * @return the number of singleton beans
 	 * @see #registerSingleton
 	 * @see org.springframework.beans.factory.support.BeanDefinitionRegistry#getBeanDefinitionCount
-	 * @see org.springframework.beans.factory.ListableBeanFactory#getBeanDefinitionCount
+	 * @see ListableBeanFactory#getBeanDefinitionCount
 	 */
 	int getSingletonCount();
 

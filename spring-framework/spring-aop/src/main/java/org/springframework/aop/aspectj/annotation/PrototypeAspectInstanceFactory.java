@@ -18,7 +18,7 @@ package org.springframework.aop.aspectj.annotation;
 
 import java.io.Serializable;
 
-import org.springframework.beans.factory.BeanFactory;
+import org.springframework.beans.factory.core_.BeanFactory;
 
 /**
  * {@link org.springframework.aop.aspectj.AspectInstanceFactory} backed by a
@@ -31,7 +31,7 @@ import org.springframework.beans.factory.BeanFactory;
  * @author Rod Johnson
  * @author Juergen Hoeller
  * @since 2.0
- * @see org.springframework.beans.factory.BeanFactory
+ * @see BeanFactory
  * @see LazySingletonAspectInstanceFactoryDecorator
  */
 @SuppressWarnings("serial")

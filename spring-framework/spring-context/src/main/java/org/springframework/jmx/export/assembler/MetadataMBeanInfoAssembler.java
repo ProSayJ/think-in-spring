@@ -24,7 +24,7 @@ import javax.management.MBeanParameterInfo;
 import javax.management.modelmbean.ModelMBeanNotificationInfo;
 
 import org.springframework.aop.support.AopUtils;
-import org.springframework.beans.BeanUtils;
+import org.springframework.beans.util_.bean_.BeanUtils;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.jmx.export.metadata.InvalidMetadataException;
 import org.springframework.jmx.export.metadata.JmxAttributeSource;

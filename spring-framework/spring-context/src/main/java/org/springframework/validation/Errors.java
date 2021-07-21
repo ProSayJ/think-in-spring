@@ -18,7 +18,7 @@ package org.springframework.validation;
 
 import java.util.List;
 
-import org.springframework.beans.PropertyAccessor;
+import org.springframework.beans.util_.property_.access_.PropertyAccessor;
 import org.springframework.lang.Nullable;
 
 /**
@@ -47,7 +47,7 @@ public interface Errors {
 	 * The separator between path elements in a nested path,
 	 * for example in "customer.name" or "customer.address.street".
 	 * <p>"." = same as the
-	 * {@link org.springframework.beans.PropertyAccessor#NESTED_PROPERTY_SEPARATOR nested property separator}
+	 * {@link PropertyAccessor#NESTED_PROPERTY_SEPARATOR nested property separator}
 	 * in the beans package.
 	 */
 	String NESTED_PATH_SEPARATOR = PropertyAccessor.NESTED_PROPERTY_SEPARATOR;

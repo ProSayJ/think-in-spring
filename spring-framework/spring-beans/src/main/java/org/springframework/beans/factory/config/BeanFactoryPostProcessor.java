@@ -16,7 +16,7 @@
 
 package org.springframework.beans.factory.config;
 
-import org.springframework.beans.BeansException;
+import org.springframework.beans.expection_.BeansException;
 
 /**
  * Factory hook that allows for custom modification of an application context's
@@ -68,7 +68,7 @@ public interface BeanFactoryPostProcessor {
 	 * will have been instantiated yet. This allows for overriding or adding
 	 * properties even to eager-initializing beans.
 	 * @param beanFactory the bean factory used by the application context
-	 * @throws org.springframework.beans.BeansException in case of errors
+	 * @throws BeansException in case of errors
 	 */
 	void postProcessBeanFactory(ConfigurableListableBeanFactory beanFactory) throws BeansException;
 

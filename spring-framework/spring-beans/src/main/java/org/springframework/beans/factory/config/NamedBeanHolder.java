@@ -16,7 +16,7 @@
 
 package org.springframework.beans.factory.config;
 
-import org.springframework.beans.factory.NamedBean;
+import org.springframework.beans.factory.mode_.NamedBean;
 import org.springframework.util.Assert;
 
 /**

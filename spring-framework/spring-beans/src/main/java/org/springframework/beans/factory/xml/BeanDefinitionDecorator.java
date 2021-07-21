@@ -16,6 +16,7 @@
 
 package org.springframework.beans.factory.xml;
 
+import org.springframework.beans.factory.core_.BeanFactory;
 import org.w3c.dom.Node;
 
 import org.springframework.beans.factory.config.BeanDefinitionHolder;
@@ -63,7 +64,7 @@ public interface BeanDefinitionDecorator {
 	 * returning the decorated definition.
 	 * <p>Implementations may choose to return a completely new definition, which will
 	 * replace the original definition in the resulting
-	 * {@link org.springframework.beans.factory.BeanFactory}.
+	 * {@link BeanFactory}.
 	 * <p>The supplied {@link ParserContext} can be used to register any additional
 	 * beans needed to support the main definition.
 	 */

@@ -18,7 +18,7 @@ package org.springframework.context.support;
 
 import java.io.IOException;
 
-import org.springframework.beans.BeansException;
+import org.springframework.beans.expection_.BeansException;
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;
 import org.springframework.context.ApplicationContext;

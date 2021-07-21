@@ -19,7 +19,7 @@ package org.springframework.dao.support;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
-import org.springframework.beans.factory.BeanInitializationException;
+import org.springframework.beans.factory.expection_.BeanInitializationException;
 import org.springframework.beans.factory.InitializingBean;
 
 /**
@@ -65,7 +65,7 @@ public abstract class DaoSupport implements InitializingBean {
 	 * Gets called after population of this instance's bean properties.
 	 * @throws Exception if DAO initialization fails
 	 * (will be rethrown as a BeanInitializationException)
-	 * @see org.springframework.beans.factory.BeanInitializationException
+	 * @see BeanInitializationException
 	 */
 	protected void initDao() throws Exception {
 	}

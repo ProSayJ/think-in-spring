@@ -16,8 +16,8 @@
 
 package org.springframework.transaction.config;
 
-import org.springframework.beans.BeanUtils;
-import org.springframework.beans.factory.FactoryBean;
+import org.springframework.beans.util_.bean_.BeanUtils;
+import org.springframework.beans.factory.core_.FactoryBean;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.lang.Nullable;
 import org.springframework.transaction.TransactionSystemException;

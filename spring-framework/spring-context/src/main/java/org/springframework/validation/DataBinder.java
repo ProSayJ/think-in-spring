@@ -28,17 +28,18 @@ import java.util.Map;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
-import org.springframework.beans.ConfigurablePropertyAccessor;
-import org.springframework.beans.MutablePropertyValues;
-import org.springframework.beans.PropertyAccessException;
-import org.springframework.beans.PropertyAccessorUtils;
-import org.springframework.beans.PropertyBatchUpdateException;
-import org.springframework.beans.PropertyEditorRegistry;
-import org.springframework.beans.PropertyValue;
-import org.springframework.beans.PropertyValues;
+import org.springframework.beans.util_.property_.access_.ConfigurablePropertyAccessor;
+import org.springframework.beans.util_.bean_.wrapper_.BeanWrapper;
+import org.springframework.beans.util_.property_.value_.MutablePropertyValues;
+import org.springframework.beans.expection_.PropertyAccessException;
+import org.springframework.beans.util_.property_.access_.PropertyAccessorUtils;
+import org.springframework.beans.expection_.PropertyBatchUpdateException;
+import org.springframework.beans.util_.property_.editor_.PropertyEditorRegistry;
+import org.springframework.beans.util_.property_.value_.PropertyValue;
+import org.springframework.beans.util_.property_.value_.PropertyValues;
 import org.springframework.beans.SimpleTypeConverter;
-import org.springframework.beans.TypeConverter;
-import org.springframework.beans.TypeMismatchException;
+import org.springframework.beans.util_.typeconverter_.TypeConverter;
+import org.springframework.beans.expection_.TypeMismatchException;
 import org.springframework.core.MethodParameter;
 import org.springframework.core.convert.ConversionService;
 import org.springframework.core.convert.TypeDescriptor;
@@ -205,7 +206,7 @@ public class DataBinder implements PropertyEditorRegistry, TypeConverter {
 	 * <p>Default is "true" on a standard DataBinder. Note that since Spring 4.1 this feature is supported
 	 * for bean property access (DataBinder's default mode) and field access.
 	 * @see #initBeanPropertyAccess()
-	 * @see org.springframework.beans.BeanWrapper#setAutoGrowNestedPaths
+	 * @see BeanWrapper#setAutoGrowNestedPaths
 	 */
 	public void setAutoGrowNestedPaths(boolean autoGrowNestedPaths) {
 		Assert.state(this.bindingResult == null,
@@ -225,7 +226,7 @@ public class DataBinder implements PropertyEditorRegistry, TypeConverter {
 	 * <p>Default is 256, preventing OutOfMemoryErrors in case of large indexes.
 	 * Raise this limit if your auto-growing needs are unusually high.
 	 * @see #initBeanPropertyAccess()
-	 * @see org.springframework.beans.BeanWrapper#setAutoGrowCollectionLimit
+	 * @see BeanWrapper#setAutoGrowCollectionLimit
 	 */
 	public void setAutoGrowCollectionLimit(int autoGrowCollectionLimit) {
 		Assert.state(this.bindingResult == null,
@@ -721,7 +722,7 @@ public class DataBinder implements PropertyEditorRegistry, TypeConverter {
 	 * copy will be created for this purpose. Pass in a copy of the PropertyValues
 	 * if you want your original instance to stay unmodified in any case.
 	 * @param pvs property values to bind
-	 * @see #doBind(org.springframework.beans.MutablePropertyValues)
+	 * @see #doBind(MutablePropertyValues)
 	 */
 	public void bind(PropertyValues pvs) {
 		MutablePropertyValues mpvs = (pvs instanceof MutablePropertyValues ?

@@ -16,7 +16,7 @@
 
 package org.springframework.validation;
 
-import org.springframework.beans.PropertyAccessException;
+import org.springframework.beans.expection_.PropertyAccessException;
 
 /**
  * Strategy for processing {@code DataBinder}'s missing field errors,

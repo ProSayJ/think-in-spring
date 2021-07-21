@@ -16,6 +16,9 @@
 
 package org.springframework.beans.factory;
 
+import org.springframework.beans.factory.core_.BeanFactory;
+import org.springframework.beans.factory.core_.ListableBeanFactory;
+
 /**
  * Callback interface triggered at the end of the singleton pre-instantiation phase
  * during {@link BeanFactory} bootstrap. This interface can be implemented by

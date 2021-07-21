@@ -22,8 +22,9 @@ import java.util.Map;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
-import org.springframework.beans.BeansException;
-import org.springframework.beans.PropertyEditorRegistrar;
+import org.springframework.beans.expection_.BeansException;
+import org.springframework.beans.util_.property_.editor_.PropertyEditorRegistrar;
+import org.springframework.beans.util_.property_.editor_.PropertyEditorRegistry;
 import org.springframework.core.Ordered;
 import org.springframework.lang.Nullable;
 import org.springframework.util.ClassUtils;
@@ -36,7 +37,7 @@ import org.springframework.util.ClassUtils;
  * the recommended usage as of Spring 2.0 is to use custom
  * {@link PropertyEditorRegistrar} implementations that in turn register any
  * desired editor instances on a given
- * {@link org.springframework.beans.PropertyEditorRegistry registry}. Each
+ * {@link PropertyEditorRegistry registry}. Each
  * PropertyEditorRegistrar can register any number of custom editors.
  *
  * <pre class="code">
@@ -88,7 +89,7 @@ import org.springframework.util.ClassUtils;
  * @author Juergen Hoeller
  * @since 27.02.2004
  * @see java.beans.PropertyEditor
- * @see org.springframework.beans.PropertyEditorRegistrar
+ * @see PropertyEditorRegistrar
  * @see ConfigurableBeanFactory#addPropertyEditorRegistrar
  * @see ConfigurableBeanFactory#registerCustomEditor
  * @see org.springframework.validation.DataBinder#registerCustomEditor

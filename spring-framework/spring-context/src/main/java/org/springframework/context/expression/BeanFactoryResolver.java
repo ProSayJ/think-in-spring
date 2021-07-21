@@ -16,8 +16,8 @@
 
 package org.springframework.context.expression;
 
-import org.springframework.beans.BeansException;
-import org.springframework.beans.factory.BeanFactory;
+import org.springframework.beans.expection_.BeansException;
+import org.springframework.beans.factory.core_.BeanFactory;
 import org.springframework.expression.AccessException;
 import org.springframework.expression.BeanResolver;
 import org.springframework.expression.EvaluationContext;
@@ -25,7 +25,7 @@ import org.springframework.util.Assert;
 
 /**
  * EL bean resolver that operates against a Spring
- * {@link org.springframework.beans.factory.BeanFactory}.
+ * {@link BeanFactory}.
  *
  * @author Juergen Hoeller
  * @since 3.0.4

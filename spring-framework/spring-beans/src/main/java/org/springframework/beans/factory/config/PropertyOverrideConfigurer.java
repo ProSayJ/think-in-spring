@@ -22,9 +22,9 @@ import java.util.Properties;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
-import org.springframework.beans.BeansException;
-import org.springframework.beans.PropertyValue;
-import org.springframework.beans.factory.BeanInitializationException;
+import org.springframework.beans.expection_.BeansException;
+import org.springframework.beans.util_.property_.value_.PropertyValue;
+import org.springframework.beans.factory.expection_.BeanInitializationException;
 
 /**
  * Property resource configurer that overrides bean property values in an application

@@ -25,12 +25,13 @@ import java.util.Set;
 import javax.naming.NameNotFoundException;
 import javax.naming.NamingException;
 
-import org.springframework.beans.BeansException;
-import org.springframework.beans.factory.BeanDefinitionStoreException;
-import org.springframework.beans.factory.BeanFactory;
-import org.springframework.beans.factory.BeanNotOfRequiredTypeException;
-import org.springframework.beans.factory.NoSuchBeanDefinitionException;
-import org.springframework.beans.factory.NoUniqueBeanDefinitionException;
+import org.springframework.beans.expection_.BeansException;
+import org.springframework.beans.factory.core_.ListableBeanFactory;
+import org.springframework.beans.factory.expection_.BeanDefinitionStoreException;
+import org.springframework.beans.factory.core_.BeanFactory;
+import org.springframework.beans.factory.expection_.BeanNotOfRequiredTypeException;
+import org.springframework.beans.factory.expection_.NoSuchBeanDefinitionException;
+import org.springframework.beans.factory.expection_.NoUniqueBeanDefinitionException;
 import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.context.annotation.processor_.CommonAnnotationBeanPostProcessor;
 import org.springframework.core.ResolvableType;
@@ -40,9 +41,9 @@ import org.springframework.lang.Nullable;
 
 /**
  * Simple JNDI-based implementation of Spring's
- * {@link org.springframework.beans.factory.BeanFactory} interface.
+ * {@link BeanFactory} interface.
  * Does not support enumerating bean definitions, hence doesn't implement
- * the {@link org.springframework.beans.factory.ListableBeanFactory} interface.
+ * the {@link ListableBeanFactory} interface.
  *
  * <p>This factory resolves given bean names as JNDI names within the
  * Java EE application's "java:comp/env/" namespace. It caches the resolved

@@ -24,7 +24,7 @@ import org.springframework.aop.ProxyMethodInvocation;
 import org.springframework.aop.support.DefaultIntroductionAdvisor;
 import org.springframework.aop.support.DefaultPointcutAdvisor;
 import org.springframework.aop.support.DelegatingIntroductionInterceptor;
-import org.springframework.beans.factory.NamedBean;
+import org.springframework.beans.factory.mode_.NamedBean;
 
 /**
  * Convenient methods for creating advisors that may be used when autoproxying beans
@@ -37,7 +37,7 @@ import org.springframework.beans.factory.NamedBean;
  * @author Rod Johnson
  * @author Juergen Hoeller
  * @since 2.0
- * @see org.springframework.beans.factory.NamedBean
+ * @see NamedBean
  */
 public abstract class ExposeBeanNameAdvisors {
 

@@ -16,9 +16,11 @@
 
 package org.springframework.beans.factory.parsing;
 
-import org.springframework.beans.BeanMetadataElement;
+import org.springframework.beans.util_.bean_.matadata_.BeanMetadataElement;
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.beans.factory.config.BeanReference;
+import org.springframework.beans.factory.core_.BeanFactory;
+import org.springframework.beans.util_.property_.value_.PropertyValue;
 
 /**
  * Interface that describes the logical view of a set of {@link BeanDefinition BeanDefinitions}
@@ -31,7 +33,7 @@ import org.springframework.beans.factory.config.BeanReference;
  * no longer be assumed that each configuration entity (e.g. XML tag) maps to one {@link BeanDefinition}.
  * For tool vendors and other users who wish to present visualization or support for configuring Spring
  * applications it is important that there is some mechanism in place to tie the {@link BeanDefinition BeanDefinitions}
- * in the {@link org.springframework.beans.factory.BeanFactory} back to the configuration data in a way
+ * in the {@link BeanFactory} back to the configuration data in a way
  * that has concrete meaning to the end user. As such, {@link org.springframework.beans.factory.xml.NamespaceHandler}
  * implementations are able to publish events in the form of a {@code ComponentDefinition} for each
  * logical entity being configured. Third parties can then {@link ReaderEventListener subscribe to these events},
@@ -42,7 +44,7 @@ import org.springframework.beans.factory.config.BeanReference;
  * supplied configuration information. In addition to this, each {@link BeanDefinition} enclosed in a
  * {@code ComponentDefinition} has its own {@link BeanDefinition#getSource() source object} which may point
  * to a different, more specific, set of configuration data. Beyond this, individual pieces of bean metadata such
- * as the {@link org.springframework.beans.PropertyValue PropertyValues} may also have a source object giving an
+ * as the {@link PropertyValue PropertyValues} may also have a source object giving an
  * even greater level of detail. Source object extraction is handled through the
  * {@link SourceExtractor} which can be customized as required.
  *

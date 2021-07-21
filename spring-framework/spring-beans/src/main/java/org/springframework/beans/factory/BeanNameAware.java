@@ -16,6 +16,9 @@
 
 package org.springframework.beans.factory;
 
+import org.springframework.beans.factory.core_.BeanFactory;
+import org.springframework.beans.factory.util_.BeanFactoryUtils;
+
 /**
  * Interface to be implemented by beans that want to be aware of their
  * bean name in a bean factory. Note that it is not usually recommended

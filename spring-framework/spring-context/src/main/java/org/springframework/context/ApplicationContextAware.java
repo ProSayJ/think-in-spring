@@ -16,8 +16,10 @@
 
 package org.springframework.context;
 
-import org.springframework.beans.BeansException;
+import org.springframework.beans.expection_.BeansException;
 import org.springframework.beans.factory.Aware;
+import org.springframework.beans.factory.expection_.BeanInitializationException;
+import org.springframework.beans.factory.core_.BeanFactory;
 
 /**
  * Interface to be implemented by any object that wishes to be notified
@@ -45,7 +47,7 @@ import org.springframework.beans.factory.Aware;
  * convenience base class for application objects, implementing this interface.
  *
  * <p>For a list of all bean lifecycle methods, see the
- * {@link org.springframework.beans.factory.BeanFactory BeanFactory javadocs}.
+ * {@link BeanFactory BeanFactory javadocs}.
  *
  * @author Rod Johnson
  * @author Juergen Hoeller
@@ -69,7 +71,7 @@ public interface ApplicationContextAware extends Aware {
 	 * @param applicationContext the ApplicationContext object to be used by this object
 	 * @throws ApplicationContextException in case of context initialization errors
 	 * @throws BeansException if thrown by application context methods
-	 * @see org.springframework.beans.factory.BeanInitializationException
+	 * @see BeanInitializationException
 	 */
 	void setApplicationContext(ApplicationContext applicationContext) throws BeansException;
 

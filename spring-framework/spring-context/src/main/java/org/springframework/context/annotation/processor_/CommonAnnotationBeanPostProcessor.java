@@ -48,12 +48,12 @@ import javax.xml.ws.WebServiceRef;
 
 import org.springframework.aop.TargetSource;
 import org.springframework.aop.framework.ProxyFactory;
-import org.springframework.beans.BeanUtils;
-import org.springframework.beans.PropertyValues;
-import org.springframework.beans.factory.BeanCreationException;
-import org.springframework.beans.factory.BeanFactory;
+import org.springframework.beans.util_.bean_.BeanUtils;
+import org.springframework.beans.util_.property_.value_.PropertyValues;
+import org.springframework.beans.factory.expection_.BeanCreationException;
+import org.springframework.beans.factory.core_.BeanFactory;
 import org.springframework.beans.factory.BeanFactoryAware;
-import org.springframework.beans.factory.NoSuchBeanDefinitionException;
+import org.springframework.beans.factory.expection_.NoSuchBeanDefinitionException;
 import org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor;
 import org.springframework.beans.factory.annotation.InjectionMetadata;
 import org.springframework.beans.factory.config.AutowireCapableBeanFactory;

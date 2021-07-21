@@ -16,6 +16,7 @@
 
 package org.springframework.beans.factory.xml;
 
+import org.springframework.beans.util_.property_.value_.PropertyValue;
 import org.w3c.dom.Attr;
 import org.w3c.dom.Element;
 import org.w3c.dom.NamedNodeMap;
@@ -111,7 +112,7 @@ public abstract class AbstractSimpleBeanDefinitionParser extends AbstractSingleB
 	 * Parse the supplied {@link Element} and populate the supplied
 	 * {@link BeanDefinitionBuilder} as required.
 	 * <p>This implementation maps any attributes present on the
-	 * supplied element to {@link org.springframework.beans.PropertyValue}
+	 * supplied element to {@link PropertyValue}
 	 * instances, and
 	 * {@link BeanDefinitionBuilder#addPropertyValue(String, Object) adds them}
 	 * to the

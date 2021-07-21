@@ -31,7 +31,7 @@ import javax.management.remote.JMXServiceURL;
 import javax.management.remote.MBeanServerForwarder;
 
 import org.springframework.beans.factory.DisposableBean;
-import org.springframework.beans.factory.FactoryBean;
+import org.springframework.beans.factory.core_.FactoryBean;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.jmx.JmxException;
 import org.springframework.lang.Nullable;

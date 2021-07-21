@@ -22,14 +22,14 @@ import javax.resource.spi.ResourceAdapter;
 import javax.resource.spi.XATerminator;
 import javax.resource.spi.work.WorkManager;
 
-import org.springframework.beans.BeanUtils;
+import org.springframework.beans.util_.bean_.BeanUtils;
 import org.springframework.beans.factory.DisposableBean;
-import org.springframework.beans.factory.FactoryBean;
+import org.springframework.beans.factory.core_.FactoryBean;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.lang.Nullable;
 
 /**
- * {@link org.springframework.beans.factory.FactoryBean} that bootstraps
+ * {@link FactoryBean} that bootstraps
  * the specified JCA 1.7 {@link javax.resource.spi.ResourceAdapter},
  * starting it with a local {@link javax.resource.spi.BootstrapContext}
  * and exposing it for bean references. It will also stop the ResourceAdapter

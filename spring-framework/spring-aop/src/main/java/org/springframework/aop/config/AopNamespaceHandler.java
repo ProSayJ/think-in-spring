@@ -17,6 +17,7 @@
 package org.springframework.aop.config;
 
 import org.springframework.aop.aspectj.AspectJExpressionPointcut;
+import org.springframework.beans.factory.core_.BeanFactory;
 import org.springframework.beans.factory.xml.BeanDefinitionParser;
 import org.springframework.beans.factory.xml.NamespaceHandlerSupport;
 
@@ -34,7 +35,7 @@ import org.springframework.beans.factory.xml.NamespaceHandlerSupport;
  * </pre>
  *
  * <p>Using the {@code advisor} tag you can configure an {@link org.springframework.aop.Advisor}
- * and have it applied to all relevant beans in you {@link org.springframework.beans.factory.BeanFactory}
+ * and have it applied to all relevant beans in you {@link BeanFactory}
  * automatically. The {@code advisor} tag supports both in-line and referenced
  * {@link org.springframework.aop.Pointcut Pointcuts}:
  *

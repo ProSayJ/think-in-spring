@@ -27,19 +27,19 @@ import org.aopalliance.intercept.MethodInvocation;
 
 import org.springframework.aop.framework.ProxyFactory;
 import org.springframework.beans.SimpleTypeConverter;
-import org.springframework.beans.TypeConverter;
-import org.springframework.beans.TypeMismatchException;
+import org.springframework.beans.util_.typeconverter_.TypeConverter;
+import org.springframework.beans.expection_.TypeMismatchException;
 import org.springframework.beans.factory.BeanClassLoaderAware;
-import org.springframework.beans.factory.BeanFactory;
+import org.springframework.beans.factory.core_.BeanFactory;
 import org.springframework.beans.factory.BeanFactoryAware;
-import org.springframework.beans.factory.FactoryBean;
+import org.springframework.beans.factory.core_.FactoryBean;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.lang.Nullable;
 import org.springframework.util.Assert;
 import org.springframework.util.ClassUtils;
 
 /**
- * {@link org.springframework.beans.factory.FactoryBean} that looks up a
+ * {@link FactoryBean} that looks up a
  * JNDI object. Exposes the object found in JNDI for bean references,
  * e.g. for data access object's "dataSource" property in case of a
  * {@link javax.sql.DataSource}.

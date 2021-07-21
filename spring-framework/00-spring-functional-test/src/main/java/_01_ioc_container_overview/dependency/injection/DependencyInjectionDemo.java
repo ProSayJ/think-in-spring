@@ -17,7 +17,6 @@
 package _01_ioc_container_overview.dependency.injection;
 
 import _01_ioc_container_overview.repository.UserRepository;
-import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.ObjectFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;

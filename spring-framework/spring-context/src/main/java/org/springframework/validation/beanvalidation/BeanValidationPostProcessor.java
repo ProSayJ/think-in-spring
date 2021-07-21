@@ -25,8 +25,8 @@ import javax.validation.Validator;
 import javax.validation.ValidatorFactory;
 
 import org.springframework.aop.framework.AopProxyUtils;
-import org.springframework.beans.BeansException;
-import org.springframework.beans.factory.BeanInitializationException;
+import org.springframework.beans.expection_.BeansException;
+import org.springframework.beans.factory.expection_.BeanInitializationException;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.lang.Nullable;

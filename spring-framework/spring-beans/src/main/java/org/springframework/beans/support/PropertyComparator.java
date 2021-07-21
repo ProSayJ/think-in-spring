@@ -23,8 +23,9 @@ import java.util.List;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
-import org.springframework.beans.BeanWrapperImpl;
-import org.springframework.beans.BeansException;
+import org.springframework.beans.util_.bean_.wrapper_.BeanWrapperImpl;
+import org.springframework.beans.expection_.BeansException;
+import org.springframework.beans.util_.bean_.wrapper_.BeanWrapper;
 import org.springframework.lang.Nullable;
 import org.springframework.util.StringUtils;
 
@@ -36,7 +37,7 @@ import org.springframework.util.StringUtils;
  * @author Jean-Pierre Pawlak
  * @since 19.05.2003
  * @param <T> the type of objects that may be compared by this comparator
- * @see org.springframework.beans.BeanWrapper
+ * @see BeanWrapper
  */
 public class PropertyComparator<T> implements Comparator<T> {
 

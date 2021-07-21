@@ -18,7 +18,7 @@ package org.springframework.aop.aspectj;
 
 import org.springframework.aop.Pointcut;
 import org.springframework.aop.support.AbstractGenericPointcutAdvisor;
-import org.springframework.beans.factory.BeanFactory;
+import org.springframework.beans.factory.core_.BeanFactory;
 import org.springframework.beans.factory.BeanFactoryAware;
 import org.springframework.lang.Nullable;
 

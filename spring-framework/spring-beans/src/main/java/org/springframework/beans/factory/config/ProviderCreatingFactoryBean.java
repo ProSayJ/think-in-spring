@@ -20,15 +20,16 @@ import java.io.Serializable;
 
 import javax.inject.Provider;
 
-import org.springframework.beans.BeansException;
-import org.springframework.beans.factory.BeanFactory;
+import org.springframework.beans.expection_.BeansException;
+import org.springframework.beans.factory.core_.BeanFactory;
+import org.springframework.beans.factory.core_.FactoryBean;
 import org.springframework.lang.Nullable;
 import org.springframework.util.Assert;
 
 /**
- * A {@link org.springframework.beans.factory.FactoryBean} implementation that
+ * A {@link FactoryBean} implementation that
  * returns a value which is a JSR-330 {@link javax.inject.Provider} that in turn
- * returns a bean sourced from a {@link org.springframework.beans.factory.BeanFactory}.
+ * returns a bean sourced from a {@link BeanFactory}.
  *
  * <p>This is basically a JSR-330 compliant variant of Spring's good old
  * {@link ObjectFactoryCreatingFactoryBean}. It can be used for traditional

@@ -20,8 +20,8 @@ import java.io.IOException;
 import java.util.Enumeration;
 import java.util.Properties;
 
-import org.springframework.beans.BeansException;
-import org.springframework.beans.factory.BeanInitializationException;
+import org.springframework.beans.expection_.BeansException;
+import org.springframework.beans.factory.expection_.BeanInitializationException;
 import org.springframework.core.Ordered;
 import org.springframework.core.PriorityOrdered;
 import org.springframework.core.io.support.PropertiesLoaderSupport;
@@ -146,7 +146,7 @@ public abstract class PropertyResourceConfigurer extends PropertiesLoaderSupport
 	 * Apply the given Properties to the given BeanFactory.
 	 * @param beanFactory the BeanFactory used by the application context
 	 * @param props the Properties to apply
-	 * @throws org.springframework.beans.BeansException in case of errors
+	 * @throws BeansException in case of errors
 	 */
 	protected abstract void processProperties(ConfigurableListableBeanFactory beanFactory, Properties props)
 			throws BeansException;

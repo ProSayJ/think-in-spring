@@ -16,6 +16,8 @@
 
 package org.springframework.beans.factory;
 
+import org.springframework.beans.factory.core_.BeanFactory;
+
 /**
  * Interface to be implemented by beans that want to release resources on destruction.
  * A {@link BeanFactory} will invoke the destroy method on individual destruction of a

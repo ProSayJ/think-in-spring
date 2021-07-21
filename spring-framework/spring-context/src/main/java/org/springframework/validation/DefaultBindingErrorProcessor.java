@@ -16,7 +16,9 @@
 
 package org.springframework.validation;
 
-import org.springframework.beans.PropertyAccessException;
+import org.springframework.beans.expection_.PropertyAccessException;
+import org.springframework.beans.expection_.MethodInvocationException;
+import org.springframework.beans.expection_.TypeMismatchException;
 import org.springframework.context.support.DefaultMessageSourceResolvable;
 import org.springframework.util.Assert;
 import org.springframework.util.ObjectUtils;
@@ -39,9 +41,9 @@ import org.springframework.util.StringUtils;
  * @see DataBinder#setBindingErrorProcessor
  * @see BeanPropertyBindingResult#addError
  * @see BeanPropertyBindingResult#resolveMessageCodes
- * @see org.springframework.beans.PropertyAccessException#getErrorCode
- * @see org.springframework.beans.TypeMismatchException#ERROR_CODE
- * @see org.springframework.beans.MethodInvocationException#ERROR_CODE
+ * @see PropertyAccessException#getErrorCode
+ * @see TypeMismatchException#ERROR_CODE
+ * @see MethodInvocationException#ERROR_CODE
  */
 public class DefaultBindingErrorProcessor implements BindingErrorProcessor {
 

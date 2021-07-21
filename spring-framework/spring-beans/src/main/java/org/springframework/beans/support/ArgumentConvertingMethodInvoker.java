@@ -19,10 +19,11 @@ package org.springframework.beans.support;
 import java.beans.PropertyEditor;
 import java.lang.reflect.Method;
 
-import org.springframework.beans.PropertyEditorRegistry;
+import org.springframework.beans.util_.bean_.wrapper_.BeanWrapperImpl;
+import org.springframework.beans.util_.property_.editor_.PropertyEditorRegistry;
 import org.springframework.beans.SimpleTypeConverter;
-import org.springframework.beans.TypeConverter;
-import org.springframework.beans.TypeMismatchException;
+import org.springframework.beans.util_.typeconverter_.TypeConverter;
+import org.springframework.beans.expection_.TypeMismatchException;
 import org.springframework.lang.Nullable;
 import org.springframework.util.Assert;
 import org.springframework.util.MethodInvoker;
@@ -37,7 +38,7 @@ import org.springframework.util.ReflectionUtils;
  *
  * @author Juergen Hoeller
  * @since 1.1
- * @see org.springframework.beans.BeanWrapperImpl#convertIfNecessary
+ * @see BeanWrapperImpl#convertIfNecessary
  */
 public class ArgumentConvertingMethodInvoker extends MethodInvoker {
 
@@ -53,7 +54,7 @@ public class ArgumentConvertingMethodInvoker extends MethodInvoker {
 	 * Can be overridden with any TypeConverter implementation, typically
 	 * a pre-configured SimpleTypeConverter or a BeanWrapperImpl instance.
 	 * @see org.springframework.beans.SimpleTypeConverter
-	 * @see org.springframework.beans.BeanWrapperImpl
+	 * @see BeanWrapperImpl
 	 */
 	public void setTypeConverter(@Nullable TypeConverter typeConverter) {
 		this.typeConverter = typeConverter;
@@ -62,7 +63,7 @@ public class ArgumentConvertingMethodInvoker extends MethodInvoker {
 
 	/**
 	 * Return the TypeConverter used for argument type conversion.
-	 * <p>Can be cast to {@link org.springframework.beans.PropertyEditorRegistry}
+	 * <p>Can be cast to {@link PropertyEditorRegistry}
 	 * if direct access to the underlying PropertyEditors is desired
 	 * (provided that the present TypeConverter actually implements the
 	 * PropertyEditorRegistry interface).
@@ -94,7 +95,7 @@ public class ArgumentConvertingMethodInvoker extends MethodInvoker {
 	 * @param requiredType type of the property
 	 * @param propertyEditor editor to register
 	 * @see #setTypeConverter
-	 * @see org.springframework.beans.PropertyEditorRegistry#registerCustomEditor
+	 * @see PropertyEditorRegistry#registerCustomEditor
 	 */
 	public void registerCustomEditor(Class<?> requiredType, PropertyEditor propertyEditor) {
 		TypeConverter converter = getTypeConverter();

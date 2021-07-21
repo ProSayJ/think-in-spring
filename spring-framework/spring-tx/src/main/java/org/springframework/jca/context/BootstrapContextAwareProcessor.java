@@ -18,7 +18,7 @@ package org.springframework.jca.context;
 
 import javax.resource.spi.BootstrapContext;
 
-import org.springframework.beans.BeansException;
+import org.springframework.beans.expection_.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.lang.Nullable;
 

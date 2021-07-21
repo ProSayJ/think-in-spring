@@ -17,7 +17,7 @@
 package org.springframework.aop.config;
 
 import org.springframework.aop.aspectj.AspectInstanceFactory;
-import org.springframework.beans.factory.BeanFactory;
+import org.springframework.beans.factory.core_.BeanFactory;
 import org.springframework.beans.factory.BeanFactoryAware;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.core.Ordered;
@@ -27,7 +27,7 @@ import org.springframework.util.ClassUtils;
 
 /**
  * Implementation of {@link AspectInstanceFactory} that locates the aspect from the
- * {@link org.springframework.beans.factory.BeanFactory} using a configured bean name.
+ * {@link BeanFactory} using a configured bean name.
  *
  * @author Rob Harrop
  * @author Juergen Hoeller

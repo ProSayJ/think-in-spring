@@ -16,8 +16,8 @@
 
 package org.springframework.beans.factory.config;
 
-import org.springframework.beans.factory.FactoryBean;
-import org.springframework.beans.factory.FactoryBeanNotInitializedException;
+import org.springframework.beans.factory.core_.FactoryBean;
+import org.springframework.beans.factory.expection_.FactoryBeanNotInitializedException;
 import org.springframework.lang.Nullable;
 
 /**

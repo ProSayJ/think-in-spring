@@ -19,6 +19,7 @@ package org.springframework.aop.scope;
 import java.io.Serializable;
 
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
+import org.springframework.beans.factory.core_.BeanFactory;
 import org.springframework.util.Assert;
 
 /**
@@ -31,7 +32,7 @@ import org.springframework.util.Assert;
  *
  * @author Juergen Hoeller
  * @since 2.0
- * @see org.springframework.beans.factory.BeanFactory#getBean
+ * @see BeanFactory#getBean
  * @see org.springframework.beans.factory.config.ConfigurableBeanFactory#destroyScopedBean
  */
 @SuppressWarnings("serial")

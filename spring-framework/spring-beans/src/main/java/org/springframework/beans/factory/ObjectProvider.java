@@ -21,7 +21,8 @@ import java.util.function.Consumer;
 import java.util.function.Supplier;
 import java.util.stream.Stream;
 
-import org.springframework.beans.BeansException;
+import org.springframework.beans.expection_.BeansException;
+import org.springframework.beans.factory.core_.BeanFactory;
 import org.springframework.lang.Nullable;
 
 /**

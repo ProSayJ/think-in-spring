@@ -16,6 +16,8 @@
 
 package org.springframework.beans.factory;
 
+import org.springframework.beans.factory.core_.BeanFactory;
+
 /**
  * Interface to be implemented by beans that need to react once all their properties
  * have been set by a {@link BeanFactory}: e.g. to perform custom initialization,

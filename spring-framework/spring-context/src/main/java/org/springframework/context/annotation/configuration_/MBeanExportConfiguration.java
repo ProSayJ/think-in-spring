@@ -21,7 +21,7 @@ import java.util.Map;
 import javax.management.MBeanServer;
 import javax.naming.NamingException;
 
-import org.springframework.beans.factory.BeanFactory;
+import org.springframework.beans.factory.core_.BeanFactory;
 import org.springframework.beans.factory.BeanFactoryAware;
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.context.EnvironmentAware;

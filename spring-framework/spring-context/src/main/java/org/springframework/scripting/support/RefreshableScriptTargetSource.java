@@ -17,7 +17,7 @@
 package org.springframework.scripting.support;
 
 import org.springframework.aop.target.dynamic.BeanFactoryRefreshableTargetSource;
-import org.springframework.beans.factory.BeanFactory;
+import org.springframework.beans.factory.core_.BeanFactory;
 import org.springframework.scripting.ScriptFactory;
 import org.springframework.scripting.ScriptSource;
 import org.springframework.util.Assert;

@@ -21,7 +21,7 @@ import java.lang.reflect.Method;
 
 import javax.management.MBeanServer;
 
-import org.springframework.beans.factory.FactoryBean;
+import org.springframework.beans.factory.core_.FactoryBean;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.jmx.MBeanServerNotFoundException;
 import org.springframework.lang.Nullable;

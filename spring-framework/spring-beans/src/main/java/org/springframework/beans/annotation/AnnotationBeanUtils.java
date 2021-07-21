@@ -23,8 +23,8 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 
-import org.springframework.beans.BeanWrapper;
-import org.springframework.beans.PropertyAccessorFactory;
+import org.springframework.beans.util_.bean_.wrapper_.BeanWrapper;
+import org.springframework.beans.util_.property_.access_.PropertyAccessorFactory;
 import org.springframework.lang.Nullable;
 import org.springframework.util.ReflectionUtils;
 import org.springframework.util.StringValueResolver;
@@ -46,7 +46,7 @@ public abstract class AnnotationBeanUtils {
 	 * @param ann the annotation to copy from
 	 * @param bean the bean instance to copy to
 	 * @param excludedProperties the names of excluded properties, if any
-	 * @see org.springframework.beans.BeanWrapper
+	 * @see BeanWrapper
 	 */
 	public static void copyPropertiesToBean(Annotation ann, Object bean, String... excludedProperties) {
 		copyPropertiesToBean(ann, bean, null, excludedProperties);
@@ -60,7 +60,7 @@ public abstract class AnnotationBeanUtils {
 	 * @param bean the bean instance to copy to
 	 * @param valueResolver a resolve to post-process String property values (may be {@code null})
 	 * @param excludedProperties the names of excluded properties, if any
-	 * @see org.springframework.beans.BeanWrapper
+	 * @see BeanWrapper
 	 */
 	public static void copyPropertiesToBean(Annotation ann, Object bean, @Nullable StringValueResolver valueResolver,
 			String... excludedProperties) {

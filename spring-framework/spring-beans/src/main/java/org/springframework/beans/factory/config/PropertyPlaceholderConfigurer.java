@@ -18,7 +18,7 @@ package org.springframework.beans.factory.config;
 
 import java.util.Properties;
 
-import org.springframework.beans.BeansException;
+import org.springframework.beans.expection_.BeansException;
 import org.springframework.core.Constants;
 import org.springframework.core.SpringProperties;
 import org.springframework.core.env.AbstractEnvironment;

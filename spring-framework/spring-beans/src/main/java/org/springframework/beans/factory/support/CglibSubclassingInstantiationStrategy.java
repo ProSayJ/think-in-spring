@@ -22,9 +22,9 @@ import java.lang.reflect.Method;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
-import org.springframework.beans.BeanInstantiationException;
-import org.springframework.beans.BeanUtils;
-import org.springframework.beans.factory.BeanFactory;
+import org.springframework.beans.expection_.BeanInstantiationException;
+import org.springframework.beans.util_.bean_.BeanUtils;
+import org.springframework.beans.factory.core_.BeanFactory;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.cglib.core.ClassLoaderAwareGeneratorStrategy;
 import org.springframework.cglib.core.SpringNamingPolicy;

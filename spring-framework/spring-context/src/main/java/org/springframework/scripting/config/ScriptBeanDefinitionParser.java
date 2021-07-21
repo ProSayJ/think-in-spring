@@ -18,6 +18,7 @@ package org.springframework.scripting.config;
 
 import java.util.List;
 
+import org.springframework.beans.factory.core_.BeanFactory;
 import org.w3c.dom.Element;
 
 import org.springframework.beans.factory.config.ConstructorArgumentValues;
@@ -38,7 +39,7 @@ import org.springframework.util.xml.DomUtils;
  * BeanDefinitionParser implementation for the '{@code <lang:groovy/>}',
  * '{@code <lang:std/>}' and '{@code <lang:bsh/>}' tags.
  * Allows for objects written using dynamic languages to be easily exposed with
- * the {@link org.springframework.beans.factory.BeanFactory}.
+ * the {@link BeanFactory}.
  *
  * <p>The script for each object can be specified either as a reference to the
  * resource containing it (using the '{@code script-source}' attribute) or inline

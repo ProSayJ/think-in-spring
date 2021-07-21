@@ -22,6 +22,7 @@ import org.springframework.beans.factory.Aware;
 import org.springframework.beans.factory.BeanClassLoaderAware;
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
+import org.springframework.beans.factory.core_.BeanFactory;
 import org.springframework.core.Ordered;
 import org.springframework.lang.Nullable;
 import org.springframework.util.ClassUtils;
@@ -69,7 +70,7 @@ public class ProxyProcessorSupport extends ProxyConfig implements Ordered, BeanC
 	/**
 	 * Set the ClassLoader to generate the proxy class in.
 	 * <p>Default is the bean ClassLoader, i.e. the ClassLoader used by the containing
-	 * {@link org.springframework.beans.factory.BeanFactory} for loading all bean classes.
+	 * {@link BeanFactory} for loading all bean classes.
 	 * This can be overridden here for specific proxies.
 	 */
 	public void setProxyClassLoader(@Nullable ClassLoader classLoader) {

@@ -31,11 +31,11 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
 import org.springframework.beans.factory.DisposableBean;
-import org.springframework.beans.factory.FactoryBean;
+import org.springframework.beans.factory.core_.FactoryBean;
 import org.springframework.beans.factory.InitializingBean;
 
 /**
- * {@link org.springframework.beans.factory.FactoryBean} that creates a simple
+ * {@link FactoryBean} that creates a simple
  * HTTP server, based on the HTTP server that is included in Sun's JRE 1.6.
  * Starts the HTTP server on initialization and stops it on destruction.
  * Exposes the resulting {@link com.sun.net.httpserver.HttpServer} object.

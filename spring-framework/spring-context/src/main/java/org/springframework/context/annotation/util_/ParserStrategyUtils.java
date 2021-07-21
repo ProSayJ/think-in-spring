@@ -18,11 +18,11 @@ package org.springframework.context.annotation.util_;
 
 import java.lang.reflect.Constructor;
 
-import org.springframework.beans.BeanInstantiationException;
-import org.springframework.beans.BeanUtils;
+import org.springframework.beans.expection_.BeanInstantiationException;
+import org.springframework.beans.util_.bean_.BeanUtils;
 import org.springframework.beans.factory.Aware;
 import org.springframework.beans.factory.BeanClassLoaderAware;
-import org.springframework.beans.factory.BeanFactory;
+import org.springframework.beans.factory.core_.BeanFactory;
 import org.springframework.beans.factory.BeanFactoryAware;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.beans.factory.support.BeanDefinitionRegistry;

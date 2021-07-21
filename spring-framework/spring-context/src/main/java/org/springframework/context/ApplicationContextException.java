@@ -16,7 +16,7 @@
 
 package org.springframework.context;
 
-import org.springframework.beans.FatalBeanException;
+import org.springframework.beans.expection_.FatalBeanException;
 
 /**
  * Exception thrown during application context initialization.

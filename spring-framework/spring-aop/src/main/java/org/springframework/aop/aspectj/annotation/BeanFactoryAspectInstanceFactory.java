@@ -18,7 +18,7 @@ package org.springframework.aop.aspectj.annotation;
 
 import java.io.Serializable;
 
-import org.springframework.beans.factory.BeanFactory;
+import org.springframework.beans.factory.core_.BeanFactory;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.core.Ordered;
 import org.springframework.core.annotation.OrderUtils;
@@ -28,7 +28,7 @@ import org.springframework.util.ClassUtils;
 
 /**
  * {@link org.springframework.aop.aspectj.AspectInstanceFactory} implementation
- * backed by a Spring {@link org.springframework.beans.factory.BeanFactory}.
+ * backed by a Spring {@link BeanFactory}.
  *
  * <p>Note that this may instantiate multiple times if using a prototype,
  * which probably won't give the semantics you expect.
@@ -38,7 +38,7 @@ import org.springframework.util.ClassUtils;
  * @author Rod Johnson
  * @author Juergen Hoeller
  * @since 2.0
- * @see org.springframework.beans.factory.BeanFactory
+ * @see BeanFactory
  * @see LazySingletonAspectInstanceFactoryDecorator
  */
 @SuppressWarnings("serial")

@@ -16,6 +16,7 @@
 
 package org.springframework.aop.aspectj;
 
+import org.springframework.beans.factory.core_.BeanFactory;
 import org.springframework.core.Ordered;
 import org.springframework.lang.Nullable;
 
@@ -29,7 +30,7 @@ import org.springframework.lang.Nullable;
  * @author Rod Johnson
  * @author Juergen Hoeller
  * @since 2.0
- * @see org.springframework.beans.factory.BeanFactory#getBean
+ * @see BeanFactory#getBean
  */
 public interface AspectInstanceFactory extends Ordered {
 

@@ -20,10 +20,11 @@ import java.util.Iterator;
 import java.util.ServiceLoader;
 
 import org.springframework.beans.factory.BeanClassLoaderAware;
+import org.springframework.beans.factory.core_.FactoryBean;
 import org.springframework.lang.Nullable;
 
 /**
- * {@link org.springframework.beans.factory.FactoryBean} that exposes the
+ * {@link FactoryBean} that exposes the
  * 'primary' service for the configured service class, obtained through
  * the JDK 1.6 {@link java.util.ServiceLoader} facility.
  *

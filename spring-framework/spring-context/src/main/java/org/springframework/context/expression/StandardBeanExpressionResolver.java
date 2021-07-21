@@ -19,8 +19,8 @@ package org.springframework.context.expression;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-import org.springframework.beans.BeansException;
-import org.springframework.beans.factory.BeanExpressionException;
+import org.springframework.beans.expection_.BeansException;
+import org.springframework.beans.factory.expection_.BeanExpressionException;
 import org.springframework.beans.factory.config.BeanExpressionContext;
 import org.springframework.beans.factory.config.BeanExpressionResolver;
 import org.springframework.core.convert.ConversionService;

@@ -30,8 +30,8 @@ import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 import org.xml.sax.SAXParseException;
 
-import org.springframework.beans.BeanUtils;
-import org.springframework.beans.factory.BeanDefinitionStoreException;
+import org.springframework.beans.util_.bean_.BeanUtils;
+import org.springframework.beans.factory.expection_.BeanDefinitionStoreException;
 import org.springframework.beans.factory.parsing.EmptyReaderEventListener;
 import org.springframework.beans.factory.parsing.FailFastProblemReporter;
 import org.springframework.beans.factory.parsing.NullSourceExtractor;

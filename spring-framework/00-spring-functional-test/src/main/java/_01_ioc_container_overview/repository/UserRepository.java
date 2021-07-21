@@ -1,7 +1,7 @@
 package _01_ioc_container_overview.repository;
 
 import _01_ioc_container_overview.domain.User;
-import org.springframework.beans.factory.BeanFactory;
+import org.springframework.beans.factory.core_.BeanFactory;
 import org.springframework.beans.factory.ObjectFactory;
 import org.springframework.context.ApplicationContext;
 

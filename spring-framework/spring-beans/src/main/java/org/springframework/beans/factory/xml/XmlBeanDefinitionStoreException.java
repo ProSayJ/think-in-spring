@@ -19,7 +19,7 @@ package org.springframework.beans.factory.xml;
 import org.xml.sax.SAXException;
 import org.xml.sax.SAXParseException;
 
-import org.springframework.beans.factory.BeanDefinitionStoreException;
+import org.springframework.beans.factory.expection_.BeanDefinitionStoreException;
 
 /**
  * XML-specific BeanDefinitionStoreException subclass that wraps a
