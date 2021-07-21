@@ -41,6 +41,16 @@ class CustomerBeanFactory {
         return null;
     }
 
+    public static void main(String[] args) {
+        try {
+            Class<?> aClass = Class.forName("_01_ioc_hello_world.UserServiceImpl");
+            UserService u = (UserService) aClass
+                    .newInstance();
+        } catch (InstantiationException | IllegalAccessException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
     /**
      * 对象的创建方式
      * <br>1.直接 new 高度耦合

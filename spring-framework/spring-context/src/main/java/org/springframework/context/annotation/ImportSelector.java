@@ -18,6 +18,9 @@ package org.springframework.context.annotation;
 
 import java.util.function.Predicate;
 
+import org.springframework.context.annotation.anno_.Configuration;
+import org.springframework.context.annotation.anno_.Import;
+import org.springframework.context.annotation.registry_.ImportBeanDefinitionRegistrar;
 import org.springframework.core.type.AnnotationMetadata;
 import org.springframework.lang.Nullable;
 

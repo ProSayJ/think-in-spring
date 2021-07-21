@@ -16,9 +16,9 @@
 
 package org.springframework.transaction.annotation;
 
-import org.springframework.context.annotation.AdviceMode;
+import org.springframework.context.annotation.mode_.AdviceMode;
 import org.springframework.context.annotation.AdviceModeImportSelector;
-import org.springframework.context.annotation.AutoProxyRegistrar;
+import org.springframework.context.annotation.registry_.AutoProxyRegistrar;
 import org.springframework.transaction.config.TransactionManagementConfigUtils;
 import org.springframework.util.ClassUtils;
 

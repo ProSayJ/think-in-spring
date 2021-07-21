@@ -1,7 +1,7 @@
 package circularreferences.config;
 
 
-import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.anno_.ComponentScan;
 
 /**
  * TODO

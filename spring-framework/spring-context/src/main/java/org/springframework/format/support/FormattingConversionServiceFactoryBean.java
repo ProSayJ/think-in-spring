@@ -21,6 +21,8 @@ import java.util.Set;
 import org.springframework.beans.factory.FactoryBean;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.context.EmbeddedValueResolverAware;
+import org.springframework.context.annotation.anno_.Bean;
+import org.springframework.context.annotation.anno_.Configuration;
 import org.springframework.core.convert.support.ConversionServiceFactory;
 import org.springframework.format.AnnotationFormatterFactory;
 import org.springframework.format.Formatter;
@@ -50,10 +52,10 @@ import org.springframework.util.StringValueResolver;
  * <p>Like all {@code FactoryBean} implementations, this class is suitable for
  * use when configuring a Spring application context using Spring {@code <beans>}
  * XML. When configuring the container with
- * {@link org.springframework.context.annotation.Configuration @Configuration}
+ * {@link Configuration @Configuration}
  * classes, simply instantiate, configure and return the appropriate
  * {@code FormattingConversionService} object from a
- * {@link org.springframework.context.annotation.Bean @Bean} method.
+ * {@link Bean @Bean} method.
  *
  * @author Keith Donald
  * @author Juergen Hoeller

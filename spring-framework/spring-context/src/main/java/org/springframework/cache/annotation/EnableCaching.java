@@ -22,14 +22,15 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-import org.springframework.context.annotation.AdviceMode;
-import org.springframework.context.annotation.Import;
+import org.springframework.context.annotation.anno_.Configuration;
+import org.springframework.context.annotation.mode_.AdviceMode;
+import org.springframework.context.annotation.anno_.Import;
 import org.springframework.core.Ordered;
 
 /**
  * Enables Spring's annotation-driven cache management capability, similar to the
  * support found in Spring's {@code <cache:*>} XML namespace. To be used together
- * with @{@link org.springframework.context.annotation.Configuration Configuration}
+ * with @{@link Configuration Configuration}
  * classes as follows:
  *
  * <pre class="code">

@@ -16,10 +16,12 @@
 
 package org.springframework.transaction.annotation;
 
+import org.springframework.context.annotation.anno_.Configuration;
+import org.springframework.context.annotation.anno_.Primary;
 import org.springframework.transaction.TransactionManager;
 
 /**
- * Interface to be implemented by @{@link org.springframework.context.annotation.Configuration
+ * Interface to be implemented by @{@link Configuration
  * Configuration} classes annotated with @{@link EnableTransactionManagement} that wish to
  * (or need to) explicitly specify the default {@code PlatformTransactionManager} bean
  * (or {@code ReactiveTransactionManager} bean) to be used for annotation-driven
@@ -34,14 +36,14 @@ import org.springframework.transaction.TransactionManager;
  * implementing this interface is to simply mark one of the offending
  * {@code PlatformTransactionManager} {@code @Bean} methods (or
  * {@code ReactiveTransactionManager} {@code @Bean} methods) as
- * {@link org.springframework.context.annotation.Primary @Primary}.
+ * {@link Primary @Primary}.
  * This is even generally preferred since it doesn't lead to early initialization
  * of the {@code TransactionManager} bean.
  *
  * @author Chris Beams
  * @since 3.1
  * @see EnableTransactionManagement
- * @see org.springframework.context.annotation.Primary
+ * @see Primary
  * @see org.springframework.transaction.PlatformTransactionManager
  * @see org.springframework.transaction.ReactiveTransactionManager
  */

@@ -19,10 +19,11 @@ package org.springframework.scheduling.annotation;
 import java.util.concurrent.Executor;
 
 import org.springframework.aop.interceptor.AsyncUncaughtExceptionHandler;
+import org.springframework.context.annotation.anno_.Configuration;
 import org.springframework.lang.Nullable;
 
 /**
- * Interface to be implemented by @{@link org.springframework.context.annotation.Configuration
+ * Interface to be implemented by @{@link Configuration
  * Configuration} classes annotated with @{@link EnableAsync} that wish to customize the
  * {@link Executor} instance used when processing async method invocations or the
  * {@link AsyncUncaughtExceptionHandler} instance used to process exception thrown from

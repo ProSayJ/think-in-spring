@@ -17,8 +17,8 @@
 package org.springframework.context.config;
 
 import org.springframework.beans.factory.xml.NamespaceHandlerSupport;
-import org.springframework.context.annotation.AnnotationConfigBeanDefinitionParser;
-import org.springframework.context.annotation.ComponentScanBeanDefinitionParser;
+import org.springframework.context.annotation.parser_.AnnotationConfigBeanDefinitionParser;
+import org.springframework.context.annotation.parser_.ComponentScanBeanDefinitionParser;
 
 /**
  * {@link org.springframework.beans.factory.xml.NamespaceHandler}

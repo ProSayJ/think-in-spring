@@ -32,6 +32,7 @@ import org.springframework.beans.factory.BeanNotOfRequiredTypeException;
 import org.springframework.beans.factory.NoSuchBeanDefinitionException;
 import org.springframework.beans.factory.NoUniqueBeanDefinitionException;
 import org.springframework.beans.factory.ObjectProvider;
+import org.springframework.context.annotation.processor_.CommonAnnotationBeanPostProcessor;
 import org.springframework.core.ResolvableType;
 import org.springframework.jndi.JndiLocatorSupport;
 import org.springframework.jndi.TypeMismatchNamingException;
@@ -50,7 +51,7 @@ import org.springframework.lang.Nullable;
  * {@link #addShareableResource shareable resource}.
  *
  * <p>The main intent of this factory is usage in combination with Spring's
- * {@link org.springframework.context.annotation.CommonAnnotationBeanPostProcessor},
+ * {@link CommonAnnotationBeanPostProcessor},
  * configured as "resourceFactory" for resolving {@code @Resource}
  * annotations as JNDI objects without intermediate bean definitions.
  * It may be used for similar lookup scenarios as well, of course,
@@ -59,7 +60,7 @@ import org.springframework.lang.Nullable;
  * @author Juergen Hoeller
  * @since 2.5
  * @see org.springframework.beans.factory.support.DefaultListableBeanFactory
- * @see org.springframework.context.annotation.CommonAnnotationBeanPostProcessor
+ * @see CommonAnnotationBeanPostProcessor
  */
 public class SimpleJndiBeanFactory extends JndiLocatorSupport implements BeanFactory {
 

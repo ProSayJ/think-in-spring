@@ -16,6 +16,8 @@
 
 package org.springframework.stereotype;
 
+import org.springframework.context.annotation.parser_.ClassPathBeanDefinitionScanner;
+
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -37,7 +39,7 @@ import java.lang.annotation.Target;
  * @see Repository
  * @see Service
  * @see Controller
- * @see org.springframework.context.annotation.ClassPathBeanDefinitionScanner
+ * @see ClassPathBeanDefinitionScanner
  */
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)

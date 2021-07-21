@@ -22,14 +22,15 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-import org.springframework.context.annotation.AdviceMode;
-import org.springframework.context.annotation.Import;
+import org.springframework.context.annotation.anno_.Configuration;
+import org.springframework.context.annotation.mode_.AdviceMode;
+import org.springframework.context.annotation.anno_.Import;
 import org.springframework.core.Ordered;
 
 /**
  * Enables Spring's annotation-driven transaction management capability, similar to
  * the support found in Spring's {@code <tx:*>} XML namespace. To be used on
- * {@link org.springframework.context.annotation.Configuration @Configuration}
+ * {@link Configuration @Configuration}
  * classes to configure traditional, imperative transaction management or
  * reactive transaction management.
  *

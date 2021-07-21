@@ -16,6 +16,8 @@
 
 package org.springframework.scheduling.annotation;
 
+import org.springframework.context.annotation.anno_.Configuration;
+
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -27,7 +29,7 @@ import java.lang.annotation.Target;
  * Can also be used at the type level, in which case all of the type's methods are
  * considered as asynchronous. Note, however, that {@code @Async} is not supported
  * on methods declared within a
- * {@link org.springframework.context.annotation.Configuration @Configuration} class.
+ * {@link Configuration @Configuration} class.
  *
  * <p>In terms of target method signatures, any parameter types are supported.
  * However, the return type is constrained to either {@code void} or

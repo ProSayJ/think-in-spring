@@ -20,10 +20,10 @@ import java.util.Collection;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.config.BeanDefinition;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.anno_.Bean;
+import org.springframework.context.annotation.anno_.Configuration;
 import org.springframework.context.annotation.ImportAware;
-import org.springframework.context.annotation.Role;
+import org.springframework.context.annotation.anno_.Role;
 import org.springframework.core.annotation.AnnotationAttributes;
 import org.springframework.core.type.AnnotationMetadata;
 import org.springframework.lang.Nullable;

@@ -17,6 +17,7 @@
 package org.springframework.context.support;
 
 import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.core.env.ConfigurableEnvironment;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
@@ -37,7 +38,7 @@ import org.springframework.core.io.Resource;
  * @since 3.0
  * @see #load
  * @see XmlBeanDefinitionReader
- * @see org.springframework.context.annotation.AnnotationConfigApplicationContext
+ * @see AnnotationConfigApplicationContext
  */
 public class GenericXmlApplicationContext extends GenericApplicationContext {
 

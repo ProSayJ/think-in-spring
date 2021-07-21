@@ -17,6 +17,8 @@
 package org.springframework.context.annotation;
 
 import org.springframework.beans.factory.Aware;
+import org.springframework.context.annotation.anno_.Configuration;
+import org.springframework.context.annotation.anno_.Import;
 import org.springframework.core.type.AnnotationMetadata;
 
 /**

@@ -16,6 +16,7 @@
 
 package org.springframework.context.annotation;
 
+import org.springframework.context.annotation.anno_.Profile;
 import org.springframework.core.env.Profiles;
 import org.springframework.core.type.AnnotatedTypeMetadata;
 import org.springframework.util.MultiValueMap;
@@ -29,7 +30,7 @@ import org.springframework.util.MultiValueMap;
  * @author Juergen Hoeller
  * @since 4.0
  */
-class ProfileCondition implements Condition {
+public class ProfileCondition implements Condition {
 
 	@Override
 	public boolean matches(ConditionContext context, AnnotatedTypeMetadata metadata) {

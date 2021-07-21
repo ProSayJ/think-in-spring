@@ -16,6 +16,7 @@
 
 package org.springframework.context.annotation;
 
+import org.springframework.context.annotation.anno_.Configuration;
 import org.springframework.core.type.AnnotationMetadata;
 import org.springframework.lang.Nullable;
 

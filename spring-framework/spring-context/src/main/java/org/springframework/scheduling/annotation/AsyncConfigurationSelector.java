@@ -16,7 +16,7 @@
 
 package org.springframework.scheduling.annotation;
 
-import org.springframework.context.annotation.AdviceMode;
+import org.springframework.context.annotation.mode_.AdviceMode;
 import org.springframework.context.annotation.AdviceModeImportSelector;
 import org.springframework.lang.Nullable;
 

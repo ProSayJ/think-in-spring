@@ -21,9 +21,9 @@ import org.springframework.cache.config.CacheManagementConfigUtils;
 import org.springframework.cache.interceptor.BeanFactoryCacheOperationSourceAdvisor;
 import org.springframework.cache.interceptor.CacheInterceptor;
 import org.springframework.cache.interceptor.CacheOperationSource;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Role;
+import org.springframework.context.annotation.anno_.Bean;
+import org.springframework.context.annotation.anno_.Configuration;
+import org.springframework.context.annotation.anno_.Role;
 
 /**
  * {@code @Configuration} class that registers the Spring infrastructure beans necessary

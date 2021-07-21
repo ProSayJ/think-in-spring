@@ -18,6 +18,11 @@ package org.springframework.context.annotation;
 
 import org.springframework.beans.factory.parsing.Problem;
 import org.springframework.beans.factory.parsing.ProblemReporter;
+import org.springframework.context.annotation.anno_.Bean;
+import org.springframework.context.annotation.anno_.Configuration;
+import org.springframework.context.annotation.parser_.ConfigurationClassParser;
+import org.springframework.context.annotation.reader_.ConfigurationClass;
+import org.springframework.context.annotation.reader_.ConfigurationClassBeanDefinitionReader;
 import org.springframework.core.type.MethodMetadata;
 
 /**
@@ -31,7 +36,7 @@ import org.springframework.core.type.MethodMetadata;
  * @see ConfigurationClassParser
  * @see ConfigurationClassBeanDefinitionReader
  */
-final class BeanMethod extends ConfigurationMethod {
+public final class BeanMethod extends ConfigurationMethod {
 
 	public BeanMethod(MethodMetadata metadata, ConfigurationClass configurationClass) {
 		super(metadata, configurationClass);

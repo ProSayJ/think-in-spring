@@ -20,10 +20,12 @@ import org.springframework.cache.CacheManager;
 import org.springframework.cache.interceptor.CacheErrorHandler;
 import org.springframework.cache.interceptor.CacheResolver;
 import org.springframework.cache.interceptor.KeyGenerator;
+import org.springframework.context.annotation.anno_.Bean;
+import org.springframework.context.annotation.anno_.Configuration;
 import org.springframework.lang.Nullable;
 
 /**
- * Interface to be implemented by @{@link org.springframework.context.annotation.Configuration
+ * Interface to be implemented by @{@link Configuration
  * Configuration} classes annotated with @{@link EnableCaching} that wish or need to
  * specify explicitly how caches are resolved and how keys are generated for annotation-driven
  * cache management. Consider extending {@link CachingConfigurerSupport}, which provides a
@@ -48,7 +50,7 @@ public interface CachingConfigurer {
 	 * management of the cache resolution, consider setting the
 	 * {@link CacheResolver} directly.
 	 * <p>Implementations must explicitly declare
-	 * {@link org.springframework.context.annotation.Bean @Bean}, e.g.
+	 * {@link Bean @Bean}, e.g.
 	 * <pre class="code">
 	 * &#064;Configuration
 	 * &#064;EnableCaching
@@ -73,7 +75,7 @@ public interface CachingConfigurer {
 	 * <p>If both a {@link #cacheManager()} and {@code #cacheResolver()} are set,
 	 * the cache manager is ignored.
 	 * <p>Implementations must explicitly declare
-	 * {@link org.springframework.context.annotation.Bean @Bean}, e.g.
+	 * {@link Bean @Bean}, e.g.
 	 * <pre class="code">
 	 * &#064;Configuration
 	 * &#064;EnableCaching
@@ -94,7 +96,7 @@ public interface CachingConfigurer {
 	/**
 	 * Return the key generator bean to use for annotation-driven cache management.
 	 * Implementations must explicitly declare
-	 * {@link org.springframework.context.annotation.Bean @Bean}, e.g.
+	 * {@link Bean @Bean}, e.g.
 	 * <pre class="code">
 	 * &#064;Configuration
 	 * &#064;EnableCaching
@@ -117,7 +119,7 @@ public interface CachingConfigurer {
 	 * <p>By default,{@link org.springframework.cache.interceptor.SimpleCacheErrorHandler}
 	 * is used and simply throws the exception back at the client.
 	 * <p>Implementations must explicitly declare
-	 * {@link org.springframework.context.annotation.Bean @Bean}, e.g.
+	 * {@link Bean @Bean}, e.g.
 	 * <pre class="code">
 	 * &#064;Configuration
 	 * &#064;EnableCaching

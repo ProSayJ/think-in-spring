@@ -18,6 +18,8 @@ package org.springframework.context.annotation;
 
 import java.lang.annotation.Annotation;
 
+import org.springframework.context.annotation.mode_.AdviceMode;
+import org.springframework.context.annotation.util_.AnnotationConfigUtils;
 import org.springframework.core.GenericTypeResolver;
 import org.springframework.core.annotation.AnnotationAttributes;
 import org.springframework.core.type.AnnotationMetadata;

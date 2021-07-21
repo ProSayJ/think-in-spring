@@ -17,6 +17,7 @@
 package org.springframework.context.annotation;
 
 import org.springframework.beans.factory.config.BeanDefinition;
+import org.springframework.context.annotation.processor_.ConfigurationClassPostProcessor;
 import org.springframework.util.Assert;
 
 /**

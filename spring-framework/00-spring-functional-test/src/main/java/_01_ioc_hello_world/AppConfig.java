@@ -1,8 +1,8 @@
 package _01_ioc_hello_world;
 
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.anno_.Bean;
+import org.springframework.context.annotation.anno_.ComponentScan;
+import org.springframework.context.annotation.anno_.Configuration;
 
 /**
  * 1、默认情况下bean的名称和方法名称相同，也可以使用name属性来指定：

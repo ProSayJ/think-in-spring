@@ -22,6 +22,7 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
+import org.springframework.context.annotation.parser_.ClassPathBeanDefinitionScanner;
 import org.springframework.core.annotation.AliasFor;
 
 /**
@@ -37,7 +38,7 @@ import org.springframework.core.annotation.AliasFor;
  * @since 2.5
  * @see Component
  * @see org.springframework.web.bind.annotation.RequestMapping
- * @see org.springframework.context.annotation.ClassPathBeanDefinitionScanner
+ * @see ClassPathBeanDefinitionScanner
  */
 @Target({ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)

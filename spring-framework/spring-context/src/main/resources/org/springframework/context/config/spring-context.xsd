@@ -232,7 +232,7 @@
 	definitions just like to regular bean definitions, but it won't apply to the component
 	scan settings themselves.
 
-	See javadoc for org.springframework.context.annotation.ComponentScan for information
+	See javadoc for org.springframework.context.annotation.anno_.ComponentScan for information
 	on code-based alternatives to bootstrapping component-scanning.
 			]]></xsd:documentation>
 		</xsd:annotation>
@@ -313,7 +313,7 @@
 					<xsd:appinfo>
 						<tool:annotation>
 							<tool:expected-type type="java.lang.Class"/>
-							<tool:assignable-to type="org.springframework.context.annotation.ScopeMetadataResolver"/>
+							<tool:assignable-to type="org.springframework.context.annotation.resolver_.ScopeMetadataResolver"/>
 						</tool:annotation>
 					</xsd:appinfo>
 				</xsd:annotation>
@@ -358,7 +358,7 @@
 	This will only happen if the AnnotationBeanConfigurerAspect is on the classpath
 	(i.e. spring-aspects.jar), effectively activating "spring-configured" by default.
 
-	See javadoc for org.springframework.context.annotation.EnableLoadTimeWeaving
+	See javadoc for org.springframework.context.annotation.anno_.EnableLoadTimeWeaving
 	for information on code-based alternatives to bootstrapping load-time weaving support.
 			]]></xsd:documentation>
 			<xsd:appinfo>
