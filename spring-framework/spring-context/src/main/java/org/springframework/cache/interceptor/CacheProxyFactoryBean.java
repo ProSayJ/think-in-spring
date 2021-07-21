@@ -19,8 +19,8 @@ package org.springframework.cache.interceptor;
 import org.springframework.aop.Pointcut;
 import org.springframework.aop.framework.AbstractSingletonProxyFactoryBean;
 import org.springframework.aop.support.DefaultPointcutAdvisor;
-import org.springframework.beans.factory.core_.BeanFactory;
-import org.springframework.beans.factory.BeanFactoryAware;
+import org.springframework.beans.factory.support.bean_.factory_.BeanFactory;
+import org.springframework.beans.factory.support.bean_.factory_.BeanFactoryAware;
 import org.springframework.beans.factory.SmartInitializingSingleton;
 import org.springframework.cache.CacheManager;
 

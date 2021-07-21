@@ -34,7 +34,7 @@ import java.util.ResourceBundle;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
-import org.springframework.beans.factory.BeanClassLoaderAware;
+import org.springframework.beans.factory.support.bean_.BeanClassLoaderAware;
 import org.springframework.lang.Nullable;
 import org.springframework.util.Assert;
 import org.springframework.util.ClassUtils;
@@ -117,7 +117,7 @@ public class ResourceBundleMessageSource extends AbstractResourceBasedMessageSou
 	/**
 	 * Set the ClassLoader to load resource bundles with.
 	 * <p>Default is the containing BeanFactory's
-	 * {@link org.springframework.beans.factory.BeanClassLoaderAware bean ClassLoader},
+	 * {@link BeanClassLoaderAware bean ClassLoader},
 	 * or the default ClassLoader determined by
 	 * {@link org.springframework.util.ClassUtils#getDefaultClassLoader()}
 	 * if not running within a BeanFactory.

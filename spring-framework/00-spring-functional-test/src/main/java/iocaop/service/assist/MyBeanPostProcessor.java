@@ -3,7 +3,7 @@ package iocaop.service.assist;
 
 import iocaop.service.UserService;
 import iocaop.service.impl.UserServiceImpl;
-import org.springframework.beans.factory.config.BeanPostProcessor;
+import org.springframework.beans.factory.config.bean_.processor_.BeanPostProcessor;
 import org.springframework.stereotype.Component;
 
 import java.lang.reflect.InvocationHandler;

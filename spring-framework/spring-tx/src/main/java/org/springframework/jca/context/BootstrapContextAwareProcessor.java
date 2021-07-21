@@ -19,11 +19,11 @@ package org.springframework.jca.context;
 import javax.resource.spi.BootstrapContext;
 
 import org.springframework.beans.expection_.BeansException;
-import org.springframework.beans.factory.config.BeanPostProcessor;
+import org.springframework.beans.factory.config.bean_.processor_.BeanPostProcessor;
 import org.springframework.lang.Nullable;
 
 /**
- * {@link org.springframework.beans.factory.config.BeanPostProcessor}
+ * {@link BeanPostProcessor}
  * implementation that passes the BootstrapContext to beans that implement
  * the {@link BootstrapContextAware} interface.
  *

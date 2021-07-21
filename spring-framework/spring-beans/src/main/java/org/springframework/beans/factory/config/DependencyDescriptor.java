@@ -30,7 +30,7 @@ import kotlin.reflect.KProperty;
 import kotlin.reflect.jvm.ReflectJvmMapping;
 
 import org.springframework.beans.expection_.BeansException;
-import org.springframework.beans.factory.core_.BeanFactory;
+import org.springframework.beans.factory.support.bean_.factory_.BeanFactory;
 import org.springframework.beans.factory.InjectionPoint;
 import org.springframework.beans.factory.expection_.NoUniqueBeanDefinitionException;
 import org.springframework.core.KotlinDetector;

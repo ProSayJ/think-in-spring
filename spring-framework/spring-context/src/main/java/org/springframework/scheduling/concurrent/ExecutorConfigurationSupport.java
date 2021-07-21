@@ -27,9 +27,9 @@ import java.util.concurrent.TimeUnit;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
-import org.springframework.beans.factory.BeanNameAware;
-import org.springframework.beans.factory.DisposableBean;
-import org.springframework.beans.factory.InitializingBean;
+import org.springframework.beans.factory.support.bean_.BeanNameAware;
+import org.springframework.beans.factory.support.bean_.DisposableBean;
+import org.springframework.beans.factory.support.bean_.InitializingBean;
 import org.springframework.lang.Nullable;
 
 /**

@@ -18,7 +18,7 @@ package org.springframework.beans.propertyeditors;
 
 import java.beans.PropertyEditorSupport;
 
-import org.springframework.beans.util_.bean_.wrapper_.BeanWrapperImpl;
+import org.springframework.beans.factory.support.wrapper_.BeanWrapperImpl;
 import org.springframework.lang.Nullable;
 import org.springframework.util.StringUtils;
 

@@ -16,7 +16,7 @@
 
 package org.springframework.beans.factory.parsing;
 
-import org.springframework.beans.util_.bean_.matadata_.BeanMetadataElement;
+import org.springframework.beans.factory.support.bean_.metadata_.BeanMetadataElement;
 import org.springframework.core.io.Resource;
 import org.springframework.lang.Nullable;
 import org.springframework.util.Assert;

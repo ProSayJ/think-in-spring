@@ -17,6 +17,7 @@
 package org.springframework.context.weaving;
 
 import org.springframework.beans.factory.Aware;
+import org.springframework.beans.factory.support.bean_.InitializingBean;
 import org.springframework.instrument.classloading.LoadTimeWeaver;
 
 /**
@@ -35,8 +36,8 @@ public interface LoadTimeWeaverAware extends Aware {
 	 * {@link org.springframework.context.ApplicationContext ApplicationContext}.
 	 * <p>Invoked after the population of normal bean properties but before an
 	 * initialization callback like
-	 * {@link org.springframework.beans.factory.InitializingBean InitializingBean's}
-	 * {@link org.springframework.beans.factory.InitializingBean#afterPropertiesSet() afterPropertiesSet()}
+	 * {@link InitializingBean InitializingBean's}
+	 * {@link InitializingBean#afterPropertiesSet() afterPropertiesSet()}
 	 * or a custom init-method. Invoked after
 	 * {@link org.springframework.context.ApplicationContextAware ApplicationContextAware's}
 	 * {@link org.springframework.context.ApplicationContextAware#setApplicationContext setApplicationContext(..)}.
@@ -45,7 +46,7 @@ public interface LoadTimeWeaverAware extends Aware {
 	 * there is none, the method will simply not get invoked, assuming that the
 	 * implementing object is able to activate its weaving dependency accordingly.
 	 * @param loadTimeWeaver the {@code LoadTimeWeaver} instance (never {@code null})
-	 * @see org.springframework.beans.factory.InitializingBean#afterPropertiesSet
+	 * @see InitializingBean#afterPropertiesSet
 	 * @see org.springframework.context.ApplicationContextAware#setApplicationContext
 	 */
 	void setLoadTimeWeaver(LoadTimeWeaver loadTimeWeaver);

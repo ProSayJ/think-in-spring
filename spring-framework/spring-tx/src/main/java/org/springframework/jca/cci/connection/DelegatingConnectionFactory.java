@@ -25,7 +25,7 @@ import javax.resource.cci.ConnectionSpec;
 import javax.resource.cci.RecordFactory;
 import javax.resource.cci.ResourceAdapterMetaData;
 
-import org.springframework.beans.factory.InitializingBean;
+import org.springframework.beans.factory.support.bean_.InitializingBean;
 import org.springframework.lang.Nullable;
 import org.springframework.util.Assert;
 

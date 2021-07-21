@@ -30,9 +30,9 @@ import javax.management.remote.JMXConnectorServerFactory;
 import javax.management.remote.JMXServiceURL;
 import javax.management.remote.MBeanServerForwarder;
 
-import org.springframework.beans.factory.DisposableBean;
-import org.springframework.beans.factory.core_.FactoryBean;
-import org.springframework.beans.factory.InitializingBean;
+import org.springframework.beans.factory.support.bean_.DisposableBean;
+import org.springframework.beans.factory.support.factory_.bean_.FactoryBean;
+import org.springframework.beans.factory.support.bean_.InitializingBean;
 import org.springframework.jmx.JmxException;
 import org.springframework.lang.Nullable;
 import org.springframework.util.CollectionUtils;

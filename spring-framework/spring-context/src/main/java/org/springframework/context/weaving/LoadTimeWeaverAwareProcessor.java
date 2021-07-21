@@ -17,16 +17,16 @@
 package org.springframework.context.weaving;
 
 import org.springframework.beans.expection_.BeansException;
-import org.springframework.beans.factory.core_.BeanFactory;
-import org.springframework.beans.factory.BeanFactoryAware;
-import org.springframework.beans.factory.config.BeanPostProcessor;
+import org.springframework.beans.factory.support.bean_.factory_.BeanFactory;
+import org.springframework.beans.factory.support.bean_.factory_.BeanFactoryAware;
+import org.springframework.beans.factory.config.bean_.processor_.BeanPostProcessor;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.instrument.classloading.LoadTimeWeaver;
 import org.springframework.lang.Nullable;
 import org.springframework.util.Assert;
 
 /**
- * {@link org.springframework.beans.factory.config.BeanPostProcessor}
+ * {@link BeanPostProcessor}
  * implementation that passes the context's default {@link LoadTimeWeaver}
  * to beans that implement the {@link LoadTimeWeaverAware} interface.
  *

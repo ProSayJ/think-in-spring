@@ -33,7 +33,7 @@ import org.springframework.aop.scope.ScopedProxyUtils;
 import org.springframework.aop.support.AopUtils;
 import org.springframework.beans.factory.expection_.BeanInitializationException;
 import org.springframework.beans.factory.SmartInitializingSingleton;
-import org.springframework.beans.factory.config.BeanFactoryPostProcessor;
+import org.springframework.beans.factory.config.bean_.processor_.BeanFactoryPostProcessor;
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;

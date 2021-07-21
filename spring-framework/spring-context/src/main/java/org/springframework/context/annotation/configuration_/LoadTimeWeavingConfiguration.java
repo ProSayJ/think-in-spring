@@ -16,9 +16,9 @@
 
 package org.springframework.context.annotation.configuration_;
 
-import org.springframework.beans.factory.BeanClassLoaderAware;
+import org.springframework.beans.factory.support.bean_.BeanClassLoaderAware;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.config.BeanDefinition;
+import org.springframework.beans.factory.support.bean_.definition_.BeanDefinition;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.ImportAware;
 import org.springframework.context.annotation.anno_.EnableLoadTimeWeaving;

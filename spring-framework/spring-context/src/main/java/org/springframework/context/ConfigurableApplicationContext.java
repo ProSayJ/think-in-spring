@@ -19,7 +19,7 @@ package org.springframework.context;
 import java.io.Closeable;
 
 import org.springframework.beans.expection_.BeansException;
-import org.springframework.beans.factory.config.BeanFactoryPostProcessor;
+import org.springframework.beans.factory.config.bean_.processor_.BeanFactoryPostProcessor;
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
 import org.springframework.core.env.ConfigurableEnvironment;
 import org.springframework.core.env.Environment;

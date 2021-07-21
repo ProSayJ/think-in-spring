@@ -22,8 +22,8 @@ import org.w3c.dom.NodeList;
 
 import org.springframework.beans.factory.config.RuntimeBeanReference;
 import org.springframework.beans.factory.parsing.BeanComponentDefinition;
-import org.springframework.beans.factory.support.BeanDefinitionBuilder;
-import org.springframework.beans.factory.support.ManagedList;
+import org.springframework.beans.factory.support.bean_.definition_.BeanDefinitionBuilder;
+import org.springframework.beans.factory.support.mergeable_.ManagedList;
 import org.springframework.beans.factory.xml.AbstractSingleBeanDefinitionParser;
 import org.springframework.beans.factory.xml.ParserContext;
 import org.springframework.util.StringUtils;

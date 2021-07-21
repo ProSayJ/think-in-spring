@@ -18,9 +18,9 @@ package _01_ioc_container_overview.dependency.lookup;
 
 import _01_ioc_container_overview.annotation.Super;
 import _01_ioc_container_overview.domain.User;
-import org.springframework.beans.factory.core_.BeanFactory;
-import org.springframework.beans.factory.core_.ListableBeanFactory;
-import org.springframework.beans.factory.ObjectFactory;
+import org.springframework.beans.factory.support.bean_.factory_.BeanFactory;
+import org.springframework.beans.factory.support.bean_.factory_.ListableBeanFactory;
+import org.springframework.beans.factory.support.ObjectFactory;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.util.Map;

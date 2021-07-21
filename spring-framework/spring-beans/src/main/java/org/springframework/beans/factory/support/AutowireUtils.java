@@ -32,8 +32,8 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.Set;
 
-import org.springframework.beans.util_.bean_.matadata_.BeanMetadataElement;
-import org.springframework.beans.factory.ObjectFactory;
+import org.springframework.beans.factory.support.bean_.factory_.AbstractAutowireCapableBeanFactory;
+import org.springframework.beans.factory.support.bean_.metadata_.BeanMetadataElement;
 import org.springframework.beans.factory.config.TypedStringValue;
 import org.springframework.lang.Nullable;
 import org.springframework.util.Assert;
@@ -49,7 +49,8 @@ import org.springframework.util.ClassUtils;
  * @since 1.1.2
  * @see AbstractAutowireCapableBeanFactory
  */
-abstract class AutowireUtils {
+//abstract class AutowireUtils {
+public abstract class AutowireUtils {
 
 	public static final Comparator<Executable> EXECUTABLE_COMPARATOR = (e1, e2) -> {
 		int result = Boolean.compare(Modifier.isPublic(e2.getModifiers()), Modifier.isPublic(e1.getModifiers()));

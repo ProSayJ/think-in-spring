@@ -16,7 +16,7 @@
 
 package org.springframework.aop.framework.autoproxy;
 
-import org.springframework.beans.factory.BeanNameAware;
+import org.springframework.beans.factory.support.bean_.BeanNameAware;
 import org.springframework.lang.Nullable;
 
 /**

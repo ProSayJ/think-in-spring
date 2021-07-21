@@ -16,7 +16,8 @@
 
 package org.springframework.context.annotation.anno_;
 
-import org.springframework.beans.factory.core_.BeanFactory;
+import org.springframework.beans.factory.support.ObjectFactory;
+import org.springframework.beans.factory.support.bean_.factory_.BeanFactory;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
@@ -48,7 +49,7 @@ import java.lang.annotation.Target;
  * on injection points marked with {@link org.springframework.beans.factory.annotation.Autowired}
  * or {@link javax.inject.Inject}: In that context, it leads to the creation of a
  * lazy-resolution proxy for all affected dependencies, as an alternative to using
- * {@link org.springframework.beans.factory.ObjectFactory} or {@link javax.inject.Provider}.
+ * {@link ObjectFactory} or {@link javax.inject.Provider}.
  *
  * @author Chris Beams
  * @author Juergen Hoeller

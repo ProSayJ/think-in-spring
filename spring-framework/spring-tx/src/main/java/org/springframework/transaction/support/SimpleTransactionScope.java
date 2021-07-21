@@ -20,7 +20,7 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-import org.springframework.beans.factory.ObjectFactory;
+import org.springframework.beans.factory.support.ObjectFactory;
 import org.springframework.beans.factory.config.Scope;
 import org.springframework.lang.Nullable;
 

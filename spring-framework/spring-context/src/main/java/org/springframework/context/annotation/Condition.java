@@ -16,7 +16,7 @@
 
 package org.springframework.context.annotation;
 
-import org.springframework.beans.factory.config.BeanFactoryPostProcessor;
+import org.springframework.beans.factory.config.bean_.processor_.BeanFactoryPostProcessor;
 import org.springframework.context.annotation.anno_.Conditional;
 import org.springframework.core.type.AnnotatedTypeMetadata;
 

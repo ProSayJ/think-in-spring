@@ -24,8 +24,8 @@ import java.util.Properties;
 
 import javax.naming.NamingException;
 
-import org.springframework.beans.factory.DisposableBean;
-import org.springframework.beans.factory.InitializingBean;
+import org.springframework.beans.factory.support.bean_.DisposableBean;
+import org.springframework.beans.factory.support.bean_.InitializingBean;
 import org.springframework.jndi.JndiTemplate;
 import org.springframework.lang.Nullable;
 import org.springframework.util.ReflectionUtils;

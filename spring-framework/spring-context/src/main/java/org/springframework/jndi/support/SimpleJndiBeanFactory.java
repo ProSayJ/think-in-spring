@@ -26,13 +26,14 @@ import javax.naming.NameNotFoundException;
 import javax.naming.NamingException;
 
 import org.springframework.beans.expection_.BeansException;
-import org.springframework.beans.factory.core_.ListableBeanFactory;
+import org.springframework.beans.factory.support.bean_.factory_.ListableBeanFactory;
 import org.springframework.beans.factory.expection_.BeanDefinitionStoreException;
-import org.springframework.beans.factory.core_.BeanFactory;
+import org.springframework.beans.factory.support.bean_.factory_.BeanFactory;
 import org.springframework.beans.factory.expection_.BeanNotOfRequiredTypeException;
 import org.springframework.beans.factory.expection_.NoSuchBeanDefinitionException;
 import org.springframework.beans.factory.expection_.NoUniqueBeanDefinitionException;
-import org.springframework.beans.factory.ObjectProvider;
+import org.springframework.beans.factory.support.ObjectProvider;
+import org.springframework.beans.factory.support.bean_.factory_.DefaultListableBeanFactory;
 import org.springframework.context.annotation.processor_.CommonAnnotationBeanPostProcessor;
 import org.springframework.core.ResolvableType;
 import org.springframework.jndi.JndiLocatorSupport;
@@ -60,7 +61,7 @@ import org.springframework.lang.Nullable;
  *
  * @author Juergen Hoeller
  * @since 2.5
- * @see org.springframework.beans.factory.support.DefaultListableBeanFactory
+ * @see DefaultListableBeanFactory
  * @see CommonAnnotationBeanPostProcessor
  */
 public class SimpleJndiBeanFactory extends JndiLocatorSupport implements BeanFactory {

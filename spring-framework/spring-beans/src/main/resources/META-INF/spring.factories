@@ -1,1 +1,1 @@
-org.springframework.beans.util_.bean_.info_.BeanInfoFactory=org.springframework.beans.util_.bean_.info_.ExtendedBeanInfoFactory
+org.springframework.beans.factory.support.bean_.info_.BeanInfoFactory=org.springframework.beans.factory.support.bean_.info_.ExtendedBeanInfoFactory

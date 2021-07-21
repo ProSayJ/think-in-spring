@@ -16,6 +16,9 @@
 
 package org.springframework.beans.factory.annotation;
 
+import org.springframework.beans.factory.config.bean_.processor_.BeanFactoryPostProcessor;
+import org.springframework.beans.factory.config.bean_.processor_.BeanPostProcessor;
+
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -36,12 +39,12 @@ import java.lang.annotation.Target;
  * <code>${my.app.myProp}</code> style property placeholders.
  *
  * <p>Note that actual processing of the {@code @Value} annotation is performed
- * by a {@link org.springframework.beans.factory.config.BeanPostProcessor
+ * by a {@link BeanPostProcessor
  * BeanPostProcessor} which in turn means that you <em>cannot</em> use
  * {@code @Value} within
- * {@link org.springframework.beans.factory.config.BeanPostProcessor
+ * {@link BeanPostProcessor
  * BeanPostProcessor} or
- * {@link org.springframework.beans.factory.config.BeanFactoryPostProcessor BeanFactoryPostProcessor}
+ * {@link BeanFactoryPostProcessor BeanFactoryPostProcessor}
  * types. Please consult the javadoc for the {@link AutowiredAnnotationBeanPostProcessor}
  * class (which, by default, checks for the presence of this annotation).
  *

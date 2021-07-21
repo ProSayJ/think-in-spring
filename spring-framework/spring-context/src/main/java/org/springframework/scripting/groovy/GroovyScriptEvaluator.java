@@ -25,7 +25,7 @@ import groovy.lang.GroovyShell;
 import org.codehaus.groovy.control.CompilerConfiguration;
 import org.codehaus.groovy.control.customizers.CompilationCustomizer;
 
-import org.springframework.beans.factory.BeanClassLoaderAware;
+import org.springframework.beans.factory.support.bean_.BeanClassLoaderAware;
 import org.springframework.lang.Nullable;
 import org.springframework.scripting.ScriptCompilationException;
 import org.springframework.scripting.ScriptEvaluator;

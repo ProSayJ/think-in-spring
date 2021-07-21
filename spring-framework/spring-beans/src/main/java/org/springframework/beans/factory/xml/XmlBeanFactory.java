@@ -17,8 +17,8 @@
 package org.springframework.beans.factory.xml;
 
 import org.springframework.beans.expection_.BeansException;
-import org.springframework.beans.factory.core_.BeanFactory;
-import org.springframework.beans.factory.support.DefaultListableBeanFactory;
+import org.springframework.beans.factory.support.bean_.factory_.BeanFactory;
+import org.springframework.beans.factory.support.bean_.factory_.DefaultListableBeanFactory;
 import org.springframework.core.io.Resource;
 
 /**
@@ -45,7 +45,7 @@ import org.springframework.core.io.Resource;
  * @author Juergen Hoeller
  * @author Chris Beams
  * @since 15 April 2001
- * @see org.springframework.beans.factory.support.DefaultListableBeanFactory
+ * @see DefaultListableBeanFactory
  * @see XmlBeanDefinitionReader
  * @deprecated as of Spring 3.1 in favor of {@link DefaultListableBeanFactory} and
  * {@link XmlBeanDefinitionReader}

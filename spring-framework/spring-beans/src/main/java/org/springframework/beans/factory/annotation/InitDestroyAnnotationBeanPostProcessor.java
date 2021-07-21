@@ -37,10 +37,13 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
 import org.springframework.beans.expection_.BeansException;
+import org.springframework.beans.factory.config.bean_.processor_.BeanPostProcessor;
 import org.springframework.beans.factory.expection_.BeanCreationException;
-import org.springframework.beans.factory.config.DestructionAwareBeanPostProcessor;
-import org.springframework.beans.factory.support.MergedBeanDefinitionPostProcessor;
-import org.springframework.beans.factory.support.RootBeanDefinition;
+import org.springframework.beans.factory.config.bean_.processor_.DestructionAwareBeanPostProcessor;
+import org.springframework.beans.factory.support.bean_.DisposableBean;
+import org.springframework.beans.factory.support.bean_.InitializingBean;
+import org.springframework.beans.factory.support.bean_.processor_.MergedBeanDefinitionPostProcessor;
+import org.springframework.beans.factory.support.bean_.definition_.RootBeanDefinition;
 import org.springframework.core.Ordered;
 import org.springframework.core.PriorityOrdered;
 import org.springframework.core.annotation.AnnotationUtils;
@@ -49,10 +52,10 @@ import org.springframework.util.ClassUtils;
 import org.springframework.util.ReflectionUtils;
 
 /**
- * {@link org.springframework.beans.factory.config.BeanPostProcessor} implementation
+ * {@link BeanPostProcessor} implementation
  * that invokes annotated init and destroy methods. Allows for an annotation
- * alternative to Spring's {@link org.springframework.beans.factory.InitializingBean}
- * and {@link org.springframework.beans.factory.DisposableBean} callback interfaces.
+ * alternative to Spring's {@link InitializingBean}
+ * and {@link DisposableBean} callback interfaces.
  *
  * <p>The actual annotation types that this post-processor checks for can be
  * configured through the {@link #setInitAnnotationType "initAnnotationType"}

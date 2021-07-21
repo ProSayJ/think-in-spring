@@ -17,8 +17,8 @@
 package org.springframework.remoting.rmi;
 
 import org.springframework.aop.framework.ProxyFactory;
-import org.springframework.beans.factory.BeanClassLoaderAware;
-import org.springframework.beans.factory.core_.FactoryBean;
+import org.springframework.beans.factory.support.bean_.BeanClassLoaderAware;
+import org.springframework.beans.factory.support.factory_.bean_.FactoryBean;
 import org.springframework.util.Assert;
 
 /**

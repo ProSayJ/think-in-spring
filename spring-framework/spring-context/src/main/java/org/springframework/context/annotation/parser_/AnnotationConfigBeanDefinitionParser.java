@@ -21,8 +21,8 @@ import java.util.Set;
 import org.springframework.context.annotation.util_.AnnotationConfigUtils;
 import org.w3c.dom.Element;
 
-import org.springframework.beans.factory.config.BeanDefinition;
-import org.springframework.beans.factory.config.BeanDefinitionHolder;
+import org.springframework.beans.factory.support.bean_.definition_.BeanDefinition;
+import org.springframework.beans.factory.support.bean_.definition_.BeanDefinitionHolder;
 import org.springframework.beans.factory.parsing.BeanComponentDefinition;
 import org.springframework.beans.factory.parsing.CompositeComponentDefinition;
 import org.springframework.beans.factory.xml.BeanDefinitionParser;

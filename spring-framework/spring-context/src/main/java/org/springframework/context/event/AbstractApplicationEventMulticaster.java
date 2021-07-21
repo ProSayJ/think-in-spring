@@ -25,11 +25,11 @@ import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
 import org.springframework.aop.framework.AopProxyUtils;
-import org.springframework.beans.factory.BeanClassLoaderAware;
-import org.springframework.beans.factory.core_.BeanFactory;
-import org.springframework.beans.factory.BeanFactoryAware;
+import org.springframework.beans.factory.support.bean_.BeanClassLoaderAware;
+import org.springframework.beans.factory.support.bean_.factory_.BeanFactory;
+import org.springframework.beans.factory.support.bean_.factory_.BeanFactoryAware;
 import org.springframework.beans.factory.expection_.NoSuchBeanDefinitionException;
-import org.springframework.beans.factory.config.BeanDefinition;
+import org.springframework.beans.factory.support.bean_.definition_.BeanDefinition;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.ApplicationEvent;
 import org.springframework.context.ApplicationListener;

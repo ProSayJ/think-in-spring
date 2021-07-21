@@ -16,8 +16,9 @@
 
 package org.springframework.beans.factory.config;
 
-import org.springframework.beans.util_.bean_.matadata_.BeanMetadataElement;
-import org.springframework.beans.util_.property_.value_.MutablePropertyValues;
+import org.springframework.beans.factory.support.bean_.definition_.BeanDefinition;
+import org.springframework.beans.factory.support.bean_.metadata_.BeanMetadataElement;
+import org.springframework.beans.factory.support.bean_.metadata_.MutablePropertyValues;
 import org.springframework.lang.Nullable;
 import org.springframework.util.Assert;
 import org.springframework.util.ClassUtils;

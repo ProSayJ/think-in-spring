@@ -54,10 +54,10 @@ import org.aopalliance.intercept.MethodInvocation;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
-import org.springframework.beans.util_.bean_.BeanUtils;
-import org.springframework.beans.factory.BeanClassLoaderAware;
-import org.springframework.beans.factory.DisposableBean;
-import org.springframework.beans.factory.InitializingBean;
+import org.springframework.beans.factory.support.bean_.BeanUtils;
+import org.springframework.beans.factory.support.bean_.BeanClassLoaderAware;
+import org.springframework.beans.factory.support.bean_.DisposableBean;
+import org.springframework.beans.factory.support.bean_.InitializingBean;
 import org.springframework.core.CollectionFactory;
 import org.springframework.core.MethodParameter;
 import org.springframework.core.ResolvableType;

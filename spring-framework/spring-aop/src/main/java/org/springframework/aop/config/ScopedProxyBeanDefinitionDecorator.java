@@ -20,7 +20,7 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 
 import org.springframework.aop.scope.ScopedProxyUtils;
-import org.springframework.beans.factory.config.BeanDefinitionHolder;
+import org.springframework.beans.factory.support.bean_.definition_.BeanDefinitionHolder;
 import org.springframework.beans.factory.parsing.BeanComponentDefinition;
 import org.springframework.beans.factory.xml.BeanDefinitionDecorator;
 import org.springframework.beans.factory.xml.ParserContext;

@@ -18,7 +18,7 @@ package org.springframework.jndi;
 
 import javax.naming.NamingException;
 
-import org.springframework.beans.factory.InitializingBean;
+import org.springframework.beans.factory.support.bean_.InitializingBean;
 import org.springframework.lang.Nullable;
 import org.springframework.util.Assert;
 import org.springframework.util.StringUtils;

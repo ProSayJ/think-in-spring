@@ -19,6 +19,8 @@ package org.springframework.beans.factory.parsing;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
+import org.springframework.beans.factory.expection_.BeanDefinitionParsingException;
+import org.springframework.beans.factory.parsing.model_.Problem;
 import org.springframework.lang.Nullable;
 
 /**

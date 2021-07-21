@@ -17,9 +17,9 @@
 package _01_ioc_container_overview.container;
 
 import _01_ioc_container_overview.domain.User;
-import org.springframework.beans.factory.core_.BeanFactory;
-import org.springframework.beans.factory.core_.ListableBeanFactory;
-import org.springframework.beans.factory.support.DefaultListableBeanFactory;
+import org.springframework.beans.factory.support.bean_.factory_.BeanFactory;
+import org.springframework.beans.factory.support.bean_.factory_.ListableBeanFactory;
+import org.springframework.beans.factory.support.bean_.factory_.DefaultListableBeanFactory;
 import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
 
 import java.util.Map;

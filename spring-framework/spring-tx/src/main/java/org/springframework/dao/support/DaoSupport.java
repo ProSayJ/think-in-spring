@@ -20,7 +20,7 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
 import org.springframework.beans.factory.expection_.BeanInitializationException;
-import org.springframework.beans.factory.InitializingBean;
+import org.springframework.beans.factory.support.bean_.InitializingBean;
 
 /**
  * Generic base class for DAOs, defining template methods for DAO initialization.

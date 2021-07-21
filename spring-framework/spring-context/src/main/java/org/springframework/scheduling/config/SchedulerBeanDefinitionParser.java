@@ -18,7 +18,7 @@ package org.springframework.scheduling.config;
 
 import org.w3c.dom.Element;
 
-import org.springframework.beans.factory.support.BeanDefinitionBuilder;
+import org.springframework.beans.factory.support.bean_.definition_.BeanDefinitionBuilder;
 import org.springframework.beans.factory.xml.AbstractSingleBeanDefinitionParser;
 import org.springframework.util.StringUtils;
 

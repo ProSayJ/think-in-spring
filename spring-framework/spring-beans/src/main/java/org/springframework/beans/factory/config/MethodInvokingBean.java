@@ -18,11 +18,11 @@ package org.springframework.beans.factory.config;
 
 import java.lang.reflect.InvocationTargetException;
 
-import org.springframework.beans.util_.typeconverter_.TypeConverter;
-import org.springframework.beans.factory.BeanClassLoaderAware;
-import org.springframework.beans.factory.core_.BeanFactory;
-import org.springframework.beans.factory.BeanFactoryAware;
-import org.springframework.beans.factory.InitializingBean;
+import org.springframework.beans.factory.support.typeconverter_.TypeConverter;
+import org.springframework.beans.factory.support.bean_.BeanClassLoaderAware;
+import org.springframework.beans.factory.support.bean_.factory_.BeanFactory;
+import org.springframework.beans.factory.support.bean_.factory_.BeanFactoryAware;
+import org.springframework.beans.factory.support.bean_.InitializingBean;
 import org.springframework.beans.support.ArgumentConvertingMethodInvoker;
 import org.springframework.lang.Nullable;
 import org.springframework.util.ClassUtils;

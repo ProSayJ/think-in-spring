@@ -16,7 +16,7 @@
 
 package org.springframework.aop.aspectj;
 
-import org.springframework.beans.factory.core_.BeanFactory;
+import org.springframework.beans.factory.support.bean_.factory_.BeanFactory;
 import org.springframework.core.Ordered;
 import org.springframework.lang.Nullable;
 

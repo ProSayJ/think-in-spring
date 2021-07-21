@@ -30,7 +30,7 @@ import javax.transaction.xa.XAResource;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
-import org.springframework.beans.factory.BeanNameAware;
+import org.springframework.beans.factory.support.bean_.BeanNameAware;
 import org.springframework.lang.Nullable;
 import org.springframework.transaction.jta.SimpleTransactionFactory;
 import org.springframework.transaction.jta.TransactionFactory;

@@ -23,7 +23,7 @@ import org.aopalliance.aop.Advice;
 import org.springframework.aop.Pointcut;
 import org.springframework.aop.support.AbstractPointcutAdvisor;
 import org.springframework.aop.support.annotation.AnnotationMatchingPointcut;
-import org.springframework.beans.factory.core_.ListableBeanFactory;
+import org.springframework.beans.factory.support.bean_.factory_.ListableBeanFactory;
 import org.springframework.dao.support.PersistenceExceptionTranslationInterceptor;
 import org.springframework.dao.support.PersistenceExceptionTranslator;
 

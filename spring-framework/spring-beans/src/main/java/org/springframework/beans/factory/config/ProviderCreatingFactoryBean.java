@@ -21,8 +21,8 @@ import java.io.Serializable;
 import javax.inject.Provider;
 
 import org.springframework.beans.expection_.BeansException;
-import org.springframework.beans.factory.core_.BeanFactory;
-import org.springframework.beans.factory.core_.FactoryBean;
+import org.springframework.beans.factory.support.bean_.factory_.BeanFactory;
+import org.springframework.beans.factory.support.factory_.bean_.FactoryBean;
 import org.springframework.lang.Nullable;
 import org.springframework.util.Assert;
 

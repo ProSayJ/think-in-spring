@@ -21,7 +21,7 @@ import java.util.List;
 import org.springframework.aop.Advisor;
 import org.springframework.aop.TargetSource;
 import org.springframework.aop.support.AopUtils;
-import org.springframework.beans.factory.core_.BeanFactory;
+import org.springframework.beans.factory.support.bean_.factory_.BeanFactory;
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
 import org.springframework.core.annotation.AnnotationAwareOrderComparator;
 import org.springframework.lang.Nullable;

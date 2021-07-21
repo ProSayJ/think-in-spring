@@ -19,13 +19,13 @@ package org.springframework.context.annotation.util_;
 import java.lang.reflect.Constructor;
 
 import org.springframework.beans.expection_.BeanInstantiationException;
-import org.springframework.beans.util_.bean_.BeanUtils;
+import org.springframework.beans.factory.support.bean_.BeanUtils;
 import org.springframework.beans.factory.Aware;
-import org.springframework.beans.factory.BeanClassLoaderAware;
-import org.springframework.beans.factory.core_.BeanFactory;
-import org.springframework.beans.factory.BeanFactoryAware;
+import org.springframework.beans.factory.support.bean_.BeanClassLoaderAware;
+import org.springframework.beans.factory.support.bean_.factory_.BeanFactory;
+import org.springframework.beans.factory.support.bean_.factory_.BeanFactoryAware;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
-import org.springframework.beans.factory.support.BeanDefinitionRegistry;
+import org.springframework.beans.factory.support.bean_.definition_.BeanDefinitionRegistry;
 import org.springframework.context.EnvironmentAware;
 import org.springframework.context.ResourceLoaderAware;
 import org.springframework.core.env.Environment;

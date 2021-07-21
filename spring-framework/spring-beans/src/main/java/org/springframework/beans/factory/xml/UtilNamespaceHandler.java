@@ -29,8 +29,8 @@ import org.springframework.beans.factory.config.MapFactoryBean;
 import org.springframework.beans.factory.config.PropertiesFactoryBean;
 import org.springframework.beans.factory.config.PropertyPathFactoryBean;
 import org.springframework.beans.factory.config.SetFactoryBean;
-import org.springframework.beans.factory.support.AbstractBeanDefinition;
-import org.springframework.beans.factory.support.BeanDefinitionBuilder;
+import org.springframework.beans.factory.support.bean_.definition_.AbstractBeanDefinition;
+import org.springframework.beans.factory.support.bean_.definition_.BeanDefinitionBuilder;
 import org.springframework.util.StringUtils;
 
 /**

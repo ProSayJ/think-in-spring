@@ -25,7 +25,7 @@ import org.apache.commons.logging.LogFactory;
 
 import org.springframework.aop.framework.autoproxy.AbstractBeanFactoryAwareAdvisingPostProcessor;
 import org.springframework.aop.interceptor.AsyncUncaughtExceptionHandler;
-import org.springframework.beans.factory.core_.BeanFactory;
+import org.springframework.beans.factory.support.bean_.factory_.BeanFactory;
 import org.springframework.core.task.TaskExecutor;
 import org.springframework.lang.Nullable;
 import org.springframework.util.Assert;

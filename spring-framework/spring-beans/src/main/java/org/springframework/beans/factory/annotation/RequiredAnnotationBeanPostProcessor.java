@@ -25,15 +25,17 @@ import java.util.List;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
-import org.springframework.beans.util_.property_.value_.PropertyValues;
-import org.springframework.beans.factory.core_.BeanFactory;
-import org.springframework.beans.factory.BeanFactoryAware;
+import org.springframework.beans.factory.config.bean_.processor_.BeanPostProcessor;
+import org.springframework.beans.factory.support.bean_.InitializingBean;
+import org.springframework.beans.factory.support.bean_.metadata_.PropertyValues;
+import org.springframework.beans.factory.support.bean_.factory_.BeanFactory;
+import org.springframework.beans.factory.support.bean_.factory_.BeanFactoryAware;
 import org.springframework.beans.factory.expection_.BeanInitializationException;
-import org.springframework.beans.factory.config.BeanDefinition;
+import org.springframework.beans.factory.support.bean_.definition_.BeanDefinition;
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
-import org.springframework.beans.factory.config.InstantiationAwareBeanPostProcessorAdapter;
-import org.springframework.beans.factory.support.MergedBeanDefinitionPostProcessor;
-import org.springframework.beans.factory.support.RootBeanDefinition;
+import org.springframework.beans.factory.config.bean_.processor_.InstantiationAwareBeanPostProcessorAdapter;
+import org.springframework.beans.factory.support.bean_.processor_.MergedBeanDefinitionPostProcessor;
+import org.springframework.beans.factory.support.bean_.definition_.RootBeanDefinition;
 import org.springframework.core.Conventions;
 import org.springframework.core.Ordered;
 import org.springframework.core.PriorityOrdered;
@@ -42,7 +44,7 @@ import org.springframework.lang.Nullable;
 import org.springframework.util.Assert;
 
 /**
- * {@link org.springframework.beans.factory.config.BeanPostProcessor} implementation
+ * {@link BeanPostProcessor} implementation
  * that enforces required JavaBean properties to have been configured.
  * Required bean properties are detected through a Java 5 annotation:
  * by default, Spring's {@link Required} annotation.
@@ -72,7 +74,7 @@ import org.springframework.util.Assert;
  * @see #setRequiredAnnotationType
  * @see Required
  * @deprecated as of 5.1, in favor of using constructor injection for required settings
- * (or a custom {@link org.springframework.beans.factory.InitializingBean} implementation)
+ * (or a custom {@link InitializingBean} implementation)
  */
 @Deprecated
 public class RequiredAnnotationBeanPostProcessor extends InstantiationAwareBeanPostProcessorAdapter

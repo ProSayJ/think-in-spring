@@ -2,8 +2,8 @@ package iocaop.service.impl;
 
 import iocaop.service.OrderService;
 import iocaop.service.UserService;
-import org.springframework.beans.factory.BeanNameAware;
-import org.springframework.beans.factory.InitializingBean;
+import org.springframework.beans.factory.support.bean_.BeanNameAware;
+import org.springframework.beans.factory.support.bean_.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

@@ -16,13 +16,13 @@
 
 package org.springframework.beans.factory.annotation;
 
-import org.springframework.beans.factory.config.BeanDefinition;
+import org.springframework.beans.factory.support.bean_.definition_.BeanDefinition;
 import org.springframework.core.type.AnnotationMetadata;
 import org.springframework.core.type.MethodMetadata;
 import org.springframework.lang.Nullable;
 
 /**
- * Extended {@link org.springframework.beans.factory.config.BeanDefinition}
+ * Extended {@link BeanDefinition}
  * interface that exposes {@link org.springframework.core.type.AnnotationMetadata}
  * about its bean class - without requiring the class to be loaded yet.
  *

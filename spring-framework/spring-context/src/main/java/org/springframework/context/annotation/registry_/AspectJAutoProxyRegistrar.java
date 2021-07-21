@@ -17,7 +17,7 @@
 package org.springframework.context.annotation.registry_;
 
 import org.springframework.aop.config.AopConfigUtils;
-import org.springframework.beans.factory.support.BeanDefinitionRegistry;
+import org.springframework.beans.factory.support.bean_.definition_.BeanDefinitionRegistry;
 import org.springframework.context.annotation.anno_.EnableAspectJAutoProxy;
 import org.springframework.context.annotation.util_.AnnotationConfigUtils;
 import org.springframework.core.annotation.AnnotationAttributes;

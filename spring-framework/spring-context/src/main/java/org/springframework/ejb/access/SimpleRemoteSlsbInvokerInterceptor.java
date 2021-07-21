@@ -25,7 +25,7 @@ import javax.naming.NamingException;
 
 import org.aopalliance.intercept.MethodInvocation;
 
-import org.springframework.beans.factory.DisposableBean;
+import org.springframework.beans.factory.support.bean_.DisposableBean;
 import org.springframework.lang.Nullable;
 import org.springframework.remoting.RemoteLookupFailureException;
 import org.springframework.remoting.rmi.RmiClientInterceptorUtils;

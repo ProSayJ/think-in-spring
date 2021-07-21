@@ -17,8 +17,8 @@
 package org.springframework.beans.factory.expection_;
 
 import org.springframework.beans.expection_.FatalBeanException;
-import org.springframework.beans.factory.BeanFactoryAware;
-import org.springframework.beans.factory.InitializingBean;
+import org.springframework.beans.factory.support.bean_.factory_.BeanFactoryAware;
+import org.springframework.beans.factory.support.bean_.InitializingBean;
 
 /**
  * Exception that a bean implementation is suggested to throw if its own

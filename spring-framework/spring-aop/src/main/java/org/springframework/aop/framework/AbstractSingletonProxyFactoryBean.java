@@ -20,10 +20,10 @@ import org.springframework.aop.TargetSource;
 import org.springframework.aop.framework.adapter.AdvisorAdapterRegistry;
 import org.springframework.aop.framework.adapter.GlobalAdvisorAdapterRegistry;
 import org.springframework.aop.target.SingletonTargetSource;
-import org.springframework.beans.factory.BeanClassLoaderAware;
-import org.springframework.beans.factory.core_.FactoryBean;
+import org.springframework.beans.factory.support.bean_.BeanClassLoaderAware;
+import org.springframework.beans.factory.support.factory_.bean_.FactoryBean;
 import org.springframework.beans.factory.expection_.FactoryBeanNotInitializedException;
-import org.springframework.beans.factory.InitializingBean;
+import org.springframework.beans.factory.support.bean_.InitializingBean;
 import org.springframework.lang.Nullable;
 import org.springframework.util.ClassUtils;
 

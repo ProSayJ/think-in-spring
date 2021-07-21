@@ -16,11 +16,12 @@
 
 package org.springframework.beans.factory.xml;
 
+import org.springframework.beans.factory.support.bean_.definition_.BeanDefinitionRegistry;
 import org.w3c.dom.Element;
 
-import org.springframework.beans.factory.config.BeanDefinition;
-import org.springframework.beans.factory.support.AbstractBeanDefinition;
-import org.springframework.beans.factory.support.BeanDefinitionBuilder;
+import org.springframework.beans.factory.support.bean_.definition_.BeanDefinition;
+import org.springframework.beans.factory.support.bean_.definition_.AbstractBeanDefinition;
+import org.springframework.beans.factory.support.bean_.definition_.BeanDefinitionBuilder;
 import org.springframework.lang.Nullable;
 
 /**
@@ -33,7 +34,7 @@ import org.springframework.lang.Nullable;
  * single bean definition from a relatively simple custom XML element.
  *
  * <p>The resulting {@code BeanDefinition} will be automatically registered
- * with the {@link org.springframework.beans.factory.support.BeanDefinitionRegistry}.
+ * with the {@link BeanDefinitionRegistry}.
  * Your job simply is to {@link #doParse parse} the custom XML {@link Element}
  * into a single {@code BeanDefinition}.
  *

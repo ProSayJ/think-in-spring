@@ -19,6 +19,7 @@ package org.springframework.jca.context;
 import javax.resource.spi.BootstrapContext;
 
 import org.springframework.beans.factory.Aware;
+import org.springframework.beans.factory.support.bean_.InitializingBean;
 
 /**
  * Interface to be implemented by any object that wishes to be
@@ -39,7 +40,7 @@ public interface BootstrapContextAware extends Aware {
 	 * custom init-method. Invoked after ApplicationContextAware's
 	 * {@code setApplicationContext}.
 	 * @param bootstrapContext the BootstrapContext object to be used by this object
-	 * @see org.springframework.beans.factory.InitializingBean#afterPropertiesSet
+	 * @see InitializingBean#afterPropertiesSet
 	 * @see org.springframework.context.ApplicationContextAware#setApplicationContext
 	 */
 	void setBootstrapContext(BootstrapContext bootstrapContext);

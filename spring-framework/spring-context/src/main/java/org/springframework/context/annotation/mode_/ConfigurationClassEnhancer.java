@@ -27,13 +27,13 @@ import org.apache.commons.logging.LogFactory;
 
 import org.springframework.aop.scope.ScopedProxyFactoryBean;
 import org.springframework.asm.Type;
-import org.springframework.beans.factory.core_.BeanFactory;
-import org.springframework.beans.factory.BeanFactoryAware;
+import org.springframework.beans.factory.support.bean_.factory_.BeanFactory;
+import org.springframework.beans.factory.support.bean_.factory_.BeanFactoryAware;
 import org.springframework.beans.factory.expection_.NoSuchBeanDefinitionException;
-import org.springframework.beans.factory.config.BeanDefinition;
-import org.springframework.beans.factory.config.BeanFactoryPostProcessor;
+import org.springframework.beans.factory.support.bean_.definition_.BeanDefinition;
+import org.springframework.beans.factory.config.bean_.processor_.BeanFactoryPostProcessor;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
-import org.springframework.beans.factory.support.SimpleInstantiationStrategy;
+import org.springframework.beans.factory.support.strategy_.SimpleInstantiationStrategy;
 import org.springframework.cglib.core.ClassGenerator;
 import org.springframework.cglib.core.ClassLoaderAwareGeneratorStrategy;
 import org.springframework.cglib.core.Constants;

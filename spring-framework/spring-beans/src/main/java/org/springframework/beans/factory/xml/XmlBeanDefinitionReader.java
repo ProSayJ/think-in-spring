@@ -23,6 +23,7 @@ import java.util.Set;
 
 import javax.xml.parsers.ParserConfigurationException;
 
+import org.springframework.beans.factory.support.bean_.factory_.DefaultListableBeanFactory;
 import org.w3c.dom.Document;
 import org.xml.sax.EntityResolver;
 import org.xml.sax.ErrorHandler;
@@ -30,7 +31,7 @@ import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 import org.xml.sax.SAXParseException;
 
-import org.springframework.beans.util_.bean_.BeanUtils;
+import org.springframework.beans.factory.support.bean_.BeanUtils;
 import org.springframework.beans.factory.expection_.BeanDefinitionStoreException;
 import org.springframework.beans.factory.parsing.EmptyReaderEventListener;
 import org.springframework.beans.factory.parsing.FailFastProblemReporter;
@@ -38,8 +39,8 @@ import org.springframework.beans.factory.parsing.NullSourceExtractor;
 import org.springframework.beans.factory.parsing.ProblemReporter;
 import org.springframework.beans.factory.parsing.ReaderEventListener;
 import org.springframework.beans.factory.parsing.SourceExtractor;
-import org.springframework.beans.factory.support.AbstractBeanDefinitionReader;
-import org.springframework.beans.factory.support.BeanDefinitionRegistry;
+import org.springframework.beans.factory.support.bean_.definition_.AbstractBeanDefinitionReader;
+import org.springframework.beans.factory.support.bean_.definition_.BeanDefinitionRegistry;
 import org.springframework.core.Constants;
 import org.springframework.core.NamedThreadLocal;
 import org.springframework.core.io.DescriptiveResource;
@@ -57,13 +58,13 @@ import org.springframework.util.xml.XmlValidationModeDetector;
  * of the {@link BeanDefinitionDocumentReader} interface.
  *
  * <p>Typically applied to a
- * {@link org.springframework.beans.factory.support.DefaultListableBeanFactory}
+ * {@link DefaultListableBeanFactory}
  * or a {@link org.springframework.context.support.GenericApplicationContext}.
  *
  * <p>This class loads a DOM document and applies the BeanDefinitionDocumentReader to it.
  * The document reader will register each bean definition with the given bean factory,
  * talking to the latter's implementation of the
- * {@link org.springframework.beans.factory.support.BeanDefinitionRegistry} interface.
+ * {@link BeanDefinitionRegistry} interface.
  *
  * @author Juergen Hoeller
  * @author Rob Harrop
@@ -73,7 +74,7 @@ import org.springframework.util.xml.XmlValidationModeDetector;
  * @see BeanDefinitionDocumentReader
  * @see DefaultBeanDefinitionDocumentReader
  * @see BeanDefinitionRegistry
- * @see org.springframework.beans.factory.support.DefaultListableBeanFactory
+ * @see DefaultListableBeanFactory
  * @see org.springframework.context.support.GenericApplicationContext
  */
 public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader {

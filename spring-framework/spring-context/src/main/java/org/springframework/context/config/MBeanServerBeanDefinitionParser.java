@@ -18,9 +18,9 @@ package org.springframework.context.config;
 
 import org.w3c.dom.Element;
 
-import org.springframework.beans.factory.config.BeanDefinition;
-import org.springframework.beans.factory.support.AbstractBeanDefinition;
-import org.springframework.beans.factory.support.RootBeanDefinition;
+import org.springframework.beans.factory.support.bean_.definition_.BeanDefinition;
+import org.springframework.beans.factory.support.bean_.definition_.AbstractBeanDefinition;
+import org.springframework.beans.factory.support.bean_.definition_.RootBeanDefinition;
 import org.springframework.beans.factory.xml.AbstractBeanDefinitionParser;
 import org.springframework.beans.factory.xml.ParserContext;
 import org.springframework.jmx.support.MBeanServerFactoryBean;

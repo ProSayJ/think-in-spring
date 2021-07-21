@@ -16,7 +16,7 @@
 
 package org.springframework.beans.factory.parsing;
 
-import org.springframework.beans.factory.config.BeanDefinition;
+import org.springframework.beans.factory.support.bean_.definition_.BeanDefinition;
 import org.springframework.beans.factory.config.BeanReference;
 
 /**

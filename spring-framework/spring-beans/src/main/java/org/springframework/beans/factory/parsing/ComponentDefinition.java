@@ -16,11 +16,11 @@
 
 package org.springframework.beans.factory.parsing;
 
-import org.springframework.beans.util_.bean_.matadata_.BeanMetadataElement;
-import org.springframework.beans.factory.config.BeanDefinition;
+import org.springframework.beans.factory.support.bean_.metadata_.BeanMetadataElement;
+import org.springframework.beans.factory.support.bean_.definition_.BeanDefinition;
 import org.springframework.beans.factory.config.BeanReference;
-import org.springframework.beans.factory.core_.BeanFactory;
-import org.springframework.beans.util_.property_.value_.PropertyValue;
+import org.springframework.beans.factory.support.bean_.factory_.BeanFactory;
+import org.springframework.beans.factory.support.bean_.metadata_.PropertyValue;
 
 /**
  * Interface that describes the logical view of a set of {@link BeanDefinition BeanDefinitions}

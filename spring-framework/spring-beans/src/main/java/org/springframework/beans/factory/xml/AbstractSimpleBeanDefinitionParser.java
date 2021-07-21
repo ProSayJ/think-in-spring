@@ -16,12 +16,14 @@
 
 package org.springframework.beans.factory.xml;
 
-import org.springframework.beans.util_.property_.value_.PropertyValue;
+import org.springframework.beans.factory.support.bean_.definition_.BeanDefinition;
+import org.springframework.beans.factory.support.bean_.definition_.BeanDefinitionRegistry;
+import org.springframework.beans.factory.support.bean_.metadata_.PropertyValue;
 import org.w3c.dom.Attr;
 import org.w3c.dom.Element;
 import org.w3c.dom.NamedNodeMap;
 
-import org.springframework.beans.factory.support.BeanDefinitionBuilder;
+import org.springframework.beans.factory.support.bean_.definition_.BeanDefinitionBuilder;
 import org.springframework.core.Conventions;
 import org.springframework.util.Assert;
 import org.springframework.util.StringUtils;
@@ -35,7 +37,7 @@ import org.springframework.util.StringUtils;
  * bean definition from a relatively simple custom XML element. The
  * resulting {@code BeanDefinition} will be automatically
  * registered with the relevant
- * {@link org.springframework.beans.factory.support.BeanDefinitionRegistry}.
+ * {@link BeanDefinitionRegistry}.
  *
  * <p>An example will hopefully make the use of this particular parser
  * class immediately clear. Consider the following class definition:
@@ -69,7 +71,7 @@ import org.springframework.util.StringUtils;
  * is limited to populating the created bean definition with property values.
  * if you want to parse constructor arguments and nested elements from the
  * supplied XML element, then you will have to implement the
- * {@link #postProcess(org.springframework.beans.factory.support.BeanDefinitionBuilder, org.w3c.dom.Element)}
+ * {@link #postProcess(BeanDefinitionBuilder, org.w3c.dom.Element)}
  * method and do such parsing yourself, or (more likely) subclass the
  * {@link AbstractSingleBeanDefinitionParser} or {@link AbstractBeanDefinitionParser}
  * classes directly.
@@ -116,7 +118,7 @@ public abstract class AbstractSimpleBeanDefinitionParser extends AbstractSingleB
 	 * instances, and
 	 * {@link BeanDefinitionBuilder#addPropertyValue(String, Object) adds them}
 	 * to the
-	 * {@link org.springframework.beans.factory.config.BeanDefinition builder}.
+	 * {@link BeanDefinition builder}.
 	 * <p>The {@link #extractPropertyName(String)} method is used to
 	 * reconcile the name of an attribute with the name of a JavaBean
 	 * property.

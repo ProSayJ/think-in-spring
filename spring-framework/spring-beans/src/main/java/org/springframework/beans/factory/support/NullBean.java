@@ -16,8 +16,8 @@
 
 package org.springframework.beans.factory.support;
 
-import org.springframework.beans.factory.core_.FactoryBean;
-import org.springframework.beans.factory.core_.BeanFactory;
+import org.springframework.beans.factory.support.factory_.bean_.FactoryBean;
+import org.springframework.beans.factory.support.bean_.factory_.BeanFactory;
 import org.springframework.lang.Nullable;
 
 /**
@@ -34,25 +34,27 @@ import org.springframework.lang.Nullable;
  * @author Juergen Hoeller
  * @since 5.0
  */
-final class NullBean {
+//final class NullBean {
+public final class NullBean {
 
-	NullBean() {
-	}
+    //NullBean() {
+    public NullBean() {
+    }
 
 
-	@Override
-	public boolean equals(@Nullable Object obj) {
-		return (this == obj || obj == null);
-	}
+    @Override
+    public boolean equals(@Nullable Object obj) {
+        return (this == obj || obj == null);
+    }
 
-	@Override
-	public int hashCode() {
-		return NullBean.class.hashCode();
-	}
+    @Override
+    public int hashCode() {
+        return NullBean.class.hashCode();
+    }
 
-	@Override
-	public String toString() {
-		return "null";
-	}
+    @Override
+    public String toString() {
+        return "null";
+    }
 
 }

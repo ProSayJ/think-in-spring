@@ -41,8 +41,8 @@ import javax.validation.bootstrap.ProviderSpecificBootstrap;
 
 import org.hibernate.validator.messageinterpolation.ResourceBundleMessageInterpolator;
 
-import org.springframework.beans.factory.DisposableBean;
-import org.springframework.beans.factory.InitializingBean;
+import org.springframework.beans.factory.support.bean_.DisposableBean;
+import org.springframework.beans.factory.support.bean_.InitializingBean;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.context.MessageSource;

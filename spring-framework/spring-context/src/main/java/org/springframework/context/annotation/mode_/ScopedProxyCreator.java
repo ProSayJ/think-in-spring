@@ -17,8 +17,8 @@
 package org.springframework.context.annotation.mode_;
 
 import org.springframework.aop.scope.ScopedProxyUtils;
-import org.springframework.beans.factory.config.BeanDefinitionHolder;
-import org.springframework.beans.factory.support.BeanDefinitionRegistry;
+import org.springframework.beans.factory.support.bean_.definition_.BeanDefinitionHolder;
+import org.springframework.beans.factory.support.bean_.definition_.BeanDefinitionRegistry;
 
 /**
  * Delegate factory class used to just introduce an AOP framework dependency

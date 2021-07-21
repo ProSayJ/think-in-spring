@@ -16,7 +16,7 @@
 
 package org.springframework.beans.factory.mode_;
 
-import org.springframework.beans.factory.BeanNameAware;
+import org.springframework.beans.factory.support.bean_.BeanNameAware;
 
 /**
  * Counterpart of {@link BeanNameAware}. Returns the bean name of an object.

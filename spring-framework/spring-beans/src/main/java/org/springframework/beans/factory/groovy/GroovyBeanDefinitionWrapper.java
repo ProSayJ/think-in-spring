@@ -22,14 +22,14 @@ import java.util.List;
 
 import groovy.lang.GroovyObjectSupport;
 
-import org.springframework.beans.util_.bean_.wrapper_.BeanWrapper;
-import org.springframework.beans.util_.bean_.wrapper_.BeanWrapperImpl;
-import org.springframework.beans.factory.config.BeanDefinition;
-import org.springframework.beans.factory.config.BeanDefinitionHolder;
+import org.springframework.beans.factory.support.wrapper_.BeanWrapper;
+import org.springframework.beans.factory.support.wrapper_.BeanWrapperImpl;
+import org.springframework.beans.factory.support.bean_.definition_.BeanDefinition;
+import org.springframework.beans.factory.support.bean_.definition_.BeanDefinitionHolder;
 import org.springframework.beans.factory.config.ConstructorArgumentValues;
 import org.springframework.beans.factory.config.RuntimeBeanReference;
-import org.springframework.beans.factory.support.AbstractBeanDefinition;
-import org.springframework.beans.factory.support.GenericBeanDefinition;
+import org.springframework.beans.factory.support.bean_.definition_.AbstractBeanDefinition;
+import org.springframework.beans.factory.support.bean_.definition_.GenericBeanDefinition;
 import org.springframework.util.CollectionUtils;
 
 /**

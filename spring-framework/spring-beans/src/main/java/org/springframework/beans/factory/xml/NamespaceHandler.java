@@ -16,12 +16,13 @@
 
 package org.springframework.beans.factory.xml;
 
-import org.springframework.beans.factory.core_.BeanFactory;
+import org.springframework.beans.factory.support.bean_.factory_.BeanFactory;
+import org.springframework.beans.factory.support.bean_.definition_.BeanDefinitionRegistry;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 
-import org.springframework.beans.factory.config.BeanDefinition;
-import org.springframework.beans.factory.config.BeanDefinitionHolder;
+import org.springframework.beans.factory.support.bean_.definition_.BeanDefinition;
+import org.springframework.beans.factory.support.bean_.definition_.BeanDefinitionHolder;
 import org.springframework.lang.Nullable;
 
 /**
@@ -59,7 +60,7 @@ public interface NamespaceHandler {
 	/**
 	 * Parse the specified {@link Element} and register any resulting
 	 * {@link BeanDefinition BeanDefinitions} with the
-	 * {@link org.springframework.beans.factory.support.BeanDefinitionRegistry}
+	 * {@link BeanDefinitionRegistry}
 	 * that is embedded in the supplied {@link ParserContext}.
 	 * <p>Implementations should return the primary {@code BeanDefinition}
 	 * that results from the parse phase if they wish to be used nested

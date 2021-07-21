@@ -16,10 +16,10 @@
 
 package org.springframework.context;
 
-import org.springframework.beans.factory.core_.HierarchicalBeanFactory;
-import org.springframework.beans.factory.core_.ListableBeanFactory;
+import org.springframework.beans.factory.support.bean_.factory_.HierarchicalBeanFactory;
+import org.springframework.beans.factory.support.bean_.factory_.ListableBeanFactory;
 import org.springframework.beans.factory.config.AutowireCapableBeanFactory;
-import org.springframework.beans.factory.core_.BeanFactory;
+import org.springframework.beans.factory.support.bean_.factory_.BeanFactory;
 import org.springframework.core.env.EnvironmentCapable;
 import org.springframework.core.io.support.ResourcePatternResolver;
 import org.springframework.lang.Nullable;

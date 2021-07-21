@@ -16,6 +16,8 @@
 
 package org.springframework.beans.factory.parsing;
 
+import org.springframework.beans.factory.parsing.model_.Problem;
+
 /**
  * SPI interface allowing tools and other external processes to handle errors
  * and warnings reported during bean definition parsing.

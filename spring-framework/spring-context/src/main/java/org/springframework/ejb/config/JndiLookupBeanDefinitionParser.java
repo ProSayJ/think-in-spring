@@ -19,7 +19,7 @@ package org.springframework.ejb.config;
 import org.w3c.dom.Element;
 
 import org.springframework.beans.factory.config.RuntimeBeanReference;
-import org.springframework.beans.factory.support.BeanDefinitionBuilder;
+import org.springframework.beans.factory.support.bean_.definition_.BeanDefinitionBuilder;
 import org.springframework.beans.factory.xml.ParserContext;
 import org.springframework.jndi.JndiObjectFactoryBean;
 import org.springframework.util.StringUtils;

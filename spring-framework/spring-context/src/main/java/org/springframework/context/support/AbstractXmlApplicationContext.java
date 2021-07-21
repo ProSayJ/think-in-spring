@@ -19,7 +19,7 @@ package org.springframework.context.support;
 import java.io.IOException;
 
 import org.springframework.beans.expection_.BeansException;
-import org.springframework.beans.factory.support.DefaultListableBeanFactory;
+import org.springframework.beans.factory.support.bean_.factory_.DefaultListableBeanFactory;
 import org.springframework.beans.factory.xml.ResourceEntityResolver;
 import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
 import org.springframework.context.ApplicationContext;

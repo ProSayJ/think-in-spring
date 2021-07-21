@@ -33,9 +33,9 @@ import org.apache.commons.logging.LogFactory;
 
 import org.springframework.aop.framework.AopProxyUtils;
 import org.springframework.aop.support.AopUtils;
-import org.springframework.beans.factory.core_.BeanFactory;
-import org.springframework.beans.factory.BeanFactoryAware;
-import org.springframework.beans.factory.InitializingBean;
+import org.springframework.beans.factory.support.bean_.factory_.BeanFactory;
+import org.springframework.beans.factory.support.bean_.factory_.BeanFactoryAware;
+import org.springframework.beans.factory.support.bean_.InitializingBean;
 import org.springframework.beans.factory.expection_.NoSuchBeanDefinitionException;
 import org.springframework.beans.factory.expection_.NoUniqueBeanDefinitionException;
 import org.springframework.beans.factory.SmartInitializingSingleton;

@@ -18,7 +18,10 @@ package org.springframework.context.annotation;
 
 import java.util.function.Predicate;
 
-import org.springframework.beans.factory.core_.BeanFactory;
+import org.springframework.beans.factory.Aware;
+import org.springframework.beans.factory.support.bean_.BeanClassLoaderAware;
+import org.springframework.beans.factory.support.bean_.factory_.BeanFactory;
+import org.springframework.beans.factory.support.bean_.factory_.BeanFactoryAware;
 import org.springframework.context.annotation.anno_.Configuration;
 import org.springframework.context.annotation.anno_.Import;
 import org.springframework.context.annotation.registry_.ImportBeanDefinitionRegistrar;
@@ -31,12 +34,12 @@ import org.springframework.lang.Nullable;
  * more annotation attributes.
  *
  * <p>An {@link ImportSelector} may implement any of the following
- * {@link org.springframework.beans.factory.Aware Aware} interfaces,
+ * {@link Aware Aware} interfaces,
  * and their respective methods will be called prior to {@link #selectImports}:
  * <ul>
  * <li>{@link org.springframework.context.EnvironmentAware EnvironmentAware}</li>
- * <li>{@link org.springframework.beans.factory.BeanFactoryAware BeanFactoryAware}</li>
- * <li>{@link org.springframework.beans.factory.BeanClassLoaderAware BeanClassLoaderAware}</li>
+ * <li>{@link BeanFactoryAware BeanFactoryAware}</li>
+ * <li>{@link BeanClassLoaderAware BeanClassLoaderAware}</li>
  * <li>{@link org.springframework.context.ResourceLoaderAware ResourceLoaderAware}</li>
  * </ul>
  *

@@ -23,8 +23,8 @@ import java.security.ProtectionDomain;
 import org.aspectj.weaver.loadtime.ClassPreProcessorAgentAdapter;
 
 import org.springframework.beans.expection_.BeansException;
-import org.springframework.beans.factory.BeanClassLoaderAware;
-import org.springframework.beans.factory.config.BeanFactoryPostProcessor;
+import org.springframework.beans.factory.support.bean_.BeanClassLoaderAware;
+import org.springframework.beans.factory.config.bean_.processor_.BeanFactoryPostProcessor;
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
 import org.springframework.context.annotation.configuration_.LoadTimeWeavingConfiguration;
 import org.springframework.core.Ordered;

@@ -18,6 +18,8 @@ package org.springframework.beans.factory.config;
 
 import java.io.Serializable;
 
+import org.springframework.beans.factory.support.bean_.definition_.BeanDefinition;
+import org.springframework.beans.factory.support.bean_.definition_.BeanDefinitionBuilder;
 import org.springframework.lang.Nullable;
 
 /**
@@ -32,7 +34,7 @@ import org.springframework.lang.Nullable;
  * @since 5.2
  * @see AutowireCapableBeanFactory#resolveDependency
  * @see BeanDefinition#getPropertyValues()
- * @see org.springframework.beans.factory.support.BeanDefinitionBuilder#addAutowiredProperty
+ * @see BeanDefinitionBuilder#addAutowiredProperty
  */
 @SuppressWarnings("serial")
 public final class AutowiredPropertyMarker implements Serializable {

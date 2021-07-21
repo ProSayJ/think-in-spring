@@ -17,11 +17,11 @@
 package org.springframework.aop.scope;
 
 import org.springframework.aop.framework.autoproxy.AutoProxyUtils;
-import org.springframework.beans.factory.config.BeanDefinition;
-import org.springframework.beans.factory.config.BeanDefinitionHolder;
-import org.springframework.beans.factory.support.AbstractBeanDefinition;
-import org.springframework.beans.factory.support.BeanDefinitionRegistry;
-import org.springframework.beans.factory.support.RootBeanDefinition;
+import org.springframework.beans.factory.support.bean_.definition_.BeanDefinition;
+import org.springframework.beans.factory.support.bean_.definition_.BeanDefinitionHolder;
+import org.springframework.beans.factory.support.bean_.definition_.AbstractBeanDefinition;
+import org.springframework.beans.factory.support.bean_.definition_.BeanDefinitionRegistry;
+import org.springframework.beans.factory.support.bean_.definition_.RootBeanDefinition;
 import org.springframework.lang.Nullable;
 import org.springframework.util.Assert;
 

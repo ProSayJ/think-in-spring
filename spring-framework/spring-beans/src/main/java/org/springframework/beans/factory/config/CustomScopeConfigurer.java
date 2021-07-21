@@ -19,9 +19,10 @@ package org.springframework.beans.factory.config;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-import org.springframework.beans.util_.bean_.BeanUtils;
+import org.springframework.beans.factory.config.bean_.processor_.BeanFactoryPostProcessor;
+import org.springframework.beans.factory.support.bean_.BeanUtils;
 import org.springframework.beans.expection_.BeansException;
-import org.springframework.beans.factory.BeanClassLoaderAware;
+import org.springframework.beans.factory.support.bean_.BeanClassLoaderAware;
 import org.springframework.core.Ordered;
 import org.springframework.lang.Nullable;
 import org.springframework.util.Assert;

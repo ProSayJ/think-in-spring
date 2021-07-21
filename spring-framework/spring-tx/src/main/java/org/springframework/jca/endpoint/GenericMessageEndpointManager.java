@@ -21,8 +21,8 @@ import javax.resource.spi.ActivationSpec;
 import javax.resource.spi.ResourceAdapter;
 import javax.resource.spi.endpoint.MessageEndpointFactory;
 
-import org.springframework.beans.factory.DisposableBean;
-import org.springframework.beans.factory.InitializingBean;
+import org.springframework.beans.factory.support.bean_.DisposableBean;
+import org.springframework.beans.factory.support.bean_.InitializingBean;
 import org.springframework.context.SmartLifecycle;
 import org.springframework.lang.Nullable;
 import org.springframework.util.Assert;

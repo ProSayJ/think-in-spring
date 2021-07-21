@@ -23,7 +23,7 @@ import javax.script.Invocable;
 import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
 
-import org.springframework.beans.factory.BeanClassLoaderAware;
+import org.springframework.beans.factory.support.bean_.BeanClassLoaderAware;
 import org.springframework.lang.Nullable;
 import org.springframework.scripting.ScriptCompilationException;
 import org.springframework.scripting.ScriptFactory;

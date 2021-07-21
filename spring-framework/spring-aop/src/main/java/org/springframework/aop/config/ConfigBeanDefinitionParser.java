@@ -32,17 +32,17 @@ import org.springframework.aop.aspectj.AspectJMethodBeforeAdvice;
 import org.springframework.aop.aspectj.AspectJPointcutAdvisor;
 import org.springframework.aop.aspectj.DeclareParentsAdvisor;
 import org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor;
-import org.springframework.beans.factory.config.BeanDefinition;
+import org.springframework.beans.factory.support.bean_.definition_.BeanDefinition;
 import org.springframework.beans.factory.config.BeanReference;
 import org.springframework.beans.factory.config.ConstructorArgumentValues;
 import org.springframework.beans.factory.config.RuntimeBeanNameReference;
 import org.springframework.beans.factory.config.RuntimeBeanReference;
 import org.springframework.beans.factory.parsing.CompositeComponentDefinition;
-import org.springframework.beans.factory.parsing.ParseState;
-import org.springframework.beans.factory.support.AbstractBeanDefinition;
-import org.springframework.beans.factory.support.BeanDefinitionBuilder;
-import org.springframework.beans.factory.support.BeanDefinitionRegistry;
-import org.springframework.beans.factory.support.RootBeanDefinition;
+import org.springframework.beans.factory.parsing.model_.ParseState;
+import org.springframework.beans.factory.support.bean_.definition_.AbstractBeanDefinition;
+import org.springframework.beans.factory.support.bean_.definition_.BeanDefinitionBuilder;
+import org.springframework.beans.factory.support.bean_.definition_.BeanDefinitionRegistry;
+import org.springframework.beans.factory.support.bean_.definition_.RootBeanDefinition;
 import org.springframework.beans.factory.xml.BeanDefinitionParser;
 import org.springframework.beans.factory.xml.ParserContext;
 import org.springframework.lang.Nullable;
@@ -465,7 +465,7 @@ class ConfigBeanDefinitionParser implements BeanDefinitionParser {
 	/**
 	 * Parses the {@code pointcut} or {@code pointcut-ref} attributes of the supplied
 	 * {@link Element} and add a {@code pointcut} property as appropriate. Generates a
-	 * {@link org.springframework.beans.factory.config.BeanDefinition} for the pointcut if  necessary
+	 * {@link BeanDefinition} for the pointcut if  necessary
 	 * and returns its bean name, otherwise returns the bean name of the referred pointcut.
 	 */
 	@Nullable

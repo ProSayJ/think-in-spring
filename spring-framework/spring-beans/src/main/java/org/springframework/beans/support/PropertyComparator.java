@@ -23,9 +23,9 @@ import java.util.List;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
-import org.springframework.beans.util_.bean_.wrapper_.BeanWrapperImpl;
+import org.springframework.beans.factory.support.wrapper_.BeanWrapperImpl;
 import org.springframework.beans.expection_.BeansException;
-import org.springframework.beans.util_.bean_.wrapper_.BeanWrapper;
+import org.springframework.beans.factory.support.wrapper_.BeanWrapper;
 import org.springframework.lang.Nullable;
 import org.springframework.util.StringUtils;
 

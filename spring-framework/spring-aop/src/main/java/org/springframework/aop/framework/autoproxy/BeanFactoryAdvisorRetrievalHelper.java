@@ -25,7 +25,7 @@ import org.apache.commons.logging.LogFactory;
 import org.springframework.aop.Advisor;
 import org.springframework.beans.factory.expection_.BeanCreationException;
 import org.springframework.beans.factory.expection_.BeanCurrentlyInCreationException;
-import org.springframework.beans.factory.util_.BeanFactoryUtils;
+import org.springframework.beans.factory.support.bean_.factory_.BeanFactoryUtils;
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
 import org.springframework.lang.Nullable;
 import org.springframework.util.Assert;

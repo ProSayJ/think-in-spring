@@ -16,7 +16,10 @@
 
 package org.springframework.beans.factory.config;
 
-import org.springframework.beans.factory.ObjectFactory;
+import org.springframework.beans.factory.support.ObjectFactory;
+import org.springframework.beans.factory.config.bean_.processor_.DestructionAwareBeanPostProcessor;
+import org.springframework.beans.factory.support.bean_.DisposableBean;
+import org.springframework.beans.factory.support.bean_.definition_.AbstractBeanDefinition;
 import org.springframework.lang.Nullable;
 
 /**
@@ -61,7 +64,7 @@ public interface Scope {
 
 	/**
 	 * Return the object with the given name from the underlying scope,
-	 * {@link org.springframework.beans.factory.ObjectFactory#getObject() creating it}
+	 * {@link ObjectFactory#getObject() creating it}
 	 * if not found in the underlying storage mechanism.
 	 * <p>This is the central operation of a Scope, and the only operation
 	 * that is absolutely required.
@@ -117,8 +120,8 @@ public interface Scope {
 	 * Furthermore, the Runnable will usually be serializable, provided
 	 * that its target object is serializable as well.
 	 * @throws IllegalStateException if the underlying scope is not currently active
-	 * @see org.springframework.beans.factory.DisposableBean
-	 * @see org.springframework.beans.factory.support.AbstractBeanDefinition#getDestroyMethodName()
+	 * @see DisposableBean
+	 * @see AbstractBeanDefinition#getDestroyMethodName()
 	 * @see DestructionAwareBeanPostProcessor
 	 */
 	void registerDestructionCallback(String name, Runnable callback);

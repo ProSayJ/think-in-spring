@@ -20,7 +20,9 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
 import org.springframework.beans.expection_.BeansException;
-import org.springframework.beans.factory.core_.BeanFactory;
+import org.springframework.beans.factory.support.bean_.definition_.BeanDefinition;
+import org.springframework.beans.factory.config.bean_.processor_.BeanFactoryPostProcessor;
+import org.springframework.beans.factory.support.bean_.factory_.BeanFactory;
 import org.springframework.util.ClassUtils;
 import org.springframework.util.StringUtils;
 

@@ -43,13 +43,14 @@ import org.springframework.aop.framework.ProxyFactory;
 import org.springframework.aop.scope.ScopedProxyUtils;
 import org.springframework.aop.support.AopUtils;
 import org.springframework.aop.target.LazyInitTargetSource;
-import org.springframework.beans.factory.BeanClassLoaderAware;
-import org.springframework.beans.factory.core_.BeanFactory;
-import org.springframework.beans.factory.BeanFactoryAware;
+import org.springframework.beans.factory.support.bean_.BeanClassLoaderAware;
+import org.springframework.beans.factory.support.bean_.definition_.BeanDefinition;
+import org.springframework.beans.factory.support.bean_.factory_.BeanFactory;
+import org.springframework.beans.factory.support.bean_.factory_.BeanFactoryAware;
 import org.springframework.beans.factory.expection_.CannotLoadBeanClassException;
-import org.springframework.beans.factory.DisposableBean;
-import org.springframework.beans.factory.InitializingBean;
-import org.springframework.beans.factory.core_.ListableBeanFactory;
+import org.springframework.beans.factory.support.bean_.DisposableBean;
+import org.springframework.beans.factory.support.bean_.InitializingBean;
+import org.springframework.beans.factory.support.bean_.factory_.ListableBeanFactory;
 import org.springframework.beans.factory.SmartInitializingSingleton;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
@@ -558,7 +559,7 @@ public class MBeanExporter extends MBeanRegistrationSupport implements MBeanExpo
 	 * @param beanFactory the bean factory that is supposed to contain the bean definition
 	 * @param beanName the name of the bean to check
 	 * @see org.springframework.beans.factory.config.ConfigurableListableBeanFactory#getBeanDefinition
-	 * @see org.springframework.beans.factory.config.BeanDefinition#isLazyInit
+	 * @see BeanDefinition#isLazyInit
 	 */
 	protected boolean isBeanDefinitionLazyInit(ListableBeanFactory beanFactory, String beanName) {
 		return (beanFactory instanceof ConfigurableListableBeanFactory && beanFactory.containsBeanDefinition(beanName) &&

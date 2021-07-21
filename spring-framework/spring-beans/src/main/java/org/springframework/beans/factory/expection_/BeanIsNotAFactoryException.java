@@ -16,7 +16,7 @@
 
 package org.springframework.beans.factory.expection_;
 
-import org.springframework.beans.factory.core_.FactoryBean;
+import org.springframework.beans.factory.support.factory_.bean_.FactoryBean;
 
 /**
  * Exception thrown when a bean is not a factory, but a user tries to get

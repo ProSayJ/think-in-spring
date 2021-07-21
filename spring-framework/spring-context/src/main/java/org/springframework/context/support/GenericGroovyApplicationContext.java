@@ -20,10 +20,10 @@ import groovy.lang.GroovyObject;
 import groovy.lang.GroovySystem;
 import groovy.lang.MetaClass;
 
-import org.springframework.beans.util_.bean_.wrapper_.BeanWrapper;
-import org.springframework.beans.util_.bean_.wrapper_.BeanWrapperImpl;
+import org.springframework.beans.factory.support.wrapper_.BeanWrapper;
+import org.springframework.beans.factory.support.wrapper_.BeanWrapperImpl;
 import org.springframework.beans.factory.expection_.NoSuchBeanDefinitionException;
-import org.springframework.beans.factory.config.BeanDefinition;
+import org.springframework.beans.factory.support.bean_.definition_.BeanDefinition;
 import org.springframework.beans.factory.groovy.GroovyBeanDefinitionReader;
 import org.springframework.core.env.ConfigurableEnvironment;
 import org.springframework.core.io.ClassPathResource;

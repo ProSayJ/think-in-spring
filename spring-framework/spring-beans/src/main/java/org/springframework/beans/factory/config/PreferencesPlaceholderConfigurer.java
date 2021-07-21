@@ -21,7 +21,7 @@ import java.util.prefs.BackingStoreException;
 import java.util.prefs.Preferences;
 
 import org.springframework.beans.factory.expection_.BeanDefinitionStoreException;
-import org.springframework.beans.factory.InitializingBean;
+import org.springframework.beans.factory.support.bean_.InitializingBean;
 import org.springframework.lang.Nullable;
 
 /**

@@ -48,11 +48,12 @@ import javax.xml.ws.WebServiceRef;
 
 import org.springframework.aop.TargetSource;
 import org.springframework.aop.framework.ProxyFactory;
-import org.springframework.beans.util_.bean_.BeanUtils;
-import org.springframework.beans.util_.property_.value_.PropertyValues;
+import org.springframework.beans.factory.config.bean_.processor_.BeanPostProcessor;
+import org.springframework.beans.factory.support.bean_.BeanUtils;
+import org.springframework.beans.factory.support.bean_.metadata_.PropertyValues;
 import org.springframework.beans.factory.expection_.BeanCreationException;
-import org.springframework.beans.factory.core_.BeanFactory;
-import org.springframework.beans.factory.BeanFactoryAware;
+import org.springframework.beans.factory.support.bean_.factory_.BeanFactory;
+import org.springframework.beans.factory.support.bean_.factory_.BeanFactoryAware;
 import org.springframework.beans.factory.expection_.NoSuchBeanDefinitionException;
 import org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor;
 import org.springframework.beans.factory.annotation.InjectionMetadata;
@@ -60,8 +61,8 @@ import org.springframework.beans.factory.config.AutowireCapableBeanFactory;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.beans.factory.config.DependencyDescriptor;
 import org.springframework.beans.factory.config.EmbeddedValueResolver;
-import org.springframework.beans.factory.config.InstantiationAwareBeanPostProcessor;
-import org.springframework.beans.factory.support.RootBeanDefinition;
+import org.springframework.beans.factory.config.bean_.processor_.InstantiationAwareBeanPostProcessor;
+import org.springframework.beans.factory.support.bean_.definition_.RootBeanDefinition;
 import org.springframework.context.annotation.anno_.Lazy;
 import org.springframework.core.BridgeMethodResolver;
 import org.springframework.core.MethodParameter;
@@ -76,7 +77,7 @@ import org.springframework.util.StringUtils;
 import org.springframework.util.StringValueResolver;
 
 /**
- * {@link org.springframework.beans.factory.config.BeanPostProcessor} implementation
+ * {@link BeanPostProcessor} implementation
  * that supports common Java annotations out of the box, in particular the JSR-250
  * annotations in the {@code javax.annotation} package. These common Java
  * annotations are supported in many Java EE 5 technologies (e.g. JSF 1.2),

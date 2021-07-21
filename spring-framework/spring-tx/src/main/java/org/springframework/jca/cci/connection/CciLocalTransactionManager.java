@@ -22,7 +22,7 @@ import javax.resource.cci.Connection;
 import javax.resource.cci.ConnectionFactory;
 import javax.resource.spi.LocalTransactionException;
 
-import org.springframework.beans.factory.InitializingBean;
+import org.springframework.beans.factory.support.bean_.InitializingBean;
 import org.springframework.lang.Nullable;
 import org.springframework.transaction.CannotCreateTransactionException;
 import org.springframework.transaction.TransactionDefinition;

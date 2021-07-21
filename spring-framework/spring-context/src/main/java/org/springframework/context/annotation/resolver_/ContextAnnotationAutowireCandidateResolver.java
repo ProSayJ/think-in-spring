@@ -27,11 +27,11 @@ import java.util.Set;
 
 import org.springframework.aop.TargetSource;
 import org.springframework.aop.framework.ProxyFactory;
-import org.springframework.beans.factory.core_.BeanFactory;
+import org.springframework.beans.factory.support.bean_.factory_.BeanFactory;
 import org.springframework.beans.factory.expection_.NoSuchBeanDefinitionException;
 import org.springframework.beans.factory.annotation.QualifierAnnotationAutowireCandidateResolver;
 import org.springframework.beans.factory.config.DependencyDescriptor;
-import org.springframework.beans.factory.support.DefaultListableBeanFactory;
+import org.springframework.beans.factory.support.bean_.factory_.DefaultListableBeanFactory;
 import org.springframework.context.annotation.anno_.Lazy;
 import org.springframework.core.MethodParameter;
 import org.springframework.core.annotation.AnnotationUtils;

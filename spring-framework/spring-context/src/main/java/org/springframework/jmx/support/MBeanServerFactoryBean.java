@@ -22,9 +22,9 @@ import javax.management.MBeanServerFactory;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
-import org.springframework.beans.factory.DisposableBean;
-import org.springframework.beans.factory.core_.FactoryBean;
-import org.springframework.beans.factory.InitializingBean;
+import org.springframework.beans.factory.support.bean_.DisposableBean;
+import org.springframework.beans.factory.support.factory_.bean_.FactoryBean;
+import org.springframework.beans.factory.support.bean_.InitializingBean;
 import org.springframework.jmx.MBeanServerNotFoundException;
 import org.springframework.lang.Nullable;
 

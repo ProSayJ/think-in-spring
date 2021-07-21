@@ -16,7 +16,7 @@
 
 package org.springframework.context.annotation;
 
-import org.springframework.beans.factory.parsing.Location;
+import org.springframework.beans.factory.parsing.model_.Location;
 import org.springframework.beans.factory.parsing.ProblemReporter;
 import org.springframework.context.annotation.anno_.Configuration;
 import org.springframework.context.annotation.reader_.ConfigurationClass;

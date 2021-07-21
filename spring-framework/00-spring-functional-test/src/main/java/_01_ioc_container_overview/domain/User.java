@@ -16,15 +16,12 @@
  */
 package _01_ioc_container_overview.domain;
 
-import _01_ioc_container_overview.domain.Company;
 import _01_ioc_container_overview.enums.City;
-import org.springframework.beans.factory.BeanNameAware;
+import org.springframework.beans.factory.support.bean_.BeanNameAware;
 import org.springframework.core.io.Resource;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
-import java.beans.PropertyChangeEvent;
-import java.beans.PropertyChangeListener;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Properties;

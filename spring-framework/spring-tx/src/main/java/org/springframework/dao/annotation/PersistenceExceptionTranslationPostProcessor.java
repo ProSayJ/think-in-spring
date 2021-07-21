@@ -19,8 +19,8 @@ package org.springframework.dao.annotation;
 import java.lang.annotation.Annotation;
 
 import org.springframework.aop.framework.autoproxy.AbstractBeanFactoryAwareAdvisingPostProcessor;
-import org.springframework.beans.factory.core_.BeanFactory;
-import org.springframework.beans.factory.core_.ListableBeanFactory;
+import org.springframework.beans.factory.support.bean_.factory_.BeanFactory;
+import org.springframework.beans.factory.support.bean_.factory_.ListableBeanFactory;
 import org.springframework.stereotype.Repository;
 import org.springframework.util.Assert;
 

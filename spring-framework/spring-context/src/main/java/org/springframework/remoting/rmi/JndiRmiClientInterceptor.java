@@ -27,7 +27,7 @@ import org.aopalliance.intercept.MethodInterceptor;
 import org.aopalliance.intercept.MethodInvocation;
 
 import org.springframework.aop.support.AopUtils;
-import org.springframework.beans.factory.InitializingBean;
+import org.springframework.beans.factory.support.bean_.InitializingBean;
 import org.springframework.jndi.JndiObjectLocator;
 import org.springframework.lang.Nullable;
 import org.springframework.remoting.RemoteConnectFailureException;

@@ -16,7 +16,7 @@
 
 package org.springframework.aop.config;
 
-import org.springframework.beans.factory.config.BeanDefinition;
+import org.springframework.beans.factory.support.bean_.definition_.BeanDefinition;
 import org.springframework.beans.factory.parsing.AbstractComponentDefinition;
 import org.springframework.lang.Nullable;
 import org.springframework.util.Assert;

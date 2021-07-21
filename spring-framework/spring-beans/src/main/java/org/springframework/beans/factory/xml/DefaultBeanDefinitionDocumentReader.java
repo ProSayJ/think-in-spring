@@ -29,9 +29,9 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 import org.springframework.beans.factory.expection_.BeanDefinitionStoreException;
-import org.springframework.beans.factory.config.BeanDefinitionHolder;
+import org.springframework.beans.factory.support.bean_.definition_.BeanDefinitionHolder;
 import org.springframework.beans.factory.parsing.BeanComponentDefinition;
-import org.springframework.beans.factory.support.BeanDefinitionReaderUtils;
+import org.springframework.beans.factory.support.bean_.definition_.BeanDefinitionReaderUtils;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.support.ResourcePatternUtils;
 import org.springframework.lang.Nullable;

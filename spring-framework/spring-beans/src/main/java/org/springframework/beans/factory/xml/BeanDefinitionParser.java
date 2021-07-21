@@ -16,9 +16,10 @@
 
 package org.springframework.beans.factory.xml;
 
+import org.springframework.beans.factory.support.bean_.definition_.BeanDefinitionRegistry;
 import org.w3c.dom.Element;
 
-import org.springframework.beans.factory.config.BeanDefinition;
+import org.springframework.beans.factory.support.bean_.definition_.BeanDefinition;
 import org.springframework.lang.Nullable;
 
 /**
@@ -49,7 +50,7 @@ public interface BeanDefinitionParser {
 	 * {@code null} if they will <strong>not</strong> be used in a nested fashion.
 	 * @param element the element that is to be parsed into one or more {@link BeanDefinition BeanDefinitions}
 	 * @param parserContext the object encapsulating the current state of the parsing process;
-	 * provides access to a {@link org.springframework.beans.factory.support.BeanDefinitionRegistry}
+	 * provides access to a {@link BeanDefinitionRegistry}
 	 * @return the primary {@link BeanDefinition}
 	 */
 	@Nullable

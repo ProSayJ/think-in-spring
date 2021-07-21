@@ -22,10 +22,10 @@ import java.util.LinkedHashSet;
 import java.util.Map;
 import java.util.Set;
 
-import org.springframework.beans.factory.parsing.Location;
-import org.springframework.beans.factory.parsing.Problem;
+import org.springframework.beans.factory.parsing.model_.Location;
+import org.springframework.beans.factory.parsing.model_.Problem;
 import org.springframework.beans.factory.parsing.ProblemReporter;
-import org.springframework.beans.factory.support.BeanDefinitionReader;
+import org.springframework.beans.factory.support.bean_.definition_.BeanDefinitionReader;
 import org.springframework.context.annotation.BeanMethod;
 import org.springframework.context.annotation.anno_.Bean;
 import org.springframework.context.annotation.anno_.Configuration;

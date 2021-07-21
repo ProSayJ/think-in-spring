@@ -16,6 +16,9 @@
 
 package org.springframework.beans.factory.annotation;
 
+import org.springframework.beans.factory.config.bean_.processor_.BeanFactoryPostProcessor;
+import org.springframework.beans.factory.config.bean_.processor_.BeanPostProcessor;
+
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -81,12 +84,12 @@ import java.lang.annotation.Target;
  *
  * <h3>Not supported in {@code BeanPostProcessor} or {@code BeanFactoryPostProcessor}</h3>
  * <p>Note that actual injection is performed through a
- * {@link org.springframework.beans.factory.config.BeanPostProcessor
+ * {@link BeanPostProcessor
  * BeanPostProcessor} which in turn means that you <em>cannot</em>
  * use {@code @Autowired} to inject references into
- * {@link org.springframework.beans.factory.config.BeanPostProcessor
+ * {@link BeanPostProcessor
  * BeanPostProcessor} or
- * {@link org.springframework.beans.factory.config.BeanFactoryPostProcessor BeanFactoryPostProcessor}
+ * {@link BeanFactoryPostProcessor BeanFactoryPostProcessor}
  * types. Please consult the javadoc for the {@link AutowiredAnnotationBeanPostProcessor}
  * class (which, by default, checks for the presence of this annotation).
  *

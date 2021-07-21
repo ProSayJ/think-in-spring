@@ -19,8 +19,8 @@ package org.springframework.beans.factory.serviceloader;
 import java.util.Iterator;
 import java.util.ServiceLoader;
 
-import org.springframework.beans.factory.BeanClassLoaderAware;
-import org.springframework.beans.factory.core_.FactoryBean;
+import org.springframework.beans.factory.support.bean_.BeanClassLoaderAware;
+import org.springframework.beans.factory.support.factory_.bean_.FactoryBean;
 import org.springframework.lang.Nullable;
 
 /**

@@ -18,9 +18,9 @@ package org.springframework.cache.concurrent;
 
 import java.util.concurrent.ConcurrentMap;
 
-import org.springframework.beans.factory.BeanNameAware;
-import org.springframework.beans.factory.core_.FactoryBean;
-import org.springframework.beans.factory.InitializingBean;
+import org.springframework.beans.factory.support.bean_.BeanNameAware;
+import org.springframework.beans.factory.support.factory_.bean_.FactoryBean;
+import org.springframework.beans.factory.support.bean_.InitializingBean;
 import org.springframework.lang.Nullable;
 import org.springframework.util.StringUtils;
 

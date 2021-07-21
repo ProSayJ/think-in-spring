@@ -21,7 +21,7 @@ import java.util.Collection;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-import org.springframework.beans.factory.core_.BeanFactory;
+import org.springframework.beans.factory.support.bean_.factory_.BeanFactory;
 import org.springframework.cache.Cache;
 import org.springframework.context.expression.AnnotatedElementKey;
 import org.springframework.context.expression.BeanFactoryResolver;

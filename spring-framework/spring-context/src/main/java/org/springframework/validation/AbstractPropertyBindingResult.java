@@ -18,11 +18,11 @@ package org.springframework.validation;
 
 import java.beans.PropertyEditor;
 
-import org.springframework.beans.util_.bean_.BeanUtils;
-import org.springframework.beans.util_.property_.access_.ConfigurablePropertyAccessor;
-import org.springframework.beans.util_.property_.access_.PropertyAccessor;
-import org.springframework.beans.util_.property_.access_.PropertyAccessorUtils;
-import org.springframework.beans.util_.property_.editor_.PropertyEditorRegistry;
+import org.springframework.beans.factory.support.bean_.BeanUtils;
+import org.springframework.beans.factory.support.property_.access_.ConfigurablePropertyAccessor;
+import org.springframework.beans.factory.support.property_.access_.PropertyAccessor;
+import org.springframework.beans.factory.support.property_.access_.PropertyAccessorUtils;
+import org.springframework.beans.factory.support.property_.editor_.PropertyEditorRegistry;
 import org.springframework.core.convert.ConversionService;
 import org.springframework.core.convert.TypeDescriptor;
 import org.springframework.core.convert.support.ConvertingPropertyEditorAdapter;

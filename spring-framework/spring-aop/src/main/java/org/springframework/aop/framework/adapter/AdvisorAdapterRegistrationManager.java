@@ -17,7 +17,7 @@
 package org.springframework.aop.framework.adapter;
 
 import org.springframework.beans.expection_.BeansException;
-import org.springframework.beans.factory.config.BeanPostProcessor;
+import org.springframework.beans.factory.config.bean_.processor_.BeanPostProcessor;
 
 /**
  * BeanPostProcessor that registers {@link AdvisorAdapter} beans in the BeanFactory with

@@ -16,7 +16,7 @@
 
 package org.springframework.aop.config;
 
-import org.springframework.beans.factory.parsing.ParseState;
+import org.springframework.beans.factory.parsing.model_.ParseState;
 import org.springframework.util.StringUtils;
 
 /**

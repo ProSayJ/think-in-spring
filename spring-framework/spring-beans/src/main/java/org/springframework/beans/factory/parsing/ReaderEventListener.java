@@ -16,6 +16,8 @@
 
 package org.springframework.beans.factory.parsing;
 
+import org.springframework.beans.factory.parsing.model_.ReaderContext;
+
 import java.util.EventListener;
 
 /**

@@ -22,9 +22,9 @@ import java.util.List;
 import org.w3c.dom.Element;
 
 import org.springframework.beans.factory.config.TypedStringValue;
-import org.springframework.beans.factory.support.BeanDefinitionBuilder;
-import org.springframework.beans.factory.support.ManagedMap;
-import org.springframework.beans.factory.support.RootBeanDefinition;
+import org.springframework.beans.factory.support.bean_.definition_.BeanDefinitionBuilder;
+import org.springframework.beans.factory.support.mergeable_.ManagedMap;
+import org.springframework.beans.factory.support.bean_.definition_.RootBeanDefinition;
 import org.springframework.beans.factory.xml.AbstractSingleBeanDefinitionParser;
 import org.springframework.beans.factory.xml.ParserContext;
 import org.springframework.transaction.interceptor.NameMatchTransactionAttributeSource;

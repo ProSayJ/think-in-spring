@@ -28,8 +28,8 @@ import javax.management.remote.JMXServiceURL;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
-import org.springframework.beans.factory.DisposableBean;
-import org.springframework.beans.factory.InitializingBean;
+import org.springframework.beans.factory.support.bean_.DisposableBean;
+import org.springframework.beans.factory.support.bean_.InitializingBean;
 import org.springframework.jmx.JmxException;
 import org.springframework.jmx.MBeanServerNotFoundException;
 import org.springframework.jmx.support.NotificationListenerHolder;

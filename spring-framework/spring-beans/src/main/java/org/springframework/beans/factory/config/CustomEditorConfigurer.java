@@ -23,8 +23,9 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
 import org.springframework.beans.expection_.BeansException;
-import org.springframework.beans.util_.property_.editor_.PropertyEditorRegistrar;
-import org.springframework.beans.util_.property_.editor_.PropertyEditorRegistry;
+import org.springframework.beans.factory.config.bean_.processor_.BeanFactoryPostProcessor;
+import org.springframework.beans.factory.support.property_.editor_.PropertyEditorRegistrar;
+import org.springframework.beans.factory.support.property_.editor_.PropertyEditorRegistry;
 import org.springframework.core.Ordered;
 import org.springframework.lang.Nullable;
 import org.springframework.util.ClassUtils;

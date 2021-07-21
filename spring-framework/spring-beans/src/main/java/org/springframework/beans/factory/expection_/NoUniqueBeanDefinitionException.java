@@ -19,7 +19,7 @@ package org.springframework.beans.factory.expection_;
 import java.util.Arrays;
 import java.util.Collection;
 
-import org.springframework.beans.factory.core_.BeanFactory;
+import org.springframework.beans.factory.support.bean_.factory_.BeanFactory;
 import org.springframework.core.ResolvableType;
 import org.springframework.lang.Nullable;
 import org.springframework.util.StringUtils;

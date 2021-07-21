@@ -20,7 +20,7 @@ import java.beans.PropertyEditor;
 import java.util.List;
 import java.util.Map;
 
-import org.springframework.beans.util_.property_.editor_.PropertyEditorRegistry;
+import org.springframework.beans.factory.support.property_.editor_.PropertyEditorRegistry;
 import org.springframework.lang.Nullable;
 import org.springframework.util.Assert;
 

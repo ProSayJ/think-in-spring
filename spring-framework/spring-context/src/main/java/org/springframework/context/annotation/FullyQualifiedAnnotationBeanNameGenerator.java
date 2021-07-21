@@ -16,7 +16,9 @@
 
 package org.springframework.context.annotation;
 
-import org.springframework.beans.factory.config.BeanDefinition;
+import org.springframework.beans.factory.support.bean_.namegenerator_.DefaultBeanNameGenerator;
+import org.springframework.beans.factory.support.bean_.definition_.BeanDefinition;
+import org.springframework.context.annotation.bean_.namegenerator_.AnnotationBeanNameGenerator;
 import org.springframework.context.annotation.processor_.ConfigurationClassPostProcessor;
 import org.springframework.util.Assert;
 
@@ -38,7 +40,7 @@ import org.springframework.util.Assert;
  * @author Juergen Hoeller
  * @author Sam Brannen
  * @since 5.2.3
- * @see org.springframework.beans.factory.support.DefaultBeanNameGenerator
+ * @see DefaultBeanNameGenerator
  * @see AnnotationBeanNameGenerator
  * @see ConfigurationClassPostProcessor#IMPORT_BEAN_NAME_GENERATOR
  */

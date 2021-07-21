@@ -26,10 +26,10 @@ import org.apache.commons.logging.LogFactory;
 
 import org.springframework.aop.framework.AopInfrastructureBean;
 import org.springframework.beans.factory.annotation.AnnotatedBeanDefinition;
-import org.springframework.beans.factory.config.BeanDefinition;
-import org.springframework.beans.factory.config.BeanFactoryPostProcessor;
-import org.springframework.beans.factory.config.BeanPostProcessor;
-import org.springframework.beans.factory.support.AbstractBeanDefinition;
+import org.springframework.beans.factory.support.bean_.definition_.BeanDefinition;
+import org.springframework.beans.factory.config.bean_.processor_.BeanFactoryPostProcessor;
+import org.springframework.beans.factory.config.bean_.processor_.BeanPostProcessor;
+import org.springframework.beans.factory.support.bean_.definition_.AbstractBeanDefinition;
 import org.springframework.context.annotation.processor_.ConfigurationClassPostProcessor;
 import org.springframework.context.annotation.anno_.Import;
 import org.springframework.context.annotation.anno_.ImportResource;

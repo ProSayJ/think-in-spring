@@ -21,7 +21,7 @@ import java.util.Map;
 import java.util.Set;
 
 import org.springframework.beans.factory.annotation.AnnotatedBeanDefinition;
-import org.springframework.beans.factory.config.BeanDefinition;
+import org.springframework.beans.factory.support.bean_.definition_.BeanDefinition;
 import org.springframework.context.annotation.parser_.ClassPathBeanDefinitionScanner;
 import org.springframework.context.annotation.mode_.ScopeMetadata;
 import org.springframework.context.annotation.reader_.AnnotatedBeanDefinitionReader;

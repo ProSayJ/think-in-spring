@@ -23,8 +23,8 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 
-import org.springframework.beans.util_.bean_.wrapper_.BeanWrapper;
-import org.springframework.beans.util_.property_.access_.PropertyAccessorFactory;
+import org.springframework.beans.factory.support.wrapper_.BeanWrapper;
+import org.springframework.beans.factory.support.property_.access_.PropertyAccessorFactory;
 import org.springframework.lang.Nullable;
 import org.springframework.util.ReflectionUtils;
 import org.springframework.util.StringValueResolver;

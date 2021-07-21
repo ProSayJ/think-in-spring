@@ -299,7 +299,7 @@
 					<xsd:appinfo>
 						<tool:annotation>
 							<tool:expected-type type="java.lang.Class"/>
-							<tool:assignable-to type="org.springframework.beans.factory.support.BeanNameGenerator"/>
+							<tool:assignable-to type="org.springframework.beans.factory.support.bean_.namegenerator_.BeanNameGenerator"/>
 						</tool:annotation>
 					</xsd:appinfo>
 				</xsd:annotation>

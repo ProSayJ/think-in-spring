@@ -19,9 +19,14 @@ package org.springframework.beans.factory.config;
 import java.util.Set;
 
 import org.springframework.beans.expection_.BeansException;
-import org.springframework.beans.util_.typeconverter_.TypeConverter;
-import org.springframework.beans.factory.core_.BeanFactory;
-import org.springframework.beans.factory.core_.ListableBeanFactory;
+import org.springframework.beans.factory.config.bean_.processor_.BeanPostProcessor;
+import org.springframework.beans.factory.config.bean_.processor_.DestructionAwareBeanPostProcessor;
+import org.springframework.beans.factory.config.bean_.processor_.InstantiationAwareBeanPostProcessor;
+import org.springframework.beans.factory.support.bean_.DisposableBean;
+import org.springframework.beans.factory.support.bean_.factory_.BeanFactoryAware;
+import org.springframework.beans.factory.support.typeconverter_.TypeConverter;
+import org.springframework.beans.factory.support.bean_.factory_.BeanFactory;
+import org.springframework.beans.factory.support.bean_.factory_.ListableBeanFactory;
 import org.springframework.beans.factory.expection_.NoSuchBeanDefinitionException;
 import org.springframework.beans.factory.expection_.NoUniqueBeanDefinitionException;
 import org.springframework.lang.Nullable;
@@ -49,14 +54,14 @@ import org.springframework.lang.Nullable;
  * {@link org.springframework.context.ApplicationContext#getAutowireCapableBeanFactory()}
  * method.
  *
- * <p>You may also implement the {@link org.springframework.beans.factory.BeanFactoryAware}
+ * <p>You may also implement the {@link BeanFactoryAware}
  * interface, which exposes the internal BeanFactory even when running in an
  * ApplicationContext, to get access to an AutowireCapableBeanFactory:
  * simply cast the passed-in BeanFactory to AutowireCapableBeanFactory.
  *
  * @author Juergen Hoeller
  * @since 04.12.2003
- * @see org.springframework.beans.factory.BeanFactoryAware
+ * @see BeanFactoryAware
  * @see org.springframework.beans.factory.config.ConfigurableListableBeanFactory
  * @see org.springframework.context.ApplicationContext#getAutowireCapableBeanFactory()
  */
@@ -322,7 +327,7 @@ public interface AutowireCapableBeanFactory extends BeanFactory {
 
 	/**
 	 * Destroy the given bean instance (typically coming from {@link #createBean}),
-	 * applying the {@link org.springframework.beans.factory.DisposableBean} contract as well as
+	 * applying the {@link DisposableBean} contract as well as
 	 * registered {@link DestructionAwareBeanPostProcessor DestructionAwareBeanPostProcessors}.
 	 * <p>Any exception that arises during destruction should be caught
 	 * and logged instead of propagated to the caller of this method.

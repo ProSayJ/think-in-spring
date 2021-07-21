@@ -22,7 +22,7 @@ import javax.management.MalformedObjectNameException;
 import javax.management.ObjectName;
 
 import org.springframework.aop.support.AopUtils;
-import org.springframework.beans.factory.InitializingBean;
+import org.springframework.beans.factory.support.bean_.InitializingBean;
 import org.springframework.jmx.export.metadata.JmxAttributeSource;
 import org.springframework.jmx.export.metadata.ManagedResource;
 import org.springframework.jmx.support.ObjectNameManager;

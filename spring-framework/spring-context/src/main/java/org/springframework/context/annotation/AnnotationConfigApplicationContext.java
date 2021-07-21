@@ -18,11 +18,12 @@ package org.springframework.context.annotation;
 
 import java.util.function.Supplier;
 
-import org.springframework.beans.factory.config.BeanDefinitionCustomizer;
-import org.springframework.beans.factory.support.BeanNameGenerator;
-import org.springframework.beans.factory.support.DefaultListableBeanFactory;
+import org.springframework.beans.factory.support.bean_.definition_.BeanDefinitionCustomizer;
+import org.springframework.beans.factory.support.bean_.namegenerator_.BeanNameGenerator;
+import org.springframework.beans.factory.support.bean_.factory_.DefaultListableBeanFactory;
 import org.springframework.context.annotation.anno_.Bean;
 import org.springframework.context.annotation.anno_.Configuration;
+import org.springframework.context.annotation.bean_.namegenerator_.AnnotationBeanNameGenerator;
 import org.springframework.context.annotation.parser_.ClassPathBeanDefinitionScanner;
 import org.springframework.context.annotation.reader_.AnnotatedBeanDefinitionReader;
 import org.springframework.context.annotation.registry_.AnnotationConfigRegistry;

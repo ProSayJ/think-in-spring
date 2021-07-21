@@ -18,8 +18,9 @@ package org.springframework.beans.factory.config;
 
 import java.util.Properties;
 
-import org.springframework.beans.factory.core_.FactoryBean;
-import org.springframework.beans.factory.InitializingBean;
+import org.springframework.beans.factory.config.bean_.processor_.YamlProcessor;
+import org.springframework.beans.factory.support.factory_.bean_.FactoryBean;
+import org.springframework.beans.factory.support.bean_.InitializingBean;
 import org.springframework.core.CollectionFactory;
 import org.springframework.lang.Nullable;
 

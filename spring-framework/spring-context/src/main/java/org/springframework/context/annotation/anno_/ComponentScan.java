@@ -23,8 +23,12 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-import org.springframework.beans.factory.support.BeanNameGenerator;
+import org.springframework.beans.factory.Aware;
+import org.springframework.beans.factory.support.bean_.BeanClassLoaderAware;
+import org.springframework.beans.factory.support.bean_.factory_.BeanFactoryAware;
+import org.springframework.beans.factory.support.bean_.namegenerator_.BeanNameGenerator;
 import org.springframework.context.annotation.*;
+import org.springframework.context.annotation.bean_.namegenerator_.AnnotationBeanNameGenerator;
 import org.springframework.context.annotation.mode_.FilterType;
 import org.springframework.context.annotation.mode_.ScopedProxyMode;
 import org.springframework.context.annotation.parser_.ClassPathBeanDefinitionScanner;
@@ -199,12 +203,12 @@ public @interface ComponentScan {
 		 * <p>When multiple classes are specified, <em>OR</em> logic is applied
 		 * &mdash; for example, "include types annotated with {@code @Foo} OR {@code @Bar}".
 		 * <p>Custom {@link TypeFilter TypeFilters} may optionally implement any of the
-		 * following {@link org.springframework.beans.factory.Aware Aware} interfaces, and
+		 * following {@link Aware Aware} interfaces, and
 		 * their respective methods will be called prior to {@link TypeFilter#match match}:
 		 * <ul>
 		 * <li>{@link org.springframework.context.EnvironmentAware EnvironmentAware}</li>
-		 * <li>{@link org.springframework.beans.factory.BeanFactoryAware BeanFactoryAware}
-		 * <li>{@link org.springframework.beans.factory.BeanClassLoaderAware BeanClassLoaderAware}
+		 * <li>{@link BeanFactoryAware BeanFactoryAware}
+		 * <li>{@link BeanClassLoaderAware BeanClassLoaderAware}
 		 * <li>{@link org.springframework.context.ResourceLoaderAware ResourceLoaderAware}
 		 * </ul>
 		 * <p>Specifying zero classes is permitted but will have no effect on component

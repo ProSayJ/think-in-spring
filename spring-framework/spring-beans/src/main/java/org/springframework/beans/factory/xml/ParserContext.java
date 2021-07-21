@@ -19,12 +19,12 @@ package org.springframework.beans.factory.xml;
 import java.util.ArrayDeque;
 import java.util.Deque;
 
-import org.springframework.beans.factory.config.BeanDefinition;
+import org.springframework.beans.factory.support.bean_.definition_.BeanDefinition;
 import org.springframework.beans.factory.parsing.BeanComponentDefinition;
 import org.springframework.beans.factory.parsing.ComponentDefinition;
 import org.springframework.beans.factory.parsing.CompositeComponentDefinition;
-import org.springframework.beans.factory.support.BeanDefinitionReaderUtils;
-import org.springframework.beans.factory.support.BeanDefinitionRegistry;
+import org.springframework.beans.factory.support.bean_.definition_.BeanDefinitionReaderUtils;
+import org.springframework.beans.factory.support.bean_.definition_.BeanDefinitionRegistry;
 import org.springframework.lang.Nullable;
 
 /**

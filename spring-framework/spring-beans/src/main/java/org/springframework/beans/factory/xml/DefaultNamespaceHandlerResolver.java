@@ -24,7 +24,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
-import org.springframework.beans.util_.bean_.BeanUtils;
+import org.springframework.beans.factory.support.bean_.BeanUtils;
 import org.springframework.beans.expection_.FatalBeanException;
 import org.springframework.core.io.support.PropertiesLoaderUtils;
 import org.springframework.lang.Nullable;

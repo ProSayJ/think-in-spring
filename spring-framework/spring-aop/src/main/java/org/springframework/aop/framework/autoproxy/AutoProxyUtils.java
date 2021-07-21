@@ -17,9 +17,9 @@
 package org.springframework.aop.framework.autoproxy;
 
 import org.springframework.beans.factory.config.AutowireCapableBeanFactory;
-import org.springframework.beans.factory.config.BeanDefinition;
+import org.springframework.beans.factory.support.bean_.definition_.BeanDefinition;
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
-import org.springframework.beans.factory.core_.BeanFactory;
+import org.springframework.beans.factory.support.bean_.factory_.BeanFactory;
 import org.springframework.core.Conventions;
 import org.springframework.lang.Nullable;
 import org.springframework.util.StringUtils;

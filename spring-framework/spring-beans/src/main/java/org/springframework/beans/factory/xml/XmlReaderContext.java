@@ -18,23 +18,24 @@ package org.springframework.beans.factory.xml;
 
 import java.io.StringReader;
 
+import org.springframework.beans.factory.support.bean_.namegenerator_.BeanNameGenerator;
 import org.w3c.dom.Document;
 import org.xml.sax.InputSource;
 
 import org.springframework.beans.factory.expection_.BeanDefinitionStoreException;
-import org.springframework.beans.factory.config.BeanDefinition;
+import org.springframework.beans.factory.support.bean_.definition_.BeanDefinition;
 import org.springframework.beans.factory.parsing.ProblemReporter;
-import org.springframework.beans.factory.parsing.ReaderContext;
+import org.springframework.beans.factory.parsing.model_.ReaderContext;
 import org.springframework.beans.factory.parsing.ReaderEventListener;
 import org.springframework.beans.factory.parsing.SourceExtractor;
-import org.springframework.beans.factory.support.BeanDefinitionRegistry;
+import org.springframework.beans.factory.support.bean_.definition_.BeanDefinitionRegistry;
 import org.springframework.core.env.Environment;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.ResourceLoader;
 import org.springframework.lang.Nullable;
 
 /**
- * Extension of {@link org.springframework.beans.factory.parsing.ReaderContext},
+ * Extension of {@link ReaderContext},
  * specific to use with an {@link XmlBeanDefinitionReader}. Provides access to the
  * {@link NamespaceHandlerResolver} configured in the {@link XmlBeanDefinitionReader}.
  *
@@ -129,7 +130,7 @@ public class XmlReaderContext extends ReaderContext {
 	/**
 	 * Call the bean name generator for the given bean definition.
 	 * @see XmlBeanDefinitionReader#getBeanNameGenerator()
-	 * @see org.springframework.beans.factory.support.BeanNameGenerator#generateBeanName
+	 * @see BeanNameGenerator#generateBeanName
 	 */
 	public String generateBeanName(BeanDefinition beanDefinition) {
 		return this.reader.getBeanNameGenerator().generateBeanName(beanDefinition, getRegistry());
@@ -139,7 +140,7 @@ public class XmlReaderContext extends ReaderContext {
 	 * Call the bean name generator for the given bean definition
 	 * and register the bean definition under the generated name.
 	 * @see XmlBeanDefinitionReader#getBeanNameGenerator()
-	 * @see org.springframework.beans.factory.support.BeanNameGenerator#generateBeanName
+	 * @see BeanNameGenerator#generateBeanName
 	 * @see BeanDefinitionRegistry#registerBeanDefinition
 	 */
 	public String registerWithGeneratedName(BeanDefinition beanDefinition) {

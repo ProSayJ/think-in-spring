@@ -16,7 +16,7 @@
 
 package org.springframework.remoting.support;
 
-import org.springframework.beans.factory.InitializingBean;
+import org.springframework.beans.factory.support.bean_.InitializingBean;
 
 /**
  * Abstract base class for classes that access remote services via URLs.

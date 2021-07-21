@@ -30,10 +30,14 @@ import java.util.List;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
-import org.springframework.beans.util_.bean_.BeanUtils;
-import org.springframework.beans.factory.DisposableBean;
-import org.springframework.beans.factory.config.BeanPostProcessor;
-import org.springframework.beans.factory.config.DestructionAwareBeanPostProcessor;
+import org.springframework.beans.factory.support.bean_.definition_.RootBeanDefinition;
+import org.springframework.beans.factory.support.bean_.factory_.AbstractBeanFactory;
+import org.springframework.beans.factory.support.bean_.definition_.AbstractBeanDefinition;
+import org.springframework.beans.factory.support.bean_.expection_.BeanDefinitionValidationException;
+import org.springframework.beans.factory.support.bean_.BeanUtils;
+import org.springframework.beans.factory.support.bean_.DisposableBean;
+import org.springframework.beans.factory.config.bean_.processor_.BeanPostProcessor;
+import org.springframework.beans.factory.config.bean_.processor_.DestructionAwareBeanPostProcessor;
 import org.springframework.lang.Nullable;
 import org.springframework.util.Assert;
 import org.springframework.util.ClassUtils;
@@ -55,12 +59,12 @@ import org.springframework.util.StringUtils;
  * @author Stephane Nicoll
  * @since 2.0
  * @see AbstractBeanFactory
- * @see org.springframework.beans.factory.DisposableBean
- * @see org.springframework.beans.factory.config.DestructionAwareBeanPostProcessor
+ * @see DisposableBean
+ * @see DestructionAwareBeanPostProcessor
  * @see AbstractBeanDefinition#getDestroyMethodName()
  */
 @SuppressWarnings("serial")
-class DisposableBeanAdapter implements DisposableBean, Runnable, Serializable {
+public  class DisposableBeanAdapter implements DisposableBean, Runnable, Serializable {
 
 	private static final String CLOSE_METHOD_NAME = "close";
 
@@ -155,7 +159,8 @@ class DisposableBeanAdapter implements DisposableBean, Runnable, Serializable {
 	/**
 	 * Create a new DisposableBeanAdapter for the given bean.
 	 */
-	private DisposableBeanAdapter(Object bean, String beanName, boolean invokeDisposableBean,
+	//private DisposableBeanAdapter(Object bean, String beanName, boolean invokeDisposableBean,
+	public DisposableBeanAdapter(Object bean, String beanName, boolean invokeDisposableBean,
 			boolean nonPublicAccessAllowed, @Nullable String destroyMethodName,
 			@Nullable List<DestructionAwareBeanPostProcessor> postProcessors) {
 

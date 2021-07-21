@@ -23,7 +23,7 @@ import java.io.ObjectOutputStream;
 import java.io.OutputStream;
 import java.rmi.RemoteException;
 
-import org.springframework.beans.factory.InitializingBean;
+import org.springframework.beans.factory.support.bean_.InitializingBean;
 import org.springframework.remoting.support.RemoteInvocation;
 import org.springframework.remoting.support.RemoteInvocationBasedExporter;
 import org.springframework.remoting.support.RemoteInvocationResult;

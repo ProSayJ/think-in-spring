@@ -21,6 +21,7 @@ import java.util.Enumeration;
 import java.util.Properties;
 
 import org.springframework.beans.expection_.BeansException;
+import org.springframework.beans.factory.config.bean_.processor_.BeanFactoryPostProcessor;
 import org.springframework.beans.factory.expection_.BeanInitializationException;
 import org.springframework.core.Ordered;
 import org.springframework.core.PriorityOrdered;

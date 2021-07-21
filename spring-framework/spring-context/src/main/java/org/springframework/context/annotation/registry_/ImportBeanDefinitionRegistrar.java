@@ -16,11 +16,14 @@
 
 package org.springframework.context.annotation.registry_;
 
-import org.springframework.beans.factory.core_.BeanFactory;
-import org.springframework.beans.factory.support.BeanDefinitionRegistry;
-import org.springframework.beans.factory.support.BeanDefinitionRegistryPostProcessor;
-import org.springframework.beans.factory.support.BeanNameGenerator;
-import org.springframework.context.annotation.AnnotationBeanNameGenerator;
+import org.springframework.beans.factory.Aware;
+import org.springframework.beans.factory.support.bean_.BeanClassLoaderAware;
+import org.springframework.beans.factory.support.bean_.factory_.BeanFactory;
+import org.springframework.beans.factory.support.bean_.definition_.BeanDefinitionRegistry;
+import org.springframework.beans.factory.support.bean_.definition_.BeanDefinitionRegistryPostProcessor;
+import org.springframework.beans.factory.support.bean_.factory_.BeanFactoryAware;
+import org.springframework.beans.factory.support.bean_.namegenerator_.BeanNameGenerator;
+import org.springframework.context.annotation.bean_.namegenerator_.AnnotationBeanNameGenerator;
 import org.springframework.context.annotation.processor_.ConfigurationClassPostProcessor;
 import org.springframework.context.annotation.ImportSelector;
 import org.springframework.context.annotation.anno_.Configuration;
@@ -37,12 +40,12 @@ import org.springframework.core.type.AnnotationMetadata;
  * {@code ImportSelector}).
  *
  * <p>An {@link ImportBeanDefinitionRegistrar} may implement any of the following
- * {@link org.springframework.beans.factory.Aware Aware} interfaces, and their respective
+ * {@link Aware Aware} interfaces, and their respective
  * methods will be called prior to {@link #registerBeanDefinitions}:
  * <ul>
  * <li>{@link org.springframework.context.EnvironmentAware EnvironmentAware}</li>
- * <li>{@link org.springframework.beans.factory.BeanFactoryAware BeanFactoryAware}
- * <li>{@link org.springframework.beans.factory.BeanClassLoaderAware BeanClassLoaderAware}
+ * <li>{@link BeanFactoryAware BeanFactoryAware}
+ * <li>{@link BeanClassLoaderAware BeanClassLoaderAware}
  * <li>{@link org.springframework.context.ResourceLoaderAware ResourceLoaderAware}
  * </ul>
  *

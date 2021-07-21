@@ -20,16 +20,16 @@ import java.lang.annotation.Annotation;
 import java.util.Set;
 
 import org.springframework.beans.expection_.BeansException;
-import org.springframework.beans.factory.BeanClassLoaderAware;
-import org.springframework.beans.factory.config.BeanFactoryPostProcessor;
+import org.springframework.beans.factory.support.bean_.BeanClassLoaderAware;
+import org.springframework.beans.factory.config.bean_.processor_.BeanFactoryPostProcessor;
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
-import org.springframework.beans.factory.support.DefaultListableBeanFactory;
+import org.springframework.beans.factory.support.bean_.factory_.DefaultListableBeanFactory;
 import org.springframework.core.Ordered;
 import org.springframework.lang.Nullable;
 import org.springframework.util.ClassUtils;
 
 /**
- * A {@link org.springframework.beans.factory.config.BeanFactoryPostProcessor}
+ * A {@link BeanFactoryPostProcessor}
  * implementation that allows for convenient registration of custom autowire
  * qualifier types.
  *

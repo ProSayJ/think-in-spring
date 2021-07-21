@@ -16,7 +16,7 @@
 
 package org.springframework.context.annotation.mode_;
 
-import org.springframework.beans.factory.config.BeanDefinition;
+import org.springframework.beans.factory.support.bean_.definition_.BeanDefinition;
 import org.springframework.context.annotation.resolver_.ScopeMetadataResolver;
 import org.springframework.util.Assert;
 

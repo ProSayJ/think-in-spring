@@ -16,7 +16,7 @@
 
 package org.springframework.cache.annotation;
 
-import org.springframework.beans.factory.config.BeanDefinition;
+import org.springframework.beans.factory.support.bean_.definition_.BeanDefinition;
 import org.springframework.cache.config.CacheManagementConfigUtils;
 import org.springframework.cache.interceptor.BeanFactoryCacheOperationSourceAdvisor;
 import org.springframework.cache.interceptor.CacheInterceptor;

@@ -18,9 +18,9 @@ package org.springframework.aop.config;
 
 import org.w3c.dom.Element;
 
-import org.springframework.beans.factory.config.BeanDefinition;
+import org.springframework.beans.factory.support.bean_.definition_.BeanDefinition;
 import org.springframework.beans.factory.parsing.BeanComponentDefinition;
-import org.springframework.beans.factory.support.BeanDefinitionRegistry;
+import org.springframework.beans.factory.support.bean_.definition_.BeanDefinitionRegistry;
 import org.springframework.beans.factory.xml.ParserContext;
 import org.springframework.lang.Nullable;
 

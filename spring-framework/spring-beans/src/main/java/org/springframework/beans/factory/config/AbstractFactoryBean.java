@@ -24,15 +24,15 @@ import java.lang.reflect.Proxy;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
-import org.springframework.beans.SimpleTypeConverter;
-import org.springframework.beans.util_.typeconverter_.TypeConverter;
-import org.springframework.beans.factory.BeanClassLoaderAware;
-import org.springframework.beans.factory.core_.BeanFactory;
-import org.springframework.beans.factory.BeanFactoryAware;
-import org.springframework.beans.factory.DisposableBean;
-import org.springframework.beans.factory.core_.FactoryBean;
+import org.springframework.beans.factory.support.typeconverter_.SimpleTypeConverter;
+import org.springframework.beans.factory.support.typeconverter_.TypeConverter;
+import org.springframework.beans.factory.support.bean_.BeanClassLoaderAware;
+import org.springframework.beans.factory.support.bean_.factory_.BeanFactory;
+import org.springframework.beans.factory.support.bean_.factory_.BeanFactoryAware;
+import org.springframework.beans.factory.support.bean_.DisposableBean;
+import org.springframework.beans.factory.support.factory_.bean_.FactoryBean;
 import org.springframework.beans.factory.expection_.FactoryBeanNotInitializedException;
-import org.springframework.beans.factory.InitializingBean;
+import org.springframework.beans.factory.support.bean_.InitializingBean;
 import org.springframework.lang.Nullable;
 import org.springframework.util.Assert;
 import org.springframework.util.ClassUtils;
@@ -120,7 +120,7 @@ public abstract class AbstractFactoryBean<T>
 	 * since TypeConverters are usually <i>not</i> thread-safe.
 	 * <p>Falls back to a SimpleTypeConverter when not running in a BeanFactory.
 	 * @see ConfigurableBeanFactory#getTypeConverter()
-	 * @see org.springframework.beans.SimpleTypeConverter
+	 * @see SimpleTypeConverter
 	 */
 	protected TypeConverter getBeanTypeConverter() {
 		BeanFactory beanFactory = getBeanFactory();

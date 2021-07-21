@@ -29,8 +29,8 @@ import javax.validation.executable.ExecutableValidator;
 import org.aopalliance.intercept.MethodInterceptor;
 import org.aopalliance.intercept.MethodInvocation;
 
-import org.springframework.beans.factory.core_.FactoryBean;
-import org.springframework.beans.factory.SmartFactoryBean;
+import org.springframework.beans.factory.support.factory_.bean_.FactoryBean;
+import org.springframework.beans.factory.support.factory_.bean_.SmartFactoryBean;
 import org.springframework.core.BridgeMethodResolver;
 import org.springframework.core.annotation.AnnotationUtils;
 import org.springframework.util.ClassUtils;

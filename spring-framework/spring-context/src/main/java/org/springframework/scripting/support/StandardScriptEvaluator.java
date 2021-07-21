@@ -24,7 +24,7 @@ import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
 import javax.script.ScriptException;
 
-import org.springframework.beans.factory.BeanClassLoaderAware;
+import org.springframework.beans.factory.support.bean_.BeanClassLoaderAware;
 import org.springframework.core.io.Resource;
 import org.springframework.lang.Nullable;
 import org.springframework.scripting.ScriptCompilationException;

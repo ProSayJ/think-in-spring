@@ -29,7 +29,7 @@ import javax.resource.spi.work.WorkListener;
 import javax.resource.spi.work.WorkManager;
 import javax.resource.spi.work.WorkRejectedException;
 
-import org.springframework.beans.factory.InitializingBean;
+import org.springframework.beans.factory.support.bean_.InitializingBean;
 import org.springframework.core.task.AsyncListenableTaskExecutor;
 import org.springframework.core.task.TaskDecorator;
 import org.springframework.core.task.TaskRejectedException;

@@ -23,7 +23,8 @@ import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
 import org.springframework.beans.expection_.BeansException;
-import org.springframework.beans.util_.property_.value_.PropertyValue;
+import org.springframework.beans.factory.support.bean_.definition_.BeanDefinition;
+import org.springframework.beans.factory.support.bean_.metadata_.PropertyValue;
 import org.springframework.beans.factory.expection_.BeanInitializationException;
 
 /**

@@ -18,7 +18,7 @@ package org.springframework.jmx.export;
 
 import javax.management.NotificationListener;
 
-import org.springframework.beans.factory.InitializingBean;
+import org.springframework.beans.factory.support.bean_.InitializingBean;
 import org.springframework.jmx.support.NotificationListenerHolder;
 import org.springframework.util.Assert;
 

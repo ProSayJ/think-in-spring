@@ -21,17 +21,15 @@ import java.lang.reflect.Constructor;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.function.Supplier;
 
-import org.springframework.beans.util_.bean_.BeanUtils;
+import org.springframework.beans.factory.config.bean_.processor_.BeanFactoryPostProcessor;
+import org.springframework.beans.factory.support.bean_.definition_.*;
+import org.springframework.beans.factory.support.bean_.BeanUtils;
 import org.springframework.beans.expection_.BeansException;
 import org.springframework.beans.factory.expection_.BeanDefinitionStoreException;
 import org.springframework.beans.factory.expection_.NoSuchBeanDefinitionException;
 import org.springframework.beans.factory.config.AutowireCapableBeanFactory;
-import org.springframework.beans.factory.config.BeanDefinition;
-import org.springframework.beans.factory.config.BeanDefinitionCustomizer;
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
-import org.springframework.beans.factory.support.BeanDefinitionRegistry;
-import org.springframework.beans.factory.support.DefaultListableBeanFactory;
-import org.springframework.beans.factory.support.RootBeanDefinition;
+import org.springframework.beans.factory.support.bean_.factory_.DefaultListableBeanFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.ResourceLoader;
@@ -41,17 +39,17 @@ import org.springframework.util.Assert;
 
 /**
  * Generic ApplicationContext implementation that holds a single internal
- * {@link org.springframework.beans.factory.support.DefaultListableBeanFactory}
+ * {@link DefaultListableBeanFactory}
  * instance and does not assume a specific bean definition format. Implements
- * the {@link org.springframework.beans.factory.support.BeanDefinitionRegistry}
+ * the {@link BeanDefinitionRegistry}
  * interface in order to allow for applying any bean definition readers to it.
  *
  * <p>Typical usage is to register a variety of bean definitions via the
- * {@link org.springframework.beans.factory.support.BeanDefinitionRegistry}
+ * {@link BeanDefinitionRegistry}
  * interface and then call {@link #refresh()} to initialize those beans
  * with application context semantics (handling
  * {@link org.springframework.context.ApplicationContextAware}, auto-detecting
- * {@link org.springframework.beans.factory.config.BeanFactoryPostProcessor BeanFactoryPostProcessors},
+ * {@link BeanFactoryPostProcessor BeanFactoryPostProcessors},
  * etc).
  *
  * <p>In contrast to other ApplicationContext implementations that create a new
@@ -89,7 +87,7 @@ import org.springframework.util.Assert;
  * @see #registerBeanDefinition
  * @see #refresh()
  * @see org.springframework.beans.factory.xml.XmlBeanDefinitionReader
- * @see org.springframework.beans.factory.support.PropertiesBeanDefinitionReader
+ * @see PropertiesBeanDefinitionReader
  */
 public class GenericApplicationContext extends AbstractApplicationContext implements BeanDefinitionRegistry {
 
@@ -163,7 +161,7 @@ public class GenericApplicationContext extends AbstractApplicationContext implem
 	 * a different definition with the same name, automatically replacing the former.
 	 * If not, an exception will be thrown. Default is "true".
 	 * @since 3.0
-	 * @see org.springframework.beans.factory.support.DefaultListableBeanFactory#setAllowBeanDefinitionOverriding
+	 * @see DefaultListableBeanFactory#setAllowBeanDefinitionOverriding
 	 */
 	public void setAllowBeanDefinitionOverriding(boolean allowBeanDefinitionOverriding) {
 		this.beanFactory.setAllowBeanDefinitionOverriding(allowBeanDefinitionOverriding);
@@ -175,7 +173,7 @@ public class GenericApplicationContext extends AbstractApplicationContext implem
 	 * <p>Default is "true". Turn this off to throw an exception when encountering
 	 * a circular reference, disallowing them completely.
 	 * @since 3.0
-	 * @see org.springframework.beans.factory.support.DefaultListableBeanFactory#setAllowCircularReferences
+	 * @see DefaultListableBeanFactory#setAllowCircularReferences
 	 */
 	public void setAllowCircularReferences(boolean allowCircularReferences) {
 		this.beanFactory.setAllowCircularReferences(allowCircularReferences);

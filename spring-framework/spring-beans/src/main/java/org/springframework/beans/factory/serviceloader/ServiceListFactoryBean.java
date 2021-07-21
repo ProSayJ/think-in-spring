@@ -20,8 +20,8 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.ServiceLoader;
 
-import org.springframework.beans.factory.BeanClassLoaderAware;
-import org.springframework.beans.factory.core_.FactoryBean;
+import org.springframework.beans.factory.support.bean_.BeanClassLoaderAware;
+import org.springframework.beans.factory.support.factory_.bean_.FactoryBean;
 
 /**
  * {@link FactoryBean} that exposes <i>all</i>

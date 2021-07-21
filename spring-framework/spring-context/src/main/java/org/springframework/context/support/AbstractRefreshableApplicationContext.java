@@ -20,7 +20,7 @@ import java.io.IOException;
 
 import org.springframework.beans.expection_.BeansException;
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
-import org.springframework.beans.factory.support.DefaultListableBeanFactory;
+import org.springframework.beans.factory.support.bean_.factory_.DefaultListableBeanFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextException;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -36,7 +36,7 @@ import org.springframework.lang.Nullable;
  * <p>The only method to be implemented by subclasses is {@link #loadBeanDefinitions},
  * which gets invoked on each refresh. A concrete implementation is supposed to load
  * bean definitions into the given
- * {@link org.springframework.beans.factory.support.DefaultListableBeanFactory},
+ * {@link DefaultListableBeanFactory},
  * typically delegating to one or more specific bean definition readers.
  *
  * <p><b>Note that there is a similar base class for WebApplicationContexts.</b>
@@ -56,7 +56,7 @@ import org.springframework.lang.Nullable;
  * @author Chris Beams
  * @since 1.1.3
  * @see #loadBeanDefinitions
- * @see org.springframework.beans.factory.support.DefaultListableBeanFactory
+ * @see DefaultListableBeanFactory
  * @see org.springframework.web.context.support.AbstractRefreshableWebApplicationContext
  * @see AbstractXmlApplicationContext
  * @see ClassPathXmlApplicationContext
@@ -95,7 +95,7 @@ public abstract class AbstractRefreshableApplicationContext extends AbstractAppl
 	 * Set whether it should be allowed to override bean definitions by registering
 	 * a different definition with the same name, automatically replacing the former.
 	 * If not, an exception will be thrown. Default is "true".
-	 * @see org.springframework.beans.factory.support.DefaultListableBeanFactory#setAllowBeanDefinitionOverriding
+	 * @see DefaultListableBeanFactory#setAllowBeanDefinitionOverriding
 	 */
 	public void setAllowBeanDefinitionOverriding(boolean allowBeanDefinitionOverriding) {
 		this.allowBeanDefinitionOverriding = allowBeanDefinitionOverriding;
@@ -106,7 +106,7 @@ public abstract class AbstractRefreshableApplicationContext extends AbstractAppl
 	 * try to resolve them.
 	 * <p>Default is "true". Turn this off to throw an exception when encountering
 	 * a circular reference, disallowing them completely.
-	 * @see org.springframework.beans.factory.support.DefaultListableBeanFactory#setAllowCircularReferences
+	 * @see DefaultListableBeanFactory#setAllowCircularReferences
 	 */
 	public void setAllowCircularReferences(boolean allowCircularReferences) {
 		this.allowCircularReferences = allowCircularReferences;
@@ -192,15 +192,15 @@ public abstract class AbstractRefreshableApplicationContext extends AbstractAppl
 	 * Create an internal bean factory for this context.
 	 * Called for each {@link #refresh()} attempt.
 	 * <p>The default implementation creates a
-	 * {@link org.springframework.beans.factory.support.DefaultListableBeanFactory}
+	 * {@link DefaultListableBeanFactory}
 	 * with the {@linkplain #getInternalParentBeanFactory() internal bean factory} of this
 	 * context's parent as parent bean factory. Can be overridden in subclasses,
 	 * for example to customize DefaultListableBeanFactory's settings.
 	 * @return the bean factory for this context
-	 * @see org.springframework.beans.factory.support.DefaultListableBeanFactory#setAllowBeanDefinitionOverriding
-	 * @see org.springframework.beans.factory.support.DefaultListableBeanFactory#setAllowEagerClassLoading
-	 * @see org.springframework.beans.factory.support.DefaultListableBeanFactory#setAllowCircularReferences
-	 * @see org.springframework.beans.factory.support.DefaultListableBeanFactory#setAllowRawInjectionDespiteWrapping
+	 * @see DefaultListableBeanFactory#setAllowBeanDefinitionOverriding
+	 * @see DefaultListableBeanFactory#setAllowEagerClassLoading
+	 * @see DefaultListableBeanFactory#setAllowCircularReferences
+	 * @see DefaultListableBeanFactory#setAllowRawInjectionDespiteWrapping
 	 */
 	protected DefaultListableBeanFactory createBeanFactory() {
 		return new DefaultListableBeanFactory(getInternalParentBeanFactory());
@@ -235,7 +235,7 @@ public abstract class AbstractRefreshableApplicationContext extends AbstractAppl
 	 * @param beanFactory the bean factory to load bean definitions into
 	 * @throws BeansException if parsing of the bean definitions failed
 	 * @throws IOException if loading of bean definition files failed
-	 * @see org.springframework.beans.factory.support.PropertiesBeanDefinitionReader
+	 * @see PropertiesBeanDefinitionReader
 	 * @see org.springframework.beans.factory.xml.XmlBeanDefinitionReader
 	 */
 	protected abstract void loadBeanDefinitions(DefaultListableBeanFactory beanFactory)

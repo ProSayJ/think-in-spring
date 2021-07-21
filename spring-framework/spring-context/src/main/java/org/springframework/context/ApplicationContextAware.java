@@ -19,7 +19,9 @@ package org.springframework.context;
 import org.springframework.beans.expection_.BeansException;
 import org.springframework.beans.factory.Aware;
 import org.springframework.beans.factory.expection_.BeanInitializationException;
-import org.springframework.beans.factory.core_.BeanFactory;
+import org.springframework.beans.factory.support.bean_.InitializingBean;
+import org.springframework.beans.factory.support.bean_.factory_.BeanFactory;
+import org.springframework.beans.factory.support.bean_.factory_.BeanFactoryAware;
 
 /**
  * Interface to be implemented by any object that wishes to be notified
@@ -56,7 +58,7 @@ import org.springframework.beans.factory.core_.BeanFactory;
  * @see ApplicationEventPublisherAware
  * @see MessageSourceAware
  * @see org.springframework.context.support.ApplicationObjectSupport
- * @see org.springframework.beans.factory.BeanFactoryAware
+ * @see BeanFactoryAware
  */
 public interface ApplicationContextAware extends Aware {
 
@@ -64,7 +66,7 @@ public interface ApplicationContextAware extends Aware {
 	 * Set the ApplicationContext that this object runs in.
 	 * Normally this call will be used to initialize the object.
 	 * <p>Invoked after population of normal bean properties but before an init callback such
-	 * as {@link org.springframework.beans.factory.InitializingBean#afterPropertiesSet()}
+	 * as {@link InitializingBean#afterPropertiesSet()}
 	 * or a custom init-method. Invoked after {@link ResourceLoaderAware#setResourceLoader},
 	 * {@link ApplicationEventPublisherAware#setApplicationEventPublisher} and
 	 * {@link MessageSourceAware}, if applicable.

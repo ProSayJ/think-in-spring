@@ -24,12 +24,12 @@ import java.net.URI;
 import java.net.URL;
 import java.nio.file.Path;
 
-import org.springframework.beans.util_.bean_.wrapper_.BeanWrapper;
+import org.springframework.beans.factory.support.wrapper_.BeanWrapper;
 import org.xml.sax.InputSource;
 
-import org.springframework.beans.util_.property_.editor_.PropertyEditorRegistrar;
-import org.springframework.beans.util_.property_.editor_.PropertyEditorRegistry;
-import org.springframework.beans.util_.property_.editor_.PropertyEditorRegistrySupport;
+import org.springframework.beans.factory.support.property_.editor_.PropertyEditorRegistrar;
+import org.springframework.beans.factory.support.property_.editor_.PropertyEditorRegistry;
+import org.springframework.beans.factory.support.property_.editor_.PropertyEditorRegistrySupport;
 import org.springframework.beans.propertyeditors.ClassArrayEditor;
 import org.springframework.beans.propertyeditors.ClassEditor;
 import org.springframework.beans.propertyeditors.FileEditor;

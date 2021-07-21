@@ -17,7 +17,7 @@
 package org.springframework.beans.factory.expection_;
 
 import org.springframework.beans.expection_.FatalBeanException;
-import org.springframework.beans.factory.core_.FactoryBean;
+import org.springframework.beans.factory.support.factory_.bean_.FactoryBean;
 
 /**
  * Exception to be thrown from a FactoryBean's {@code getObject()} method

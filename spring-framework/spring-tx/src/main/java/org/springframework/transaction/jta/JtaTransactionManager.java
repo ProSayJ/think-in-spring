@@ -35,7 +35,7 @@ import javax.transaction.TransactionManager;
 import javax.transaction.TransactionSynchronizationRegistry;
 import javax.transaction.UserTransaction;
 
-import org.springframework.beans.factory.InitializingBean;
+import org.springframework.beans.factory.support.bean_.InitializingBean;
 import org.springframework.jndi.JndiTemplate;
 import org.springframework.lang.Nullable;
 import org.springframework.transaction.CannotCreateTransactionException;

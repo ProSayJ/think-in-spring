@@ -16,7 +16,7 @@
 
 package org.springframework.scheduling.annotation;
 
-import org.springframework.beans.factory.config.BeanDefinition;
+import org.springframework.beans.factory.support.bean_.definition_.BeanDefinition;
 import org.springframework.context.annotation.anno_.Bean;
 import org.springframework.context.annotation.anno_.Configuration;
 import org.springframework.context.annotation.anno_.Role;

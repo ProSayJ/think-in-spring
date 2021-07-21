@@ -24,10 +24,10 @@ import java.util.List;
 import java.util.Set;
 import java.util.regex.Pattern;
 
-import org.springframework.beans.util_.bean_.BeanUtils;
-import org.springframework.beans.factory.config.BeanDefinitionHolder;
-import org.springframework.beans.factory.support.BeanDefinitionRegistry;
-import org.springframework.beans.factory.support.BeanNameGenerator;
+import org.springframework.beans.factory.support.bean_.BeanUtils;
+import org.springframework.beans.factory.support.bean_.definition_.BeanDefinitionHolder;
+import org.springframework.beans.factory.support.bean_.definition_.BeanDefinitionRegistry;
+import org.springframework.beans.factory.support.bean_.namegenerator_.BeanNameGenerator;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.anno_.ComponentScan;
 import org.springframework.context.annotation.mode_.FilterType;

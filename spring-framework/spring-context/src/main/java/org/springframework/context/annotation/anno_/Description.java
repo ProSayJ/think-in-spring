@@ -16,6 +16,8 @@
 
 package org.springframework.context.annotation.anno_;
 
+import org.springframework.beans.factory.support.bean_.definition_.BeanDefinition;
+
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -28,7 +30,7 @@ import java.lang.annotation.Target;
  *
  * @author Juergen Hoeller
  * @since 4.0
- * @see org.springframework.beans.factory.config.BeanDefinition#getDescription()
+ * @see BeanDefinition#getDescription()
  */
 @Target({ElementType.TYPE, ElementType.METHOD})
 @Retention(RetentionPolicy.RUNTIME)

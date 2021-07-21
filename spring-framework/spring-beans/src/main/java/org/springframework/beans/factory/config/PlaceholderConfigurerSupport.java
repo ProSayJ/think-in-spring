@@ -16,10 +16,12 @@
 
 package org.springframework.beans.factory.config;
 
+import org.springframework.beans.factory.support.bean_.definition_.BeanDefinition;
+import org.springframework.beans.factory.support.bean_.definition_.BeanDefinitionVisitor;
 import org.springframework.beans.factory.expection_.BeanDefinitionStoreException;
-import org.springframework.beans.factory.core_.BeanFactory;
-import org.springframework.beans.factory.BeanFactoryAware;
-import org.springframework.beans.factory.BeanNameAware;
+import org.springframework.beans.factory.support.bean_.factory_.BeanFactory;
+import org.springframework.beans.factory.support.bean_.factory_.BeanFactoryAware;
+import org.springframework.beans.factory.support.bean_.BeanNameAware;
 import org.springframework.lang.Nullable;
 import org.springframework.util.StringValueResolver;
 

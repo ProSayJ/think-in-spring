@@ -16,15 +16,16 @@
 
 package org.springframework.beans.factory.xml;
 
+import org.springframework.beans.factory.parsing.model_.ReaderContext;
 import org.w3c.dom.Element;
 
 import org.springframework.beans.factory.expection_.BeanDefinitionStoreException;
-import org.springframework.beans.factory.config.BeanDefinition;
-import org.springframework.beans.factory.config.BeanDefinitionHolder;
+import org.springframework.beans.factory.support.bean_.definition_.BeanDefinition;
+import org.springframework.beans.factory.support.bean_.definition_.BeanDefinitionHolder;
 import org.springframework.beans.factory.parsing.BeanComponentDefinition;
-import org.springframework.beans.factory.support.AbstractBeanDefinition;
-import org.springframework.beans.factory.support.BeanDefinitionReaderUtils;
-import org.springframework.beans.factory.support.BeanDefinitionRegistry;
+import org.springframework.beans.factory.support.bean_.definition_.AbstractBeanDefinition;
+import org.springframework.beans.factory.support.bean_.definition_.BeanDefinitionReaderUtils;
+import org.springframework.beans.factory.support.bean_.definition_.BeanDefinitionRegistry;
 import org.springframework.lang.Nullable;
 import org.springframework.util.StringUtils;
 
@@ -101,7 +102,7 @@ public abstract class AbstractBeanDefinitionParser implements BeanDefinitionPars
 	 * @param element the element that the bean definition has been built from
 	 * @param definition the bean definition to be registered
 	 * @param parserContext the object encapsulating the current state of the parsing process;
-	 * provides access to a {@link org.springframework.beans.factory.support.BeanDefinitionRegistry}
+	 * provides access to a {@link BeanDefinitionRegistry}
 	 * @return the resolved id
 	 * @throws BeanDefinitionStoreException if no unique name could be generated
 	 * for the given bean definition
@@ -145,7 +146,7 @@ public abstract class AbstractBeanDefinitionParser implements BeanDefinitionPars
 	 * into one or more {@link BeanDefinition BeanDefinitions}.
 	 * @param element the element that is to be parsed into one or more {@link BeanDefinition BeanDefinitions}
 	 * @param parserContext the object encapsulating the current state of the parsing process;
-	 * provides access to a {@link org.springframework.beans.factory.support.BeanDefinitionRegistry}
+	 * provides access to a {@link BeanDefinitionRegistry}
 	 * @return the primary {@link BeanDefinition} resulting from the parsing of the supplied {@link Element}
 	 * @see #parse(org.w3c.dom.Element, ParserContext)
 	 * @see #postProcessComponentDefinition(org.springframework.beans.factory.parsing.BeanComponentDefinition)
@@ -197,7 +198,7 @@ public abstract class AbstractBeanDefinitionParser implements BeanDefinitionPars
 	 * @return {@code true} in order to fire a component registration event
 	 * after parsing the bean definition; {@code false} to suppress the event
 	 * @see #postProcessComponentDefinition
-	 * @see org.springframework.beans.factory.parsing.ReaderContext#fireComponentRegistered
+	 * @see ReaderContext#fireComponentRegistered
 	 */
 	protected boolean shouldFireEvents() {
 		return true;
@@ -207,7 +208,7 @@ public abstract class AbstractBeanDefinitionParser implements BeanDefinitionPars
 	 * Hook method called after the primary parsing of a
 	 * {@link BeanComponentDefinition} but before the
 	 * {@link BeanComponentDefinition} has been registered with a
-	 * {@link org.springframework.beans.factory.support.BeanDefinitionRegistry}.
+	 * {@link BeanDefinitionRegistry}.
 	 * <p>Derived classes can override this method to supply any custom logic that
 	 * is to be executed after all the parsing is finished.
 	 * <p>The default implementation is a no-op.

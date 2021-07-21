@@ -17,7 +17,7 @@
 package org.springframework.beans.factory.config;
 
 import org.springframework.beans.expection_.BeansException;
-import org.springframework.beans.factory.core_.BeanFactory;
+import org.springframework.beans.factory.support.bean_.factory_.BeanFactory;
 import org.springframework.lang.Nullable;
 
 /**

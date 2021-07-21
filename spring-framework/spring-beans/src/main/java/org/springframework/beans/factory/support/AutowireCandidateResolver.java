@@ -16,8 +16,10 @@
 
 package org.springframework.beans.factory.support;
 
-import org.springframework.beans.util_.bean_.BeanUtils;
-import org.springframework.beans.factory.config.BeanDefinitionHolder;
+import org.springframework.beans.factory.support.bean_.definition_.BeanDefinition;
+import org.springframework.beans.factory.support.bean_.factory_.DefaultListableBeanFactory;
+import org.springframework.beans.factory.support.bean_.BeanUtils;
+import org.springframework.beans.factory.support.bean_.definition_.BeanDefinitionHolder;
 import org.springframework.beans.factory.config.DependencyDescriptor;
 import org.springframework.lang.Nullable;
 
@@ -35,11 +37,11 @@ public interface AutowireCandidateResolver {
 	 * Determine whether the given bean definition qualifies as an
 	 * autowire candidate for the given dependency.
 	 * <p>The default implementation checks
-	 * {@link org.springframework.beans.factory.config.BeanDefinition#isAutowireCandidate()}.
+	 * {@link BeanDefinition#isAutowireCandidate()}.
 	 * @param bdHolder the bean definition including bean name and aliases
 	 * @param descriptor the descriptor for the target method parameter or field
 	 * @return whether the bean definition qualifies as autowire candidate
-	 * @see org.springframework.beans.factory.config.BeanDefinition#isAutowireCandidate()
+	 * @see BeanDefinition#isAutowireCandidate()
 	 */
 	default boolean isAutowireCandidate(BeanDefinitionHolder bdHolder, DependencyDescriptor descriptor) {
 		return bdHolder.getBeanDefinition().isAutowireCandidate();

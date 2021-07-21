@@ -34,18 +34,19 @@ import groovy.lang.MetaClass;
 import org.codehaus.groovy.runtime.DefaultGroovyMethods;
 import org.codehaus.groovy.runtime.InvokerHelper;
 
-import org.springframework.beans.util_.property_.value_.MutablePropertyValues;
+import org.springframework.beans.factory.support.bean_.factory_.DefaultListableBeanFactory;
+import org.springframework.beans.factory.support.bean_.metadata_.MutablePropertyValues;
 import org.springframework.beans.factory.expection_.BeanDefinitionStoreException;
 import org.springframework.beans.factory.config.RuntimeBeanReference;
-import org.springframework.beans.factory.parsing.BeanDefinitionParsingException;
-import org.springframework.beans.factory.parsing.Location;
-import org.springframework.beans.factory.parsing.Problem;
-import org.springframework.beans.factory.support.AbstractBeanDefinition;
-import org.springframework.beans.factory.support.AbstractBeanDefinitionReader;
-import org.springframework.beans.factory.support.BeanDefinitionRegistry;
-import org.springframework.beans.factory.support.GenericBeanDefinition;
-import org.springframework.beans.factory.support.ManagedList;
-import org.springframework.beans.factory.support.ManagedMap;
+import org.springframework.beans.factory.expection_.BeanDefinitionParsingException;
+import org.springframework.beans.factory.parsing.model_.Location;
+import org.springframework.beans.factory.parsing.model_.Problem;
+import org.springframework.beans.factory.support.bean_.definition_.AbstractBeanDefinition;
+import org.springframework.beans.factory.support.bean_.definition_.AbstractBeanDefinitionReader;
+import org.springframework.beans.factory.support.bean_.definition_.BeanDefinitionRegistry;
+import org.springframework.beans.factory.support.bean_.definition_.GenericBeanDefinition;
+import org.springframework.beans.factory.support.mergeable_.ManagedList;
+import org.springframework.beans.factory.support.mergeable_.ManagedMap;
 import org.springframework.beans.factory.xml.NamespaceHandler;
 import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
 import org.springframework.core.io.DescriptiveResource;
@@ -62,7 +63,7 @@ import org.springframework.util.StringUtils;
  * allowing for seamless mixing and matching with Groovy bean definition files.
  *
  * <p>Typically applied to a
- * {@link org.springframework.beans.factory.support.DefaultListableBeanFactory}
+ * {@link DefaultListableBeanFactory}
  * or a {@link org.springframework.context.support.GenericApplicationContext},
  * but can be used against any {@link BeanDefinitionRegistry} implementation.
  *
@@ -123,7 +124,7 @@ import org.springframework.util.StringUtils;
  * @author Sam Brannen
  * @since 4.0
  * @see BeanDefinitionRegistry
- * @see org.springframework.beans.factory.support.DefaultListableBeanFactory
+ * @see DefaultListableBeanFactory
  * @see org.springframework.context.support.GenericApplicationContext
  * @see org.springframework.context.support.GenericGroovyApplicationContext
  */

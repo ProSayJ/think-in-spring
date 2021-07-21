@@ -37,23 +37,24 @@ import java.util.concurrent.ConcurrentHashMap;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
-import org.springframework.beans.util_.bean_.BeanUtils;
+import org.springframework.beans.factory.config.bean_.processor_.BeanPostProcessor;
+import org.springframework.beans.factory.support.bean_.BeanUtils;
 import org.springframework.beans.expection_.BeansException;
-import org.springframework.beans.util_.property_.value_.PropertyValues;
-import org.springframework.beans.util_.typeconverter_.TypeConverter;
+import org.springframework.beans.factory.support.bean_.metadata_.PropertyValues;
+import org.springframework.beans.factory.support.typeconverter_.TypeConverter;
 import org.springframework.beans.factory.expection_.BeanCreationException;
-import org.springframework.beans.factory.core_.BeanFactory;
-import org.springframework.beans.factory.BeanFactoryAware;
-import org.springframework.beans.factory.util_.BeanFactoryUtils;
+import org.springframework.beans.factory.support.bean_.factory_.BeanFactory;
+import org.springframework.beans.factory.support.bean_.factory_.BeanFactoryAware;
+import org.springframework.beans.factory.support.bean_.factory_.BeanFactoryUtils;
 import org.springframework.beans.factory.InjectionPoint;
 import org.springframework.beans.factory.expection_.NoSuchBeanDefinitionException;
 import org.springframework.beans.factory.expection_.UnsatisfiedDependencyException;
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
 import org.springframework.beans.factory.config.DependencyDescriptor;
-import org.springframework.beans.factory.config.InstantiationAwareBeanPostProcessorAdapter;
-import org.springframework.beans.factory.support.LookupOverride;
-import org.springframework.beans.factory.support.MergedBeanDefinitionPostProcessor;
-import org.springframework.beans.factory.support.RootBeanDefinition;
+import org.springframework.beans.factory.config.bean_.processor_.InstantiationAwareBeanPostProcessorAdapter;
+import org.springframework.beans.factory.support.bean_.metadata_.LookupOverride;
+import org.springframework.beans.factory.support.bean_.processor_.MergedBeanDefinitionPostProcessor;
+import org.springframework.beans.factory.support.bean_.definition_.RootBeanDefinition;
 import org.springframework.core.BridgeMethodResolver;
 import org.springframework.core.MethodParameter;
 import org.springframework.core.Ordered;
@@ -69,7 +70,7 @@ import org.springframework.util.ReflectionUtils;
 import org.springframework.util.StringUtils;
 
 /**
- * {@link org.springframework.beans.factory.config.BeanPostProcessor BeanPostProcessor}
+ * {@link BeanPostProcessor BeanPostProcessor}
  * implementation that autowires annotated fields, setter methods, and arbitrary
  * config methods. Such members to be injected are detected through annotations:
  * by default, Spring's {@link Autowired @Autowired} and {@link Value @Value}

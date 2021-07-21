@@ -19,8 +19,8 @@ package org.springframework.beans.factory.config;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.springframework.beans.util_.bean_.BeanUtils;
-import org.springframework.beans.util_.typeconverter_.TypeConverter;
+import org.springframework.beans.factory.support.bean_.BeanUtils;
+import org.springframework.beans.factory.support.typeconverter_.TypeConverter;
 import org.springframework.core.ResolvableType;
 import org.springframework.lang.Nullable;
 

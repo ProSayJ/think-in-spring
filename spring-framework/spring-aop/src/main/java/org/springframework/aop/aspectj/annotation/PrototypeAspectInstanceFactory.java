@@ -18,7 +18,7 @@ package org.springframework.aop.aspectj.annotation;
 
 import java.io.Serializable;
 
-import org.springframework.beans.factory.core_.BeanFactory;
+import org.springframework.beans.factory.support.bean_.factory_.BeanFactory;
 
 /**
  * {@link org.springframework.aop.aspectj.AspectInstanceFactory} backed by a

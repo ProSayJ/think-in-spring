@@ -16,7 +16,7 @@
 
 package org.springframework.context.annotation;
 
-import org.springframework.beans.factory.parsing.Problem;
+import org.springframework.beans.factory.parsing.model_.Problem;
 import org.springframework.beans.factory.parsing.ProblemReporter;
 import org.springframework.context.annotation.anno_.Bean;
 import org.springframework.context.annotation.anno_.Configuration;

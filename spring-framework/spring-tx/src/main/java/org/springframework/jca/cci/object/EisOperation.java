@@ -19,7 +19,7 @@ package org.springframework.jca.cci.object;
 import javax.resource.cci.ConnectionFactory;
 import javax.resource.cci.InteractionSpec;
 
-import org.springframework.beans.factory.InitializingBean;
+import org.springframework.beans.factory.support.bean_.InitializingBean;
 import org.springframework.jca.cci.core.CciTemplate;
 import org.springframework.lang.Nullable;
 import org.springframework.util.Assert;

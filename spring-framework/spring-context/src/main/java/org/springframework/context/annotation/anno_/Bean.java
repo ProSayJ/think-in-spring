@@ -23,7 +23,10 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 import org.springframework.beans.factory.annotation.Autowire;
-import org.springframework.beans.factory.support.AbstractBeanDefinition;
+import org.springframework.beans.factory.config.bean_.processor_.BeanFactoryPostProcessor;
+import org.springframework.beans.factory.support.bean_.DisposableBean;
+import org.springframework.beans.factory.support.bean_.InitializingBean;
+import org.springframework.beans.factory.support.bean_.definition_.AbstractBeanDefinition;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.core.annotation.AliasFor;
 
@@ -178,7 +181,7 @@ import org.springframework.core.annotation.AliasFor;
  * <h3>{@code BeanFactoryPostProcessor}-returning {@code @Bean} methods</h3>
  *
  * <p>Special consideration must be taken for {@code @Bean} methods that return Spring
- * {@link org.springframework.beans.factory.config.BeanFactoryPostProcessor BeanFactoryPostProcessor}
+ * {@link BeanFactoryPostProcessor BeanFactoryPostProcessor}
  * ({@code BFPP}) types. Because {@code BFPP} objects must be instantiated very early in the
  * container lifecycle, they can interfere with processing of annotations such as {@code @Autowired},
  * {@code @Value}, and {@code @PostConstruct} within {@code @Configuration} classes. To avoid these
@@ -268,7 +271,7 @@ public @interface Bean {
 	 * Not commonly used, given that the method may be called programmatically directly
 	 * within the body of a Bean-annotated method.
 	 * <p>The default value is {@code ""}, indicating no init method to be called.
-	 * @see org.springframework.beans.factory.InitializingBean
+	 * @see InitializingBean
 	 * @see org.springframework.context.ConfigurableApplicationContext#refresh()
 	 */
 	String initMethod() default "";
@@ -290,14 +293,14 @@ public @interface Bean {
 	 * creation time).
 	 * <p>To disable destroy method inference for a particular {@code @Bean}, specify an
 	 * empty string as the value, e.g. {@code @Bean(destroyMethod="")}. Note that the
-	 * {@link org.springframework.beans.factory.DisposableBean} callback interface will
+	 * {@link DisposableBean} callback interface will
 	 * nevertheless get detected and the corresponding destroy method invoked: In other
 	 * words, {@code destroyMethod=""} only affects custom close/shutdown methods and
 	 * {@link java.io.Closeable}/{@link java.lang.AutoCloseable} declared close methods.
 	 * <p>Note: Only invoked on beans whose lifecycle is under the full control of the
 	 * factory, which is always the case for singletons but not guaranteed for any
 	 * other scope.
-	 * @see org.springframework.beans.factory.DisposableBean
+	 * @see DisposableBean
 	 * @see org.springframework.context.ConfigurableApplicationContext#close()
 	 */
 	String destroyMethod() default AbstractBeanDefinition.INFER_METHOD;

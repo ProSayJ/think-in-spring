@@ -23,7 +23,7 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.ScheduledThreadPoolExecutor;
 import java.util.concurrent.ThreadFactory;
 
-import org.springframework.beans.factory.core_.FactoryBean;
+import org.springframework.beans.factory.support.factory_.bean_.FactoryBean;
 import org.springframework.lang.Nullable;
 import org.springframework.scheduling.support.DelegatingErrorHandlingRunnable;
 import org.springframework.scheduling.support.TaskUtils;

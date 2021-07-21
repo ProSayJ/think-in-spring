@@ -16,6 +16,8 @@
 
 package org.springframework.context;
 
+import org.springframework.beans.factory.support.bean_.DisposableBean;
+
 /**
  * A common interface defining methods for start/stop lifecycle control.
  * The typical use case for this is to control asynchronous processing.
@@ -71,7 +73,7 @@ public interface Lifecycle {
 	 * <p>In the case of a container, this will propagate the stop signal to all components
 	 * that apply.
 	 * @see SmartLifecycle#stop(Runnable)
-	 * @see org.springframework.beans.factory.DisposableBean#destroy()
+	 * @see DisposableBean#destroy()
 	 */
 	void stop();
 

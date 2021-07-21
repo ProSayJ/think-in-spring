@@ -23,11 +23,13 @@ import java.util.Set;
 
 import org.springframework.beans.factory.annotation.AnnotatedBeanDefinition;
 import org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor;
-import org.springframework.beans.factory.config.BeanDefinition;
-import org.springframework.beans.factory.config.BeanDefinitionHolder;
-import org.springframework.beans.factory.support.BeanDefinitionRegistry;
-import org.springframework.beans.factory.support.DefaultListableBeanFactory;
-import org.springframework.beans.factory.support.RootBeanDefinition;
+import org.springframework.beans.factory.support.bean_.definition_.BeanDefinition;
+import org.springframework.beans.factory.support.bean_.definition_.BeanDefinitionHolder;
+import org.springframework.beans.factory.config.bean_.processor_.BeanFactoryPostProcessor;
+import org.springframework.beans.factory.config.bean_.processor_.BeanPostProcessor;
+import org.springframework.beans.factory.support.bean_.definition_.BeanDefinitionRegistry;
+import org.springframework.beans.factory.support.bean_.factory_.DefaultListableBeanFactory;
+import org.springframework.beans.factory.support.bean_.definition_.RootBeanDefinition;
 import org.springframework.context.annotation.*;
 import org.springframework.context.annotation.anno_.*;
 import org.springframework.context.annotation.mode_.ScopeMetadata;
@@ -48,8 +50,8 @@ import org.springframework.util.ClassUtils;
 
 /**
  * Utility class that allows for convenient registration of common
- * {@link org.springframework.beans.factory.config.BeanPostProcessor} and
- * {@link org.springframework.beans.factory.config.BeanFactoryPostProcessor}
+ * {@link BeanPostProcessor} and
+ * {@link BeanFactoryPostProcessor}
  * definitions for annotation-based configuration. Also registers a common
  * {@link org.springframework.beans.factory.support.AutowireCandidateResolver}.
  *

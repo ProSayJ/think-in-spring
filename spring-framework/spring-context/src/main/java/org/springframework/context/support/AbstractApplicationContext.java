@@ -32,12 +32,13 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
 import org.springframework.beans.expection_.BeansException;
-import org.springframework.beans.util_.bean_.CachedIntrospectionResults;
-import org.springframework.beans.factory.core_.BeanFactory;
+import org.springframework.beans.factory.config.bean_.processor_.BeanPostProcessor;
+import org.springframework.beans.factory.support.bean_.CachedIntrospectionResults;
+import org.springframework.beans.factory.support.bean_.factory_.BeanFactory;
 import org.springframework.beans.factory.expection_.NoSuchBeanDefinitionException;
-import org.springframework.beans.factory.ObjectProvider;
+import org.springframework.beans.factory.support.ObjectProvider;
 import org.springframework.beans.factory.config.AutowireCapableBeanFactory;
-import org.springframework.beans.factory.config.BeanFactoryPostProcessor;
+import org.springframework.beans.factory.config.bean_.processor_.BeanFactoryPostProcessor;
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
 import org.springframework.beans.support.ResourceEditorRegistrar;
 import org.springframework.context.ApplicationContext;
@@ -92,8 +93,8 @@ import org.springframework.util.ReflectionUtils;
  * <p>In contrast to a plain BeanFactory, an ApplicationContext is supposed
  * to detect special beans defined in its internal bean factory:
  * Therefore, this class automatically registers
- * {@link org.springframework.beans.factory.config.BeanFactoryPostProcessor BeanFactoryPostProcessors},
- * {@link org.springframework.beans.factory.config.BeanPostProcessor BeanPostProcessors},
+ * {@link BeanFactoryPostProcessor BeanFactoryPostProcessors},
+ * {@link BeanPostProcessor BeanPostProcessors},
  * and {@link org.springframework.context.ApplicationListener ApplicationListeners}
  * which are defined as beans in the context.
  *
@@ -120,8 +121,8 @@ import org.springframework.util.ReflectionUtils;
  * @since January 21, 2001
  * @see #refreshBeanFactory
  * @see #getBeanFactory
- * @see org.springframework.beans.factory.config.BeanFactoryPostProcessor
- * @see org.springframework.beans.factory.config.BeanPostProcessor
+ * @see BeanFactoryPostProcessor
+ * @see BeanPostProcessor
  * @see org.springframework.context.event.ApplicationEventMulticaster
  * @see org.springframework.context.ApplicationListener
  * @see org.springframework.context.MessageSource

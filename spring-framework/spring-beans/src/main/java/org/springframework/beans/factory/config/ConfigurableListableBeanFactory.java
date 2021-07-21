@@ -19,10 +19,14 @@ package org.springframework.beans.factory.config;
 import java.util.Iterator;
 
 import org.springframework.beans.expection_.BeansException;
-import org.springframework.beans.factory.core_.ListableBeanFactory;
+import org.springframework.beans.factory.support.ObjectFactory;
+import org.springframework.beans.factory.support.bean_.definition_.BeanDefinition;
+import org.springframework.beans.factory.config.bean_.processor_.BeanFactoryPostProcessor;
+import org.springframework.beans.factory.support.bean_.factory_.BeanFactoryAware;
+import org.springframework.beans.factory.support.bean_.factory_.ListableBeanFactory;
 import org.springframework.beans.factory.expection_.NoSuchBeanDefinitionException;
-import org.springframework.beans.factory.core_.BeanFactory;
-import org.springframework.beans.factory.core_.FactoryBean;
+import org.springframework.beans.factory.support.bean_.factory_.BeanFactory;
+import org.springframework.beans.factory.support.factory_.bean_.FactoryBean;
 import org.springframework.lang.Nullable;
 
 /**
@@ -59,7 +63,7 @@ public interface ConfigurableListableBeanFactory
 	 * <p>By default, only the BeanFactoryAware interface is ignored.
 	 * For further types to ignore, invoke this method for each type.
 	 * @param ifc the dependency interface to ignore
-	 * @see org.springframework.beans.factory.BeanFactoryAware
+	 * @see BeanFactoryAware
 	 * @see org.springframework.context.ApplicationContextAware
 	 */
 	void ignoreDependencyInterface(Class<?> ifc);
@@ -77,7 +81,7 @@ public interface ConfigurableListableBeanFactory
 	 * as well if declared as an autowiring dependency (e.g. ListableBeanFactory),
 	 * as long as the given value actually implements the extended interface.
 	 * @param autowiredValue the corresponding autowired value. This may also be an
-	 * implementation of the {@link org.springframework.beans.factory.ObjectFactory}
+	 * implementation of the {@link ObjectFactory}
 	 * interface, which allows for lazy resolution of the actual target value.
 	 */
 	void registerResolvableDependency(Class<?> dependencyType, @Nullable Object autowiredValue);

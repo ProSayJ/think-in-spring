@@ -18,7 +18,7 @@ package org.springframework.validation;
 
 import java.util.List;
 
-import org.springframework.beans.util_.property_.access_.PropertyAccessor;
+import org.springframework.beans.factory.support.property_.access_.PropertyAccessor;
 import org.springframework.lang.Nullable;
 
 /**

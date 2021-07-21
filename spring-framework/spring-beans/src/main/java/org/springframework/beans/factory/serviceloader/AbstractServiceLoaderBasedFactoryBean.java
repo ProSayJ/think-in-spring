@@ -18,7 +18,7 @@ package org.springframework.beans.factory.serviceloader;
 
 import java.util.ServiceLoader;
 
-import org.springframework.beans.factory.BeanClassLoaderAware;
+import org.springframework.beans.factory.support.bean_.BeanClassLoaderAware;
 import org.springframework.beans.factory.config.AbstractFactoryBean;
 import org.springframework.lang.Nullable;
 import org.springframework.util.Assert;

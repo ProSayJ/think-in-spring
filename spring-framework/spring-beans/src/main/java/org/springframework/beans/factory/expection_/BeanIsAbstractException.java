@@ -16,13 +16,15 @@
 
 package org.springframework.beans.factory.expection_;
 
+import org.springframework.beans.factory.support.bean_.definition_.AbstractBeanDefinition;
+
 /**
  * Exception thrown when a bean instance has been requested for
  * a bean definition which has been marked as abstract.
  *
  * @author Juergen Hoeller
  * @since 1.1
- * @see org.springframework.beans.factory.support.AbstractBeanDefinition#setAbstract
+ * @see AbstractBeanDefinition#setAbstract
  */
 @SuppressWarnings("serial")
 public class BeanIsAbstractException extends BeanCreationException {

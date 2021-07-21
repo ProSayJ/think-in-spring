@@ -16,7 +16,7 @@
 
 package org.springframework.aop.config;
 
-import org.springframework.beans.factory.parsing.ParseState;
+import org.springframework.beans.factory.parsing.model_.ParseState;
 
 /**
  * {@link ParseState} entry representing an advisor.

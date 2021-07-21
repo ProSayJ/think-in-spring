@@ -17,7 +17,7 @@
 package org.springframework.aop.config;
 
 import org.springframework.aop.aspectj.AspectJExpressionPointcut;
-import org.springframework.beans.factory.core_.BeanFactory;
+import org.springframework.beans.factory.support.bean_.factory_.BeanFactory;
 import org.springframework.beans.factory.xml.BeanDefinitionParser;
 import org.springframework.beans.factory.xml.NamespaceHandlerSupport;
 

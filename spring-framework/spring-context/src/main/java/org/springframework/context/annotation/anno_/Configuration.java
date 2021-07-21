@@ -24,7 +24,7 @@ import java.lang.annotation.Target;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.AnnotationBeanNameGenerator;
+import org.springframework.context.annotation.bean_.namegenerator_.AnnotationBeanNameGenerator;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.processor_.ConfigurationClassPostProcessor;
 import org.springframework.core.annotation.AliasFor;
